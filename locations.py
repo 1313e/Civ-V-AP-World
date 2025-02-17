@@ -3,7 +3,7 @@ from BaseClasses import Location
 
 class CivVLocation(Location):
     game: str = "Civilization V"
-                        #ID, Era
+                        #ID, Column
 location_table_data = {
     "AP1":              (1, 1),
     "AP2":              (2, 1),

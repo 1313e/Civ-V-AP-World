@@ -32,13 +32,6 @@ class CivVWorld(World):
     # settings: typing.ClassVar[MyGameSettings]  # will be automatically assigned from type hint
     topology_present = True  # show path to required location checks in spoiler
 
-    # ID of first item and location, could be hard-coded but code may be easier
-    # to read with this as a property.
-    # instead of dynamic numbering, IDs could be part of data
-
-    # The following two dicts are required for the generation to know which
-    # items exist. They could be generated from json or something else. They can
-    # include events, but don't have to since events will be placed manually.
     item_name_to_id = {name: id for
                        id, name in enumerate(item_table.keys(), base_id + offset)}
     location_name_to_id = {name: id for
@@ -90,8 +83,6 @@ class CivVWorld(World):
         column14_region = Region("Column 14", self.player, self.multiworld)
         column15_region = Region("Column 15", self.player, self.multiworld)
         column16_region = Region("Column 16", self.player, self.multiworld)
-
-        # for location, era in enumerate({location : era})
 
         self.multiworld.regions.append(menu_reigion)
 
@@ -163,19 +154,4 @@ class CivVWorld(World):
         column13_region.add_exits({"Column 14" : "To Column 14"}, {"Column 14": lambda state: state.has_group("Column 13", self.player)})
         column14_region.add_exits({"Column 15" : "To Column 15"}, {"Column 15": lambda state: state.has_group("Column 14", self.player)})
         column15_region.add_exits({"Column 16" : "To Column 16"}, {"Column 16": lambda state: state.has_group("Column 15", self.player)})
-
-        # column2_region.connect(column3_region)
-        # column3_region.connect(column4_region)
-        # column4_region.connect(column5_region)
-        # column5_region.connect(column6_region)
-        # column6_region.connect(column7_region)
-        # column7_region.connect(column8_region)
-        # column8_region.connect(column9_region)
-        # column9_region.connect(column10_region)
-        # column10_region.connect(column11_region)
-        # column11_region.connect(column12_region)
-        # column12_region.connect(column13_region)
-        # column13_region.connect(column14_region)
-        # column14_region.connect(column15_region)
-        # column15_region.connect(column16_region)
         return
