@@ -38,6 +38,3 @@ server uses password, type in the bottom textfield `/connect <address>:<port> [p
 
 
 
-
-
-### Mod Setup
