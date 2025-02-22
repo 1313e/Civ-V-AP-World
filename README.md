@@ -31,9 +31,9 @@ In the archipelago launcher use the generate template options and select the Civ
 
 **IMPORTANT: DO NOT OPEN THE CIVV CLIENT UNTIL YOU'VE LOADED INTO A GAME AND HAVE ESTABLISHED YOUR FIRST CITY!!!** 
   - If you're not sending or recieving checks, follow these steps. *Looking into possible fix*
-    1. Close the CivV Client.
-    2. Open and close your social policy menu.
-    3. Reopen the CivV client and reconnect to the archipelago server using the address and port numbers.
+    - Close the CivV Client.
+    - Open and close your social policy menu.
+    - Reopen the CivV client and reconnect to the archipelago server using the address and port numbers.
 
 To connect the client to the multiserver simply put `<address>:<port>` on the textfield on top and press enter (if the
 server uses password, type in the bottom textfield `/connect <address>:<port> [password]`)
