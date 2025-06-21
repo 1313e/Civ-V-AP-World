@@ -1,10 +1,11 @@
 from typing import Dict, NamedTuple
+from .constants import GAME_NAME
 
 from BaseClasses import Item, ItemClassification
 
 
 class CivVItem(Item):
-    game: str = "Civilization V"
+    game: str = GAME_NAME
 
 class CivVItemData(NamedTuple):
     id: int = None
@@ -21,7 +22,7 @@ item_table: Dict[str, CivVItemData] = {
     "Trapping":             CivVItemData(8, type=ItemClassification.progression),
     "The Wheel":            CivVItemData(9, type=ItemClassification.progression),
     "Masonry":              CivVItemData(10, type=ItemClassification.progression),
-    "Bronze Working":        CivVItemData(11, type=ItemClassification.progression),
+    "Bronze Working":       CivVItemData(11, type=ItemClassification.progression),
     "Optics":               CivVItemData(12, type=ItemClassification.progression),
     "Horseback Riding":     CivVItemData(13, type=ItemClassification.progression),
     "Mathematics":          CivVItemData(14, type=ItemClassification.progression),
@@ -87,7 +88,7 @@ item_table: Dict[str, CivVItemData] = {
     "The Internet":         CivVItemData(74, type=ItemClassification.progression),
     "Globalization":        CivVItemData(75, type=ItemClassification.progression),
     "Particle Physics":     CivVItemData(76, type=ItemClassification.progression),
-    "Nuclear Fusion":      CivVItemData(77, type=ItemClassification.progression),
+    "Nuclear Fusion":       CivVItemData(77, type=ItemClassification.progression),
     "Nanotechnology":       CivVItemData(78, type=ItemClassification.progression),
     "Stealth":              CivVItemData(79, type=ItemClassification.progression)
 }

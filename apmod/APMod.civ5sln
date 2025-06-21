@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# ModBuddy Solution File, Format Version 11.00
+Project("{F5FC21B5-7CC2-458A-ABBA-992F515BBA20}") = "APMod", "APMod\APMod.civ5proj", "{B035C588-14CA-472E-B2DD-782D1284A10E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|x86 = Default|x86
+		Deploy Only|x86 = Deploy Only|x86
+		Package Only|x86 = Package Only|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B035C588-14CA-472E-B2DD-782D1284A10E}.Default|x86.ActiveCfg = Default|x86
+		{B035C588-14CA-472E-B2DD-782D1284A10E}.Default|x86.Build.0 = Default|x86
+		{B035C588-14CA-472E-B2DD-782D1284A10E}.Deploy Only|x86.ActiveCfg = Deploy Only|x86
+		{B035C588-14CA-472E-B2DD-782D1284A10E}.Deploy Only|x86.Build.0 = Deploy Only|x86
+		{B035C588-14CA-472E-B2DD-782D1284A10E}.Package Only|x86.ActiveCfg = Package Only|x86
+		{B035C588-14CA-472E-B2DD-782D1284A10E}.Package Only|x86.Build.0 = Package Only|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

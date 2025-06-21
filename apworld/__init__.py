@@ -10,32 +10,29 @@ from .regions import region_data_table
 from worlds.AutoWorld import World
 from BaseClasses import Region, Location, Entrance, Item, ItemClassification
 from worlds.LauncherComponents import Component, SuffixIdentifier, Type, components, launch_subprocess
+from .constants import GAME_NAME, ITEM_OFFSET
 
-base_id = 1
-offset = 140319
 
 def run_client(url: Optional[str] = None):
-    print("Running CivV Client")
+    print("Running Civ V Client")
     from .CivVClient import main
-    launch_subprocess(main, name="CivV Client")
+    launch_subprocess(main, name="Civ V Client")
 
 components.append(
-    Component("CivV Client", func=run_client, component_type=Type.CLIENT)
+    Component("Civ V Client", func=run_client, component_type=Type.CLIENT)
 )
 
 
 class CivVWorld(World):
     """Insert description of the world/game here."""
-    game = "Civilization V"  # name of the game/world
+    game = GAME_NAME  # name of the game/world
     options_dataclass = CivVOptions  # options the player can set
     options: CivVOptions  # typing hints for option results
     # settings: typing.ClassVar[MyGameSettings]  # will be automatically assigned from type hint
     topology_present = True  # show path to required location checks in spoiler
 
-    item_name_to_id = {name: id for
-                       id, name in enumerate(item_table.keys(), base_id + offset)}
-    location_name_to_id = {name: id for
-                           id, name in enumerate(location_table_data.keys(), base_id + offset)}
+    item_name_to_id = {name: _id for _id, name in enumerate(item_table.keys(), 1 + ITEM_OFFSET)}
+    location_name_to_id = {name: _id for _id, name in enumerate(location_table_data.keys(), 1 + ITEM_OFFSET)}
     
     item_name_groups = {
         "Column 1" : {"Pottery", "Animal Husbandry", "Archery", "Mining"},
@@ -44,7 +41,7 @@ class CivVWorld(World):
         "Column 4" : {"Philosophy", "Drama", "Currency", "Engineering", "Iron Working"},
         "Column 5" : {"Theology", "Civil Service", "Guilds", "Metal Casting"},
         "Column 6" : {"Compass", "Education", "Chivalry", "Machinery", "Physics", "Steel"},
-        "Column 7" : {"Astronomy", "Acoustics", "Banking", "Printing Press", "Gunowder"},
+        "Column 7" : {"Astronomy", "Acoustics", "Banking", "Printing Press", "Gunpowder"},
         "Column 8" : {"Navigation", "Architecture", "Economics", "Metallurgy", "Chemistry"},
         "Column 9" : {"Archaeology", "Scientific Theory", "Industrialization", "Rifling", "Military Science", "Fertilizer"},
         "Column 10" : {"Biology", "Electricity", "Steam Power", "Dynamite"},
@@ -53,7 +50,7 @@ class CivVWorld(World):
         "Column 13" : {"Penicillin", "Atomic Theory", "Radar", "Combined Arms"},
         "Column 14" : {"Ecology", "Nuclear Fission", "Rocketry", "Computers"},
         "Column 15" : {"Telecommunications", "Mobile Tactics", "Advanced Ballistics", "Satellites", "Robotics", "Lasers"},
-        "Column 16" : {"The Internet", "Globalization", "Particle Physics", "Nuclear Fusion", "Nanatechnology", "Stealth"}
+        "Column 16" : {"The Internet", "Globalization", "Particle Physics", "Nuclear Fusion", "Nanotechnology", "Stealth"}
     }
     
     def create_item(self, name) -> CivVItem:
@@ -66,7 +63,7 @@ class CivVWorld(World):
         self.multiworld.itempool += item_pool
     
     def create_regions(self) -> None:
-        menu_reigion = Region("Menu", self.player, self.multiworld)
+        menu_region = Region("Menu", self.player, self.multiworld)
         column1_region = Region("Column 1", self.player, self.multiworld)
         column2_region = Region("Column 2", self.player, self.multiworld)
         column3_region = Region("Column 3", self.player, self.multiworld)
@@ -84,42 +81,42 @@ class CivVWorld(World):
         column15_region = Region("Column 15", self.player, self.multiworld)
         column16_region = Region("Column 16", self.player, self.multiworld)
 
-        self.multiworld.regions.append(menu_reigion)
+        self.multiworld.regions.append(menu_region)
 
         main_region = Region("Main", self.player, self.multiworld)
-        for location, id in location_table_data.items():
-            if id[1] == 1:
-                column1_region.add_locations({location : id[0] + offset}, CivVLocation)
-            if id[1] == 2:
-                column2_region.add_locations({location : id[0] + offset}, CivVLocation)
-            if id[1] == 3:
-                column3_region.add_locations({location : id[0] + offset}, CivVLocation)
-            if id[1] == 4:
-                column4_region.add_locations({location : id[0] + offset}, CivVLocation)
-            if id[1] == 5:
-                column5_region.add_locations({location : id[0] + offset}, CivVLocation)
-            if id[1] == 6:
-                column6_region.add_locations({location : id[0] + offset}, CivVLocation)
-            if id[1] == 7:
-                column7_region.add_locations({location : id[0] + offset}, CivVLocation)
-            if id[1] == 8:
-                column8_region.add_locations({location : id[0] + offset}, CivVLocation)
-            if id[1] == 9:
-                column9_region.add_locations({location : id[0] + offset}, CivVLocation)
-            if id[1] == 10:
-                column10_region.add_locations({location : id[0] + offset}, CivVLocation)
-            if id[1] == 11:
-                column11_region.add_locations({location : id[0] + offset}, CivVLocation)
-            if id[1] == 12:
-                column12_region.add_locations({location : id[0] + offset}, CivVLocation)
-            if id[1] == 13:
-                column13_region.add_locations({location : id[0] + offset}, CivVLocation)
-            if id[1] == 14:
-                column14_region.add_locations({location : id[0] + offset}, CivVLocation)
-            if id[1] == 15:
-                column15_region.add_locations({location : id[0] + offset}, CivVLocation)
-            if id[1] == 16:
-                column16_region.add_locations({location : id[0] + offset}, CivVLocation)
+        for location, _id in location_table_data.items():
+            if _id[1] == 1:
+                column1_region.add_locations({location : _id[0] + ITEM_OFFSET}, CivVLocation)
+            if _id[1] == 2:
+                column2_region.add_locations({location : _id[0] + ITEM_OFFSET}, CivVLocation)
+            if _id[1] == 3:
+                column3_region.add_locations({location : _id[0] + ITEM_OFFSET}, CivVLocation)
+            if _id[1] == 4:
+                column4_region.add_locations({location : _id[0] + ITEM_OFFSET}, CivVLocation)
+            if _id[1] == 5:
+                column5_region.add_locations({location : _id[0] + ITEM_OFFSET}, CivVLocation)
+            if _id[1] == 6:
+                column6_region.add_locations({location : _id[0] + ITEM_OFFSET}, CivVLocation)
+            if _id[1] == 7:
+                column7_region.add_locations({location : _id[0] + ITEM_OFFSET}, CivVLocation)
+            if _id[1] == 8:
+                column8_region.add_locations({location : _id[0] + ITEM_OFFSET}, CivVLocation)
+            if _id[1] == 9:
+                column9_region.add_locations({location : _id[0] + ITEM_OFFSET}, CivVLocation)
+            if _id[1] == 10:
+                column10_region.add_locations({location : _id[0] + ITEM_OFFSET}, CivVLocation)
+            if _id[1] == 11:
+                column11_region.add_locations({location : _id[0] + ITEM_OFFSET}, CivVLocation)
+            if _id[1] == 12:
+                column12_region.add_locations({location : _id[0] + ITEM_OFFSET}, CivVLocation)
+            if _id[1] == 13:
+                column13_region.add_locations({location : _id[0] + ITEM_OFFSET}, CivVLocation)
+            if _id[1] == 14:
+                column14_region.add_locations({location : _id[0] + ITEM_OFFSET}, CivVLocation)
+            if _id[1] == 15:
+                column15_region.add_locations({location : _id[0] + ITEM_OFFSET}, CivVLocation)
+            if _id[1] == 16:
+                column16_region.add_locations({location : _id[0] + ITEM_OFFSET}, CivVLocation)
         self.multiworld.regions.append(column1_region)
         self.multiworld.regions.append(column2_region)
         self.multiworld.regions.append(column3_region)
@@ -138,7 +135,7 @@ class CivVWorld(World):
         self.multiworld.regions.append(column16_region)
 
 
-        menu_reigion.connect(column1_region)
+        menu_region.connect(column1_region)
         column1_region.add_exits({"Column 2" : "To Column 2"}, {"Column 2": lambda state: state.has_group("Column 1", self.player)})
         column2_region.add_exits({"Column 3" : "To Column 3"}, {"Column 3": lambda state: state.has_group("Column 2", self.player)})
         column3_region.add_exits({"Column 4" : "To Column 4"}, {"Column 4": lambda state: state.has_group("Column 3", self.player)})

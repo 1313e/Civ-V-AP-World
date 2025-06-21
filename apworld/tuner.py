@@ -1,14 +1,15 @@
+# %% IMPORTS
 import socket
 import asyncio
 from logging import Logger
 
-ADDRESS = "127.0.0.1"
-PORT = 4318
 
+# %% GLOBALS
 CLIENT_PREFIX = "APSTART:"
 CLIENT_POSTFIX = ":APEND"
 
 
+# %% FUNCTION DEFINITIONS
 def decode_mixed_string(data):
     return ''.join(chr(b) if 32 <= b < 127 else '' for b in data)
 
@@ -48,29 +49,31 @@ class Tuner:
 
 
     async def send_command(self, command_string: str, sock: socket.socket, loop: asyncio.AbstractEventLoop):
-
         prefix_string = "GameCore.Game."
         command_string = prefix_string + command_string
-        b_command_string = command_string.encode()
+        b_command_string = command_string.encode("utf-8")
 
         command_prefix = b"CMD:0:"
-        delimmiter = b"\x00"
+        delimiter = b"\x00"
         full_command = b_command_string
-        message = command_prefix + full_command + delimmiter
+        message = command_prefix + full_command + delimiter
         message_length = len(message).to_bytes(1,byteorder='little')
 
         message_header = message_length + b"\x00\x00\x00\x03\x00\x00\x00"
-        data = message_header + command_prefix + full_command + delimmiter 
+        data = message_header + command_prefix + full_command + delimiter
+        print(f"Sending command: {command_string}")
 
         try:
             await loop.sock_sendall(sock, data)
-            await asyncio.sleep(0.02)
+            await asyncio.sleep(0.2)
+            print("Finished sending command")
 
             received_data = await self.async_recv(sock)
-            response = decode_mixed_string(received_data)
-            return self.__parse_response(response)
-        
-        except sock.timeout:
+            # received_data = sock.recv(4096)
+            response = self.__parse_response(decode_mixed_string(received_data))
+            print(f"Received data: {response}")
+            return response
+        except TimeoutError:
             self.logger.debug('Timeout while receiving data')
             raise TunerTimeoutException
         except Exception as e:
@@ -83,6 +86,5 @@ class Tuner:
             else:
                 raise TunerException(e)
 
-    async def async_recv(self, sock, timeout=2.0, size=4096 * 2):
-        response = await asyncio.wait_for(asyncio.get_event_loop().sock_recv(sock, size), timeout)
-        return response
+    async def async_recv(self, sock, timeout=2.0, size=4096):
+        return await asyncio.wait_for(asyncio.get_event_loop().sock_recv(sock, size), timeout)

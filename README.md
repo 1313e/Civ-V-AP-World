@@ -1,6 +1,6 @@
 # Setup Guide for Civilization V
 
-**Civilization V ap world is in the very early stages of testing an may be unstable.**
+**Civilization V ap world is in the very early stages of testing and may be unstable.**
 
 ## Required Software
 
@@ -13,8 +13,11 @@
 - Install the ap world in the custom worlds folder
 - Take the Civ V mod and paste the mod folder into the Civ V mods folder in the Documents\My Games\Sid Meier's Civilization 5\MODS folder
 - Open the config file at Documents\My Games\Sid Meier's Civilization 5\config and enable the fire tuner
-    - The first option should be labeled "EnableTuner" change the 0 value to 1. Note: This will disable achievments.
+    - The first option should be labeled "EnableTuner" change the 0 value to 1. Note: This will disable achievements.
 
+## Play
+- Make sure to load the mods via the "Mods" menu first, and then click "Singleplayer" (which should be the only option you get besides "Back").
+  Otherwise, only DLC mods can be loaded, but Workshop mods cannot.
 
 ## Configuring your YAML file
 

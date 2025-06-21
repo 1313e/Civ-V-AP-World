@@ -1,3 +1,6 @@
+# %% IMPORTS
+import traceback
+
 import Utils
 import asyncio
 import logging
@@ -9,16 +12,16 @@ from typing import Dict
 from CommonClient import ClientCommandProcessor, CommonContext, get_base_parser, logger, server_loop, gui_enabled
 from NetUtils import ClientStatus
 from .tuner import TunerErrorException, TunerTimeoutException
+from .constants import ADDRESS, GAME_NAME, ITEM_OFFSET, PORT
 
-ADDRESS = "127.0.0.1"
-PORT = 4318
 
+# %% CLIENT CLASS DEFINITION
 class CivVCommandProcessor(ClientCommandProcessor):
     def __init__(self, ctx: CommonContext):
         super().__init__(ctx)
 
 class CivVContext(CommonContext):
-    game = "Civilization V"
+    game = GAME_NAME
     items_handling = 0b111
     command_processor = CivVCommandProcessor
     tuner: Tuner
@@ -27,10 +30,10 @@ class CivVContext(CommonContext):
     item_id_to_civ_item: Dict[int, CivVItemData] = {}
     current_index = 0
     current_location_index = 0
-    item_offset = 140319
+    item_offset = ITEM_OFFSET
     logger = logger
     loc_list = []
-    locatiions_to_send = []
+    locations_to_send = []
 
     def __init__(self, server_address, password):
         super().__init__(server_address, password)
@@ -49,7 +52,7 @@ class CivVContext(CommonContext):
             logging_pairs = [
                 ("Client", "Archipelago")
             ]
-            base_title = "Archipelago Civilization V Client"
+            base_title = f"Archipelago {GAME_NAME} Client"
         self.ui = CivVManager(self)
         self.ui_task = asyncio.create_task(self.ui.async_run(), name="UI")
 
@@ -59,31 +62,41 @@ class CivVContext(CommonContext):
             logger.info("Connected:")
 
 async def firetuner_task(ctx: CivVContext):
-    cont = True
-    while cont == True:
+    while True:
+        if ctx.exit_event.is_set():
+            break
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        sock.setblocking(False)
-        server_address = (ADDRESS, PORT)
         loop = asyncio.get_event_loop()
-        await loop.sock_connect(sock, server_address)
+        await loop.sock_connect(sock, (ADDRESS, PORT))
+        sock.setblocking(False)
 
         while not ctx.exit_event.is_set():
             if not ctx.slot:
                 await asyncio.sleep(3)
                 continue
             else:
-                if ctx.processing_multiple_items == True:
+                try:
+                    if ctx.processing_multiple_items:
+                        await asyncio.sleep(3)
+                    else:
+                        await handle_receive_items(ctx, sock, loop)
+                        await handle_checked_location(ctx, sock, loop)
+                        await handle_goal_complete(ctx, sock, loop)
+                except TunerTimeoutException:
                     await asyncio.sleep(3)
-                else:
-                    await handle_recieve_items(ctx, sock, loop)
+                    break
+                except Exception as e:
+                    if isinstance(e, TunerErrorException):
+                        logger.debug(str(e))
+                    else:
+                        logger.debug(traceback.format_exc())
+
                     await asyncio.sleep(3)
-                    await handle_checked_location(ctx, sock, loop)
-                    await asyncio.sleep(3)
-                    await handle_goal_complete(ctx, sock, loop)
-        cont = False
+                    break
         sock.close()
 
-async def handle_recieve_items(ctx: CivVContext, sock: socket.socket, loop: asyncio.AbstractEventLoop):
+async def handle_receive_items(ctx: CivVContext, sock: socket.socket, loop: asyncio.AbstractEventLoop):
+    print("Executing: 'handle_receive_items'")
     try:
         if len(ctx.items_received) - ctx.current_index > 1:
             ctx.processing_multiple_items = True
@@ -100,8 +113,11 @@ async def handle_recieve_items(ctx: CivVContext, sock: socket.socket, loop: asyn
         ctx.processing_multiple_items = False
     finally:
         ctx.processing_multiple_items = False
+    print("Finishing: 'handle_receive_items'")
+
 
 async def handle_checked_location(ctx: CivVContext, sock: socket.socket, loop: asyncio.AbstractEventLoop):
+    print("Executing: 'handle_checked_location'")
     result : str
     result = await ctx.tuner.send_command("GetItemsToSend()", sock, loop)
     result_list = result.split(",")
@@ -121,19 +137,21 @@ async def handle_checked_location(ctx: CivVContext, sock: socket.socket, loop: a
             loc = int(ctx.loc_list[index])
             if loc == False:
                 loc = 1
-            ctx.locatiions_to_send.append(loc + ctx.item_offset)
-            await ctx.send_msgs([{"cmd": "LocationChecks", "locations": ctx.locatiions_to_send}])
+            ctx.locations_to_send.append(loc + ctx.item_offset)
+            await ctx.send_msgs([{"cmd": "LocationChecks", "locations": ctx.locations_to_send}])
             ctx.current_location_index += 1
-    
+    print("Finishing: 'handle_checked_location'")
 
 
 async def handle_goal_complete(ctx: CivVContext, sock: socket.socket, loop: asyncio.AbstractEventLoop):
+    print("Executing: 'handle_goal_complete'")
     goal_complete = await ctx.tuner.send_command("IsVictory()", sock, loop)
     if goal_complete == "True":
         await ctx.send_msgs([{"cmd": "StatusUpdate", "status": ClientStatus.CLIENT_GOAL}])
+    print("Finishing: 'handle_goal_complete'")
 
 def main(connect=None, password=None, name=None):
-    Utils.init_logging("Civiliazation V Client")
+    Utils.init_logging(f"{GAME_NAME} Client")
     
 
     async def _main(connect, password, name):
@@ -156,6 +174,8 @@ def main(connect=None, password=None, name=None):
         if ctx.firetuner_task:
             await asyncio.sleep(3)
             await ctx.firetuner_task
+
+        print("I am done")
 
     import colorama
 

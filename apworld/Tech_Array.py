@@ -9,7 +9,7 @@ list_of_tech_keys = ["Pottery", "Animal Husbandry", "Archery", "Mining", "Sailin
                       "Scientific Theory", "Industrialization", "Rifling", "Military Science", "Fertilizer",
                       "Biology", "Electricity", "Steam Power", "Dynamite", "Refrigeration", "Radio",
                       "Replaceable Parts", "Flight", "Railroad", "Plastic", "Electronics", "Ballistics", "Combustion",
-                      "Penicilin", "Atomic Theory", "Radar", "Combined Arms", "Ecology", "Nuclear Fission", "Rocketry", "Computers",
+                      "Penicillin", "Atomic Theory", "Radar", "Combined Arms", "Ecology", "Nuclear Fission", "Rocketry", "Computers",
                       "Telecommunications", "Mobile Tactics", "Advanced Ballistics", "Satellites", "Robotics", "Lasers",
                       "The Internet", "Globalization", "Particle Physics", "Nuclear Fusion", "Nanotechnology", "Stealth"]
 tech_prereq_map_values = [[0], [0], [0], [0], [1], [1], [1], [2], [2, 3], [4], [4],

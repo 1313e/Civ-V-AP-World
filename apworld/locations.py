@@ -1,8 +1,9 @@
+from .constants import GAME_NAME
 from BaseClasses import Location
 
 
 class CivVLocation(Location):
-    game: str = "Civilization V"
+    game: str = GAME_NAME
                         #ID, Column
 location_table_data = {
     "AP1":              (1, 1),
