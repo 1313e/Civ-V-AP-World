@@ -50,5 +50,6 @@ If you find any other ones, please post a message in the [AP Discord](https://di
 Some ideas I currently have that I want to look into (in order of priority):
 - Storing AP connection info on save file and reconnect automatically when launching.
 - Starting new game with same AP slot automatically researches all checks already sent.
+- Adding a way of seeing what technologies/checks you have received in-game.
 - Allowing certain technologies to be forced early. For example, Mining; Animal Husbandry; and Irrigation are kinda critical and I would assume you want them somewhat early.
 - Adding a bunch of additional stuff to the checks list: Culture; eras; city-states; trade routes; barbarian camps; etc.
