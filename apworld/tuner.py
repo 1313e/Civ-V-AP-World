@@ -48,10 +48,9 @@ class Tuner:
             return ""
 
 
-    async def send_command(self, command_string: str, sock: socket.socket, loop: asyncio.AbstractEventLoop):
+    async def send_command(self, command_string: str, sock: socket.socket, loop: asyncio.AbstractEventLoop, size=4*1024):
         prefix_string = "GameCore.Game."
-        command_string = prefix_string + command_string
-        b_command_string = command_string.encode("utf-8")
+        b_command_string = f"{prefix_string}{command_string}".encode("utf-8")
 
         command_prefix = b"CMD:0:"
         delimiter = b"\x00"
@@ -60,16 +59,14 @@ class Tuner:
         message_length = len(message).to_bytes(1,byteorder='little')
 
         message_header = message_length + b"\x00\x00\x00\x03\x00\x00\x00"
-        data = message_header + command_prefix + full_command + delimiter
+        data = message_header + message
         print(f"Sending command: {command_string}")
 
         try:
             await loop.sock_sendall(sock, data)
             await asyncio.sleep(0.2)
-            print("Finished sending command")
 
-            received_data = await self.async_recv(sock)
-            # received_data = sock.recv(4096)
+            received_data = await self.async_recv(sock, size)
             response = self.__parse_response(decode_mixed_string(received_data))
             print(f"Received data: {response}")
             return response
@@ -77,7 +74,7 @@ class Tuner:
             self.logger.debug('Timeout while receiving data')
             raise TunerTimeoutException
         except Exception as e:
-            self.logger.debug(f'Error occured while receiving data: {str(e)}')
+            self.logger.debug(f'Error occurred while receiving data: {str(e)}')
             connection_errors = [
                 "The remote computer refused the network connection"
             ]
@@ -86,5 +83,5 @@ class Tuner:
             else:
                 raise TunerException(e)
 
-    async def async_recv(self, sock, timeout=2.0, size=4096):
-        return await asyncio.wait_for(asyncio.get_event_loop().sock_recv(sock, size), timeout)
+    async def async_recv(self, sock, size):
+        return await asyncio.wait_for(asyncio.get_event_loop().sock_recv(sock, size), 2.0)

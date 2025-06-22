@@ -24,3 +24,23 @@ def cmd_create_apworld(aproot: Path) -> None:
     _ = shutil.copytree("./apworld", Path(tempdir)/"civv", dirs_exist_ok=True)
     zipfile = shutil.make_archive("civv", "zip", tempdir, "civv")
     shutil.move(zipfile, aproot/"custom_worlds/civv.apworld")
+
+
+@group_cli.command("create-release", short_help="Packages the APWorld and APMod, ready for a release")
+def cmd_create_release() -> None:
+    # Make sure release directory exists
+    rel_dir = Path.cwd() / "release"
+    rel_dir.mkdir(parents=True, exist_ok=True)
+
+    # Create new version of APWorld
+    tempdir = tempfile.mkdtemp()
+    _ = shutil.copytree("./apworld", Path(tempdir) / "civv", dirs_exist_ok=True)
+    zipfile = shutil.make_archive("civv", "zip", tempdir, "civv")
+    _ = shutil.move(zipfile, rel_dir / "civv.apworld")
+
+    # Create new version of APMod
+    mod_name = next(Path("./apmod/Build/CivVAPMod").glob("*.modinfo")).name.split(".")[0]
+    tempdir = tempfile.mkdtemp()
+    _ = shutil.copytree("./apmod/Build/CivVAPMod", Path(tempdir) / mod_name, dirs_exist_ok=True)
+    zipfile = shutil.make_archive("CivVAPMod", "zip", tempdir, mod_name)
+    _ = shutil.move(zipfile, rel_dir / "CivVAPMod.zip")

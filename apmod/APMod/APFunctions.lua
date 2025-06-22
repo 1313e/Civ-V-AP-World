@@ -13,6 +13,11 @@ local player = Players[Game.GetActivePlayer()];
 local team = Teams[player:GetTeam()];
 local teamtechs = team:GetTeamTechs();
 
+function ModIsReady()
+	str_to_send = CLIENT_PREFIX .. "True" .. CLIENT_POSTFIX
+	print(str_to_send)
+end
+
 function AddTech(id)
 	team:SetHasTech(id, true);
 end
@@ -60,6 +65,7 @@ end
 
 Init()
 
+Game.ModIsReady = ModIsReady
 Game.AddTech = AddTech
 Game.GetItemsToSend = GetItemsToSend
 Game.IsVictory = IsVictory

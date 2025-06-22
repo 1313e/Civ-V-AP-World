@@ -71,29 +71,34 @@ async def firetuner_task(ctx: CivVContext):
         sock.setblocking(False)
 
         while not ctx.exit_event.is_set():
-            if not ctx.slot:
+            try:
+                if ctx.slot and await game_is_ready(ctx, sock, loop) and not ctx.processing_multiple_items:
+                    await perform_firetuner_step(ctx, sock, loop)
+            except TunerTimeoutException:
+                break
+            except Exception as e:
+                if isinstance(e, TunerErrorException):
+                    logger.debug(str(e))
+                else:
+                    logger.debug(traceback.format_exc())
+                break
+            finally:
                 await asyncio.sleep(3)
-                continue
-            else:
-                try:
-                    if ctx.processing_multiple_items:
-                        await asyncio.sleep(3)
-                    else:
-                        await handle_receive_items(ctx, sock, loop)
-                        await handle_checked_location(ctx, sock, loop)
-                        await handle_goal_complete(ctx, sock, loop)
-                except TunerTimeoutException:
-                    await asyncio.sleep(3)
-                    break
-                except Exception as e:
-                    if isinstance(e, TunerErrorException):
-                        logger.debug(str(e))
-                    else:
-                        logger.debug(traceback.format_exc())
-
-                    await asyncio.sleep(3)
-                    break
         sock.close()
+
+
+async def game_is_ready(ctx: CivVContext, sock: socket.socket, loop: asyncio.AbstractEventLoop) -> bool:
+    try:
+        return await ctx.tuner.send_command("ModIsReady()", sock, loop, size=1024*100) == "True"
+    except TunerTimeoutException:
+        logger.info("Waiting for Civ V to be ready...")
+        raise
+
+async def perform_firetuner_step(ctx: CivVContext, sock: socket.socket, loop: asyncio.AbstractEventLoop):
+    if ctx.server:
+        await handle_receive_items(ctx, sock, loop)
+        await handle_checked_location(ctx, sock, loop)
+        await handle_goal_complete(ctx, sock, loop)
 
 async def handle_receive_items(ctx: CivVContext, sock: socket.socket, loop: asyncio.AbstractEventLoop):
     print("Executing: 'handle_receive_items'")
@@ -110,7 +115,6 @@ async def handle_receive_items(ctx: CivVContext, sock: socket.socket, loop: asyn
                 ctx.current_index += 1
             await asyncio.sleep(0.02)
         
-        ctx.processing_multiple_items = False
     finally:
         ctx.processing_multiple_items = False
     print("Finishing: 'handle_receive_items'")
