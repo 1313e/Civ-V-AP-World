@@ -11,7 +11,12 @@ from typing import Dict
 from CommonClient import ClientCommandProcessor, CommonContext, get_base_parser, logger, server_loop, gui_enabled
 from NetUtils import ClientStatus
 from .tuner import TunerErrorException, TunerTimeoutException
-from .constants import ADDRESS, GAME_NAME, GAME_NOT_READY, ITEM_OFFSET, PORT
+from .constants import ADDRESS, GAME_NAME, GAME_READY, GAME_NOT_READY, ITEM_OFFSET, PORT
+
+
+# %% GLOBALS
+IS_READY: bool = False
+"Bool indicating whether game is currently ready"
 
 
 # %% CLIENT CLASS DEFINITION
@@ -75,21 +80,19 @@ async def firetuner_task(ctx: CivVContext):
             await loop.sock_connect(sock, (ADDRESS, PORT))
             sock.setblocking(False)
         except ConnectionRefusedError:
-            logger.info(GAME_NOT_READY)
+            game_not_ready()
             await asyncio.sleep(3)
             continue
 
         while not ctx.exit_event.is_set():
             try:
-                if await game_is_ready(ctx, sock, loop) and not ctx.processing_multiple_items:
+                if ctx.slot and await game_is_ready(ctx, sock, loop) and not ctx.processing_multiple_items:
                     await perform_firetuner_step(ctx, sock, loop)
-            except TunerTimeoutException:
+            except TunerTimeoutException as e:
+                logger.debug(str(e))
                 break
-            except Exception as e:
-                if isinstance(e, TunerErrorException):
-                    logger.debug(str(e))
-                else:
-                    logger.debug(traceback.format_exc())
+            except Exception:
+                logger.debug(traceback.format_exc())
                 break
             finally:
                 await asyncio.sleep(3)
@@ -98,10 +101,24 @@ async def firetuner_task(ctx: CivVContext):
 
 async def game_is_ready(ctx: CivVContext, sock: socket.socket, loop: asyncio.AbstractEventLoop) -> bool:
     try:
-        return await ctx.tuner.send_command("ModIsReady()", sock, loop, size=1024*100) == "True"
+        ready = await ctx.tuner.send_command("ModIsReady()", sock, loop, size=1024*100) == "True"
     except TunerTimeoutException:
-        logger.info(GAME_NOT_READY)
+        game_not_ready()
         raise
+    else:
+        global IS_READY
+        if not ready:
+            game_not_ready()
+        elif not IS_READY and ready:
+            logger.info(GAME_READY)
+            IS_READY = ready
+        return ready
+
+
+def game_not_ready():
+    global IS_READY
+    IS_READY = False
+    logger.info(GAME_NOT_READY)
 
 async def perform_firetuner_step(ctx: CivVContext, sock: socket.socket, loop: asyncio.AbstractEventLoop):
     if ctx.server:

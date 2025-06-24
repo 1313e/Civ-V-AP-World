@@ -6,6 +6,8 @@ ITEM_OFFSET: int = 140319
 "Item ID offset for this APWorld"
 
 # MESSAGES
+GAME_READY: str = "Civ V is connected and ready"
+"Message logged when game is ready to be interacted with"
 GAME_NOT_READY: str = "Waiting for Civ V to be ready..."
 "Message logged when game is currently not ready to be interacted with"
 
