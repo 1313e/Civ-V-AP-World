@@ -1,14 +1,20 @@
 # %% GLOBALS DEFINITIONS
 # GENERAL
+APWORLD_VERSION: str = "0.1.4"
+"Version of this APWorld"
 GAME_NAME: str = "Civilization V"
 "Name of the game this APWorld is for"
 ITEM_OFFSET: int = 140319
 "Item ID offset for this APWorld"
 
 # MESSAGES
-GAME_READY: str = "Civ V is connected and ready"
+GAME_READY: str = "Civ V is running"
+"Message logged when game is running"
+GAME_NOT_READY: str = "Waiting for Civ V to start..."
+"Message logged when game is currently not running"
+MOD_READY: str = "Civ V AP Mod is connected and ready"
 "Message logged when game is ready to be interacted with"
-GAME_NOT_READY: str = "Waiting for Civ V to be ready..."
+MOD_NOT_READY: str = "Waiting for Civ V AP Mod to be ready..."
 "Message logged when game is currently not ready to be interacted with"
 
 # WEBSOCKET
