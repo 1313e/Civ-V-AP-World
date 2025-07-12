@@ -11,11 +11,14 @@ local CLIENT_POSTFIX = ":APEND"
 
 local player = Players[Game.GetActivePlayer()];
 local team = Teams[player:GetTeam()];
-local teamtechs = team:GetTeamTechs();
+local teamTechs = team:GetTeamTechs();
+
+function printResponse(response)
+	print(CLIENT_PREFIX .. response .. CLIENT_POSTFIX)
+end
 
 function ModIsReady()
-	str_to_send = CLIENT_PREFIX .. "True" .. CLIENT_POSTFIX
-	print(str_to_send)
+	printResponse('{"ready": true}')
 end
 
 function AddTech(id)
@@ -23,30 +26,20 @@ function AddTech(id)
 end
 
 function GetItemsToSend()
-	iTechLoop = 0;
-	str_to_send = ''
-	pTechInfo = GameInfo.Technologies[iTechLoop];
-
-	while( pTechInfo ~= nil ) do
-		pTechInfo = GameInfo.Technologies[iTechLoop];
-		if teamtechs:HasTech(iTechLoop) then
-			str_to_send = str_to_send .. iTechLoop .. ','
-			end
-		iTechLoop = iTechLoop + 1
+	techs = {}
+	for i=1, 80 do
+		if teamTechs:HasTech(i) then
+		    table.insert(techs, i)
+		end
 	end
-	str_to_send = CLIENT_PREFIX .. str_to_send .. CLIENT_POSTFIX
-	print(str_to_send)
+	printResponse('{"techs": [' .. table.concat(techs, ',') .. ']}')
 end
 
 function IsVictory()
-	str_to_send = ''
-	victory = false
 	if(player:GetTeam() == Game:GetWinner()) then
-		str_to_send = CLIENT_PREFIX .. "True" .. CLIENT_POSTFIX
-		print(str_to_send)
+		printResponse('{"victory": true}')
 	else
-		str_to_send = CLIENT_PREFIX .. "False" .. CLIENT_POSTFIX
-		print(str_to_send)
+		printResponse('{"victory": false}')
 	end
 end
 

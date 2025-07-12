@@ -35,15 +35,13 @@ class CivVContext(CommonContext):
     processing_multiple_items = False
     item_id_to_civ_item: Dict[int, CivVItemData] = {}
     current_index = 0
-    current_location_index = 0
     item_offset = ITEM_OFFSET
     logger = logger
-    loc_list = []
-    locations_to_send = []
+    sent_locations: dict[str, set[int]] = {"techs": set()}
 
     def __init__(self, server_address, password):
         super().__init__(server_address, password)
-        self.tuner = Tuner(logger)
+        self.tuner = Tuner()
 
     async def server_auth(self, password_requested = False):
         if password_requested and not self.password:
@@ -108,7 +106,7 @@ async def firetuner_task(ctx: CivVContext):
 
 async def game_is_ready(ctx: CivVContext, sock: socket.socket, loop: asyncio.AbstractEventLoop) -> bool:
     try:
-        await ctx.tuner.send_init_command(sock, loop)
+        await ctx.tuner.send_ready_check(sock, loop)
     except TunerTimeoutException:
         log_game_ready(False)
         return False
@@ -119,7 +117,7 @@ async def game_is_ready(ctx: CivVContext, sock: socket.socket, loop: asyncio.Abs
 
 async def mod_is_ready(ctx: CivVContext, sock: socket.socket, loop: asyncio.AbstractEventLoop) -> bool:
     try:
-        ready = await ctx.tuner.send_command("ModIsReady()", sock, loop, size=1024*100) == "True"
+        ready = (await ctx.tuner.send_command("ModIsReady()", sock=sock, loop=loop, size=1024*100)).get("ready", False)
     except (TunerRuntimeException, TunerTimeoutException):
         log_mod_ready(False)
         return False
@@ -163,7 +161,7 @@ async def handle_receive_items(ctx: CivVContext, sock: socket.socket, loop: asyn
 
             if index >= ctx.current_index:
                 current_item = ctx.items_received[ctx.current_index]
-                await ctx.tuner.send_command(f"AddTech({current_item[0] - ctx.item_offset + 81})", sock, loop)
+                await ctx.tuner.send_command(f"AddTech({current_item[0] - ctx.item_offset + 81})", sock=sock, loop=loop)
                 await asyncio.sleep(0.02)
                 ctx.current_index += 1
             await asyncio.sleep(0.02)
@@ -175,35 +173,18 @@ async def handle_receive_items(ctx: CivVContext, sock: socket.socket, loop: asyn
 
 async def handle_checked_location(ctx: CivVContext, sock: socket.socket, loop: asyncio.AbstractEventLoop):
     print("Executing: 'handle_checked_location'")
-    result : str
-    result = await ctx.tuner.send_command("GetItemsToSend()", sock, loop)
-    result_list = result.split(",")
-    for index in range(0, len(result_list)):
-        location = result_list[index]
-        if location == '0' or location == '':
-            continue
-        elif location == 'True' or location == 'False':
-            continue
-        elif location in ctx.loc_list:
-            continue
-        else:
-            ctx.loc_list.append(location)
-
-    for index in range(0, len(ctx.loc_list)):
-        if index >= ctx.current_location_index:
-            loc = int(ctx.loc_list[index])
-            if loc == False:
-                loc = 1
-            ctx.locations_to_send.append(loc + ctx.item_offset)
-            await ctx.send_msgs([{"cmd": "LocationChecks", "locations": ctx.locations_to_send}])
-            ctx.current_location_index += 1
+    result = await ctx.tuner.send_command("GetItemsToSend()", sock=sock, loop=loop)
+    for location_type, locations in result.items():
+        to_send_locations = set(locations).difference(ctx.sent_locations[location_type])
+        # TODO: Refactor to use a location_type + location -> ID conversion function later
+        await ctx.send_msgs([{"cmd": "LocationChecks", "locations": [x + ctx.item_offset for x in to_send_locations]}])
+        ctx.sent_locations[location_type].update(to_send_locations)
     print("Finishing: 'handle_checked_location'")
 
 
 async def handle_goal_complete(ctx: CivVContext, sock: socket.socket, loop: asyncio.AbstractEventLoop):
     print("Executing: 'handle_goal_complete'")
-    goal_complete = await ctx.tuner.send_command("IsVictory()", sock, loop)
-    if goal_complete == "True":
+    if (await ctx.tuner.send_command("IsVictory()", sock=sock, loop=loop)).get("victory", False):
         await ctx.send_msgs([{"cmd": "StatusUpdate", "status": ClientStatus.CLIENT_GOAL}])
     print("Finishing: 'handle_goal_complete'")
 
