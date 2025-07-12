@@ -1,9 +1,9 @@
 [project]
 name = "civ-v-ap-world"
-version = "0.1.4"
+version = "0.2.0"
 description = ""
 authors = [
-    {name = "Ellert van der Velden",email = "1313e@live.nl"}
+    {name = "1313e", email = "1313e@live.nl"}
 ]
 readme = "README.md"
 requires-python = ">=3.13"

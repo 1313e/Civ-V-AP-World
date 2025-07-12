@@ -28,7 +28,7 @@ class Tuner:
     """
 
     # Class attributes
-    RESPONSE_PATTERN: re.Pattern = re.compile(r"APSTART:(.*):APEND")
+    RESPONSE_PATTERN: re.Pattern = re.compile(r"APSTART:(.*?):APEND")
     "Regex pattern to use for extracting responses given by the Civ V AP mod to this Tuner"
     READY_CHECK_COMMAND_STRINGS: tuple[bytes, bytes] = (
         b"\x05\x00\x00\x00\x04\x00\x00\x00APP:\x00",
@@ -36,14 +36,31 @@ class Tuner:
     )
     "Tuple of specific command strings that must be sent to the game to check whether it is ready to be interacted with"
 
-    @staticmethod
-    async def _retrieve_response(sock: socket.socket, size: int) -> bytes:
+    def __init__(self):
+        # Define instance attributes
+        self._sock: socket.socket | None = None
+        "The socket to use for the connection to Civ V"
+
+    @property
+    def sock(self) -> socket.socket:
+        """
+        The socket to use for the connection to Civ V.
+
+        """
+
+        return self._sock
+
+    @sock.setter
+    def sock(self, sock: socket.socket) -> None:
+        self._sock = sock
+
+    async def _retrieve_response(self, size: int) -> bytes:
         """
         Retrieves a response from the Civ V socket `sock` of up to `size` bytes and returns it.
 
         """
 
-        return await asyncio.wait_for(asyncio.get_event_loop().sock_recv(sock, size), 2.0)
+        return await asyncio.wait_for(asyncio.get_event_loop().sock_recv(self._sock, size), 2.0)
 
     @classmethod
     def _parse_response(cls, response: bytes) -> dict[str, Any]:
@@ -80,16 +97,12 @@ class Tuner:
         else:
             return {}
 
-    async def _send_commands(
-            self, *command_strings: bytes, sock: socket.socket, loop: asyncio.AbstractEventLoop, size: int
-    ) -> dict[str, Any]:
+    async def _send_commands(self, *command_strings: bytes, size: int) -> dict[str, Any]:
         """
         Sends the given `command_strings` to the game; parses the response and returns it.
 
         Args:
             command_strings: The commands to send.
-            sock: The socket to send the command to.
-            loop: The asyncio event loop.
             size: The size of the response to retrieve.
 
         Returns:
@@ -106,11 +119,11 @@ class Tuner:
         try:
             # Send the commands
             for command_string in command_strings:
-                await loop.sock_sendall(sock, command_string)
+                await asyncio.get_event_loop().sock_sendall(self._sock, command_string)
             await asyncio.sleep(0.2)
 
             # Retrieve and parse the response
-            response = self._parse_response(await self._retrieve_response(sock, size))
+            response = self._parse_response(await self._retrieve_response(size))
             logger.debug(f"Received data: {response}")
             return response
 
@@ -132,37 +145,12 @@ class Tuner:
             logger.debug(f'Unhandled error occurred while receiving data: {str(e)}')
             raise TunerException(e)
 
-    async def send_ready_check(self, sock: socket.socket, loop: asyncio.AbstractEventLoop) -> None:
+    async def _send_mod_command(self, command: str, size: int = 4 * 1024) -> dict[str, Any]:
         """
-        Sends a ready check to the game to verify that the game is currently connected and listening to the given
-        `sock`.
-
-        This function acts as a connection enforcer: It sends the game the command to specifically start listening to
-        the given `sock` and drop all other connections, if any. This function only fails if the game is currently
-        unable to fulfill this request.
-
-        Args:
-            sock: The socket to send the command to.
-            loop: The asyncio event loop.
-
-        Raises:
-            TunerErrorException: If an unexpected error occurred during the processing of the command.
-            TunerRuntimeException: If a runtime error occurred during the processing of the command.
-
-        """
-
-        _ = await self._send_commands(*self.READY_CHECK_COMMAND_STRINGS, sock=sock, loop=loop, size=20*1024)
-
-    async def send_command(
-            self, command: str, sock: socket.socket, loop: asyncio.AbstractEventLoop, size: int = 4 * 1024
-    ) -> dict[str, Any]:
-        """
-        Sends the given `command` to the game via the provided `sock` and returns the response.
+        Sends the given `command` provided by the Civ V AP mod to the game and returns the response.
 
         Args:
             command: The command to send.
-            sock: The socket to send the command to.
-            loop: The asyncio event loop.
             size: The size of the response to retrieve.
 
         Returns:
@@ -181,4 +169,67 @@ class Tuner:
 
         # Send the command
         logger.debug(f"Sending command: {command}")
-        return await self._send_commands(command_string, sock=sock, loop=loop, size=size)
+        return await self._send_commands(command_string, size=size)
+
+    async def send_ready_check(self) -> bool:
+        """
+        Sends a ready check to the game to verify that the game is currently connected and listening, and returns the
+        result.
+
+        This function acts as a connection enforcer: It sends the game the command to specifically start listening to
+        the registered socket and drop all other connections, if any. This function only fails if the game is currently
+        unable to fulfill this request.
+
+        """
+
+        # Send ready check to the game
+        try:
+            _ = await self._send_commands(*self.READY_CHECK_COMMAND_STRINGS, size=20 * 1024)
+
+        # If this request times out, then the ready check failed
+        except TunerTimeoutException:
+            return False
+
+        # Else, the ready check succeeded
+        else:
+            return True
+
+    async def is_mod_ready(self) -> bool:
+        """
+        Returns whether the AP mod is currently loaded and ready.
+
+        """
+
+        # Request execution of the "IsModReady" function that is defined by the AP mod
+        # Use a very large response size to flush anything unrelated to AP that is still waiting on the socket
+        try:
+            return (await self._send_mod_command("IsModReady()", size=100 * 1024)).get("ready", False)
+
+        # If the function cannot be found (runtime error) or the request times out, the mod is not ready
+        except (TunerRuntimeException, TunerTimeoutException):
+            return False
+
+    async def grant_technologies(self, *tech_ids: int) -> None:
+        """
+        Grants the technologies with the given `tech_ids` to the player.
+
+        """
+
+        await self._send_mod_command(f"GrantTechs({{{','.join(map(str, tech_ids))}}})")
+
+    async def get_items_to_send(self) -> dict[str, list[int]]:
+        """
+        Returns the list of items to send for each location type from the multiworld pool.
+
+        """
+
+        return await self._send_mod_command("GetItemsToSend()")
+
+
+    async def has_achieved_victory(self) -> bool:
+        """
+        Returns whether the player has achieved a victory.
+
+        """
+
+        return (await self._send_mod_command("HasAchievedVictory()"))["victory"]

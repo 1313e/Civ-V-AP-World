@@ -1,22 +1,22 @@
 # world/mygame/__init__.py
 
 # import settings
-from typing import List, Optional
+from typing import List
 from .Tech_Array import list_of_tech_keys
 from .options import CivVOptions  # the options we defined earlier
 from .items import CivVItem, item_table  # data used below to add items to the World
 from .locations import CivVLocation, location_table_data  # same as above
 from .regions import region_data_table
 from worlds.AutoWorld import World
-from BaseClasses import Region, Location, Entrance, Item, ItemClassification
-from worlds.LauncherComponents import Component, SuffixIdentifier, Type, components, launch_subprocess
+from BaseClasses import Region
+from worlds.LauncherComponents import Component, Type, components, launch_subprocess
 from .constants import GAME_NAME, ITEM_OFFSET
 
 
-def run_client(url: Optional[str] = None):
+def run_client(*args, **kwargs):
     print("Running Civ V Client")
-    from .CivVClient import main
-    launch_subprocess(main, name="Civ V Client")
+    from .client import CivVClient
+    launch_subprocess(CivVClient.run_client, name="Civ V Client")
 
 components.append(
     Component("Civ V Client", func=run_client, component_type=Type.CLIENT)

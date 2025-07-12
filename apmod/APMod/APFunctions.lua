@@ -17,12 +17,14 @@ function printResponse(response)
 	print(CLIENT_PREFIX .. response .. CLIENT_POSTFIX)
 end
 
-function ModIsReady()
+function IsModReady()
 	printResponse('{"ready": true}')
 end
 
-function AddTech(id)
-	team:SetHasTech(id, true);
+function GrantTechs(techIds)
+	for i, techId in ipairs(techIds) do
+		team:SetHasTech(techId, true);
+	end
 end
 
 function GetItemsToSend()
@@ -35,7 +37,7 @@ function GetItemsToSend()
 	printResponse('{"techs": [' .. table.concat(techs, ',') .. ']}')
 end
 
-function IsVictory()
+function HasAchievedVictory()
 	if(player:GetTeam() == Game:GetWinner()) then
 		printResponse('{"victory": true}')
 	else
@@ -58,7 +60,7 @@ end
 
 Init()
 
-Game.ModIsReady = ModIsReady
-Game.AddTech = AddTech
+Game.IsModReady = IsModReady
+Game.GrantTechs = GrantTechs
 Game.GetItemsToSend = GetItemsToSend
-Game.IsVictory = IsVictory
+Game.HasAchievedVictory = HasAchievedVictory
