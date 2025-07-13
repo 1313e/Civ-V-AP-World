@@ -4,8 +4,7 @@
 
 ## Required Software
 
-- Civilization V on the Steam store with both Gods & Kings and Brave New World Expansions.
-- Other versions of Civilization V have not been tested.
+- Civilization V on the Steam store with both Gods & Kings and Brave New World Expansions. Other versions will not work due to adjustments the expansions made to the base game.
 - [Civilization V AP World and Mod](https://github.com/1313e/Civ-V-AP-World/releases)
 
 ## Setup
