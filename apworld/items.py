@@ -1,94 +1,622 @@
-from typing import Dict, NamedTuple
-from .constants import GAME_NAME
+# %% IMPORTS
+from collections import defaultdict
+from dataclasses import dataclass, field
 
-from BaseClasses import Item, ItemClassification
+from BaseClasses import ItemClassification, Item
+
+from .enums import CivVItemGroup, CivVItemType
+from .constants import GAME_NAME, ID_OFFSET
+
+# All declaration
+__all__ = ["CivVItem", "ITEMS_DATA", "ITEMS_DATA_BY_ID", "ITEM_GROUPS"]
 
 
+# %% GLOBALS
+ITEMS_DATA: list["CivVItemData"] = []
+"List of all defined items"
+ITEMS_DATA_BY_ID: dict[int, "CivVItemData"] = {}
+"Dict of all defined items, separated by AP ID"
+ITEM_GROUPS: defaultdict[str, list[str]] = defaultdict(list)
+"Dict of all defined item names per item group. Used by the CivVWorld"
+
+
+# %% ITEM CLASS DEFINITION
 class CivVItem(Item):
     game: str = GAME_NAME
 
-class CivVItemData(NamedTuple):
-    id: int = None
-    type: ItemClassification = ItemClassification.filler
 
-item_table: Dict[str, CivVItemData] = {
-    "Pottery":              CivVItemData(1, type=ItemClassification.progression),
-    "Animal Husbandry":     CivVItemData(2, type=ItemClassification.progression),
-    "Archery":              CivVItemData(3, type=ItemClassification.progression),
-    "Mining":               CivVItemData(4, type=ItemClassification.progression),
-    "Sailing":              CivVItemData(5, type=ItemClassification.progression),
-    "Calendar":             CivVItemData(6, type=ItemClassification.progression),
-    "Writing":              CivVItemData(7, type=ItemClassification.progression),
-    "Trapping":             CivVItemData(8, type=ItemClassification.progression),
-    "The Wheel":            CivVItemData(9, type=ItemClassification.progression),
-    "Masonry":              CivVItemData(10, type=ItemClassification.progression),
-    "Bronze Working":       CivVItemData(11, type=ItemClassification.progression),
-    "Optics":               CivVItemData(12, type=ItemClassification.progression),
-    "Horseback Riding":     CivVItemData(13, type=ItemClassification.progression),
-    "Mathematics":          CivVItemData(14, type=ItemClassification.progression),
-    "Construction":         CivVItemData(15, type=ItemClassification.progression),
-    "Philosophy":           CivVItemData(16, type=ItemClassification.progression),
-    "Drama":                CivVItemData(17, type=ItemClassification.progression),
-    "Currency":             CivVItemData(18, type=ItemClassification.progression),
-    "Engineering":          CivVItemData(19, type=ItemClassification.progression),
-    "Iron Working":         CivVItemData(20, type=ItemClassification.progression),
-    "Theology":             CivVItemData(21, type=ItemClassification.progression),
-    "Civil Service":        CivVItemData(22, type=ItemClassification.progression),
-    "Guilds":               CivVItemData(23, type=ItemClassification.progression),
-    "Metal Casting":        CivVItemData(24, type=ItemClassification.progression),
-    "Compass":              CivVItemData(25, type=ItemClassification.progression),
-    "Education":            CivVItemData(26, type=ItemClassification.progression),
-    "Chivalry":             CivVItemData(27, type=ItemClassification.progression),
-    "Machinery":            CivVItemData(28, type=ItemClassification.progression),
-    "Physics":              CivVItemData(29, type=ItemClassification.progression),
-    "Steel":                CivVItemData(30, type=ItemClassification.progression),
-    "Astronomy":            CivVItemData(31, type=ItemClassification.progression),
-    "Acoustics":            CivVItemData(32, type=ItemClassification.progression),
-    "Banking":              CivVItemData(33, type=ItemClassification.progression),
-    "Printing Press":       CivVItemData(34, type=ItemClassification.progression),
-    "Gunpowder":            CivVItemData(35, type=ItemClassification.progression),
-    "Navigation":           CivVItemData(36, type=ItemClassification.progression),
-    "Architecture":         CivVItemData(37, type=ItemClassification.progression),
-    "Economics":            CivVItemData(38, type=ItemClassification.progression),
-    "Metallurgy":           CivVItemData(39, type=ItemClassification.progression),
-    "Chemistry":            CivVItemData(40, type=ItemClassification.progression),
-    "Archaeology":          CivVItemData(41, type=ItemClassification.progression),
-    "Scientific Theory":    CivVItemData(42, type=ItemClassification.progression),
-    "Industrialization":    CivVItemData(43, type=ItemClassification.progression),
-    "Rifling":              CivVItemData(44, type=ItemClassification.progression),
-    "Military Science":     CivVItemData(45, type=ItemClassification.progression),
-    "Fertilizer":           CivVItemData(46, type=ItemClassification.progression),
-    "Biology":              CivVItemData(47, type=ItemClassification.progression),
-    "Electricity":          CivVItemData(48, type=ItemClassification.progression),
-    "Steam Power":          CivVItemData(49, type=ItemClassification.progression),
-    "Dynamite":             CivVItemData(50, type=ItemClassification.progression),
-    "Refrigeration":        CivVItemData(51, type=ItemClassification.progression),
-    "Radio":                CivVItemData(52, type=ItemClassification.progression),
-    "Replaceable Parts":    CivVItemData(53, type=ItemClassification.progression),
-    "Flight":               CivVItemData(54, type=ItemClassification.progression),
-    "Railroad":             CivVItemData(55, type=ItemClassification.progression),
-    "Plastics":             CivVItemData(56, type=ItemClassification.progression),
-    "Electronics":          CivVItemData(57, type=ItemClassification.progression),
-    "Ballistics":           CivVItemData(58, type=ItemClassification.progression),
-    "Combustion":           CivVItemData(59, type=ItemClassification.progression),
-    "Penicillin":           CivVItemData(60, type=ItemClassification.progression),
-    "Atomic Theory":        CivVItemData(61, type=ItemClassification.progression),
-    "Radar":                CivVItemData(62, type=ItemClassification.progression),
-    "Combined Arms":        CivVItemData(63, type=ItemClassification.progression),
-    "Ecology":              CivVItemData(64, type=ItemClassification.progression),
-    "Nuclear Fission":      CivVItemData(65, type=ItemClassification.progression),
-    "Rocketry":             CivVItemData(66, type=ItemClassification.progression),
-    "Computers":            CivVItemData(67, type=ItemClassification.progression),
-    "Telecommunications":   CivVItemData(68, type=ItemClassification.progression),
-    "Mobile Tactics":       CivVItemData(69, type=ItemClassification.progression),
-    "Advanced Ballistics":  CivVItemData(70, type=ItemClassification.progression),
-    "Satellites":           CivVItemData(71, type=ItemClassification.progression),
-    "Robotics":             CivVItemData(72, type=ItemClassification.progression),
-    "Lasers":               CivVItemData(73, type=ItemClassification.progression),
-    "The Internet":         CivVItemData(74, type=ItemClassification.progression),
-    "Globalization":        CivVItemData(75, type=ItemClassification.progression),
-    "Particle Physics":     CivVItemData(76, type=ItemClassification.progression),
-    "Nuclear Fusion":       CivVItemData(77, type=ItemClassification.progression),
-    "Nanotechnology":       CivVItemData(78, type=ItemClassification.progression),
-    "Stealth":              CivVItemData(79, type=ItemClassification.progression)
-}
+# %% ITEM_DATA CLASS DEFINITION
+@dataclass
+class CivVItemData:
+    """
+    Dataclass used for specifying an item within Civ V.
+
+    """
+
+    name: str
+    "Name of this item"
+    type: CivVItemType
+    "Type of this item"
+    game_id: int
+    "ID of this item with this item type within Civ V"
+    classification: ItemClassification
+    "Classification of this item"
+    groups: set[CivVItemGroup | CivVItemType] = field(default_factory=set)
+    "Set of groups this item belongs to. The type of this item is always part of this set"
+    ap_id: int = field(init=False)
+    "ID of this item within AP"
+
+    def __post_init__(self):
+        # Add the item type as a prefix to the item name
+        self.name = f"{self.type.capitalize()} - {self.name}"
+
+        # Set AP ID for this item
+        self.ap_id = len(ITEMS_DATA) + ID_OFFSET
+
+        # Make sure the item type is part of this item's groups set
+        self.groups.add(self.type)
+
+        # Add self to the ITEMS_DATA; ITEMS_DATA_BY_ID; and ITEM_GROUPS dicts
+        ITEMS_DATA.append(self)
+        ITEMS_DATA_BY_ID[self.ap_id] = self
+        for group in self.groups:
+            ITEM_GROUPS[str(group)].append(self.name)
+
+
+# %% ITEM DECLARATIONS
+TECH_ITEMS = [
+    CivVItemData(
+        name="Pottery",
+        type=CivVItemType.tech,
+        game_id=82,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.ancient_era},
+    ),
+    CivVItemData(
+        name="Animal Husbandry",
+        type=CivVItemType.tech,
+        game_id=83,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.ancient_era},
+    ),
+    CivVItemData(
+        name="Archery",
+        type=CivVItemType.tech,
+        game_id=84,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.ancient_era},
+    ),
+    CivVItemData(
+        name="Mining",
+        type=CivVItemType.tech,
+        game_id=85,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.ancient_era},
+    ),
+    CivVItemData(
+        name="Sailing",
+        type=CivVItemType.tech,
+        game_id=86,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.ancient_era},
+    ),
+    CivVItemData(
+        name="Calendar",
+        type=CivVItemType.tech,
+        game_id=87,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.ancient_era},
+    ),
+    CivVItemData(
+        name="Writing",
+        type=CivVItemType.tech,
+        game_id=88,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.ancient_era},
+    ),
+    CivVItemData(
+        name="Trapping",
+        type=CivVItemType.tech,
+        game_id=89,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.ancient_era},
+    ),
+    CivVItemData(
+        name="The Wheel",
+        type=CivVItemType.tech,
+        game_id=90,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.ancient_era},
+    ),
+    CivVItemData(
+        name="Masonry",
+        type=CivVItemType.tech,
+        game_id=91,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.ancient_era},
+    ),
+    CivVItemData(
+        name="Bronze Working",
+        type=CivVItemType.tech,
+        game_id=92,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.ancient_era},
+    ),
+    CivVItemData(
+        name="Optics",
+        type=CivVItemType.tech,
+        game_id=93,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.classical_era},
+    ),
+    CivVItemData(
+        name="Horseback Riding",
+        type=CivVItemType.tech,
+        game_id=94,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.classical_era},
+    ),
+    CivVItemData(
+        name="Mathematics",
+        type=CivVItemType.tech,
+        game_id=95,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.classical_era},
+    ),
+    CivVItemData(
+        name="Construction",
+        type=CivVItemType.tech,
+        game_id=96,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.classical_era},
+    ),
+    CivVItemData(
+        name="Philosophy",
+        type=CivVItemType.tech,
+        game_id=97,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.classical_era},
+    ),
+    CivVItemData(
+        name="Drama and Poetry",
+        type=CivVItemType.tech,
+        game_id=98,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.classical_era},
+    ),
+    CivVItemData(
+        name="Currency",
+        type=CivVItemType.tech,
+        game_id=99,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.classical_era},
+    ),
+    CivVItemData(
+        name="Engineering",
+        type=CivVItemType.tech,
+        game_id=100,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.classical_era},
+    ),
+    CivVItemData(
+        name="Iron Working",
+        type=CivVItemType.tech,
+        game_id=101,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.classical_era},
+    ),
+    CivVItemData(
+        name="Theology",
+        type=CivVItemType.tech,
+        game_id=102,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.medieval_era},
+    ),
+    CivVItemData(
+        name="Civil Service",
+        type=CivVItemType.tech,
+        game_id=103,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.medieval_era},
+    ),
+    CivVItemData(
+        name="Guilds",
+        type=CivVItemType.tech,
+        game_id=104,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.medieval_era},
+    ),
+    CivVItemData(
+        name="Metal Casting",
+        type=CivVItemType.tech,
+        game_id=105,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.medieval_era},
+    ),
+    CivVItemData(
+        name="Compass",
+        type=CivVItemType.tech,
+        game_id=106,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.medieval_era},
+    ),
+    CivVItemData(
+        name="Education",
+        type=CivVItemType.tech,
+        game_id=107,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.medieval_era},
+    ),
+    CivVItemData(
+        name="Chivalry",
+        type=CivVItemType.tech,
+        game_id=108,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.medieval_era},
+    ),
+    CivVItemData(
+        name="Machinery",
+        type=CivVItemType.tech,
+        game_id=109,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.medieval_era},
+    ),
+    CivVItemData(
+        name="Physics",
+        type=CivVItemType.tech,
+        game_id=110,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.medieval_era},
+    ),
+    CivVItemData(
+        name="Steel",
+        type=CivVItemType.tech,
+        game_id=111,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.medieval_era},
+    ),
+    CivVItemData(
+        name="Astronomy",
+        type=CivVItemType.tech,
+        game_id=112,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.renaissance_era},
+    ),
+    CivVItemData(
+        name="Acoustics",
+        type=CivVItemType.tech,
+        game_id=113,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.renaissance_era},
+    ),
+    CivVItemData(
+        name="Banking",
+        type=CivVItemType.tech,
+        game_id=114,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.renaissance_era},
+    ),
+    CivVItemData(
+        name="Printing Press",
+        type=CivVItemType.tech,
+        game_id=115,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.renaissance_era},
+    ),
+    CivVItemData(
+        name="Gunpowder",
+        type=CivVItemType.tech,
+        game_id=116,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.renaissance_era},
+    ),
+    CivVItemData(
+        name="Navigation",
+        type=CivVItemType.tech,
+        game_id=117,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.renaissance_era},
+    ),
+    CivVItemData(
+        name="Architecture",
+        type=CivVItemType.tech,
+        game_id=118,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.renaissance_era},
+    ),
+    CivVItemData(
+        name="Economics",
+        type=CivVItemType.tech,
+        game_id=119,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.renaissance_era},
+    ),
+    CivVItemData(
+        name="Metallurgy",
+        type=CivVItemType.tech,
+        game_id=120,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.renaissance_era},
+    ),
+    CivVItemData(
+        name="Chemistry",
+        type=CivVItemType.tech,
+        game_id=121,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.renaissance_era},
+    ),
+    CivVItemData(
+        name="Archaeology",
+        type=CivVItemType.tech,
+        game_id=122,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.industrial_era},
+    ),
+    CivVItemData(
+        name="Scientific Theory",
+        type=CivVItemType.tech,
+        game_id=123,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.industrial_era},
+    ),
+    CivVItemData(
+        name="Industrialization",
+        type=CivVItemType.tech,
+        game_id=124,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.industrial_era},
+    ),
+    CivVItemData(
+        name="Rifling",
+        type=CivVItemType.tech,
+        game_id=125,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.industrial_era},
+    ),
+    CivVItemData(
+        name="Military Science",
+        type=CivVItemType.tech,
+        game_id=126,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.industrial_era},
+    ),
+    CivVItemData(
+        name="Fertilizer",
+        type=CivVItemType.tech,
+        game_id=127,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.industrial_era},
+    ),
+    CivVItemData(
+        name="Biology",
+        type=CivVItemType.tech,
+        game_id=128,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.industrial_era},
+    ),
+    CivVItemData(
+        name="Electricity",
+        type=CivVItemType.tech,
+        game_id=129,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.industrial_era},
+    ),
+    CivVItemData(
+        name="Steam Power",
+        type=CivVItemType.tech,
+        game_id=130,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.industrial_era},
+    ),
+    CivVItemData(
+        name="Dynamite",
+        type=CivVItemType.tech,
+        game_id=131,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.industrial_era},
+    ),
+    CivVItemData(
+        name="Refrigeration",
+        type=CivVItemType.tech,
+        game_id=132,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.modern_era},
+    ),
+    CivVItemData(
+        name="Radio",
+        type=CivVItemType.tech,
+        game_id=133,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.modern_era},
+    ),
+    CivVItemData(
+        name="Replaceable Parts",
+        type=CivVItemType.tech,
+        game_id=134,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.modern_era},
+    ),
+    CivVItemData(
+        name="Flight",
+        type=CivVItemType.tech,
+        game_id=135,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.modern_era},
+    ),
+    CivVItemData(
+        name="Railroad",
+        type=CivVItemType.tech,
+        game_id=136,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.modern_era},
+    ),
+    CivVItemData(
+        name="Plastics",
+        type=CivVItemType.tech,
+        game_id=137,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.modern_era},
+    ),
+    CivVItemData(
+        name="Electronics",
+        type=CivVItemType.tech,
+        game_id=138,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.modern_era},
+    ),
+    CivVItemData(
+        name="Ballistics",
+        type=CivVItemType.tech,
+        game_id=139,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.modern_era},
+    ),
+    CivVItemData(
+        name="Combustion",
+        type=CivVItemType.tech,
+        game_id=140,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.modern_era},
+    ),
+    CivVItemData(
+        name="Penicillin",
+        type=CivVItemType.tech,
+        game_id=141,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.atomic_era},
+    ),
+    CivVItemData(
+        name="Atomic Theory",
+        type=CivVItemType.tech,
+        game_id=142,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.atomic_era},
+    ),
+    CivVItemData(
+        name="Radar",
+        type=CivVItemType.tech,
+        game_id=143,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.atomic_era},
+    ),
+    CivVItemData(
+        name="Combined Arms",
+        type=CivVItemType.tech,
+        game_id=144,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.atomic_era},
+    ),
+    CivVItemData(
+        name="Ecology",
+        type=CivVItemType.tech,
+        game_id=145,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.atomic_era},
+    ),
+    CivVItemData(
+        name="Nuclear Fission",
+        type=CivVItemType.tech,
+        game_id=146,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.atomic_era},
+    ),
+    CivVItemData(
+        name="Rocketry",
+        type=CivVItemType.tech,
+        game_id=147,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.atomic_era},
+    ),
+    CivVItemData(
+        name="Computers",
+        type=CivVItemType.tech,
+        game_id=148,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.atomic_era},
+    ),
+    CivVItemData(
+        name="Telecommunications",
+        type=CivVItemType.tech,
+        game_id=149,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.information_era},
+    ),
+    CivVItemData(
+        name="Mobile Tactics",
+        type=CivVItemType.tech,
+        game_id=150,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.information_era},
+    ),
+    CivVItemData(
+        name="Advanced Ballistics",
+        type=CivVItemType.tech,
+        game_id=151,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.information_era},
+    ),
+    CivVItemData(
+        name="Satellites",
+        type=CivVItemType.tech,
+        game_id=152,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.information_era},
+    ),
+    CivVItemData(
+        name="Robotics",
+        type=CivVItemType.tech,
+        game_id=153,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.information_era},
+    ),
+    CivVItemData(
+        name="Lasers",
+        type=CivVItemType.tech,
+        game_id=154,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.information_era},
+    ),
+    CivVItemData(
+        name="The Internet",
+        type=CivVItemType.tech,
+        game_id=155,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.information_era},
+    ),
+    CivVItemData(
+        name="Globalization",
+        type=CivVItemType.tech,
+        game_id=156,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.information_era},
+    ),
+    CivVItemData(
+        name="Particle Physics",
+        type=CivVItemType.tech,
+        game_id=157,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.information_era},
+    ),
+    CivVItemData(
+        name="Nuclear Fusion",
+        type=CivVItemType.tech,
+        game_id=158,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.information_era},
+    ),
+    CivVItemData(
+        name="Nanotechnology",
+        type=CivVItemType.tech,
+        game_id=159,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.information_era},
+    ),
+    CivVItemData(
+        name="Stealth",
+        type=CivVItemType.tech,
+        game_id=160,
+        classification=ItemClassification.progression,
+        groups={CivVItemGroup.information_era},
+    ),
+]
+"List of all technologies within Civ V"

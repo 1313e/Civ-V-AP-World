@@ -5,7 +5,8 @@ from CommonClient import CommonContext
 from NetUtils import NetworkItem
 
 from .command_processor import CivVCommandProcessor
-from .constants import GAME_NAME, ITEM_OFFSET
+from .constants import GAME_NAME, ID_OFFSET
+from .enums import CivVLocationType
 
 # All declaration
 __all__ = ["CivVContext"]
@@ -26,9 +27,9 @@ class CivVContext(CommonContext):
     # Additional class attributes
     client_task: asyncio.Task
     "The asyncio task that contains the Civ V AP Client"
-    item_offset: int = ITEM_OFFSET
+    item_offset: int = ID_OFFSET
     "Item offset to use for conversion from internal IDs to multiworld IDs"
-    sent_locations: dict[str, set[int]] = {"techs": set()}
+    sent_locations: dict[CivVLocationType, set[int]] = {CivVLocationType.tech: set()}
     "Dict of locations originating from this game that have been sent to the multiworld already, split by location type"
     received_items: set[NetworkItem] = set()
     "Set of items originating from the multiworld that have been received by this game already"

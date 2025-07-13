@@ -13,6 +13,8 @@ from Utils import init_logging
 from .context import CivVContext
 from .constants import ADDRESS, GAME_NAME, GAME_READY, GAME_NOT_READY, MOD_READY, MOD_NOT_READY, PORT
 from .exceptions import TunerConnectionException
+from .items import ITEMS_DATA_BY_ID
+from .locations import LOCATIONS_DATA_BY_TYPE_ID
 from .tuner import Tuner
 
 # All declaration
@@ -88,11 +90,13 @@ class CivVClient:
 
         """
 
+        function_name: str = func.__name__
+
         @functools.wraps(func)
         async def wrapper(*args, **kwargs):
-            logger.debug(f"Executing: {func.__name__}")
+            logger.debug(f"Executing: {function_name}")
             result = await func(*args, **kwargs)
-            logger.debug(f"Finished: {result}")
+            logger.debug(f"Finished: {function_name}")
             return result
 
         return wrapper
@@ -273,8 +277,11 @@ class CivVClient:
         locations_dct = await self.tuner.get_items_to_send()
         for location_type, locations in locations_dct.items():
             locations_to_send = set(locations).difference(self.ctx.sent_locations[location_type])
-            # TODO: Refactor to use a location_type + location -> ID conversion function later
-            await self.ctx.send_msgs([{"cmd": "LocationChecks", "locations": [x + self.ctx.item_offset for x in locations_to_send]}])
+            await self.ctx.send_msgs(
+                [{"cmd": "LocationChecks",
+                  "locations": [LOCATIONS_DATA_BY_TYPE_ID[(location_type, x)].ap_id for x in locations_to_send]},
+                 ]
+            )
             self.ctx.sent_locations[location_type].update(locations_to_send)
 
     @update_func
@@ -287,8 +294,7 @@ class CivVClient:
         # Check which items have been received that have not been received by the player yet and grant them
         items_to_receive = set(self.ctx.items_received).difference(self.ctx.received_items)
         if items_to_receive:
-            # TODO: Refactor to use an ID -> item_type + item conversion function later
-            await self.tuner.grant_technologies(*(x.item - self.ctx.item_offset + 81 for x in items_to_receive))
+            await self.tuner.grant_technologies(*(ITEMS_DATA_BY_ID[x.item].game_id for x in items_to_receive))
             self.ctx.received_items.update(items_to_receive)
 
     @update_func

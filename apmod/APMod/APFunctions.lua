@@ -34,7 +34,7 @@ function GetItemsToSend()
 		    table.insert(techs, i)
 		end
 	end
-	printResponse('{"techs": [' .. table.concat(techs, ',') .. ']}')
+	printResponse('{"tech": [' .. table.concat(techs, ',') .. ']}')
 end
 
 function HasAchievedVictory()

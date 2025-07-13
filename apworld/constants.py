@@ -1,11 +1,11 @@
 # %% GLOBALS DEFINITIONS
 # GENERAL
-APWORLD_VERSION: str = "0.1.4"
+APWORLD_VERSION: str = "0.2.0"
 "Version of this APWorld"
 GAME_NAME: str = "Civilization V"
 "Name of the game this APWorld is for"
-ITEM_OFFSET: int = 140319
-"Item ID offset for this APWorld"
+ID_OFFSET: int = 140319
+"ID offset for this APWorld"
 
 # MESSAGES
 GAME_READY: str = "Civ V is running"
