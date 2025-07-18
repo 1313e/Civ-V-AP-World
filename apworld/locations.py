@@ -1,11 +1,12 @@
 # %% IMPORTS
 from collections.abc import Callable
 from dataclasses import dataclass, field
+from typing import ClassVar
 
 from BaseClasses import Location, CollectionState
 
 from . import regions
-from .constants import GAME_NAME, ID_OFFSET
+from .constants import GAME_NAME, ID_OFFSET, TECH_ID_OFFSET
 from .enums import CivVLocationType
 
 # All declaration
@@ -45,9 +46,19 @@ class CivVLocationData:
     ap_id: int = field(init=False)
     "ID of this location within AP"
 
+    # Class attributes
+    ID_OFFSET_DCT: ClassVar[dict[CivVLocationType, int]] = {
+        CivVLocationType.tech: TECH_ID_OFFSET,
+    }
+    "Dict that indicates what offset specific location types must have"
+
+
     def __post_init__(self):
         # Add the location type as a prefix to the location name
         self.name = f"{self.type.capitalize()} - {self.name}"
+
+        # Set game ID properly
+        self.game_id += self.ID_OFFSET_DCT[self.type]
 
         # Set AP ID for this location
         self.ap_id = len(LOCATIONS_DATA) + ID_OFFSET

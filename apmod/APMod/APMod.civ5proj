@@ -5,7 +5,7 @@
     <ProjectGuid>{b035c588-14ca-472e-b2dd-782d1284a10e}</ProjectGuid>
     <Name>CivVAPMod</Name>
     <Guid>9990c668-41e5-4a30-bcb1-a864a325215e</Guid>
-    <ModVersion>3</ModVersion>
+    <ModVersion>4</ModVersion>
     <Stability>Alpha</Stability>
     <Teaser>Civ V mod for archipelago randomizer</Teaser>
     <Description>Civ V mod for archipelago randomizer</Description>
@@ -13,7 +13,7 @@
     <SpecialThanks>
     </SpecialThanks>
     <AffectsSavedGames>true</AffectsSavedGames>
-    <MinCompatibleSaveVersion>3</MinCompatibleSaveVersion>
+    <MinCompatibleSaveVersion>4</MinCompatibleSaveVersion>
     <SupportsSinglePlayer>true</SupportsSinglePlayer>
     <SupportsMultiplayer>true</SupportsMultiplayer>
     <SupportsHotSeat>true</SupportsHotSeat>
@@ -22,10 +22,15 @@
     <RootNamespace>APMod</RootNamespace>
     <ModReferences />
     <ModActions>
-      <Action xmlns="">
+      <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
         <FileName>Tech_Text.xml</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>Icons/AP_Tech_Icons.xml</FileName>
       </Action>
     </ModActions>
     <ModContent>
@@ -53,10 +58,37 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
+    <Content Include="Icons\AP_Tech_128.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Icons\AP_Tech_214.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Icons\AP_Tech_256.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Icons\AP_Tech_64.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Icons\AP_Tech_80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Icons\AP_Tech_Icons.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
     <Content Include="Tech_Text.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Icons" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Firaxis\ModBuddy\Civ5Mod.targets" />
 </Project>

@@ -29,7 +29,7 @@ end
 
 function GetItemsToSend()
 	techs = {}
-	for i=1, 80 do
+	for i=83, 162 do
 		if teamTechs:HasTech(i) then
 		    table.insert(techs, i)
 		end
@@ -51,11 +51,12 @@ function Init()
 		pPlayer = Players[i]
 		pTeam = Teams[pPlayer:GetTeam()]
 		if pPlayer:IsHuman() then
-			pTeam:SetHasTech(161, true)
+			pTeam:SetHasTech(81, true)
 		else
-			pTeam:SetHasTech(162, true)
+			pTeam:SetHasTech(82, true)
 		end
 	end
+	player:AddNotification(NotificationTypes.NOTIFICATION_GENERIC, "Hello", "Test")
 end
 
 Init()

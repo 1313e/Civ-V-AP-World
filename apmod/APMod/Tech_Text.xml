@@ -10,19 +10,11 @@
 			<Where Type='TECH_POTTERY'/>
 		</Update>
 		<Update>
-			<Set ID='82'/>
-			<Where Type='TECH_POTTERY'/>
-		</Update>
-		<Update>
 			<Set GridY='30'/>
 			<Where Type='TECH_ANIMAL_HUSBANDRY'/>
 		</Update>
 		<Update>
 			<Set GoodyTech='false'/>
-			<Where Type='TECH_ANIMAL_HUSBANDRY'/>
-		</Update>
-		<Update>
-			<Set ID='83'/>
 			<Where Type='TECH_ANIMAL_HUSBANDRY'/>
 		</Update>
 		<Update>
@@ -34,19 +26,11 @@
 			<Where Type='TECH_ARCHERY'/>
 		</Update>
 		<Update>
-			<Set ID='84'/>
-			<Where Type='TECH_ARCHERY'/>
-		</Update>
-		<Update>
 			<Set GridY='30'/>
 			<Where Type='TECH_MINING'/>
 		</Update>
 		<Update>
 			<Set GoodyTech='false'/>
-			<Where Type='TECH_MINING'/>
-		</Update>
-		<Update>
-			<Set ID='85'/>
 			<Where Type='TECH_MINING'/>
 		</Update>
 		<Update>
@@ -58,19 +42,11 @@
 			<Where Type='TECH_SAILING'/>
 		</Update>
 		<Update>
-			<Set ID='86'/>
-			<Where Type='TECH_SAILING'/>
-		</Update>
-		<Update>
 			<Set GridY='30'/>
 			<Where Type='TECH_CALENDAR'/>
 		</Update>
 		<Update>
 			<Set GoodyTech='false'/>
-			<Where Type='TECH_CALENDAR'/>
-		</Update>
-		<Update>
-			<Set ID='87'/>
 			<Where Type='TECH_CALENDAR'/>
 		</Update>
 		<Update>
@@ -82,19 +58,11 @@
 			<Where Type='TECH_WRITING'/>
 		</Update>
 		<Update>
-			<Set ID='88'/>
-			<Where Type='TECH_WRITING'/>
-		</Update>
-		<Update>
 			<Set GridY='30'/>
 			<Where Type='TECH_TRAPPING'/>
 		</Update>
 		<Update>
 			<Set GoodyTech='false'/>
-			<Where Type='TECH_TRAPPING'/>
-		</Update>
-		<Update>
-			<Set ID='89'/>
 			<Where Type='TECH_TRAPPING'/>
 		</Update>
 		<Update>
@@ -106,19 +74,11 @@
 			<Where Type='TECH_THE_WHEEL'/>
 		</Update>
 		<Update>
-			<Set ID='90'/>
-			<Where Type='TECH_THE_WHEEL'/>
-		</Update>
-		<Update>
 			<Set GridY='30'/>
 			<Where Type='TECH_MASONRY'/>
 		</Update>
 		<Update>
 			<Set GoodyTech='false'/>
-			<Where Type='TECH_MASONRY'/>
-		</Update>
-		<Update>
-			<Set ID='91'/>
 			<Where Type='TECH_MASONRY'/>
 		</Update>
 		<Update>
@@ -130,19 +90,11 @@
 			<Where Type='TECH_BRONZE_WORKING'/>
 		</Update>
 		<Update>
-			<Set ID='92'/>
-			<Where Type='TECH_BRONZE_WORKING'/>
-		</Update>
-		<Update>
 			<Set GridY='30'/>
 			<Where Type='TECH_OPTICS'/>
 		</Update>
 		<Update>
 			<Set GoodyTech='false'/>
-			<Where Type='TECH_OPTICS'/>
-		</Update>
-		<Update>
-			<Set ID='93'/>
 			<Where Type='TECH_OPTICS'/>
 		</Update>
 		<Update>
@@ -154,19 +106,11 @@
 			<Where Type='TECH_HORSEBACK_RIDING'/>
 		</Update>
 		<Update>
-			<Set ID='94'/>
-			<Where Type='TECH_HORSEBACK_RIDING'/>
-		</Update>
-		<Update>
 			<Set GridY='30'/>
 			<Where Type='TECH_MATHEMATICS'/>
 		</Update>
 		<Update>
 			<Set GoodyTech='false'/>
-			<Where Type='TECH_MATHEMATICS'/>
-		</Update>
-		<Update>
-			<Set ID='95'/>
 			<Where Type='TECH_MATHEMATICS'/>
 		</Update>
 		<Update>
@@ -178,19 +122,11 @@
 			<Where Type='TECH_CONSTRUCTION'/>
 		</Update>
 		<Update>
-			<Set ID='96'/>
-			<Where Type='TECH_CONSTRUCTION'/>
-		</Update>
-		<Update>
 			<Set GridY='30'/>
 			<Where Type='TECH_PHILOSOPHY'/>
 		</Update>
 		<Update>
 			<Set GoodyTech='false'/>
-			<Where Type='TECH_PHILOSOPHY'/>
-		</Update>
-		<Update>
-			<Set ID='97'/>
 			<Where Type='TECH_PHILOSOPHY'/>
 		</Update>
 		<Update>
@@ -202,19 +138,11 @@
 			<Where Type='TECH_DRAMA'/>
 		</Update>
 		<Update>
-			<Set ID='98'/>
-			<Where Type='TECH_DRAMA'/>
-		</Update>
-		<Update>
 			<Set GridY='30'/>
 			<Where Type='TECH_CURRENCY'/>
 		</Update>
 		<Update>
 			<Set GoodyTech='false'/>
-			<Where Type='TECH_CURRENCY'/>
-		</Update>
-		<Update>
-			<Set ID='99'/>
 			<Where Type='TECH_CURRENCY'/>
 		</Update>
 		<Update>
@@ -226,19 +154,11 @@
 			<Where Type='TECH_ENGINEERING'/>
 		</Update>
 		<Update>
-			<Set ID='100'/>
-			<Where Type='TECH_ENGINEERING'/>
-		</Update>
-		<Update>
 			<Set GridY='30'/>
 			<Where Type='TECH_IRON_WORKING'/>
 		</Update>
 		<Update>
 			<Set GoodyTech='false'/>
-			<Where Type='TECH_IRON_WORKING'/>
-		</Update>
-		<Update>
-			<Set ID='101'/>
 			<Where Type='TECH_IRON_WORKING'/>
 		</Update>
 		<Update>
@@ -250,19 +170,11 @@
 			<Where Type='TECH_THEOLOGY'/>
 		</Update>
 		<Update>
-			<Set ID='102'/>
-			<Where Type='TECH_THEOLOGY'/>
-		</Update>
-		<Update>
 			<Set GridY='30'/>
 			<Where Type='TECH_CIVIL_SERVICE'/>
 		</Update>
 		<Update>
 			<Set GoodyTech='false'/>
-			<Where Type='TECH_CIVIL_SERVICE'/>
-		</Update>
-		<Update>
-			<Set ID='103'/>
 			<Where Type='TECH_CIVIL_SERVICE'/>
 		</Update>
 		<Update>
@@ -274,19 +186,11 @@
 			<Where Type='TECH_GUILDS'/>
 		</Update>
 		<Update>
-			<Set ID='104'/>
-			<Where Type='TECH_GUILDS'/>
-		</Update>
-		<Update>
 			<Set GridY='30'/>
 			<Where Type='TECH_METAL_CASTING'/>
 		</Update>
 		<Update>
 			<Set GoodyTech='false'/>
-			<Where Type='TECH_METAL_CASTING'/>
-		</Update>
-		<Update>
-			<Set ID='105'/>
 			<Where Type='TECH_METAL_CASTING'/>
 		</Update>
 		<Update>
@@ -298,19 +202,11 @@
 			<Where Type='TECH_COMPASS'/>
 		</Update>
 		<Update>
-			<Set ID='106'/>
-			<Where Type='TECH_COMPASS'/>
-		</Update>
-		<Update>
 			<Set GridY='30'/>
 			<Where Type='TECH_EDUCATION'/>
 		</Update>
 		<Update>
 			<Set GoodyTech='false'/>
-			<Where Type='TECH_EDUCATION'/>
-		</Update>
-		<Update>
-			<Set ID='107'/>
 			<Where Type='TECH_EDUCATION'/>
 		</Update>
 		<Update>
@@ -322,19 +218,11 @@
 			<Where Type='TECH_CHIVALRY'/>
 		</Update>
 		<Update>
-			<Set ID='108'/>
-			<Where Type='TECH_CHIVALRY'/>
-		</Update>
-		<Update>
 			<Set GridY='30'/>
 			<Where Type='TECH_MACHINERY'/>
 		</Update>
 		<Update>
 			<Set GoodyTech='false'/>
-			<Where Type='TECH_MACHINERY'/>
-		</Update>
-		<Update>
-			<Set ID='109'/>
 			<Where Type='TECH_MACHINERY'/>
 		</Update>
 		<Update>
@@ -346,19 +234,11 @@
 			<Where Type='TECH_PHYSICS'/>
 		</Update>
 		<Update>
-			<Set ID='110'/>
-			<Where Type='TECH_PHYSICS'/>
-		</Update>
-		<Update>
 			<Set GridY='30'/>
 			<Where Type='TECH_STEEL'/>
 		</Update>
 		<Update>
 			<Set GoodyTech='false'/>
-			<Where Type='TECH_STEEL'/>
-		</Update>
-		<Update>
-			<Set ID='111'/>
 			<Where Type='TECH_STEEL'/>
 		</Update>
 		<Update>
@@ -370,19 +250,11 @@
 			<Where Type='TECH_ASTRONOMY'/>
 		</Update>
 		<Update>
-			<Set ID='112'/>
-			<Where Type='TECH_ASTRONOMY'/>
-		</Update>
-		<Update>
 			<Set GridY='30'/>
 			<Where Type='TECH_ACOUSTICS'/>
 		</Update>
 		<Update>
 			<Set GoodyTech='false'/>
-			<Where Type='TECH_ACOUSTICS'/>
-		</Update>
-		<Update>
-			<Set ID='113'/>
 			<Where Type='TECH_ACOUSTICS'/>
 		</Update>
 		<Update>
@@ -394,19 +266,11 @@
 			<Where Type='TECH_BANKING'/>
 		</Update>
 		<Update>
-			<Set ID='114'/>
-			<Where Type='TECH_BANKING'/>
-		</Update>
-		<Update>
 			<Set GridY='30'/>
 			<Where Type='TECH_PRINTING_PRESS'/>
 		</Update>
 		<Update>
 			<Set GoodyTech='false'/>
-			<Where Type='TECH_PRINTING_PRESS'/>
-		</Update>
-		<Update>
-			<Set ID='115'/>
 			<Where Type='TECH_PRINTING_PRESS'/>
 		</Update>
 		<Update>
@@ -418,19 +282,11 @@
 			<Where Type='TECH_GUNPOWDER'/>
 		</Update>
 		<Update>
-			<Set ID='116'/>
-			<Where Type='TECH_GUNPOWDER'/>
-		</Update>
-		<Update>
 			<Set GridY='30'/>
 			<Where Type='TECH_NAVIGATION'/>
 		</Update>
 		<Update>
 			<Set GoodyTech='false'/>
-			<Where Type='TECH_NAVIGATION'/>
-		</Update>
-		<Update>
-			<Set ID='117'/>
 			<Where Type='TECH_NAVIGATION'/>
 		</Update>
 		<Update>
@@ -442,19 +298,11 @@
 			<Where Type='TECH_ARCHITECTURE'/>
 		</Update>
 		<Update>
-			<Set ID='118'/>
-			<Where Type='TECH_ARCHITECTURE'/>
-		</Update>
-		<Update>
 			<Set GridY='30'/>
 			<Where Type='TECH_ECONOMICS'/>
 		</Update>
 		<Update>
 			<Set GoodyTech='false'/>
-			<Where Type='TECH_ECONOMICS'/>
-		</Update>
-		<Update>
-			<Set ID='119'/>
 			<Where Type='TECH_ECONOMICS'/>
 		</Update>
 		<Update>
@@ -466,19 +314,11 @@
 			<Where Type='TECH_METALLURGY'/>
 		</Update>
 		<Update>
-			<Set ID='120'/>
-			<Where Type='TECH_METALLURGY'/>
-		</Update>
-		<Update>
 			<Set GridY='30'/>
 			<Where Type='TECH_CHEMISTRY'/>
 		</Update>
 		<Update>
 			<Set GoodyTech='false'/>
-			<Where Type='TECH_CHEMISTRY'/>
-		</Update>
-		<Update>
-			<Set ID='121'/>
 			<Where Type='TECH_CHEMISTRY'/>
 		</Update>
 		<Update>
@@ -490,19 +330,11 @@
 			<Where Type='TECH_ARCHAEOLOGY'/>
 		</Update>
 		<Update>
-			<Set ID='122'/>
-			<Where Type='TECH_ARCHAEOLOGY'/>
-		</Update>
-		<Update>
 			<Set GridY='30'/>
 			<Where Type='TECH_SCIENTIFIC_THEORY'/>
 		</Update>
 		<Update>
 			<Set GoodyTech='false'/>
-			<Where Type='TECH_SCIENTIFIC_THEORY'/>
-		</Update>
-		<Update>
-			<Set ID='123'/>
 			<Where Type='TECH_SCIENTIFIC_THEORY'/>
 		</Update>
 		<Update>
@@ -514,19 +346,11 @@
 			<Where Type='TECH_INDUSTRIALIZATION'/>
 		</Update>
 		<Update>
-			<Set ID='124'/>
-			<Where Type='TECH_INDUSTRIALIZATION'/>
-		</Update>
-		<Update>
 			<Set GridY='30'/>
 			<Where Type='TECH_RIFLING'/>
 		</Update>
 		<Update>
 			<Set GoodyTech='false'/>
-			<Where Type='TECH_RIFLING'/>
-		</Update>
-		<Update>
-			<Set ID='125'/>
 			<Where Type='TECH_RIFLING'/>
 		</Update>
 		<Update>
@@ -538,19 +362,11 @@
 			<Where Type='TECH_MILITARY_SCIENCE'/>
 		</Update>
 		<Update>
-			<Set ID='126'/>
-			<Where Type='TECH_MILITARY_SCIENCE'/>
-		</Update>
-		<Update>
 			<Set GridY='30'/>
 			<Where Type='TECH_FERTILIZER'/>
 		</Update>
 		<Update>
 			<Set GoodyTech='false'/>
-			<Where Type='TECH_FERTILIZER'/>
-		</Update>
-		<Update>
-			<Set ID='127'/>
 			<Where Type='TECH_FERTILIZER'/>
 		</Update>
 		<Update>
@@ -562,19 +378,11 @@
 			<Where Type='TECH_BIOLOGY'/>
 		</Update>
 		<Update>
-			<Set ID='128'/>
-			<Where Type='TECH_BIOLOGY'/>
-		</Update>
-		<Update>
 			<Set GridY='30'/>
 			<Where Type='TECH_ELECTRICITY'/>
 		</Update>
 		<Update>
 			<Set GoodyTech='false'/>
-			<Where Type='TECH_ELECTRICITY'/>
-		</Update>
-		<Update>
-			<Set ID='129'/>
 			<Where Type='TECH_ELECTRICITY'/>
 		</Update>
 		<Update>
@@ -586,19 +394,11 @@
 			<Where Type='TECH_STEAM_POWER'/>
 		</Update>
 		<Update>
-			<Set ID='130'/>
-			<Where Type='TECH_STEAM_POWER'/>
-		</Update>
-		<Update>
 			<Set GridY='30'/>
 			<Where Type='TECH_DYNAMITE'/>
 		</Update>
 		<Update>
 			<Set GoodyTech='false'/>
-			<Where Type='TECH_DYNAMITE'/>
-		</Update>
-		<Update>
-			<Set ID='131'/>
 			<Where Type='TECH_DYNAMITE'/>
 		</Update>
 		<Update>
@@ -610,19 +410,11 @@
 			<Where Type='TECH_REFRIGERATION'/>
 		</Update>
 		<Update>
-			<Set ID='132'/>
-			<Where Type='TECH_REFRIGERATION'/>
-		</Update>
-		<Update>
 			<Set GridY='30'/>
 			<Where Type='TECH_RADIO'/>
 		</Update>
 		<Update>
 			<Set GoodyTech='false'/>
-			<Where Type='TECH_RADIO'/>
-		</Update>
-		<Update>
-			<Set ID='133'/>
 			<Where Type='TECH_RADIO'/>
 		</Update>
 		<Update>
@@ -634,19 +426,11 @@
 			<Where Type='TECH_REPLACEABLE_PARTS'/>
 		</Update>
 		<Update>
-			<Set ID='134'/>
-			<Where Type='TECH_REPLACEABLE_PARTS'/>
-		</Update>
-		<Update>
 			<Set GridY='30'/>
 			<Where Type='TECH_FLIGHT'/>
 		</Update>
 		<Update>
 			<Set GoodyTech='false'/>
-			<Where Type='TECH_FLIGHT'/>
-		</Update>
-		<Update>
-			<Set ID='135'/>
 			<Where Type='TECH_FLIGHT'/>
 		</Update>
 		<Update>
@@ -658,19 +442,11 @@
 			<Where Type='TECH_RAILROAD'/>
 		</Update>
 		<Update>
-			<Set ID='136'/>
-			<Where Type='TECH_RAILROAD'/>
-		</Update>
-		<Update>
 			<Set GridY='30'/>
 			<Where Type='TECH_PLASTIC'/>
 		</Update>
 		<Update>
 			<Set GoodyTech='false'/>
-			<Where Type='TECH_PLASTIC'/>
-		</Update>
-		<Update>
-			<Set ID='137'/>
 			<Where Type='TECH_PLASTIC'/>
 		</Update>
 		<Update>
@@ -682,19 +458,11 @@
 			<Where Type='TECH_ELECTRONICS'/>
 		</Update>
 		<Update>
-			<Set ID='138'/>
-			<Where Type='TECH_ELECTRONICS'/>
-		</Update>
-		<Update>
 			<Set GridY='30'/>
 			<Where Type='TECH_BALLISTICS'/>
 		</Update>
 		<Update>
 			<Set GoodyTech='false'/>
-			<Where Type='TECH_BALLISTICS'/>
-		</Update>
-		<Update>
-			<Set ID='139'/>
 			<Where Type='TECH_BALLISTICS'/>
 		</Update>
 		<Update>
@@ -706,19 +474,11 @@
 			<Where Type='TECH_COMBUSTION'/>
 		</Update>
 		<Update>
-			<Set ID='140'/>
-			<Where Type='TECH_COMBUSTION'/>
-		</Update>
-		<Update>
 			<Set GridY='30'/>
 			<Where Type='TECH_PENICILIN'/>
 		</Update>
 		<Update>
 			<Set GoodyTech='false'/>
-			<Where Type='TECH_PENICILIN'/>
-		</Update>
-		<Update>
-			<Set ID='141'/>
 			<Where Type='TECH_PENICILIN'/>
 		</Update>
 		<Update>
@@ -730,19 +490,11 @@
 			<Where Type='TECH_ATOMIC_THEORY'/>
 		</Update>
 		<Update>
-			<Set ID='142'/>
-			<Where Type='TECH_ATOMIC_THEORY'/>
-		</Update>
-		<Update>
 			<Set GridY='30'/>
 			<Where Type='TECH_RADAR'/>
 		</Update>
 		<Update>
 			<Set GoodyTech='false'/>
-			<Where Type='TECH_RADAR'/>
-		</Update>
-		<Update>
-			<Set ID='143'/>
 			<Where Type='TECH_RADAR'/>
 		</Update>
 		<Update>
@@ -754,19 +506,11 @@
 			<Where Type='TECH_COMBINED_ARMS'/>
 		</Update>
 		<Update>
-			<Set ID='144'/>
-			<Where Type='TECH_COMBINED_ARMS'/>
-		</Update>
-		<Update>
 			<Set GridY='30'/>
 			<Where Type='TECH_ECOLOGY'/>
 		</Update>
 		<Update>
 			<Set GoodyTech='false'/>
-			<Where Type='TECH_ECOLOGY'/>
-		</Update>
-		<Update>
-			<Set ID='145'/>
 			<Where Type='TECH_ECOLOGY'/>
 		</Update>
 		<Update>
@@ -778,19 +522,11 @@
 			<Where Type='TECH_NUCLEAR_FISSION'/>
 		</Update>
 		<Update>
-			<Set ID='146'/>
-			<Where Type='TECH_NUCLEAR_FISSION'/>
-		</Update>
-		<Update>
 			<Set GridY='30'/>
 			<Where Type='TECH_ROCKETRY'/>
 		</Update>
 		<Update>
 			<Set GoodyTech='false'/>
-			<Where Type='TECH_ROCKETRY'/>
-		</Update>
-		<Update>
-			<Set ID='147'/>
 			<Where Type='TECH_ROCKETRY'/>
 		</Update>
 		<Update>
@@ -802,19 +538,11 @@
 			<Where Type='TECH_COMPUTERS'/>
 		</Update>
 		<Update>
-			<Set ID='148'/>
-			<Where Type='TECH_COMPUTERS'/>
-		</Update>
-		<Update>
 			<Set GridY='30'/>
 			<Where Type='TECH_TELECOM'/>
 		</Update>
 		<Update>
 			<Set GoodyTech='false'/>
-			<Where Type='TECH_TELECOM'/>
-		</Update>
-		<Update>
-			<Set ID='149'/>
 			<Where Type='TECH_TELECOM'/>
 		</Update>
 		<Update>
@@ -826,19 +554,11 @@
 			<Where Type='TECH_MOBILE_TACTICS'/>
 		</Update>
 		<Update>
-			<Set ID='150'/>
-			<Where Type='TECH_MOBILE_TACTICS'/>
-		</Update>
-		<Update>
 			<Set GridY='30'/>
 			<Where Type='TECH_ADVANCED_BALLISTICS'/>
 		</Update>
 		<Update>
 			<Set GoodyTech='false'/>
-			<Where Type='TECH_ADVANCED_BALLISTICS'/>
-		</Update>
-		<Update>
-			<Set ID='151'/>
 			<Where Type='TECH_ADVANCED_BALLISTICS'/>
 		</Update>
 		<Update>
@@ -850,19 +570,11 @@
 			<Where Type='TECH_SATELLITES'/>
 		</Update>
 		<Update>
-			<Set ID='152'/>
-			<Where Type='TECH_SATELLITES'/>
-		</Update>
-		<Update>
 			<Set GridY='30'/>
 			<Where Type='TECH_ROBOTICS'/>
 		</Update>
 		<Update>
 			<Set GoodyTech='false'/>
-			<Where Type='TECH_ROBOTICS'/>
-		</Update>
-		<Update>
-			<Set ID='153'/>
 			<Where Type='TECH_ROBOTICS'/>
 		</Update>
 		<Update>
@@ -874,19 +586,11 @@
 			<Where Type='TECH_LASERS'/>
 		</Update>
 		<Update>
-			<Set ID='154'/>
-			<Where Type='TECH_LASERS'/>
-		</Update>
-		<Update>
 			<Set GridY='30'/>
 			<Where Type='TECH_INTERNET'/>
 		</Update>
 		<Update>
 			<Set GoodyTech='false'/>
-			<Where Type='TECH_INTERNET'/>
-		</Update>
-		<Update>
-			<Set ID='155'/>
 			<Where Type='TECH_INTERNET'/>
 		</Update>
 		<Update>
@@ -898,19 +602,11 @@
 			<Where Type='TECH_GLOBALIZATION'/>
 		</Update>
 		<Update>
-			<Set ID='156'/>
-			<Where Type='TECH_GLOBALIZATION'/>
-		</Update>
-		<Update>
 			<Set GridY='30'/>
 			<Where Type='TECH_PARTICLE_PHYSICS'/>
 		</Update>
 		<Update>
 			<Set GoodyTech='false'/>
-			<Where Type='TECH_PARTICLE_PHYSICS'/>
-		</Update>
-		<Update>
-			<Set ID='157'/>
 			<Where Type='TECH_PARTICLE_PHYSICS'/>
 		</Update>
 		<Update>
@@ -922,19 +618,11 @@
 			<Where Type='TECH_NUCLEAR_FUSION'/>
 		</Update>
 		<Update>
-			<Set ID='158'/>
-			<Where Type='TECH_NUCLEAR_FUSION'/>
-		</Update>
-		<Update>
 			<Set GridY='30'/>
 			<Where Type='TECH_NANOTECHNOLOGY'/>
 		</Update>
 		<Update>
 			<Set GoodyTech='false'/>
-			<Where Type='TECH_NANOTECHNOLOGY'/>
-		</Update>
-		<Update>
-			<Set ID='159'/>
 			<Where Type='TECH_NANOTECHNOLOGY'/>
 		</Update>
 		<Update>
@@ -945,1434 +633,8 @@
 			<Set GoodyTech='false'/>
 			<Where Type='TECH_STEALTH'/>
 		</Update>
-		<Update>
-			<Set ID='160'/>
-			<Where Type='TECH_STEALTH'/>
-		</Update>
 		<Row>
-			<ID>1</ID>
-			<Type>TECH_AP1</Type>
-			<Cost>35</Cost>
-			<Description>AP1</Description>
-			<Civilopedia>AP1</Civilopedia>
-			<Help>AP1</Help>
-			<Era>ERA_ANCIENT</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>1</GridX>
-			<GridY>1</GridY>
-			<Quote>AP1</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>2</ID>
-			<Type>TECH_AP2</Type>
-			<Cost>35</Cost>
-			<Description>AP2</Description>
-			<Civilopedia>AP2</Civilopedia>
-			<Help>AP2</Help>
-			<Era>ERA_ANCIENT</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>1</GridX>
-			<GridY>4</GridY>
-			<Quote>AP2</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>3</ID>
-			<Type>TECH_AP3</Type>
-			<Cost>35</Cost>
-			<Description>AP3</Description>
-			<Civilopedia>AP3</Civilopedia>
-			<Help>AP3</Help>
-			<Era>ERA_ANCIENT</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>1</GridX>
-			<GridY>6</GridY>
-			<Quote>AP3</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>4</ID>
-			<Type>TECH_AP4</Type>
-			<Cost>35</Cost>
-			<Description>AP4</Description>
-			<Civilopedia>AP4</Civilopedia>
-			<Help>AP4</Help>
-			<Era>ERA_ANCIENT</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>1</GridX>
-			<GridY>8</GridY>
-			<Quote>AP4</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>5</ID>
-			<Type>TECH_AP5</Type>
-			<Cost>55</Cost>
-			<Description>AP5</Description>
-			<Civilopedia>AP5</Civilopedia>
-			<Help>AP5</Help>
-			<Era>ERA_ANCIENT</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>2</GridX>
-			<GridY>0</GridY>
-			<Quote>AP5</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>6</ID>
-			<Type>TECH_AP6</Type>
-			<Cost>55</Cost>
-			<Description>AP6</Description>
-			<Civilopedia>AP6</Civilopedia>
-			<Help>AP6</Help>
-			<Era>ERA_ANCIENT</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>2</GridX>
-			<GridY>1</GridY>
-			<Quote>AP6</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>7</ID>
-			<Type>TECH_AP7</Type>
-			<Cost>55</Cost>
-			<Description>AP7</Description>
-			<Civilopedia>AP7</Civilopedia>
-			<Help>AP7</Help>
-			<Era>ERA_ANCIENT</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>2</GridX>
-			<GridY>2</GridY>
-			<Quote>AP7</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>8</ID>
-			<Type>TECH_AP8</Type>
-			<Cost>55</Cost>
-			<Description>AP8</Description>
-			<Civilopedia>AP8</Civilopedia>
-			<Help>AP8</Help>
-			<Era>ERA_ANCIENT</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>2</GridX>
-			<GridY>4</GridY>
-			<Quote>AP8</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>9</ID>
-			<Type>TECH_AP9</Type>
-			<Cost>55</Cost>
-			<Description>AP9</Description>
-			<Civilopedia>AP9</Civilopedia>
-			<Help>AP9</Help>
-			<Era>ERA_ANCIENT</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>2</GridX>
-			<GridY>6</GridY>
-			<Quote>AP9</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>10</ID>
-			<Type>TECH_AP10</Type>
-			<Cost>55</Cost>
-			<Description>AP10</Description>
-			<Civilopedia>AP10</Civilopedia>
-			<Help>AP10</Help>
-			<Era>ERA_ANCIENT</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>2</GridX>
-			<GridY>8</GridY>
-			<Quote>AP10</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>11</ID>
-			<Type>TECH_AP11</Type>
-			<Cost>55</Cost>
-			<Description>AP11</Description>
-			<Civilopedia>AP11</Civilopedia>
-			<Help>AP11</Help>
-			<Era>ERA_ANCIENT</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>2</GridX>
-			<GridY>9</GridY>
-			<Quote>AP11</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>12</ID>
-			<Type>TECH_AP12</Type>
-			<Cost>85</Cost>
-			<Description>AP12</Description>
-			<Civilopedia>AP12</Civilopedia>
-			<Help>AP12</Help>
-			<Era>ERA_CLASSICAL</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>3</GridX>
-			<GridY>0</GridY>
-			<Quote>AP12</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>13</ID>
-			<Type>TECH_AP13</Type>
-			<Cost>105</Cost>
-			<Description>AP13</Description>
-			<Civilopedia>AP13</Civilopedia>
-			<Help>AP13</Help>
-			<Era>ERA_CLASSICAL</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>3</GridX>
-			<GridY>4</GridY>
-			<Quote>AP13</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>14</ID>
-			<Type>TECH_AP14</Type>
-			<Cost>105</Cost>
-			<Description>AP14</Description>
-			<Civilopedia>AP14</Civilopedia>
-			<Help>AP14</Help>
-			<Era>ERA_CLASSICAL</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>3</GridX>
-			<GridY>6</GridY>
-			<Quote>AP14</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>15</ID>
-			<Type>TECH_AP15</Type>
-			<Cost>105</Cost>
-			<Description>AP15</Description>
-			<Civilopedia>AP15</Civilopedia>
-			<Help>AP15</Help>
-			<Era>ERA_CLASSICAL</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>3</GridX>
-			<GridY>8</GridY>
-			<Quote>AP15</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>16</ID>
-			<Type>TECH_AP16</Type>
-			<Cost>175</Cost>
-			<Description>AP16</Description>
-			<Civilopedia>AP16</Civilopedia>
-			<Help>AP16</Help>
-			<Era>ERA_CLASSICAL</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>4</GridX>
-			<GridY>1</GridY>
-			<Quote>AP16</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>17</ID>
-			<Type>TECH_AP17</Type>
-			<Cost>175</Cost>
-			<Description>AP17</Description>
-			<Civilopedia>AP17</Civilopedia>
-			<Help>AP17</Help>
-			<Era>ERA_CLASSICAL</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>4</GridX>
-			<GridY>2</GridY>
-			<Quote>AP17</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>18</ID>
-			<Type>TECH_AP18</Type>
-			<Cost>175</Cost>
-			<Description>AP18</Description>
-			<Civilopedia>AP18</Civilopedia>
-			<Help>AP18</Help>
-			<Era>ERA_CLASSICAL</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>4</GridX>
-			<GridY>6</GridY>
-			<Quote>AP18</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>19</ID>
-			<Type>TECH_AP19</Type>
-			<Cost>175</Cost>
-			<Description>AP19</Description>
-			<Civilopedia>AP19</Civilopedia>
-			<Help>AP19</Help>
-			<Era>ERA_CLASSICAL</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>4</GridX>
-			<GridY>7</GridY>
-			<Quote>AP19</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>20</ID>
-			<Type>TECH_AP20</Type>
-			<Cost>175</Cost>
-			<Description>AP20</Description>
-			<Civilopedia>AP20</Civilopedia>
-			<Help>AP20</Help>
-			<Era>ERA_CLASSICAL</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>4</GridX>
-			<GridY>9</GridY>
-			<Quote>AP20</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>21</ID>
-			<Type>TECH_AP21</Type>
-			<Cost>275</Cost>
-			<Description>AP21</Description>
-			<Civilopedia>AP21</Civilopedia>
-			<Help>AP21</Help>
-			<Era>ERA_MEDIEVAL</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>5</GridX>
-			<GridY>1</GridY>
-			<Quote>AP21</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>22</ID>
-			<Type>TECH_AP22</Type>
-			<Cost>275</Cost>
-			<Description>AP22</Description>
-			<Civilopedia>AP22</Civilopedia>
-			<Help>AP22</Help>
-			<Era>ERA_MEDIEVAL</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>5</GridX>
-			<GridY>4</GridY>
-			<Quote>AP22</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>23</ID>
-			<Type>TECH_AP23</Type>
-			<Cost>275</Cost>
-			<Description>AP23</Description>
-			<Civilopedia>AP23</Civilopedia>
-			<Help>AP23</Help>
-			<Era>ERA_MEDIEVAL</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>5</GridX>
-			<GridY>6</GridY>
-			<Quote>AP23</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>24</ID>
-			<Type>TECH_AP24</Type>
-			<Cost>275</Cost>
-			<Description>AP24</Description>
-			<Civilopedia>AP24</Civilopedia>
-			<Help>AP24</Help>
-			<Era>ERA_MEDIEVAL</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>5</GridX>
-			<GridY>8</GridY>
-			<Quote>AP24</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>25</ID>
-			<Type>TECH_AP25</Type>
-			<Cost>375</Cost>
-			<Description>AP25</Description>
-			<Civilopedia>AP25</Civilopedia>
-			<Help>AP25</Help>
-			<Era>ERA_MEDIEVAL</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>6</GridX>
-			<GridY>0</GridY>
-			<Quote>AP25</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>26</ID>
-			<Type>TECH_AP26</Type>
-			<Cost>485</Cost>
-			<Description>AP26</Description>
-			<Civilopedia>AP26</Civilopedia>
-			<Help>AP26</Help>
-			<Era>ERA_MEDIEVAL</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>6</GridX>
-			<GridY>2</GridY>
-			<Quote>AP26</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>27</ID>
-			<Type>TECH_AP27</Type>
-			<Cost>485</Cost>
-			<Description>AP27</Description>
-			<Civilopedia>AP27</Civilopedia>
-			<Help>AP27</Help>
-			<Era>ERA_MEDIEVAL</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>6</GridX>
-			<GridY>5</GridY>
-			<Quote>AP27</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>28</ID>
-			<Type>TECH_AP28</Type>
-			<Cost>485</Cost>
-			<Description>AP28</Description>
-			<Civilopedia>AP28</Civilopedia>
-			<Help>AP28</Help>
-			<Era>ERA_MEDIEVAL</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>6</GridX>
-			<GridY>7</GridY>
-			<Quote>AP28</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>29</ID>
-			<Type>TECH_AP29</Type>
-			<Cost>485</Cost>
-			<Description>AP29</Description>
-			<Civilopedia>AP29</Civilopedia>
-			<Help>AP29</Help>
-			<Era>ERA_MEDIEVAL</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>6</GridX>
-			<GridY>8</GridY>
-			<Quote>AP29</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>30</ID>
-			<Type>TECH_AP30</Type>
-			<Cost>485</Cost>
-			<Description>AP30</Description>
-			<Civilopedia>AP30</Civilopedia>
-			<Help>AP30</Help>
-			<Era>ERA_MEDIEVAL</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>6</GridX>
-			<GridY>9</GridY>
-			<Quote>AP30</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>31</ID>
-			<Type>TECH_AP31</Type>
-			<Cost>780</Cost>
-			<Description>AP31</Description>
-			<Civilopedia>AP31</Civilopedia>
-			<Help>AP31</Help>
-			<Era>ERA_RENAISSANCE</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>7</GridX>
-			<GridY>1</GridY>
-			<Quote>AP31</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>32</ID>
-			<Type>TECH_AP32</Type>
-			<Cost>780</Cost>
-			<Description>AP32</Description>
-			<Civilopedia>AP32</Civilopedia>
-			<Help>AP32</Help>
-			<Era>ERA_RENAISSANCE</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>7</GridX>
-			<GridY>3</GridY>
-			<Quote>AP32</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>33</ID>
-			<Type>TECH_AP33</Type>
-			<Cost>780</Cost>
-			<Description>AP33</Description>
-			<Civilopedia>AP33</Civilopedia>
-			<Help>AP33</Help>
-			<Era>ERA_RENAISSANCE</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>7</GridX>
-			<GridY>5</GridY>
-			<Quote>AP33</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>34</ID>
-			<Type>TECH_AP34</Type>
-			<Cost>780</Cost>
-			<Description>AP34</Description>
-			<Civilopedia>AP34</Civilopedia>
-			<Help>AP34</Help>
-			<Era>ERA_RENAISSANCE</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>7</GridX>
-			<GridY>7</GridY>
-			<Quote>AP34</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>35</ID>
-			<Type>TECH_AP35</Type>
-			<Cost>780</Cost>
-			<Description>AP35</Description>
-			<Civilopedia>AP35</Civilopedia>
-			<Help>AP35</Help>
-			<Era>ERA_RENAISSANCE</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>7</GridX>
-			<GridY>9</GridY>
-			<Quote>AP35</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>36</ID>
-			<Type>TECH_AP36</Type>
-			<Cost>1150</Cost>
-			<Description>AP36</Description>
-			<Civilopedia>AP36</Civilopedia>
-			<Help>AP36</Help>
-			<Era>ERA_RENAISSANCE</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>8</GridX>
-			<GridY>1</GridY>
-			<Quote>AP36</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>37</ID>
-			<Type>TECH_AP37</Type>
-			<Cost>1150</Cost>
-			<Description>AP37</Description>
-			<Civilopedia>AP37</Civilopedia>
-			<Help>AP37</Help>
-			<Era>ERA_RENAISSANCE</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>8</GridX>
-			<GridY>3</GridY>
-			<Quote>AP37</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>38</ID>
-			<Type>TECH_AP38</Type>
-			<Cost>1150</Cost>
-			<Description>AP38</Description>
-			<Civilopedia>AP38</Civilopedia>
-			<Help>AP38</Help>
-			<Era>ERA_RENAISSANCE</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>8</GridX>
-			<GridY>5</GridY>
-			<Quote>AP38</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>39</ID>
-			<Type>TECH_AP39</Type>
-			<Cost>1150</Cost>
-			<Description>AP39</Description>
-			<Civilopedia>AP39</Civilopedia>
-			<Help>AP39</Help>
-			<Era>ERA_RENAISSANCE</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>8</GridX>
-			<GridY>8</GridY>
-			<Quote>AP39</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>40</ID>
-			<Type>TECH_AP40</Type>
-			<Cost>1150</Cost>
-			<Description>AP40</Description>
-			<Civilopedia>AP40</Civilopedia>
-			<Help>AP40</Help>
-			<Era>ERA_RENAISSANCE</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>8</GridX>
-			<GridY>9</GridY>
-			<Quote>AP40</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>41</ID>
-			<Type>TECH_AP41</Type>
-			<Cost>1600</Cost>
-			<Description>AP41</Description>
-			<Civilopedia>AP41</Civilopedia>
-			<Help>AP41</Help>
-			<Era>ERA_INDUSTRIAL</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>9</GridX>
-			<GridY>1</GridY>
-			<Quote>AP41</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>42</ID>
-			<Type>TECH_AP42</Type>
-			<Cost>1600</Cost>
-			<Description>AP42</Description>
-			<Civilopedia>AP42</Civilopedia>
-			<Help>AP42</Help>
-			<Era>ERA_INDUSTRIAL</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>9</GridX>
-			<GridY>3</GridY>
-			<Quote>AP42</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>43</ID>
-			<Type>TECH_AP43</Type>
-			<Cost>1600</Cost>
-			<Description>AP43</Description>
-			<Civilopedia>AP43</Civilopedia>
-			<Help>AP43</Help>
-			<Era>ERA_INDUSTRIAL</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>9</GridX>
-			<GridY>5</GridY>
-			<Quote>AP43</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>44</ID>
-			<Type>TECH_AP44</Type>
-			<Cost>1600</Cost>
-			<Description>AP44</Description>
-			<Civilopedia>AP44</Civilopedia>
-			<Help>AP44</Help>
-			<Era>ERA_INDUSTRIAL</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>9</GridX>
-			<GridY>6</GridY>
-			<Quote>AP44</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>45</ID>
-			<Type>TECH_AP45</Type>
-			<Cost>1600</Cost>
-			<Description>AP45</Description>
-			<Civilopedia>AP45</Civilopedia>
-			<Help>AP45</Help>
-			<Era>ERA_INDUSTRIAL</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>9</GridX>
-			<GridY>8</GridY>
-			<Quote>AP45</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>46</ID>
-			<Type>TECH_AP46</Type>
-			<Cost>1600</Cost>
-			<Description>AP46</Description>
-			<Civilopedia>AP46</Civilopedia>
-			<Help>AP46</Help>
-			<Era>ERA_INDUSTRIAL</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>9</GridX>
-			<GridY>9</GridY>
-			<Quote>AP46</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>47</ID>
-			<Type>TECH_AP47</Type>
-			<Cost>2350</Cost>
-			<Description>AP47</Description>
-			<Civilopedia>AP47</Civilopedia>
-			<Help>AP47</Help>
-			<Era>ERA_INDUSTRIAL</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>10</GridX>
-			<GridY>1</GridY>
-			<Quote>AP47</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>48</ID>
-			<Type>TECH_AP48</Type>
-			<Cost>2350</Cost>
-			<Description>AP48</Description>
-			<Civilopedia>AP48</Civilopedia>
-			<Help>AP48</Help>
-			<Era>ERA_INDUSTRIAL</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>10</GridX>
-			<GridY>2</GridY>
-			<Quote>AP48</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>49</ID>
-			<Type>TECH_AP49</Type>
-			<Cost>2350</Cost>
-			<Description>AP49</Description>
-			<Civilopedia>AP49</Civilopedia>
-			<Help>AP49</Help>
-			<Era>ERA_INDUSTRIAL</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>10</GridX>
-			<GridY>5</GridY>
-			<Quote>AP49</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>50</ID>
-			<Type>TECH_AP50</Type>
-			<Cost>2350</Cost>
-			<Description>AP50</Description>
-			<Civilopedia>AP50</Civilopedia>
-			<Help>AP50</Help>
-			<Era>ERA_INDUSTRIAL</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>10</GridX>
-			<GridY>8</GridY>
-			<Quote>AP50</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>51</ID>
-			<Type>TECH_AP51</Type>
-			<Cost>3100</Cost>
-			<Description>AP51</Description>
-			<Civilopedia>AP51</Civilopedia>
-			<Help>AP51</Help>
-			<Era>ERA_MODERN</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>11</GridX>
-			<GridY>1</GridY>
-			<Quote>AP51</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>52</ID>
-			<Type>TECH_AP52</Type>
-			<Cost>3100</Cost>
-			<Description>AP52</Description>
-			<Civilopedia>AP52</Civilopedia>
-			<Help>AP52</Help>
-			<Era>ERA_MODERN</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>11</GridX>
-			<GridY>2</GridY>
-			<Quote>AP52</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>53</ID>
-			<Type>TECH_AP53</Type>
-			<Cost>3100</Cost>
-			<Description>AP53</Description>
-			<Civilopedia>AP53</Civilopedia>
-			<Help>AP53</Help>
-			<Era>ERA_MODERN</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>11</GridX>
-			<GridY>3</GridY>
-			<Quote>AP53</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>54</ID>
-			<Type>TECH_AP54</Type>
-			<Cost>3100</Cost>
-			<Description>AP54</Description>
-			<Civilopedia>AP54</Civilopedia>
-			<Help>AP54</Help>
-			<Era>ERA_MODERN</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>11</GridX>
-			<GridY>5</GridY>
-			<Quote>AP54</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>55</ID>
-			<Type>TECH_AP55</Type>
-			<Cost>3100</Cost>
-			<Description>AP55</Description>
-			<Civilopedia>AP55</Civilopedia>
-			<Help>AP55</Help>
-			<Era>ERA_MODERN</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>11</GridX>
-			<GridY>7</GridY>
-			<Quote>AP55</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>56</ID>
-			<Type>TECH_AP56</Type>
-			<Cost>4100</Cost>
-			<Description>AP56</Description>
-			<Civilopedia>AP56</Civilopedia>
-			<Help>AP56</Help>
-			<Era>ERA_MODERN</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>12</GridX>
-			<GridY>2</GridY>
-			<Quote>AP56</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>57</ID>
-			<Type>TECH_AP57</Type>
-			<Cost>4100</Cost>
-			<Description>AP57</Description>
-			<Civilopedia>AP57</Civilopedia>
-			<Help>AP57</Help>
-			<Era>ERA_MODERN</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>12</GridX>
-			<GridY>4</GridY>
-			<Quote>AP57</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>58</ID>
-			<Type>TECH_AP58</Type>
-			<Cost>4100</Cost>
-			<Description>AP58</Description>
-			<Civilopedia>AP58</Civilopedia>
-			<Help>AP58</Help>
-			<Era>ERA_MODERN</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>12</GridX>
-			<GridY>5</GridY>
-			<Quote>AP58</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>59</ID>
-			<Type>TECH_AP59</Type>
-			<Cost>4100</Cost>
-			<Description>AP59</Description>
-			<Civilopedia>AP59</Civilopedia>
-			<Help>AP59</Help>
-			<Era>ERA_MODERN</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>12</GridX>
-			<GridY>7</GridY>
-			<Quote>AP59</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>60</ID>
-			<Type>TECH_AP60</Type>
-			<Cost>5100</Cost>
-			<Description>AP60</Description>
-			<Civilopedia>AP60</Civilopedia>
-			<Help>AP60</Help>
-			<Era>ERA_POSTMODERN</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>13</GridX>
-			<GridY>1</GridY>
-			<Quote>AP60</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>61</ID>
-			<Type>TECH_AP61</Type>
-			<Cost>5100</Cost>
-			<Description>AP61</Description>
-			<Civilopedia>AP61</Civilopedia>
-			<Help>AP61</Help>
-			<Era>ERA_POSTMODERN</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>13</GridX>
-			<GridY>3</GridY>
-			<Quote>AP61</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>62</ID>
-			<Type>TECH_AP62</Type>
-			<Cost>5100</Cost>
-			<Description>AP62</Description>
-			<Civilopedia>AP62</Civilopedia>
-			<Help>AP62</Help>
-			<Era>ERA_POSTMODERN</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>13</GridX>
-			<GridY>5</GridY>
-			<Quote>AP62</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>63</ID>
-			<Type>TECH_AP63</Type>
-			<Cost>5100</Cost>
-			<Description>AP63</Description>
-			<Civilopedia>AP63</Civilopedia>
-			<Help>AP63</Help>
-			<Era>ERA_POSTMODERN</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>13</GridX>
-			<GridY>7</GridY>
-			<Quote>AP63</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>64</ID>
-			<Type>TECH_AP64</Type>
-			<Cost>6400</Cost>
-			<Description>AP64</Description>
-			<Civilopedia>AP64</Civilopedia>
-			<Help>AP64</Help>
-			<Era>ERA_POSTMODERN</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>14</GridX>
-			<GridY>1</GridY>
-			<Quote>AP64</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>65</ID>
-			<Type>TECH_AP65</Type>
-			<Cost>6400</Cost>
-			<Description>AP65</Description>
-			<Civilopedia>AP65</Civilopedia>
-			<Help>AP65</Help>
-			<Era>ERA_POSTMODERN</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>14</GridX>
-			<GridY>3</GridY>
-			<Quote>AP65</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>66</ID>
-			<Type>TECH_AP66</Type>
-			<Cost>6400</Cost>
-			<Description>AP66</Description>
-			<Civilopedia>AP66</Civilopedia>
-			<Help>AP66</Help>
-			<Era>ERA_POSTMODERN</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>14</GridX>
-			<GridY>5</GridY>
-			<Quote>AP66</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>67</ID>
-			<Type>TECH_AP67</Type>
-			<Cost>6400</Cost>
-			<Description>AP67</Description>
-			<Civilopedia>AP67</Civilopedia>
-			<Help>AP67</Help>
-			<Era>ERA_POSTMODERN</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>14</GridX>
-			<GridY>7</GridY>
-			<Quote>AP67</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>68</ID>
-			<Type>TECH_AP68</Type>
-			<Cost>7700</Cost>
-			<Description>AP68</Description>
-			<Civilopedia>AP68</Civilopedia>
-			<Help>AP68</Help>
-			<Era>ERA_FUTURE</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>15</GridX>
-			<GridY>1</GridY>
-			<Quote>AP68</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>69</ID>
-			<Type>TECH_AP69</Type>
-			<Cost>7700</Cost>
-			<Description>AP69</Description>
-			<Civilopedia>AP69</Civilopedia>
-			<Help>AP69</Help>
-			<Era>ERA_FUTURE</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>15</GridX>
-			<GridY>2</GridY>
-			<Quote>AP69</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>70</ID>
-			<Type>TECH_AP70</Type>
-			<Cost>7700</Cost>
-			<Description>AP70</Description>
-			<Civilopedia>AP70</Civilopedia>
-			<Help>AP70</Help>
-			<Era>ERA_FUTURE</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>15</GridX>
-			<GridY>4</GridY>
-			<Quote>AP70</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>71</ID>
-			<Type>TECH_AP71</Type>
-			<Cost>7700</Cost>
-			<Description>AP71</Description>
-			<Civilopedia>AP71</Civilopedia>
-			<Help>AP71</Help>
-			<Era>ERA_FUTURE</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>15</GridX>
-			<GridY>5</GridY>
-			<Quote>AP71</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>72</ID>
-			<Type>TECH_AP72</Type>
-			<Cost>7700</Cost>
-			<Description>AP72</Description>
-			<Civilopedia>AP72</Civilopedia>
-			<Help>AP72</Help>
-			<Era>ERA_FUTURE</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>15</GridX>
-			<GridY>6</GridY>
-			<Quote>AP72</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>73</ID>
-			<Type>TECH_AP73</Type>
-			<Cost>7700</Cost>
-			<Description>AP73</Description>
-			<Civilopedia>AP73</Civilopedia>
-			<Help>AP73</Help>
-			<Era>ERA_FUTURE</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>15</GridX>
-			<GridY>7</GridY>
-			<Quote>AP73</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>74</ID>
-			<Type>TECH_AP74</Type>
-			<Cost>8800</Cost>
-			<Description>AP74</Description>
-			<Civilopedia>AP74</Civilopedia>
-			<Help>AP74</Help>
-			<Era>ERA_FUTURE</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>16</GridX>
-			<GridY>0</GridY>
-			<Quote>AP74</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>75</ID>
-			<Type>TECH_AP75</Type>
-			<Cost>8800</Cost>
-			<Description>AP75</Description>
-			<Civilopedia>AP75</Civilopedia>
-			<Help>AP75</Help>
-			<Era>ERA_FUTURE</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>16</GridX>
-			<GridY>1</GridY>
-			<Quote>AP75</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>76</ID>
-			<Type>TECH_AP76</Type>
-			<Cost>8800</Cost>
-			<Description>AP76</Description>
-			<Civilopedia>AP76</Civilopedia>
-			<Help>AP76</Help>
-			<Era>ERA_FUTURE</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>16</GridX>
-			<GridY>2</GridY>
-			<Quote>AP76</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>77</ID>
-			<Type>TECH_AP77</Type>
-			<Cost>8800</Cost>
-			<Description>AP77</Description>
-			<Civilopedia>AP77</Civilopedia>
-			<Help>AP77</Help>
-			<Era>ERA_FUTURE</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>16</GridX>
-			<GridY>5</GridY>
-			<Quote>AP77</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>78</ID>
-			<Type>TECH_AP78</Type>
-			<Cost>8800</Cost>
-			<Description>AP78</Description>
-			<Civilopedia>AP78</Civilopedia>
-			<Help>AP78</Help>
-			<Era>ERA_FUTURE</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>16</GridX>
-			<GridY>6</GridY>
-			<Quote>AP78</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>79</ID>
-			<Type>TECH_AP79</Type>
-			<Cost>8800</Cost>
-			<Description>AP79</Description>
-			<Civilopedia>AP79</Civilopedia>
-			<Help>AP79</Help>
-			<Era>ERA_FUTURE</Era>
-			<Trade>true</Trade>
-			<GoodyTech>true</GoodyTech>
-			<GridX>16</GridX>
-			<GridY>7</GridY>
-			<Quote>AP79</Quote>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
-			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
-			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
-		</Row>
-		<Row>
-			<ID>161</ID>
+			<ID>81</ID>
 			<Type>TECH_PLAYER_START</Type>
 			<Cost>20</Cost>
 			<Description>Player Start</Description>
@@ -2385,12 +647,12 @@
 			<GridY>4</GridY>
 			<Quote>Player Start</Quote>
 			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
 			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
 			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
 		</Row>
 		<Row>
-			<ID>162</ID>
+			<ID>82</ID>
 			<Type>TECH_AI_START</Type>
 			<Cost>20</Cost>
 			<Description>AI Start</Description>
@@ -2403,7 +665,1429 @@
 			<GridY>30</GridY>
 			<Quote>AI Start</Quote>
 			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>TECH_ATLAS_1</IconAtlas>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AP_TECH_ICON_ATLAS</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>83</ID>
+			<Type>TECH_AP1</Type>
+			<Cost>35</Cost>
+			<Description>AP1</Description>
+			<Civilopedia>AP1</Civilopedia>
+			<Help>AP1</Help>
+			<Era>ERA_ANCIENT</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>1</GridX>
+			<GridY>1</GridY>
+			<Quote>AP1</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>84</ID>
+			<Type>TECH_AP2</Type>
+			<Cost>35</Cost>
+			<Description>AP2</Description>
+			<Civilopedia>AP2</Civilopedia>
+			<Help>AP2</Help>
+			<Era>ERA_ANCIENT</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>1</GridX>
+			<GridY>4</GridY>
+			<Quote>AP2</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>85</ID>
+			<Type>TECH_AP3</Type>
+			<Cost>35</Cost>
+			<Description>AP3</Description>
+			<Civilopedia>AP3</Civilopedia>
+			<Help>AP3</Help>
+			<Era>ERA_ANCIENT</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>1</GridX>
+			<GridY>6</GridY>
+			<Quote>AP3</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>86</ID>
+			<Type>TECH_AP4</Type>
+			<Cost>35</Cost>
+			<Description>AP4</Description>
+			<Civilopedia>AP4</Civilopedia>
+			<Help>AP4</Help>
+			<Era>ERA_ANCIENT</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>1</GridX>
+			<GridY>8</GridY>
+			<Quote>AP4</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>87</ID>
+			<Type>TECH_AP5</Type>
+			<Cost>55</Cost>
+			<Description>AP5</Description>
+			<Civilopedia>AP5</Civilopedia>
+			<Help>AP5</Help>
+			<Era>ERA_ANCIENT</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>2</GridX>
+			<GridY>0</GridY>
+			<Quote>AP5</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>88</ID>
+			<Type>TECH_AP6</Type>
+			<Cost>55</Cost>
+			<Description>AP6</Description>
+			<Civilopedia>AP6</Civilopedia>
+			<Help>AP6</Help>
+			<Era>ERA_ANCIENT</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>2</GridX>
+			<GridY>1</GridY>
+			<Quote>AP6</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>89</ID>
+			<Type>TECH_AP7</Type>
+			<Cost>55</Cost>
+			<Description>AP7</Description>
+			<Civilopedia>AP7</Civilopedia>
+			<Help>AP7</Help>
+			<Era>ERA_ANCIENT</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>2</GridX>
+			<GridY>2</GridY>
+			<Quote>AP7</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>90</ID>
+			<Type>TECH_AP8</Type>
+			<Cost>55</Cost>
+			<Description>AP8</Description>
+			<Civilopedia>AP8</Civilopedia>
+			<Help>AP8</Help>
+			<Era>ERA_ANCIENT</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>2</GridX>
+			<GridY>4</GridY>
+			<Quote>AP8</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>91</ID>
+			<Type>TECH_AP9</Type>
+			<Cost>55</Cost>
+			<Description>AP9</Description>
+			<Civilopedia>AP9</Civilopedia>
+			<Help>AP9</Help>
+			<Era>ERA_ANCIENT</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>2</GridX>
+			<GridY>6</GridY>
+			<Quote>AP9</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>92</ID>
+			<Type>TECH_AP10</Type>
+			<Cost>55</Cost>
+			<Description>AP10</Description>
+			<Civilopedia>AP10</Civilopedia>
+			<Help>AP10</Help>
+			<Era>ERA_ANCIENT</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>2</GridX>
+			<GridY>8</GridY>
+			<Quote>AP10</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>93</ID>
+			<Type>TECH_AP11</Type>
+			<Cost>55</Cost>
+			<Description>AP11</Description>
+			<Civilopedia>AP11</Civilopedia>
+			<Help>AP11</Help>
+			<Era>ERA_ANCIENT</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>2</GridX>
+			<GridY>9</GridY>
+			<Quote>AP11</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>94</ID>
+			<Type>TECH_AP12</Type>
+			<Cost>85</Cost>
+			<Description>AP12</Description>
+			<Civilopedia>AP12</Civilopedia>
+			<Help>AP12</Help>
+			<Era>ERA_CLASSICAL</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>3</GridX>
+			<GridY>0</GridY>
+			<Quote>AP12</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>95</ID>
+			<Type>TECH_AP13</Type>
+			<Cost>105</Cost>
+			<Description>AP13</Description>
+			<Civilopedia>AP13</Civilopedia>
+			<Help>AP13</Help>
+			<Era>ERA_CLASSICAL</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>3</GridX>
+			<GridY>4</GridY>
+			<Quote>AP13</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>96</ID>
+			<Type>TECH_AP14</Type>
+			<Cost>105</Cost>
+			<Description>AP14</Description>
+			<Civilopedia>AP14</Civilopedia>
+			<Help>AP14</Help>
+			<Era>ERA_CLASSICAL</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>3</GridX>
+			<GridY>6</GridY>
+			<Quote>AP14</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>97</ID>
+			<Type>TECH_AP15</Type>
+			<Cost>105</Cost>
+			<Description>AP15</Description>
+			<Civilopedia>AP15</Civilopedia>
+			<Help>AP15</Help>
+			<Era>ERA_CLASSICAL</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>3</GridX>
+			<GridY>8</GridY>
+			<Quote>AP15</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>98</ID>
+			<Type>TECH_AP16</Type>
+			<Cost>175</Cost>
+			<Description>AP16</Description>
+			<Civilopedia>AP16</Civilopedia>
+			<Help>AP16</Help>
+			<Era>ERA_CLASSICAL</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>4</GridX>
+			<GridY>1</GridY>
+			<Quote>AP16</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>99</ID>
+			<Type>TECH_AP17</Type>
+			<Cost>175</Cost>
+			<Description>AP17</Description>
+			<Civilopedia>AP17</Civilopedia>
+			<Help>AP17</Help>
+			<Era>ERA_CLASSICAL</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>4</GridX>
+			<GridY>2</GridY>
+			<Quote>AP17</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>100</ID>
+			<Type>TECH_AP18</Type>
+			<Cost>175</Cost>
+			<Description>AP18</Description>
+			<Civilopedia>AP18</Civilopedia>
+			<Help>AP18</Help>
+			<Era>ERA_CLASSICAL</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>4</GridX>
+			<GridY>6</GridY>
+			<Quote>AP18</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>101</ID>
+			<Type>TECH_AP19</Type>
+			<Cost>175</Cost>
+			<Description>AP19</Description>
+			<Civilopedia>AP19</Civilopedia>
+			<Help>AP19</Help>
+			<Era>ERA_CLASSICAL</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>4</GridX>
+			<GridY>7</GridY>
+			<Quote>AP19</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>102</ID>
+			<Type>TECH_AP20</Type>
+			<Cost>175</Cost>
+			<Description>AP20</Description>
+			<Civilopedia>AP20</Civilopedia>
+			<Help>AP20</Help>
+			<Era>ERA_CLASSICAL</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>4</GridX>
+			<GridY>9</GridY>
+			<Quote>AP20</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>103</ID>
+			<Type>TECH_AP21</Type>
+			<Cost>275</Cost>
+			<Description>AP21</Description>
+			<Civilopedia>AP21</Civilopedia>
+			<Help>AP21</Help>
+			<Era>ERA_MEDIEVAL</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>5</GridX>
+			<GridY>1</GridY>
+			<Quote>AP21</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>104</ID>
+			<Type>TECH_AP22</Type>
+			<Cost>275</Cost>
+			<Description>AP22</Description>
+			<Civilopedia>AP22</Civilopedia>
+			<Help>AP22</Help>
+			<Era>ERA_MEDIEVAL</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>5</GridX>
+			<GridY>4</GridY>
+			<Quote>AP22</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>105</ID>
+			<Type>TECH_AP23</Type>
+			<Cost>275</Cost>
+			<Description>AP23</Description>
+			<Civilopedia>AP23</Civilopedia>
+			<Help>AP23</Help>
+			<Era>ERA_MEDIEVAL</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>5</GridX>
+			<GridY>6</GridY>
+			<Quote>AP23</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>106</ID>
+			<Type>TECH_AP24</Type>
+			<Cost>275</Cost>
+			<Description>AP24</Description>
+			<Civilopedia>AP24</Civilopedia>
+			<Help>AP24</Help>
+			<Era>ERA_MEDIEVAL</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>5</GridX>
+			<GridY>8</GridY>
+			<Quote>AP24</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>107</ID>
+			<Type>TECH_AP25</Type>
+			<Cost>375</Cost>
+			<Description>AP25</Description>
+			<Civilopedia>AP25</Civilopedia>
+			<Help>AP25</Help>
+			<Era>ERA_MEDIEVAL</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>6</GridX>
+			<GridY>0</GridY>
+			<Quote>AP25</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>108</ID>
+			<Type>TECH_AP26</Type>
+			<Cost>485</Cost>
+			<Description>AP26</Description>
+			<Civilopedia>AP26</Civilopedia>
+			<Help>AP26</Help>
+			<Era>ERA_MEDIEVAL</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>6</GridX>
+			<GridY>2</GridY>
+			<Quote>AP26</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>109</ID>
+			<Type>TECH_AP27</Type>
+			<Cost>485</Cost>
+			<Description>AP27</Description>
+			<Civilopedia>AP27</Civilopedia>
+			<Help>AP27</Help>
+			<Era>ERA_MEDIEVAL</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>6</GridX>
+			<GridY>5</GridY>
+			<Quote>AP27</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>110</ID>
+			<Type>TECH_AP28</Type>
+			<Cost>485</Cost>
+			<Description>AP28</Description>
+			<Civilopedia>AP28</Civilopedia>
+			<Help>AP28</Help>
+			<Era>ERA_MEDIEVAL</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>6</GridX>
+			<GridY>7</GridY>
+			<Quote>AP28</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>111</ID>
+			<Type>TECH_AP29</Type>
+			<Cost>485</Cost>
+			<Description>AP29</Description>
+			<Civilopedia>AP29</Civilopedia>
+			<Help>AP29</Help>
+			<Era>ERA_MEDIEVAL</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>6</GridX>
+			<GridY>8</GridY>
+			<Quote>AP29</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>112</ID>
+			<Type>TECH_AP30</Type>
+			<Cost>485</Cost>
+			<Description>AP30</Description>
+			<Civilopedia>AP30</Civilopedia>
+			<Help>AP30</Help>
+			<Era>ERA_MEDIEVAL</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>6</GridX>
+			<GridY>9</GridY>
+			<Quote>AP30</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>113</ID>
+			<Type>TECH_AP31</Type>
+			<Cost>780</Cost>
+			<Description>AP31</Description>
+			<Civilopedia>AP31</Civilopedia>
+			<Help>AP31</Help>
+			<Era>ERA_RENAISSANCE</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>7</GridX>
+			<GridY>1</GridY>
+			<Quote>AP31</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>114</ID>
+			<Type>TECH_AP32</Type>
+			<Cost>780</Cost>
+			<Description>AP32</Description>
+			<Civilopedia>AP32</Civilopedia>
+			<Help>AP32</Help>
+			<Era>ERA_RENAISSANCE</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>7</GridX>
+			<GridY>3</GridY>
+			<Quote>AP32</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>115</ID>
+			<Type>TECH_AP33</Type>
+			<Cost>780</Cost>
+			<Description>AP33</Description>
+			<Civilopedia>AP33</Civilopedia>
+			<Help>AP33</Help>
+			<Era>ERA_RENAISSANCE</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>7</GridX>
+			<GridY>5</GridY>
+			<Quote>AP33</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>116</ID>
+			<Type>TECH_AP34</Type>
+			<Cost>780</Cost>
+			<Description>AP34</Description>
+			<Civilopedia>AP34</Civilopedia>
+			<Help>AP34</Help>
+			<Era>ERA_RENAISSANCE</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>7</GridX>
+			<GridY>7</GridY>
+			<Quote>AP34</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>117</ID>
+			<Type>TECH_AP35</Type>
+			<Cost>780</Cost>
+			<Description>AP35</Description>
+			<Civilopedia>AP35</Civilopedia>
+			<Help>AP35</Help>
+			<Era>ERA_RENAISSANCE</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>7</GridX>
+			<GridY>9</GridY>
+			<Quote>AP35</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>118</ID>
+			<Type>TECH_AP36</Type>
+			<Cost>1150</Cost>
+			<Description>AP36</Description>
+			<Civilopedia>AP36</Civilopedia>
+			<Help>AP36</Help>
+			<Era>ERA_RENAISSANCE</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>8</GridX>
+			<GridY>1</GridY>
+			<Quote>AP36</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>119</ID>
+			<Type>TECH_AP37</Type>
+			<Cost>1150</Cost>
+			<Description>AP37</Description>
+			<Civilopedia>AP37</Civilopedia>
+			<Help>AP37</Help>
+			<Era>ERA_RENAISSANCE</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>8</GridX>
+			<GridY>3</GridY>
+			<Quote>AP37</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>120</ID>
+			<Type>TECH_AP38</Type>
+			<Cost>1150</Cost>
+			<Description>AP38</Description>
+			<Civilopedia>AP38</Civilopedia>
+			<Help>AP38</Help>
+			<Era>ERA_RENAISSANCE</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>8</GridX>
+			<GridY>5</GridY>
+			<Quote>AP38</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>121</ID>
+			<Type>TECH_AP39</Type>
+			<Cost>1150</Cost>
+			<Description>AP39</Description>
+			<Civilopedia>AP39</Civilopedia>
+			<Help>AP39</Help>
+			<Era>ERA_RENAISSANCE</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>8</GridX>
+			<GridY>8</GridY>
+			<Quote>AP39</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>122</ID>
+			<Type>TECH_AP40</Type>
+			<Cost>1150</Cost>
+			<Description>AP40</Description>
+			<Civilopedia>AP40</Civilopedia>
+			<Help>AP40</Help>
+			<Era>ERA_RENAISSANCE</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>8</GridX>
+			<GridY>9</GridY>
+			<Quote>AP40</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>123</ID>
+			<Type>TECH_AP41</Type>
+			<Cost>1600</Cost>
+			<Description>AP41</Description>
+			<Civilopedia>AP41</Civilopedia>
+			<Help>AP41</Help>
+			<Era>ERA_INDUSTRIAL</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>9</GridX>
+			<GridY>1</GridY>
+			<Quote>AP41</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>124</ID>
+			<Type>TECH_AP42</Type>
+			<Cost>1600</Cost>
+			<Description>AP42</Description>
+			<Civilopedia>AP42</Civilopedia>
+			<Help>AP42</Help>
+			<Era>ERA_INDUSTRIAL</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>9</GridX>
+			<GridY>3</GridY>
+			<Quote>AP42</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>125</ID>
+			<Type>TECH_AP43</Type>
+			<Cost>1600</Cost>
+			<Description>AP43</Description>
+			<Civilopedia>AP43</Civilopedia>
+			<Help>AP43</Help>
+			<Era>ERA_INDUSTRIAL</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>9</GridX>
+			<GridY>5</GridY>
+			<Quote>AP43</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>126</ID>
+			<Type>TECH_AP44</Type>
+			<Cost>1600</Cost>
+			<Description>AP44</Description>
+			<Civilopedia>AP44</Civilopedia>
+			<Help>AP44</Help>
+			<Era>ERA_INDUSTRIAL</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>9</GridX>
+			<GridY>6</GridY>
+			<Quote>AP44</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>127</ID>
+			<Type>TECH_AP45</Type>
+			<Cost>1600</Cost>
+			<Description>AP45</Description>
+			<Civilopedia>AP45</Civilopedia>
+			<Help>AP45</Help>
+			<Era>ERA_INDUSTRIAL</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>9</GridX>
+			<GridY>8</GridY>
+			<Quote>AP45</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>128</ID>
+			<Type>TECH_AP46</Type>
+			<Cost>1600</Cost>
+			<Description>AP46</Description>
+			<Civilopedia>AP46</Civilopedia>
+			<Help>AP46</Help>
+			<Era>ERA_INDUSTRIAL</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>9</GridX>
+			<GridY>9</GridY>
+			<Quote>AP46</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>129</ID>
+			<Type>TECH_AP47</Type>
+			<Cost>2350</Cost>
+			<Description>AP47</Description>
+			<Civilopedia>AP47</Civilopedia>
+			<Help>AP47</Help>
+			<Era>ERA_INDUSTRIAL</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>10</GridX>
+			<GridY>1</GridY>
+			<Quote>AP47</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>130</ID>
+			<Type>TECH_AP48</Type>
+			<Cost>2350</Cost>
+			<Description>AP48</Description>
+			<Civilopedia>AP48</Civilopedia>
+			<Help>AP48</Help>
+			<Era>ERA_INDUSTRIAL</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>10</GridX>
+			<GridY>2</GridY>
+			<Quote>AP48</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>131</ID>
+			<Type>TECH_AP49</Type>
+			<Cost>2350</Cost>
+			<Description>AP49</Description>
+			<Civilopedia>AP49</Civilopedia>
+			<Help>AP49</Help>
+			<Era>ERA_INDUSTRIAL</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>10</GridX>
+			<GridY>5</GridY>
+			<Quote>AP49</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>132</ID>
+			<Type>TECH_AP50</Type>
+			<Cost>2350</Cost>
+			<Description>AP50</Description>
+			<Civilopedia>AP50</Civilopedia>
+			<Help>AP50</Help>
+			<Era>ERA_INDUSTRIAL</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>10</GridX>
+			<GridY>8</GridY>
+			<Quote>AP50</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>133</ID>
+			<Type>TECH_AP51</Type>
+			<Cost>3100</Cost>
+			<Description>AP51</Description>
+			<Civilopedia>AP51</Civilopedia>
+			<Help>AP51</Help>
+			<Era>ERA_MODERN</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>11</GridX>
+			<GridY>1</GridY>
+			<Quote>AP51</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>134</ID>
+			<Type>TECH_AP52</Type>
+			<Cost>3100</Cost>
+			<Description>AP52</Description>
+			<Civilopedia>AP52</Civilopedia>
+			<Help>AP52</Help>
+			<Era>ERA_MODERN</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>11</GridX>
+			<GridY>2</GridY>
+			<Quote>AP52</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>135</ID>
+			<Type>TECH_AP53</Type>
+			<Cost>3100</Cost>
+			<Description>AP53</Description>
+			<Civilopedia>AP53</Civilopedia>
+			<Help>AP53</Help>
+			<Era>ERA_MODERN</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>11</GridX>
+			<GridY>3</GridY>
+			<Quote>AP53</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>136</ID>
+			<Type>TECH_AP54</Type>
+			<Cost>3100</Cost>
+			<Description>AP54</Description>
+			<Civilopedia>AP54</Civilopedia>
+			<Help>AP54</Help>
+			<Era>ERA_MODERN</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>11</GridX>
+			<GridY>5</GridY>
+			<Quote>AP54</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>137</ID>
+			<Type>TECH_AP55</Type>
+			<Cost>3100</Cost>
+			<Description>AP55</Description>
+			<Civilopedia>AP55</Civilopedia>
+			<Help>AP55</Help>
+			<Era>ERA_MODERN</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>11</GridX>
+			<GridY>7</GridY>
+			<Quote>AP55</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>138</ID>
+			<Type>TECH_AP56</Type>
+			<Cost>4100</Cost>
+			<Description>AP56</Description>
+			<Civilopedia>AP56</Civilopedia>
+			<Help>AP56</Help>
+			<Era>ERA_MODERN</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>12</GridX>
+			<GridY>2</GridY>
+			<Quote>AP56</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>139</ID>
+			<Type>TECH_AP57</Type>
+			<Cost>4100</Cost>
+			<Description>AP57</Description>
+			<Civilopedia>AP57</Civilopedia>
+			<Help>AP57</Help>
+			<Era>ERA_MODERN</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>12</GridX>
+			<GridY>4</GridY>
+			<Quote>AP57</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>140</ID>
+			<Type>TECH_AP58</Type>
+			<Cost>4100</Cost>
+			<Description>AP58</Description>
+			<Civilopedia>AP58</Civilopedia>
+			<Help>AP58</Help>
+			<Era>ERA_MODERN</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>12</GridX>
+			<GridY>5</GridY>
+			<Quote>AP58</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>141</ID>
+			<Type>TECH_AP59</Type>
+			<Cost>4100</Cost>
+			<Description>AP59</Description>
+			<Civilopedia>AP59</Civilopedia>
+			<Help>AP59</Help>
+			<Era>ERA_MODERN</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>12</GridX>
+			<GridY>7</GridY>
+			<Quote>AP59</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>142</ID>
+			<Type>TECH_AP60</Type>
+			<Cost>5100</Cost>
+			<Description>AP60</Description>
+			<Civilopedia>AP60</Civilopedia>
+			<Help>AP60</Help>
+			<Era>ERA_POSTMODERN</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>13</GridX>
+			<GridY>1</GridY>
+			<Quote>AP60</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>143</ID>
+			<Type>TECH_AP61</Type>
+			<Cost>5100</Cost>
+			<Description>AP61</Description>
+			<Civilopedia>AP61</Civilopedia>
+			<Help>AP61</Help>
+			<Era>ERA_POSTMODERN</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>13</GridX>
+			<GridY>3</GridY>
+			<Quote>AP61</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>144</ID>
+			<Type>TECH_AP62</Type>
+			<Cost>5100</Cost>
+			<Description>AP62</Description>
+			<Civilopedia>AP62</Civilopedia>
+			<Help>AP62</Help>
+			<Era>ERA_POSTMODERN</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>13</GridX>
+			<GridY>5</GridY>
+			<Quote>AP62</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>145</ID>
+			<Type>TECH_AP63</Type>
+			<Cost>5100</Cost>
+			<Description>AP63</Description>
+			<Civilopedia>AP63</Civilopedia>
+			<Help>AP63</Help>
+			<Era>ERA_POSTMODERN</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>13</GridX>
+			<GridY>7</GridY>
+			<Quote>AP63</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>146</ID>
+			<Type>TECH_AP64</Type>
+			<Cost>6400</Cost>
+			<Description>AP64</Description>
+			<Civilopedia>AP64</Civilopedia>
+			<Help>AP64</Help>
+			<Era>ERA_POSTMODERN</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>14</GridX>
+			<GridY>1</GridY>
+			<Quote>AP64</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>147</ID>
+			<Type>TECH_AP65</Type>
+			<Cost>6400</Cost>
+			<Description>AP65</Description>
+			<Civilopedia>AP65</Civilopedia>
+			<Help>AP65</Help>
+			<Era>ERA_POSTMODERN</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>14</GridX>
+			<GridY>3</GridY>
+			<Quote>AP65</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>148</ID>
+			<Type>TECH_AP66</Type>
+			<Cost>6400</Cost>
+			<Description>AP66</Description>
+			<Civilopedia>AP66</Civilopedia>
+			<Help>AP66</Help>
+			<Era>ERA_POSTMODERN</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>14</GridX>
+			<GridY>5</GridY>
+			<Quote>AP66</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>149</ID>
+			<Type>TECH_AP67</Type>
+			<Cost>6400</Cost>
+			<Description>AP67</Description>
+			<Civilopedia>AP67</Civilopedia>
+			<Help>AP67</Help>
+			<Era>ERA_POSTMODERN</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>14</GridX>
+			<GridY>7</GridY>
+			<Quote>AP67</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>150</ID>
+			<Type>TECH_AP68</Type>
+			<Cost>7700</Cost>
+			<Description>AP68</Description>
+			<Civilopedia>AP68</Civilopedia>
+			<Help>AP68</Help>
+			<Era>ERA_FUTURE</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>15</GridX>
+			<GridY>1</GridY>
+			<Quote>AP68</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>151</ID>
+			<Type>TECH_AP69</Type>
+			<Cost>7700</Cost>
+			<Description>AP69</Description>
+			<Civilopedia>AP69</Civilopedia>
+			<Help>AP69</Help>
+			<Era>ERA_FUTURE</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>15</GridX>
+			<GridY>2</GridY>
+			<Quote>AP69</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>152</ID>
+			<Type>TECH_AP70</Type>
+			<Cost>7700</Cost>
+			<Description>AP70</Description>
+			<Civilopedia>AP70</Civilopedia>
+			<Help>AP70</Help>
+			<Era>ERA_FUTURE</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>15</GridX>
+			<GridY>4</GridY>
+			<Quote>AP70</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>153</ID>
+			<Type>TECH_AP71</Type>
+			<Cost>7700</Cost>
+			<Description>AP71</Description>
+			<Civilopedia>AP71</Civilopedia>
+			<Help>AP71</Help>
+			<Era>ERA_FUTURE</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>15</GridX>
+			<GridY>5</GridY>
+			<Quote>AP71</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>154</ID>
+			<Type>TECH_AP72</Type>
+			<Cost>7700</Cost>
+			<Description>AP72</Description>
+			<Civilopedia>AP72</Civilopedia>
+			<Help>AP72</Help>
+			<Era>ERA_FUTURE</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>15</GridX>
+			<GridY>6</GridY>
+			<Quote>AP72</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>155</ID>
+			<Type>TECH_AP73</Type>
+			<Cost>7700</Cost>
+			<Description>AP73</Description>
+			<Civilopedia>AP73</Civilopedia>
+			<Help>AP73</Help>
+			<Era>ERA_FUTURE</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>15</GridX>
+			<GridY>7</GridY>
+			<Quote>AP73</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>156</ID>
+			<Type>TECH_AP74</Type>
+			<Cost>8800</Cost>
+			<Description>AP74</Description>
+			<Civilopedia>AP74</Civilopedia>
+			<Help>AP74</Help>
+			<Era>ERA_FUTURE</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>16</GridX>
+			<GridY>0</GridY>
+			<Quote>AP74</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>157</ID>
+			<Type>TECH_AP75</Type>
+			<Cost>8800</Cost>
+			<Description>AP75</Description>
+			<Civilopedia>AP75</Civilopedia>
+			<Help>AP75</Help>
+			<Era>ERA_FUTURE</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>16</GridX>
+			<GridY>1</GridY>
+			<Quote>AP75</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>158</ID>
+			<Type>TECH_AP76</Type>
+			<Cost>8800</Cost>
+			<Description>AP76</Description>
+			<Civilopedia>AP76</Civilopedia>
+			<Help>AP76</Help>
+			<Era>ERA_FUTURE</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>16</GridX>
+			<GridY>2</GridY>
+			<Quote>AP76</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>159</ID>
+			<Type>TECH_AP77</Type>
+			<Cost>8800</Cost>
+			<Description>AP77</Description>
+			<Civilopedia>AP77</Civilopedia>
+			<Help>AP77</Help>
+			<Era>ERA_FUTURE</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>16</GridX>
+			<GridY>5</GridY>
+			<Quote>AP77</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>160</ID>
+			<Type>TECH_AP78</Type>
+			<Cost>8800</Cost>
+			<Description>AP78</Description>
+			<Civilopedia>AP78</Civilopedia>
+			<Help>AP78</Help>
+			<Era>ERA_FUTURE</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>16</GridX>
+			<GridY>6</GridY>
+			<Quote>AP78</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
+		</Row>
+		<Row>
+			<ID>161</ID>
+			<Type>TECH_AP79</Type>
+			<Cost>8800</Cost>
+			<Description>AP79</Description>
+			<Civilopedia>AP79</Civilopedia>
+			<Help>AP79</Help>
+			<Era>ERA_FUTURE</Era>
+			<Trade>true</Trade>
+			<GoodyTech>true</GoodyTech>
+			<GridX>16</GridX>
+			<GridY>7</GridY>
+			<Quote>AP79</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
 			<AudioIntro>AS2D_TECH_AGRICULTURE</AudioIntro>
 			<AudioIntroHeader>AS2D_HEADING_TECH_AGRICULTURE</AudioIntroHeader>
 		</Row>
