@@ -10,12 +10,14 @@ from .constants import GAME_NAME, ID_OFFSET, TECH_ID_OFFSET
 from .enums import CivVLocationType
 
 # All declaration
-__all__ = ["CivVLocation", "LOCATIONS_DATA", "LOCATIONS_DATA_BY_TYPE_ID"]
+__all__ = ["CivVLocation", "LOCATIONS_DATA", "LOCATIONS_DATA_BY_ID", "LOCATIONS_DATA_BY_TYPE_ID"]
 
 
 # %% GLOBALS
 LOCATIONS_DATA: list["CivVLocationData"] = []
 "List of all defined locations"
+LOCATIONS_DATA_BY_ID: dict[int, "CivVLocationData"] = {}
+"Dict of all defined locations, separated by AP ID"
 LOCATIONS_DATA_BY_TYPE_ID: dict[tuple[CivVLocationType, int], "CivVLocationData"] = {}
 "Dict of all defined locations, separated by type + game ID"
 
@@ -63,8 +65,9 @@ class CivVLocationData:
         # Set AP ID for this location
         self.ap_id = len(LOCATIONS_DATA) + ID_OFFSET
 
-        # Add self to the LOCATIONS_DATA and LOCATIONS_DATA_BY_TYPE_ID dicts
+        # Add self to the dicts
         LOCATIONS_DATA.append(self)
+        LOCATIONS_DATA_BY_ID[self.ap_id] = self
         LOCATIONS_DATA_BY_TYPE_ID[(self.type, self.game_id)] = self
 
 

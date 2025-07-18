@@ -12,9 +12,10 @@ from Utils import init_logging
 
 from .context import CivVContext
 from .constants import ADDRESS, GAME_NAME, GAME_READY, GAME_NOT_READY, MOD_READY, MOD_NOT_READY, PORT
+from .enums import CivVLocationType
 from .exceptions import TunerConnectionException
 from .items import ITEMS_DATA_BY_ID
-from .locations import LOCATIONS_DATA_BY_TYPE_ID
+from .locations import LOCATIONS_DATA_BY_ID, LOCATIONS_DATA_BY_TYPE_ID
 from .tuner import Tuner
 
 # All declaration
@@ -228,7 +229,7 @@ class CivVClient:
 
             # Wait a bit before performing the next update cycle
             finally:
-                await asyncio.sleep(3)
+                await asyncio.sleep(1)
 
     async def check_game_ready(self) -> bool:
         """
@@ -259,30 +260,45 @@ class CivVClient:
         # If a connection to the server is currently established, perform an update cycle
         if self.ctx.server:
             # Process checked locations and received items
-            await self.process_checked_locations()
+            await self.process_push_table()
             await self.process_received_items()
 
-            # If we have not achieved victory yet, check if we have
-            if not self.ctx.has_achieved_victory:
-                await self.handle_goal_complete()
-
     @update_func
-    async def process_checked_locations(self) -> None:
+    async def process_push_table(self) -> None:
         """
-        Processes locations that have been checked by the player and sends the appropriate locations to the multiworld.
+        Processes requests pushed by the APMod to the client and acts upon them.
 
         """
 
-        # Check which locations have been checked that have not been sent to the multiworld yet and send them
-        locations_dct = await self.tuner.get_items_to_send()
-        for location_type, locations in locations_dct.items():
-            locations_to_send = set(locations).difference(self.ctx.sent_locations[location_type])
-            await self.ctx.send_msgs(
-                [{"cmd": "LocationChecks",
-                  "locations": [LOCATIONS_DATA_BY_TYPE_ID[(location_type, x)].ap_id for x in locations_to_send]},
-                 ]
-            )
-            self.ctx.sent_locations[location_type].update(locations_to_send)
+        # Retrieve the push table and process its contents
+        for key, value in (await self.tuner.get_push_table()).items():
+            match key:
+                # If a full game sync was requested
+                case "sync":
+                    # Grant all checked locations as items
+                    await self.tuner.grant_technologies(
+                        *(LOCATIONS_DATA_BY_ID[x].game_id for x in self.ctx.checked_locations))
+                    self.ctx.sent_locations[CivVLocationType.tech].update(self.ctx.checked_locations)
+
+                    # Reset received_items to resend all items received
+                    self.ctx.received_items.clear()
+
+                # If victory was achieved
+                case "victory":
+                    # Send message that player has goaled their game
+                    await self.ctx.send_msgs([{"cmd": "StatusUpdate", "status": ClientStatus.CLIENT_GOAL}])
+                    self.ctx.has_achieved_victory = True
+
+                # All other cases are location types
+                case _:
+                    # Send the locations of this location type that have not been sent yet
+                    locations_to_send = set(value).difference(self.ctx.sent_locations[key])
+                    await self.ctx.send_msgs(
+                        [{"cmd": "LocationChecks",
+                          "locations": [LOCATIONS_DATA_BY_TYPE_ID[(key, x)].ap_id for x in locations_to_send]},
+                         ]
+                    )
+                    self.ctx.sent_locations[key].update(locations_to_send)
 
     @update_func
     async def process_received_items(self) -> None:
@@ -296,15 +312,3 @@ class CivVClient:
         if items_to_receive:
             await self.tuner.grant_technologies(*(ITEMS_DATA_BY_ID[x.item].game_id for x in items_to_receive))
             self.ctx.received_items.update(items_to_receive)
-
-    @update_func
-    async def handle_goal_complete(self) -> None:
-        """
-        Checks if the player has achieved victory in the game, and sends the victory to the multiworld if so.
-
-        """
-
-        # Check if we have achieved victory and send a victory to the multiworld if so
-        if await self.tuner.has_achieved_victory():
-            await self.ctx.send_msgs([{"cmd": "StatusUpdate", "status": ClientStatus.CLIENT_GOAL}])
-            self.ctx.has_achieved_victory = True

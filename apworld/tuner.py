@@ -134,8 +134,8 @@ class Tuner:
         except ConnectionError:
             logger.debug('Connection error while receiving data')
             raise TunerConnectionException
-        except TunerException:
-            logger.debug(f'Error occurred while receiving data')
+        except TunerException as e:
+            logger.debug(f'Error occurred while receiving data: {str(e)}')
             raise
 
         # If no tuner-specific exception occurred, then the exception was unhandled.
@@ -217,19 +217,10 @@ class Tuner:
 
         await self._send_mod_command(f"GrantTechs({{{','.join(map(str, tech_ids))}}})")
 
-    async def get_items_to_send(self) -> dict[str, list[int]]:
+    async def get_push_table(self) -> dict[str, Any]:
         """
-        Returns the list of items to send for each location type from the multiworld pool.
-
-        """
-
-        return await self._send_mod_command("GetItemsToSend()")
-
-
-    async def has_achieved_victory(self) -> bool:
-        """
-        Returns whether the player has achieved a victory.
+        Returns the push table managed by the APMod containing requests made by the game to the client.
 
         """
 
-        return (await self._send_mod_command("HasAchievedVictory()"))["victory"]
+        return await self._send_mod_command("GetPushTable()")

@@ -56,7 +56,7 @@ class CivVItemData:
         # Make sure the item type is part of this item's groups set
         self.groups.add(self.type)
 
-        # Add self to the ITEMS_DATA; ITEMS_DATA_BY_ID; and ITEM_GROUPS dicts
+        # Add self to the dicts
         ITEMS_DATA.append(self)
         ITEMS_DATA_BY_ID[self.ap_id] = self
         for group in self.groups:
