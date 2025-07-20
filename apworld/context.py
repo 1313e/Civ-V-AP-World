@@ -2,7 +2,6 @@
 import asyncio
 
 from CommonClient import CommonContext
-from NetUtils import NetworkItem
 
 from .command_processor import CivVCommandProcessor
 from .constants import GAME_NAME, ID_OFFSET
@@ -29,10 +28,10 @@ class CivVContext(CommonContext):
     "The asyncio task that contains the Civ V AP Client"
     item_offset: int = ID_OFFSET
     "Item offset to use for conversion from internal IDs to multiworld IDs"
-    sent_locations: dict[CivVLocationType, set[int]] = {CivVLocationType.tech: set()}
+    sent_locations: dict[CivVLocationType, set[int]] = {location_type: set() for location_type in CivVLocationType}
     "Dict of locations originating from this game that have been sent to the multiworld already, split by location type"
-    received_items: set[NetworkItem] = set()
-    "Set of items originating from the multiworld that have been received by this game already"
+    received_item_ids: list[int] = []
+    "IDs of items originating from the multiworld that have been received by this game already"
     has_achieved_victory: bool = False
     "Whether the player has achieved victory yet"
 

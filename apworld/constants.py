@@ -1,6 +1,6 @@
 # %% GLOBALS DEFINITIONS
 # GENERAL
-APWORLD_VERSION: str = "0.2.1"
+APWORLD_VERSION: str = "0.3.0"
 "Version of this APWorld"
 GAME_NAME: str = "Civilization V"
 "Name of the game this APWorld is for"
@@ -22,7 +22,3 @@ ADDRESS: str = "127.0.0.1"
 "Localhost address"
 PORT: int = 4318
 "Port to use for the Firetuner"
-
-# TECHNOLOGIES
-TECH_ID_OFFSET: int = 82
-"Offset to use for all AP technologies"

@@ -32,6 +32,7 @@ class CivVItemType(StrEnum):
     """
 
     tech = "tech"
+    era = "era"
 
 
 class CivVLocationType(StrEnum):

@@ -12,7 +12,7 @@ from Utils import init_logging
 
 from .context import CivVContext
 from .constants import ADDRESS, GAME_NAME, GAME_READY, GAME_NOT_READY, MOD_READY, MOD_NOT_READY, PORT
-from .enums import CivVLocationType
+from .enums import CivVLocationType, CivVItemType
 from .exceptions import TunerConnectionException
 from .items import ITEMS_DATA_BY_ID
 from .locations import LOCATIONS_DATA_BY_ID, LOCATIONS_DATA_BY_TYPE_ID
@@ -217,6 +217,7 @@ class CivVClient:
                 # If the AP mod was not ready, Make sure the game itself still is
                 else:
                     _ = await self.check_game_ready()
+                    await asyncio.sleep(4)
 
             # If we lost connection to the game at any point, break out of the game update loop to set it up again
             except TunerConnectionException as e:
@@ -281,7 +282,7 @@ class CivVClient:
                     self.ctx.sent_locations[CivVLocationType.tech].update(self.ctx.checked_locations)
 
                     # Reset received_items to resend all items received
-                    self.ctx.received_items.clear()
+                    self.ctx.received_item_ids.clear()
 
                 # If victory was achieved
                 case "victory":
@@ -307,8 +308,24 @@ class CivVClient:
 
         """
 
-        # Check which items have been received that have not been received by the player yet and grant them
-        items_to_receive = set(self.ctx.items_received).difference(self.ctx.received_items)
-        if items_to_receive:
-            await self.tuner.grant_technologies(*(ITEMS_DATA_BY_ID[x.item].game_id for x in items_to_receive))
-            self.ctx.received_items.update(items_to_receive)
+        # Grant all items that have not been received by the player yet
+        techs_to_send = []
+        items_ids_to_receive = [x.item for x in self.ctx.items_received[len(self.ctx.received_item_ids):]]
+        for id_to_receive in items_ids_to_receive:
+            # Retrieve the data on this item
+            item = ITEMS_DATA_BY_ID[id_to_receive]
+
+            # Retrieve the ID to send to the player according to its item type
+            match item.type:
+                case CivVItemType.tech:
+                    techs_to_send.append(item.game_id)
+
+                case CivVItemType.era:
+                    techs_to_send.append(item.game_id[self.ctx.received_item_ids.count(item.ap_id)])
+
+        # Grant all techs at once, as it is far more efficient
+        if techs_to_send:
+            await self.tuner.grant_technologies(*techs_to_send)
+
+        # Store that those items have been received now
+        self.ctx.received_item_ids.extend(items_ids_to_receive)

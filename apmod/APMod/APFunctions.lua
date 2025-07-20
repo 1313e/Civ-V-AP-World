@@ -9,7 +9,7 @@
 local CLIENT_PREFIX = "APSTART:"
 local CLIENT_POSTFIX = ":APEND"
 local LOWER_TECH_ID = 83
-local UPPER_TECH_ID = 161
+local UPPER_TECH_ID = 168
 
 local player = Players[Game.GetActivePlayer()];
 local team = Teams[player:GetTeam()];

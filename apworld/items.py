@@ -8,7 +8,7 @@ from .enums import CivVItemGroup, CivVItemType
 from .constants import GAME_NAME, ID_OFFSET
 
 # All declaration
-__all__ = ["CivVItem", "ITEMS_DATA", "ITEMS_DATA_BY_ID", "ITEM_GROUPS"]
+__all__ = ["CivVItem", "CivVItemData", "ITEMS_DATA", "ITEMS_DATA_BY_ID", "ITEM_GROUPS", "PROGRESSIVE_ERA_ITEM"]
 
 
 # %% GLOBALS
@@ -37,10 +37,12 @@ class CivVItemData:
     "Name of this item"
     type: CivVItemType
     "Type of this item"
-    game_id: int
-    "ID of this item with this item type within Civ V"
+    game_id: int | list[int]
+    "ID of this item with this item type within Civ V. If a list, all listed IDs are this item"
     classification: ItemClassification
     "Classification of this item"
+    count: int = field(init=False)
+    "Number of times this item exists within Civ V"
     groups: set[CivVItemGroup | CivVItemType] = field(default_factory=set)
     "Set of groups this item belongs to. The type of this item is always part of this set"
     ap_id: int = field(init=False)
@@ -49,6 +51,9 @@ class CivVItemData:
     def __post_init__(self):
         # Add the item type as a prefix to the item name
         self.name = f"{self.type.capitalize()} - {self.name}"
+
+        # Set count for this item
+        self.count = len(self.game_id) if isinstance(self.game_id, list) else 1
 
         # Set AP ID for this item
         self.ap_id = len(ITEMS_DATA) + ID_OFFSET
@@ -64,6 +69,14 @@ class CivVItemData:
 
 
 # %% ITEM DECLARATIONS
+PROGRESSIVE_ERA_ITEM = CivVItemData(
+    name="Progressive",
+    type=CivVItemType.era,
+    game_id=[169, 170, 171, 172, 173, 174, 175],
+    classification=ItemClassification.progression,
+)
+"Progressive era item within Civ V"
+
 TECH_ITEMS = [
     CivVItemData(
         name="Pottery",

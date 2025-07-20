@@ -1,12 +1,15 @@
 # %% IMPORTS
-from BaseClasses import Region
+import itertools
+from collections.abc import Callable
+
+from BaseClasses import Region, ItemClassification, CollectionState
 from worlds.AutoWorld import World
 
 from .constants import GAME_NAME
 from .items import ITEMS_DATA, ITEMS_DATA_BY_ID, ITEM_GROUPS, CivVItem
-from .locations import LOCATIONS_DATA, CivVLocation
+from .locations import LOCATIONS_DATA, CivVLocation, CivVLocationData
 from .options import CivVOptions
-from .regions import REGIONS_DATA
+from .regions import ERA_REGIONS, REGIONS_DATA, CivVRegionData
 
 # All declaration
 __all__ = ["CivVWorld"]
@@ -38,7 +41,23 @@ class CivVWorld(World):
         )
 
     def create_items(self) -> None:
-        self.multiworld.itempool.extend([self.create_item(item_data.name) for item_data in ITEMS_DATA])
+        self.multiworld.itempool.extend(itertools.chain.from_iterable(
+            ([self.create_item(item_data.name) for _ in range(item_data.count)] for item_data in ITEMS_DATA)))
+
+    def create_access_rule(self, data: CivVRegionData | CivVLocationData) -> Callable[[CollectionState], bool]:
+        """
+        Creates the access rule function for the given region or location `data` and returns it.
+
+        This function can be used as the access rule when creating :class:`Region` and :class:`Location` instances.
+
+        """
+
+        # Create rule function that uses the CollectionState to determine if region/location is reachable
+        def rule(state: CollectionState) -> bool:
+            return all((state.has(name, self.player, count) for name, count in data.requirements.items()))
+
+        # Return created rule
+        return rule
 
     def create_regions(self) -> None:
         # Add the origin region
@@ -57,14 +76,14 @@ class CivVWorld(World):
             # Retrieve region and parent region
             region = self.multiworld.get_region(region_name=region_data.name, player=self.player)
             parent_region = self.multiworld.get_region(
-                region_name=region_data.parent if region_data.parent is not None else self.origin_region_name,
+                region_name=region_data.parent.name if region_data.parent is not None else self.origin_region_name,
                 player=self.player
             )
 
             # Make connection between parent region and this region
             parent_region.connect(
                 connecting_region=region,
-                rule=lambda state: region_data.rule(state) if region_data.rule is not None else True,
+                rule=self.create_access_rule(region_data),
             )
 
         # Add all locations to the multiworld
@@ -83,4 +102,16 @@ class CivVWorld(World):
             region.locations.append(location)
 
             # Add accessibility rule to this location
-            location.access_rule = lambda state: location_data.rule(state) if location_data.rule is not None else True
+            location.access_rule = self.create_access_rule(location_data)
+
+        # Add victory to the multiworld
+        victory_region = self.multiworld.get_region(ERA_REGIONS[self.options.era_goal.value].name, self.player)
+        victory_location = CivVLocation(
+            player=self.player,
+            name="Victory",
+            address=None,
+            parent=victory_region
+        )
+        victory_location.place_locked_item(CivVItem("Victory", ItemClassification.progression, None, self.player))
+        victory_region.locations.append(victory_location)
+        self.multiworld.completion_condition[self.player] = lambda state: state.has("Victory", self.player)
