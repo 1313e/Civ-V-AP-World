@@ -321,11 +321,11 @@ class CivVClient:
                     techs_to_send.append(item.game_id)
 
                 case CivVItemType.era:
-                    techs_to_send.append(item.game_id[self.ctx.received_item_ids.count(item.ap_id)])
+                    techs_to_send.append(item.game_id[self.ctx.received_item_ids.count(id_to_receive)])
+
+            # Add ID to list of received IDs to account for multiple progressive items being sent at once
+            self.ctx.received_item_ids.append(id_to_receive)
 
         # Grant all techs at once, as it is far more efficient
         if techs_to_send:
             await self.tuner.grant_technologies(*techs_to_send)
-
-        # Store that those items have been received now
-        self.ctx.received_item_ids.extend(items_ids_to_receive)
