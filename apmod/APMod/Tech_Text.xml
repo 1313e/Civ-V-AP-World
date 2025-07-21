@@ -928,7 +928,7 @@
 			<GoodyTech>false</GoodyTech>
 			<GridX>0</GridX>
 			<GridY>4</GridY>
-			<Quote>[NEWLINE]"Ah shit, here we go again."[NEWLINE] - CJ (GTA: San Andreas)[NEWLINE]</Quote>
+			<Quote>[NEWLINE]"Ah shit, here we go again."[NEWLINE] - CJ, GTA: San Andreas (suggested by [COLOR_POSITIVE_TEXT]@1313e[ENDCOLOR])</Quote>
 			<PortraitIndex>0</PortraitIndex>
 			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
 		</Row>
@@ -2338,7 +2338,7 @@
 			<GoodyTech>false</GoodyTech>
 			<GridX>21</GridX>
 			<GridY>4</GridY>
-			<Quote>[NEWLINE]If you have a good quote to put here, please DM me ([COLOR_POSITIVE_TEXT]@1313e[ENDCOLOR])</Quote>
+			<Quote>[NEWLINE]"We value your privacy ;)"[NEWLINE] - Obnoxious cookie banner (suggested by [COLOR_POSITIVE_TEXT]@mrrickw[ENDCOLOR])[NEWLINE]</Quote>
 			<PortraitIndex>0</PortraitIndex>
 			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
 		</Row>
