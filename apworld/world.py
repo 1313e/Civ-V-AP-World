@@ -6,7 +6,15 @@ from BaseClasses import Region, ItemClassification, CollectionState
 from worlds.AutoWorld import World
 
 from .constants import GAME_NAME
-from .items import ITEMS_DATA, ITEMS_DATA_BY_ID, ITEM_GROUPS, CivVItem
+from .items import (
+    ITEMS_DATA,
+    ITEMS_DATA_BY_ID,
+    ITEM_GROUPS,
+    PROGRESSIVE_ERA_ITEM,
+    PROGRESSIVE_TECH_ITEMS,
+    TECH_ITEMS,
+    CivVItem,
+)
 from .locations import LOCATIONS_DATA, CivVLocation, CivVLocationData
 from .options import CivVOptions
 from .regions import ERA_REGIONS, REGIONS_DATA, CivVRegionData
@@ -41,8 +49,15 @@ class CivVWorld(World):
         )
 
     def create_items(self) -> None:
+        # Create list of items to use for this seed
+        items_data = [PROGRESSIVE_ERA_ITEM]
+
+        # Pick which tech items list to use
+        items_data.extend(PROGRESSIVE_TECH_ITEMS if self.options.progressive_techs.value else TECH_ITEMS)
+
+        # Add the items to the multiworld
         self.multiworld.itempool.extend(itertools.chain.from_iterable(
-            ([self.create_item(item_data.name) for _ in range(item_data.count)] for item_data in ITEMS_DATA)))
+            ([self.create_item(item_data.name) for _ in range(item_data.count)] for item_data in items_data)))
 
     def create_access_rule(self, data: CivVRegionData | CivVLocationData) -> Callable[[CollectionState], bool]:
         """

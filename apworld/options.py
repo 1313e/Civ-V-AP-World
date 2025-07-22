@@ -1,6 +1,6 @@
 # %% IMPORTS
 from dataclasses import dataclass
-from Options import Choice, PerGameCommonOptions
+from Options import Choice, DefaultOnToggle, PerGameCommonOptions
 
 # All declaration
 __all__ = ["CivVOptions"]
@@ -25,7 +25,21 @@ class EraGoal(Choice):
     default = option_information
 
 
+class ProgressiveTechs(DefaultOnToggle):
+    """
+    Use progressive technologies.
+
+    Progressive technologies divides all 79 technologies (excl. Agriculture) into 11 categories.
+    This makes the unlocking of technologies feel less chaotic and more streamlined compared to true random
+    technologies. It also makes it far less likely to not have important early-era buildings in the mid to late game.
+
+    """
+
+    display_name = "Progressive Techs"
+
+
 # %% CIV V OPTIONS CLASS
 @dataclass
 class CivVOptions(PerGameCommonOptions):
     era_goal: EraGoal
+    progressive_techs: ProgressiveTechs
