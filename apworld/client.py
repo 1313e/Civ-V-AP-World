@@ -318,7 +318,7 @@ class CivVClient:
             # Retrieve the ID to send to the player according to its item type
             match item.type:
                 case CivVItemType.tech | CivVItemType.era:
-                    techs_to_send.append(item.game_id[self.ctx.received_item_ids.count(id_to_receive)])
+                    techs_to_send.append(item.game_ids[self.ctx.received_item_ids.count(id_to_receive)])
 
             # Add ID to list of received IDs to account for multiple progressive items being sent at once
             self.ctx.received_item_ids.append(id_to_receive)
