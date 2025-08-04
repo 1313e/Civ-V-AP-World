@@ -209,6 +209,22 @@ class Tuner:
         except (TunerRuntimeException, TunerTimeoutException):
             return False
 
+    async def grant_policies(self, *policy_ids: int) -> None:
+        """
+        Grants the policies with the given `policy_ids` to the player.
+
+        """
+
+        await self._send_mod_command(f"GrantPolicies({{{','.join(map(str, policy_ids))}}})")
+
+    async def unlock_policy_branches(self, *policy_branch_ids: int) -> None:
+        """
+        Unlocks the policy branches with the given `policy_branch_ids` for the player.
+
+        """
+
+        await self._send_mod_command(f"UnlockPolicyBranches({{{','.join(map(str, policy_branch_ids))}}})")
+
     async def grant_technologies(self, *tech_ids: int) -> None:
         """
         Grants the technologies with the given `tech_ids` to the player.

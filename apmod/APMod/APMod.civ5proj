@@ -5,7 +5,7 @@
     <ProjectGuid>{b035c588-14ca-472e-b2dd-782d1284a10e}</ProjectGuid>
     <Name>CivVAPMod</Name>
     <Guid>9990c668-41e5-4a30-bcb1-a864a325215e</Guid>
-    <ModVersion>6</ModVersion>
+    <ModVersion>7</ModVersion>
     <Stability>Alpha</Stability>
     <Teaser>Civ V mod for archipelago randomizer</Teaser>
     <Description>Civ V mod for archipelago randomizer</Description>
@@ -13,7 +13,7 @@
     <SpecialThanks>
     </SpecialThanks>
     <AffectsSavedGames>true</AffectsSavedGames>
-    <MinCompatibleSaveVersion>6</MinCompatibleSaveVersion>
+    <MinCompatibleSaveVersion>7</MinCompatibleSaveVersion>
     <SupportsSinglePlayer>true</SupportsSinglePlayer>
     <SupportsMultiplayer>true</SupportsMultiplayer>
     <SupportsHotSeat>true</SupportsHotSeat>
@@ -25,7 +25,17 @@
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>Tech_Text.xml</FileName>
+        <FileName>Policies.xml</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>PolicyBranches.xml</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>Technologies.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
@@ -58,6 +68,14 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
+    <Content Include="PolicyBranches.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="Policies.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
     <Content Include="Icons\AP_Tech_128.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
@@ -82,7 +100,7 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Tech_Text.xml">
+    <Content Include="Technologies.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>

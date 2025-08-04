@@ -4,8 +4,9 @@ from dataclasses import dataclass, field
 
 from BaseClasses import ItemClassification, Item
 
-from .enums import CivVItemGroup, CivVItemType
 from .constants import GAME_NAME, ID_OFFSET
+from .enums import CivVItemGroup, CivVItemType
+from .helpers import to_title
 
 # All declaration
 __all__ = [
@@ -14,6 +15,7 @@ __all__ = [
     "ITEMS_DATA",
     "ITEMS_DATA_BY_ID",
     "ITEM_GROUPS",
+    "POLICY_ITEMS",
     "PROGRESSIVE_ERA_ITEM",
     "PROGRESSIVE_TECH_ITEMS",
     "TECH_ITEMS",
@@ -54,12 +56,14 @@ class CivVItemData:
     "Number of times this item exists within Civ V"
     groups: set[CivVItemGroup | CivVItemType] = field(default_factory=set)
     "Set of groups this item belongs to. The type of this item is always part of this set"
+    prefix: str | None = None
+    "Prefix to use for this item's name. By default, the item type is used"
     ap_id: int = field(init=False)
     "ID of this item within AP"
 
     def __post_init__(self):
         # Add the item type as a prefix to the item name
-        self.name = f"{self.type.capitalize()} - {self.name}"
+        self.name = f"{self.prefix or to_title(self.type)} - {self.name}"
 
         # Set count for this item
         self.count = len(self.game_ids)
@@ -712,3 +716,404 @@ PROGRESSIVE_TECH_ITEMS = [
     ),
 ]
 "List of all progressive technologies within Civ V"
+
+
+POLICY_ITEMS = [
+    CivVItemData(
+        name="Liberty",
+        type=CivVItemType.policy,
+        game_ids=[0],
+        classification=ItemClassification.useful,
+        prefix="Policy Branch",
+    ),
+    CivVItemData(
+        name="Collective Rule",
+        type=CivVItemType.policy,
+        game_ids=[1],
+        classification=ItemClassification.useful,
+    ),
+    CivVItemData(
+        name="Citizenship",
+        type=CivVItemType.policy,
+        game_ids=[2],
+        classification=ItemClassification.useful,
+    ),
+    CivVItemData(
+        name="Republic",
+        type=CivVItemType.policy,
+        game_ids=[3],
+        classification=ItemClassification.useful,
+    ),
+    CivVItemData(
+        name="Representation",
+        type=CivVItemType.policy,
+        game_ids=[4],
+        classification=ItemClassification.useful,
+    ),
+    CivVItemData(
+        name="Meritocracy",
+        type=CivVItemType.policy,
+        game_ids=[5],
+        classification=ItemClassification.useful,
+    ),
+    CivVItemData(
+        name="Tradition",
+        type=CivVItemType.policy,
+        game_ids=[6],
+        classification=ItemClassification.useful,
+        prefix="Policy Branch",
+    ),
+    CivVItemData(
+        name="Aristocracy",
+        type=CivVItemType.policy,
+        game_ids=[7],
+        classification=ItemClassification.useful,
+    ),
+    CivVItemData(
+        name="Oligarchy",
+        type=CivVItemType.policy,
+        game_ids=[8],
+        classification=ItemClassification.useful,
+    ),
+    CivVItemData(
+        name="Legalism",
+        type=CivVItemType.policy,
+        game_ids=[9],
+        classification=ItemClassification.useful,
+    ),
+    CivVItemData(
+        name="Landed Elite",
+        type=CivVItemType.policy,
+        game_ids=[10],
+        classification=ItemClassification.useful,
+    ),
+    CivVItemData(
+        name="Monarchy",
+        type=CivVItemType.policy,
+        game_ids=[11],
+        classification=ItemClassification.useful,
+    ),
+    CivVItemData(
+        name="Honor",
+        type=CivVItemType.policy,
+        game_ids=[12],
+        classification=ItemClassification.useful,
+        prefix="Policy Branch",
+    ),
+    CivVItemData(
+        name="Warrior Code",
+        type=CivVItemType.policy,
+        game_ids=[13],
+        classification=ItemClassification.useful,
+    ),
+    CivVItemData(
+        name="Discipline",
+        type=CivVItemType.policy,
+        game_ids=[14],
+        classification=ItemClassification.useful,
+    ),
+    CivVItemData(
+        name="Military Tradition",
+        type=CivVItemType.policy,
+        game_ids=[15],
+        classification=ItemClassification.useful,
+    ),
+    CivVItemData(
+        name="Military Caste",
+        type=CivVItemType.policy,
+        game_ids=[16],
+        classification=ItemClassification.useful,
+    ),
+    CivVItemData(
+        name="Professional Army",
+        type=CivVItemType.policy,
+        game_ids=[17],
+        classification=ItemClassification.useful,
+    ),
+    CivVItemData(
+        name="Piety",
+        type=CivVItemType.policy,
+        game_ids=[18],
+        classification=ItemClassification.useful,
+        prefix="Policy Branch",
+    ),
+    CivVItemData(
+        name="Organized Religion",
+        type=CivVItemType.policy,
+        game_ids=[19],
+        classification=ItemClassification.useful,
+    ),
+    CivVItemData(
+        name="Mandate of Heaven",
+        type=CivVItemType.policy,
+        game_ids=[20],
+        classification=ItemClassification.useful,
+    ),
+    CivVItemData(
+        name="Theocracy",
+        type=CivVItemType.policy,
+        game_ids=[21],
+        classification=ItemClassification.useful,
+    ),
+    CivVItemData(
+        name="Reformation",
+        type=CivVItemType.policy,
+        game_ids=[22],
+        classification=ItemClassification.useful,
+    ),
+    CivVItemData(
+        name="Religious Tolerance",
+        type=CivVItemType.policy,
+        game_ids=[23],
+        classification=ItemClassification.useful,
+    ),
+    CivVItemData(
+        name="Patronage",
+        type=CivVItemType.policy,
+        game_ids=[24],
+        classification=ItemClassification.useful,
+        prefix="Policy Branch",
+    ),
+    CivVItemData(
+        name="Philanthropy",
+        type=CivVItemType.policy,
+        game_ids=[25],
+        classification=ItemClassification.useful,
+    ),
+    CivVItemData(
+        name="Consulates",
+        type=CivVItemType.policy,
+        game_ids=[26],
+        classification=ItemClassification.useful,
+    ),
+    CivVItemData(
+        name="Scholasticism",
+        type=CivVItemType.policy,
+        game_ids=[27],
+        classification=ItemClassification.useful,
+    ),
+    CivVItemData(
+        name="Cultural Diplomacy",
+        type=CivVItemType.policy,
+        game_ids=[28],
+        classification=ItemClassification.useful,
+    ),
+    CivVItemData(
+        name="Merchant Confederacy",
+        type=CivVItemType.policy,
+        game_ids=[29],
+        classification=ItemClassification.useful,
+    ),
+    CivVItemData(
+        name="Commerce",
+        type=CivVItemType.policy,
+        game_ids=[30],
+        classification=ItemClassification.useful,
+        prefix="Policy Branch",
+    ),
+    CivVItemData(
+        name="Trade Unions",
+        type=CivVItemType.policy,
+        game_ids=[31],
+        classification=ItemClassification.useful,
+    ),
+    CivVItemData(
+        name="Entrepreneurship",
+        type=CivVItemType.policy,
+        game_ids=[32],
+        classification=ItemClassification.useful,
+    ),
+    CivVItemData(
+        name="Mercantilism",
+        type=CivVItemType.policy,
+        game_ids=[33],
+        classification=ItemClassification.useful,
+    ),
+    CivVItemData(
+        name="Caravans",
+        type=CivVItemType.policy,
+        game_ids=[34],
+        classification=ItemClassification.useful,
+    ),
+    CivVItemData(
+        name="Protectionism",
+        type=CivVItemType.policy,
+        game_ids=[35],
+        classification=ItemClassification.useful,
+    ),
+    CivVItemData(
+        name="Rationalism",
+        type=CivVItemType.policy,
+        game_ids=[36],
+        classification=ItemClassification.useful,
+        prefix="Policy Branch",
+    ),
+    CivVItemData(
+        name="Secularism",
+        type=CivVItemType.policy,
+        game_ids=[37],
+        classification=ItemClassification.useful,
+    ),
+    CivVItemData(
+        name="Humanism",
+        type=CivVItemType.policy,
+        game_ids=[38],
+        classification=ItemClassification.useful,
+    ),
+    CivVItemData(
+        name="Free Thought",
+        type=CivVItemType.policy,
+        game_ids=[39],
+        classification=ItemClassification.useful,
+    ),
+    CivVItemData(
+        name="Sovereignty",
+        type=CivVItemType.policy,
+        game_ids=[40],
+        classification=ItemClassification.useful,
+    ),
+    CivVItemData(
+        name="Scientific Revolution",
+        type=CivVItemType.policy,
+        game_ids=[41],
+        classification=ItemClassification.useful,
+    ),
+    CivVItemData(
+        name="Tradition Finisher",
+        type=CivVItemType.policy,
+        game_ids=[42],
+        classification=ItemClassification.useful,
+        prefix="Policy Branch",
+    ),
+    CivVItemData(
+        name="Liberty Finisher",
+        type=CivVItemType.policy,
+        game_ids=[43],
+        classification=ItemClassification.useful,
+        prefix="Policy Branch",
+    ),
+    CivVItemData(
+        name="Honor Finisher",
+        type=CivVItemType.policy,
+        game_ids=[44],
+        classification=ItemClassification.useful,
+        prefix="Policy Branch",
+    ),
+    CivVItemData(
+        name="Piety Finisher",
+        type=CivVItemType.policy,
+        game_ids=[45],
+        classification=ItemClassification.useful,
+        prefix="Policy Branch",
+    ),
+    CivVItemData(
+        name="Patronage Finisher",
+        type=CivVItemType.policy,
+        game_ids=[46],
+        classification=ItemClassification.useful,
+        prefix="Policy Branch",
+    ),
+    CivVItemData(
+        name="Commerce Finisher",
+        type=CivVItemType.policy,
+        game_ids=[47],
+        classification=ItemClassification.useful,
+        prefix="Policy Branch",
+    ),
+    CivVItemData(
+        name="Rationalism Finisher",
+        type=CivVItemType.policy,
+        game_ids=[48],
+        classification=ItemClassification.useful,
+        prefix="Policy Branch",
+    ),
+    CivVItemData(
+        name="Aesthetics",
+        type=CivVItemType.policy,
+        game_ids=[49],
+        classification=ItemClassification.useful,
+        prefix="Policy Branch",
+    ),
+    CivVItemData(
+        name="Cultural Centers",
+        type=CivVItemType.policy,
+        game_ids=[50],
+        classification=ItemClassification.useful,
+    ),
+    CivVItemData(
+        name="Fine Arts",
+        type=CivVItemType.policy,
+        game_ids=[51],
+        classification=ItemClassification.useful,
+    ),
+    CivVItemData(
+        name="Flourishing of the Arts",
+        type=CivVItemType.policy,
+        game_ids=[52],
+        classification=ItemClassification.useful,
+    ),
+    CivVItemData(
+        name="Artistic Genius",
+        type=CivVItemType.policy,
+        game_ids=[53],
+        classification=ItemClassification.useful,
+    ),
+    CivVItemData(
+        name="Cultural Exchange",
+        type=CivVItemType.policy,
+        game_ids=[54],
+        classification=ItemClassification.useful,
+    ),
+    CivVItemData(
+        name="Aesthetics Finisher",
+        type=CivVItemType.policy,
+        game_ids=[55],
+        classification=ItemClassification.useful,
+        prefix="Policy Branch",
+    ),
+    CivVItemData(
+        name="Exploration",
+        type=CivVItemType.policy,
+        game_ids=[56],
+        classification=ItemClassification.useful,
+        prefix="Policy Branch",
+    ),
+    CivVItemData(
+        name="Maritime Infrastructure",
+        type=CivVItemType.policy,
+        game_ids=[57],
+        classification=ItemClassification.useful,
+    ),
+    CivVItemData(
+        name="Naval Tradition",
+        type=CivVItemType.policy,
+        game_ids=[58],
+        classification=ItemClassification.useful,
+    ),
+    CivVItemData(
+        name="Merchant Navy",
+        type=CivVItemType.policy,
+        game_ids=[59],
+        classification=ItemClassification.useful,
+    ),
+    CivVItemData(
+        name="Navigation School",
+        type=CivVItemType.policy,
+        game_ids=[60],
+        classification=ItemClassification.useful,
+    ),
+    CivVItemData(
+        name="Treasure Fleets",
+        type=CivVItemType.policy,
+        game_ids=[61],
+        classification=ItemClassification.useful,
+    ),
+    CivVItemData(
+        name="Exploration Finisher",
+        type=CivVItemType.policy,
+        game_ids=[62],
+        classification=ItemClassification.useful,
+        prefix="Policy Branch",
+    ),
+]
+"List of all policies within Civ V"

@@ -31,8 +31,9 @@ class CivVItemType(StrEnum):
 
     """
 
-    tech = "tech"
     era = "era"
+    policy = "policy"
+    tech = "tech"
 
 
 class CivVLocationType(StrEnum):
@@ -41,4 +42,6 @@ class CivVLocationType(StrEnum):
 
     """
 
+    policy = "policy"
+    policy_branch = "policy_branch"
     tech = "tech"

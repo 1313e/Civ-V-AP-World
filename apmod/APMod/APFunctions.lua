@@ -1,13 +1,10 @@
--- APFunctions
--- Author: brian
--- DateCreated: 2/17/2025 12:08:04 PM
---------------------------------------------------------------
--- Hello_World
--- Author: brian
--- DateCreated: 1/18/2025 3:44:52 PM
---------------------------------------------------------------
 local CLIENT_PREFIX = "APSTART:"
 local CLIENT_POSTFIX = ":APEND"
+local LOWER_POLICY_BRANCH_ID = 0
+local UPPER_POLICY_BRANCH_ID = 8
+local POLICY_BRANCH_FINISHER_OFFSET = 12
+local LOWER_POLICY_ID = 111
+local UPPER_POLICY_ID = 156
 local LOWER_TECH_ID = 83
 local UPPER_TECH_ID = 168
 
@@ -16,10 +13,36 @@ local team = Teams[player:GetTeam()];
 local teamTechs = team:GetTeamTechs();
 
 local pushTable = {}
-local pushTableTableKeys = {tech=true}
+local pushTableTableKeys = {policy=true, policy_branch=true, tech=true}
+local policyIdToPolicyBranchIdTable = {
+	[1]=1,
+	[2]=1,
+	[3]=1,
+	[4]=1,
+	[5]=1,
+}
 
 
 -- EVENTS
+function OnPolicyAdopted(playerId, policyId)
+    -- If the player gets a policy, add it to the push table
+    if(playerId == player:GetID() and policyBranchId >= LOWER_POLICY_ID and policyBranchId <= UPPER_POLICY_ID) then
+        table.insert(pushTable["policy"], policyId)
+
+		-- If the player finished the branch with this policy, add branch finisher to the push table
+		if(player:GetNumPoliciesInBranch(policyIdToPolicyBranchIdTable[policyId]) == 5) then
+			table.insert(pushTable["policy_branch"], policyIdToPolicyBranchIdTable[policyId]+POLICY_BRANCH_FINISHER_OFFSET)
+		end
+    end
+end
+
+function OnPolicyBranchAdopted(playerId, policyBranchId)
+    -- If the player adopts a policy branch, add it to the push table
+    if(playerId == player:GetID() and policyBranchId >= LOWER_POLICY_BRANCH_ID and policyBranchId <= UPPER_POLICY_BRANCH_ID) then
+        table.insert(pushTable["policy_branch"], policyBranchId)
+    end
+end
+
 function OnTechAcquired(playerId, techId)
 	-- If the player gets an AP tech, add it to the push table
 	if(playerId == player:GetID() and techId >= LOWER_TECH_ID and techId <= UPPER_TECH_ID) then
@@ -44,6 +67,28 @@ end
 function IsModReady()
 	-- If this function can be reached and executed, the APMod is ready
 	printResponse('{"ready": true}')
+end
+
+function GrantPolicies(policyIds)
+	-- Grant all given policy IDs to the player
+	for _, policyId in ipairs(policyIds) do
+		-- If this policy is a non-AP policy, we want to give it to the player for free
+		-- This avoids the policy culture cost going up when receiving checks
+		-- For whatever reason, the following marks the next policy granted as free
+		if(policyId <= LOWER_POLICY_ID) then
+			player:ChangeNumFreePolicies(1);
+			player:ChangeNumFreePolicies(-1);
+		end
+		player:SetHasPolicy(policyId, true);
+	end
+end
+
+function UnlockPolicyBranches(policyBranchIds)
+	-- Unlock all given policy branch IDs for the player
+	-- This is only used for syncing
+	for _, policyBranchId in ipairs(policyBranchIds) do
+		player:SetPolicyBranchUnlocked(policyBranchId, true);
+	end
 end
 
 function GrantTechs(techIds)
@@ -85,12 +130,29 @@ function GetPushTable()
 
 	-- Print the response as a single JSON object and reset the push table
 	printResponse(table.concat({"{", table.concat(jsonStrings, ","), "}"}))
-	InitPushTable()
+	--InitPushTable()
 end
 
 function RequestSync()
 	-- Request the syncing of all locations
 	pushTable["sync"] = true
+
+	-- Add all adopted policies to the push table
+	for i=LOWER_POLICY_ID, UPPER_POLICY_ID do
+		if player:HasPolicy(i) then
+			table.insert(pushTable["policy"], i)
+		end
+	end
+
+	-- Add all unlocked and finished policy branches to the push table
+	for i=LOWER_POLICY_BRANCH_ID, UPPER_POLICY_BRANCH_ID do
+		if player:IsPolicyBranchUnlocked(i) then
+			table.insert(pushTable["policy_branch"], i)
+			if player:IsPolicyBranchFinished(i) then
+				table.insert(pushTable["policy_branch"], i+POLICY_BRANCH_FINISHER_OFFSET)
+			end
+		end
+	end
 
 	-- Add all researched technologies to the push table
 	for i=LOWER_TECH_ID, UPPER_TECH_ID do
@@ -106,6 +168,8 @@ function Init()
 	-- Register event function
 	Events.TechAcquired.Add(OnTechAcquired)
 	Events.EndGameShow.Add(OnEndGameShow)
+	GameEvents.PlayerAdoptPolicy.Add(OnPolicyAdopted)
+	GameEvents.PlayerAdoptPolicyBranch.Add(OnPolicyBranchAdopted)
 
 	-- Give player and AI their corresponding modified techs at the start
 	for i = 0, GameDefines.MAX_CIV_PLAYERS-1, 1 do
@@ -132,4 +196,6 @@ Init()
 
 Game.IsModReady = IsModReady
 Game.GrantTechs = GrantTechs
+Game.GrantPolicies = GrantPolicies
+Game.UnlockPolicyBranches = UnlockPolicyBranches
 Game.GetPushTable = GetPushTable

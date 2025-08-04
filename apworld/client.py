@@ -274,15 +274,9 @@ class CivVClient:
         # Retrieve the push table and process its contents
         for key, value in (await self.tuner.get_push_table()).items():
             match key:
-                # If a full game sync was requested
+                # If a full game sync was requested, perform it
                 case "sync":
-                    # Grant all checked locations as items
-                    await self.tuner.grant_technologies(
-                        *(LOCATIONS_DATA_BY_ID[x].game_id for x in self.ctx.checked_locations))
-                    self.ctx.sent_locations[CivVLocationType.tech].update(self.ctx.checked_locations)
-
-                    # Reset received_items to resend all items received
-                    self.ctx.received_item_ids.clear()
+                    await self._perform_sync()
 
                 # If victory was achieved
                 case "victory":
@@ -301,6 +295,51 @@ class CivVClient:
                     )
                     self.ctx.sent_locations[key].update(locations_to_send)
 
+    async def _perform_sync(self) -> None:
+        """
+        Performs a full sync between the game and the multiworld.
+
+        This involves granting all items again that have been sent from the multiworld to the player; and marking all
+        locations that have been checked already.
+
+        """
+
+        # Mark all checked locations for the player
+        policies_to_send = []
+        policy_branches_to_unlock = []
+        techs_to_send = []
+        for location_id_to_mark in self.ctx.checked_locations:
+            # Retrieve the corresponding location
+            location = LOCATIONS_DATA_BY_ID[location_id_to_mark]
+
+            # Retrieve the ID to send to the player according to its location type
+            match location.type:
+                case CivVLocationType.policy:
+                    policies_to_send.append(location.game_id)
+                case CivVLocationType.policy_branch:
+                    policy_branches_to_unlock.append(location.game_id)
+                case CivVLocationType.tech:
+                    techs_to_send.append(location.game_id)
+
+        # Mark everything at once, as it is far more efficient
+        # Also make sure to store that those locations have been sent to the multiworld now
+        if policies_to_send:
+            await self.tuner.grant_policies(*policies_to_send)
+            self.ctx.sent_locations[CivVLocationType.policy].clear()
+            self.ctx.sent_locations[CivVLocationType.policy].update(policies_to_send)
+        if policy_branches_to_unlock:
+            await self.tuner.unlock_policy_branches(*policy_branches_to_unlock)
+            self.ctx.sent_locations[CivVLocationType.policy_branch].clear()
+            self.ctx.sent_locations[CivVLocationType.policy_branch].update(policy_branches_to_unlock)
+        if techs_to_send:
+            await self.tuner.grant_technologies(*techs_to_send)
+            self.ctx.sent_locations[CivVLocationType.tech].clear()
+            self.ctx.sent_locations[CivVLocationType.tech].update(techs_to_send)
+
+        # Reset received_items to resend all items received
+        self.ctx.received_item_ids.clear()
+
+
     @update_func
     async def process_received_items(self) -> None:
         """
@@ -309,6 +348,7 @@ class CivVClient:
         """
 
         # Grant all items that have not been received by the player yet
+        policies_to_send = []
         techs_to_send = []
         items_ids_to_receive = [x.item for x in self.ctx.items_received[len(self.ctx.received_item_ids):]]
         for id_to_receive in items_ids_to_receive:
@@ -317,12 +357,16 @@ class CivVClient:
 
             # Retrieve the ID to send to the player according to its item type
             match item.type:
-                case CivVItemType.tech | CivVItemType.era:
+                case CivVItemType.era | CivVItemType.tech:
                     techs_to_send.append(item.game_ids[self.ctx.received_item_ids.count(id_to_receive)])
+                case CivVItemType.policy:
+                    policies_to_send.append(item.game_ids[self.ctx.received_item_ids.count(id_to_receive)])
 
             # Add ID to list of received IDs to account for multiple progressive items being sent at once
             self.ctx.received_item_ids.append(id_to_receive)
 
-        # Grant all techs at once, as it is far more efficient
+        # Grant all policies and techs at once, as it is far more efficient
+        if policies_to_send:
+            await self.tuner.grant_policies(*policies_to_send)
         if techs_to_send:
             await self.tuner.grant_technologies(*techs_to_send)

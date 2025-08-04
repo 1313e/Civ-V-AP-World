@@ -10,6 +10,7 @@ from .items import (
     ITEMS_DATA,
     ITEMS_DATA_BY_ID,
     ITEM_GROUPS,
+    POLICY_ITEMS,
     PROGRESSIVE_ERA_ITEM,
     PROGRESSIVE_TECH_ITEMS,
     TECH_ITEMS,
@@ -52,7 +53,8 @@ class CivVWorld(World):
         # Create list of items to use for this seed
         items_data = [PROGRESSIVE_ERA_ITEM]
 
-        # Pick which tech items list to use
+        # Pick which items lists to use based on options
+        items_data.extend(POLICY_ITEMS)
         items_data.extend(PROGRESSIVE_TECH_ITEMS if self.options.progressive_techs.value else TECH_ITEMS)
 
         # Add the items to the multiworld

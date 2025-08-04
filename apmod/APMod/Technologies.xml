@@ -925,6 +925,7 @@
 			<Help>Unlocks researching all [COLOR_POSITIVE_TEXT]Ancient Era[ENDCOLOR] AP technologies.</Help>
 			<Era>ERA_ANCIENT</Era>
 			<Trade>false</Trade>
+			<Disable>true</Disable>
 			<GoodyTech>false</GoodyTech>
 			<GridX>0</GridX>
 			<GridY>4</GridY>
@@ -940,6 +941,7 @@
 			<Help>AI Start</Help>
 			<Era>ERA_ANCIENT</Era>
 			<Trade>false</Trade>
+			<Disable>true</Disable>
 			<GoodyTech>false</GoodyTech>
 			<GridX>0</GridX>
 			<GridY>30</GridY>
@@ -2245,6 +2247,7 @@
 			<Help>Unlocks researching all [COLOR_POSITIVE_TEXT]Classical Era[ENDCOLOR] AP technologies.</Help>
 			<Era>ERA_CLASSICAL</Era>
 			<Trade>false</Trade>
+			<Disable>true</Disable>
 			<GoodyTech>false</GoodyTech>
 			<GridX>3</GridX>
 			<GridY>4</GridY>
@@ -2260,6 +2263,7 @@
 			<Help>Unlocks researching all [COLOR_POSITIVE_TEXT]Medieval Era[ENDCOLOR] AP technologies.</Help>
 			<Era>ERA_MEDIEVAL</Era>
 			<Trade>false</Trade>
+			<Disable>true</Disable>
 			<GoodyTech>false</GoodyTech>
 			<GridX>6</GridX>
 			<GridY>4</GridY>
@@ -2275,6 +2279,7 @@
 			<Help>Unlocks researching all [COLOR_POSITIVE_TEXT]Renaissance Era[ENDCOLOR] AP technologies.</Help>
 			<Era>ERA_RENAISSANCE</Era>
 			<Trade>false</Trade>
+			<Disable>true</Disable>
 			<GoodyTech>false</GoodyTech>
 			<GridX>9</GridX>
 			<GridY>4</GridY>
@@ -2290,6 +2295,7 @@
 			<Help>Unlocks researching all [COLOR_POSITIVE_TEXT]Industrial Era[ENDCOLOR] AP technologies.</Help>
 			<Era>ERA_INDUSTRIAL</Era>
 			<Trade>false</Trade>
+			<Disable>true</Disable>
 			<GoodyTech>false</GoodyTech>
 			<GridX>12</GridX>
 			<GridY>4</GridY>
@@ -2305,6 +2311,7 @@
 			<Help>Unlocks researching all [COLOR_POSITIVE_TEXT]Modern Era[ENDCOLOR] AP technologies.</Help>
 			<Era>ERA_MODERN</Era>
 			<Trade>false</Trade>
+			<Disable>true</Disable>
 			<GoodyTech>false</GoodyTech>
 			<GridX>15</GridX>
 			<GridY>4</GridY>
@@ -2320,6 +2327,7 @@
 			<Help>Unlocks researching all [COLOR_POSITIVE_TEXT]Atomic Era[ENDCOLOR] AP technologies.</Help>
 			<Era>ERA_POSTMODERN</Era>
 			<Trade>false</Trade>
+			<Disable>true</Disable>
 			<GoodyTech>false</GoodyTech>
 			<GridX>18</GridX>
 			<GridY>4</GridY>
@@ -2335,6 +2343,7 @@
 			<Help>Unlocks researching all [COLOR_POSITIVE_TEXT]Information Era[ENDCOLOR] AP technologies.</Help>
 			<Era>ERA_FUTURE</Era>
 			<Trade>false</Trade>
+			<Disable>true</Disable>
 			<GoodyTech>false</GoodyTech>
 			<GridX>21</GridX>
 			<GridY>4</GridY>
@@ -2342,42 +2351,6 @@
 			<PortraitIndex>0</PortraitIndex>
 			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
 		</Row>
-		<Update>
-			<Set Disable='1'/>
-			<Where Type='TECH_ANCIENT_ERA'/>
-		</Update>
-		<Update>
-			<Set Disable='1'/>
-			<Where Type='TECH_AI_START'/>
-		</Update>
-		<Update>
-			<Set Disable='1'/>
-			<Where Type='TECH_CLASSICAL_ERA'/>
-		</Update>
-		<Update>
-			<Set Disable='1'/>
-			<Where Type='TECH_MEDIEVAL_ERA'/>
-		</Update>
-		<Update>
-			<Set Disable='1'/>
-			<Where Type='TECH_RENAISSANCE_ERA'/>
-		</Update>
-		<Update>
-			<Set Disable='1'/>
-			<Where Type='TECH_INDUSTRIAL_ERA'/>
-		</Update>
-		<Update>
-			<Set Disable='1'/>
-			<Where Type='TECH_MODERN_ERA'/>
-		</Update>
-		<Update>
-			<Set Disable='1'/>
-			<Where Type='TECH_ATOMIC_ERA'/>
-		</Update>
-		<Update>
-			<Set Disable='1'/>
-			<Where Type='TECH_INFORMATION_ERA'/>
-		</Update>
 	</Technologies>
 	<Technology_PrereqTechs>
 		<Row>

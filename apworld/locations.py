@@ -6,6 +6,7 @@ from BaseClasses import Location
 from . import items, regions
 from .constants import GAME_NAME, ID_OFFSET
 from .enums import CivVLocationType
+from .helpers import to_title
 
 # All declaration
 __all__ = ["CivVLocation", "CivVLocationData", "LOCATIONS_DATA", "LOCATIONS_DATA_BY_ID", "LOCATIONS_DATA_BY_TYPE_ID"]
@@ -49,7 +50,7 @@ class CivVLocationData:
 
     def __post_init__(self):
         # Add the location type as a prefix to the location name
-        self.name = f"{self.type.capitalize()} - {self.name}"
+        self.name = f"{to_title(self.type)} - {self.name}"
 
         # Set AP ID for this location
         self.ap_id = len(LOCATIONS_DATA) + ID_OFFSET
@@ -153,3 +154,27 @@ TECH_LOCATIONS = [
     CivVLocationData(name="AP Bonus 7", type=CivVLocationType.tech, game_id=168, region=regions.ATOMIC_ERA),
 ]
 "List of all technology locations within Civ V"
+
+
+POLICY_BRANCH_LOCATIONS = [
+    # All vanilla policy branches
+    CivVLocationData(name="Tradition", type=CivVLocationType.policy_branch, game_id=0, region=regions.ANCIENT_ERA),
+    CivVLocationData(name="Liberty", type=CivVLocationType.policy_branch, game_id=1, region=regions.ANCIENT_ERA),
+    CivVLocationData(name="Honor", type=CivVLocationType.policy_branch, game_id=2, region=regions.ANCIENT_ERA),
+    CivVLocationData(name="Piety", type=CivVLocationType.policy_branch, game_id=3, region=regions.ANCIENT_ERA),
+    CivVLocationData(name="Patronage", type=CivVLocationType.policy_branch, game_id=4, region=regions.CLASSICAL_ERA),
+    CivVLocationData(name="Aesthetics", type=CivVLocationType.policy_branch, game_id=5, region=regions.CLASSICAL_ERA),
+    CivVLocationData(name="Commerce", type=CivVLocationType.policy_branch, game_id=6, region=regions.MEDIEVAL_ERA),
+    CivVLocationData(name="Exploration", type=CivVLocationType.policy_branch, game_id=7, region=regions.MEDIEVAL_ERA),
+    CivVLocationData(name="Rationalism", type=CivVLocationType.policy_branch, game_id=8, region=regions.RENAISSANCE_ERA),
+    CivVLocationData(name="Tradition Finished", type=CivVLocationType.policy_branch, game_id=12, region=regions.ANCIENT_ERA),
+    CivVLocationData(name="Liberty Finished", type=CivVLocationType.policy_branch, game_id=13, region=regions.ANCIENT_ERA),
+    CivVLocationData(name="Honor Finished", type=CivVLocationType.policy_branch, game_id=14, region=regions.ANCIENT_ERA),
+    CivVLocationData(name="Piety Finished", type=CivVLocationType.policy_branch, game_id=15, region=regions.ANCIENT_ERA),
+    CivVLocationData(name="Patronage Finished", type=CivVLocationType.policy_branch, game_id=16, region=regions.CLASSICAL_ERA),
+    CivVLocationData(name="Aesthetics Finished", type=CivVLocationType.policy_branch, game_id=17, region=regions.CLASSICAL_ERA),
+    CivVLocationData(name="Commerce Finished", type=CivVLocationType.policy_branch, game_id=18, region=regions.MEDIEVAL_ERA),
+    CivVLocationData(name="Exploration Finished", type=CivVLocationType.policy_branch, game_id=19, region=regions.MEDIEVAL_ERA),
+    CivVLocationData(name="Rationalism Finished", type=CivVLocationType.policy_branch, game_id=20, region=regions.RENAISSANCE_ERA),
+]
+"List of all policy branch locations within Civ V"
