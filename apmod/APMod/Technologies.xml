@@ -2,920 +2,1288 @@
 <GameData>
 	<Technologies>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_AGRICULTURE'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_AGRICULTURE"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_AGRICULTURE'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_AGRICULTURE"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_POTTERY'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_AGRICULTURE"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_POTTERY'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_AGRICULTURE"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_ANIMAL_HUSBANDRY'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_POTTERY"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_ANIMAL_HUSBANDRY'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_POTTERY"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_ARCHERY'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_POTTERY"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_ARCHERY'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_POTTERY"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_MINING'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_ANIMAL_HUSBANDRY"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_MINING'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_ANIMAL_HUSBANDRY"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_SAILING'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_ANIMAL_HUSBANDRY"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_SAILING'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_ANIMAL_HUSBANDRY"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_CALENDAR'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_ARCHERY"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_CALENDAR'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_ARCHERY"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_WRITING'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_ARCHERY"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_WRITING'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_ARCHERY"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_TRAPPING'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_MINING"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_TRAPPING'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_MINING"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_THE_WHEEL'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_MINING"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_THE_WHEEL'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_MINING"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_MASONRY'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_SAILING"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_MASONRY'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_SAILING"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_BRONZE_WORKING'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_SAILING"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_BRONZE_WORKING'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_SAILING"/>
 		</Update>
 		<Update>
-			<Set GridX='4'/>
-			<Where Type='TECH_OPTICS'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_CALENDAR"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_OPTICS'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_CALENDAR"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_OPTICS'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_CALENDAR"/>
 		</Update>
 		<Update>
-			<Set GridX='4'/>
-			<Where Type='TECH_HORSEBACK_RIDING'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_CALENDAR"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_HORSEBACK_RIDING'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_WRITING"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_HORSEBACK_RIDING'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_WRITING"/>
 		</Update>
 		<Update>
-			<Set GridX='4'/>
-			<Where Type='TECH_MATHEMATICS'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_WRITING"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_MATHEMATICS'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_WRITING"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_MATHEMATICS'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_TRAPPING"/>
 		</Update>
 		<Update>
-			<Set GridX='4'/>
-			<Where Type='TECH_CONSTRUCTION'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_TRAPPING"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_CONSTRUCTION'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_TRAPPING"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_CONSTRUCTION'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_TRAPPING"/>
 		</Update>
 		<Update>
-			<Set GridX='5'/>
-			<Where Type='TECH_PHILOSOPHY'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_THE_WHEEL"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_PHILOSOPHY'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_THE_WHEEL"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_PHILOSOPHY'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_THE_WHEEL"/>
 		</Update>
 		<Update>
-			<Set GridX='5'/>
-			<Where Type='TECH_DRAMA'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_THE_WHEEL"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_DRAMA'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_MASONRY"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_DRAMA'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_MASONRY"/>
 		</Update>
 		<Update>
-			<Set GridX='5'/>
-			<Where Type='TECH_CURRENCY'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_MASONRY"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_CURRENCY'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_MASONRY"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_CURRENCY'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_BRONZE_WORKING"/>
 		</Update>
 		<Update>
-			<Set GridX='5'/>
-			<Where Type='TECH_ENGINEERING'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_BRONZE_WORKING"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_ENGINEERING'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_BRONZE_WORKING"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_ENGINEERING'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_BRONZE_WORKING"/>
 		</Update>
 		<Update>
-			<Set GridX='5'/>
-			<Where Type='TECH_IRON_WORKING'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_OPTICS"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_IRON_WORKING'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_OPTICS"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_IRON_WORKING'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_OPTICS"/>
 		</Update>
 		<Update>
-			<Set GridX='7'/>
-			<Where Type='TECH_THEOLOGY'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_OPTICS"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_THEOLOGY'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_HORSEBACK_RIDING"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_THEOLOGY'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_HORSEBACK_RIDING"/>
 		</Update>
 		<Update>
-			<Set GridX='7'/>
-			<Where Type='TECH_CIVIL_SERVICE'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_HORSEBACK_RIDING"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_CIVIL_SERVICE'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_HORSEBACK_RIDING"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_CIVIL_SERVICE'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_MATHEMATICS"/>
 		</Update>
 		<Update>
-			<Set GridX='7'/>
-			<Where Type='TECH_GUILDS'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_MATHEMATICS"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_GUILDS'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_MATHEMATICS"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_GUILDS'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_MATHEMATICS"/>
 		</Update>
 		<Update>
-			<Set GridX='7'/>
-			<Where Type='TECH_METAL_CASTING'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_CONSTRUCTION"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_METAL_CASTING'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_CONSTRUCTION"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_METAL_CASTING'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_CONSTRUCTION"/>
 		</Update>
 		<Update>
-			<Set GridX='8'/>
-			<Where Type='TECH_COMPASS'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_CONSTRUCTION"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_COMPASS'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_PHILOSOPHY"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_COMPASS'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_PHILOSOPHY"/>
 		</Update>
 		<Update>
-			<Set GridX='8'/>
-			<Where Type='TECH_EDUCATION'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_PHILOSOPHY"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_EDUCATION'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_PHILOSOPHY"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_EDUCATION'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_DRAMA"/>
 		</Update>
 		<Update>
-			<Set GridX='8'/>
-			<Where Type='TECH_CHIVALRY'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_DRAMA"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_CHIVALRY'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_DRAMA"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_CHIVALRY'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_DRAMA"/>
 		</Update>
 		<Update>
-			<Set GridX='8'/>
-			<Where Type='TECH_MACHINERY'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_CURRENCY"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_MACHINERY'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_CURRENCY"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_MACHINERY'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_CURRENCY"/>
 		</Update>
 		<Update>
-			<Set GridX='8'/>
-			<Where Type='TECH_PHYSICS'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_CURRENCY"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_PHYSICS'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_ENGINEERING"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_PHYSICS'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_ENGINEERING"/>
 		</Update>
 		<Update>
-			<Set GridX='8'/>
-			<Where Type='TECH_STEEL'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_ENGINEERING"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_STEEL'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_ENGINEERING"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_STEEL'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_IRON_WORKING"/>
 		</Update>
 		<Update>
-			<Set GridX='10'/>
-			<Where Type='TECH_ASTRONOMY'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_IRON_WORKING"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_ASTRONOMY'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_IRON_WORKING"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_ASTRONOMY'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_IRON_WORKING"/>
 		</Update>
 		<Update>
-			<Set GridX='10'/>
-			<Where Type='TECH_ACOUSTICS'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_THEOLOGY"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_ACOUSTICS'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_THEOLOGY"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_ACOUSTICS'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_THEOLOGY"/>
 		</Update>
 		<Update>
-			<Set GridX='10'/>
-			<Where Type='TECH_BANKING'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_THEOLOGY"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_BANKING'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_CIVIL_SERVICE"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_BANKING'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_CIVIL_SERVICE"/>
 		</Update>
 		<Update>
-			<Set GridX='10'/>
-			<Where Type='TECH_PRINTING_PRESS'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_CIVIL_SERVICE"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_PRINTING_PRESS'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_CIVIL_SERVICE"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_PRINTING_PRESS'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_GUILDS"/>
 		</Update>
 		<Update>
-			<Set GridX='10'/>
-			<Where Type='TECH_GUNPOWDER'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_GUILDS"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_GUNPOWDER'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_GUILDS"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_GUNPOWDER'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_GUILDS"/>
 		</Update>
 		<Update>
-			<Set GridX='11'/>
-			<Where Type='TECH_NAVIGATION'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_METAL_CASTING"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_NAVIGATION'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_METAL_CASTING"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_NAVIGATION'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_METAL_CASTING"/>
 		</Update>
 		<Update>
-			<Set GridX='11'/>
-			<Where Type='TECH_ARCHITECTURE'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_METAL_CASTING"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_ARCHITECTURE'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_COMPASS"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_ARCHITECTURE'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_COMPASS"/>
 		</Update>
 		<Update>
-			<Set GridX='11'/>
-			<Where Type='TECH_ECONOMICS'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_COMPASS"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_ECONOMICS'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_COMPASS"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_ECONOMICS'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_EDUCATION"/>
 		</Update>
 		<Update>
-			<Set GridX='11'/>
-			<Where Type='TECH_METALLURGY'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_EDUCATION"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_METALLURGY'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_EDUCATION"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_METALLURGY'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_EDUCATION"/>
 		</Update>
 		<Update>
-			<Set GridX='11'/>
-			<Where Type='TECH_CHEMISTRY'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_CHIVALRY"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_CHEMISTRY'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_CHIVALRY"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_CHEMISTRY'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_CHIVALRY"/>
 		</Update>
 		<Update>
-			<Set GridX='13'/>
-			<Where Type='TECH_ARCHAEOLOGY'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_CHIVALRY"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_ARCHAEOLOGY'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_MACHINERY"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_ARCHAEOLOGY'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_MACHINERY"/>
 		</Update>
 		<Update>
-			<Set GridX='13'/>
-			<Where Type='TECH_SCIENTIFIC_THEORY'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_MACHINERY"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_SCIENTIFIC_THEORY'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_MACHINERY"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_SCIENTIFIC_THEORY'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_PHYSICS"/>
 		</Update>
 		<Update>
-			<Set GridX='13'/>
-			<Where Type='TECH_INDUSTRIALIZATION'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_PHYSICS"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_INDUSTRIALIZATION'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_PHYSICS"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_INDUSTRIALIZATION'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_PHYSICS"/>
 		</Update>
 		<Update>
-			<Set GridX='13'/>
-			<Where Type='TECH_RIFLING'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_STEEL"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_RIFLING'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_STEEL"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_RIFLING'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_STEEL"/>
 		</Update>
 		<Update>
-			<Set GridX='13'/>
-			<Where Type='TECH_MILITARY_SCIENCE'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_STEEL"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_MILITARY_SCIENCE'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_ASTRONOMY"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_MILITARY_SCIENCE'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_ASTRONOMY"/>
 		</Update>
 		<Update>
-			<Set GridX='13'/>
-			<Where Type='TECH_FERTILIZER'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_ASTRONOMY"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_FERTILIZER'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_ASTRONOMY"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_FERTILIZER'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_ACOUSTICS"/>
 		</Update>
 		<Update>
-			<Set GridX='14'/>
-			<Where Type='TECH_BIOLOGY'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_ACOUSTICS"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_BIOLOGY'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_ACOUSTICS"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_BIOLOGY'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_ACOUSTICS"/>
 		</Update>
 		<Update>
-			<Set GridX='14'/>
-			<Where Type='TECH_ELECTRICITY'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_BANKING"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_ELECTRICITY'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_BANKING"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_ELECTRICITY'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_BANKING"/>
 		</Update>
 		<Update>
-			<Set GridX='14'/>
-			<Where Type='TECH_STEAM_POWER'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_BANKING"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_STEAM_POWER'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_PRINTING_PRESS"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_STEAM_POWER'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_PRINTING_PRESS"/>
 		</Update>
 		<Update>
-			<Set GridX='14'/>
-			<Where Type='TECH_DYNAMITE'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_PRINTING_PRESS"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_DYNAMITE'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_PRINTING_PRESS"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_DYNAMITE'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_GUNPOWDER"/>
 		</Update>
 		<Update>
-			<Set GridX='16'/>
-			<Where Type='TECH_REFRIGERATION'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_GUNPOWDER"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_REFRIGERATION'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_GUNPOWDER"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_REFRIGERATION'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_GUNPOWDER"/>
 		</Update>
 		<Update>
-			<Set GridX='16'/>
-			<Where Type='TECH_RADIO'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_NAVIGATION"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_RADIO'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_NAVIGATION"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_RADIO'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_NAVIGATION"/>
 		</Update>
 		<Update>
-			<Set GridX='16'/>
-			<Where Type='TECH_REPLACEABLE_PARTS'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_NAVIGATION"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_REPLACEABLE_PARTS'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_ARCHITECTURE"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_REPLACEABLE_PARTS'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_ARCHITECTURE"/>
 		</Update>
 		<Update>
-			<Set GridX='16'/>
-			<Where Type='TECH_FLIGHT'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_ARCHITECTURE"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_FLIGHT'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_ARCHITECTURE"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_FLIGHT'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_ECONOMICS"/>
 		</Update>
 		<Update>
-			<Set GridX='16'/>
-			<Where Type='TECH_RAILROAD'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_ECONOMICS"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_RAILROAD'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_ECONOMICS"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_RAILROAD'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_ECONOMICS"/>
 		</Update>
 		<Update>
-			<Set GridX='17'/>
-			<Where Type='TECH_PLASTIC'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_METALLURGY"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_PLASTIC'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_METALLURGY"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_PLASTIC'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_METALLURGY"/>
 		</Update>
 		<Update>
-			<Set GridX='17'/>
-			<Where Type='TECH_ELECTRONICS'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_METALLURGY"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_ELECTRONICS'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_CHEMISTRY"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_ELECTRONICS'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_CHEMISTRY"/>
 		</Update>
 		<Update>
-			<Set GridX='17'/>
-			<Where Type='TECH_BALLISTICS'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_CHEMISTRY"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_BALLISTICS'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_CHEMISTRY"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_BALLISTICS'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_ARCHAEOLOGY"/>
 		</Update>
 		<Update>
-			<Set GridX='17'/>
-			<Where Type='TECH_COMBUSTION'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_ARCHAEOLOGY"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_COMBUSTION'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_ARCHAEOLOGY"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_COMBUSTION'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_ARCHAEOLOGY"/>
 		</Update>
 		<Update>
-			<Set GridX='19'/>
-			<Where Type='TECH_PENICILIN'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_SCIENTIFIC_THEORY"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_PENICILIN'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_SCIENTIFIC_THEORY"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_PENICILIN'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_SCIENTIFIC_THEORY"/>
 		</Update>
 		<Update>
-			<Set GridX='19'/>
-			<Where Type='TECH_ATOMIC_THEORY'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_SCIENTIFIC_THEORY"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_ATOMIC_THEORY'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_INDUSTRIALIZATION"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_ATOMIC_THEORY'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_INDUSTRIALIZATION"/>
 		</Update>
 		<Update>
-			<Set GridX='19'/>
-			<Where Type='TECH_RADAR'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_INDUSTRIALIZATION"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_RADAR'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_INDUSTRIALIZATION"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_RADAR'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_RIFLING"/>
 		</Update>
 		<Update>
-			<Set GridX='19'/>
-			<Where Type='TECH_COMBINED_ARMS'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_RIFLING"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_COMBINED_ARMS'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_RIFLING"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_COMBINED_ARMS'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_RIFLING"/>
 		</Update>
 		<Update>
-			<Set GridX='20'/>
-			<Where Type='TECH_ECOLOGY'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_MILITARY_SCIENCE"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_ECOLOGY'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_MILITARY_SCIENCE"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_ECOLOGY'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_MILITARY_SCIENCE"/>
 		</Update>
 		<Update>
-			<Set GridX='20'/>
-			<Where Type='TECH_NUCLEAR_FISSION'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_MILITARY_SCIENCE"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_NUCLEAR_FISSION'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_FERTILIZER"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_NUCLEAR_FISSION'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_FERTILIZER"/>
 		</Update>
 		<Update>
-			<Set GridX='20'/>
-			<Where Type='TECH_ROCKETRY'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_FERTILIZER"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_ROCKETRY'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_FERTILIZER"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_ROCKETRY'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_BIOLOGY"/>
 		</Update>
 		<Update>
-			<Set GridX='20'/>
-			<Where Type='TECH_COMPUTERS'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_BIOLOGY"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_COMPUTERS'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_BIOLOGY"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_COMPUTERS'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_BIOLOGY"/>
 		</Update>
 		<Update>
-			<Set GridX='22'/>
-			<Where Type='TECH_TELECOM'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_ELECTRICITY"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_TELECOM'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_ELECTRICITY"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_TELECOM'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_ELECTRICITY"/>
 		</Update>
 		<Update>
-			<Set GridX='22'/>
-			<Where Type='TECH_MOBILE_TACTICS'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_ELECTRICITY"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_MOBILE_TACTICS'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_STEAM_POWER"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_MOBILE_TACTICS'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_STEAM_POWER"/>
 		</Update>
 		<Update>
-			<Set GridX='22'/>
-			<Where Type='TECH_ADVANCED_BALLISTICS'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_STEAM_POWER"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_ADVANCED_BALLISTICS'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_STEAM_POWER"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_ADVANCED_BALLISTICS'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_DYNAMITE"/>
 		</Update>
 		<Update>
-			<Set GridX='22'/>
-			<Where Type='TECH_SATELLITES'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_DYNAMITE"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_SATELLITES'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_DYNAMITE"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_SATELLITES'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_DYNAMITE"/>
 		</Update>
 		<Update>
-			<Set GridX='22'/>
-			<Where Type='TECH_ROBOTICS'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_REFRIGERATION"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_ROBOTICS'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_REFRIGERATION"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_ROBOTICS'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_REFRIGERATION"/>
 		</Update>
 		<Update>
-			<Set GridX='22'/>
-			<Where Type='TECH_LASERS'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_REFRIGERATION"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_LASERS'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_RADIO"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_LASERS'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_RADIO"/>
 		</Update>
 		<Update>
-			<Set GridX='23'/>
-			<Where Type='TECH_INTERNET'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_RADIO"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_INTERNET'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_RADIO"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_INTERNET'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_REPLACEABLE_PARTS"/>
 		</Update>
 		<Update>
-			<Set GridX='23'/>
-			<Where Type='TECH_GLOBALIZATION'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_REPLACEABLE_PARTS"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_GLOBALIZATION'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_REPLACEABLE_PARTS"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_GLOBALIZATION'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_REPLACEABLE_PARTS"/>
 		</Update>
 		<Update>
-			<Set GridX='23'/>
-			<Where Type='TECH_PARTICLE_PHYSICS'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_FLIGHT"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_PARTICLE_PHYSICS'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_FLIGHT"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_PARTICLE_PHYSICS'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_FLIGHT"/>
 		</Update>
 		<Update>
-			<Set GridX='23'/>
-			<Where Type='TECH_NUCLEAR_FUSION'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_FLIGHT"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_NUCLEAR_FUSION'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_RAILROAD"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_NUCLEAR_FUSION'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_RAILROAD"/>
 		</Update>
 		<Update>
-			<Set GridX='23'/>
-			<Where Type='TECH_NANOTECHNOLOGY'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_RAILROAD"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_NANOTECHNOLOGY'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_RAILROAD"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_NANOTECHNOLOGY'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_PLASTIC"/>
 		</Update>
 		<Update>
-			<Set GridX='23'/>
-			<Where Type='TECH_STEALTH'/>
+			<Set GridX="0"/>
+			<Where Type="TECH_PLASTIC"/>
 		</Update>
 		<Update>
-			<Set GridY='30'/>
-			<Where Type='TECH_STEALTH'/>
+			<Set GridY="30"/>
+			<Where Type="TECH_PLASTIC"/>
 		</Update>
 		<Update>
-			<Set GoodyTech='false'/>
-			<Where Type='TECH_STEALTH'/>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_PLASTIC"/>
 		</Update>
 		<Update>
-			<Set GridX='24'/>
-			<Where Type='TECH_FUTURE_TECH'/>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_ELECTRONICS"/>
+		</Update>
+		<Update>
+			<Set GridX="0"/>
+			<Where Type="TECH_ELECTRONICS"/>
+		</Update>
+		<Update>
+			<Set GridY="30"/>
+			<Where Type="TECH_ELECTRONICS"/>
+		</Update>
+		<Update>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_ELECTRONICS"/>
+		</Update>
+		<Update>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_BALLISTICS"/>
+		</Update>
+		<Update>
+			<Set GridX="0"/>
+			<Where Type="TECH_BALLISTICS"/>
+		</Update>
+		<Update>
+			<Set GridY="30"/>
+			<Where Type="TECH_BALLISTICS"/>
+		</Update>
+		<Update>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_BALLISTICS"/>
+		</Update>
+		<Update>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_COMBUSTION"/>
+		</Update>
+		<Update>
+			<Set GridX="0"/>
+			<Where Type="TECH_COMBUSTION"/>
+		</Update>
+		<Update>
+			<Set GridY="30"/>
+			<Where Type="TECH_COMBUSTION"/>
+		</Update>
+		<Update>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_COMBUSTION"/>
+		</Update>
+		<Update>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_PENICILIN"/>
+		</Update>
+		<Update>
+			<Set GridX="0"/>
+			<Where Type="TECH_PENICILIN"/>
+		</Update>
+		<Update>
+			<Set GridY="30"/>
+			<Where Type="TECH_PENICILIN"/>
+		</Update>
+		<Update>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_PENICILIN"/>
+		</Update>
+		<Update>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_ATOMIC_THEORY"/>
+		</Update>
+		<Update>
+			<Set GridX="0"/>
+			<Where Type="TECH_ATOMIC_THEORY"/>
+		</Update>
+		<Update>
+			<Set GridY="30"/>
+			<Where Type="TECH_ATOMIC_THEORY"/>
+		</Update>
+		<Update>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_ATOMIC_THEORY"/>
+		</Update>
+		<Update>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_RADAR"/>
+		</Update>
+		<Update>
+			<Set GridX="0"/>
+			<Where Type="TECH_RADAR"/>
+		</Update>
+		<Update>
+			<Set GridY="30"/>
+			<Where Type="TECH_RADAR"/>
+		</Update>
+		<Update>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_RADAR"/>
+		</Update>
+		<Update>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_COMBINED_ARMS"/>
+		</Update>
+		<Update>
+			<Set GridX="0"/>
+			<Where Type="TECH_COMBINED_ARMS"/>
+		</Update>
+		<Update>
+			<Set GridY="30"/>
+			<Where Type="TECH_COMBINED_ARMS"/>
+		</Update>
+		<Update>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_COMBINED_ARMS"/>
+		</Update>
+		<Update>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_ECOLOGY"/>
+		</Update>
+		<Update>
+			<Set GridX="0"/>
+			<Where Type="TECH_ECOLOGY"/>
+		</Update>
+		<Update>
+			<Set GridY="30"/>
+			<Where Type="TECH_ECOLOGY"/>
+		</Update>
+		<Update>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_ECOLOGY"/>
+		</Update>
+		<Update>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_NUCLEAR_FISSION"/>
+		</Update>
+		<Update>
+			<Set GridX="0"/>
+			<Where Type="TECH_NUCLEAR_FISSION"/>
+		</Update>
+		<Update>
+			<Set GridY="30"/>
+			<Where Type="TECH_NUCLEAR_FISSION"/>
+		</Update>
+		<Update>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_NUCLEAR_FISSION"/>
+		</Update>
+		<Update>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_ROCKETRY"/>
+		</Update>
+		<Update>
+			<Set GridX="0"/>
+			<Where Type="TECH_ROCKETRY"/>
+		</Update>
+		<Update>
+			<Set GridY="30"/>
+			<Where Type="TECH_ROCKETRY"/>
+		</Update>
+		<Update>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_ROCKETRY"/>
+		</Update>
+		<Update>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_COMPUTERS"/>
+		</Update>
+		<Update>
+			<Set GridX="0"/>
+			<Where Type="TECH_COMPUTERS"/>
+		</Update>
+		<Update>
+			<Set GridY="30"/>
+			<Where Type="TECH_COMPUTERS"/>
+		</Update>
+		<Update>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_COMPUTERS"/>
+		</Update>
+		<Update>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_TELECOM"/>
+		</Update>
+		<Update>
+			<Set GridX="0"/>
+			<Where Type="TECH_TELECOM"/>
+		</Update>
+		<Update>
+			<Set GridY="30"/>
+			<Where Type="TECH_TELECOM"/>
+		</Update>
+		<Update>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_TELECOM"/>
+		</Update>
+		<Update>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_MOBILE_TACTICS"/>
+		</Update>
+		<Update>
+			<Set GridX="0"/>
+			<Where Type="TECH_MOBILE_TACTICS"/>
+		</Update>
+		<Update>
+			<Set GridY="30"/>
+			<Where Type="TECH_MOBILE_TACTICS"/>
+		</Update>
+		<Update>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_MOBILE_TACTICS"/>
+		</Update>
+		<Update>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_ADVANCED_BALLISTICS"/>
+		</Update>
+		<Update>
+			<Set GridX="0"/>
+			<Where Type="TECH_ADVANCED_BALLISTICS"/>
+		</Update>
+		<Update>
+			<Set GridY="30"/>
+			<Where Type="TECH_ADVANCED_BALLISTICS"/>
+		</Update>
+		<Update>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_ADVANCED_BALLISTICS"/>
+		</Update>
+		<Update>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_SATELLITES"/>
+		</Update>
+		<Update>
+			<Set GridX="0"/>
+			<Where Type="TECH_SATELLITES"/>
+		</Update>
+		<Update>
+			<Set GridY="30"/>
+			<Where Type="TECH_SATELLITES"/>
+		</Update>
+		<Update>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_SATELLITES"/>
+		</Update>
+		<Update>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_ROBOTICS"/>
+		</Update>
+		<Update>
+			<Set GridX="0"/>
+			<Where Type="TECH_ROBOTICS"/>
+		</Update>
+		<Update>
+			<Set GridY="30"/>
+			<Where Type="TECH_ROBOTICS"/>
+		</Update>
+		<Update>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_ROBOTICS"/>
+		</Update>
+		<Update>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_LASERS"/>
+		</Update>
+		<Update>
+			<Set GridX="0"/>
+			<Where Type="TECH_LASERS"/>
+		</Update>
+		<Update>
+			<Set GridY="30"/>
+			<Where Type="TECH_LASERS"/>
+		</Update>
+		<Update>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_LASERS"/>
+		</Update>
+		<Update>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_INTERNET"/>
+		</Update>
+		<Update>
+			<Set GridX="0"/>
+			<Where Type="TECH_INTERNET"/>
+		</Update>
+		<Update>
+			<Set GridY="30"/>
+			<Where Type="TECH_INTERNET"/>
+		</Update>
+		<Update>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_INTERNET"/>
+		</Update>
+		<Update>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_GLOBALIZATION"/>
+		</Update>
+		<Update>
+			<Set GridX="0"/>
+			<Where Type="TECH_GLOBALIZATION"/>
+		</Update>
+		<Update>
+			<Set GridY="30"/>
+			<Where Type="TECH_GLOBALIZATION"/>
+		</Update>
+		<Update>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_GLOBALIZATION"/>
+		</Update>
+		<Update>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_PARTICLE_PHYSICS"/>
+		</Update>
+		<Update>
+			<Set GridX="0"/>
+			<Where Type="TECH_PARTICLE_PHYSICS"/>
+		</Update>
+		<Update>
+			<Set GridY="30"/>
+			<Where Type="TECH_PARTICLE_PHYSICS"/>
+		</Update>
+		<Update>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_PARTICLE_PHYSICS"/>
+		</Update>
+		<Update>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_NUCLEAR_FUSION"/>
+		</Update>
+		<Update>
+			<Set GridX="0"/>
+			<Where Type="TECH_NUCLEAR_FUSION"/>
+		</Update>
+		<Update>
+			<Set GridY="30"/>
+			<Where Type="TECH_NUCLEAR_FUSION"/>
+		</Update>
+		<Update>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_NUCLEAR_FUSION"/>
+		</Update>
+		<Update>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_NANOTECHNOLOGY"/>
+		</Update>
+		<Update>
+			<Set GridX="0"/>
+			<Where Type="TECH_NANOTECHNOLOGY"/>
+		</Update>
+		<Update>
+			<Set GridY="30"/>
+			<Where Type="TECH_NANOTECHNOLOGY"/>
+		</Update>
+		<Update>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_NANOTECHNOLOGY"/>
+		</Update>
+		<Update>
+			<Set Era="ERA_ANCIENT"/>
+			<Where Type="TECH_STEALTH"/>
+		</Update>
+		<Update>
+			<Set GridX="0"/>
+			<Where Type="TECH_STEALTH"/>
+		</Update>
+		<Update>
+			<Set GridY="30"/>
+			<Where Type="TECH_STEALTH"/>
+		</Update>
+		<Update>
+			<Set GoodyTech="false"/>
+			<Where Type="TECH_STEALTH"/>
+		</Update>
+		<Update>
+			<Set GridX="24"/>
+			<Where Type="TECH_FUTURE_TECH"/>
 		</Update>
 		<Row>
 			<ID>81</ID>

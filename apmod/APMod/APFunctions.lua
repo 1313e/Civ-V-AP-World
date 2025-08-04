@@ -14,7 +14,17 @@ local teamTechs = team:GetTeamTechs();
 
 local pushTable = {}
 local pushTableTableKeys = {policy=true, policy_branch=true, tech=true}
-local policyIdToPolicyBranchIdTable = {
+local techIdsToEraIds = {
+	[0]=0, [1]=0, [2]=0, [3]=0, [4]=0, [5]=0, [6]=0, [7]=0, [8]=0, [9]=0, [10]=0, [11]=0,
+	[12]=1, [13]=1, [14]=1, [15]=1, [16]=1, [17]=1, [18]=1, [19]=1, [20]=1,
+	[21]=2, [22]=2, [23]=2, [24]=2, [25]=2, [26]=2, [27]=2, [28]=2, [29]=2, [30]=2,
+	[31]=3, [32]=3, [33]=3, [34]=3, [35]=3, [36]=3, [37]=3, [38]=3, [39]=3, [40]=3,
+	[41]=4, [42]=4, [43]=4, [44]=4, [45]=4, [46]=4, [47]=4, [48]=4, [49]=4, [50]=4,
+	[51]=5, [52]=5, [53]=5, [54]=5, [55]=5, [56]=5, [57]=5, [58]=5, [59]=5,
+	[60]=6, [61]=6, [62]=6, [63]=6, [64]=6, [65]=6, [66]=6, [67]=6,
+	[68]=7, [69]=7, [70]=7, [71]=7, [72]=7, [73]=7, [74]=7, [75]=7, [76]=7, [77]=7, [78]=7, [79]=7, [80]=7,
+}
+local policyIdToPolicyBranchId = {
 	[1]=1,
 	[2]=1,
 	[3]=1,
@@ -30,8 +40,8 @@ function OnPolicyAdopted(playerId, policyId)
         table.insert(pushTable["policy"], policyId)
 
 		-- If the player finished the branch with this policy, add branch finisher to the push table
-		if(player:GetNumPoliciesInBranch(policyIdToPolicyBranchIdTable[policyId]) == 5) then
-			table.insert(pushTable["policy_branch"], policyIdToPolicyBranchIdTable[policyId]+POLICY_BRANCH_FINISHER_OFFSET)
+		if(player:GetNumPoliciesInBranch(policyIdToPolicyBranchId[policyId]) == 5) then
+			table.insert(pushTable["policy_branch"], policyIdToPolicyBranchId[policyId]+POLICY_BRANCH_FINISHER_OFFSET)
 		end
     end
 end
@@ -47,6 +57,14 @@ function OnTechAcquired(playerId, techId)
 	-- If the player gets an AP tech, add it to the push table
 	if(playerId == player:GetID() and techId >= LOWER_TECH_ID and techId <= UPPER_TECH_ID) then
 		table.insert(pushTable["tech"], techId)
+	end
+
+	-- If the AI gets a non-AP tech that should have given access to the next era, grant that
+	if(playerId ~= player:GetID() and techId < LOWER_TECH_ID-2) then
+		aiTeam = Teams[Players[playerId]:GetTeam()]
+		if(aiTeam:GetCurrentEra() < techIdsToEraIds[techId]) then
+			aiTeam:SetCurrentEra(techIdsToEraIds[techId])
+		end
 	end
 end
 
