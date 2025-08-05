@@ -13,7 +13,7 @@ local team = Teams[player:GetTeam()];
 local teamTechs = team:GetTeamTechs();
 
 local pushTable = {}
-local pushTableTableKeys = {policy=true, policy_branch=true, tech=true}
+local pushTableTableKeys = {policy=true, policy_branch=true, tech=true, world_wonder=true}
 local techIdsToEraIds = {
 	[0]=0, [1]=0, [2]=0, [3]=0, [4]=0, [5]=0, [6]=0, [7]=0, [8]=0, [9]=0, [10]=0, [11]=0,
 	[12]=1, [13]=1, [14]=1, [15]=1, [16]=1, [17]=1, [18]=1, [19]=1, [20]=1,
@@ -51,6 +51,16 @@ local policyBranchIdToPolicyBranchStarterId ={
 }
 local policyBranchIdToPolicyBranchFinisherId = {
 	[0]=42, [1]=43, [2]=44, [3]=45, [4]=46, [5]=55, [6]=47, [7]=62, [8]=48,
+}
+local worldWonderBuildingIds = {
+	[63]=true, [64]=true, [65]=true, [66]=true, [67]=true, [68]=true, [69]=true, [70]=true,
+	[71]=true, [72]=true, [73]=true, [74]=true, [75]=true, [76]=true, [77]=true, [78]=true, [79]=true, [80]=true,
+	[81]=true, [82]=true, [83]=true, [84]=true, [85]=true, [86]=true, [87]=true, [88]=true, [90]=true,
+	[93]=true, [94]=true, [95]=true,
+	[128]=true, [129]=true, [130]=true,
+	[131]=true, [132]=true, [133]=true, [134]=true, [135]=true, [136]=true,
+	[154]=true, [155]=true, [156]=true, [157]=true, [158]=true, [159]=true, [160]=true,
+	[161]=true,
 }
 
 
@@ -106,6 +116,13 @@ function OnTechAcquired(playerId, techId)
 		if(aiTeam:GetCurrentEra() < techIdsToEraIds[techId]) then
 			aiTeam:SetCurrentEra(techIdsToEraIds[techId])
 		end
+	end
+end
+
+function OnCityBuildingConstructed(playerId, cityId, buildingId, gold, faithOrCulture)
+	-- If the player constructs a building, add it to the push table if it is a wonder
+	if(playerId == player:GetID() and worldWonderBuildingIds[buildingId]) then
+		table.insert(pushTable["world_wonder"], buildingId)
 	end
 end
 
@@ -229,6 +246,7 @@ function Init()
 	Events.EndGameShow.Add(OnEndGameShow)
 	GameEvents.PlayerAdoptPolicy.Add(OnPolicyAdopted)
 	GameEvents.PlayerAdoptPolicyBranch.Add(OnPolicyBranchAdopted)
+	GameEvents.CityConstructed.Add(OnCityBuildingConstructed)
 
 	-- Give player and AI their corresponding modified techs at the start
 	for i = 0, GameDefines.MAX_CIV_PLAYERS-1, 1 do

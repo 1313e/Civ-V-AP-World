@@ -45,3 +45,4 @@ class CivVLocationType(StrEnum):
     policy = "policy"
     policy_branch = "policy_branch"
     tech = "tech"
+    world_wonder = "world_wonder"

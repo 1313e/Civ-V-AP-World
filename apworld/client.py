@@ -321,6 +321,10 @@ class CivVClient:
                 case CivVLocationType.tech:
                     techs_to_send.append(location.game_id)
 
+                # All other types are not syncable
+                case _:
+                    pass
+
         # Mark everything at once, as it is far more efficient
         # Also make sure to store that those locations have been sent to the multiworld now
         if policies_to_send:
