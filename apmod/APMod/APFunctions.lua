@@ -4,7 +4,7 @@ local LOWER_POLICY_BRANCH_ID = 0
 local UPPER_POLICY_BRANCH_ID = 8
 local POLICY_BRANCH_FINISHER_OFFSET = 12
 local LOWER_POLICY_ID = 111
-local UPPER_POLICY_ID = 156
+local UPPER_POLICY_ID = 155
 local LOWER_TECH_ID = 83
 local UPPER_TECH_ID = 168
 
@@ -25,32 +25,73 @@ local techIdsToEraIds = {
 	[68]=7, [69]=7, [70]=7, [71]=7, [72]=7, [73]=7, [74]=7, [75]=7, [76]=7, [77]=7, [78]=7, [79]=7, [80]=7,
 }
 local policyIdToPolicyBranchId = {
-	[1]=1,
-	[2]=1,
-	[3]=1,
-	[4]=1,
-	[5]=1,
+	[7]=0, [8]=0, [9]=0, [10]=0, [11]=0, [111]=0, [112]=0, [113]=0, [114]=0, [115]=0,
+	[1]=1, [2]=1, [3]=1, [4]=1, [5]=1, [116]=1, [117]=1, [118]=1, [119]=1, [120]=1,
+	[13]=2, [14]=2, [15]=2, [16]=2, [17]=2, [121]=2, [122]=2, [123]=2, [124]=2, [125]=2,
+	[19]=3, [20]=3, [21]=3, [22]=3, [23]=3, [126]=3, [127]=3, [128]=3, [129]=3, [130]=3,
+	[25]=4, [26]=4, [27]=4, [28]=4, [29]=4, [131]=4, [132]=4, [133]=4, [134]=4, [135]=4,
+	[50]=5, [51]=5, [52]=5, [53]=5, [54]=5, [136]=5, [137]=5, [138]=5, [139]=5, [140]=5,
+	[31]=6, [32]=6, [33]=6, [34]=6, [35]=6, [141]=6, [142]=6, [153]=6, [144]=6, [145]=6,
+	[57]=7, [58]=7, [59]=7, [60]=7, [61]=7, [146]=7, [147]=7, [148]=7, [149]=7, [150]=7,
+	[37]=8, [38]=8, [39]=8, [40]=8, [41]=8, [151]=8, [152]=8, [153]=8, [154]=8, [155]=8,
+}
+local policyBranchIdToAPPolicyIds = {
+	[0]={111, 112, 113, 114, 115},
+	[1]={116, 117, 118, 119, 120},
+	[2]={121, 122, 123, 124, 125},
+	[3]={126, 127, 128, 129, 130},
+	[4]={131, 132, 133, 134, 135},
+	[5]={136, 137, 138, 139, 140},
+	[6]={141, 142, 143, 144, 145},
+	[7]={146, 147, 148, 149, 150},
+	[8]={151, 152, 153, 154, 155},
+}
+local policyBranchIdToPolicyBranchStarterId ={
+	[0]=6, [1]=0, [2]=12, [3]=18, [4]=24, [5]=49, [6]=30, [7]=56, [8]=36,
+}
+local policyBranchIdToPolicyBranchFinisherId = {
+	[0]=42, [1]=43, [2]=44, [3]=45, [4]=46, [5]=55, [6]=47, [7]=62, [8]=48,
 }
 
 
 -- EVENTS
 function OnPolicyAdopted(playerId, policyId)
     -- If the player gets a policy, add it to the push table
-    if(playerId == player:GetID() and policyBranchId >= LOWER_POLICY_ID and policyBranchId <= UPPER_POLICY_ID) then
+    if(playerId == player:GetID() and policyId >= LOWER_POLICY_ID and policyId <= UPPER_POLICY_ID) then
         table.insert(pushTable["policy"], policyId)
 
 		-- If the player finished the branch with this policy, add branch finisher to the push table
-		if(player:GetNumPoliciesInBranch(policyIdToPolicyBranchId[policyId]) == 5) then
-			table.insert(pushTable["policy_branch"], policyIdToPolicyBranchId[policyId]+POLICY_BRANCH_FINISHER_OFFSET)
+		policyBranchId = policyIdToPolicyBranchId[policyId]
+		for _, apPolicyId in ipairs(policyBranchIdToAPPolicyIds[policyBranchId]) do
+			if not player:HasPolicy(apPolicyId) then
+				return
+			end
 		end
+		table.insert(pushTable["policy_branch"], policyBranchId+POLICY_BRANCH_FINISHER_OFFSET)
     end
+
+	-- If the AI finished the branch with this policy, grant them the branch finisher
+	if(playerId ~= player:GetID()) then
+		aiPlayer = Players[playerId]
+		policyBranchId = policyIdToPolicyBranchId[policyId]
+		if(aiPlayer:GetNumPoliciesInBranch(policyBranchId) == 5) then
+			aiPlayer:SetHasPolicy(policyBranchIdToPolicyBranchFinisherId[policyBranchId], true)
+		end
+	end
 end
 
 function OnPolicyBranchAdopted(playerId, policyBranchId)
-    -- If the player adopts a policy branch, add it to the push table
-    if(playerId == player:GetID() and policyBranchId >= LOWER_POLICY_BRANCH_ID and policyBranchId <= UPPER_POLICY_BRANCH_ID) then
-        table.insert(pushTable["policy_branch"], policyBranchId)
-    end
+	-- If one of the default 9 branches was adopted
+	if(policyBranchId >= LOWER_POLICY_BRANCH_ID and policyBranchId <= UPPER_POLICY_BRANCH_ID) then
+		-- If the player adopts a policy branch, add it to the push table
+		if(playerId == player:GetID()) then
+			table.insert(pushTable["policy_branch"], policyBranchId)
+
+		-- Else, grant the AI the branch starter
+		else
+			Players[playerId]:SetHasPolicy(policyBranchIdToPolicyBranchStarterId[policyBranchId], true)
+		end
+	end
 end
 
 function OnTechAcquired(playerId, techId)
@@ -91,9 +132,9 @@ function GrantPolicies(policyIds)
 	-- Grant all given policy IDs to the player
 	for _, policyId in ipairs(policyIds) do
 		-- If this policy is a non-AP policy, we want to give it to the player for free
-		-- This avoids the policy culture cost going up when receiving checks
+		-- This avoids the policy culture cost going up when receiving policy items
 		-- For whatever reason, the following marks the next policy granted as free
-		if(policyId <= LOWER_POLICY_ID) then
+		if(policyId < LOWER_POLICY_ID) then
 			player:ChangeNumFreePolicies(1);
 			player:ChangeNumFreePolicies(-1);
 		end
@@ -148,7 +189,7 @@ function GetPushTable()
 
 	-- Print the response as a single JSON object and reset the push table
 	printResponse(table.concat({"{", table.concat(jsonStrings, ","), "}"}))
-	--InitPushTable()
+	InitPushTable()
 end
 
 function RequestSync()

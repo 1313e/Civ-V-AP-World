@@ -1,5 +1,986 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GameData>
     <Policies>
+        <Update>
+            <Set GridY="30"/>
+            <Where Type="POLICY_COLLECTIVE_RULE"/>
+        </Update>
+        <Update>
+            <Set GridY="30"/>
+            <Where Type="POLICY_CITIZENSHIP"/>
+        </Update>
+        <Update>
+            <Set GridY="30"/>
+            <Where Type="POLICY_REPUBLIC"/>
+        </Update>
+        <Update>
+            <Set GridY="30"/>
+            <Where Type="POLICY_REPRESENTATION"/>
+        </Update>
+        <Update>
+            <Set GridY="30"/>
+            <Where Type="POLICY_MERITOCRACY"/>
+        </Update>
+        <Update>
+            <Set GridY="30"/>
+            <Where Type="POLICY_ARISTOCRACY"/>
+        </Update>
+        <Update>
+            <Set GridY="30"/>
+            <Where Type="POLICY_OLIGARCHY"/>
+        </Update>
+        <Update>
+            <Set GridY="30"/>
+            <Where Type="POLICY_LEGALISM"/>
+        </Update>
+        <Update>
+            <Set GridY="30"/>
+            <Where Type="POLICY_LANDED_ELITE"/>
+        </Update>
+        <Update>
+            <Set GridY="30"/>
+            <Where Type="POLICY_MONARCHY"/>
+        </Update>
+        <Update>
+            <Set GridY="30"/>
+            <Where Type="POLICY_WARRIOR_CODE"/>
+        </Update>
+        <Update>
+            <Set GridY="30"/>
+            <Where Type="POLICY_DISCIPLINE"/>
+        </Update>
+        <Update>
+            <Set GridY="30"/>
+            <Where Type="POLICY_MILITARY_TRADITION"/>
+        </Update>
+        <Update>
+            <Set GridY="30"/>
+            <Where Type="POLICY_MILITARY_CASTE"/>
+        </Update>
+        <Update>
+            <Set GridY="30"/>
+            <Where Type="POLICY_PROFESSIONAL_ARMY"/>
+        </Update>
+        <Update>
+            <Set GridY="30"/>
+            <Where Type="POLICY_ORGANIZED_RELIGION"/>
+        </Update>
+        <Update>
+            <Set GridY="30"/>
+            <Where Type="POLICY_MANDATE_OF_HEAVEN"/>
+        </Update>
+        <Update>
+            <Set GridY="30"/>
+            <Where Type="POLICY_THEOCRACY"/>
+        </Update>
+        <Update>
+            <Set GridY="30"/>
+            <Where Type="POLICY_REFORMATION"/>
+        </Update>
+        <Update>
+            <Set GridY="30"/>
+            <Where Type="POLICY_FREE_RELIGION"/>
+        </Update>
+        <Update>
+            <Set GridY="30"/>
+            <Where Type="POLICY_PHILANTHROPY"/>
+        </Update>
+        <Update>
+            <Set GridY="30"/>
+            <Where Type="POLICY_CONSULATES"/>
+        </Update>
+        <Update>
+            <Set GridY="30"/>
+            <Where Type="POLICY_SCHOLASTICISM"/>
+        </Update>
+        <Update>
+            <Set GridY="30"/>
+            <Where Type="POLICY_CULTURAL_DIPLOMACY"/>
+        </Update>
+        <Update>
+            <Set GridY="30"/>
+            <Where Type="POLICY_MERCHANT_CONFEDERACY"/>
+        </Update>
+        <Update>
+            <Set GridY="30"/>
+            <Where Type="POLICY_TRADE_UNIONS"/>
+        </Update>
+        <Update>
+            <Set GridY="30"/>
+            <Where Type="POLICY_ENTREPRENEURSHIP"/>
+        </Update>
+        <Update>
+            <Set GridY="30"/>
+            <Where Type="POLICY_MERCANTILISM"/>
+        </Update>
+        <Update>
+            <Set GridY="30"/>
+            <Where Type="POLICY_CARAVANS"/>
+        </Update>
+        <Update>
+            <Set GridY="30"/>
+            <Where Type="POLICY_PROTECTIONISM"/>
+        </Update>
+        <Update>
+            <Set GridY="30"/>
+            <Where Type="POLICY_SECULARISM"/>
+        </Update>
+        <Update>
+            <Set GridY="30"/>
+            <Where Type="POLICY_HUMANISM"/>
+        </Update>
+        <Update>
+            <Set GridY="30"/>
+            <Where Type="POLICY_FREE_THOUGHT"/>
+        </Update>
+        <Update>
+            <Set GridY="30"/>
+            <Where Type="POLICY_SOVEREIGNTY"/>
+        </Update>
+        <Update>
+            <Set GridY="30"/>
+            <Where Type="POLICY_SCIENTIFIC_REVOLUTION"/>
+        </Update>
+        <Update>
+            <Set GridY="30"/>
+            <Where Type="POLICY_CULTURAL_CENTERS"/>
+        </Update>
+        <Update>
+            <Set GridY="30"/>
+            <Where Type="POLICY_FINE_ARTS"/>
+        </Update>
+        <Update>
+            <Set GridY="30"/>
+            <Where Type="POLICY_FLOURISHING_OF_ARTS"/>
+        </Update>
+        <Update>
+            <Set GridY="30"/>
+            <Where Type="POLICY_ARTISTIC_GENIUS"/>
+        </Update>
+        <Update>
+            <Set GridY="30"/>
+            <Where Type="POLICY_ETHICS"/>
+        </Update>
+        <Update>
+            <Set GridY="30"/>
+            <Where Type="POLICY_MARITIME_INFRASTRUCTURE"/>
+        </Update>
+        <Update>
+            <Set GridY="30"/>
+            <Where Type="POLICY_NAVAL_TRADITION"/>
+        </Update>
+        <Update>
+            <Set GridY="30"/>
+            <Where Type="POLICY_MERCHANT_NAVY"/>
+        </Update>
+        <Update>
+            <Set GridY="30"/>
+            <Where Type="POLICY_NAVIGATION_SCHOOL"/>
+        </Update>
+        <Update>
+            <Set GridY="30"/>
+            <Where Type="POLICY_TREASURE_FLEETS"/>
+        </Update>
+        <Row>
+            <ID>111</ID>
+            <Type>POLICY_TRADITION_AP1</Type>
+            <Description>AP 1</Description>
+            <Civilopedia>AP 1</Civilopedia>
+            <Help>AP 1</Help>
+            <PolicyBranchType>POLICY_BRANCH_TRADITION</PolicyBranchType>
+            <CultureCost>10</CultureCost>
+            <GridX>1</GridX>
+            <GridY>1</GridY>
+            <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+        </Row>
+        <Row>
+            <ID>112</ID>
+            <Type>POLICY_TRADITION_AP2</Type>
+            <Description>AP 2</Description>
+            <Civilopedia>AP 2</Civilopedia>
+            <Help>AP 2</Help>
+            <PolicyBranchType>POLICY_BRANCH_TRADITION</PolicyBranchType>
+            <CultureCost>10</CultureCost>
+            <GridX>3</GridX>
+            <GridY>1</GridY>
+            <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+        </Row>
+        <Row>
+            <ID>113</ID>
+            <Type>POLICY_TRADITION_AP3</Type>
+            <Description>AP 3</Description>
+            <Civilopedia>AP 3</Civilopedia>
+            <Help>AP 3</Help>
+            <PolicyBranchType>POLICY_BRANCH_TRADITION</PolicyBranchType>
+            <CultureCost>10</CultureCost>
+            <GridX>3</GridX>
+            <GridY>2</GridY>
+            <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+        </Row>
+        <Row>
+            <ID>114</ID>
+            <Type>POLICY_TRADITION_AP4</Type>
+            <Description>AP 4</Description>
+            <Civilopedia>AP 4</Civilopedia>
+            <Help>AP 4</Help>
+            <PolicyBranchType>POLICY_BRANCH_TRADITION</PolicyBranchType>
+            <CultureCost>10</CultureCost>
+            <GridX>2</GridX>
+            <GridY>3</GridY>
+            <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+        </Row>
+        <Row>
+            <ID>115</ID>
+            <Type>POLICY_TRADITION_AP5</Type>
+            <Description>AP 5</Description>
+            <Civilopedia>AP 5</Civilopedia>
+            <Help>AP 5</Help>
+            <PolicyBranchType>POLICY_BRANCH_TRADITION</PolicyBranchType>
+            <CultureCost>10</CultureCost>
+            <GridX>4</GridX>
+            <GridY>3</GridY>
+            <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+        </Row>
+        <Row>
+            <ID>116</ID>
+            <Type>POLICY_LIBERTY_AP1</Type>
+            <Description>AP 1</Description>
+            <Civilopedia>AP 1</Civilopedia>
+            <Help>AP 1</Help>
+            <PolicyBranchType>POLICY_BRANCH_LIBERTY</PolicyBranchType>
+            <CultureCost>10</CultureCost>
+            <GridX>1</GridX>
+            <GridY>1</GridY>
+            <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+        </Row>
+        <Row>
+            <ID>117</ID>
+            <Type>POLICY_LIBERTY_AP2</Type>
+            <Description>AP 2</Description>
+            <Civilopedia>AP 2</Civilopedia>
+            <Help>AP 2</Help>
+            <PolicyBranchType>POLICY_BRANCH_LIBERTY</PolicyBranchType>
+            <CultureCost>10</CultureCost>
+            <GridX>4</GridX>
+            <GridY>1</GridY>
+            <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+        </Row>
+        <Row>
+            <ID>118</ID>
+            <Type>POLICY_LIBERTY_AP3</Type>
+            <Description>AP 3</Description>
+            <Civilopedia>AP 3</Civilopedia>
+            <Help>AP 3</Help>
+            <PolicyBranchType>POLICY_BRANCH_LIBERTY</PolicyBranchType>
+            <CultureCost>10</CultureCost>
+            <GridX>1</GridX>
+            <GridY>2</GridY>
+            <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+        </Row>
+        <Row>
+            <ID>119</ID>
+            <Type>POLICY_LIBERTY_AP4</Type>
+            <Description>AP 4</Description>
+            <Civilopedia>AP 4</Civilopedia>
+            <Help>AP 4</Help>
+            <PolicyBranchType>POLICY_BRANCH_LIBERTY</PolicyBranchType>
+            <CultureCost>10</CultureCost>
+            <GridX>3</GridX>
+            <GridY>2</GridY>
+            <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+        </Row>
+        <Row>
+            <ID>120</ID>
+            <Type>POLICY_LIBERTY_AP5</Type>
+            <Description>AP 5</Description>
+            <Civilopedia>AP 5</Civilopedia>
+            <Help>AP 5</Help>
+            <PolicyBranchType>POLICY_BRANCH_LIBERTY</PolicyBranchType>
+            <CultureCost>10</CultureCost>
+            <GridX>5</GridX>
+            <GridY>2</GridY>
+            <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+        </Row>
+        <Row>
+            <ID>121</ID>
+            <Type>POLICY_HONOR_AP1</Type>
+            <Description>AP 1</Description>
+            <Civilopedia>AP 1</Civilopedia>
+            <Help>AP 1</Help>
+            <PolicyBranchType>POLICY_BRANCH_HONOR</PolicyBranchType>
+            <CultureCost>10</CultureCost>
+            <GridX>2</GridX>
+            <GridY>1</GridY>
+            <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+        </Row>
+        <Row>
+            <ID>122</ID>
+            <Type>POLICY_HONOR_AP2</Type>
+            <Description>AP 2</Description>
+            <Civilopedia>AP 2</Civilopedia>
+            <Help>AP 2</Help>
+            <PolicyBranchType>POLICY_BRANCH_HONOR</PolicyBranchType>
+            <CultureCost>10</CultureCost>
+            <GridX>4</GridX>
+            <GridY>1</GridY>
+            <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+        </Row>
+        <Row>
+            <ID>123</ID>
+            <Type>POLICY_HONOR_AP3</Type>
+            <Description>AP 3</Description>
+            <Civilopedia>AP 3</Civilopedia>
+            <Help>AP 3</Help>
+            <PolicyBranchType>POLICY_BRANCH_HONOR</PolicyBranchType>
+            <CultureCost>10</CultureCost>
+            <GridX>2</GridX>
+            <GridY>2</GridY>
+            <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+        </Row>
+        <Row>
+            <ID>124</ID>
+            <Type>POLICY_HONOR_AP4</Type>
+            <Description>AP 4</Description>
+            <Civilopedia>AP 4</Civilopedia>
+            <Help>AP 4</Help>
+            <PolicyBranchType>POLICY_BRANCH_HONOR</PolicyBranchType>
+            <CultureCost>10</CultureCost>
+            <GridX>4</GridX>
+            <GridY>2</GridY>
+            <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+        </Row>
+        <Row>
+            <ID>125</ID>
+            <Type>POLICY_HONOR_AP5</Type>
+            <Description>AP 5</Description>
+            <Civilopedia>AP 5</Civilopedia>
+            <Help>AP 5</Help>
+            <PolicyBranchType>POLICY_BRANCH_HONOR</PolicyBranchType>
+            <CultureCost>10</CultureCost>
+            <GridX>4</GridX>
+            <GridY>3</GridY>
+            <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+        </Row>
+        <Row>
+            <ID>126</ID>
+            <Type>POLICY_PIETY_AP1</Type>
+            <Description>AP 1</Description>
+            <Civilopedia>AP 1</Civilopedia>
+            <Help>AP 1</Help>
+            <PolicyBranchType>POLICY_BRANCH_PIETY</PolicyBranchType>
+            <CultureCost>10</CultureCost>
+            <GridX>2</GridX>
+            <GridY>1</GridY>
+            <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+        </Row>
+        <Row>
+            <ID>127</ID>
+            <Type>POLICY_PIETY_AP2</Type>
+            <Description>AP 2</Description>
+            <Civilopedia>AP 2</Civilopedia>
+            <Help>AP 2</Help>
+            <PolicyBranchType>POLICY_BRANCH_PIETY</PolicyBranchType>
+            <CultureCost>10</CultureCost>
+            <GridX>5</GridX>
+            <GridY>1</GridY>
+            <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+        </Row>
+        <Row>
+            <ID>128</ID>
+            <Type>POLICY_PIETY_AP3</Type>
+            <Description>AP 3</Description>
+            <Civilopedia>AP 3</Civilopedia>
+            <Help>AP 3</Help>
+            <PolicyBranchType>POLICY_BRANCH_PIETY</PolicyBranchType>
+            <CultureCost>10</CultureCost>
+            <GridX>1</GridX>
+            <GridY>2</GridY>
+            <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+        </Row>
+        <Row>
+            <ID>129</ID>
+            <Type>POLICY_PIETY_AP4</Type>
+            <Description>AP 4</Description>
+            <Civilopedia>AP 4</Civilopedia>
+            <Help>AP 4</Help>
+            <PolicyBranchType>POLICY_BRANCH_PIETY</PolicyBranchType>
+            <CultureCost>10</CultureCost>
+            <GridX>3</GridX>
+            <GridY>2</GridY>
+            <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+        </Row>
+        <Row>
+            <ID>130</ID>
+            <Type>POLICY_PIETY_AP5</Type>
+            <Description>AP 5</Description>
+            <Civilopedia>AP 5</Civilopedia>
+            <Help>AP 5</Help>
+            <PolicyBranchType>POLICY_BRANCH_PIETY</PolicyBranchType>
+            <CultureCost>10</CultureCost>
+            <GridX>3</GridX>
+            <GridY>3</GridY>
+            <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+        </Row>
+        <Row>
+            <ID>131</ID>
+            <Type>POLICY_PATRONAGE_AP1</Type>
+            <Description>AP 1</Description>
+            <Civilopedia>AP 1</Civilopedia>
+            <Help>AP 1</Help>
+            <PolicyBranchType>POLICY_BRANCH_PATRONAGE</PolicyBranchType>
+            <CultureCost>10</CultureCost>
+            <GridX>2</GridX>
+            <GridY>1</GridY>
+            <TechPrereq>TECH_CLASSICAL_ERA</TechPrereq>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+        </Row>
+        <Row>
+            <ID>132</ID>
+            <Type>POLICY_PATRONAGE_AP2</Type>
+            <Description>AP 2</Description>
+            <Civilopedia>AP 2</Civilopedia>
+            <Help>AP 2</Help>
+            <PolicyBranchType>POLICY_BRANCH_PATRONAGE</PolicyBranchType>
+            <CultureCost>10</CultureCost>
+            <GridX>4</GridX>
+            <GridY>1</GridY>
+            <TechPrereq>TECH_CLASSICAL_ERA</TechPrereq>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+        </Row>
+        <Row>
+            <ID>133</ID>
+            <Type>POLICY_PATRONAGE_AP3</Type>
+            <Description>AP 3</Description>
+            <Civilopedia>AP 3</Civilopedia>
+            <Help>AP 3</Help>
+            <PolicyBranchType>POLICY_BRANCH_PATRONAGE</PolicyBranchType>
+            <CultureCost>10</CultureCost>
+            <GridX>2</GridX>
+            <GridY>2</GridY>
+            <TechPrereq>TECH_CLASSICAL_ERA</TechPrereq>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+        </Row>
+        <Row>
+            <ID>134</ID>
+            <Type>POLICY_PATRONAGE_AP4</Type>
+            <Description>AP 4</Description>
+            <Civilopedia>AP 4</Civilopedia>
+            <Help>AP 4</Help>
+            <PolicyBranchType>POLICY_BRANCH_PATRONAGE</PolicyBranchType>
+            <CultureCost>10</CultureCost>
+            <GridX>2</GridX>
+            <GridY>3</GridY>
+            <TechPrereq>TECH_CLASSICAL_ERA</TechPrereq>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+        </Row>
+        <Row>
+            <ID>135</ID>
+            <Type>POLICY_PATRONAGE_AP5</Type>
+            <Description>AP 5</Description>
+            <Civilopedia>AP 5</Civilopedia>
+            <Help>AP 5</Help>
+            <PolicyBranchType>POLICY_BRANCH_PATRONAGE</PolicyBranchType>
+            <CultureCost>10</CultureCost>
+            <GridX>4</GridX>
+            <GridY>3</GridY>
+            <TechPrereq>TECH_CLASSICAL_ERA</TechPrereq>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+        </Row>
+        <Row>
+            <ID>136</ID>
+            <Type>POLICY_AESTHETICS_AP1</Type>
+            <Description>AP 1</Description>
+            <Civilopedia>AP 1</Civilopedia>
+            <Help>AP 1</Help>
+            <PolicyBranchType>POLICY_BRANCH_AESTHETICS</PolicyBranchType>
+            <CultureCost>10</CultureCost>
+            <GridX>2</GridX>
+            <GridY>1</GridY>
+            <TechPrereq>TECH_CLASSICAL_ERA</TechPrereq>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+        </Row>
+        <Row>
+            <ID>137</ID>
+            <Type>POLICY_AESTHETICS_AP2</Type>
+            <Description>AP 2</Description>
+            <Civilopedia>AP 2</Civilopedia>
+            <Help>AP 2</Help>
+            <PolicyBranchType>POLICY_BRANCH_AESTHETICS</PolicyBranchType>
+            <CultureCost>10</CultureCost>
+            <GridX>4</GridX>
+            <GridY>1</GridY>
+            <TechPrereq>TECH_CLASSICAL_ERA</TechPrereq>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+        </Row>
+        <Row>
+            <ID>138</ID>
+            <Type>POLICY_AESTHETICS_AP3</Type>
+            <Description>AP 3</Description>
+            <Civilopedia>AP 3</Civilopedia>
+            <Help>AP 3</Help>
+            <PolicyBranchType>POLICY_BRANCH_AESTHETICS</PolicyBranchType>
+            <CultureCost>10</CultureCost>
+            <GridX>2</GridX>
+            <GridY>2</GridY>
+            <TechPrereq>TECH_CLASSICAL_ERA</TechPrereq>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+        </Row>
+        <Row>
+            <ID>139</ID>
+            <Type>POLICY_AESTHETICS_AP4</Type>
+            <Description>AP 4</Description>
+            <Civilopedia>AP 4</Civilopedia>
+            <Help>AP 4</Help>
+            <PolicyBranchType>POLICY_BRANCH_AESTHETICS</PolicyBranchType>
+            <CultureCost>10</CultureCost>
+            <GridX>4</GridX>
+            <GridY>2</GridY>
+            <TechPrereq>TECH_CLASSICAL_ERA</TechPrereq>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+        </Row>
+        <Row>
+            <ID>140</ID>
+            <Type>POLICY_AESTHETICS_AP5</Type>
+            <Description>AP 5</Description>
+            <Civilopedia>AP 5</Civilopedia>
+            <Help>AP 5</Help>
+            <PolicyBranchType>POLICY_BRANCH_AESTHETICS</PolicyBranchType>
+            <CultureCost>10</CultureCost>
+            <GridX>2</GridX>
+            <GridY>3</GridY>
+            <TechPrereq>TECH_CLASSICAL_ERA</TechPrereq>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+        </Row>
+        <Row>
+            <ID>141</ID>
+            <Type>POLICY_COMMERCE_AP1</Type>
+            <Description>AP 1</Description>
+            <Civilopedia>AP 1</Civilopedia>
+            <Help>AP 1</Help>
+            <PolicyBranchType>POLICY_BRANCH_COMMERCE</PolicyBranchType>
+            <CultureCost>10</CultureCost>
+            <GridX>2</GridX>
+            <GridY>1</GridY>
+            <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+        </Row>
+        <Row>
+            <ID>142</ID>
+            <Type>POLICY_COMMERCE_AP2</Type>
+            <Description>AP 2</Description>
+            <Civilopedia>AP 2</Civilopedia>
+            <Help>AP 2</Help>
+            <PolicyBranchType>POLICY_BRANCH_COMMERCE</PolicyBranchType>
+            <CultureCost>10</CultureCost>
+            <GridX>4</GridX>
+            <GridY>1</GridY>
+            <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+        </Row>
+        <Row>
+            <ID>143</ID>
+            <Type>POLICY_COMMERCE_AP3</Type>
+            <Description>AP 3</Description>
+            <Civilopedia>AP 3</Civilopedia>
+            <Help>AP 3</Help>
+            <PolicyBranchType>POLICY_BRANCH_COMMERCE</PolicyBranchType>
+            <CultureCost>10</CultureCost>
+            <GridX>2</GridX>
+            <GridY>2</GridY>
+            <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+        </Row>
+        <Row>
+            <ID>144</ID>
+            <Type>POLICY_COMMERCE_AP4</Type>
+            <Description>AP 4</Description>
+            <Civilopedia>AP 4</Civilopedia>
+            <Help>AP 4</Help>
+            <PolicyBranchType>POLICY_BRANCH_COMMERCE</PolicyBranchType>
+            <CultureCost>10</CultureCost>
+            <GridX>4</GridX>
+            <GridY>2</GridY>
+            <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+        </Row>
+        <Row>
+            <ID>145</ID>
+            <Type>POLICY_COMMERCE_AP5</Type>
+            <Description>AP 5</Description>
+            <Civilopedia>AP 5</Civilopedia>
+            <Help>AP 5</Help>
+            <PolicyBranchType>POLICY_BRANCH_COMMERCE</PolicyBranchType>
+            <CultureCost>10</CultureCost>
+            <GridX>4</GridX>
+            <GridY>3</GridY>
+            <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+        </Row>
+        <Row>
+            <ID>146</ID>
+            <Type>POLICY_EXPLORATION_AP1</Type>
+            <Description>AP 1</Description>
+            <Civilopedia>AP 1</Civilopedia>
+            <Help>AP 1</Help>
+            <PolicyBranchType>POLICY_BRANCH_EXPLORATION</PolicyBranchType>
+            <CultureCost>10</CultureCost>
+            <GridX>2</GridX>
+            <GridY>1</GridY>
+            <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+        </Row>
+        <Row>
+            <ID>147</ID>
+            <Type>POLICY_EXPLORATION_AP2</Type>
+            <Description>AP 2</Description>
+            <Civilopedia>AP 2</Civilopedia>
+            <Help>AP 2</Help>
+            <PolicyBranchType>POLICY_BRANCH_EXPLORATION</PolicyBranchType>
+            <CultureCost>10</CultureCost>
+            <GridX>4</GridX>
+            <GridY>1</GridY>
+            <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+        </Row>
+        <Row>
+            <ID>148</ID>
+            <Type>POLICY_EXPLORATION_AP3</Type>
+            <Description>AP 3</Description>
+            <Civilopedia>AP 3</Civilopedia>
+            <Help>AP 3</Help>
+            <PolicyBranchType>POLICY_BRANCH_EXPLORATION</PolicyBranchType>
+            <CultureCost>10</CultureCost>
+            <GridX>2</GridX>
+            <GridY>2</GridY>
+            <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+        </Row>
+        <Row>
+            <ID>149</ID>
+            <Type>POLICY_EXPLORATION_AP4</Type>
+            <Description>AP 4</Description>
+            <Civilopedia>AP 4</Civilopedia>
+            <Help>AP 4</Help>
+            <PolicyBranchType>POLICY_BRANCH_EXPLORATION</PolicyBranchType>
+            <CultureCost>10</CultureCost>
+            <GridX>4</GridX>
+            <GridY>2</GridY>
+            <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+        </Row>
+        <Row>
+            <ID>150</ID>
+            <Type>POLICY_EXPLORATION_AP5</Type>
+            <Description>AP 5</Description>
+            <Civilopedia>AP 5</Civilopedia>
+            <Help>AP 5</Help>
+            <PolicyBranchType>POLICY_BRANCH_EXPLORATION</PolicyBranchType>
+            <CultureCost>10</CultureCost>
+            <GridX>2</GridX>
+            <GridY>3</GridY>
+            <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+        </Row>
+        <Row>
+            <ID>151</ID>
+            <Type>POLICY_RATIONALISM_AP1</Type>
+            <Description>AP 1</Description>
+            <Civilopedia>AP 1</Civilopedia>
+            <Help>AP 1</Help>
+            <PolicyBranchType>POLICY_BRANCH_RATIONALISM</PolicyBranchType>
+            <CultureCost>10</CultureCost>
+            <GridX>2</GridX>
+            <GridY>1</GridY>
+            <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+        </Row>
+        <Row>
+            <ID>152</ID>
+            <Type>POLICY_RATIONALISM_AP2</Type>
+            <Description>AP 2</Description>
+            <Civilopedia>AP 2</Civilopedia>
+            <Help>AP 2</Help>
+            <PolicyBranchType>POLICY_BRANCH_RATIONALISM</PolicyBranchType>
+            <CultureCost>10</CultureCost>
+            <GridX>4</GridX>
+            <GridY>1</GridY>
+            <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+        </Row>
+        <Row>
+            <ID>153</ID>
+            <Type>POLICY_RATIONALISM_AP3</Type>
+            <Description>AP 3</Description>
+            <Civilopedia>AP 3</Civilopedia>
+            <Help>AP 3</Help>
+            <PolicyBranchType>POLICY_BRANCH_RATIONALISM</PolicyBranchType>
+            <CultureCost>10</CultureCost>
+            <GridX>2</GridX>
+            <GridY>2</GridY>
+            <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+        </Row>
+        <Row>
+            <ID>154</ID>
+            <Type>POLICY_RATIONALISM_AP4</Type>
+            <Description>AP 4</Description>
+            <Civilopedia>AP 4</Civilopedia>
+            <Help>AP 4</Help>
+            <PolicyBranchType>POLICY_BRANCH_RATIONALISM</PolicyBranchType>
+            <CultureCost>10</CultureCost>
+            <GridX>4</GridX>
+            <GridY>2</GridY>
+            <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+        </Row>
+        <Row>
+            <ID>155</ID>
+            <Type>POLICY_RATIONALISM_AP5</Type>
+            <Description>AP 5</Description>
+            <Civilopedia>AP 5</Civilopedia>
+            <Help>AP 5</Help>
+            <PolicyBranchType>POLICY_BRANCH_RATIONALISM</PolicyBranchType>
+            <CultureCost>10</CultureCost>
+            <GridX>2</GridX>
+            <GridY>3</GridY>
+            <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+        </Row>
     </Policies>
+    <Policy_PreReqPolicies>
+        <Row>
+            <PolicyType>POLICY_TRADITION_AP3</PolicyType>
+            <PrereqPolicy>POLICY_TRADITION_AP2</PrereqPolicy>
+        </Row>
+        <Row>
+            <PolicyType>POLICY_TRADITION_AP4</PolicyType>
+            <PrereqPolicy>POLICY_TRADITION_AP3</PrereqPolicy>
+        </Row>
+        <Row>
+            <PolicyType>POLICY_TRADITION_AP5</PolicyType>
+            <PrereqPolicy>POLICY_TRADITION_AP3</PrereqPolicy>
+        </Row>
+        <Row>
+            <PolicyType>POLICY_LIBERTY_AP3</PolicyType>
+            <PrereqPolicy>POLICY_LIBERTY_AP1</PrereqPolicy>
+        </Row>
+        <Row>
+            <PolicyType>POLICY_LIBERTY_AP4</PolicyType>
+            <PrereqPolicy>POLICY_LIBERTY_AP2</PrereqPolicy>
+        </Row>
+        <Row>
+            <PolicyType>POLICY_LIBERTY_AP5</PolicyType>
+            <PrereqPolicy>POLICY_LIBERTY_AP2</PrereqPolicy>
+        </Row>
+        <Row>
+            <PolicyType>POLICY_HONOR_AP3</PolicyType>
+            <PrereqPolicy>POLICY_HONOR_AP1</PrereqPolicy>
+        </Row>
+        <Row>
+            <PolicyType>POLICY_HONOR_AP4</PolicyType>
+            <PrereqPolicy>POLICY_HONOR_AP2</PrereqPolicy>
+        </Row>
+        <Row>
+            <PolicyType>POLICY_HONOR_AP5</PolicyType>
+            <PrereqPolicy>POLICY_HONOR_AP4</PrereqPolicy>
+        </Row>
+        <Row>
+            <PolicyType>POLICY_PIETY_AP3</PolicyType>
+            <PrereqPolicy>POLICY_PIETY_AP1</PrereqPolicy>
+        </Row>
+        <Row>
+            <PolicyType>POLICY_PIETY_AP4</PolicyType>
+            <PrereqPolicy>POLICY_PIETY_AP1</PrereqPolicy>
+        </Row>
+        <Row>
+            <PolicyType>POLICY_PIETY_AP5</PolicyType>
+            <PrereqPolicy>POLICY_PIETY_AP4</PrereqPolicy>
+        </Row>
+        <Row>
+            <PolicyType>POLICY_PATRONAGE_AP3</PolicyType>
+            <PrereqPolicy>POLICY_PATRONAGE_AP1</PrereqPolicy>
+        </Row>
+        <Row>
+            <PolicyType>POLICY_PATRONAGE_AP4</PolicyType>
+            <PrereqPolicy>POLICY_PATRONAGE_AP3</PrereqPolicy>
+        </Row>
+        <Row>
+            <PolicyType>POLICY_PATRONAGE_AP5</PolicyType>
+            <PrereqPolicy>POLICY_PATRONAGE_AP2</PrereqPolicy>
+        </Row>
+        <Row>
+            <PolicyType>POLICY_PATRONAGE_AP5</PolicyType>
+            <PrereqPolicy>POLICY_PATRONAGE_AP3</PrereqPolicy>
+        </Row>
+        <Row>
+            <PolicyType>POLICY_AESTHETICS_AP3</PolicyType>
+            <PrereqPolicy>POLICY_AESTHETICS_AP1</PrereqPolicy>
+        </Row>
+        <Row>
+            <PolicyType>POLICY_AESTHETICS_AP3</PolicyType>
+            <PrereqPolicy>POLICY_AESTHETICS_AP2</PrereqPolicy>
+        </Row>
+        <Row>
+            <PolicyType>POLICY_AESTHETICS_AP4</PolicyType>
+            <PrereqPolicy>POLICY_AESTHETICS_AP2</PrereqPolicy>
+        </Row>
+        <Row>
+            <PolicyType>POLICY_AESTHETICS_AP5</PolicyType>
+            <PrereqPolicy>POLICY_AESTHETICS_AP4</PrereqPolicy>
+        </Row>
+        <Row>
+            <PolicyType>POLICY_COMMERCE_AP3</PolicyType>
+            <PrereqPolicy>POLICY_COMMERCE_AP1</PrereqPolicy>
+        </Row>
+        <Row>
+            <PolicyType>POLICY_COMMERCE_AP4</PolicyType>
+            <PrereqPolicy>POLICY_COMMERCE_AP2</PrereqPolicy>
+        </Row>
+        <Row>
+            <PolicyType>POLICY_COMMERCE_AP5</PolicyType>
+            <PrereqPolicy>POLICY_COMMERCE_AP3</PrereqPolicy>
+        </Row>
+        <Row>
+            <PolicyType>POLICY_COMMERCE_AP5</PolicyType>
+            <PrereqPolicy>POLICY_COMMERCE_AP3</PrereqPolicy>
+        </Row>
+        <Row>
+            <PolicyType>POLICY_EXPLORATION_AP3</PolicyType>
+            <PrereqPolicy>POLICY_EXPLORATION_AP1</PrereqPolicy>
+        </Row>
+        <Row>
+            <PolicyType>POLICY_EXPLORATION_AP3</PolicyType>
+            <PrereqPolicy>POLICY_EXPLORATION_AP2</PrereqPolicy>
+        </Row>
+        <Row>
+            <PolicyType>POLICY_EXPLORATION_AP4</PolicyType>
+            <PrereqPolicy>POLICY_EXPLORATION_AP2</PrereqPolicy>
+        </Row>
+        <Row>
+            <PolicyType>POLICY_EXPLORATION_AP5</PolicyType>
+            <PrereqPolicy>POLICY_EXPLORATION_AP3</PrereqPolicy>
+        </Row>
+        <Row>
+            <PolicyType>POLICY_RATIONALISM_AP3</PolicyType>
+            <PrereqPolicy>POLICY_RATIONALISM_AP1</PrereqPolicy>
+        </Row>
+        <Row>
+            <PolicyType>POLICY_RATIONALISM_AP4</PolicyType>
+            <PrereqPolicy>POLICY_RATIONALISM_AP2</PrereqPolicy>
+        </Row>
+        <Row>
+            <PolicyType>POLICY_RATIONALISM_AP5</PolicyType>
+            <PrereqPolicy>POLICY_RATIONALISM_AP3</PrereqPolicy>
+        </Row>
+    </Policy_PreReqPolicies>
 </GameData>

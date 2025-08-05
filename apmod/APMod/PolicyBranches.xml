@@ -1,5 +1,149 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GameData>
 	<PolicyBranchTypes>
+		<Update>
+			<Set Help="Adopting Tradition counts as an [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] and unlocks access to the [COLOR_POSITIVE_TEXT]5 AP Policies[ENDCOLOR] in this tree.[NEWLINE][NEWLINE]Adopting all Policies in the Tradition tree counts as an additional [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR]."/>
+			<Where Type="POLICY_BRANCH_TRADITION"/>
+		</Update>
+		<Update>
+			<Set EraPrereq="ERA_ANCIENT"/>
+			<Where Type="POLICY_BRANCH_TRADITION"/>
+		</Update>
+		<Update>
+			<Set FreePolicy="NULL"/>
+			<Where Type="POLICY_BRANCH_TRADITION"/>
+		</Update>
+		<Update>
+			<Set FreeFinishingPolicy="NULL"/>
+			<Where Type="POLICY_BRANCH_TRADITION"/>
+		</Update>
+		<Update>
+			<Set Help="Adopting Liberty counts as an [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] and unlocks access to the [COLOR_POSITIVE_TEXT]5 AP Policies[ENDCOLOR] in this tree.[NEWLINE][NEWLINE]Adopting all Policies in the Liberty tree counts as an additional [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR]."/>
+			<Where Type="POLICY_BRANCH_LIBERTY"/>
+		</Update>
+		<Update>
+			<Set EraPrereq="ERA_CLASSICAL"/>
+			<Where Type="POLICY_BRANCH_LIBERTY"/>
+		</Update>
+		<Update>
+			<Set FreePolicy="NULL"/>
+			<Where Type="POLICY_BRANCH_LIBERTY"/>
+		</Update>
+		<Update>
+			<Set FreeFinishingPolicy="NULL"/>
+			<Where Type="POLICY_BRANCH_LIBERTY"/>
+		</Update>
+		<Update>
+			<Set Help="Adopting Honor counts as an [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] and unlocks access to the [COLOR_POSITIVE_TEXT]5 AP Policies[ENDCOLOR] in this tree.[NEWLINE][NEWLINE]Adopting all Policies in the Honor tree counts as an additional [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR]."/>
+			<Where Type="POLICY_BRANCH_HONOR"/>
+		</Update>
+		<Update>
+			<Set EraPrereq="ERA_MEDIEVAL"/>
+			<Where Type="POLICY_BRANCH_HONOR"/>
+		</Update>
+		<Update>
+			<Set FreePolicy="NULL"/>
+			<Where Type="POLICY_BRANCH_HONOR"/>
+		</Update>
+		<Update>
+			<Set FreeFinishingPolicy="NULL"/>
+			<Where Type="POLICY_BRANCH_HONOR"/>
+		</Update>
+		<Update>
+			<Set Help="Adopting Piety counts as an [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] and unlocks access to the [COLOR_POSITIVE_TEXT]5 AP Policies[ENDCOLOR] in this tree.[NEWLINE][NEWLINE]Adopting all Policies in the Piety tree counts as an additional [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR]."/>
+			<Where Type="POLICY_BRANCH_PIETY"/>
+		</Update>
+		<Update>
+			<Set EraPrereq="ERA_RENAISSANCE"/>
+			<Where Type="POLICY_BRANCH_PIETY"/>
+		</Update>
+		<Update>
+			<Set FreePolicy="NULL"/>
+			<Where Type="POLICY_BRANCH_PIETY"/>
+		</Update>
+		<Update>
+			<Set FreeFinishingPolicy="NULL"/>
+			<Where Type="POLICY_BRANCH_PIETY"/>
+		</Update>
+		<Update>
+			<Set Help="Adopting Patronage counts as an [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] and unlocks access to the [COLOR_POSITIVE_TEXT]5 AP Policies[ENDCOLOR] in this tree.[NEWLINE][NEWLINE]Adopting all Policies in the Patronage tree counts as an additional [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR]."/>
+			<Where Type="POLICY_BRANCH_PATRONAGE"/>
+		</Update>
+		<Update>
+			<Set EraPrereq="ERA_INDUSTRIAL"/>
+			<Where Type="POLICY_BRANCH_PATRONAGE"/>
+		</Update>
+		<Update>
+			<Set FreePolicy="NULL"/>
+			<Where Type="POLICY_BRANCH_PATRONAGE"/>
+		</Update>
+		<Update>
+			<Set FreeFinishingPolicy="NULL"/>
+			<Where Type="POLICY_BRANCH_PATRONAGE"/>
+		</Update>
+		<Update>
+			<Set Help="Adopting Aesthetics counts as an [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] and unlocks access to the [COLOR_POSITIVE_TEXT]5 AP Policies[ENDCOLOR] in this tree.[NEWLINE][NEWLINE]Adopting all Policies in the Aesthetics tree counts as an additional [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR]."/>
+			<Where Type="POLICY_BRANCH_AESTHETICS"/>
+		</Update>
+		<Update>
+			<Set EraPrereq="ERA_MODERN"/>
+			<Where Type="POLICY_BRANCH_AESTHETICS"/>
+		</Update>
+		<Update>
+			<Set FreePolicy="NULL"/>
+			<Where Type="POLICY_BRANCH_AESTHETICS"/>
+		</Update>
+		<Update>
+			<Set FreeFinishingPolicy="NULL"/>
+			<Where Type="POLICY_BRANCH_AESTHETICS"/>
+		</Update>
+		<Update>
+			<Set Help="Adopting Commerce counts as an [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] and unlocks access to the [COLOR_POSITIVE_TEXT]5 AP Policies[ENDCOLOR] in this tree.[NEWLINE][NEWLINE]Adopting all Policies in the Commerce tree counts as an additional [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR]."/>
+			<Where Type="POLICY_BRANCH_COMMERCE"/>
+		</Update>
+		<Update>
+			<Set EraPrereq="ERA_POSTMODERN"/>
+			<Where Type="POLICY_BRANCH_COMMERCE"/>
+		</Update>
+		<Update>
+			<Set FreePolicy="NULL"/>
+			<Where Type="POLICY_BRANCH_COMMERCE"/>
+		</Update>
+		<Update>
+			<Set FreeFinishingPolicy="NULL"/>
+			<Where Type="POLICY_BRANCH_COMMERCE"/>
+		</Update>
+		<Update>
+			<Set Help="Adopting Exploration counts as an [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] and unlocks access to the [COLOR_POSITIVE_TEXT]5 AP Policies[ENDCOLOR] in this tree.[NEWLINE][NEWLINE]Adopting all Policies in the Exploration tree counts as an additional [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR]."/>
+			<Where Type="POLICY_BRANCH_EXPLORATION"/>
+		</Update>
+		<Update>
+			<Set EraPrereq="ERA_FUTURE"/>
+			<Where Type="POLICY_BRANCH_EXPLORATION"/>
+		</Update>
+		<Update>
+			<Set FreePolicy="NULL"/>
+			<Where Type="POLICY_BRANCH_EXPLORATION"/>
+		</Update>
+		<Update>
+			<Set FreeFinishingPolicy="NULL"/>
+			<Where Type="POLICY_BRANCH_EXPLORATION"/>
+		</Update>
+		<Update>
+			<Set Help="Adopting Rationalism counts as an [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] and unlocks access to the [COLOR_POSITIVE_TEXT]5 AP Policies[ENDCOLOR] in this tree.[NEWLINE][NEWLINE]Adopting all Policies in the Rationalism tree counts as an additional [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR]."/>
+			<Where Type="POLICY_BRANCH_RATIONALISM"/>
+		</Update>
+		<Update>
+			<Set EraPrereq="ERA_FUTURE"/>
+			<Where Type="POLICY_BRANCH_RATIONALISM"/>
+		</Update>
+		<Update>
+			<Set FreePolicy="NULL"/>
+			<Where Type="POLICY_BRANCH_RATIONALISM"/>
+		</Update>
+		<Update>
+			<Set FreeFinishingPolicy="NULL"/>
+			<Where Type="POLICY_BRANCH_RATIONALISM"/>
+		</Update>
 	</PolicyBranchTypes>
 </GameData>
