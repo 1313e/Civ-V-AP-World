@@ -1,6 +1,6 @@
 # %% IMPORTS
 from dataclasses import dataclass
-from Options import Choice, DefaultOnToggle, PerGameCommonOptions
+from Options import Choice, DefaultOnToggle, PerGameCommonOptions, OptionSet, Range, Toggle
 
 # All declaration
 __all__ = ["CivVOptions"]
@@ -38,8 +38,72 @@ class ProgressiveTechs(DefaultOnToggle):
     display_name = "Progressive Techs"
 
 
+class NationalWonderSanity(Toggle):
+    """
+    Add all national wonders to the location pool.
+
+    This adds the 11 national wonders and the 3 guilds to the location pool.
+
+    """
+
+    display_name = "National Wonder Sanity"
+
+
+class WorldWonderSanity(Toggle):
+    """
+    Add all world wonders to the location pool.
+
+    This adds the 47 world wonders to the location pool, including the 3 ideology world wonders.
+
+    WARNING: This option is not suitable for syncs.
+
+    """
+
+    display_name = "World Wonder Sanity"
+
+
+class EnableTraps(Toggle):
+    """
+    Add traps to the filler item pool.
+
+    """
+
+    display_name = "Enable Traps"
+
+
+class TrapBlacklist(OptionSet):
+    """
+    Blacklist the given traps from being included in the filler item pool.
+
+    Has no effect if traps are not enabled.
+
+    """
+
+    display_name = "Trap Blacklist"
+    # TODO: Add allowed values
+
+
+class TrapFillerChance(Range):
+    """
+    The percent chance for a filler item to be a trap instead.
+
+    Has no effect if traps are not enabled.
+
+    """
+
+    display_name = "Trap Filler Chance"
+    range_start = 0
+    range_end = 100
+    default = 5
+
+
 # %% CIV V OPTIONS CLASS
 @dataclass
 class CivVOptions(PerGameCommonOptions):
     era_goal: EraGoal
     progressive_techs: ProgressiveTechs
+    national_wonder_sanity: NationalWonderSanity
+    world_wonder_sanity: WorldWonderSanity
+    enable_traps: EnableTraps
+    trap_blacklist: TrapBlacklist
+    trap_filler_chance: TrapFillerChance

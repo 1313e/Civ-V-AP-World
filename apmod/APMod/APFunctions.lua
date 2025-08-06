@@ -13,7 +13,7 @@ local team = Teams[player:GetTeam()];
 local teamTechs = team:GetTeamTechs();
 
 local pushTable = {}
-local pushTableTableKeys = {policy=true, policy_branch=true, tech=true, world_wonder=true}
+local pushTableTableKeys = {policy=true, policy_branch=true, tech=true, national_wonder=true, world_wonder=true}
 local techIdsToEraIds = {
 	[0]=0, [1]=0, [2]=0, [3]=0, [4]=0, [5]=0, [6]=0, [7]=0, [8]=0, [9]=0, [10]=0, [11]=0,
 	[12]=1, [13]=1, [14]=1, [15]=1, [16]=1, [17]=1, [18]=1, [19]=1, [20]=1,
@@ -51,6 +51,12 @@ local policyBranchIdToPolicyBranchStarterId ={
 }
 local policyBranchIdToPolicyBranchFinisherId = {
 	[0]=42, [1]=43, [2]=44, [3]=45, [4]=46, [5]=55, [6]=47, [7]=62, [8]=48,
+}
+local nationalWonderBuildingIds = {
+	[55]=true, [56]=true, [57]=true, [58]=true, [59]=true, [60]=true,
+	[61]=true, [62]=true,
+	[127]=true,
+	[141]=true, [142]=true, [148]=true, [149]=true, [150]=true,
 }
 local worldWonderBuildingIds = {
 	[63]=true, [64]=true, [65]=true, [66]=true, [67]=true, [68]=true, [69]=true, [70]=true,
@@ -121,8 +127,12 @@ end
 
 function OnCityBuildingConstructed(playerId, cityId, buildingId, gold, faithOrCulture)
 	-- If the player constructs a building, add it to the push table if it is a wonder
-	if(playerId == player:GetID() and worldWonderBuildingIds[buildingId]) then
-		table.insert(pushTable["world_wonder"], buildingId)
+	if(playerId == player:GetID()) then
+		if(nationalWonderBuildingIds[buildingId]) then
+			table.insert(pushTable["national_wonder"], buildingId)
+		elseif(worldWonderBuildingIds[buildingId]) then
+			table.insert(pushTable["world_wonder"], buildingId)
+		end
 	end
 end
 

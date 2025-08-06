@@ -15,8 +15,18 @@ from .items import (
     PROGRESSIVE_TECH_ITEMS,
     TECH_ITEMS,
     CivVItem,
+    CivVItemData,
 )
-from .locations import LOCATIONS_DATA, CivVLocation, CivVLocationData
+from .locations import (
+    LOCATIONS_DATA,
+    NATIONAL_WONDER_LOCATIONS,
+    POLICY_BRANCH_LOCATIONS,
+    POLICY_LOCATIONS,
+    TECH_LOCATIONS,
+    WORLD_WONDER_LOCATIONS,
+    CivVLocation,
+    CivVLocationData,
+)
 from .options import CivVOptions
 from .regions import ERA_REGIONS, REGIONS_DATA, CivVRegionData
 
@@ -54,27 +64,32 @@ class CivVWorld(World):
         items_data = [PROGRESSIVE_ERA_ITEM]
 
         # Pick which items lists to use based on options
-        items_data.extend(POLICY_ITEMS)
-        items_data.extend(PROGRESSIVE_TECH_ITEMS if self.options.progressive_techs.value else TECH_ITEMS)
+        items_data.extend(POLICY_ITEMS.values())
+        items_data.extend(
+            PROGRESSIVE_TECH_ITEMS.values() if self.options.progressive_techs.value else TECH_ITEMS.values()
+        )
 
         # Add the items to the multiworld
         self.multiworld.itempool.extend(itertools.chain.from_iterable(
             ([self.create_item(item_data.name) for _ in range(item_data.count)] for item_data in items_data)))
 
-    def create_access_rule(self, data: CivVRegionData | CivVLocationData) -> Callable[[CollectionState], bool]:
+    def get_locations_data(self) -> list[CivVLocationData]:
         """
-        Creates the access rule function for the given region or location `data` and returns it.
-
-        This function can be used as the access rule when creating :class:`Region` and :class:`Location` instances.
+        Returns the list of `CivVLocationData` instances to use for this seed, according to the options.
 
         """
 
-        # Create rule function that uses the CollectionState to determine if region/location is reachable
-        def rule(state: CollectionState) -> bool:
-            return all((state.has(name, self.player, count) for name, count in data.requirements.items()))
+        # Create list with locations that are always included
+        locations_data = [*POLICY_BRANCH_LOCATIONS, *POLICY_LOCATIONS, *TECH_LOCATIONS]
 
-        # Return created rule
-        return rule
+        # Add wonder locations if corresponding wonder sanity is enabled
+        if self.options.national_wonder_sanity:
+            locations_data.extend(NATIONAL_WONDER_LOCATIONS)
+        if self.options.world_wonder_sanity:
+            locations_data.extend(WORLD_WONDER_LOCATIONS)
+
+        # Return locations data
+        return locations_data
 
     def create_regions(self) -> None:
         # Add the origin region
@@ -100,11 +115,11 @@ class CivVWorld(World):
             # Make connection between parent region and this region
             parent_region.connect(
                 connecting_region=region,
-                rule=self.create_access_rule(region_data),
+                rule=region_data.requirements.create_access_rule(self.player, self.options),
             )
 
         # Add all locations to the multiworld
-        for location_data in LOCATIONS_DATA:
+        for location_data in self.get_locations_data():
             # Create location and add it to its region
             region = self.multiworld.get_region(
                 region_name=location_data.region.name if location_data.region is not None else self.origin_region_name,
@@ -119,7 +134,7 @@ class CivVWorld(World):
             region.locations.append(location)
 
             # Add accessibility rule to this location
-            location.access_rule = self.create_access_rule(location_data)
+            location.access_rule = location_data.requirements.create_access_rule(self.player, self.options)
 
         # Add victory to the multiworld
         victory_region = self.multiworld.get_region(ERA_REGIONS[self.options.era_goal.value].name, self.player)
