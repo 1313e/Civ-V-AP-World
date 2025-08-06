@@ -2,6 +2,8 @@
 from dataclasses import dataclass
 from Options import Choice, DefaultOnToggle, PerGameCommonOptions, OptionSet, Range, Toggle
 
+from . import items
+
 # All declaration
 __all__ = ["CivVOptions"]
 
@@ -55,7 +57,7 @@ class WorldWonderSanity(Toggle):
 
     This adds the 47 world wonders to the location pool, including the 3 ideology world wonders.
 
-    WARNING: This option is not suitable for syncs.
+    WARNING: This option is NOT suitable for syncs.
 
     """
 
@@ -72,7 +74,7 @@ class EnableTraps(Toggle):
 
 
 class TrapBlacklist(OptionSet):
-    """
+    f"""
     Blacklist the given traps from being included in the filler item pool.
 
     Has no effect if traps are not enabled.
@@ -80,7 +82,7 @@ class TrapBlacklist(OptionSet):
     """
 
     display_name = "Trap Blacklist"
-    # TODO: Add allowed values
+    valid_keys = set((item_data.name for item_data in items.TRAP_ITEMS))
 
 
 class TrapFillerChance(Range):

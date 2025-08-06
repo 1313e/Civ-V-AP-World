@@ -11,6 +11,7 @@ local UPPER_TECH_ID = 168
 local player = Players[Game.GetActivePlayer()];
 local team = Teams[player:GetTeam()];
 local teamTechs = team:GetTeamTechs();
+local maxNumberOfTeams = 22;
 
 local pushTable = {}
 local pushTableTableKeys = {policy=true, policy_branch=true, tech=true, national_wonder=true, world_wonder=true}
@@ -184,6 +185,73 @@ function GrantTechs(techIds)
 	end
 end
 
+function ChangeGold(value)
+	-- Change gold for player by given value
+	player:ChangeGold(value)
+end
+
+function ChangeCulture(value)
+	-- Change culture for player by given value
+	player:ChangeJONSCulture(value)
+end
+
+function ChangeFaith(value)
+	-- Change faith for player by given value
+	player:ChangeFaith(value)
+end
+
+function ChangeNumFreeGreatPeople(value)
+	-- Change number of free people to choose for player by given value
+	player:ChangeNumFreeGreatPeople(value)
+end
+
+function ChangeNumFreePolicies(value)
+	-- Change number of free policies to choose for player by given value
+	player:ChangeNumFreePolicies(value)
+end
+
+function ChangeNumFreeTechs(value)
+	-- Change number of free people to choose for player by given value
+	player:SetNumFreeTechs(player:GetNumFreeTechs()+value)
+end
+
+function ChangeNewCityExtraPopulation(value)
+	-- Change the extra population a new city is given for the player by given value
+	player:ChangeNewCityExtraPopulation(value)
+end
+
+function ChangeCulturePerTurnForFree(value)
+	-- Change the amount of free culture the player gets per turn by given value
+	player:ChangeJONSCulturePerTurnForFree(value)
+end
+
+function ChangeExtraHappinessPerCity(value)
+	-- Change the amount of extra happiness the player gets per city by given value
+	player:ChangeExtraHappinessPerCity(value)
+end
+
+function StartGoldenAge(n)
+	-- Immediately start a golden age for the player n times
+	for _=1, n do
+		player:ChangeGoldenAgeTurns(player:GetGoldenAgeLength())
+	end
+end
+
+function DeclareWarRandom(n)
+	-- Get the IDs of all teams that are still alive that are not the player
+	aiTeamIds = {}
+	for i=1, maxNumberOfTeams-1 do
+		if Teams[i]:IsAlive() then
+			table.insert(aiTeamIds, i)
+		end
+	end
+
+	-- Pick n times a random team that declares war on the player
+	for _=1, n do
+		Teams[aiTeamIds[math.random(1, #aiTeamIds)]]:DeclareWar(team:GetID())
+	end
+end
+
 function InitPushTable()
 	-- Empty the table
 	for key, _ in pairs(pushTable) do
@@ -285,4 +353,16 @@ Game.IsModReady = IsModReady
 Game.GrantTechs = GrantTechs
 Game.GrantPolicies = GrantPolicies
 Game.UnlockPolicyBranches = UnlockPolicyBranches
+Game.ChangeGold = ChangeGold
+Game.ChangeCulture = ChangeCulture
+Game.ChangeFaith = ChangeFaith
+Game.ChangeNumFreeGreatPeople = ChangeNumFreeGreatPeople
+Game.ChangeNumFreePolicies = ChangeNumFreePolicies
+Game.ChangeNumFreeTechs = ChangeNumFreeTechs
+Game.ChangeNewCityExtraPopulation = ChangeNewCityExtraPopulation
+Game.ChangeCulturePerTurnForFree = ChangeCulturePerTurnForFree
+Game.ChangeExtraHappinessPerCity = ChangeExtraHappinessPerCity
+Game.ChangeCulturePerTurnForFree = ChangeCulturePerTurnForFree
+Game.StartGoldenAge = StartGoldenAge
+Game.DeclareWarRandom = DeclareWarRandom
 Game.GetPushTable = GetPushTable

@@ -1,12 +1,12 @@
 # %% IMPORTS
 import itertools
-from collections.abc import Callable
 
-from BaseClasses import Region, ItemClassification, CollectionState
+from BaseClasses import Region, ItemClassification
 from worlds.AutoWorld import World
 
 from .constants import GAME_NAME
 from .items import (
+    FILLER_ITEMS,
     ITEMS_DATA,
     ITEMS_DATA_BY_ID,
     ITEM_GROUPS,
@@ -14,8 +14,10 @@ from .items import (
     PROGRESSIVE_ERA_ITEM,
     PROGRESSIVE_TECH_ITEMS,
     TECH_ITEMS,
+    TRAP_ITEMS,
+    CivVFillerItemData,
     CivVItem,
-    CivVItemData,
+    CivVUsefulItemData,
 )
 from .locations import (
     LOCATIONS_DATA,
@@ -28,7 +30,7 @@ from .locations import (
     CivVLocationData,
 )
 from .options import CivVOptions
-from .regions import ERA_REGIONS, REGIONS_DATA, CivVRegionData
+from .regions import ERA_REGIONS, REGIONS_DATA
 
 # All declaration
 __all__ = ["CivVWorld"]
@@ -59,19 +61,73 @@ class CivVWorld(World):
             player=self.player,
         )
 
-    def create_items(self) -> None:
-        # Create list of items to use for this seed
-        items_data = [PROGRESSIVE_ERA_ITEM]
+    def get_useful_items_data(self) -> list[CivVUsefulItemData]:
+        """
+        Returns the list of `CivVUsefulItemData` instances to use for this seed, according to the options.
+
+        """
+
+        # Create list with items that are always included
+        items_data = [PROGRESSIVE_ERA_ITEM, *POLICY_ITEMS.values()]
 
         # Pick which items lists to use based on options
-        items_data.extend(POLICY_ITEMS.values())
         items_data.extend(
-            PROGRESSIVE_TECH_ITEMS.values() if self.options.progressive_techs.value else TECH_ITEMS.values()
+            PROGRESSIVE_TECH_ITEMS.values() if self.options.progressive_techs else TECH_ITEMS.values()
         )
 
+        # Return items data
+        return items_data
+
+    def get_filler_items_data(self, n: int) -> list[CivVFillerItemData]:
+        """
+        Returns a list of `n` `CivVFillerItemData` instances to use for this seed, according to the options.
+
+        """
+
+        # Create list with filler items
+        n_filler = len(FILLER_ITEMS)
+        items_data = []
+
+        # If traps are enabled and not all blacklisted, create both filler and trap items
+        if self.options.enable_traps and (len(self.options.trap_blacklist.value) < len(TRAP_ITEMS)):
+            # Get list of allowed traps
+            traps_list = [item_data for item_data in TRAP_ITEMS if item_data.name not in self.options.trap_blacklist]
+            n_traps = len(traps_list)
+            trap_chance = self.options.trap_filler_chance/100
+
+            # Generate n filler items
+            for _ in range(n):
+                # Determine if filler item or trap should be chosen
+                if self.random.random() <= trap_chance:
+                    # Pick random trap item
+                    items_data.append(traps_list[self.random.randint(0, n_traps - 1)])
+                else:
+                    # Pick random filler item
+                    items_data.append(FILLER_ITEMS[self.random.randint(0, n_filler - 1)])
+
+        # Else, create n filler items
+        else:
+            items_data.extend((FILLER_ITEMS[self.random.randint(0, n_filler - 1)] for _ in range(n)))
+
+        # Return items data
+        return items_data
+
+    def create_items(self) -> None:
+        # Create list of all progression and useful items to be added to the multiworld
+        useful_items = list(itertools.chain.from_iterable(
+            ([self.create_item(item_data.name) for _ in range(item_data.count)] for item_data in
+             self.get_useful_items_data())))
+
+        # Calculate number of filler items required
+        # Extra minus 1 here because victory location already has an item placed
+        n_filler = len(list(self.multiworld.get_locations(self.player))) - len(useful_items) - 1
+
+        # Create list of all filler and trap items to be added to the multiworld
+        filler_items = (self.create_item(item_data.name) for item_data in self.get_filler_items_data(n_filler))
+
         # Add the items to the multiworld
-        self.multiworld.itempool.extend(itertools.chain.from_iterable(
-            ([self.create_item(item_data.name) for _ in range(item_data.count)] for item_data in items_data)))
+        self.multiworld.itempool.extend(useful_items)
+        self.multiworld.itempool.extend(filler_items)
 
     def get_locations_data(self) -> list[CivVLocationData]:
         """

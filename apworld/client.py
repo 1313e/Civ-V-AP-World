@@ -3,6 +3,7 @@ import asyncio
 import functools
 import traceback
 import socket
+from collections import defaultdict
 
 import colorama
 
@@ -12,7 +13,7 @@ from Utils import init_logging
 
 from .context import CivVContext
 from .constants import ADDRESS, GAME_NAME, GAME_READY, GAME_NOT_READY, MOD_READY, MOD_NOT_READY, PORT
-from .enums import CivVLocationType, CivVItemType
+from .enums import CivVFillerType, CivVLocationType, CivVItemType
 from .exceptions import TunerConnectionException
 from .items import ITEMS_DATA_BY_ID
 from .locations import LOCATIONS_DATA_BY_ID, LOCATIONS_DATA_BY_TYPE_ID
@@ -336,7 +337,7 @@ class CivVClient:
             self.ctx.sent_locations[CivVLocationType.policy_branch].clear()
             self.ctx.sent_locations[CivVLocationType.policy_branch].update(policy_branches_to_unlock)
         if techs_to_send:
-            await self.tuner.grant_technologies(*techs_to_send)
+            await self.tuner.grant_techs(*techs_to_send)
             self.ctx.sent_locations[CivVLocationType.tech].clear()
             self.ctx.sent_locations[CivVLocationType.tech].update(techs_to_send)
 
@@ -352,6 +353,7 @@ class CivVClient:
         """
 
         # Grant all items that have not been received by the player yet
+        filler_to_send = defaultdict(int)
         policies_to_send = []
         techs_to_send = []
         items_ids_to_receive = [x.item for x in self.ctx.items_received[len(self.ctx.received_item_ids):]]
@@ -365,6 +367,9 @@ class CivVClient:
                     techs_to_send.append(item.game_ids[self.ctx.received_item_ids.count(id_to_receive)])
                 case CivVItemType.policy:
                     policies_to_send.append(item.game_ids[self.ctx.received_item_ids.count(id_to_receive)])
+                case CivVItemType.bonus | CivVItemType.trap:
+                    for name, value in item.action.items():
+                        filler_to_send[name] += value
 
             # Add ID to list of received IDs to account for multiple progressive items being sent at once
             self.ctx.received_item_ids.append(id_to_receive)
@@ -373,4 +378,8 @@ class CivVClient:
         if policies_to_send:
             await self.tuner.grant_policies(*policies_to_send)
         if techs_to_send:
-            await self.tuner.grant_technologies(*techs_to_send)
+            await self.tuner.grant_techs(*techs_to_send)
+
+        # Send all filler items
+        for name, value in filler_to_send.items():
+            await getattr(self.tuner, name)(value)

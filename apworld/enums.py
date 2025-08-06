@@ -2,10 +2,29 @@
 from enum import StrEnum
 
 # All declaration
-__all__ = ["CivVItemGroup", "CivVItemType", "CivVLocationType"]
+__all__ = ["CivVFillerType", "CivVItemGroup", "CivVItemType", "CivVLocationType"]
 
 
 # %% ENUM DEFINITIONS
+class CivVFillerType(StrEnum):
+    """
+    Enum defining the various filler item types for Civ V.
+
+    """
+
+    change_culture = "change_culture"
+    change_culture_per_turn_for_free = "change_culture_per_turn_for_free"
+    change_extra_happiness_per_city = "change_extra_happiness_per_city"
+    change_faith = "change_faith"
+    change_free_great_people = "change_free_great_people"
+    change_free_policies = "change_free_policies"
+    change_free_techs = "change_free_techs"
+    change_gold = "change_gold"
+    change_new_city_extra_population = "change_new_city_extra_population"
+    declare_war_random = "declare_war_random"
+    start_golden_age = "start_golden_age"
+
+
 class CivVItemGroup(StrEnum):
     """
     Enum defining the various item groups for Civ V.
@@ -31,9 +50,11 @@ class CivVItemType(StrEnum):
 
     """
 
+    bonus = "bonus"
     era = "era"
     policy = "policy"
     tech = "tech"
+    trap = "trap"
 
 
 class CivVLocationType(StrEnum):

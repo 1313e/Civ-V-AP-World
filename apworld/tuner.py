@@ -225,13 +225,101 @@ class Tuner:
 
         await self._send_mod_command(f"UnlockPolicyBranches({{{','.join(map(str, policy_branch_ids))}}})")
 
-    async def grant_technologies(self, *tech_ids: int) -> None:
+    async def grant_techs(self, *tech_ids: int) -> None:
         """
         Grants the technologies with the given `tech_ids` to the player.
 
         """
 
         await self._send_mod_command(f"GrantTechs({{{','.join(map(str, tech_ids))}}})")
+
+    async def change_gold(self, value: int) -> None:
+        """
+        Changes the gold value by the given `value`.
+
+        """
+
+        await self._send_mod_command(f"ChangeGold({value})")
+
+    async def change_culture(self, value: int) -> None:
+        """
+        Changes the culture value by the given `value`.
+
+        """
+
+        await self._send_mod_command(f"ChangeCulture({value})")
+
+    async def change_faith(self, value: int) -> None:
+        """
+        Changes the faith value by the given `value`.
+
+        """
+
+        await self._send_mod_command(f"ChangeFaith({value})")
+
+    async def change_free_great_people(self, value: int) -> None:
+        """
+        Changes the number of free great people by the given `value`.
+
+        """
+
+        await self._send_mod_command(f"ChangeNumFreeGreatPeople({value})")
+
+    async def change_free_policies(self, value: int) -> None:
+        """
+        Changes the number of free policies by the given `value`.
+
+        """
+
+        await self._send_mod_command(f"ChangeNumFreePolicies({value})")
+
+    async def change_free_techs(self, value: int) -> None:
+        """
+        Changes the number of free technologies by the given `value`.
+
+        """
+
+        await self._send_mod_command(f"ChangeNumFreeTechs({value})")
+
+    async def change_new_city_extra_population(self, value: int) -> None:
+        """
+        Changes the number of extra population for new cities by the given `value`.
+
+        """
+
+        await self._send_mod_command(f"ChangeNewCityExtraPopulation({value})")
+
+    async def change_culture_per_turn_for_free(self, value: int) -> None:
+        """
+        Changes the amount of free culture per turn by the given `value`.
+
+        """
+
+        await self._send_mod_command(f"ChangeCulturePerTurnForFree({value})")
+
+    async def change_extra_happiness_per_city(self, value: int) -> None:
+        """
+        Changes the amount of extra happiness per city by the given `value`.
+
+        """
+
+        await self._send_mod_command(f"ChangeExtraHappinessPerCity({value})")
+
+    async def start_golden_age(self, value: int) -> None:
+        """
+        Starts a golden age for the player `value` times.
+
+        """
+
+        await self._send_mod_command(f"StartGoldenAge({value})")
+
+    async def declare_war_random(self, value: int) -> None:
+        """
+        Declares `value` times a war on the player's team at random.
+
+        """
+
+        await self._send_mod_command(f"DeclareWarRandom({value})")
 
     async def get_push_table(self) -> dict[str, Any]:
         """
