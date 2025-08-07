@@ -400,6 +400,7 @@ NATIONAL_WONDER_LOCATIONS = [
             items.ItemRequirements.create(
                 items={
                     items.TECH_ITEMS["Education"].name: 1,
+                    items.TECH_ITEMS["Writing"].name: 1,
                 },
                 when={
                     "progressive_techs": False,
@@ -424,6 +425,7 @@ NATIONAL_WONDER_LOCATIONS = [
                 items={
                     items.TECH_ITEMS["Architecture"].name: 1,
                     items.TECH_ITEMS["Acoustics"].name: 1,
+                    items.TECH_ITEMS["Drama and Poetry"].name: 1,
                 },
                 when={
                     "progressive_techs": False,
@@ -449,6 +451,7 @@ NATIONAL_WONDER_LOCATIONS = [
                 items={
                     items.TECH_ITEMS["Radio"].name: 1,
                     items.TECH_ITEMS["Electricity"].name: 1,
+                    items.TECH_ITEMS["Banking"].name: 1,
                 },
                 when={
                     "progressive_techs": False,
@@ -474,6 +477,7 @@ NATIONAL_WONDER_LOCATIONS = [
                 items={
                     items.TECH_ITEMS["Theology"].name: 1,
                     items.TECH_ITEMS["Philosophy"].name: 1,
+                    items.TECH_ITEMS["Pottery"].name: 1,
                 },
                 when={
                     "progressive_techs": False,
@@ -483,6 +487,7 @@ NATIONAL_WONDER_LOCATIONS = [
                 items={
                     items.PROGRESSIVE_TECH_ITEMS["Progressive Misc"].name: 2,
                     items.PROGRESSIVE_TECH_ITEMS["Progressive Culture"].name: 1,
+                    items.PROGRESSIVE_TECH_ITEMS["Progressive Growth"].name: 1,
                 },
                 when={
                     "progressive_techs": True,
