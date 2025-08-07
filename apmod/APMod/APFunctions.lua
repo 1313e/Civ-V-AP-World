@@ -213,6 +213,7 @@ end
 function ChangeNumFreeTechs(value)
 	-- Change number of free people to choose for player by given value
 	player:SetNumFreeTechs(player:GetNumFreeTechs()+value)
+	player:AddNotification(NotificationTypes.NOTIFICATION_FREE_TECH, "You may choose a free Tech!")
 end
 
 function ChangeNewCityExtraPopulation(value)
