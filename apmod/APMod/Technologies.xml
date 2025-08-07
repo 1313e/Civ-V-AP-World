@@ -2619,7 +2619,7 @@
 			<GoodyTech>false</GoodyTech>
 			<GridX>3</GridX>
 			<GridY>4</GridY>
-			<Quote>[NEWLINE]If you have a good quote to put here, please DM me ([COLOR_POSITIVE_TEXT]@1313e[ENDCOLOR])</Quote>
+			<Quote>[NEWLINE]"If you could see the vegetables I grow with my own hands, you wouldn't talk to me about empire."[NEWLINE] - Roman Emperor Diocletian (suggested by [COLOR_POSITIVE_TEXT]@vanhalt[ENDCOLOR])</Quote>
 			<PortraitIndex>0</PortraitIndex>
 			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
 		</Row>
@@ -2635,7 +2635,7 @@
 			<GoodyTech>false</GoodyTech>
 			<GridX>6</GridX>
 			<GridY>4</GridY>
-			<Quote>[NEWLINE]If you have a good quote to put here, please DM me ([COLOR_POSITIVE_TEXT]@1313e[ENDCOLOR])</Quote>
+			<Quote>[NEWLINE]"Had I been present at the Creation, I would have given some useful hints for the better ordering of the universe."[NEWLINE] - Alfonso X, King of Castile (suggested by [COLOR_POSITIVE_TEXT]@vanhalt[ENDCOLOR])</Quote>
 			<PortraitIndex>0</PortraitIndex>
 			<IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
 		</Row>
