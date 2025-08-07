@@ -1,7 +1,5 @@
 # Archipelago for Civilization V
 
-**Civilization V ap world is in the early stages of testing and may be unstable.**
-
 ## Required Software
 
 - Civilization V on the Steam store with both Gods & Kings and Brave New World Expansions. Other versions will not work due to adjustments the expansions made to the base game.
@@ -37,18 +35,16 @@ If it is not there, then the APWorld is not installed correctly.
 
 
 ## Known issues
-- Leaving a game and starting a new one will not send all received checks again. 
-  For now, please close the `Civ V Client` entirely and restart it to receive all checks again.
-- Leaving a game and starting a new one does not automatically mark all completed checks in this seed as already done.
-  I am working on a solution for this (part of my improvement ideas list below)
+- Receiving a policy as an item will very briefly show the "Free Policy" notification.
+  This notification stays (and is not true) if you happened to receive one on the same turn as you can adopt an AP policy.
+  It is sadly not possible to fix this.
 
 If you find any other ones, please post a message in the [AP Discord](https://discord.com/channels/731205301247803413/1342924294757552229) and ping me (@1313e) in the message.
 
 
 ## Future implementation/improvement ideas
 Some ideas I currently have that I want to look into (in order of priority):
-- Storing AP connection info on save file and reconnect automatically when launching.
-- Starting new game with same AP slot automatically researches all checks already sent.
-- Adding a way of seeing what technologies/checks you have received in-game.
-- Allowing certain technologies to be forced early. For example, Mining; Animal Husbandry; and Irrigation are kinda critical and I would assume you want them somewhat early.
+- Adding ability to add a specific required victory to the AP. Adding logic for all victory conditions.
+- Creating a Poptracker pack for the AP.
+- Allowing certain technologies to be forced early. For example, Mining; Trapping; and Calendar are kinda critical and I would assume you want them somewhat early.
 - Adding a bunch of additional stuff to the checks list: Culture; eras; city-states; trade routes; barbarian camps; etc.

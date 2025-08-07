@@ -74,7 +74,7 @@ class EnableTraps(Toggle):
 
 
 class TrapBlacklist(OptionSet):
-    f"""
+    """
     Blacklist the given traps from being included in the filler item pool.
 
     Has no effect if traps are not enabled.
