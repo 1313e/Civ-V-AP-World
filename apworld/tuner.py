@@ -163,7 +163,7 @@ class Tuner:
         """
 
         # Build up the command message to send
-        message = b"CMD:0:" + f"GameCore.Game.{command}".encode("utf-8") + b"\x00"
+        message = b"CMD:0:" + f"GameCore.Game.AP.{command}".encode("utf-8") + b"\x00"
         message_length = len(message).to_bytes(1, byteorder='little')
         command_string = message_length + b"\x00\x00\x00\x03\x00\x00\x00" + message
 
@@ -281,6 +281,14 @@ class Tuner:
 
         await self._send_mod_command(f"ChangeNumFreeTechs({value})")
 
+    async def change_all_city_population(self, value: int) -> None:
+        """
+        Changes the number of population in all cities by the given `value`.
+
+        """
+
+        await self._send_mod_command(f"ChangeAllCityPopulation({value})")
+
     async def change_new_city_extra_population(self, value: int) -> None:
         """
         Changes the number of extra population for new cities by the given `value`.
@@ -312,6 +320,14 @@ class Tuner:
         """
 
         await self._send_mod_command(f"StartGoldenAge({value})")
+
+    async def denounce_random(self, value: int) -> None:
+        """
+        Denounces `value` times the player by an AI player at random.
+
+        """
+
+        await self._send_mod_command(f"DenounceRandom({value})")
 
     async def declare_war_random(self, value: int) -> None:
         """

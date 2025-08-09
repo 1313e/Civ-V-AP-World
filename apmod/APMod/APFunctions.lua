@@ -1,3 +1,6 @@
+AP = {}
+Game.AP = AP
+
 local CLIENT_PREFIX = "APSTART:"
 local CLIENT_POSTFIX = ":APEND"
 local LOWER_POLICY_BRANCH_ID = 0
@@ -8,10 +11,9 @@ local UPPER_POLICY_ID = 155
 local LOWER_TECH_ID = 83
 local UPPER_TECH_ID = 168
 
-local player = Players[Game.GetActivePlayer()];
-local team = Teams[player:GetTeam()];
-local teamTechs = team:GetTeamTechs();
-local maxNumberOfTeams = 22;
+local player = Players[Game.GetActivePlayer()]
+local team = Teams[player:GetTeam()]
+local teamTechs = team:GetTeamTechs()
 
 local pushTable = {}
 local pushTableTableKeys = {policy=true, policy_branch=true, tech=true, national_wonder=true, world_wonder=true}
@@ -145,111 +147,69 @@ function OnEndGameShow(endGameType, teamId)
 end
 
 
--- CALLABLES
+-- INTERNAL CALLABLES
 function printResponse(response)
 	-- Define format for all function responses
 	print(CLIENT_PREFIX .. response .. CLIENT_POSTFIX)
 end
 
-function IsModReady()
-	-- If this function can be reached and executed, the APMod is ready
-	printResponse('{"ready": true}')
-end
+function RequestSync()
+	-- Request the syncing of all locations
+	pushTable["sync"] = true
 
-function GrantPolicies(policyIds)
-	-- Grant all given policy IDs to the player
-	for _, policyId in ipairs(policyIds) do
-		-- If this policy is a non-AP policy, we want to give it to the player for free
-		-- This avoids the policy culture cost going up when receiving policy items
-		-- For whatever reason, the following marks the next policy granted as free
-		if(policyId < LOWER_POLICY_ID) then
-			player:ChangeNumFreePolicies(1);
-			player:ChangeNumFreePolicies(-1);
-		end
-		player:SetHasPolicy(policyId, true);
-	end
-end
-
-function UnlockPolicyBranches(policyBranchIds)
-	-- Unlock all given policy branch IDs for the player
-	-- This is only used for syncing
-	for _, policyBranchId in ipairs(policyBranchIds) do
-		player:SetPolicyBranchUnlocked(policyBranchId, true);
-	end
-end
-
-function GrantTechs(techIds)
-	-- Grant all given tech IDs to the player
-	for _, techId in ipairs(techIds) do
-		team:SetHasTech(techId, true);
-	end
-end
-
-function ChangeGold(value)
-	-- Change gold for player by given value
-	player:ChangeGold(value)
-end
-
-function ChangeCulture(value)
-	-- Change culture for player by given value
-	player:ChangeJONSCulture(value)
-end
-
-function ChangeFaith(value)
-	-- Change faith for player by given value
-	player:ChangeFaith(value)
-end
-
-function ChangeNumFreeGreatPeople(value)
-	-- Change number of free people to choose for player by given value
-	player:ChangeNumFreeGreatPeople(value)
-end
-
-function ChangeNumFreePolicies(value)
-	-- Change number of free policies to choose for player by given value
-	player:ChangeNumFreePolicies(value)
-end
-
-function ChangeNumFreeTechs(value)
-	-- Change number of free people to choose for player by given value
-	player:SetNumFreeTechs(player:GetNumFreeTechs()+value)
-	player:AddNotification(NotificationTypes.NOTIFICATION_FREE_TECH, "You may choose a free Tech!")
-end
-
-function ChangeNewCityExtraPopulation(value)
-	-- Change the extra population a new city is given for the player by given value
-	player:ChangeNewCityExtraPopulation(value)
-end
-
-function ChangeCulturePerTurnForFree(value)
-	-- Change the amount of free culture the player gets per turn by given value
-	player:ChangeJONSCulturePerTurnForFree(value)
-end
-
-function ChangeExtraHappinessPerCity(value)
-	-- Change the amount of extra happiness the player gets per city by given value
-	player:ChangeExtraHappinessPerCity(value)
-end
-
-function StartGoldenAge(n)
-	-- Immediately start a golden age for the player n times
-	for _=1, n do
-		player:ChangeGoldenAgeTurns(player:GetGoldenAgeLength())
-	end
-end
-
-function DeclareWarRandom(n)
-	-- Get the IDs of all teams that are still alive that are not the player
-	aiTeamIds = {}
-	for i=1, maxNumberOfTeams-1 do
-		if Teams[i]:IsAlive() then
-			table.insert(aiTeamIds, i)
+	-- Add all adopted policies to the push table
+	for i=LOWER_POLICY_ID, UPPER_POLICY_ID do
+		if player:HasPolicy(i) then
+			table.insert(pushTable["policy"], i)
 		end
 	end
 
-	-- Pick n times a random team that declares war on the player
-	for _=1, n do
-		Teams[aiTeamIds[math.random(1, #aiTeamIds)]]:DeclareWar(team:GetID())
+	-- Add all unlocked and finished policy branches to the push table
+	for i=LOWER_POLICY_BRANCH_ID, UPPER_POLICY_BRANCH_ID do
+		if player:IsPolicyBranchUnlocked(i) then
+			table.insert(pushTable["policy_branch"], i)
+
+			-- Check if all AP policies in this branch have been adopted
+			finished = true
+			for _, apPolicyId in ipairs(policyBranchIdToAPPolicyIds[i]) do
+				if not player:HasPolicy(apPolicyId) then
+					finished = false
+					break
+				end
+			end
+
+			-- If finished is still true, all AP policies have been adopted and thus branch is finished
+			if finished then
+				table.insert(pushTable["policy_branch"], i+POLICY_BRANCH_FINISHER_OFFSET)
+			end
+		end
+	end
+
+	-- Add all researched technologies to the push table
+	for i=LOWER_TECH_ID, UPPER_TECH_ID do
+		if teamTechs:HasTech(i) then
+		    table.insert(pushTable["tech"], i)
+		end
+	end
+
+	-- Add all constructed national wonders to the push table
+	for i in pairs(nationalWonderBuildingIds) do
+		for cityId=0, player:GetNumCities()-1 do
+			if player:GetCityByID(cityId):IsHasBuilding(i) then
+				table.insert(pushTable["national_wonder"], i)
+				break
+			end
+		end
+	end
+
+	-- Add all constructed world wonders to the push table
+	for i in pairs(worldWonderBuildingIds) do
+		for cityId=0, player:GetNumCities()-1 do
+			if player:GetCityByID(cityId):IsHasBuilding(i) then
+				table.insert(pushTable["world_wonder"], i)
+				break
+			end
+		end
 	end
 end
 
@@ -265,7 +225,134 @@ function InitPushTable()
 	end
 end
 
-function GetPushTable()
+
+-- PUBLIC CALLABLES
+function AP.IsModReady()
+	-- If this function can be reached and executed, the APMod is ready
+	printResponse('{"ready": true}')
+end
+
+function AP.GrantPolicies(policyIds)
+	-- Grant all given policy IDs to the player
+	for _, policyId in ipairs(policyIds) do
+		-- If this policy is a non-AP policy, we want to give it to the player for free
+		-- This avoids the policy culture cost going up when receiving policy items
+		-- For whatever reason, the following marks the next policy granted as free
+		if(policyId < LOWER_POLICY_ID) then
+			player:ChangeNumFreePolicies(1);
+			player:ChangeNumFreePolicies(-1);
+		end
+		player:SetHasPolicy(policyId, true);
+	end
+end
+
+function AP.UnlockPolicyBranches(policyBranchIds)
+	-- Unlock all given policy branch IDs for the player
+	-- This is only used for syncing
+	for _, policyBranchId in ipairs(policyBranchIds) do
+		player:SetPolicyBranchUnlocked(policyBranchId, true);
+	end
+end
+
+function AP.GrantTechs(techIds)
+	-- Grant all given tech IDs to the player
+	for _, techId in ipairs(techIds) do
+		team:SetHasTech(techId, true);
+	end
+end
+
+function AP.ChangeGold(value)
+	-- Change gold for player by given value
+	player:ChangeGold(value)
+end
+
+function AP.ChangeCulture(value)
+	-- Change culture for player by given value
+	player:ChangeJONSCulture(value)
+end
+
+function AP.ChangeFaith(value)
+	-- Change faith for player by given value
+	player:ChangeFaith(value)
+end
+
+function AP.ChangeNumFreeGreatPeople(value)
+	-- Change number of free people to choose for player by given value
+	player:ChangeNumFreeGreatPeople(value)
+end
+
+function AP.ChangeNumFreePolicies(value)
+	-- Change number of free policies to choose for player by given value
+	player:ChangeNumFreePolicies(value)
+end
+
+function AP.ChangeNumFreeTechs(value)
+	-- Change number of free techs to choose for player by given value
+	player:SetNumFreeTechs(player:GetNumFreeTechs()+value)
+	player:AddNotification(NotificationTypes.NOTIFICATION_FREE_TECH, "You may choose a free Tech!")
+end
+
+function AP.ChangeAllCityPopulation(value)
+	-- Change the population in each city of the player by given value
+	for i=0, player:GetNumCities()-1 do
+		city = player:GetCityByID(i)
+		city:SetPopulation(math.max(city:GetPopulation()+value, 1), true)
+	end
+end
+
+function AP.ChangeNewCityExtraPopulation(value)
+	-- Change the extra population a new city is given for the player by given value
+	player:ChangeNewCityExtraPopulation(value)
+end
+
+function AP.ChangeCulturePerTurnForFree(value)
+	-- Change the amount of free culture the player gets per turn by given value
+	player:ChangeJONSCulturePerTurnForFree(value)
+end
+
+function AP.ChangeExtraHappinessPerCity(value)
+	-- Change the amount of extra happiness the player gets per city by given value
+	player:ChangeExtraHappinessPerCity(value)
+end
+
+function AP.StartGoldenAge(n)
+	-- Immediately start a golden age for the player n times
+	for _=1, n do
+		player:ChangeGoldenAgeTurns(player:GetGoldenAgeLength())
+	end
+end
+
+function AP.DenounceRandom(n)
+	-- Get the IDs of all players that are still alive that are not the player or in the team of the player
+	aiPlayerIds = {}
+	for i=1, GameDefines.MAX_MAJOR_CIVS-1 do
+		if(Players[i]:IsAlive() and Players[i]:GetTeam() ~= player:GetTeam()) then
+			table.insert(aiPlayerIds, i)
+		end
+	end
+
+	-- Pick n times a random AI player that denounces the player
+	for _=1, n do
+		Players[aiPlayerIds[math.random(1, #aiPlayerIds)]]:DoForceDenounce(player:GetID())
+	end
+end
+
+function AP.DeclareWarRandom(n)
+	-- Get the IDs of all teams that are still alive that are not the player
+	aiTeamIds = {}
+	for i=1, GameDefines.MAX_MAJOR_CIVS-1 do
+		if Teams[i]:IsAlive() then
+			table.insert(aiTeamIds, i)
+		end
+	end
+
+	-- Pick n times a random AI team that declares war on the player
+	for _=1, n do
+		Teams[aiTeamIds[math.random(1, #aiTeamIds)]]:DeclareWar(team:GetID())
+	end
+end
+
+function AP.GetPushTable()
 	-- Loop over all pairs in the push table
 	jsonStrings = {}
 	for key, value in pairs(pushTable) do
@@ -286,35 +373,6 @@ function GetPushTable()
 	-- Print the response as a single JSON object and reset the push table
 	printResponse(table.concat({"{", table.concat(jsonStrings, ","), "}"}))
 	InitPushTable()
-end
-
-function RequestSync()
-	-- Request the syncing of all locations
-	pushTable["sync"] = true
-
-	-- Add all adopted policies to the push table
-	for i=LOWER_POLICY_ID, UPPER_POLICY_ID do
-		if player:HasPolicy(i) then
-			table.insert(pushTable["policy"], i)
-		end
-	end
-
-	-- Add all unlocked and finished policy branches to the push table
-	for i=LOWER_POLICY_BRANCH_ID, UPPER_POLICY_BRANCH_ID do
-		if player:IsPolicyBranchUnlocked(i) then
-			table.insert(pushTable["policy_branch"], i)
-			if player:IsPolicyBranchFinished(i) then
-				table.insert(pushTable["policy_branch"], i+POLICY_BRANCH_FINISHER_OFFSET)
-			end
-		end
-	end
-
-	-- Add all researched technologies to the push table
-	for i=LOWER_TECH_ID, UPPER_TECH_ID do
-		if teamTechs:HasTech(i) then
-		    table.insert(pushTable["tech"], i)
-		end
-	end
 end
 
 
@@ -349,21 +407,3 @@ function Init()
 end
 
 Init()
-
-Game.IsModReady = IsModReady
-Game.GrantTechs = GrantTechs
-Game.GrantPolicies = GrantPolicies
-Game.UnlockPolicyBranches = UnlockPolicyBranches
-Game.ChangeGold = ChangeGold
-Game.ChangeCulture = ChangeCulture
-Game.ChangeFaith = ChangeFaith
-Game.ChangeNumFreeGreatPeople = ChangeNumFreeGreatPeople
-Game.ChangeNumFreePolicies = ChangeNumFreePolicies
-Game.ChangeNumFreeTechs = ChangeNumFreeTechs
-Game.ChangeNewCityExtraPopulation = ChangeNewCityExtraPopulation
-Game.ChangeCulturePerTurnForFree = ChangeCulturePerTurnForFree
-Game.ChangeExtraHappinessPerCity = ChangeExtraHappinessPerCity
-Game.ChangeCulturePerTurnForFree = ChangeCulturePerTurnForFree
-Game.StartGoldenAge = StartGoldenAge
-Game.DeclareWarRandom = DeclareWarRandom
-Game.GetPushTable = GetPushTable

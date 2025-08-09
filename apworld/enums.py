@@ -12,6 +12,7 @@ class CivVFillerType(StrEnum):
 
     """
 
+    change_all_city_population = "change_all_city_population"
     change_culture = "change_culture"
     change_culture_per_turn_for_free = "change_culture_per_turn_for_free"
     change_extra_happiness_per_city = "change_extra_happiness_per_city"
@@ -22,6 +23,7 @@ class CivVFillerType(StrEnum):
     change_gold = "change_gold"
     change_new_city_extra_population = "change_new_city_extra_population"
     declare_war_random = "declare_war_random"
+    denounce_random = "denounce_random"
     start_golden_age = "start_golden_age"
 
 

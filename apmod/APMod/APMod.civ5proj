@@ -5,15 +5,15 @@
     <ProjectGuid>{b035c588-14ca-472e-b2dd-782d1284a10e}</ProjectGuid>
     <Name>CivVAPMod</Name>
     <Guid>9990c668-41e5-4a30-bcb1-a864a325215e</Guid>
-    <ModVersion>7</ModVersion>
-    <Stability>Alpha</Stability>
+    <ModVersion>8</ModVersion>
+    <Stability>Beta</Stability>
     <Teaser>Civ V mod for archipelago randomizer</Teaser>
     <Description>Civ V mod for archipelago randomizer</Description>
     <Authors>1313e, Battary</Authors>
     <SpecialThanks>
     </SpecialThanks>
     <AffectsSavedGames>true</AffectsSavedGames>
-    <MinCompatibleSaveVersion>7</MinCompatibleSaveVersion>
+    <MinCompatibleSaveVersion>8</MinCompatibleSaveVersion>
     <SupportsSinglePlayer>true</SupportsSinglePlayer>
     <SupportsMultiplayer>true</SupportsMultiplayer>
     <SupportsHotSeat>true</SupportsHotSeat>

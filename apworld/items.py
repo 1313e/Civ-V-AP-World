@@ -54,7 +54,7 @@ class CivVItem(Item):
 @dataclass
 class ItemRequirements:
     """
-    Dataclass used for specifying the item requirements of a region or location within Civ V.
+    Dataclass used for specifying the item requirements of a region or location.
 
     """
 
@@ -121,7 +121,7 @@ class ItemRequirements:
 @dataclass
 class CivVItemData:
     """
-    Dataclass used for specifying an item within Civ V.
+    Dataclass used for specifying an item.
 
     """
 
@@ -130,11 +130,11 @@ class CivVItemData:
     type: CivVItemType
     "Type of this item"
     game_ids: list[int] | None
-    "IDs of this item with this item type within Civ V. If None, this item has no defined count"
+    "IDs of this item with this item type. If None, this item has no defined count"
     classification: ItemClassification
     "Classification of this item"
     count: int | None = field(init=False)
-    "Number of times this item exists within Civ V. If None, this item has no defined count"
+    "Number of times this item exists. If None, this item has no defined count"
     groups: set[CivVItemGroup | CivVItemType] = field(default_factory=set)
     "Set of groups this item belongs to. The type of this item is always part of this set"
     prefix: str | None = None
@@ -166,22 +166,22 @@ class CivVItemData:
 @dataclass
 class CivVUsefulItemData(CivVItemData):
     """
-    Dataclass used for specifying an item within Civ V.
+    Dataclass used for specifying an item.
 
     """
 
     game_ids: list[int]
-    "IDs of this item with this item type within Civ V"
+    "IDs of this item with this item type"
     classification: Literal[ItemClassification.progression, ItemClassification.useful]
     "Classification of this item"
     count: int = field(init=False)
-    "Number of times this item exists within Civ V"
+    "Number of times this item exists"
 
 
 @dataclass
 class CivVFillerItemData(CivVItemData):
     """
-    Dataclass used for specifying a filler item within Civ V.
+    Dataclass used for specifying a filler item.
 
     """
 
@@ -210,7 +210,7 @@ PROGRESSIVE_ERA_ITEM = CivVUsefulItemData(
     game_ids=[169, 170, 171, 172, 173, 174, 175],
     classification=ItemClassification.progression,
 )
-"Progressive era item within Civ V"
+"Progressive era item"
 
 TECH_ITEMS = {
     "Pottery": CivVUsefulItemData(
@@ -767,7 +767,7 @@ TECH_ITEMS = {
         groups={CivVItemGroup.information_era},
     ),
 }
-"Dict of all technologies within Civ V"
+"Dict of all technologies"
 
 PROGRESSIVE_TECH_ITEMS = {
     "Progressive Growth": CivVUsefulItemData(
@@ -837,7 +837,7 @@ PROGRESSIVE_TECH_ITEMS = {
         classification=ItemClassification.progression,
     ),
 }
-"Dict of all progressive technologies within Civ V"
+"Dict of all progressive technologies"
 
 
 POLICY_ITEMS = {
@@ -1238,7 +1238,7 @@ POLICY_ITEMS = {
         prefix="Policy Branch",
     ),
 }
-"Dict of all policies within Civ V"
+"Dict of all policies"
 
 
 # %% FILLER ITEM DEFINITIONS
@@ -1271,7 +1271,7 @@ GOLD_FILLER_ITEMS = {
         }
     ),
 }
-"Dict of all gold filler items within Civ V"
+"Dict of all gold filler items"
 
 
 CULTURE_FILLER_ITEMS = {
@@ -1303,7 +1303,7 @@ CULTURE_FILLER_ITEMS = {
         }
     ),
 }
-"Dict of all culture filler items within Civ V"
+"Dict of all culture filler items"
 
 
 FAITH_FILLER_ITEMS = {
@@ -1335,7 +1335,7 @@ FAITH_FILLER_ITEMS = {
         }
     ),
 }
-"Dict of all faith filler items within Civ V"
+"Dict of all faith filler items"
 
 
 FREE_FILLER_ITEMS = {
@@ -1367,6 +1367,30 @@ FREE_FILLER_ITEMS = {
         }
     ),
 }
+"Dict of free reward filler items"
+
+
+ALL_CITY_POPULATION_FILLER_ITEMS = {
+    "All City Population +1": CivVFillerItemData(
+        name="All City Population +1",
+        type=CivVItemType.bonus,
+        classification=ItemClassification.filler,
+        weight=5,
+        action={
+            CivVFillerType.change_all_city_population: 1,
+        }
+    ),
+    "All City Population +2": CivVFillerItemData(
+        name="All City Population +2",
+        type=CivVItemType.bonus,
+        classification=ItemClassification.filler,
+        weight=2,
+        action={
+            CivVFillerType.change_all_city_population: 2,
+        }
+    ),
+}
+"Dict of city population filler items"
 
 
 NEW_CITY_EXTRA_POPULATION_FILLER_ITEMS = {
@@ -1389,6 +1413,7 @@ NEW_CITY_EXTRA_POPULATION_FILLER_ITEMS = {
         }
     ),
 }
+"Dict of extra population in newly founded cities filler items"
 
 
 EXTRA_HAPPINESS_PER_CITY_FILLER_ITEMS = {
@@ -1402,6 +1427,7 @@ EXTRA_HAPPINESS_PER_CITY_FILLER_ITEMS = {
         }
     ),
 }
+"Dict of extra happiness per city filler items"
 
 
 GOLDEN_AGE_FILLER_ITEM = CivVFillerItemData(
@@ -1413,6 +1439,7 @@ GOLDEN_AGE_FILLER_ITEM = CivVFillerItemData(
         CivVFillerType.start_golden_age: 1,
     }
 )
+"Golden age filler item"
 
 
 # %% TRAP ITEM DEFINITIONS
@@ -1445,7 +1472,7 @@ GOLD_TRAP_ITEMS = {
         }
     ),
 }
-"Dict of all gold trap items within Civ V"
+"Dict of all gold trap items"
 
 
 CULTURE_TRAP_ITEMS = {
@@ -1477,7 +1504,7 @@ CULTURE_TRAP_ITEMS = {
         }
     ),
 }
-"Dict of all culture trap items within Civ V"
+"Dict of all culture trap items"
 
 
 FAITH_TRAP_ITEMS = {
@@ -1509,7 +1536,42 @@ FAITH_TRAP_ITEMS = {
         }
     ),
 }
-"Dict of all faith trap items within Civ V"
+"Dict of all faith trap items"
+
+
+ALL_CITY_POPULATION_TRAP_ITEMS = {
+    "All City Population -1": CivVFillerItemData(
+        name="All City Population -1",
+        type=CivVItemType.bonus,
+        classification=ItemClassification.trap,
+        weight=5,
+        action={
+            CivVFillerType.change_all_city_population: -1,
+        }
+    ),
+    "All City Population -2": CivVFillerItemData(
+        name="All City Population -2",
+        type=CivVItemType.bonus,
+        classification=ItemClassification.trap,
+        weight=2,
+        action={
+            CivVFillerType.change_all_city_population: -2,
+        }
+    ),
+}
+"Dict of city population trap items"
+
+
+DENOUNCE_TRAP_ITEM = CivVFillerItemData(
+    name="Denounce",
+    type=CivVItemType.trap,
+    classification=ItemClassification.trap,
+    weight=2,
+    action={
+        CivVFillerType.denounce_random: 1,
+    }
+)
+"Denounce trap item"
 
 
 WAR_TRAP_ITEM = CivVFillerItemData(
@@ -1521,4 +1583,4 @@ WAR_TRAP_ITEM = CivVFillerItemData(
         CivVFillerType.declare_war_random: 1,
     }
 )
-"War trap item within Civ V"
+"War trap item"
