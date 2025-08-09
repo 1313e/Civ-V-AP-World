@@ -212,6 +212,7 @@ PROGRESSIVE_ERA_ITEM = CivVUsefulItemData(
 )
 "Progressive era item"
 
+
 TECH_ITEMS = {
     "Pottery": CivVUsefulItemData(
         name="Pottery",
@@ -769,6 +770,7 @@ TECH_ITEMS = {
 }
 "Dict of all technologies"
 
+
 PROGRESSIVE_TECH_ITEMS = {
     "Progressive Growth": CivVUsefulItemData(
         name="Progressive Growth",
@@ -791,13 +793,13 @@ PROGRESSIVE_TECH_ITEMS = {
     "Progressive Culture": CivVUsefulItemData(
         name="Progressive Culture",
         type=CivVItemType.tech,
-        game_ids=[16, 17, 32, 41, 52, 68, 74],
+        game_ids=[17, 32, 41, 52, 68, 74],
         classification=ItemClassification.progression,
     ),
     "Progressive Gold": CivVUsefulItemData(
         name="Progressive Gold",
         type=CivVItemType.tech,
-        game_ids=[2, 18, 23, 33, 38, 48],
+        game_ids=[2, 18, 23, 33, 38, 48, 75],
         classification=ItemClassification.progression,
     ),
     "Progressive Happiness": CivVUsefulItemData(
@@ -827,13 +829,13 @@ PROGRESSIVE_TECH_ITEMS = {
     "Progressive Siege Unit": CivVUsefulItemData(
         name="Progressive Siege Unit",
         type=CivVItemType.tech,
-        game_ids=[14, 29, 40, 50],
+        game_ids=[14, 29, 40, 50, 61, 65],
         classification=ItemClassification.progression,
     ),
     "Progressive Misc": CivVUsefulItemData(
         name="Progressive Misc",
         type=CivVItemType.tech,
-        game_ids=[9, 21, 37, 55, 61, 65, 75],
+        game_ids=[9, 16, 21, 37, 55],
         classification=ItemClassification.progression,
     ),
 }
@@ -1000,13 +1002,13 @@ POLICY_ITEMS = {
         name="Philanthropy",
         type=CivVItemType.policy,
         game_ids=[25],
-        classification=ItemClassification.useful,
+        classification=ItemClassification.progression,
     ),
     "Consulates": CivVUsefulItemData(
         name="Consulates",
         type=CivVItemType.policy,
         game_ids=[26],
-        classification=ItemClassification.useful,
+        classification=ItemClassification.progression,
     ),
     "Scholasticism": CivVUsefulItemData(
         name="Scholasticism",
@@ -1184,13 +1186,13 @@ POLICY_ITEMS = {
         name="Cultural Exchange",
         type=CivVItemType.policy,
         game_ids=[54],
-        classification=ItemClassification.useful,
+        classification=ItemClassification.progression,
     ),
     "Aesthetics Finisher": CivVUsefulItemData(
         name="Aesthetics Finisher",
         type=CivVItemType.policy,
         game_ids=[55],
-        classification=ItemClassification.useful,
+        classification=ItemClassification.progression,
         prefix="Policy Branch",
     ),
     "Exploration": CivVUsefulItemData(
@@ -1416,18 +1418,16 @@ NEW_CITY_EXTRA_POPULATION_FILLER_ITEMS = {
 "Dict of extra population in newly founded cities filler items"
 
 
-EXTRA_HAPPINESS_PER_CITY_FILLER_ITEMS = {
-    "Extra Happiness Per City +1": CivVFillerItemData(
-        name="Extra Happiness Per City +1",
-        type=CivVItemType.bonus,
-        classification=ItemClassification.filler,
-        weight=2,
-        action={
-            CivVFillerType.change_extra_happiness_per_city: 1,
-        }
-    ),
-}
-"Dict of extra happiness per city filler items"
+EXTRA_HAPPINESS_PER_CITY_FILLER_ITEM = CivVFillerItemData(
+    name="Extra Happiness Per City",
+    type=CivVItemType.bonus,
+    classification=ItemClassification.filler,
+    weight=2,
+    action={
+        CivVFillerType.change_extra_happiness_per_city: 1,
+    }
+)
+"Extra happiness per city filler item"
 
 
 GOLDEN_AGE_FILLER_ITEM = CivVFillerItemData(

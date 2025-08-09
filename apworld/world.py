@@ -5,6 +5,7 @@ from BaseClasses import Region, ItemClassification
 from worlds.AutoWorld import World
 
 from .constants import GAME_NAME
+from .enums import CivVLocationType
 from .items import (
     FILLER_ITEMS,
     ITEMS_DATA,
@@ -21,6 +22,7 @@ from .items import (
 )
 from .locations import (
     LOCATIONS_DATA,
+    LOCATIONS_DATA_BY_TYPE_ID,
     NATIONAL_WONDER_LOCATIONS,
     POLICY_BRANCH_LOCATIONS,
     POLICY_LOCATIONS,
@@ -193,13 +195,21 @@ class CivVWorld(World):
             location.access_rule = location_data.requirements.create_access_rule(self.player, self.options)
 
         # Add victory to the multiworld
-        victory_region = self.multiworld.get_region(ERA_REGIONS[self.options.era_goal.value].name, self.player)
+        victory_region = self.multiworld.get_region(ERA_REGIONS[self.options.era_goal_logic.value].name, self.player)
         victory_location = CivVLocation(
             player=self.player,
             name="Victory",
             address=None,
             parent=victory_region
         )
-        victory_location.place_locked_item(CivVItem("Victory", ItemClassification.progression, None, self.player))
         victory_region.locations.append(victory_location)
+
+        # If specific victory goal was set in the options, add its requirements access rule to the location
+        if self.options.victory_goal_logic.value:
+            victory_requirements = LOCATIONS_DATA_BY_TYPE_ID[
+                (CivVLocationType.victory, self.options.victory_goal_logic.value)].requirements
+            victory_location.access_rule = victory_requirements.create_access_rule(self.player, self.options)
+
+        # Place dummy Victory item at this location and add completion condition to the multiworld
+        victory_location.place_locked_item(CivVItem("Victory", ItemClassification.progression, None, self.player))
         self.multiworld.completion_condition[self.player] = lambda state: state.has("Victory", self.player)

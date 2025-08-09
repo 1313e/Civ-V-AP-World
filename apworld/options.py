@@ -9,13 +9,36 @@ __all__ = ["CivVOptions"]
 
 
 # %% OPTION CLASSES
-class EraGoal(Choice):
+class VictoryGoalLogic(Choice):
+    """
+    Which victory should be achievable before the game is considered beatable?
+
+    Note that this solely affects progression logic. You can still beat the game earlier than expected or pursue a
+    different victory if you so choose.
+
+    Domination and Time victories are not included here as Domination can be achieved at any moment and Time has no
+    requirements.
+
+    """
+
+    display_name = "Victory Goal Logic"
+    option_none = 0
+    option_science = 1
+    option_culture = 3
+    option_diplomatic = 4
+    default = option_none
+
+
+class EraGoalLogic(Choice):
     """
     Which era must be unlocked before the game is considered beatable?
 
+    This is in addition to the value given for "Victory Goal Logic".
+    Similarly, this solely affects progression logic.
+
     """
 
-    display_name = "Era Goal"
+    display_name = "Era Goal Logic"
     option_ancient = 0
     option_classical = 1
     option_medieval = 2
@@ -102,7 +125,8 @@ class TrapFillerChance(Range):
 # %% CIV V OPTIONS CLASS
 @dataclass
 class CivVOptions(PerGameCommonOptions):
-    era_goal: EraGoal
+    victory_goal_logic: VictoryGoalLogic
+    era_goal_logic: EraGoalLogic
     progressive_techs: ProgressiveTechs
     national_wonder_sanity: NationalWonderSanity
     world_wonder_sanity: WorldWonderSanity
