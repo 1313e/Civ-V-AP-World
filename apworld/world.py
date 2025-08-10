@@ -91,13 +91,11 @@ class CivVWorld(World):
         items_data = []
 
         # If traps are enabled and not all blacklisted, create both filler and trap items
-        if self.options.enable_traps and (len(self.options.trap_blacklist.value) < len(TRAP_ITEMS)):
-            # Get list of allowed traps
-            traps_list = [item_data for item_data in TRAP_ITEMS if item_data.name not in self.options.trap_blacklist]
-            n_traps = len(traps_list)
-            trap_chance = self.options.trap_filler_chance/100
-
+        traps_list = [item_data for item_data in TRAP_ITEMS if item_data.name not in self.options.trap_blacklist]
+        if self.options.enable_traps and traps_list:
             # Generate n filler items
+            n_traps = len(traps_list)
+            trap_chance = self.options.trap_filler_chance / 100
             for _ in range(n):
                 # Determine if filler item or trap should be chosen
                 if self.random.random() <= trap_chance:

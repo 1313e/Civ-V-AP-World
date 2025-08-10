@@ -1542,7 +1542,7 @@ FAITH_TRAP_ITEMS = {
 ALL_CITY_POPULATION_TRAP_ITEMS = {
     "All City Population -1": CivVFillerItemData(
         name="All City Population -1",
-        type=CivVItemType.bonus,
+        type=CivVItemType.trap,
         classification=ItemClassification.trap,
         weight=5,
         action={
@@ -1551,7 +1551,7 @@ ALL_CITY_POPULATION_TRAP_ITEMS = {
     ),
     "All City Population -2": CivVFillerItemData(
         name="All City Population -2",
-        type=CivVItemType.bonus,
+        type=CivVItemType.trap,
         classification=ItemClassification.trap,
         weight=2,
         action={
