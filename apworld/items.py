@@ -107,7 +107,7 @@ class ItemRequirements:
         for options_dct, requirements_dct in self.option_requirements:
             # Check if this options requirements applies and add it to the dict of requirements if so
             if all((getattr(options, name, None) == value for name, value in options_dct.items())):
-                requirements |= requirements_dct
+                requirements = requirements | requirements_dct
 
         # Create rule function that uses the CollectionState to determine if region/location is reachable
         def rule(state: CollectionState) -> bool:
