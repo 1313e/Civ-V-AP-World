@@ -13,7 +13,7 @@ from Utils import init_logging
 
 from .context import CivVContext
 from .constants import ADDRESS, GAME_NAME, GAME_READY, GAME_NOT_READY, MOD_READY, MOD_NOT_READY, PORT
-from .enums import CivVFillerType, CivVLocationType, CivVItemType
+from .enums import CivVLocationType, CivVItemType
 from .exceptions import TunerConnectionException
 from .items import ITEMS_DATA_BY_ID
 from .locations import LOCATIONS_DATA_BY_ID, LOCATIONS_DATA_BY_TYPE_ID

@@ -191,6 +191,7 @@
             <CultureCost>10</CultureCost>
             <GridX>1</GridX>
             <GridY>1</GridY>
+            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -206,6 +207,7 @@
             <CultureCost>10</CultureCost>
             <GridX>3</GridX>
             <GridY>1</GridY>
+            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -221,6 +223,7 @@
             <CultureCost>10</CultureCost>
             <GridX>3</GridX>
             <GridY>2</GridY>
+            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -236,6 +239,7 @@
             <CultureCost>10</CultureCost>
             <GridX>2</GridX>
             <GridY>3</GridY>
+            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -251,6 +255,7 @@
             <CultureCost>10</CultureCost>
             <GridX>4</GridX>
             <GridY>3</GridY>
+            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -266,6 +271,7 @@
             <CultureCost>10</CultureCost>
             <GridX>1</GridX>
             <GridY>1</GridY>
+            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -281,6 +287,7 @@
             <CultureCost>10</CultureCost>
             <GridX>4</GridX>
             <GridY>1</GridY>
+            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -296,6 +303,7 @@
             <CultureCost>10</CultureCost>
             <GridX>1</GridX>
             <GridY>2</GridY>
+            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -311,6 +319,7 @@
             <CultureCost>10</CultureCost>
             <GridX>3</GridX>
             <GridY>2</GridY>
+            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -326,6 +335,7 @@
             <CultureCost>10</CultureCost>
             <GridX>5</GridX>
             <GridY>2</GridY>
+            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -341,6 +351,7 @@
             <CultureCost>10</CultureCost>
             <GridX>2</GridX>
             <GridY>1</GridY>
+            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -356,6 +367,7 @@
             <CultureCost>10</CultureCost>
             <GridX>4</GridX>
             <GridY>1</GridY>
+            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -371,6 +383,7 @@
             <CultureCost>10</CultureCost>
             <GridX>2</GridX>
             <GridY>2</GridY>
+            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -386,6 +399,7 @@
             <CultureCost>10</CultureCost>
             <GridX>4</GridX>
             <GridY>2</GridY>
+            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -401,6 +415,7 @@
             <CultureCost>10</CultureCost>
             <GridX>4</GridX>
             <GridY>3</GridY>
+            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -416,6 +431,7 @@
             <CultureCost>10</CultureCost>
             <GridX>2</GridX>
             <GridY>1</GridY>
+            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -431,6 +447,7 @@
             <CultureCost>10</CultureCost>
             <GridX>5</GridX>
             <GridY>1</GridY>
+            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -446,6 +463,7 @@
             <CultureCost>10</CultureCost>
             <GridX>1</GridX>
             <GridY>2</GridY>
+            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -461,6 +479,7 @@
             <CultureCost>10</CultureCost>
             <GridX>3</GridX>
             <GridY>2</GridY>
+            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -476,6 +495,7 @@
             <CultureCost>10</CultureCost>
             <GridX>3</GridX>
             <GridY>3</GridY>
+            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -491,6 +511,7 @@
             <CultureCost>10</CultureCost>
             <GridX>2</GridX>
             <GridY>1</GridY>
+            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_CLASSICAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -506,6 +527,7 @@
             <CultureCost>10</CultureCost>
             <GridX>4</GridX>
             <GridY>1</GridY>
+            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_CLASSICAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -521,6 +543,7 @@
             <CultureCost>10</CultureCost>
             <GridX>2</GridX>
             <GridY>2</GridY>
+            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_CLASSICAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -536,6 +559,7 @@
             <CultureCost>10</CultureCost>
             <GridX>2</GridX>
             <GridY>3</GridY>
+            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_CLASSICAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -551,6 +575,7 @@
             <CultureCost>10</CultureCost>
             <GridX>4</GridX>
             <GridY>3</GridY>
+            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_CLASSICAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -566,6 +591,7 @@
             <CultureCost>10</CultureCost>
             <GridX>2</GridX>
             <GridY>1</GridY>
+            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_CLASSICAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -581,6 +607,7 @@
             <CultureCost>10</CultureCost>
             <GridX>4</GridX>
             <GridY>1</GridY>
+            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_CLASSICAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -596,6 +623,7 @@
             <CultureCost>10</CultureCost>
             <GridX>2</GridX>
             <GridY>2</GridY>
+            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_CLASSICAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -611,6 +639,7 @@
             <CultureCost>10</CultureCost>
             <GridX>4</GridX>
             <GridY>2</GridY>
+            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_CLASSICAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -626,6 +655,7 @@
             <CultureCost>10</CultureCost>
             <GridX>2</GridX>
             <GridY>3</GridY>
+            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_CLASSICAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -641,6 +671,7 @@
             <CultureCost>10</CultureCost>
             <GridX>2</GridX>
             <GridY>1</GridY>
+            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -656,6 +687,7 @@
             <CultureCost>10</CultureCost>
             <GridX>4</GridX>
             <GridY>1</GridY>
+            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -671,6 +703,7 @@
             <CultureCost>10</CultureCost>
             <GridX>2</GridX>
             <GridY>2</GridY>
+            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -686,6 +719,7 @@
             <CultureCost>10</CultureCost>
             <GridX>4</GridX>
             <GridY>2</GridY>
+            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -701,6 +735,7 @@
             <CultureCost>10</CultureCost>
             <GridX>4</GridX>
             <GridY>3</GridY>
+            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -716,6 +751,7 @@
             <CultureCost>10</CultureCost>
             <GridX>2</GridX>
             <GridY>1</GridY>
+            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -731,6 +767,7 @@
             <CultureCost>10</CultureCost>
             <GridX>4</GridX>
             <GridY>1</GridY>
+            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -746,6 +783,7 @@
             <CultureCost>10</CultureCost>
             <GridX>2</GridX>
             <GridY>2</GridY>
+            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -761,6 +799,7 @@
             <CultureCost>10</CultureCost>
             <GridX>4</GridX>
             <GridY>2</GridY>
+            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -776,6 +815,7 @@
             <CultureCost>10</CultureCost>
             <GridX>2</GridX>
             <GridY>3</GridY>
+            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -791,6 +831,7 @@
             <CultureCost>10</CultureCost>
             <GridX>2</GridX>
             <GridY>1</GridY>
+            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -806,6 +847,7 @@
             <CultureCost>10</CultureCost>
             <GridX>4</GridX>
             <GridY>1</GridY>
+            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -821,6 +863,7 @@
             <CultureCost>10</CultureCost>
             <GridX>2</GridX>
             <GridY>2</GridY>
+            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -836,6 +879,7 @@
             <CultureCost>10</CultureCost>
             <GridX>4</GridX>
             <GridY>2</GridY>
+            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -851,6 +895,7 @@
             <CultureCost>10</CultureCost>
             <GridX>2</GridX>
             <GridY>3</GridY>
+            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
