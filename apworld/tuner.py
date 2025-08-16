@@ -215,7 +215,9 @@ class Tuner:
 
         """
 
-        await self._send_mod_command(f"GrantPolicies({{{','.join(map(str, policy_ids))}}})")
+        # Grant all policies in batches of 10
+        for i in range(0, len(policy_ids), 10):
+            await self._send_mod_command(f"GrantPolicies({{{','.join(map(str, policy_ids[i:i+10]))}}})")
 
     async def unlock_policy_branches(self, *policy_branch_ids: int) -> None:
         """
@@ -231,7 +233,9 @@ class Tuner:
 
         """
 
-        await self._send_mod_command(f"GrantTechs({{{','.join(map(str, tech_ids))}}})")
+        # Grant all techs in batches of 10
+        for i in range(0, len(tech_ids), 10):
+            await self._send_mod_command(f"GrantTechs({{{','.join(map(str, tech_ids[i:i+10]))}}})")
 
     async def change_gold(self, value: int) -> None:
         """
