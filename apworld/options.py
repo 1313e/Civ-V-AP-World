@@ -1,5 +1,7 @@
 # %% IMPORTS
 from dataclasses import dataclass
+from textwrap import dedent
+
 from Options import Choice, DefaultOnToggle, PerGameCommonOptions, OptionSet, Range, Toggle
 
 from . import items
@@ -97,12 +99,16 @@ class EnableTraps(Toggle):
 
 
 class TrapBlacklist(OptionSet):
-    """
-    Blacklist the given traps from being included in the filler item pool.
-
-    Has no effect if traps are not enabled.
-
-    """
+    __doc__ = dedent(
+        """
+        Blacklist the given traps from being included in the filler item pool.
+    
+        Has no effect if traps are not enabled.
+        
+        Valid keys are:
+        {keys}
+    
+        """)[1:].format(keys="\n".join(sorted(set((item_data.name for item_data in items.TRAP_ITEMS)))))
 
     display_name = "Trap Blacklist"
     valid_keys = set((item_data.name for item_data in items.TRAP_ITEMS))
