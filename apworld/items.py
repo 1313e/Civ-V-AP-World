@@ -847,7 +847,7 @@ POLICY_ITEMS = {
         name="Liberty",
         type=CivVItemType.policy,
         game_ids=[0],
-        classification=ItemClassification.progression,
+        classification=ItemClassification.useful,
         prefix="Policy Branch",
     ),
     "Collective Rule": CivVUsefulItemData(
@@ -884,7 +884,7 @@ POLICY_ITEMS = {
         name="Tradition",
         type=CivVItemType.policy,
         game_ids=[6],
-        classification=ItemClassification.progression,
+        classification=ItemClassification.useful,
         prefix="Policy Branch",
     ),
     "Aristocracy": CivVUsefulItemData(
@@ -921,7 +921,7 @@ POLICY_ITEMS = {
         name="Honor",
         type=CivVItemType.policy,
         game_ids=[12],
-        classification=ItemClassification.progression,
+        classification=ItemClassification.useful,
         prefix="Policy Branch",
     ),
     "Warrior Code": CivVUsefulItemData(
@@ -958,7 +958,7 @@ POLICY_ITEMS = {
         name="Piety",
         type=CivVItemType.policy,
         game_ids=[18],
-        classification=ItemClassification.progression,
+        classification=ItemClassification.useful,
         prefix="Policy Branch",
     ),
     "Organized Religion": CivVUsefulItemData(
@@ -1032,7 +1032,7 @@ POLICY_ITEMS = {
         name="Commerce",
         type=CivVItemType.policy,
         game_ids=[30],
-        classification=ItemClassification.progression,
+        classification=ItemClassification.useful,
         prefix="Policy Branch",
     ),
     "Trade Unions": CivVUsefulItemData(
@@ -1069,7 +1069,7 @@ POLICY_ITEMS = {
         name="Rationalism",
         type=CivVItemType.policy,
         game_ids=[36],
-        classification=ItemClassification.progression,
+        classification=ItemClassification.useful,
         prefix="Policy Branch",
     ),
     "Secularism": CivVUsefulItemData(
@@ -1199,7 +1199,7 @@ POLICY_ITEMS = {
         name="Exploration",
         type=CivVItemType.policy,
         game_ids=[56],
-        classification=ItemClassification.progression,
+        classification=ItemClassification.useful,
         prefix="Policy Branch",
     ),
     "Maritime Infrastructure": CivVUsefulItemData(

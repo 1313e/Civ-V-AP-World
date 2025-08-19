@@ -668,12 +668,8 @@ WORLD_WONDER_LOCATIONS = [
         name="Pyramids",
         type=CivVLocationType.world_wonder,
         game_id=66,
+        region=regions.CLASSICAL_ERA,
         requirements=(
-            items.ItemRequirements.create(
-                items={
-                    items.POLICY_ITEMS["Liberty"].name: 1,
-                }
-            ) |
             items.ItemRequirements.create(
                 items={
                     items.TECH_ITEMS["Masonry"].name: 1,
@@ -742,12 +738,8 @@ WORLD_WONDER_LOCATIONS = [
         name="Hanging Gardens",
         type=CivVLocationType.world_wonder,
         game_id=69,
+        region=regions.ANCIENT_ERA,
         requirements=(
-            items.ItemRequirements.create(
-                items={
-                    items.POLICY_ITEMS["Tradition"].name: 1,
-                }
-            ) |
             items.ItemRequirements.create(
                 items={
                     items.TECH_ITEMS["Mathematics"].name: 1,
@@ -908,12 +900,8 @@ WORLD_WONDER_LOCATIONS = [
         name="Porcelain Tower",
         type=CivVLocationType.world_wonder,
         game_id=76,
+        region=regions.INFORMATION_ERA,
         requirements=(
-            items.ItemRequirements.create(
-                items={
-                    items.POLICY_ITEMS["Rationalism"].name: 1,
-                }
-            ) |
             items.ItemRequirements.create(
                 items={
                     items.TECH_ITEMS["Architecture"].name: 1,
@@ -1006,12 +994,8 @@ WORLD_WONDER_LOCATIONS = [
         name="Forbidden Palace",
         type=CivVLocationType.world_wonder,
         game_id=80,
+        region=regions.INDUSTRIAL_ERA,
         requirements=(
-            items.ItemRequirements.create(
-                items={
-                    items.POLICY_ITEMS["Patronage"].name: 1,
-                }
-            ) |
             items.ItemRequirements.create(
                 items={
                     items.TECH_ITEMS["Banking"].name: 1,
@@ -1057,12 +1041,8 @@ WORLD_WONDER_LOCATIONS = [
         name="Big Ben",
         type=CivVLocationType.world_wonder,
         game_id=82,
+        region=regions.ATOMIC_ERA,
         requirements=(
-            items.ItemRequirements.create(
-                items={
-                    items.POLICY_ITEMS["Commerce"].name: 1,
-                }
-            ) |
             items.ItemRequirements.create(
                 items={
                     items.TECH_ITEMS["Industrialization"].name: 1,
@@ -1085,12 +1065,8 @@ WORLD_WONDER_LOCATIONS = [
         name="Louvre",
         type=CivVLocationType.world_wonder,
         game_id=83,
+        region=regions.INFORMATION_ERA,
         requirements=(
-            items.ItemRequirements.create(
-                items={
-                    items.POLICY_ITEMS["Exploration"].name: 1,
-                }
-            ) |
             items.ItemRequirements.create(
                 items={
                     items.TECH_ITEMS["Archaeology"].name: 1,
@@ -1252,12 +1228,8 @@ WORLD_WONDER_LOCATIONS = [
         name="Statue of Zeus",
         type=CivVLocationType.world_wonder,
         game_id=93,
+        region=regions.MEDIEVAL_ERA,
         requirements=(
-            items.ItemRequirements.create(
-                items={
-                    items.POLICY_ITEMS["Honor"].name: 1,
-                }
-            ) |
             items.ItemRequirements.create(
                 items={
                     items.TECH_ITEMS["Bronze Working"].name: 1,
@@ -1418,12 +1390,8 @@ WORLD_WONDER_LOCATIONS = [
         name="Great Mosque of Djenne",
         type=CivVLocationType.world_wonder,
         game_id=132,
+        region=regions.RENAISSANCE_ERA,
         requirements=(
-            items.ItemRequirements.create(
-                items={
-                    items.POLICY_ITEMS["Piety"].name: 1,
-                }
-            ) |
             items.ItemRequirements.create(
                 items={
                     items.TECH_ITEMS["Theology"].name: 1,
@@ -1538,12 +1506,8 @@ WORLD_WONDER_LOCATIONS = [
         name="Uffizi",
         type=CivVLocationType.world_wonder,
         game_id=154,
+        region=regions.MODERN_ERA,
         requirements=(
-            items.ItemRequirements.create(
-                items={
-                    items.POLICY_ITEMS["Aesthetics"].name: 1,
-                }
-            ) |
             items.ItemRequirements.create(
                 items={
                     items.TECH_ITEMS["Architecture"].name: 1,
