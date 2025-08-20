@@ -139,6 +139,18 @@ function OnCityBuildingConstructed(playerId, cityId, buildingId, gold, faithOrCu
 	end
 end
 
+function OnCityCaptured(playerId, isCapital, plotX, plotY, newPlayerId)
+	-- If the player captures a city, check it for any world wonders and add them to the push table
+	if(newPlayerId == player:GetID()) then
+		city = Map.GetPlot(plotX, plotY):GetPlotCity()
+		for i in pairs(worldWonderBuildingIds) do
+			if city:IsHasBuilding(i) then
+				table.insert(pushTable["world_wonder"], i)
+			end
+		end
+	end
+end
+
 function OnEndGameShow(endGameType, teamId)
 	-- If the player's team wins, add that to the push table
 	if(teamId == player:GetTeam()) then
@@ -263,17 +275,17 @@ end
 
 function AP.ChangeGold(value)
 	-- Change gold for player by given value
-	player:ChangeGold(value)
+	player:ChangeGold(math.max(value, -player:GetGold()))
 end
 
 function AP.ChangeCulture(value)
 	-- Change culture for player by given value
-	player:ChangeJONSCulture(value)
+	player:ChangeJONSCulture(math.max(value, -player:GetJONSCulture()))
 end
 
 function AP.ChangeFaith(value)
 	-- Change faith for player by given value
-	player:ChangeFaith(value)
+	player:ChangeFaith(math.max(value, -player:GetFaith()))
 end
 
 function AP.ChangeNumFreeGreatPeople(value)
@@ -296,7 +308,7 @@ function AP.ChangeAllCityPopulation(value)
 	-- Change the population in each city of the player by given value
 	for i=0, player:GetNumCities()-1 do
 		city = player:GetCityByID(i)
-		city:SetPopulation(math.max(city:GetPopulation()+value, 1), true)
+		city:ChangePopulation(math.max(value, -city:GetPopulation()+1), true)
 	end
 end
 
@@ -384,6 +396,7 @@ function Init()
 	GameEvents.PlayerAdoptPolicy.Add(OnPolicyAdopted)
 	GameEvents.PlayerAdoptPolicyBranch.Add(OnPolicyBranchAdopted)
 	GameEvents.CityConstructed.Add(OnCityBuildingConstructed)
+	GameEvents.CityCaptureComplete.Add(OnCityCaptured)
 
 	-- Give player and AI their corresponding modified techs at the start
 	for i = 0, GameDefines.MAX_CIV_PLAYERS-1, 1 do
