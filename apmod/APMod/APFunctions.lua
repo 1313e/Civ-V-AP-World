@@ -161,6 +161,11 @@ function OnNotificationAdded(notification, notificationType, toolTip, summary, g
 		freePoliciesToGrant = freePoliciesToGrant + player:GetNumFreePolicies()
 		player:SetNumFreePolicies(0);
 	end
+
+	-- If the player gets the "Can adopy policy" notification but has none to pick, remove the notification
+	if(notificationType == NotificationTypes.NOTIFICATION_POLICY and not HasPolicyToUnlock()) then
+		UI.RemoveNotification(notification)
+	end
 end
 
 function OnTurnStart()
@@ -426,7 +431,7 @@ end
 
 -- INIT FUNCTION
 function Init()
-	-- Register event function
+	-- Register event functions
 	Events.ActivePlayerTurnStart.Add(OnTurnStart)
 	Events.TechAcquired.Add(OnTechAcquired)
 	Events.EndGameShow.Add(OnEndGameShow)
@@ -435,6 +440,9 @@ function Init()
 	GameEvents.PlayerAdoptPolicyBranch.Add(OnPolicyBranchAdopted)
 	GameEvents.CityConstructed.Add(OnCityBuildingConstructed)
 	GameEvents.CityCaptureComplete.Add(OnCityCaptured)
+
+	-- Make sure that allow policy saving is turned on
+	Game.SetOption(GameOptionTypes.GAMEOPTION_POLICY_SAVING, true)
 
 	-- Give player and AI their corresponding modified techs at the start
 	for i = 0, GameDefines.MAX_CIV_PLAYERS-1, 1 do
