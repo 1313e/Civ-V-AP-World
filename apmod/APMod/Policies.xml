@@ -6,7 +6,15 @@
             <Where Type="POLICY_COLLECTIVE_RULE"/>
         </Update>
         <Update>
+            <Set TechPrereq="TECH_AI_START"/>
+            <Where Type="POLICY_COLLECTIVE_RULE"/>
+        </Update>
+        <Update>
             <Set GridY="30"/>
+            <Where Type="POLICY_CITIZENSHIP"/>
+        </Update>
+        <Update>
+            <Set TechPrereq="TECH_AI_START"/>
             <Where Type="POLICY_CITIZENSHIP"/>
         </Update>
         <Update>
@@ -14,7 +22,15 @@
             <Where Type="POLICY_REPUBLIC"/>
         </Update>
         <Update>
+            <Set TechPrereq="TECH_AI_START"/>
+            <Where Type="POLICY_REPUBLIC"/>
+        </Update>
+        <Update>
             <Set GridY="30"/>
+            <Where Type="POLICY_REPRESENTATION"/>
+        </Update>
+        <Update>
+            <Set TechPrereq="TECH_AI_START"/>
             <Where Type="POLICY_REPRESENTATION"/>
         </Update>
         <Update>
@@ -22,7 +38,15 @@
             <Where Type="POLICY_MERITOCRACY"/>
         </Update>
         <Update>
+            <Set TechPrereq="TECH_AI_START"/>
+            <Where Type="POLICY_MERITOCRACY"/>
+        </Update>
+        <Update>
             <Set GridY="30"/>
+            <Where Type="POLICY_ARISTOCRACY"/>
+        </Update>
+        <Update>
+            <Set TechPrereq="TECH_AI_START"/>
             <Where Type="POLICY_ARISTOCRACY"/>
         </Update>
         <Update>
@@ -30,7 +54,15 @@
             <Where Type="POLICY_OLIGARCHY"/>
         </Update>
         <Update>
+            <Set TechPrereq="TECH_AI_START"/>
+            <Where Type="POLICY_OLIGARCHY"/>
+        </Update>
+        <Update>
             <Set GridY="30"/>
+            <Where Type="POLICY_LEGALISM"/>
+        </Update>
+        <Update>
+            <Set TechPrereq="TECH_AI_START"/>
             <Where Type="POLICY_LEGALISM"/>
         </Update>
         <Update>
@@ -38,7 +70,15 @@
             <Where Type="POLICY_LANDED_ELITE"/>
         </Update>
         <Update>
+            <Set TechPrereq="TECH_AI_START"/>
+            <Where Type="POLICY_LANDED_ELITE"/>
+        </Update>
+        <Update>
             <Set GridY="30"/>
+            <Where Type="POLICY_MONARCHY"/>
+        </Update>
+        <Update>
+            <Set TechPrereq="TECH_AI_START"/>
             <Where Type="POLICY_MONARCHY"/>
         </Update>
         <Update>
@@ -46,7 +86,15 @@
             <Where Type="POLICY_WARRIOR_CODE"/>
         </Update>
         <Update>
+            <Set TechPrereq="TECH_AI_START"/>
+            <Where Type="POLICY_WARRIOR_CODE"/>
+        </Update>
+        <Update>
             <Set GridY="30"/>
+            <Where Type="POLICY_DISCIPLINE"/>
+        </Update>
+        <Update>
+            <Set TechPrereq="TECH_AI_START"/>
             <Where Type="POLICY_DISCIPLINE"/>
         </Update>
         <Update>
@@ -54,7 +102,15 @@
             <Where Type="POLICY_MILITARY_TRADITION"/>
         </Update>
         <Update>
+            <Set TechPrereq="TECH_AI_START"/>
+            <Where Type="POLICY_MILITARY_TRADITION"/>
+        </Update>
+        <Update>
             <Set GridY="30"/>
+            <Where Type="POLICY_MILITARY_CASTE"/>
+        </Update>
+        <Update>
+            <Set TechPrereq="TECH_AI_START"/>
             <Where Type="POLICY_MILITARY_CASTE"/>
         </Update>
         <Update>
@@ -62,7 +118,15 @@
             <Where Type="POLICY_PROFESSIONAL_ARMY"/>
         </Update>
         <Update>
+            <Set TechPrereq="TECH_AI_START"/>
+            <Where Type="POLICY_PROFESSIONAL_ARMY"/>
+        </Update>
+        <Update>
             <Set GridY="30"/>
+            <Where Type="POLICY_ORGANIZED_RELIGION"/>
+        </Update>
+        <Update>
+            <Set TechPrereq="TECH_AI_START"/>
             <Where Type="POLICY_ORGANIZED_RELIGION"/>
         </Update>
         <Update>
@@ -70,7 +134,15 @@
             <Where Type="POLICY_MANDATE_OF_HEAVEN"/>
         </Update>
         <Update>
+            <Set TechPrereq="TECH_AI_START"/>
+            <Where Type="POLICY_MANDATE_OF_HEAVEN"/>
+        </Update>
+        <Update>
             <Set GridY="30"/>
+            <Where Type="POLICY_THEOCRACY"/>
+        </Update>
+        <Update>
+            <Set TechPrereq="TECH_AI_START"/>
             <Where Type="POLICY_THEOCRACY"/>
         </Update>
         <Update>
@@ -78,7 +150,15 @@
             <Where Type="POLICY_REFORMATION"/>
         </Update>
         <Update>
+            <Set TechPrereq="TECH_AI_START"/>
+            <Where Type="POLICY_REFORMATION"/>
+        </Update>
+        <Update>
             <Set GridY="30"/>
+            <Where Type="POLICY_FREE_RELIGION"/>
+        </Update>
+        <Update>
+            <Set TechPrereq="TECH_AI_START"/>
             <Where Type="POLICY_FREE_RELIGION"/>
         </Update>
         <Update>
@@ -86,7 +166,15 @@
             <Where Type="POLICY_PHILANTHROPY"/>
         </Update>
         <Update>
+            <Set TechPrereq="TECH_AI_START"/>
+            <Where Type="POLICY_PHILANTHROPY"/>
+        </Update>
+        <Update>
             <Set GridY="30"/>
+            <Where Type="POLICY_CONSULATES"/>
+        </Update>
+        <Update>
+            <Set TechPrereq="TECH_AI_START"/>
             <Where Type="POLICY_CONSULATES"/>
         </Update>
         <Update>
@@ -94,7 +182,15 @@
             <Where Type="POLICY_SCHOLASTICISM"/>
         </Update>
         <Update>
+            <Set TechPrereq="TECH_AI_START"/>
+            <Where Type="POLICY_SCHOLASTICISM"/>
+        </Update>
+        <Update>
             <Set GridY="30"/>
+            <Where Type="POLICY_CULTURAL_DIPLOMACY"/>
+        </Update>
+        <Update>
+            <Set TechPrereq="TECH_AI_START"/>
             <Where Type="POLICY_CULTURAL_DIPLOMACY"/>
         </Update>
         <Update>
@@ -102,7 +198,15 @@
             <Where Type="POLICY_MERCHANT_CONFEDERACY"/>
         </Update>
         <Update>
+            <Set TechPrereq="TECH_AI_START"/>
+            <Where Type="POLICY_MERCHANT_CONFEDERACY"/>
+        </Update>
+        <Update>
             <Set GridY="30"/>
+            <Where Type="POLICY_TRADE_UNIONS"/>
+        </Update>
+        <Update>
+            <Set TechPrereq="TECH_AI_START"/>
             <Where Type="POLICY_TRADE_UNIONS"/>
         </Update>
         <Update>
@@ -110,7 +214,15 @@
             <Where Type="POLICY_ENTREPRENEURSHIP"/>
         </Update>
         <Update>
+            <Set TechPrereq="TECH_AI_START"/>
+            <Where Type="POLICY_ENTREPRENEURSHIP"/>
+        </Update>
+        <Update>
             <Set GridY="30"/>
+            <Where Type="POLICY_MERCANTILISM"/>
+        </Update>
+        <Update>
+            <Set TechPrereq="TECH_AI_START"/>
             <Where Type="POLICY_MERCANTILISM"/>
         </Update>
         <Update>
@@ -118,7 +230,15 @@
             <Where Type="POLICY_CARAVANS"/>
         </Update>
         <Update>
+            <Set TechPrereq="TECH_AI_START"/>
+            <Where Type="POLICY_CARAVANS"/>
+        </Update>
+        <Update>
             <Set GridY="30"/>
+            <Where Type="POLICY_PROTECTIONISM"/>
+        </Update>
+        <Update>
+            <Set TechPrereq="TECH_AI_START"/>
             <Where Type="POLICY_PROTECTIONISM"/>
         </Update>
         <Update>
@@ -126,7 +246,15 @@
             <Where Type="POLICY_SECULARISM"/>
         </Update>
         <Update>
+            <Set TechPrereq="TECH_AI_START"/>
+            <Where Type="POLICY_SECULARISM"/>
+        </Update>
+        <Update>
             <Set GridY="30"/>
+            <Where Type="POLICY_HUMANISM"/>
+        </Update>
+        <Update>
+            <Set TechPrereq="TECH_AI_START"/>
             <Where Type="POLICY_HUMANISM"/>
         </Update>
         <Update>
@@ -134,7 +262,15 @@
             <Where Type="POLICY_FREE_THOUGHT"/>
         </Update>
         <Update>
+            <Set TechPrereq="TECH_AI_START"/>
+            <Where Type="POLICY_FREE_THOUGHT"/>
+        </Update>
+        <Update>
             <Set GridY="30"/>
+            <Where Type="POLICY_SOVEREIGNTY"/>
+        </Update>
+        <Update>
+            <Set TechPrereq="TECH_AI_START"/>
             <Where Type="POLICY_SOVEREIGNTY"/>
         </Update>
         <Update>
@@ -142,7 +278,15 @@
             <Where Type="POLICY_SCIENTIFIC_REVOLUTION"/>
         </Update>
         <Update>
+            <Set TechPrereq="TECH_AI_START"/>
+            <Where Type="POLICY_SCIENTIFIC_REVOLUTION"/>
+        </Update>
+        <Update>
             <Set GridY="30"/>
+            <Where Type="POLICY_CULTURAL_CENTERS"/>
+        </Update>
+        <Update>
+            <Set TechPrereq="TECH_AI_START"/>
             <Where Type="POLICY_CULTURAL_CENTERS"/>
         </Update>
         <Update>
@@ -150,7 +294,15 @@
             <Where Type="POLICY_FINE_ARTS"/>
         </Update>
         <Update>
+            <Set TechPrereq="TECH_AI_START"/>
+            <Where Type="POLICY_FINE_ARTS"/>
+        </Update>
+        <Update>
             <Set GridY="30"/>
+            <Where Type="POLICY_FLOURISHING_OF_ARTS"/>
+        </Update>
+        <Update>
+            <Set TechPrereq="TECH_AI_START"/>
             <Where Type="POLICY_FLOURISHING_OF_ARTS"/>
         </Update>
         <Update>
@@ -158,7 +310,15 @@
             <Where Type="POLICY_ARTISTIC_GENIUS"/>
         </Update>
         <Update>
+            <Set TechPrereq="TECH_AI_START"/>
+            <Where Type="POLICY_ARTISTIC_GENIUS"/>
+        </Update>
+        <Update>
             <Set GridY="30"/>
+            <Where Type="POLICY_ETHICS"/>
+        </Update>
+        <Update>
+            <Set TechPrereq="TECH_AI_START"/>
             <Where Type="POLICY_ETHICS"/>
         </Update>
         <Update>
@@ -166,7 +326,15 @@
             <Where Type="POLICY_MARITIME_INFRASTRUCTURE"/>
         </Update>
         <Update>
+            <Set TechPrereq="TECH_AI_START"/>
+            <Where Type="POLICY_MARITIME_INFRASTRUCTURE"/>
+        </Update>
+        <Update>
             <Set GridY="30"/>
+            <Where Type="POLICY_NAVAL_TRADITION"/>
+        </Update>
+        <Update>
+            <Set TechPrereq="TECH_AI_START"/>
             <Where Type="POLICY_NAVAL_TRADITION"/>
         </Update>
         <Update>
@@ -174,11 +342,23 @@
             <Where Type="POLICY_MERCHANT_NAVY"/>
         </Update>
         <Update>
+            <Set TechPrereq="TECH_AI_START"/>
+            <Where Type="POLICY_MERCHANT_NAVY"/>
+        </Update>
+        <Update>
             <Set GridY="30"/>
             <Where Type="POLICY_NAVIGATION_SCHOOL"/>
         </Update>
         <Update>
+            <Set TechPrereq="TECH_AI_START"/>
+            <Where Type="POLICY_NAVIGATION_SCHOOL"/>
+        </Update>
+        <Update>
             <Set GridY="30"/>
+            <Where Type="POLICY_TREASURE_FLEETS"/>
+        </Update>
+        <Update>
+            <Set TechPrereq="TECH_AI_START"/>
             <Where Type="POLICY_TREASURE_FLEETS"/>
         </Update>
         <Row>

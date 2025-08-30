@@ -1,6 +1,6 @@
 [project]
 name = "civ-v-ap-world"
-version = "0.6.2"
+version = "0.6.3"
 description = ""
 authors = [
     {name = "1313e", email = "1313e@live.nl"}
