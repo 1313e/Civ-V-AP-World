@@ -17,6 +17,7 @@ local teamTechs = team:GetTeamTechs()
 
 local pushTable = {}
 local pushTableTableKeys = {policy=true, policy_branch=true, tech=true, national_wonder=true, world_wonder=true}
+local freePoliciesToGrant = 0
 local techIdsToEraIds = {
 	[0]=0, [1]=0, [2]=0, [3]=0, [4]=0, [5]=0, [6]=0, [7]=0, [8]=0, [9]=0, [10]=0, [11]=0,
 	[12]=1, [13]=1, [14]=1, [15]=1, [16]=1, [17]=1, [18]=1, [19]=1, [20]=1,
@@ -49,7 +50,10 @@ local policyBranchIdToAPPolicyIds = {
 	[7]={146, 147, 148, 149, 150},
 	[8]={151, 152, 153, 154, 155},
 }
-local policyBranchIdToPolicyBranchStarterId ={
+local policyBranchIdToEraId = {
+	[0]=0, [1]=1, [2]=2, [3]=3, [4]=4, [5]=5, [6]=6, [7]=7, [8]=7,
+}
+local policyBranchIdToPolicyBranchStarterId = {
 	[0]=6, [1]=0, [2]=12, [3]=18, [4]=24, [5]=49, [6]=30, [7]=56, [8]=36,
 }
 local policyBranchIdToPolicyBranchFinisherId = {
@@ -151,6 +155,22 @@ function OnCityCaptured(playerId, isCapital, plotX, plotY, newPlayerId)
 	end
 end
 
+function OnNotificationAdded(notification, notificationType, toolTip, summary, gameValue, extraGameData)
+	-- If the player gets a free social policy but has none to pick, set number of free policies to zero
+	if(notificationType == NotificationTypes.NOTIFICATION_FREE_POLICY and not HasPolicyToUnlock()) then
+		freePoliciesToGrant = freePoliciesToGrant + player:GetNumFreePolicies()
+		player:SetNumFreePolicies(0);
+	end
+end
+
+function OnTurnStart()
+	-- If the player has any waiting free policies and can unlock one currently, grant a free policy
+	if(freePoliciesToGrant > 0 and HasPolicyToUnlock()) then
+		player:ChangeNumFreePolicies(1)
+		freePoliciesToGrant = freePoliciesToGrant - 1
+	end
+end
+
 function OnEndGameShow(endGameType, teamId)
 	-- If the player's team wins, add that to the push table
 	if(teamId == player:GetTeam()) then
@@ -160,39 +180,55 @@ end
 
 
 -- INTERNAL CALLABLES
-function printResponse(response)
+function PrintResponse(response)
 	-- Define format for all function responses
 	print(CLIENT_PREFIX .. response .. CLIENT_POSTFIX)
+end
+
+function HasPolicyToUnlock()
+	-- Return whether the player has ANY unlockable policy (branch) given the current state
+	currentEra = player:GetCurrentEra()
+	for policyBranchId, apPolicyIds in ipairs(policyBranchIdToAPPolicyIds) do
+		-- If the player has this policy branch already unlocked and can unlock a policy in it, return true
+		if player:IsPolicyBranchUnlocked(policyBranchId) then
+			for _, apPolicyId in ipairs(apPolicyIds) do
+				if player:CanAdoptPolicy(apPolicyId, true) then
+					return true
+				end
+			end
+
+		-- If this policy branch is not unlocked yet, but the era allows for it, return true
+		elseif(policyBranchIdToEraId[policyBranchId] <= currentEra) then
+			return true
+		end
+	end
+
+	-- If we are still here, then nothing can be unlocked, so return false
+	return false
 end
 
 function RequestSync()
 	-- Request the syncing of all locations
 	pushTable["sync"] = true
 
-	-- Add all adopted policies to the push table
-	for i=LOWER_POLICY_ID, UPPER_POLICY_ID do
-		if player:HasPolicy(i) then
-			table.insert(pushTable["policy"], i)
-		end
-	end
+	-- Add all unlocked/finished policy branches and adopted policies to the push table
+	for policyBranchId, apPolicyIds in ipairs(policyBranchIdToAPPolicyIds) do
+		if player:IsPolicyBranchUnlocked(policyBranchId) then
+			table.insert(pushTable["policy_branch"], policyBranchId)
 
-	-- Add all unlocked and finished policy branches to the push table
-	for i=LOWER_POLICY_BRANCH_ID, UPPER_POLICY_BRANCH_ID do
-		if player:IsPolicyBranchUnlocked(i) then
-			table.insert(pushTable["policy_branch"], i)
-
-			-- Check if all AP policies in this branch have been adopted
+			-- Check if all AP policies in this branch have been adopted and add them to the push table appropriately
 			finished = true
-			for _, apPolicyId in ipairs(policyBranchIdToAPPolicyIds[i]) do
-				if not player:HasPolicy(apPolicyId) then
+			for _, apPolicyId in ipairs(apPolicyIds) do
+				if player:HasPolicy(apPolicyId) then
+					table.insert(pushTable["policy"], apPolicyId)
+				else
 					finished = false
-					break
 				end
 			end
 
 			-- If finished is still true, all AP policies have been adopted and thus branch is finished
 			if finished then
-				table.insert(pushTable["policy_branch"], i+POLICY_BRANCH_FINISHER_OFFSET)
+				table.insert(pushTable["policy_branch"], policyBranchId+POLICY_BRANCH_FINISHER_OFFSET)
 			end
 		end
 	end
@@ -241,7 +277,7 @@ end
 -- PUBLIC CALLABLES
 function AP.IsModReady()
 	-- If this function can be reached and executed, the APMod is ready
-	printResponse('{"ready": true}')
+	PrintResponse('{"ready": true}')
 end
 
 function AP.GrantPolicies(policyIds)
@@ -383,7 +419,7 @@ function AP.GetPushTable()
 	end
 
 	-- Print the response as a single JSON object and reset the push table
-	printResponse(table.concat({"{", table.concat(jsonStrings, ","), "}"}))
+	PrintResponse(table.concat({"{", table.concat(jsonStrings, ","), "}"}))
 	InitPushTable()
 end
 
@@ -391,8 +427,10 @@ end
 -- INIT FUNCTION
 function Init()
 	-- Register event function
+	Events.ActivePlayerTurnStart.Add(OnTurnStart)
 	Events.TechAcquired.Add(OnTechAcquired)
 	Events.EndGameShow.Add(OnEndGameShow)
+	Events.NotificationAdded.Add(OnNotificationAdded)
 	GameEvents.PlayerAdoptPolicy.Add(OnPolicyAdopted)
 	GameEvents.PlayerAdoptPolicyBranch.Add(OnPolicyBranchAdopted)
 	GameEvents.CityConstructed.Add(OnCityBuildingConstructed)
