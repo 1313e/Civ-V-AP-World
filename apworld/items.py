@@ -1340,6 +1340,20 @@ FAITH_FILLER_ITEMS = {
 "Dict of all faith filler items"
 
 
+COMBO_FILLER_ITEM = CivVFillerItemData(
+    name="Snack from Thes",
+    type=CivVItemType.bonus,
+    classification=ItemClassification.filler,
+    weight=8,
+    action={
+        CivVFillerType.change_gold: 200,
+        CivVFillerType.change_culture: 200,
+        CivVFillerType.change_faith: 100,
+    }
+)
+"Filler item that gives a bit of everything"
+
+
 FREE_FILLER_ITEMS = {
     "Free Great Person": CivVFillerItemData(
         name="Free Great Person",
