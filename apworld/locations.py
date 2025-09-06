@@ -1744,6 +1744,8 @@ VICTORY_LOCATIONS = {
                     items.TECH_ITEMS["Radio"].name: 1,
                     items.TECH_ITEMS["Telecommunications"].name: 1,
                     items.TECH_ITEMS["The Internet"].name: 1,
+                    items.TECH_ITEMS["Writing"].name: 1,
+                    items.TECH_ITEMS["Education"].name: 1,
                 },
                 when={
                     "progressive_techs": False,
@@ -1752,6 +1754,7 @@ VICTORY_LOCATIONS = {
             items.ItemRequirements.create(
                 items={
                     items.PROGRESSIVE_TECH_ITEMS["Progressive Culture"].name: 6,
+                    items.PROGRESSIVE_TECH_ITEMS["Progressive Science"].name: 2,
                 },
                 when={
                     "progressive_techs": True,
@@ -1763,13 +1766,13 @@ VICTORY_LOCATIONS = {
         name="Diplomatic",
         type=CivVLocationType.victory,
         game_id=4,
+        region=regions.INFORMATION_ERA,
         requirements=(
             items.ItemRequirements.create(
                 items={
                     items.POLICY_ITEMS["Patronage"].name: 1,
                     items.POLICY_ITEMS["Philanthropy"].name: 1,
                     items.POLICY_ITEMS["Consulates"].name: 1,
-                    items.PROGRESSIVE_ERA_ITEM.name: 7,
                 }
             ) |
             items.ItemRequirements.create(
