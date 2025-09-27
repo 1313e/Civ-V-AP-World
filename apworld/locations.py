@@ -287,7 +287,7 @@ NATIONAL_WONDER_LOCATIONS = [
             ) |
             items.ItemRequirements.create(
                 items={
-                    items.PROGRESSIVE_TECH_ITEMS["Progressive Misc"].name: 1,
+                    items.PROGRESSIVE_TECH_ITEMS["Progressive Misc"].name: 2,
                     items.PROGRESSIVE_TECH_ITEMS["Progressive Science"].name: 1,
                 },
                 when={
