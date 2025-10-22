@@ -90,9 +90,13 @@ class ItemRequirements:
     def __or__(self, other: "ItemRequirements") -> "ItemRequirements":
         # Combine the two requirements together
         return ItemRequirements(
-            always_requirements=self.always_requirements|other.always_requirements,
+            always_requirements=self._merge_dicts(self.always_requirements, other.always_requirements),
             option_requirements=[*self.option_requirements, *other.option_requirements],
         )
+
+    @staticmethod
+    def _merge_dicts(dct1: dict, dct2: dict) -> dict:
+        return {k: max(dct1.get(k, 0), dct2.get(k, 0)) for k in {*dct1.keys(), *dct2.keys()}}
 
     def create_access_rule(self, player: int, options: PerGameCommonOptions) -> Callable[[CollectionState], bool]:
         """
@@ -107,7 +111,7 @@ class ItemRequirements:
         for options_dct, requirements_dct in self.option_requirements:
             # Check if this options requirements applies and add it to the dict of requirements if so
             if all((getattr(options, name, None) == value for name, value in options_dct.items())):
-                requirements = requirements | requirements_dct
+                requirements = self._merge_dicts(requirements, requirements_dct)
 
         # Create rule function that uses the CollectionState to determine if region/location is reachable
         def rule(state: CollectionState) -> bool:
