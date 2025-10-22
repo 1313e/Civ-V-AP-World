@@ -2,21 +2,39 @@
 from dataclasses import dataclass, field
 from typing import Optional
 
-from . import items
+from . import items, requirements
 
 # All declaration
 __all__ = [
     "CivVRegionData",
     "REGIONS_DATA",
     "ANCIENT_ERA",
+    "ANCIENT_ERA_TECH",
+    "ANCIENT_ERA_POLICY",
     "CLASSICAL_ERA",
+    "CLASSICAL_ERA_TECH",
+    "CLASSICAL_ERA_POLICY",
     "MEDIEVAL_ERA",
+    "MEDIEVAL_ERA_TECH",
+    "MEDIEVAL_ERA_POLICY",
     "RENAISSANCE_ERA",
+    "RENAISSANCE_ERA_TECH",
+    "RENAISSANCE_ERA_POLICY",
     "INDUSTRIAL_ERA",
+    "INDUSTRIAL_ERA_TECH",
+    "INDUSTRIAL_ERA_POLICY",
     "MODERN_ERA",
+    "MODERN_ERA_TECH",
+    "MODERN_ERA_POLICY",
     "ATOMIC_ERA",
+    "ATOMIC_ERA_TECH",
+    "ATOMIC_ERA_POLICY",
     "INFORMATION_ERA",
+    "INFORMATION_ERA_TECH",
+    "INFORMATION_ERA_POLICY",
     "ERA_REGIONS",
+    "ERA_TECH_REGIONS",
+    "ERA_POLICY_REGIONS",
 ]
 
 
@@ -95,3 +113,107 @@ ERA_REGIONS = [
     INFORMATION_ERA,
 ]
 "List with all era regions"
+
+
+ANCIENT_ERA_TECH = CivVRegionData(
+    name="Ancient Era Techs",
+    parent=ANCIENT_ERA,
+)
+CLASSICAL_ERA_TECH = CivVRegionData(
+    name="Classical Era Techs",
+    parent=CLASSICAL_ERA,
+    requirements=requirements.BUILDING_REQUIREMENTS["Library"]
+)
+MEDIEVAL_ERA_TECH = CivVRegionData(
+    name="Medieval Era Techs",
+    parent=MEDIEVAL_ERA,
+    requirements=requirements.BUILDING_REQUIREMENTS["Library"]
+)
+RENAISSANCE_ERA_TECH = CivVRegionData(
+    name="Renaissance Era Techs",
+    parent=RENAISSANCE_ERA,
+    requirements=requirements.BUILDING_REQUIREMENTS["University"]
+)
+INDUSTRIAL_ERA_TECH = CivVRegionData(
+    name="Industrial Era Techs",
+    parent=INDUSTRIAL_ERA,
+    requirements=requirements.BUILDING_REQUIREMENTS["University"]
+)
+MODERN_ERA_TECH = CivVRegionData(
+    name="Modern Era Techs",
+    parent=MODERN_ERA,
+    requirements=requirements.BUILDING_REQUIREMENTS["Public School"]
+)
+ATOMIC_ERA_TECH = CivVRegionData(
+    name="Atomic Era Techs",
+    parent=ATOMIC_ERA,
+    requirements=requirements.BUILDING_REQUIREMENTS["Public School"]
+)
+INFORMATION_ERA_TECH = CivVRegionData(
+    name="Information Era Techs",
+    parent=INFORMATION_ERA,
+    requirements=requirements.BUILDING_REQUIREMENTS["Research Lab"]
+)
+ERA_TECH_REGIONS = [
+    ANCIENT_ERA_TECH,
+    CLASSICAL_ERA_TECH,
+    MEDIEVAL_ERA_TECH,
+    RENAISSANCE_ERA_TECH,
+    INDUSTRIAL_ERA_TECH,
+    MODERN_ERA_TECH,
+    ATOMIC_ERA_TECH,
+    INFORMATION_ERA_TECH,
+]
+"List with all era regions for technologies"
+
+
+ANCIENT_ERA_POLICY = CivVRegionData(
+    name="Ancient Era Policy",
+    parent=ANCIENT_ERA,
+)
+CLASSICAL_ERA_POLICY = CivVRegionData(
+    name="Classical Era Policy",
+    parent=CLASSICAL_ERA,
+    requirements=requirements.BUILDING_REQUIREMENTS["Amphitheater"]
+)
+MEDIEVAL_ERA_POLICY = CivVRegionData(
+    name="Medieval Era Policy",
+    parent=MEDIEVAL_ERA,
+    requirements=requirements.BUILDING_REQUIREMENTS["Amphitheater"]
+)
+RENAISSANCE_ERA_POLICY = CivVRegionData(
+    name="Renaissance Era Policy",
+    parent=RENAISSANCE_ERA,
+    requirements=requirements.BUILDING_REQUIREMENTS["Opera House"]
+)
+INDUSTRIAL_ERA_POLICY = CivVRegionData(
+    name="Industrial Era Policy",
+    parent=INDUSTRIAL_ERA,
+    requirements=requirements.BUILDING_REQUIREMENTS["Opera House"]
+)
+MODERN_ERA_POLICY = CivVRegionData(
+    name="Modern Era Policy",
+    parent=MODERN_ERA,
+    requirements=requirements.BUILDING_REQUIREMENTS["Museum"]
+)
+ATOMIC_ERA_POLICY = CivVRegionData(
+    name="Atomic Era Policy",
+    parent=ATOMIC_ERA,
+    requirements=requirements.BUILDING_REQUIREMENTS["Museum"]
+)
+INFORMATION_ERA_POLICY = CivVRegionData(
+    name="Information Era Policy",
+    parent=INFORMATION_ERA,
+    requirements=requirements.BUILDING_REQUIREMENTS["Broadcast Tower"]
+)
+ERA_POLICY_REGIONS = [
+    ANCIENT_ERA_POLICY,
+    CLASSICAL_ERA_POLICY,
+    MEDIEVAL_ERA_POLICY,
+    RENAISSANCE_ERA_POLICY,
+    INDUSTRIAL_ERA_POLICY,
+    MODERN_ERA_POLICY,
+    ATOMIC_ERA_POLICY,
+    INFORMATION_ERA_POLICY,
+]
+"List with all era regions for policies"

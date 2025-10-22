@@ -52,6 +52,17 @@ class EraGoalLogic(Choice):
     default = option_information
 
 
+class EmbarkingGoalLogic(Toggle):
+    """
+    Add Optics and Astronomy as requirements before the game is considered beatable.
+
+    Similarly to other goal logic options, this solely affects progression logic.
+
+    """
+
+    display_name = "Embarking Goal Logic"
+
+
 class ProgressiveTechs(DefaultOnToggle):
     """
     Use progressive technologies.
@@ -133,6 +144,7 @@ class TrapFillerChance(Range):
 class CivVOptions(PerGameCommonOptions):
     victory_goal_logic: VictoryGoalLogic
     era_goal_logic: EraGoalLogic
+    embarking_goal_logic: EmbarkingGoalLogic
     progressive_techs: ProgressiveTechs
     national_wonder_sanity: NationalWonderSanity
     world_wonder_sanity: WorldWonderSanity

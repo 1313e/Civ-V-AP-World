@@ -793,7 +793,7 @@ PROGRESSIVE_TECH_ITEMS = {
     "Progressive Culture": CivVUsefulItemData(
         name="Progressive Culture",
         type=CivVItemType.tech,
-        game_ids=[17, 32, 41, 52, 68, 74],
+        game_ids=[17, 32, 41, 52, 74],
         classification=ItemClassification.progression,
     ),
     "Progressive Gold": CivVUsefulItemData(
@@ -808,22 +808,22 @@ PROGRESSIVE_TECH_ITEMS = {
         game_ids=[6, 8, 15, 34, 51],
         classification=ItemClassification.progression,
     ),
-    "Progressive Exploration": CivVUsefulItemData(
-        name="Progressive Exploration",
+    "Progressive Navy": CivVUsefulItemData(
+        name="Progressive Navy",
         type=CivVItemType.tech,
-        game_ids=[5, 12, 25, 31],
+        game_ids=[5, 12, 25, 31, 36, 49, 59, 68, 72],
         classification=ItemClassification.progression,
     ),
     "Progressive Melee Unit": CivVUsefulItemData(
         name="Progressive Melee Unit",
         type=CivVItemType.tech,
-        game_ids=[11, 13, 20, 27, 30, 35, 39, 44, 45, 49, 53, 59, 63, 67, 69, 73, 77],
+        game_ids=[11, 13, 20, 27, 30, 35, 39, 44, 45, 53, 63, 67, 69, 73, 77],
         classification=ItemClassification.progression,
     ),
     "Progressive Ranged Unit": CivVUsefulItemData(
         name="Progressive Ranged Unit",
         type=CivVItemType.tech,
-        game_ids=[3, 28, 36, 54, 57, 58, 62, 72, 79],
+        game_ids=[3, 28, 54, 57, 58, 62, 79],
         classification=ItemClassification.progression,
     ),
     "Progressive Siege Unit": CivVUsefulItemData(

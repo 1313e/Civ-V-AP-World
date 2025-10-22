@@ -1,6 +1,6 @@
 # %% GLOBALS DEFINITIONS
 # GENERAL
-APWORLD_VERSION: str = "0.6.4"
+APWORLD_VERSION: str = "0.7.0"
 "Version of this APWorld"
 GAME_NAME: str = "Civilization V"
 "Name of the game this APWorld is for"

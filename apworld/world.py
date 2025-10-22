@@ -19,6 +19,7 @@ from .items import (
     CivVFillerItemData,
     CivVItem,
     CivVUsefulItemData,
+    ItemRequirements,
 )
 from .locations import (
     LOCATIONS_DATA,
@@ -33,6 +34,7 @@ from .locations import (
 )
 from .options import CivVOptions
 from .regions import ERA_REGIONS, REGIONS_DATA
+from .requirements import EMBARKING_REQUIREMENTS
 
 # All declaration
 __all__ = ["CivVWorld"]
@@ -202,11 +204,14 @@ class CivVWorld(World):
         )
         victory_region.locations.append(victory_location)
 
-        # If specific victory goal was set in the options, add its requirements access rule to the location
+        # Create victory location requirement based on player settings
+        victory_requirements = ItemRequirements()
         if self.options.victory_goal_logic.value:
-            victory_requirements = LOCATIONS_DATA_BY_TYPE_ID[
+            victory_requirements |= LOCATIONS_DATA_BY_TYPE_ID[
                 (CivVLocationType.victory, self.options.victory_goal_logic.value)].requirements
-            victory_location.access_rule = victory_requirements.create_access_rule(self.player, self.options)
+        if self.options.embarking_goal_logic.value:
+            victory_requirements |= EMBARKING_REQUIREMENTS
+        victory_location.access_rule = victory_requirements.create_access_rule(self.player, self.options)
 
         # Place dummy Victory item at this location and add completion condition to the multiworld
         victory_location.place_locked_item(CivVItem("Victory", ItemClassification.progression, None, self.player))
