@@ -11,13 +11,14 @@ from .items import (
     ITEMS_DATA,
     ITEMS_DATA_BY_ID,
     ITEM_GROUPS,
-    POLICY_ITEMS,
-    PROGRESSIVE_ERA_ITEM,
-    PROGRESSIVE_TECH_ITEMS,
-    TECH_ITEMS,
+    PROGRESSION_ITEMS,
+    PROGRESSIVE_ITEMS,
     TRAP_ITEMS,
+    USEFUL_ITEMS,
     CivVFillerItemData,
     CivVItem,
+    CivVProgressionItemData,
+    CivVProgressiveItemData,
     CivVUsefulItemData,
     ItemRequirements,
 )
@@ -65,19 +66,28 @@ class CivVWorld(World):
             player=self.player,
         )
 
-    def get_useful_items_data(self) -> list[CivVUsefulItemData]:
+    def get_useful_items_data(self) -> list[CivVProgressiveItemData | CivVProgressionItemData | CivVUsefulItemData]:
         """
-        Returns the list of `CivVUsefulItemData` instances to use for this seed, according to the options.
+        Returns the list of progressive; progression; and useful `CivVItemData` instances to use for this seed,
+        according to the options.
 
         """
 
-        # Create list with items that are always included
-        items_data = [PROGRESSIVE_ERA_ITEM, *POLICY_ITEMS.values()]
+        # Create list with items
+        items_data: list[CivVProgressiveItemData | CivVProgressionItemData | CivVUsefulItemData] = []
 
-        # Pick which items lists to use based on options
-        items_data.extend(
-            PROGRESSIVE_TECH_ITEMS.values() if self.options.progressive_techs else TECH_ITEMS.values()
-        )
+        # Add all progressive items that are always included or whose option toggle is toggled on
+        for item in PROGRESSIVE_ITEMS:
+            if item.option_toggle_name is None or getattr(self.options, item.option_toggle_name):
+                items_data.append(item)
+
+        # Add all progression items that are always included or whose progressive parent is NOT included
+        for item in PROGRESSION_ITEMS:
+            if item.progressive_parent is None or item.progressive_parent not in items_data:
+                items_data.append(item)
+
+        # Add all useful items
+        items_data.extend(USEFUL_ITEMS)
 
         # Return items data
         return items_data

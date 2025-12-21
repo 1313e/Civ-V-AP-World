@@ -10,11 +10,11 @@ from ..helpers import to_title
 
 # All declaration
 __all__ = [
-    "CivVLocation",
-    "CivVLocationData",
     "LOCATIONS_DATA",
     "LOCATIONS_DATA_BY_ID",
     "LOCATIONS_DATA_BY_TYPE_ID",
+    "CivVLocation",
+    "CivVLocationData",
 ]
 
 

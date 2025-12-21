@@ -28,7 +28,7 @@ NATIONAL_WONDER_LOCATIONS = [
             ) |
             items.ItemRequirements.create(
                 items={
-                    items.PROGRESSIVE_TECH_ITEMS["Progressive Melee Unit"].name: 3,
+                    items.PROGRESSIVE_TECH_ITEMS["Melee Unit"].name: 3,
                 },
                 when={
                     "progressive_techs": True,
@@ -52,8 +52,8 @@ NATIONAL_WONDER_LOCATIONS = [
             ) |
             items.ItemRequirements.create(
                 items={
-                    items.PROGRESSIVE_TECH_ITEMS["Progressive Misc"].name: 2,
-                    items.PROGRESSIVE_TECH_ITEMS["Progressive Science"].name: 1,
+                    items.PROGRESSIVE_TECH_ITEMS["Misc"].name: 2,
+                    items.PROGRESSIVE_TECH_ITEMS["Science"].name: 1,
                 },
                 when={
                     "progressive_techs": True,
@@ -76,7 +76,7 @@ NATIONAL_WONDER_LOCATIONS = [
             ) |
             items.ItemRequirements.create(
                 items={
-                    items.PROGRESSIVE_TECH_ITEMS["Progressive Culture"].name: 1,
+                    items.PROGRESSIVE_TECH_ITEMS["Culture"].name: 1,
                 },
                 when={
                     "progressive_techs": True,
@@ -100,8 +100,8 @@ NATIONAL_WONDER_LOCATIONS = [
             ) |
             items.ItemRequirements.create(
                 items={
-                    items.PROGRESSIVE_TECH_ITEMS["Progressive Melee Unit"].name: 2,
-                    items.PROGRESSIVE_TECH_ITEMS["Progressive Happiness"].name: 3,
+                    items.PROGRESSIVE_TECH_ITEMS["Melee Unit"].name: 2,
+                    items.PROGRESSIVE_TECH_ITEMS["Happiness"].name: 3,
                 },
                 when={
                     "progressive_techs": True,
@@ -125,7 +125,7 @@ NATIONAL_WONDER_LOCATIONS = [
             ) |
             items.ItemRequirements.create(
                 items={
-                    items.PROGRESSIVE_TECH_ITEMS["Progressive Gold"].name: 3,
+                    items.PROGRESSIVE_TECH_ITEMS["Gold"].name: 3,
                 },
                 when={
                     "progressive_techs": True,
@@ -149,8 +149,8 @@ NATIONAL_WONDER_LOCATIONS = [
             ) |
             items.ItemRequirements.create(
                 items={
-                    items.PROGRESSIVE_TECH_ITEMS["Progressive Ranged Unit"].name: 2,
-                    items.PROGRESSIVE_TECH_ITEMS["Progressive Production"].name: 3,
+                    items.PROGRESSIVE_TECH_ITEMS["Ranged Unit"].name: 2,
+                    items.PROGRESSIVE_TECH_ITEMS["Production"].name: 3,
                 },
                 when={
                     "progressive_techs": True,
@@ -174,7 +174,7 @@ NATIONAL_WONDER_LOCATIONS = [
             ) |
             items.ItemRequirements.create(
                 items={
-                    items.PROGRESSIVE_TECH_ITEMS["Progressive Science"].name: 2,
+                    items.PROGRESSIVE_TECH_ITEMS["Science"].name: 2,
                 },
                 when={
                     "progressive_techs": True,
@@ -199,8 +199,8 @@ NATIONAL_WONDER_LOCATIONS = [
             ) |
             items.ItemRequirements.create(
                 items={
-                    items.PROGRESSIVE_TECH_ITEMS["Progressive Misc"].name: 4,
-                    items.PROGRESSIVE_TECH_ITEMS["Progressive Culture"].name: 2,
+                    items.PROGRESSIVE_TECH_ITEMS["Misc"].name: 4,
+                    items.PROGRESSIVE_TECH_ITEMS["Culture"].name: 2,
                 },
                 when={
                     "progressive_techs": True,
@@ -225,8 +225,8 @@ NATIONAL_WONDER_LOCATIONS = [
             ) |
             items.ItemRequirements.create(
                 items={
-                    items.PROGRESSIVE_TECH_ITEMS["Progressive Culture"].name: 4,
-                    items.PROGRESSIVE_TECH_ITEMS["Progressive Gold"].name: 6,
+                    items.PROGRESSIVE_TECH_ITEMS["Culture"].name: 4,
+                    items.PROGRESSIVE_TECH_ITEMS["Gold"].name: 6,
                 },
                 when={
                     "progressive_techs": True,
@@ -251,8 +251,8 @@ NATIONAL_WONDER_LOCATIONS = [
             ) |
             items.ItemRequirements.create(
                 items={
-                    items.PROGRESSIVE_TECH_ITEMS["Progressive Misc"].name: 3,
-                    items.PROGRESSIVE_TECH_ITEMS["Progressive Growth"].name: 1,
+                    items.PROGRESSIVE_TECH_ITEMS["Misc"].name: 3,
+                    items.PROGRESSIVE_TECH_ITEMS["Growth"].name: 1,
                 },
                 when={
                     "progressive_techs": True,
@@ -276,8 +276,8 @@ NATIONAL_WONDER_LOCATIONS = [
             ) |
             items.ItemRequirements.create(
                 items={
-                    items.PROGRESSIVE_TECH_ITEMS["Progressive Navy"].name: 8,
-                    items.PROGRESSIVE_TECH_ITEMS["Progressive Happiness"].name: 5,
+                    items.PROGRESSIVE_TECH_ITEMS["Navy"].name: 8,
+                    items.PROGRESSIVE_TECH_ITEMS["Happiness"].name: 5,
                 },
                 when={
                     "progressive_techs": True,
@@ -300,7 +300,7 @@ NATIONAL_WONDER_LOCATIONS = [
             ) |
             items.ItemRequirements.create(
                 items={
-                    items.PROGRESSIVE_TECH_ITEMS["Progressive Culture"].name: 1,
+                    items.PROGRESSIVE_TECH_ITEMS["Culture"].name: 1,
                 },
                 when={
                     "progressive_techs": True,
@@ -323,7 +323,7 @@ NATIONAL_WONDER_LOCATIONS = [
             ) |
             items.ItemRequirements.create(
                 items={
-                    items.PROGRESSIVE_TECH_ITEMS["Progressive Gold"].name: 3,
+                    items.PROGRESSIVE_TECH_ITEMS["Gold"].name: 3,
                 },
                 when={
                     "progressive_techs": True,
@@ -346,7 +346,7 @@ NATIONAL_WONDER_LOCATIONS = [
             ) |
             items.ItemRequirements.create(
                 items={
-                    items.PROGRESSIVE_TECH_ITEMS["Progressive Culture"].name: 2,
+                    items.PROGRESSIVE_TECH_ITEMS["Culture"].name: 2,
                 },
                 when={
                     "progressive_techs": True,

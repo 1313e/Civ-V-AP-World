@@ -14,28 +14,39 @@ from ..helpers import to_title
 
 # All declaration
 __all__ = [
-    "CivVFillerItemData",
-    "CivVItem",
-    "CivVItemData",
-    "CivVUsefulItemData",
     "FILLER_ITEMS",
     "ITEMS_DATA",
     "ITEMS_DATA_BY_ID",
     "ITEM_GROUPS",
-    "ItemRequirements",
+    "PROGRESSION_ITEMS",
+    "PROGRESSIVE_ITEMS",
     "TRAP_ITEMS",
+    "USEFUL_ITEMS",
+    "CivVFillerItemData",
+    "CivVItem",
+    "CivVItemData",
+    "CivVProgressiveItemData",
+    "CivVProgressionItemData",
+    "CivVUsefulItemData",
+    "ItemRequirements",
 ]
 
 
 # %% GLOBALS
-ITEMS_DATA: list["CivVItemData|CivVUsefulItemData|CivVFillerItemData"] = []
+ITEMS_DATA: list["CivVItemData"] = []
 "List of all defined items"
-ITEMS_DATA_BY_ID: dict[int, "CivVItemData|CivVUsefulItemData|CivVFillerItemData"] = {}
+ITEMS_DATA_BY_ID: dict[int, "CivVItemData"] = {}
 "Dict of all defined items, separated by AP ID"
-ITEMS_DATA_BY_NAME: dict[str, "CivVItemData|CivVUsefulItemData|CivVFillerItemData"] = {}
+ITEMS_DATA_BY_NAME: dict[str, "CivVItemData"] = {}
 "Dict of all defined items, separated by name"
 ITEM_GROUPS: defaultdict[str, list[str]] = defaultdict(list)
 "Dict of all defined item names per item group. Used by the CivVWorld"
+PROGRESSIVE_ITEMS: list["CivVProgressiveItemData"] = []
+"List of all defined progressive items"
+PROGRESSION_ITEMS: list["CivVProgressionItemData"] = []
+"List of all defined progression items"
+USEFUL_ITEMS: list["CivVUsefulItemData"] = []
+"List of all defined useful items"
 FILLER_ITEMS: list["CivVFillerItemData"] = []
 "List of all defined filler items"
 TRAP_ITEMS: list["CivVFillerItemData"] = []
@@ -130,8 +141,10 @@ class CivVItemData:
     "Name of this item"
     type: CivVItemType
     "Type of this item"
+    game_id: int | None
+    "ID of this item with this item type. If None, this item has no singular ID"
     game_ids: list[int] | None
-    "IDs of this item with this item type. If None, this item has no defined count"
+    "IDs of this item with this item type. If None, this item has no defined IDs"
     classification: ItemClassification
     "Classification of this item"
     count: int | None = field(init=False)
@@ -146,6 +159,10 @@ class CivVItemData:
     def __post_init__(self):
         # Add the item type as a prefix to the item name
         self.name = f"{self.prefix or to_title(self.type)} - {self.name}"
+
+        # If game_id is set, set it as the single entry for game_ids
+        if self.game_id is not None:
+            self.game_ids = [self.game_id]
 
         # Set count for this item
         self.count = len(self.game_ids) if self.game_ids is not None else None
@@ -165,18 +182,80 @@ class CivVItemData:
 
 
 @dataclass
+class CivVProgressiveItemData(CivVItemData):
+    """
+    Dataclass used for specifying a progressive item.
+
+    """
+
+    game_id: None = field(default=None, init=False)
+    game_ids: list[int] = field(default_factory=list)
+    classification: Literal[ItemClassification.progression] = field(default=ItemClassification.progression, init=False)
+    count: int = field(init=False)
+    option_toggle_name: str | None = None
+    "If provided, the name of the option that toggles the use of this progressive item. Default is to always use"
+
+    def __post_init__(self):
+        # Call super method
+        super().__post_init__()
+
+        # Add self to dict
+        PROGRESSIVE_ITEMS.append(self)
+
+    def add_game_id(self, game_id) -> None:
+        """
+        Adds the given `game_id` to this item.
+
+        """
+
+        self.game_ids.append(game_id)
+        self.count += 1
+
+
+@dataclass
+class CivVProgressionItemData(CivVItemData):
+    """
+    Dataclass used for specifying a progression item.
+
+    """
+
+    game_id: int
+    game_ids: list[int] = field(default_factory=list, init=False)
+    classification: Literal[ItemClassification.progression] = field(default=ItemClassification.progression, init=False)
+    count: int = field(init=False)
+    progressive_parent: CivVProgressiveItemData | None = None
+    "If provided, the progressive parent item this item belongs to"
+
+    def __post_init__(self):
+        # Call super method
+        super().__post_init__()
+
+        # Add game_id to its progressive parent, if it has one
+        if self.progressive_parent is not None:
+            self.progressive_parent.add_game_id(self.game_id)
+
+        # Add self to dict
+        PROGRESSION_ITEMS.append(self)
+
+
+@dataclass
 class CivVUsefulItemData(CivVItemData):
     """
-    Dataclass used for specifying an item.
+    Dataclass used for specifying a useful item.
 
     """
 
-    game_ids: list[int]
-    "IDs of this item with this item type"
-    classification: Literal[ItemClassification.progression, ItemClassification.useful]
-    "Classification of this item"
+    game_id: int
+    game_ids: list[int] = field(default_factory=list, init=False)
+    classification: Literal[ItemClassification.useful] = field(default=ItemClassification.useful, init=False)
     count: int = field(init=False)
-    "Number of times this item exists"
+
+    def __post_init__(self):
+        # Call super method
+        super().__post_init__()
+
+        # Add self to dict
+        USEFUL_ITEMS.append(self)
 
 
 @dataclass
@@ -186,6 +265,7 @@ class CivVFillerItemData(CivVItemData):
 
     """
 
+    game_id: None = field(default=None, init=False)
     game_ids: None = field(default=None, init=False)
     classification: Literal[ItemClassification.filler, ItemClassification.trap]
     weight: int = 1

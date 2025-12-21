@@ -1,7 +1,5 @@
 # %% IMPORTS
-from BaseClasses import ItemClassification
-
-from .core import CivVUsefulItemData
+from .core import CivVProgressiveItemData
 from ..enums import CivVItemType
 
 # All declaration
@@ -11,10 +9,9 @@ __all__ = [
 
 
 # %% ITEM DECLARATIONS
-PROGRESSIVE_ERA_ITEM = CivVUsefulItemData(
+PROGRESSIVE_ERA_ITEM = CivVProgressiveItemData(
     name="Progressive",
     type=CivVItemType.era,
     game_ids=[169, 170, 171, 172, 173, 174, 175],
-    classification=ItemClassification.progression,
 )
 "Progressive era item"

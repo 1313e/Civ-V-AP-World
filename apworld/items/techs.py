@@ -1,7 +1,5 @@
 # %% IMPORTS
-from BaseClasses import ItemClassification
-
-from .core import CivVUsefulItemData
+from .core import CivVProgressionItemData, CivVProgressiveItemData
 from ..enums import CivVItemGroup, CivVItemType
 
 # All declaration
@@ -12,630 +10,619 @@ __all__ = [
 
 
 # %% ITEM DECLARATIONS
+PROGRESSIVE_TECH_ITEMS = {
+    "Growth": CivVProgressiveItemData(
+        name="Progressive Growth",
+        type=CivVItemType.tech,
+        option_toggle_name="progressive_techs",
+    ),
+    "Production": CivVProgressiveItemData(
+        name="Progressive Production",
+        type=CivVItemType.tech,
+        option_toggle_name="progressive_techs",
+    ),
+    "Science": CivVProgressiveItemData(
+        name="Progressive Science",
+        type=CivVItemType.tech,
+        option_toggle_name="progressive_techs",
+    ),
+    "Culture": CivVProgressiveItemData(
+        name="Progressive Culture",
+        type=CivVItemType.tech,
+        option_toggle_name="progressive_techs",
+    ),
+    "Gold": CivVProgressiveItemData(
+        name="Progressive Gold",
+        type=CivVItemType.tech,
+        option_toggle_name="progressive_techs",
+    ),
+    "Happiness": CivVProgressiveItemData(
+        name="Progressive Happiness",
+        type=CivVItemType.tech,
+        option_toggle_name="progressive_techs",
+    ),
+    "Navy": CivVProgressiveItemData(
+        name="Progressive Navy",
+        type=CivVItemType.tech,
+        option_toggle_name="progressive_techs",
+    ),
+    "Melee Unit": CivVProgressiveItemData(
+        name="Progressive Melee Unit",
+        type=CivVItemType.tech,
+        option_toggle_name="progressive_techs",
+    ),
+    "Ranged Unit": CivVProgressiveItemData(
+        name="Progressive Ranged Unit",
+        type=CivVItemType.tech,
+        option_toggle_name="progressive_techs",
+    ),
+    "Siege Unit": CivVProgressiveItemData(
+        name="Progressive Siege Unit",
+        type=CivVItemType.tech,
+        option_toggle_name="progressive_techs",
+    ),
+    "Misc": CivVProgressiveItemData(
+        name="Progressive Misc",
+        type=CivVItemType.tech,
+        option_toggle_name="progressive_techs",
+    ),
+}
+"Dict of all progressive technologies"
+
+
 TECH_ITEMS = {
-    "Pottery": CivVUsefulItemData(
+    "Pottery": CivVProgressionItemData(
         name="Pottery",
         type=CivVItemType.tech,
-        game_ids=[1],
-        classification=ItemClassification.progression,
+        game_id=1,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Growth"],
         groups={CivVItemGroup.ancient_era},
     ),
-    "Animal Husbandry": CivVUsefulItemData(
+    "Animal Husbandry": CivVProgressionItemData(
         name="Animal Husbandry",
         type=CivVItemType.tech,
-        game_ids=[2],
-        classification=ItemClassification.progression,
+        game_id=2,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Gold"],
         groups={CivVItemGroup.ancient_era},
     ),
-    "Archery": CivVUsefulItemData(
+    "Archery": CivVProgressionItemData(
         name="Archery",
         type=CivVItemType.tech,
-        game_ids=[3],
-        classification=ItemClassification.progression,
+        game_id=3,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Ranged Unit"],
         groups={CivVItemGroup.ancient_era},
     ),
-    "Mining": CivVUsefulItemData(
+    "Mining": CivVProgressionItemData(
         name="Mining",
         type=CivVItemType.tech,
-        game_ids=[4],
-        classification=ItemClassification.progression,
+        game_id=4,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Production"],
         groups={CivVItemGroup.ancient_era},
     ),
-    "Sailing": CivVUsefulItemData(
+    "Sailing": CivVProgressionItemData(
         name="Sailing",
         type=CivVItemType.tech,
-        game_ids=[5],
-        classification=ItemClassification.progression,
+        game_id=5,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Navy"],
         groups={CivVItemGroup.ancient_era},
     ),
-    "Calendar": CivVUsefulItemData(
+    "Calendar": CivVProgressionItemData(
         name="Calendar",
         type=CivVItemType.tech,
-        game_ids=[6],
-        classification=ItemClassification.progression,
+        game_id=6,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Happiness"],
         groups={CivVItemGroup.ancient_era},
     ),
-    "Writing": CivVUsefulItemData(
+    "Writing": CivVProgressionItemData(
         name="Writing",
         type=CivVItemType.tech,
-        game_ids=[7],
-        classification=ItemClassification.progression,
+        game_id=7,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Science"],
         groups={CivVItemGroup.ancient_era},
     ),
-    "Trapping": CivVUsefulItemData(
+    "Trapping": CivVProgressionItemData(
         name="Trapping",
         type=CivVItemType.tech,
-        game_ids=[8],
-        classification=ItemClassification.progression,
+        game_id=8,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Happiness"],
         groups={CivVItemGroup.ancient_era},
     ),
-    "The Wheel": CivVUsefulItemData(
+    "The Wheel": CivVProgressionItemData(
         name="The Wheel",
         type=CivVItemType.tech,
-        game_ids=[9],
-        classification=ItemClassification.progression,
+        game_id=9,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Misc"],
         groups={CivVItemGroup.ancient_era},
     ),
-    "Masonry": CivVUsefulItemData(
+    "Masonry": CivVProgressionItemData(
         name="Masonry",
         type=CivVItemType.tech,
-        game_ids=[10],
-        classification=ItemClassification.progression,
+        game_id=10,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Production"],
         groups={CivVItemGroup.ancient_era},
     ),
-    "Bronze Working": CivVUsefulItemData(
+    "Bronze Working": CivVProgressionItemData(
         name="Bronze Working",
         type=CivVItemType.tech,
-        game_ids=[11],
-        classification=ItemClassification.progression,
+        game_id=11,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Melee Unit"],
         groups={CivVItemGroup.ancient_era},
     ),
-    "Optics": CivVUsefulItemData(
+    "Optics": CivVProgressionItemData(
         name="Optics",
         type=CivVItemType.tech,
-        game_ids=[12],
-        classification=ItemClassification.progression,
+        game_id=12,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Navy"],
         groups={CivVItemGroup.classical_era},
     ),
-    "Horseback Riding": CivVUsefulItemData(
+    "Horseback Riding": CivVProgressionItemData(
         name="Horseback Riding",
         type=CivVItemType.tech,
-        game_ids=[13],
-        classification=ItemClassification.progression,
+        game_id=13,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Melee Unit"],
         groups={CivVItemGroup.classical_era},
     ),
-    "Mathematics": CivVUsefulItemData(
+    "Mathematics": CivVProgressionItemData(
         name="Mathematics",
         type=CivVItemType.tech,
-        game_ids=[14],
-        classification=ItemClassification.progression,
+        game_id=14,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Siege Unit"],
         groups={CivVItemGroup.classical_era},
     ),
-    "Construction": CivVUsefulItemData(
+    "Construction": CivVProgressionItemData(
         name="Construction",
         type=CivVItemType.tech,
-        game_ids=[15],
-        classification=ItemClassification.progression,
+        game_id=15,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Happiness"],
         groups={CivVItemGroup.classical_era},
     ),
-    "Philosophy": CivVUsefulItemData(
+    "Philosophy": CivVProgressionItemData(
         name="Philosophy",
         type=CivVItemType.tech,
-        game_ids=[16],
-        classification=ItemClassification.progression,
+        game_id=16,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Misc"],
         groups={CivVItemGroup.classical_era},
     ),
-    "Drama and Poetry": CivVUsefulItemData(
+    "Drama and Poetry": CivVProgressionItemData(
         name="Drama and Poetry",
         type=CivVItemType.tech,
-        game_ids=[17],
-        classification=ItemClassification.progression,
+        game_id=17,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Culture"],
         groups={CivVItemGroup.classical_era},
     ),
-    "Currency": CivVUsefulItemData(
+    "Currency": CivVProgressionItemData(
         name="Currency",
         type=CivVItemType.tech,
-        game_ids=[18],
-        classification=ItemClassification.progression,
+        game_id=18,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Gold"],
         groups={CivVItemGroup.classical_era},
     ),
-    "Engineering": CivVUsefulItemData(
+    "Engineering": CivVProgressionItemData(
         name="Engineering",
         type=CivVItemType.tech,
-        game_ids=[19],
-        classification=ItemClassification.progression,
+        game_id=19,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Growth"],
         groups={CivVItemGroup.classical_era},
     ),
-    "Iron Working": CivVUsefulItemData(
+    "Iron Working": CivVProgressionItemData(
         name="Iron Working",
         type=CivVItemType.tech,
-        game_ids=[20],
-        classification=ItemClassification.progression,
+        game_id=20,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Melee Unit"],
         groups={CivVItemGroup.classical_era},
     ),
-    "Theology": CivVUsefulItemData(
+    "Theology": CivVProgressionItemData(
         name="Theology",
         type=CivVItemType.tech,
-        game_ids=[21],
-        classification=ItemClassification.progression,
+        game_id=21,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Misc"],
         groups={CivVItemGroup.medieval_era},
     ),
-    "Civil Service": CivVUsefulItemData(
+    "Civil Service": CivVProgressionItemData(
         name="Civil Service",
         type=CivVItemType.tech,
-        game_ids=[22],
-        classification=ItemClassification.progression,
+        game_id=22,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Growth"],
         groups={CivVItemGroup.medieval_era},
     ),
-    "Guilds": CivVUsefulItemData(
+    "Guilds": CivVProgressionItemData(
         name="Guilds",
         type=CivVItemType.tech,
-        game_ids=[23],
-        classification=ItemClassification.progression,
+        game_id=23,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Gold"],
         groups={CivVItemGroup.medieval_era},
     ),
-    "Metal Casting": CivVUsefulItemData(
+    "Metal Casting": CivVProgressionItemData(
         name="Metal Casting",
         type=CivVItemType.tech,
-        game_ids=[24],
-        classification=ItemClassification.progression,
+        game_id=24,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Production"],
         groups={CivVItemGroup.medieval_era},
     ),
-    "Compass": CivVUsefulItemData(
+    "Compass": CivVProgressionItemData(
         name="Compass",
         type=CivVItemType.tech,
-        game_ids=[25],
-        classification=ItemClassification.progression,
+        game_id=25,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Navy"],
         groups={CivVItemGroup.medieval_era},
     ),
-    "Education": CivVUsefulItemData(
+    "Education": CivVProgressionItemData(
         name="Education",
         type=CivVItemType.tech,
-        game_ids=[26],
-        classification=ItemClassification.progression,
+        game_id=26,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Science"],
         groups={CivVItemGroup.medieval_era},
     ),
-    "Chivalry": CivVUsefulItemData(
+    "Chivalry": CivVProgressionItemData(
         name="Chivalry",
         type=CivVItemType.tech,
-        game_ids=[27],
-        classification=ItemClassification.progression,
+        game_id=27,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Melee Unit"],
         groups={CivVItemGroup.medieval_era},
     ),
-    "Machinery": CivVUsefulItemData(
+    "Machinery": CivVProgressionItemData(
         name="Machinery",
         type=CivVItemType.tech,
-        game_ids=[28],
-        classification=ItemClassification.progression,
+        game_id=28,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Ranged Unit"],
         groups={CivVItemGroup.medieval_era},
     ),
-    "Physics": CivVUsefulItemData(
+    "Physics": CivVProgressionItemData(
         name="Physics",
         type=CivVItemType.tech,
-        game_ids=[29],
-        classification=ItemClassification.progression,
+        game_id=29,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Siege Unit"],
         groups={CivVItemGroup.medieval_era},
     ),
-    "Steel": CivVUsefulItemData(
+    "Steel": CivVProgressionItemData(
         name="Steel",
         type=CivVItemType.tech,
-        game_ids=[30],
-        classification=ItemClassification.progression,
+        game_id=30,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Melee Unit"],
         groups={CivVItemGroup.medieval_era},
     ),
-    "Astronomy": CivVUsefulItemData(
+    "Astronomy": CivVProgressionItemData(
         name="Astronomy",
         type=CivVItemType.tech,
-        game_ids=[31],
-        classification=ItemClassification.progression,
+        game_id=31,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Navy"],
         groups={CivVItemGroup.renaissance_era},
     ),
-    "Acoustics": CivVUsefulItemData(
+    "Acoustics": CivVProgressionItemData(
         name="Acoustics",
         type=CivVItemType.tech,
-        game_ids=[32],
-        classification=ItemClassification.progression,
+        game_id=32,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Culture"],
         groups={CivVItemGroup.renaissance_era},
     ),
-    "Banking": CivVUsefulItemData(
+    "Banking": CivVProgressionItemData(
         name="Banking",
         type=CivVItemType.tech,
-        game_ids=[33],
-        classification=ItemClassification.progression,
+        game_id=33,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Gold"],
         groups={CivVItemGroup.renaissance_era},
     ),
-    "Printing Press": CivVUsefulItemData(
+    "Printing Press": CivVProgressionItemData(
         name="Printing Press",
         type=CivVItemType.tech,
-        game_ids=[34],
-        classification=ItemClassification.progression,
+        game_id=34,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Happiness"],
         groups={CivVItemGroup.renaissance_era},
     ),
-    "Gunpowder": CivVUsefulItemData(
+    "Gunpowder": CivVProgressionItemData(
         name="Gunpowder",
         type=CivVItemType.tech,
-        game_ids=[35],
-        classification=ItemClassification.progression,
+        game_id=35,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Melee Unit"],
         groups={CivVItemGroup.renaissance_era},
     ),
-    "Navigation": CivVUsefulItemData(
+    "Navigation": CivVProgressionItemData(
         name="Navigation",
         type=CivVItemType.tech,
-        game_ids=[36],
-        classification=ItemClassification.progression,
+        game_id=36,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Navy"],
         groups={CivVItemGroup.renaissance_era},
     ),
-    "Architecture": CivVUsefulItemData(
+    "Architecture": CivVProgressionItemData(
         name="Architecture",
         type=CivVItemType.tech,
-        game_ids=[37],
-        classification=ItemClassification.progression,
+        game_id=37,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Misc"],
         groups={CivVItemGroup.renaissance_era},
     ),
-    "Economics": CivVUsefulItemData(
+    "Economics": CivVProgressionItemData(
         name="Economics",
         type=CivVItemType.tech,
-        game_ids=[38],
-        classification=ItemClassification.progression,
+        game_id=38,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Gold"],
         groups={CivVItemGroup.renaissance_era},
     ),
-    "Metallurgy": CivVUsefulItemData(
+    "Metallurgy": CivVProgressionItemData(
         name="Metallurgy",
         type=CivVItemType.tech,
-        game_ids=[39],
-        classification=ItemClassification.progression,
+        game_id=39,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Melee Unit"],
         groups={CivVItemGroup.renaissance_era},
     ),
-    "Chemistry": CivVUsefulItemData(
+    "Chemistry": CivVProgressionItemData(
         name="Chemistry",
         type=CivVItemType.tech,
-        game_ids=[40],
-        classification=ItemClassification.progression,
+        game_id=40,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Siege Unit"],
         groups={CivVItemGroup.renaissance_era},
     ),
-    "Archaeology": CivVUsefulItemData(
+    "Archaeology": CivVProgressionItemData(
         name="Archaeology",
         type=CivVItemType.tech,
-        game_ids=[41],
-        classification=ItemClassification.progression,
+        game_id=41,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Culture"],
         groups={CivVItemGroup.industrial_era},
     ),
-    "Scientific Theory": CivVUsefulItemData(
+    "Scientific Theory": CivVProgressionItemData(
         name="Scientific Theory",
         type=CivVItemType.tech,
-        game_ids=[42],
-        classification=ItemClassification.progression,
+        game_id=42,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Science"],
         groups={CivVItemGroup.industrial_era},
     ),
-    "Industrialization": CivVUsefulItemData(
+    "Industrialization": CivVProgressionItemData(
         name="Industrialization",
         type=CivVItemType.tech,
-        game_ids=[43],
-        classification=ItemClassification.progression,
+        game_id=43,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Production"],
         groups={CivVItemGroup.industrial_era},
     ),
-    "Rifling": CivVUsefulItemData(
+    "Rifling": CivVProgressionItemData(
         name="Rifling",
         type=CivVItemType.tech,
-        game_ids=[44],
-        classification=ItemClassification.progression,
+        game_id=44,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Melee Unit"],
         groups={CivVItemGroup.industrial_era},
     ),
-    "Military Science": CivVUsefulItemData(
+    "Military Science": CivVProgressionItemData(
         name="Military Science",
         type=CivVItemType.tech,
-        game_ids=[45],
-        classification=ItemClassification.progression,
+        game_id=45,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Melee Unit"],
         groups={CivVItemGroup.industrial_era},
     ),
-    "Fertilizer": CivVUsefulItemData(
+    "Fertilizer": CivVProgressionItemData(
         name="Fertilizer",
         type=CivVItemType.tech,
-        game_ids=[46],
-        classification=ItemClassification.progression,
+        game_id=46,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Growth"],
         groups={CivVItemGroup.industrial_era},
     ),
-    "Biology": CivVUsefulItemData(
+    "Biology": CivVProgressionItemData(
         name="Biology",
         type=CivVItemType.tech,
-        game_ids=[47],
-        classification=ItemClassification.progression,
+        game_id=47,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Growth"],
         groups={CivVItemGroup.industrial_era},
     ),
-    "Electricity": CivVUsefulItemData(
+    "Electricity": CivVProgressionItemData(
         name="Electricity",
         type=CivVItemType.tech,
-        game_ids=[48],
-        classification=ItemClassification.progression,
+        game_id=48,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Gold"],
         groups={CivVItemGroup.industrial_era},
     ),
-    "Steam Power": CivVUsefulItemData(
+    "Steam Power": CivVProgressionItemData(
         name="Steam Power",
         type=CivVItemType.tech,
-        game_ids=[49],
-        classification=ItemClassification.progression,
+        game_id=49,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Navy"],
         groups={CivVItemGroup.industrial_era},
     ),
-    "Dynamite": CivVUsefulItemData(
+    "Dynamite": CivVProgressionItemData(
         name="Dynamite",
         type=CivVItemType.tech,
-        game_ids=[50],
-        classification=ItemClassification.progression,
+        game_id=50,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Siege Unit"],
         groups={CivVItemGroup.industrial_era},
     ),
-    "Refrigeration": CivVUsefulItemData(
+    "Refrigeration": CivVProgressionItemData(
         name="Refrigeration",
         type=CivVItemType.tech,
-        game_ids=[51],
-        classification=ItemClassification.progression,
+        game_id=51,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Happiness"],
         groups={CivVItemGroup.modern_era},
     ),
-    "Radio": CivVUsefulItemData(
+    "Radio": CivVProgressionItemData(
         name="Radio",
         type=CivVItemType.tech,
-        game_ids=[52],
-        classification=ItemClassification.progression,
+        game_id=52,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Culture"],
         groups={CivVItemGroup.modern_era},
     ),
-    "Replaceable Parts": CivVUsefulItemData(
+    "Replaceable Parts": CivVProgressionItemData(
         name="Replaceable Parts",
         type=CivVItemType.tech,
-        game_ids=[53],
-        classification=ItemClassification.progression,
+        game_id=53,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Melee Unit"],
         groups={CivVItemGroup.modern_era},
     ),
-    "Flight": CivVUsefulItemData(
+    "Flight": CivVProgressionItemData(
         name="Flight",
         type=CivVItemType.tech,
-        game_ids=[54],
-        classification=ItemClassification.progression,
+        game_id=54,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Ranged Unit"],
         groups={CivVItemGroup.modern_era},
     ),
-    "Railroad": CivVUsefulItemData(
+    "Railroad": CivVProgressionItemData(
         name="Railroad",
         type=CivVItemType.tech,
-        game_ids=[55],
-        classification=ItemClassification.progression,
+        game_id=55,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Misc"],
         groups={CivVItemGroup.modern_era},
     ),
-    "Plastics": CivVUsefulItemData(
+    "Plastics": CivVProgressionItemData(
         name="Plastics",
         type=CivVItemType.tech,
-        game_ids=[56],
-        classification=ItemClassification.progression,
+        game_id=56,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Science"],
         groups={CivVItemGroup.modern_era},
     ),
-    "Electronics": CivVUsefulItemData(
+    "Electronics": CivVProgressionItemData(
         name="Electronics",
         type=CivVItemType.tech,
-        game_ids=[57],
-        classification=ItemClassification.progression,
+        game_id=57,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Ranged Unit"],
         groups={CivVItemGroup.modern_era},
     ),
-    "Ballistics": CivVUsefulItemData(
+    "Ballistics": CivVProgressionItemData(
         name="Ballistics",
         type=CivVItemType.tech,
-        game_ids=[58],
-        classification=ItemClassification.progression,
+        game_id=58,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Ranged Unit"],
         groups={CivVItemGroup.modern_era},
     ),
-    "Combustion": CivVUsefulItemData(
+    "Combustion": CivVProgressionItemData(
         name="Combustion",
         type=CivVItemType.tech,
-        game_ids=[59],
-        classification=ItemClassification.progression,
+        game_id=59,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Navy"],
         groups={CivVItemGroup.modern_era},
     ),
-    "Penicillin": CivVUsefulItemData(
+    "Penicillin": CivVProgressionItemData(
         name="Penicillin",
         type=CivVItemType.tech,
-        game_ids=[60],
-        classification=ItemClassification.progression,
+        game_id=60,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Growth"],
         groups={CivVItemGroup.atomic_era},
     ),
-    "Atomic Theory": CivVUsefulItemData(
+    "Atomic Theory": CivVProgressionItemData(
         name="Atomic Theory",
         type=CivVItemType.tech,
-        game_ids=[61],
-        classification=ItemClassification.progression,
+        game_id=61,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Siege Unit"],
         groups={CivVItemGroup.atomic_era},
     ),
-    "Radar": CivVUsefulItemData(
+    "Radar": CivVProgressionItemData(
         name="Radar",
         type=CivVItemType.tech,
-        game_ids=[62],
-        classification=ItemClassification.progression,
+        game_id=62,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Ranged Unit"],
         groups={CivVItemGroup.atomic_era},
     ),
-    "Combined Arms": CivVUsefulItemData(
+    "Combined Arms": CivVProgressionItemData(
         name="Combined Arms",
         type=CivVItemType.tech,
-        game_ids=[63],
-        classification=ItemClassification.progression,
+        game_id=63,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Melee Unit"],
         groups={CivVItemGroup.atomic_era},
     ),
-    "Ecology": CivVUsefulItemData(
+    "Ecology": CivVProgressionItemData(
         name="Ecology",
         type=CivVItemType.tech,
-        game_ids=[64],
-        classification=ItemClassification.progression,
+        game_id=64,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Production"],
         groups={CivVItemGroup.atomic_era},
     ),
-    "Nuclear Fission": CivVUsefulItemData(
+    "Nuclear Fission": CivVProgressionItemData(
         name="Nuclear Fission",
         type=CivVItemType.tech,
-        game_ids=[65],
-        classification=ItemClassification.progression,
+        game_id=65,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Siege Unit"],
         groups={CivVItemGroup.atomic_era},
     ),
-    "Rocketry": CivVUsefulItemData(
+    "Rocketry": CivVProgressionItemData(
         name="Rocketry",
         type=CivVItemType.tech,
-        game_ids=[66],
-        classification=ItemClassification.progression,
+        game_id=66,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Science"],
         groups={CivVItemGroup.atomic_era},
     ),
-    "Computers": CivVUsefulItemData(
+    "Computers": CivVProgressionItemData(
         name="Computers",
         type=CivVItemType.tech,
-        game_ids=[67],
-        classification=ItemClassification.progression,
+        game_id=67,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Melee Unit"],
         groups={CivVItemGroup.atomic_era},
     ),
-    "Telecommunications": CivVUsefulItemData(
+    "Telecommunications": CivVProgressionItemData(
         name="Telecommunications",
         type=CivVItemType.tech,
-        game_ids=[68],
-        classification=ItemClassification.progression,
+        game_id=68,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Navy"],
         groups={CivVItemGroup.information_era},
     ),
-    "Mobile Tactics": CivVUsefulItemData(
+    "Mobile Tactics": CivVProgressionItemData(
         name="Mobile Tactics",
         type=CivVItemType.tech,
-        game_ids=[69],
-        classification=ItemClassification.progression,
+        game_id=69,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Melee Unit"],
         groups={CivVItemGroup.information_era},
     ),
-    "Advanced Ballistics": CivVUsefulItemData(
+    "Advanced Ballistics": CivVProgressionItemData(
         name="Advanced Ballistics",
         type=CivVItemType.tech,
-        game_ids=[70],
-        classification=ItemClassification.progression,
+        game_id=70,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Science"],
         groups={CivVItemGroup.information_era},
     ),
-    "Satellites": CivVUsefulItemData(
+    "Satellites": CivVProgressionItemData(
         name="Satellites",
         type=CivVItemType.tech,
-        game_ids=[71],
-        classification=ItemClassification.progression,
+        game_id=71,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Science"],
         groups={CivVItemGroup.information_era},
     ),
-    "Robotics": CivVUsefulItemData(
+    "Robotics": CivVProgressionItemData(
         name="Robotics",
         type=CivVItemType.tech,
-        game_ids=[72],
-        classification=ItemClassification.progression,
+        game_id=72,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Navy"],
         groups={CivVItemGroup.information_era},
     ),
-    "Lasers": CivVUsefulItemData(
+    "Lasers": CivVProgressionItemData(
         name="Lasers",
         type=CivVItemType.tech,
-        game_ids=[73],
-        classification=ItemClassification.progression,
+        game_id=73,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Melee Unit"],
         groups={CivVItemGroup.information_era},
     ),
-    "The Internet": CivVUsefulItemData(
+    "The Internet": CivVProgressionItemData(
         name="The Internet",
         type=CivVItemType.tech,
-        game_ids=[74],
-        classification=ItemClassification.progression,
+        game_id=74,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Culture"],
         groups={CivVItemGroup.information_era},
     ),
-    "Globalization": CivVUsefulItemData(
+    "Globalization": CivVProgressionItemData(
         name="Globalization",
         type=CivVItemType.tech,
-        game_ids=[75],
-        classification=ItemClassification.progression,
+        game_id=75,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Gold"],
         groups={CivVItemGroup.information_era},
     ),
-    "Particle Physics": CivVUsefulItemData(
+    "Particle Physics": CivVProgressionItemData(
         name="Particle Physics",
         type=CivVItemType.tech,
-        game_ids=[76],
-        classification=ItemClassification.progression,
+        game_id=76,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Science"],
         groups={CivVItemGroup.information_era},
     ),
-    "Nuclear Fusion": CivVUsefulItemData(
+    "Nuclear Fusion": CivVProgressionItemData(
         name="Nuclear Fusion",
         type=CivVItemType.tech,
-        game_ids=[77],
-        classification=ItemClassification.progression,
+        game_id=77,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Melee Unit"],
         groups={CivVItemGroup.information_era},
     ),
-    "Nanotechnology": CivVUsefulItemData(
+    "Nanotechnology": CivVProgressionItemData(
         name="Nanotechnology",
         type=CivVItemType.tech,
-        game_ids=[78],
-        classification=ItemClassification.progression,
+        game_id=78,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Science"],
         groups={CivVItemGroup.information_era},
     ),
-    "Stealth": CivVUsefulItemData(
+    "Stealth": CivVProgressionItemData(
         name="Stealth",
         type=CivVItemType.tech,
-        game_ids=[79],
-        classification=ItemClassification.progression,
+        game_id=79,
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Ranged Unit"],
         groups={CivVItemGroup.information_era},
     ),
 }
 "Dict of all technologies"
-
-
-PROGRESSIVE_TECH_ITEMS = {
-    "Progressive Growth": CivVUsefulItemData(
-        name="Progressive Growth",
-        type=CivVItemType.tech,
-        game_ids=[1, 19, 22, 46, 47, 60],
-        classification=ItemClassification.progression,
-    ),
-    "Progressive Production": CivVUsefulItemData(
-        name="Progressive Production",
-        type=CivVItemType.tech,
-        game_ids=[4, 10, 24, 43, 64],
-        classification=ItemClassification.progression,
-    ),
-    "Progressive Science": CivVUsefulItemData(
-        name="Progressive Science",
-        type=CivVItemType.tech,
-        game_ids=[7, 26, 42, 56, 66, 70, 71, 76, 78],
-        classification=ItemClassification.progression,
-    ),
-    "Progressive Culture": CivVUsefulItemData(
-        name="Progressive Culture",
-        type=CivVItemType.tech,
-        game_ids=[17, 32, 41, 52, 74],
-        classification=ItemClassification.progression,
-    ),
-    "Progressive Gold": CivVUsefulItemData(
-        name="Progressive Gold",
-        type=CivVItemType.tech,
-        game_ids=[2, 18, 23, 33, 38, 48, 75],
-        classification=ItemClassification.progression,
-    ),
-    "Progressive Happiness": CivVUsefulItemData(
-        name="Progressive Happiness",
-        type=CivVItemType.tech,
-        game_ids=[6, 8, 15, 34, 51],
-        classification=ItemClassification.progression,
-    ),
-    "Progressive Navy": CivVUsefulItemData(
-        name="Progressive Navy",
-        type=CivVItemType.tech,
-        game_ids=[5, 12, 25, 31, 36, 49, 59, 68, 72],
-        classification=ItemClassification.progression,
-    ),
-    "Progressive Melee Unit": CivVUsefulItemData(
-        name="Progressive Melee Unit",
-        type=CivVItemType.tech,
-        game_ids=[11, 13, 20, 27, 30, 35, 39, 44, 45, 53, 63, 67, 69, 73, 77],
-        classification=ItemClassification.progression,
-    ),
-    "Progressive Ranged Unit": CivVUsefulItemData(
-        name="Progressive Ranged Unit",
-        type=CivVItemType.tech,
-        game_ids=[3, 28, 54, 57, 58, 62, 79],
-        classification=ItemClassification.progression,
-    ),
-    "Progressive Siege Unit": CivVUsefulItemData(
-        name="Progressive Siege Unit",
-        type=CivVItemType.tech,
-        game_ids=[14, 29, 40, 50, 61, 65],
-        classification=ItemClassification.progression,
-    ),
-    "Progressive Misc": CivVUsefulItemData(
-        name="Progressive Misc",
-        type=CivVItemType.tech,
-        game_ids=[9, 16, 21, 37, 55],
-        classification=ItemClassification.progression,
-    ),
-}
-"Dict of all progressive technologies"

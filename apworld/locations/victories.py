@@ -32,9 +32,9 @@ VICTORY_LOCATIONS = {
             ) |
             items.ItemRequirements.create(
                 items={
-                    items.PROGRESSIVE_TECH_ITEMS["Progressive Production"].name: 1,
-                    items.PROGRESSIVE_TECH_ITEMS["Progressive Gold"].name: 6,
-                    items.PROGRESSIVE_TECH_ITEMS["Progressive Science"].name: 9,
+                    items.PROGRESSIVE_TECH_ITEMS["Production"].name: 1,
+                    items.PROGRESSIVE_TECH_ITEMS["Gold"].name: 6,
+                    items.PROGRESSIVE_TECH_ITEMS["Science"].name: 9,
                 },
                 when={
                     "progressive_techs": True,
@@ -71,9 +71,9 @@ VICTORY_LOCATIONS = {
             ) |
             items.ItemRequirements.create(
                 items={
-                    items.PROGRESSIVE_TECH_ITEMS["Progressive Culture"].name: 5,
-                    items.PROGRESSIVE_TECH_ITEMS["Progressive Navy"].name: 8,
-                    items.PROGRESSIVE_TECH_ITEMS["Progressive Science"].name: 2,
+                    items.PROGRESSIVE_TECH_ITEMS["Culture"].name: 5,
+                    items.PROGRESSIVE_TECH_ITEMS["Navy"].name: 8,
+                    items.PROGRESSIVE_TECH_ITEMS["Science"].name: 2,
                 },
                 when={
                     "progressive_techs": True,
@@ -113,9 +113,9 @@ VICTORY_LOCATIONS = {
             ) |
             items.ItemRequirements.create(
                 items={
-                    items.PROGRESSIVE_TECH_ITEMS["Progressive Gold"].name: 7,
-                    items.PROGRESSIVE_TECH_ITEMS["Progressive Happiness"].name: 4,
-                    items.PROGRESSIVE_TECH_ITEMS["Progressive Navy"].name: 4,
+                    items.PROGRESSIVE_TECH_ITEMS["Gold"].name: 7,
+                    items.PROGRESSIVE_TECH_ITEMS["Happiness"].name: 4,
+                    items.PROGRESSIVE_TECH_ITEMS["Navy"].name: 4,
                 },
                 when={
                     "progressive_techs": True,

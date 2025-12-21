@@ -2,7 +2,10 @@
 from . import items
 
 # All declaration
-__all__ = ["EMBARKING_REQUIREMENTS", "BUILDING_REQUIREMENTS"]
+__all__ = [
+    "BUILDING_REQUIREMENTS",
+    "EMBARKING_REQUIREMENTS",
+]
 
 
 # %% REQUIREMENT DEFINITIONS
@@ -18,7 +21,7 @@ EMBARKING_REQUIREMENTS = (
     ) |
     items.ItemRequirements.create(
         items={
-            items.PROGRESSIVE_TECH_ITEMS["Progressive Navy"].name: 4,
+            items.PROGRESSIVE_TECH_ITEMS["Navy"].name: 4,
         },
         when={
             "progressive_techs": True,
@@ -39,7 +42,7 @@ BUILDING_REQUIREMENTS = {
         ) |
         items.ItemRequirements.create(
             items={
-                items.PROGRESSIVE_TECH_ITEMS["Progressive Science"].name: 1,
+                items.PROGRESSIVE_TECH_ITEMS["Science"].name: 1,
             },
             when={
                 "progressive_techs": True,
@@ -58,7 +61,7 @@ BUILDING_REQUIREMENTS = {
         ) |
         items.ItemRequirements.create(
             items={
-                items.PROGRESSIVE_TECH_ITEMS["Progressive Science"].name: 2,
+                items.PROGRESSIVE_TECH_ITEMS["Science"].name: 2,
             },
             when={
                 "progressive_techs": True,
@@ -78,7 +81,7 @@ BUILDING_REQUIREMENTS = {
         ) |
         items.ItemRequirements.create(
             items={
-                items.PROGRESSIVE_TECH_ITEMS["Progressive Science"].name: 3,
+                items.PROGRESSIVE_TECH_ITEMS["Science"].name: 3,
             },
             when={
                 "progressive_techs": True,
@@ -99,7 +102,7 @@ BUILDING_REQUIREMENTS = {
         ) |
         items.ItemRequirements.create(
             items={
-                items.PROGRESSIVE_TECH_ITEMS["Progressive Science"].name: 4,
+                items.PROGRESSIVE_TECH_ITEMS["Science"].name: 4,
             },
             when={
                 "progressive_techs": True,
@@ -117,7 +120,7 @@ BUILDING_REQUIREMENTS = {
         ) |
         items.ItemRequirements.create(
             items={
-                items.PROGRESSIVE_TECH_ITEMS["Progressive Culture"].name: 1,
+                items.PROGRESSIVE_TECH_ITEMS["Culture"].name: 1,
             },
             when={
                 "progressive_techs": True,
@@ -136,7 +139,7 @@ BUILDING_REQUIREMENTS = {
         ) |
         items.ItemRequirements.create(
             items={
-                items.PROGRESSIVE_TECH_ITEMS["Progressive Culture"].name: 2,
+                items.PROGRESSIVE_TECH_ITEMS["Culture"].name: 2,
             },
             when={
                 "progressive_techs": True,
@@ -156,7 +159,7 @@ BUILDING_REQUIREMENTS = {
         ) |
         items.ItemRequirements.create(
             items={
-                items.PROGRESSIVE_TECH_ITEMS["Progressive Culture"].name: 3,
+                items.PROGRESSIVE_TECH_ITEMS["Culture"].name: 3,
             },
             when={
                 "progressive_techs": True,
@@ -177,7 +180,7 @@ BUILDING_REQUIREMENTS = {
         ) |
         items.ItemRequirements.create(
             items={
-                items.PROGRESSIVE_TECH_ITEMS["Progressive Culture"].name: 4,
+                items.PROGRESSIVE_TECH_ITEMS["Culture"].name: 4,
             },
             when={
                 "progressive_techs": True,
