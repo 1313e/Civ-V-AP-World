@@ -10,7 +10,7 @@ __all__ = [
 
 
 # %% ITEM DECLARATIONS
-PROGRESSIVE_TECH_ITEMS = {
+PROGRESSIVE_TECH_ITEMS: dict[str, CivVProgressiveItemData] = {
     "Growth": CivVProgressiveItemData(
         name="Progressive Growth",
         type=CivVItemType.tech,
@@ -70,7 +70,7 @@ PROGRESSIVE_TECH_ITEMS = {
 "Dict of all progressive technologies"
 
 
-TECH_ITEMS = {
+TECH_ITEMS: dict[str, CivVProgressionItemData] = {
     "Pottery": CivVProgressionItemData(
         name="Pottery",
         type=CivVItemType.tech,

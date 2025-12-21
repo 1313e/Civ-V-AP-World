@@ -9,7 +9,7 @@ __all__ = []
 
 
 # %% ITEM DECLARATIONS
-GOLD_TRAP_ITEMS = {
+GOLD_TRAP_ITEMS: dict[str, CivVFillerItemData] = {
     "Minor Gold": CivVFillerItemData(
         name="Minor Gold",
         type=CivVItemType.trap,
@@ -41,7 +41,7 @@ GOLD_TRAP_ITEMS = {
 "Dict of all gold trap items"
 
 
-CULTURE_TRAP_ITEMS = {
+CULTURE_TRAP_ITEMS: dict[str, CivVFillerItemData] = {
     "Minor Culture": CivVFillerItemData(
         name="Minor Culture",
         type=CivVItemType.trap,
@@ -73,7 +73,7 @@ CULTURE_TRAP_ITEMS = {
 "Dict of all culture trap items"
 
 
-FAITH_TRAP_ITEMS = {
+FAITH_TRAP_ITEMS: dict[str, CivVFillerItemData] = {
     "Minor Faith": CivVFillerItemData(
         name="Minor Faith",
         type=CivVItemType.trap,
@@ -105,7 +105,7 @@ FAITH_TRAP_ITEMS = {
 "Dict of all faith trap items"
 
 
-ALL_CITY_POPULATION_TRAP_ITEMS = {
+ALL_CITY_POPULATION_TRAP_ITEMS: dict[str, CivVFillerItemData] = {
     "All City Population -1": CivVFillerItemData(
         name="All City Population -1",
         type=CivVItemType.trap,
@@ -128,7 +128,7 @@ ALL_CITY_POPULATION_TRAP_ITEMS = {
 "Dict of city population trap items"
 
 
-DENOUNCE_TRAP_ITEM = CivVFillerItemData(
+DENOUNCE_TRAP_ITEM: CivVFillerItemData = CivVFillerItemData(
     name="Denounce",
     type=CivVItemType.trap,
     classification=ItemClassification.trap,
@@ -140,7 +140,7 @@ DENOUNCE_TRAP_ITEM = CivVFillerItemData(
 "Denounce trap item"
 
 
-WAR_TRAP_ITEM = CivVFillerItemData(
+WAR_TRAP_ITEM: CivVFillerItemData = CivVFillerItemData(
     name="War",
     type=CivVItemType.trap,
     classification=ItemClassification.trap,

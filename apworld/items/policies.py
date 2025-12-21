@@ -9,7 +9,7 @@ __all__ = [
 
 
 # %% ITEM DECLARATIONS
-POLICY_ITEMS = {
+POLICY_ITEMS: dict[str, CivVProgressionItemData | CivVUsefulItemData] = {
     "Liberty": CivVUsefulItemData(
         name="Liberty",
         type=CivVItemType.policy,

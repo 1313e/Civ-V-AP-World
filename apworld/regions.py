@@ -70,37 +70,37 @@ ANCIENT_ERA = CivVRegionData(
 CLASSICAL_ERA = CivVRegionData(
     name="Classical Era",
     parent=ANCIENT_ERA,
-    requirements=items.ItemRequirements.create({items.PROGRESSIVE_ERA_ITEM.name: 1}),
+    requirements=items.ItemRequirements(progressive={items.PROGRESSIVE_ERA_ITEM: 1}),
 )
 MEDIEVAL_ERA = CivVRegionData(
     name="Medieval Era",
     parent=CLASSICAL_ERA,
-    requirements=items.ItemRequirements.create({items.PROGRESSIVE_ERA_ITEM.name: 2}),
+    requirements=items.ItemRequirements(progressive={items.PROGRESSIVE_ERA_ITEM: 2}),
 )
 RENAISSANCE_ERA = CivVRegionData(
     name="Renaissance Era",
     parent=MEDIEVAL_ERA,
-    requirements=items.ItemRequirements.create({items.PROGRESSIVE_ERA_ITEM.name: 3}),
+    requirements=items.ItemRequirements(progressive={items.PROGRESSIVE_ERA_ITEM: 3}),
 )
 INDUSTRIAL_ERA = CivVRegionData(
     name="Industrial Era",
     parent=RENAISSANCE_ERA,
-    requirements=items.ItemRequirements.create({items.PROGRESSIVE_ERA_ITEM.name: 4}),
+    requirements=items.ItemRequirements(progressive={items.PROGRESSIVE_ERA_ITEM: 4}),
 )
 MODERN_ERA = CivVRegionData(
     name="Modern Era",
     parent=INDUSTRIAL_ERA,
-    requirements=items.ItemRequirements.create({items.PROGRESSIVE_ERA_ITEM.name: 5}),
+    requirements=items.ItemRequirements(progressive={items.PROGRESSIVE_ERA_ITEM: 5}),
 )
 ATOMIC_ERA = CivVRegionData(
     name="Atomic Era",
     parent=MODERN_ERA,
-    requirements=items.ItemRequirements.create({items.PROGRESSIVE_ERA_ITEM.name: 6}),
+    requirements=items.ItemRequirements(progressive={items.PROGRESSIVE_ERA_ITEM: 6}),
 )
 INFORMATION_ERA = CivVRegionData(
     name="Information Era",
     parent=ATOMIC_ERA,
-    requirements=items.ItemRequirements.create({items.PROGRESSIVE_ERA_ITEM.name: 7}),
+    requirements=items.ItemRequirements(progressive={items.PROGRESSIVE_ERA_ITEM: 7}),
 )
 ERA_REGIONS = [
     ANCIENT_ERA,
@@ -116,41 +116,41 @@ ERA_REGIONS = [
 
 
 ANCIENT_ERA_TECH = CivVRegionData(
-    name="Ancient Era Techs",
+    name="Ancient Era Tech",
     parent=ANCIENT_ERA,
 )
 CLASSICAL_ERA_TECH = CivVRegionData(
-    name="Classical Era Techs",
+    name="Classical Era Tech",
     parent=CLASSICAL_ERA,
     requirements=requirements.BUILDING_REQUIREMENTS["Library"]
 )
 MEDIEVAL_ERA_TECH = CivVRegionData(
-    name="Medieval Era Techs",
+    name="Medieval Era Tech",
     parent=MEDIEVAL_ERA,
     requirements=requirements.BUILDING_REQUIREMENTS["Library"]
 )
 RENAISSANCE_ERA_TECH = CivVRegionData(
-    name="Renaissance Era Techs",
+    name="Renaissance Era Tech",
     parent=RENAISSANCE_ERA,
     requirements=requirements.BUILDING_REQUIREMENTS["University"]
 )
 INDUSTRIAL_ERA_TECH = CivVRegionData(
-    name="Industrial Era Techs",
+    name="Industrial Era Tech",
     parent=INDUSTRIAL_ERA,
     requirements=requirements.BUILDING_REQUIREMENTS["University"]
 )
 MODERN_ERA_TECH = CivVRegionData(
-    name="Modern Era Techs",
+    name="Modern Era Tech",
     parent=MODERN_ERA,
     requirements=requirements.BUILDING_REQUIREMENTS["Public School"]
 )
 ATOMIC_ERA_TECH = CivVRegionData(
-    name="Atomic Era Techs",
+    name="Atomic Era Tech",
     parent=ATOMIC_ERA,
     requirements=requirements.BUILDING_REQUIREMENTS["Public School"]
 )
 INFORMATION_ERA_TECH = CivVRegionData(
-    name="Information Era Techs",
+    name="Information Era Tech",
     parent=INFORMATION_ERA,
     requirements=requirements.BUILDING_REQUIREMENTS["Research Lab"]
 )

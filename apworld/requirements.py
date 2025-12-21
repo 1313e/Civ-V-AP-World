@@ -9,183 +9,66 @@ __all__ = [
 
 
 # %% REQUIREMENT DEFINITIONS
-EMBARKING_REQUIREMENTS = (
-    items.ItemRequirements.create(
-        items={
-            items.TECH_ITEMS["Optics"].name: 1,
-            items.TECH_ITEMS["Astronomy"].name: 1,
-        },
-        when={
-            "progressive_techs": False,
-        }
-    ) |
-    items.ItemRequirements.create(
-        items={
-            items.PROGRESSIVE_TECH_ITEMS["Navy"].name: 4,
-        },
-        when={
-            "progressive_techs": True,
-        }
-    )
+EMBARKING_REQUIREMENTS = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Optics"],
+        items.TECH_ITEMS["Astronomy"],
+    },
 )
 "Requirements for being able to embark"
 
 BUILDING_REQUIREMENTS = {
-    "Library": (
-        items.ItemRequirements.create(
-            items={
-                items.TECH_ITEMS["Writing"].name: 1,
-            },
-            when={
-                "progressive_techs": False,
-            }
-        ) |
-        items.ItemRequirements.create(
-            items={
-                items.PROGRESSIVE_TECH_ITEMS["Science"].name: 1,
-            },
-            when={
-                "progressive_techs": True,
-            }
-        )
+    "Library": items.ItemRequirements(
+        progression={
+            items.TECH_ITEMS["Writing"],
+        },
     ),
-    "University": (
-        items.ItemRequirements.create(
-            items={
-                items.TECH_ITEMS["Writing"].name: 1,
-                items.TECH_ITEMS["Education"].name: 1,
-            },
-            when={
-                "progressive_techs": False,
-            }
-        ) |
-        items.ItemRequirements.create(
-            items={
-                items.PROGRESSIVE_TECH_ITEMS["Science"].name: 2,
-            },
-            when={
-                "progressive_techs": True,
-            }
-        )
+    "University": items.ItemRequirements(
+        progression={
+            items.TECH_ITEMS["Writing"],
+            items.TECH_ITEMS["Education"],
+        },
     ),
-    "Public School": (
-        items.ItemRequirements.create(
-            items={
-                items.TECH_ITEMS["Writing"].name: 1,
-                items.TECH_ITEMS["Education"].name: 1,
-                items.TECH_ITEMS["Scientific Theory"].name: 1,
-            },
-            when={
-                "progressive_techs": False,
-            }
-        ) |
-        items.ItemRequirements.create(
-            items={
-                items.PROGRESSIVE_TECH_ITEMS["Science"].name: 3,
-            },
-            when={
-                "progressive_techs": True,
-            }
-        )
+    "Public School": items.ItemRequirements(
+        progression={
+            items.TECH_ITEMS["Writing"],
+            items.TECH_ITEMS["Education"],
+            items.TECH_ITEMS["Scientific Theory"],
+        },
     ),
-    "Research Lab": (
-        items.ItemRequirements.create(
-            items={
-                items.TECH_ITEMS["Writing"].name: 1,
-                items.TECH_ITEMS["Education"].name: 1,
-                items.TECH_ITEMS["Scientific Theory"].name: 1,
-                items.TECH_ITEMS["Plastics"].name: 1,
-            },
-            when={
-                "progressive_techs": False,
-            }
-        ) |
-        items.ItemRequirements.create(
-            items={
-                items.PROGRESSIVE_TECH_ITEMS["Science"].name: 4,
-            },
-            when={
-                "progressive_techs": True,
-            }
-        )
+    "Research Lab": items.ItemRequirements(
+        progression={
+            items.TECH_ITEMS["Writing"],
+            items.TECH_ITEMS["Education"],
+            items.TECH_ITEMS["Scientific Theory"],
+            items.TECH_ITEMS["Plastics"],
+        },
     ),
-    "Amphitheater": (
-        items.ItemRequirements.create(
-            items={
-                items.TECH_ITEMS["Drama and Poetry"].name: 1,
-            },
-            when={
-                "progressive_techs": False,
-            }
-        ) |
-        items.ItemRequirements.create(
-            items={
-                items.PROGRESSIVE_TECH_ITEMS["Culture"].name: 1,
-            },
-            when={
-                "progressive_techs": True,
-            }
-        )
+    "Amphitheater": items.ItemRequirements(
+        progression={
+            items.TECH_ITEMS["Drama and Poetry"],
+        },
     ),
-    "Opera House": (
-        items.ItemRequirements.create(
-            items={
-                items.TECH_ITEMS["Drama and Poetry"].name: 1,
-                items.TECH_ITEMS["Acoustics"].name: 1,
-            },
-            when={
-                "progressive_techs": False,
-            }
-        ) |
-        items.ItemRequirements.create(
-            items={
-                items.PROGRESSIVE_TECH_ITEMS["Culture"].name: 2,
-            },
-            when={
-                "progressive_techs": True,
-            }
-        )
+    "Opera House": items.ItemRequirements(
+        progression={
+            items.TECH_ITEMS["Drama and Poetry"],
+            items.TECH_ITEMS["Acoustics"],
+        },
     ),
-    "Museum": (
-        items.ItemRequirements.create(
-            items={
-                items.TECH_ITEMS["Drama and Poetry"].name: 1,
-                items.TECH_ITEMS["Acoustics"].name: 1,
-                items.TECH_ITEMS["Archaeology"].name: 1,
-            },
-            when={
-                "progressive_techs": False,
-            }
-        ) |
-        items.ItemRequirements.create(
-            items={
-                items.PROGRESSIVE_TECH_ITEMS["Culture"].name: 3,
-            },
-            when={
-                "progressive_techs": True,
-            }
-        )
+    "Museum": items.ItemRequirements(
+        progression={
+            items.TECH_ITEMS["Drama and Poetry"],
+            items.TECH_ITEMS["Acoustics"],
+            items.TECH_ITEMS["Archaeology"],
+        },
     ),
-    "Broadcast Tower": (
-        items.ItemRequirements.create(
-            items={
-                items.TECH_ITEMS["Drama and Poetry"].name: 1,
-                items.TECH_ITEMS["Acoustics"].name: 1,
-                items.TECH_ITEMS["Archaeology"].name: 1,
-                items.TECH_ITEMS["Radio"].name: 1,
-            },
-            when={
-                "progressive_techs": False,
-            }
-        ) |
-        items.ItemRequirements.create(
-            items={
-                items.PROGRESSIVE_TECH_ITEMS["Culture"].name: 4,
-            },
-            when={
-                "progressive_techs": True,
-            }
-        )
+    "Broadcast Tower": items.ItemRequirements(
+        progression={
+            items.TECH_ITEMS["Drama and Poetry"],
+            items.TECH_ITEMS["Acoustics"],
+            items.TECH_ITEMS["Archaeology"],
+            items.TECH_ITEMS["Radio"],
+        },
     ),
 }
 "Dict of building requirements"

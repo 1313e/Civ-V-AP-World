@@ -66,40 +66,22 @@ class ItemRequirements:
 
     """
 
-    always_requirements: dict[str, int] = field(default_factory=dict)
-    "Dict of requirements that always apply"
-    option_requirements: list[tuple[dict[str, int | str], dict[str, int]]] = field(default_factory=list)
-    "Dict of requirements that only apply when specific options are used"
+    progressive: dict["CivVProgressiveItemData", int] = field(default_factory=dict)
+    "Dict of progressive items and their corresponding required count"
+    progression: set["CivVProgressionItemData"] = field(default_factory=set)
+    "Set of required progression items"
 
-    @classmethod
-    def create(cls, items: dict[str, int], when: dict[str, int | str] | None = None) -> "ItemRequirements":
-        """
-        Creates a new item requirements object.
-
-        Args:
-            items: Dict of required items names and their count to access this region or location.
-            when: If set, only use these requirements when the given option names have the provided values
-
-        """
-
-        # Check that all items requested exist and are marked as progression
-        for item_name in items.keys():
-            if item_name not in ITEMS_DATA_BY_NAME:
-                raise ValueError(f"Required item with name {item_name!r} does not exist")
-            if ITEMS_DATA_BY_NAME[item_name].classification != ItemClassification.progression:
-                raise ValueError(f"Required item with name {item_name!r} is not a progression item")
-
-        # Create object according to the 'when' clause
-        if when is None:
-            return cls(always_requirements=items)
-        else:
-            return cls(option_requirements=[(when, items)])
+    def __post_init__(self):
+        # Check that each item in progressive and progression are marked as progression items
+        for item in [*self.progressive.keys(), *self.progression]:
+            if item.classification != ItemClassification.progression:
+                raise ValueError(f"Required item with name {item.name!r} is not a progression item")
 
     def __or__(self, other: "ItemRequirements") -> "ItemRequirements":
-        # Combine the two requirements together
+        # Combine the two item requirements objects together
         return ItemRequirements(
-            always_requirements=self._merge_dicts(self.always_requirements, other.always_requirements),
-            option_requirements=[*self.option_requirements, *other.option_requirements],
+            progressive=self._merge_dicts(self.progressive, other.progressive),
+            progression={*self.progression, *other.progression},
         )
 
     @staticmethod
@@ -115,11 +97,29 @@ class ItemRequirements:
         """
 
         # Determine all the requirements that must be satisfied
-        requirements = self.always_requirements
-        for options_dct, requirements_dct in self.option_requirements:
-            # Check if this options requirements applies and add it to the dict of requirements if so
-            if all((getattr(options, name, None) == value for name, value in options_dct.items())):
-                requirements = self._merge_dicts(requirements, requirements_dct)
+        requirements: dict[str, int] = {}
+
+        # Add all the progressive requirements
+        for item, count in self.progressive.items():
+            # If this progressive item is always required or is toggled on in the options, add it
+            if item.option_toggle_name is None or getattr(options, item.option_toggle_name):
+                requirements[item.name] = count
+
+        # Add all the progression requirements
+        for item in self.progression:
+            # If this progression item is always required or its progressive parent is NOT in use, add it
+            if item.progressive_parent is None or not (
+                    item.progressive_parent.option_toggle_name is None
+                    or getattr(options, item.progressive_parent.option_toggle_name)
+            ):
+                requirements[item.name] = 1
+
+            # Else, we have to add its progressive parent count equivalent to the requirements
+            else:
+                requirements = self._merge_dicts(
+                    requirements,
+                    {item.progressive_parent.name: item.progressive_parent.game_ids.index(item.game_id)+1},
+                )
 
         # Create rule function that uses the CollectionState to determine if region/location is reachable
         def rule(state: CollectionState) -> bool:
@@ -156,6 +156,12 @@ class CivVItemData:
     ap_id: int = field(init=False)
     "ID of this item within AP"
 
+    def __eq__(self, other: "CivVItemData") -> bool:
+        return self.ap_id == other.ap_id
+
+    def __hash__(self) -> int:
+        return self.ap_id
+
     def __post_init__(self):
         # Add the item type as a prefix to the item name
         self.name = f"{self.prefix or to_title(self.type)} - {self.name}"
@@ -181,7 +187,7 @@ class CivVItemData:
             ITEM_GROUPS[str(group)].append(self.name)
 
 
-@dataclass
+@dataclass(eq=False)
 class CivVProgressiveItemData(CivVItemData):
     """
     Dataclass used for specifying a progressive item.
@@ -212,7 +218,7 @@ class CivVProgressiveItemData(CivVItemData):
         self.count += 1
 
 
-@dataclass
+@dataclass(eq=False)
 class CivVProgressionItemData(CivVItemData):
     """
     Dataclass used for specifying a progression item.
@@ -238,7 +244,7 @@ class CivVProgressionItemData(CivVItemData):
         PROGRESSION_ITEMS.append(self)
 
 
-@dataclass
+@dataclass(eq=False)
 class CivVUsefulItemData(CivVItemData):
     """
     Dataclass used for specifying a useful item.
@@ -258,7 +264,7 @@ class CivVUsefulItemData(CivVItemData):
         USEFUL_ITEMS.append(self)
 
 
-@dataclass
+@dataclass(eq=False)
 class CivVFillerItemData(CivVItemData):
     """
     Dataclass used for specifying a filler item.

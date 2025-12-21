@@ -9,7 +9,7 @@ __all__ = [
 
 
 # %% ITEM DECLARATIONS
-PROGRESSIVE_ERA_ITEM = CivVProgressiveItemData(
+PROGRESSIVE_ERA_ITEM: CivVProgressiveItemData = CivVProgressiveItemData(
     name="Progressive",
     type=CivVItemType.era,
     game_ids=[169, 170, 171, 172, 173, 174, 175],
