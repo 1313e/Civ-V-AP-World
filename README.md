@@ -131,10 +131,7 @@ If you find any other ones, please post a message in the [AP Discord](https://di
 Some ideas I currently have that I want to look into (in order of priority):
 - Adding ability to add a specific required victory to the AP. Adding logic for all victory conditions.
 - Creating a Poptracker pack for the AP.
-- Allowing certain technologies to be forced early. For example, Mining; Trapping; and Calendar are kinda critical and I would assume you want them somewhat early.
-- Adding a bunch of additional stuff to the checks list: Culture; eras; city-states; trade routes; barbarian camps; etc.
 
 
 ## Other notes
 - There is a bonus item in the AP named `Snack from Thes`. This item gives you 200 Gold; 200 Culture; and 100 Faith. Unlike all other items in the game, this one breaks naming convention and instead is named after my sister, who requested an item to be named after her. It has a slightly higher chance of appearing compared to the other filler items.
-

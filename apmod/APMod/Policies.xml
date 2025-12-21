@@ -368,10 +368,9 @@
             <Civilopedia>AP 1</Civilopedia>
             <Help>AP 1</Help>
             <PolicyBranchType>POLICY_BRANCH_TRADITION</PolicyBranchType>
-            <CultureCost>10</CultureCost>
+            <CultureCost>1</CultureCost>
             <GridX>1</GridX>
             <GridY>1</GridY>
-            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -384,10 +383,9 @@
             <Civilopedia>AP 2</Civilopedia>
             <Help>AP 2</Help>
             <PolicyBranchType>POLICY_BRANCH_TRADITION</PolicyBranchType>
-            <CultureCost>10</CultureCost>
+            <CultureCost>1</CultureCost>
             <GridX>3</GridX>
             <GridY>1</GridY>
-            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -400,10 +398,9 @@
             <Civilopedia>AP 3</Civilopedia>
             <Help>AP 3</Help>
             <PolicyBranchType>POLICY_BRANCH_TRADITION</PolicyBranchType>
-            <CultureCost>10</CultureCost>
+            <CultureCost>1</CultureCost>
             <GridX>3</GridX>
             <GridY>2</GridY>
-            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -416,10 +413,9 @@
             <Civilopedia>AP 4</Civilopedia>
             <Help>AP 4</Help>
             <PolicyBranchType>POLICY_BRANCH_TRADITION</PolicyBranchType>
-            <CultureCost>10</CultureCost>
+            <CultureCost>1</CultureCost>
             <GridX>2</GridX>
             <GridY>3</GridY>
-            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -432,10 +428,9 @@
             <Civilopedia>AP 5</Civilopedia>
             <Help>AP 5</Help>
             <PolicyBranchType>POLICY_BRANCH_TRADITION</PolicyBranchType>
-            <CultureCost>10</CultureCost>
+            <CultureCost>1</CultureCost>
             <GridX>4</GridX>
             <GridY>3</GridY>
-            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -448,10 +443,9 @@
             <Civilopedia>AP 1</Civilopedia>
             <Help>AP 1</Help>
             <PolicyBranchType>POLICY_BRANCH_LIBERTY</PolicyBranchType>
-            <CultureCost>10</CultureCost>
+            <CultureCost>1</CultureCost>
             <GridX>1</GridX>
             <GridY>1</GridY>
-            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -464,10 +458,9 @@
             <Civilopedia>AP 2</Civilopedia>
             <Help>AP 2</Help>
             <PolicyBranchType>POLICY_BRANCH_LIBERTY</PolicyBranchType>
-            <CultureCost>10</CultureCost>
+            <CultureCost>1</CultureCost>
             <GridX>4</GridX>
             <GridY>1</GridY>
-            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -480,10 +473,9 @@
             <Civilopedia>AP 3</Civilopedia>
             <Help>AP 3</Help>
             <PolicyBranchType>POLICY_BRANCH_LIBERTY</PolicyBranchType>
-            <CultureCost>10</CultureCost>
+            <CultureCost>1</CultureCost>
             <GridX>1</GridX>
             <GridY>2</GridY>
-            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -496,10 +488,9 @@
             <Civilopedia>AP 4</Civilopedia>
             <Help>AP 4</Help>
             <PolicyBranchType>POLICY_BRANCH_LIBERTY</PolicyBranchType>
-            <CultureCost>10</CultureCost>
+            <CultureCost>1</CultureCost>
             <GridX>3</GridX>
             <GridY>2</GridY>
-            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -512,10 +503,9 @@
             <Civilopedia>AP 5</Civilopedia>
             <Help>AP 5</Help>
             <PolicyBranchType>POLICY_BRANCH_LIBERTY</PolicyBranchType>
-            <CultureCost>10</CultureCost>
+            <CultureCost>1</CultureCost>
             <GridX>5</GridX>
             <GridY>2</GridY>
-            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -528,10 +518,9 @@
             <Civilopedia>AP 1</Civilopedia>
             <Help>AP 1</Help>
             <PolicyBranchType>POLICY_BRANCH_HONOR</PolicyBranchType>
-            <CultureCost>10</CultureCost>
+            <CultureCost>1</CultureCost>
             <GridX>2</GridX>
             <GridY>1</GridY>
-            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -544,10 +533,9 @@
             <Civilopedia>AP 2</Civilopedia>
             <Help>AP 2</Help>
             <PolicyBranchType>POLICY_BRANCH_HONOR</PolicyBranchType>
-            <CultureCost>10</CultureCost>
+            <CultureCost>1</CultureCost>
             <GridX>4</GridX>
             <GridY>1</GridY>
-            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -560,10 +548,9 @@
             <Civilopedia>AP 3</Civilopedia>
             <Help>AP 3</Help>
             <PolicyBranchType>POLICY_BRANCH_HONOR</PolicyBranchType>
-            <CultureCost>10</CultureCost>
+            <CultureCost>1</CultureCost>
             <GridX>2</GridX>
             <GridY>2</GridY>
-            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -576,10 +563,9 @@
             <Civilopedia>AP 4</Civilopedia>
             <Help>AP 4</Help>
             <PolicyBranchType>POLICY_BRANCH_HONOR</PolicyBranchType>
-            <CultureCost>10</CultureCost>
+            <CultureCost>1</CultureCost>
             <GridX>4</GridX>
             <GridY>2</GridY>
-            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -592,10 +578,9 @@
             <Civilopedia>AP 5</Civilopedia>
             <Help>AP 5</Help>
             <PolicyBranchType>POLICY_BRANCH_HONOR</PolicyBranchType>
-            <CultureCost>10</CultureCost>
+            <CultureCost>1</CultureCost>
             <GridX>4</GridX>
             <GridY>3</GridY>
-            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -608,10 +593,9 @@
             <Civilopedia>AP 1</Civilopedia>
             <Help>AP 1</Help>
             <PolicyBranchType>POLICY_BRANCH_PIETY</PolicyBranchType>
-            <CultureCost>10</CultureCost>
+            <CultureCost>1</CultureCost>
             <GridX>2</GridX>
             <GridY>1</GridY>
-            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -624,10 +608,9 @@
             <Civilopedia>AP 2</Civilopedia>
             <Help>AP 2</Help>
             <PolicyBranchType>POLICY_BRANCH_PIETY</PolicyBranchType>
-            <CultureCost>10</CultureCost>
+            <CultureCost>1</CultureCost>
             <GridX>5</GridX>
             <GridY>1</GridY>
-            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -640,10 +623,9 @@
             <Civilopedia>AP 3</Civilopedia>
             <Help>AP 3</Help>
             <PolicyBranchType>POLICY_BRANCH_PIETY</PolicyBranchType>
-            <CultureCost>10</CultureCost>
+            <CultureCost>1</CultureCost>
             <GridX>1</GridX>
             <GridY>2</GridY>
-            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -656,10 +638,9 @@
             <Civilopedia>AP 4</Civilopedia>
             <Help>AP 4</Help>
             <PolicyBranchType>POLICY_BRANCH_PIETY</PolicyBranchType>
-            <CultureCost>10</CultureCost>
+            <CultureCost>1</CultureCost>
             <GridX>3</GridX>
             <GridY>2</GridY>
-            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -672,10 +653,9 @@
             <Civilopedia>AP 5</Civilopedia>
             <Help>AP 5</Help>
             <PolicyBranchType>POLICY_BRANCH_PIETY</PolicyBranchType>
-            <CultureCost>10</CultureCost>
+            <CultureCost>1</CultureCost>
             <GridX>3</GridX>
             <GridY>3</GridY>
-            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -688,10 +668,9 @@
             <Civilopedia>AP 1</Civilopedia>
             <Help>AP 1</Help>
             <PolicyBranchType>POLICY_BRANCH_PATRONAGE</PolicyBranchType>
-            <CultureCost>10</CultureCost>
+            <CultureCost>1</CultureCost>
             <GridX>2</GridX>
             <GridY>1</GridY>
-            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_CLASSICAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -704,10 +683,9 @@
             <Civilopedia>AP 2</Civilopedia>
             <Help>AP 2</Help>
             <PolicyBranchType>POLICY_BRANCH_PATRONAGE</PolicyBranchType>
-            <CultureCost>10</CultureCost>
+            <CultureCost>1</CultureCost>
             <GridX>4</GridX>
             <GridY>1</GridY>
-            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_CLASSICAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -720,10 +698,9 @@
             <Civilopedia>AP 3</Civilopedia>
             <Help>AP 3</Help>
             <PolicyBranchType>POLICY_BRANCH_PATRONAGE</PolicyBranchType>
-            <CultureCost>10</CultureCost>
+            <CultureCost>1</CultureCost>
             <GridX>2</GridX>
             <GridY>2</GridY>
-            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_CLASSICAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -736,10 +713,9 @@
             <Civilopedia>AP 4</Civilopedia>
             <Help>AP 4</Help>
             <PolicyBranchType>POLICY_BRANCH_PATRONAGE</PolicyBranchType>
-            <CultureCost>10</CultureCost>
+            <CultureCost>1</CultureCost>
             <GridX>2</GridX>
             <GridY>3</GridY>
-            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_CLASSICAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -752,10 +728,9 @@
             <Civilopedia>AP 5</Civilopedia>
             <Help>AP 5</Help>
             <PolicyBranchType>POLICY_BRANCH_PATRONAGE</PolicyBranchType>
-            <CultureCost>10</CultureCost>
+            <CultureCost>1</CultureCost>
             <GridX>4</GridX>
             <GridY>3</GridY>
-            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_CLASSICAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -768,10 +743,9 @@
             <Civilopedia>AP 1</Civilopedia>
             <Help>AP 1</Help>
             <PolicyBranchType>POLICY_BRANCH_AESTHETICS</PolicyBranchType>
-            <CultureCost>10</CultureCost>
+            <CultureCost>1</CultureCost>
             <GridX>2</GridX>
             <GridY>1</GridY>
-            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_CLASSICAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -784,10 +758,9 @@
             <Civilopedia>AP 2</Civilopedia>
             <Help>AP 2</Help>
             <PolicyBranchType>POLICY_BRANCH_AESTHETICS</PolicyBranchType>
-            <CultureCost>10</CultureCost>
+            <CultureCost>1</CultureCost>
             <GridX>4</GridX>
             <GridY>1</GridY>
-            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_CLASSICAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -800,10 +773,9 @@
             <Civilopedia>AP 3</Civilopedia>
             <Help>AP 3</Help>
             <PolicyBranchType>POLICY_BRANCH_AESTHETICS</PolicyBranchType>
-            <CultureCost>10</CultureCost>
+            <CultureCost>1</CultureCost>
             <GridX>2</GridX>
             <GridY>2</GridY>
-            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_CLASSICAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -816,10 +788,9 @@
             <Civilopedia>AP 4</Civilopedia>
             <Help>AP 4</Help>
             <PolicyBranchType>POLICY_BRANCH_AESTHETICS</PolicyBranchType>
-            <CultureCost>10</CultureCost>
+            <CultureCost>1</CultureCost>
             <GridX>4</GridX>
             <GridY>2</GridY>
-            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_CLASSICAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -832,10 +803,9 @@
             <Civilopedia>AP 5</Civilopedia>
             <Help>AP 5</Help>
             <PolicyBranchType>POLICY_BRANCH_AESTHETICS</PolicyBranchType>
-            <CultureCost>10</CultureCost>
+            <CultureCost>1</CultureCost>
             <GridX>2</GridX>
             <GridY>3</GridY>
-            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_CLASSICAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -848,10 +818,9 @@
             <Civilopedia>AP 1</Civilopedia>
             <Help>AP 1</Help>
             <PolicyBranchType>POLICY_BRANCH_COMMERCE</PolicyBranchType>
-            <CultureCost>10</CultureCost>
+            <CultureCost>1</CultureCost>
             <GridX>2</GridX>
             <GridY>1</GridY>
-            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -864,10 +833,9 @@
             <Civilopedia>AP 2</Civilopedia>
             <Help>AP 2</Help>
             <PolicyBranchType>POLICY_BRANCH_COMMERCE</PolicyBranchType>
-            <CultureCost>10</CultureCost>
+            <CultureCost>1</CultureCost>
             <GridX>4</GridX>
             <GridY>1</GridY>
-            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -880,10 +848,9 @@
             <Civilopedia>AP 3</Civilopedia>
             <Help>AP 3</Help>
             <PolicyBranchType>POLICY_BRANCH_COMMERCE</PolicyBranchType>
-            <CultureCost>10</CultureCost>
+            <CultureCost>1</CultureCost>
             <GridX>2</GridX>
             <GridY>2</GridY>
-            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -896,10 +863,9 @@
             <Civilopedia>AP 4</Civilopedia>
             <Help>AP 4</Help>
             <PolicyBranchType>POLICY_BRANCH_COMMERCE</PolicyBranchType>
-            <CultureCost>10</CultureCost>
+            <CultureCost>1</CultureCost>
             <GridX>4</GridX>
             <GridY>2</GridY>
-            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -912,10 +878,9 @@
             <Civilopedia>AP 5</Civilopedia>
             <Help>AP 5</Help>
             <PolicyBranchType>POLICY_BRANCH_COMMERCE</PolicyBranchType>
-            <CultureCost>10</CultureCost>
+            <CultureCost>1</CultureCost>
             <GridX>4</GridX>
             <GridY>3</GridY>
-            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -928,10 +893,9 @@
             <Civilopedia>AP 1</Civilopedia>
             <Help>AP 1</Help>
             <PolicyBranchType>POLICY_BRANCH_EXPLORATION</PolicyBranchType>
-            <CultureCost>10</CultureCost>
+            <CultureCost>1</CultureCost>
             <GridX>2</GridX>
             <GridY>1</GridY>
-            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -944,10 +908,9 @@
             <Civilopedia>AP 2</Civilopedia>
             <Help>AP 2</Help>
             <PolicyBranchType>POLICY_BRANCH_EXPLORATION</PolicyBranchType>
-            <CultureCost>10</CultureCost>
+            <CultureCost>1</CultureCost>
             <GridX>4</GridX>
             <GridY>1</GridY>
-            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -960,10 +923,9 @@
             <Civilopedia>AP 3</Civilopedia>
             <Help>AP 3</Help>
             <PolicyBranchType>POLICY_BRANCH_EXPLORATION</PolicyBranchType>
-            <CultureCost>10</CultureCost>
+            <CultureCost>1</CultureCost>
             <GridX>2</GridX>
             <GridY>2</GridY>
-            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -976,10 +938,9 @@
             <Civilopedia>AP 4</Civilopedia>
             <Help>AP 4</Help>
             <PolicyBranchType>POLICY_BRANCH_EXPLORATION</PolicyBranchType>
-            <CultureCost>10</CultureCost>
+            <CultureCost>1</CultureCost>
             <GridX>4</GridX>
             <GridY>2</GridY>
-            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -992,10 +953,9 @@
             <Civilopedia>AP 5</Civilopedia>
             <Help>AP 5</Help>
             <PolicyBranchType>POLICY_BRANCH_EXPLORATION</PolicyBranchType>
-            <CultureCost>10</CultureCost>
+            <CultureCost>1</CultureCost>
             <GridX>2</GridX>
             <GridY>3</GridY>
-            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -1008,10 +968,9 @@
             <Civilopedia>AP 1</Civilopedia>
             <Help>AP 1</Help>
             <PolicyBranchType>POLICY_BRANCH_RATIONALISM</PolicyBranchType>
-            <CultureCost>10</CultureCost>
+            <CultureCost>1</CultureCost>
             <GridX>2</GridX>
             <GridY>1</GridY>
-            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -1024,10 +983,9 @@
             <Civilopedia>AP 2</Civilopedia>
             <Help>AP 2</Help>
             <PolicyBranchType>POLICY_BRANCH_RATIONALISM</PolicyBranchType>
-            <CultureCost>10</CultureCost>
+            <CultureCost>1</CultureCost>
             <GridX>4</GridX>
             <GridY>1</GridY>
-            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -1040,10 +998,9 @@
             <Civilopedia>AP 3</Civilopedia>
             <Help>AP 3</Help>
             <PolicyBranchType>POLICY_BRANCH_RATIONALISM</PolicyBranchType>
-            <CultureCost>10</CultureCost>
+            <CultureCost>1</CultureCost>
             <GridX>2</GridX>
             <GridY>2</GridY>
-            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -1056,10 +1013,9 @@
             <Civilopedia>AP 4</Civilopedia>
             <Help>AP 4</Help>
             <PolicyBranchType>POLICY_BRANCH_RATIONALISM</PolicyBranchType>
-            <CultureCost>10</CultureCost>
+            <CultureCost>1</CultureCost>
             <GridX>4</GridX>
             <GridY>2</GridY>
-            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
@@ -1072,10 +1028,9 @@
             <Civilopedia>AP 5</Civilopedia>
             <Help>AP 5</Help>
             <PolicyBranchType>POLICY_BRANCH_RATIONALISM</PolicyBranchType>
-            <CultureCost>10</CultureCost>
+            <CultureCost>1</CultureCost>
             <GridX>2</GridX>
             <GridY>3</GridY>
-            <PolicyCostModifier>-5</PolicyCostModifier>
             <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>

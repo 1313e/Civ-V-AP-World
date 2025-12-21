@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+    <Buildings>
+        <Update>
+            <Set PolicyCostModifier="-5"/>
+            <Where Type="BUILDING_PALACE"/>
+        </Update>
+    </Buildings>
+</GameData>
