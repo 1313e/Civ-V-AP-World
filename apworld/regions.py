@@ -1,6 +1,5 @@
 # %% IMPORTS
 from dataclasses import dataclass, field
-from typing import Optional
 
 from . import items, requirements
 
@@ -53,7 +52,7 @@ class CivVRegionData:
 
     name: str
     "Name of this region"
-    parent: Optional["CivVRegionData"] = None
+    parent: "CivVRegionData | None" = None
     "The parent of this region. If None, this region is reachable from the origin region"
     requirements: items.ItemRequirements = field(default_factory=items.ItemRequirements)
     "Required items to access this region, in addition to the parent's requirements"

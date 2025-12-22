@@ -5,13 +5,14 @@ from .world import CivVWorld
 
 # %% COMPONENT DEFINITIONS
 # Register the run_client function as a client component
-from worlds.LauncherComponents import Component, Type, components
-from .constants import GAME_NAME
+from worlds.LauncherComponents import Component, SuffixIdentifier, Type, components
+from .constants import CONTAINER_EXTENSION, GAME_NAME
 components.append(
     Component(
         display_name="Civ V Client",
         func=run_client,
         component_type=Type.CLIENT,
+        file_identifier=SuffixIdentifier(CONTAINER_EXTENSION),
         description=f"A client for connecting to {GAME_NAME}",
     )
 )

@@ -35,7 +35,7 @@ If it is not there, then the APWorld is not installed correctly.
 
 ## Notes on logic
 Logic in Civilization V is a bit strange, as the soft requirements to perform specific actions in vanilla Civ V depends on the state of the game.
-To allow for a fair, but not tedious challenge, the following logic requirements exist within this AP implementation and why
+To allow for a fair, but not tedious challenge, the following logic requirements exist within this AP implementation.
 Note that these are not enforced, but are purely here to avoid putting you in a situation where getting locations or a victory can be very tedious.
 All locations and victory itself can, theoretically, be obtained without ever receiving a single item.
 

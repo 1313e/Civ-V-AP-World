@@ -7,10 +7,11 @@ from collections import defaultdict
 
 import colorama
 
-from CommonClient import gui_enabled, logger, server_loop
+from CommonClient import get_base_parser, gui_enabled, logger, server_loop
 from NetUtils import ClientStatus
 from Utils import init_logging
 
+from .container import CivVContainer
 from .context import CivVContext
 from .constants import ADDRESS, GAME_NAME, GAME_READY, GAME_NOT_READY, MOD_READY, MOD_NOT_READY, PORT
 from .enums import CivVLocationType, CivVItemType
@@ -104,7 +105,7 @@ class CivVClient:
         return wrapper
 
     @classmethod
-    def run_client(cls):
+    def run_client(cls, server_address: str | None = None, password: str | None = None, name: str | None = None):
         """
         Creates a new instance of this client with associated context, and runs it.
 
@@ -116,14 +117,22 @@ class CivVClient:
         init_logging(f"{GAME_NAME} Client")
 
         # Define async function to execute in a coroutine
-        async def _main():
+        async def _main(_server_address: str | None, _password: str | None, _name: str | None):
             """
             Runs the client asynchronously in a spawn task until it exits.
 
             """
 
+            # Retrieve the Civ V AP output file from the client's arguments, if it was given
+            parser = get_base_parser()
+            parser.add_argument("output_file", default=None, type=str, nargs="?", help="Path to Civ V AP output file")
+            output_file: str | None = parser.parse_args().output_file
+            if output_file is not None:
+                _server_address, _name = CivVContainer.read_output_file(output_file)
+
             # Create context and add it as a task to the AP server loop
-            ctx = CivVContext()
+            ctx = CivVContext(_server_address, _password)
+            ctx.username = _name
             ctx.server_task = asyncio.create_task(server_loop(ctx), name="ServerLoop")
 
             # Run the GUI for the client if GUIs are enabled
@@ -148,7 +157,7 @@ class CivVClient:
 
         # Execute the coroutine
         colorama.init()
-        asyncio.run(_main())
+        asyncio.run(_main(server_address, password, name))
         colorama.deinit()
 
     async def run(self) -> None:

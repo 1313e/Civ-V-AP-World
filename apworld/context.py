@@ -1,10 +1,12 @@
 # %% IMPORTS
 import asyncio
+from typing import Any
 
 from CommonClient import CommonContext
 
 from .command_processor import CivVCommandProcessor
 from .constants import GAME_NAME, ID_OFFSET
+from .dataclasses import CivVSlotData
 from .enums import CivVLocationType
 
 # All declaration
@@ -34,6 +36,8 @@ class CivVContext(CommonContext):
     "IDs of items originating from the multiworld that have been received by this game already"
     has_achieved_victory: bool = False
     "Whether the player has achieved victory yet"
+    slot_data: CivVSlotData
+    "Slot data received from the server"
 
     async def server_auth(self, password_requested = False):
         if password_requested and not self.password:
@@ -49,3 +53,7 @@ class CivVContext(CommonContext):
             base_title = f"Archipelago {GAME_NAME} Client"
 
         return CivVManager
+
+    def on_package(self, cmd, args):
+        if cmd == "Connected":
+            self.slot_data = CivVSlotData(**args["slot_data"])
