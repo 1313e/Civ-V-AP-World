@@ -7,6 +7,7 @@ from typing import Any
 
 from CommonClient import logger
 
+from .enums import NotificationTypes
 from .exceptions import (
     TunerConnectionException,
     TunerErrorException,
@@ -194,20 +195,31 @@ class Tuner:
         else:
             return True
 
-    async def is_mod_ready(self) -> bool:
+    async def is_mod_ready(self) -> str | None:
         """
         Returns whether the AP mod is currently loaded and ready.
+
+        If the mod is ready, it returns the ID of the mod itself. This can be used to verify whether the correct version
+        of the mod is currently loaded.
 
         """
 
         # Request execution of the "IsModReady" function that is defined by the AP mod
         # Use a very large response size to flush anything unrelated to AP that is still waiting on the socket
         try:
-            return (await self._send_mod_command("IsModReady()", size=100 * 1024)).get("ready", False)
+            return (await self._send_mod_command("IsModReady()", size=100 * 1024)).get("id", None)
 
         # If the function cannot be found (runtime error) or the request times out, the mod is not ready
         except (TunerRuntimeException, TunerTimeoutException):
-            return False
+            return None
+
+    async def send_notification(self, title: str, message: str, notification_type: NotificationTypes):
+        """
+        Sends a notification to the player of the given `notification_type` with the provided `title` and `message`.
+
+        """
+
+        await self._send_mod_command(f"SendNotification({title!r}, {message!r}, {int(notification_type)})")
 
     async def grant_policies(self, *policy_ids: int) -> None:
         """

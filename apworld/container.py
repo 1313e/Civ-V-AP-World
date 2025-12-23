@@ -43,6 +43,11 @@ class CivVContainer(APPlayerContainer):
                 filepath = root / file
                 zip_path = str(filepath.relative_to(self.AP_MOD_TEMPLATE_DIRECTORY.parent))
                 match file.rsplit(".", 1)[1]:
+                    # For Lua files, we want to insert the output file ID into the file
+                    case "lua":
+                        contents = filepath.read_text().replace("<insert_output_file_id>", self.world.output_file_id)
+                        opened_zipfile.writestr(zip_path, contents)
+
                     # For XML files, we want to use the file as a template and substitute all appropriate data
                     case "xml":
                         # TODO: Actually implement the substitution
@@ -122,7 +127,7 @@ class CivVContainer(APPlayerContainer):
         """
 
         # Get path to player output file
-        filename = f"{world.output_file_id}{cls.patch_file_ending}"
+        filename = f"{world.multiworld.get_out_file_name_base(world.player)}{cls.patch_file_ending}"
         filepath = Path(output_directory) / filename
 
         # Create container instance

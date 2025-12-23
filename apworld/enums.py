@@ -1,8 +1,8 @@
 # %% IMPORTS
-from enum import StrEnum
+from enum import IntEnum, StrEnum
 
 # All declaration
-__all__ = ["CivVFillerType", "CivVItemGroup", "CivVItemType", "CivVLocationType"]
+__all__ = ["CivVFillerType", "CivVItemGroup", "CivVItemType", "CivVLocationType", "NotificationTypes"]
 
 
 # %% ENUM DEFINITIONS
@@ -71,3 +71,14 @@ class CivVLocationType(StrEnum):
     national_wonder = "national_wonder"
     victory = "victory"
     world_wonder = "world_wonder"
+
+
+class NotificationTypes(IntEnum):
+    """
+    Enum defining the different notification types for Civ V.
+
+    """
+
+    generic = 0
+    positive = 1
+    negative = 2

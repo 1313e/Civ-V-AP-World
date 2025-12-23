@@ -13,8 +13,8 @@ from Utils import init_logging
 
 from .container import CivVContainer
 from .context import CivVContext
-from .constants import ADDRESS, GAME_NAME, GAME_READY, GAME_NOT_READY, MOD_READY, MOD_NOT_READY, PORT
-from .enums import CivVLocationType, CivVItemType
+from .constants import ADDRESS, GAME_NAME, PORT
+from .enums import CivVLocationType, CivVItemType, NotificationTypes
 from .exceptions import TunerConnectionException
 from .items import ITEMS_DATA_BY_ID
 from .locations import LOCATIONS_DATA_BY_ID, LOCATIONS_DATA_BY_TYPE_ID
@@ -57,12 +57,12 @@ class CivVClient:
     def game_is_ready(self, ready: bool):
         # If the game is ready and was not ready before, store and send this to the client's console
         if ready and not self.game_is_ready:
-            logger.info(GAME_READY)
+            logger.info("Civ V is running")
             self._game_is_ready = True
 
         # If the game is not ready, store and send this to the client's console
         elif not ready:
-            logger.info(GAME_NOT_READY)
+            logger.info("Waiting for Civ V to start...")
             self._game_is_ready = False
 
     @property
@@ -74,16 +74,31 @@ class CivVClient:
 
         return self._mod_is_ready
 
-    @mod_is_ready.setter
-    def mod_is_ready(self, ready: bool):
+    async def set_mod_is_ready(self, _id: str | None):
         # If the mod is ready and was not ready before, store and send this to the client's console
-        if ready and not self.mod_is_ready:
-            logger.info(MOD_READY)
-            self._mod_is_ready = True
+        if _id == self.ctx.slot_data.output_file_id:
+            if not self.mod_is_ready:
+                logger.info("Civ V AP Mod is connected and ready")
+                await self.tuner.send_notification(
+                    "Connected to AP",
+                    "AP Mod was successfully connected to the AP Client.",
+                    NotificationTypes.generic
+                )
+                self._mod_is_ready = True
 
-        # If the mod is not ready, store and send this to the client's console
-        elif not ready:
-            logger.info(MOD_NOT_READY)
+        # If the mod is not ready (no ID received), store and send this to the client's console
+        elif _id is None:
+            logger.info("Waiting for Civ V AP Mod to be ready...")
+            self._mod_is_ready = False
+
+        # If the mod is ready, but its ID does not match the ID in the context, store and send this to the console
+        elif _id != self.ctx.slot_data.output_file_id:
+            logger.info("Loaded Civ V AP Mod does not match the ID of the connected slot")
+            await self.tuner.send_notification(
+                "Cannot connect to AP",
+                "Loaded AP Mod does not match the ID of the slot in the AP Client. Please use the correct version.",
+                NotificationTypes.negative
+            )
             self._mod_is_ready = False
 
     @staticmethod
@@ -259,7 +274,7 @@ class CivVClient:
         """
 
         # Send mod ready check to the game and return the result
-        self.mod_is_ready = await self.tuner.is_mod_ready()
+        await self.set_mod_is_ready(await self.tuner.is_mod_ready())
         return self.mod_is_ready
 
     async def perform_update_cycle(self) -> None:

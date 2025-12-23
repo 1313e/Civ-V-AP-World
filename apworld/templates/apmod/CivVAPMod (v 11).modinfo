@@ -1,7 +1,8 @@
-<Mod id="test" version="11">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mod id="9990c668-41e5-4a30-bcb1-a864a325215e" version="11">
   <Properties>
     <Name>CivVAPMod</Name>
-    <Teaser>test</Teaser>
+    <Teaser>Civ V mod for archipelago randomizer</Teaser>
     <Description>Civ V mod for archipelago randomizer</Description>
     <Authors>1313e.</Authors>
     <SpecialThanks>Battary</SpecialThanks>
@@ -21,7 +22,7 @@
   <References />
   <Blocks />
   <Files>
-    <File md5="62C1139F7DC0CC0AE6DBD31C8DDB8096" import="0">APFunctions.lua</File>
+    <File md5="E9F5C0BD9CB78C8699CCA5ADCEC207CF" import="0">APFunctions.lua</File>
     <File md5="19BBC87D831636A0B7061531A59D1544" import="0">Buildings.xml</File>
     <File md5="6D3BBE96785E414B671568668C4CFEE9" import="0">PolicyBranches.xml</File>
     <File md5="83D700E8FEA37D6D35C6615E7653FF75" import="0">Policies.xml</File>

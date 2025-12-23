@@ -75,6 +75,11 @@ local worldWonderBuildingIds = {
 	[154]=true, [155]=true, [156]=true, [157]=true, [158]=true, [159]=true, [160]=true,
 	[161]=true,
 }
+local notificationTypes = {
+	[0]=NotificationTypes.NOTIFICATION_GENERIC,		-- generic
+	[1]=NotificationTypes.NOTIFICATION_CITY_GROWTH,	-- positive
+	[2]=NotificationTypes.NOTIFICATION_STARVING,	-- negative
+}
 
 
 -- EVENTS
@@ -281,8 +286,16 @@ end
 
 -- PUBLIC CALLABLES
 function AP.IsModReady()
-	-- If this function can be reached and executed, the APMod is ready
-	PrintResponse('{"ready": true}')
+	-- If this function can be reached and executed, the APMod is ready. Return the ID of this mod version
+	PrintResponse('{"id": "<insert_output_file_id>"}')
+end
+
+function AP.SendNotification(title, message, type)
+	-- Send a notification to the player of the given type with provided title and message
+	if type == nil then
+		type = 0
+	end
+	player:AddNotification(notificationTypes[type], message, title)
 end
 
 function AP.GrantPolicies(policyIds)
@@ -460,9 +473,9 @@ function Init()
 
 	-- Request a sync between game and client
 	RequestSync()
-	
+
 	-- Send notification to player that APMod was loaded successfully
-	player:AddNotification(NotificationTypes.NOTIFICATION_GENERIC, "APMod was loaded successfully", "APMod loaded")
+	AP.SendNotification("APMod loaded", "APMod was loaded successfully.")
 end
 
 Init()
