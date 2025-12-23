@@ -1,5 +1,6 @@
 # %% IMPORTS
 import itertools
+import pkgutil
 import shutil
 import tempfile
 import zipfile
@@ -7,9 +8,12 @@ from pathlib import Path
 from typing import TYPE_CHECKING, Any
 from xml.etree import ElementTree
 
+from BaseClasses import Item
 from worlds.Files import APPlayerContainer
 
 from .constants import CONTAINER_EXTENSION, GAME_NAME
+from .enums import CivVLocationType, CivVItemClassificationColors, CivVItemClassificationFlags
+from .locations import LOCATIONS_DATA_BY_ID
 if TYPE_CHECKING:
     from .world import CivVWorld
 
@@ -23,8 +27,23 @@ class CivVContainer(APPlayerContainer):
     patch_file_ending = CONTAINER_EXTENSION
 
     # Additional class attributes
-    AP_MOD_TEMPLATE_DIRECTORY: Path = Path(__file__).parent / "templates/apmod"
-    "Path towards the directory holding the templates of the Civ V AP Mod"
+    AP_MOD_TEMPLATE_FILES: list[str] = [
+        "templates/apmod/APFunctions.lua",
+        "templates/apmod/Buildings.xml",
+        "templates/apmod/CivVAPMod (v 1).modinfo",
+        "templates/apmod/Policies.xml",
+        "templates/apmod/PolicyBranches.xml",
+        "templates/apmod/Technologies.xml",
+        "templates/apmod/Icons/AP_Tech_64.dds",
+        "templates/apmod/Icons/AP_Tech_80.dds",
+        "templates/apmod/Icons/AP_Tech_128.dds",
+        "templates/apmod/Icons/AP_Tech_214.dds",
+        "templates/apmod/Icons/AP_Tech_256.dds",
+        "templates/apmod/Icons/AP_Tech_Icons.xml",
+    ]
+    "List of paths of all Civ V AP Mod template files"
+    AP_MOD_NAME: str = "apmod"
+    "Name of the Civ V AP Mod"
 
     def __init__(self, path: Path, world: "CivVWorld | None", **kwargs):
         # Call super method
@@ -35,28 +54,100 @@ class CivVContainer(APPlayerContainer):
         self.world: "CivVWorld | None" = world
         "The instance of the Civ V AP world to use for this container"
 
+    @staticmethod
+    def clean_text(text: str) -> str:
+        """
+        Clean the given `text` into a version that is safe for XML.
+
+        """
+
+        return text.replace('"', "'").replace('&', 'and').replace('{', '').replace('}', '')
+
+    def _get_formatted_item(self, item: Item) -> str:
+        """
+        Formats the given `item` placement into a string usable in the Civ V XML databases.
+
+        """
+
+        color = getattr(CivVItemClassificationColors, item.classification.name)
+        return (
+            f"{self.clean_text(self.world.multiworld.player_name[item.player])}'s "
+            f"[{color}]{self.clean_text(item.name)}[ENDCOLOR]"
+        )
+
+    @staticmethod
+    def _get_formatted_item_flag(item: Item) -> str:
+        """
+        Returns the formatted flag icon for the given `item` usable in the Civ V XML databases.
+
+        """
+
+        return f"[{getattr(CivVItemClassificationFlags, item.classification.name)}]"
+
+    def _get_substitution_dict(self) -> dict[str, str]:
+        """
+        Generates and returns a dictionary that should be used for XML file substitution.
+
+        """
+
+        # Create empty dict holding all substitutions
+        dct = {}
+
+        # Get all placed locations for this player. Ignore the Victory location
+        locations = [x for x in self.world.multiworld.get_filled_locations(self.world.player) if x.name != "Victory"]
+
+        # Loop over all these locations and add their substitution strings
+        for location in locations:
+            # Get the location data for this location
+            location_data = LOCATIONS_DATA_BY_ID[location.address]
+
+            # Act according to the type of location this is
+            match location_data.type:
+                # For policy branches, we need just the formatted item at that location
+                case CivVLocationType.policy_branch:
+                    dct[f"{location_data.database_key_prefix}_item"] = self._get_formatted_item(location.item)
+
+                # For policies, we need the formatted item and the classification flag
+                case CivVLocationType.policy:
+                    dct[f"{location_data.database_key_prefix}_item"] = self._get_formatted_item(location.item)
+                    dct[f"{location_data.database_key_prefix}_flag"] = self._get_formatted_item_flag(location.item)
+
+                # For techs, we need formatted item; classification flag; and the cost of that location
+                case CivVLocationType.tech:
+                    dct[f"{location_data.database_key_prefix}_item"] = self._get_formatted_item(location.item)
+                    dct[f"{location_data.database_key_prefix}_flag"] = self._get_formatted_item_flag(location.item)
+                    dct[f"{location_data.database_key_prefix}_cost"] = str(location_data.cost)
+
+                # For all other types, do nothing
+                case _:
+                    pass
+
+        # Return the substitution dict
+        return dct
+
     def write_contents(self, opened_zipfile: zipfile.ZipFile) -> None:
+        # Obtain the substitution dict
+        substitution_dict = self._get_substitution_dict()
+
         # Copy over the entire contents of the APMod directory
-        for root, dirs, files in self.AP_MOD_TEMPLATE_DIRECTORY.walk():
-            for file in files:
-                # Act according to the extension of this file
-                filepath = root / file
-                zip_path = str(filepath.relative_to(self.AP_MOD_TEMPLATE_DIRECTORY.parent))
-                match file.rsplit(".", 1)[1]:
-                    # For Lua files, we want to insert the output file ID into the file
-                    case "lua":
-                        contents = filepath.read_text().replace("<insert_output_file_id>", self.world.output_file_id)
-                        opened_zipfile.writestr(zip_path, contents)
+        for filepath in self.AP_MOD_TEMPLATE_FILES:
+            # Act according to the extension of this file
+            contents = pkgutil.get_data(__name__, filepath)
+            zip_path = filepath.replace("templates/", "")
+            match filepath.rsplit(".", 1)[1]:
+                # For Lua files, we want to insert the output file ID into the file
+                case "lua":
+                    new_contents = contents.decode().replace("<insert_output_file_id>", self.world.output_file_id)
+                    opened_zipfile.writestr(zip_path, new_contents)
 
-                    # For XML files, we want to use the file as a template and substitute all appropriate data
-                    case "xml":
-                        # TODO: Actually implement the substitution
-                        contents = filepath.read_text()
-                        opened_zipfile.writestr(zip_path, contents)
+                # For XML files, we want to use the file as a template and substitute all appropriate data
+                case "xml":
+                    new_contents = contents.decode().format(**substitution_dict)
+                    opened_zipfile.writestr(zip_path, new_contents)
 
-                    # For everything else, simply copy over the full file without modifications
-                    case _:
-                        opened_zipfile.write(filepath, zip_path)
+                # For everything else, simply copy over the full file without modifications
+                case _:
+                    opened_zipfile.writestr(zip_path, contents)
 
         # Call super method
         super().write_contents(opened_zipfile)
@@ -68,11 +159,11 @@ class CivVContainer(APPlayerContainer):
 
         # If the mod does not exist yet, we need to create it from the output file
         zip_name = self.path.name.rsplit('.', 1)[0]
-        mod_path = mods_folder_path / f"{self.AP_MOD_TEMPLATE_DIRECTORY.name} - {zip_name}"
+        mod_path = mods_folder_path / f"{self.AP_MOD_NAME} - {zip_name}"
         if not mod_path.exists():
             # Extract all mod files to a temporary directory
             tempdir = Path(tempfile.mkdtemp())
-            for file in [x for x in opened_zipfile.namelist() if x.startswith(self.AP_MOD_TEMPLATE_DIRECTORY.name)]:
+            for file in [x for x in opened_zipfile.namelist() if x.startswith(self.AP_MOD_NAME)]:
                 # Act according to the extension of this file
                 match file.rsplit(".", 1)[1]:
                     # For modinfo files, we want to update its teaser to match the name of the zipfile
@@ -94,7 +185,7 @@ class CivVContainer(APPlayerContainer):
                         opened_zipfile.extract(file, tempdir)
 
             # Copy the apmod folder inside this temporary directory to the mods folder
-            _ = shutil.copytree(tempdir / self.AP_MOD_TEMPLATE_DIRECTORY.name, mod_path)
+            _ = shutil.copytree(tempdir / self.AP_MOD_NAME, mod_path)
 
             # Remove the temporary directory
             shutil.rmtree(tempdir)
@@ -109,7 +200,7 @@ class CivVContainer(APPlayerContainer):
         """
 
         # Get the versions of all installed APMod versions
-        modinfo_files = mods_folder_path.glob(f"{self.AP_MOD_TEMPLATE_DIRECTORY.name}*/*.modinfo")
+        modinfo_files = mods_folder_path.glob(f"{self.AP_MOD_NAME}*/*.modinfo")
         versions = {int(ElementTree.parse(x).getroot().get("version")) for x in modinfo_files}
 
         # Return the lowest value not currently in use

@@ -14,7 +14,7 @@ from Utils import init_logging
 from .container import CivVContainer
 from .context import CivVContext
 from .constants import ADDRESS, GAME_NAME, PORT
-from .enums import CivVLocationType, CivVItemType, NotificationTypes
+from .enums import CivVLocationType, CivVItemType, CivVNotificationTypes
 from .exceptions import TunerConnectionException
 from .items import ITEMS_DATA_BY_ID
 from .locations import LOCATIONS_DATA_BY_ID, LOCATIONS_DATA_BY_TYPE_ID
@@ -82,7 +82,7 @@ class CivVClient:
                 await self.tuner.send_notification(
                     "Connected to AP",
                     "AP Mod was successfully connected to the AP Client.",
-                    NotificationTypes.generic
+                    CivVNotificationTypes.generic
                 )
                 self._mod_is_ready = True
 
@@ -97,7 +97,7 @@ class CivVClient:
             await self.tuner.send_notification(
                 "Cannot connect to AP",
                 "Loaded AP Mod does not match the ID of the slot in the AP Client. Please use the correct version.",
-                NotificationTypes.negative
+                CivVNotificationTypes.negative
             )
             self._mod_is_ready = False
 

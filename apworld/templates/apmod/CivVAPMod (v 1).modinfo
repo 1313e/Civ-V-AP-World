@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Mod id="9990c668-41e5-4a30-bcb1-a864a325215e" version="11">
+<Mod id="9990c668-41e5-4a30-bcb1-a864a325215e" version="1">
   <Properties>
     <Name>CivVAPMod</Name>
     <Teaser>Civ V mod for archipelago randomizer</Teaser>
     <Description>Civ V mod for archipelago randomizer</Description>
-    <Authors>1313e.</Authors>
+    <Authors>1313e</Authors>
     <SpecialThanks>Battary</SpecialThanks>
     <HideSetupGame>0</HideSetupGame>
     <AffectsSavedGames>1</AffectsSavedGames>
@@ -24,15 +24,15 @@
   <Files>
     <File md5="E9F5C0BD9CB78C8699CCA5ADCEC207CF" import="0">APFunctions.lua</File>
     <File md5="19BBC87D831636A0B7061531A59D1544" import="0">Buildings.xml</File>
-    <File md5="6D3BBE96785E414B671568668C4CFEE9" import="0">PolicyBranches.xml</File>
-    <File md5="83D700E8FEA37D6D35C6615E7653FF75" import="0">Policies.xml</File>
+    <File md5="DF67A36106C1E7756A31C383AFF967D1" import="0">PolicyBranches.xml</File>
+    <File md5="D4B612D009BAECED0D793C060C13C348" import="0">Policies.xml</File>
     <File md5="9FDB79374AFADA7249B402C1A84FDC99" import="1">Icons/AP_Tech_128.dds</File>
     <File md5="4DCA93CF29178E5CA21DB8E78BB3FA24" import="1">Icons/AP_Tech_214.dds</File>
     <File md5="B080E5912DB08B0196596C7326C5EF39" import="1">Icons/AP_Tech_256.dds</File>
     <File md5="536D1657CA0D395709042AEDC33FC425" import="1">Icons/AP_Tech_64.dds</File>
     <File md5="07B4C010B9F49B9134BB67DF3A6B2D50" import="1">Icons/AP_Tech_80.dds</File>
     <File md5="3E65B80EC0B93372140938CAB0DC29A8" import="0">Icons/AP_Tech_Icons.xml</File>
-    <File md5="19EA429B85E56BC0428BE4C53A5116E0" import="0">Technologies.xml</File>
+    <File md5="4C43FBDE31AA9AF5519D997D55F804E7" import="0">Technologies.xml</File>
   </Files>
   <Actions>
     <OnModActivated>

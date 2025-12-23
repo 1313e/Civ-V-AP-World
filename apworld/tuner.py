@@ -7,7 +7,7 @@ from typing import Any
 
 from CommonClient import logger
 
-from .enums import NotificationTypes
+from .enums import CivVNotificationTypes
 from .exceptions import (
     TunerConnectionException,
     TunerErrorException,
@@ -213,7 +213,7 @@ class Tuner:
         except (TunerRuntimeException, TunerTimeoutException):
             return None
 
-    async def send_notification(self, title: str, message: str, notification_type: NotificationTypes):
+    async def send_notification(self, title: str, message: str, notification_type: CivVNotificationTypes):
         """
         Sends a notification to the player of the given `notification_type` with the provided `title` and `message`.
 

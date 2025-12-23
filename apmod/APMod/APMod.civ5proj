@@ -5,11 +5,11 @@
     <ProjectGuid>{b035c588-14ca-472e-b2dd-782d1284a10e}</ProjectGuid>
     <Name>CivVAPMod</Name>
     <Guid>9990c668-41e5-4a30-bcb1-a864a325215e</Guid>
-    <ModVersion>11</ModVersion>
+    <ModVersion>1</ModVersion>
     <Stability>Stable</Stability>
     <Teaser>Civ V mod for archipelago randomizer</Teaser>
     <Description>Civ V mod for archipelago randomizer</Description>
-    <Authors>1313e.</Authors>
+    <Authors>1313e</Authors>
     <SpecialThanks>Battary</SpecialThanks>
     <AffectsSavedGames>true</AffectsSavedGames>
     <MinCompatibleSaveVersion>11</MinCompatibleSaveVersion>

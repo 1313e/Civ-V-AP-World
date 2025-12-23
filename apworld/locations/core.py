@@ -46,6 +46,10 @@ class CivVLocationData:
     "Type of this location"
     game_id: int
     "ID of this location with this location type"
+    cost: int | None = None
+    "The cost of this location, if applicable"
+    database_key_prefix: str | None = None
+    "Prefix for the substitution key in the XML database files for this location, if it applicable"
     region: regions.CivVRegionData | None = None
     "The region of this location. If None, this location is in the origin region"
     requirements: items.ItemRequirements = field(default_factory=items.ItemRequirements)

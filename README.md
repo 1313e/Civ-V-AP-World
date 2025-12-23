@@ -6,19 +6,25 @@
 - [Civilization V AP World and Mod](https://github.com/1313e/Civ-V-AP-World/releases)
 
 ## Setup
-- Download the latest APWorld and APMod from the [releases](https://github.com/1313e/Civ-V-AP-World/releases) page.
+- Download the latest APWorld from the [releases](https://github.com/1313e/Civ-V-AP-World/releases) page.
 - Install the APWorld by double-clicking it or copying it over yourself to the `custom_worlds` folder in AP.
-- Unzip the APMod and paste the mod folder (the one that ends with `(v XXX)`) into the Civ V mods folder in the `~/Documents/My Games/Sid Meier's Civilization 5/MODS` folder.
 - Open the config file at `~/Documents/My Games/Sid Meier's Civilization 5/config.ini` and set the value of `EnableTuner` to `1`.
   This only needs to be done once.
   - NOTE: Enabling the FireTuner disables achievements, so if you wish to play Civ V with achievements in between AP sessions, make sure to disable this and re-enable it later.
 
 ## Joining a MultiWorld Game
-- Open the `Civ V Client` from Archipelago Launcher and connect to your slot.
+- Download the patch file for your Civ V slot and open it with the `Archipelago Launcher`.
+  - If this is your first time doing this, the launcher will ask you to provide the location of your Civ V mods folder.
+    By default, this should be `~/Documents/My Games/Sid Meier's Civilization 5/MODS`.
+    If the folder does not exist yet, simply create it.
+- Opening the patch file as stated above also automatically opens the `Civ V Client` for you.
   The client will start echoing that it is waiting for Civ V to be ready.
 - Open Civ V and make sure to enable and load the `CivVAPMod` via the "Mods" menu first, and then click "Singleplayer" (which should be the only option you get besides "Back").
+  - The small subtitle of the mod should be the same as the name of the patch file you downloaded.
 - Set up your singleplayer game and start it.
 - Once you are in-game, the client will stop echoing that it is waiting for the game to be ready, indicating that the two are connected.
+  - If you get the notification that the IDs are not matching, then the slot your `Civ V Client` is connected to is not the same as the one responsible for the `CivVAPMod` version you have loaded right now.
+    Make sure to download the correct patch file for the target slot and open it to get the correct version.
 - Start playing. :)
 
 ## Configuring your YAML file

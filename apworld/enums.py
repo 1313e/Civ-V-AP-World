@@ -2,7 +2,15 @@
 from enum import IntEnum, StrEnum
 
 # All declaration
-__all__ = ["CivVFillerType", "CivVItemGroup", "CivVItemType", "CivVLocationType", "NotificationTypes"]
+__all__ = [
+    "CivVFillerType",
+    "CivVItemClassificationColors",
+    "CivVItemClassificationFlags",
+    "CivVItemGroup",
+    "CivVItemType",
+    "CivVLocationType",
+    "CivVNotificationTypes",
+]
 
 
 # %% ENUM DEFINITIONS
@@ -25,6 +33,30 @@ class CivVFillerType(StrEnum):
     declare_war_random = "declare_war_random"
     denounce_random = "denounce_random"
     start_golden_age = "start_golden_age"
+
+
+class CivVItemClassificationColors(StrEnum):
+    """
+    Enum defining the colors to use for each item classification in Civ V.
+
+    """
+
+    progression = "COLOR:117:255:43:255"
+    useful = "COLOR:39:113:255:255"
+    filler = "COLOR:64:251:252:255"
+    trap = "COLOR:248:38:38:255"
+
+
+class CivVItemClassificationFlags(StrEnum):
+    """
+    Enum defining the flags to use for each item classification in Civ V.
+
+    """
+
+    progression = "ICON_TEAM_4"
+    useful = "ICON_TEAM_8"
+    filler = "ICON_TEAM_5"
+    trap = "ICON_TEAM_2"
 
 
 class CivVItemGroup(StrEnum):
@@ -73,7 +105,7 @@ class CivVLocationType(StrEnum):
     world_wonder = "world_wonder"
 
 
-class NotificationTypes(IntEnum):
+class CivVNotificationTypes(IntEnum):
     """
     Enum defining the different notification types for Civ V.
 

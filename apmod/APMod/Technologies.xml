@@ -1320,1290 +1320,1290 @@
         <Row>
             <ID>83</ID>
             <Type>TECH_ANCIENT_AP1</Type>
-            <Cost>35</Cost>
-            <Description>AP 1</Description>
-            <Help>AP 1</Help>
+            <Cost>{tech_ancient_ap1_cost}</Cost>
+            <Description>{tech_ancient_ap1_flag} AP 1</Description>
+            <Help>{tech_ancient_ap1_item}</Help>
             <Era>ERA_ANCIENT</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>1</GridX>
             <GridY>1</GridY>
-            <Quote>AP 1</Quote>
+            <Quote>{tech_ancient_ap1_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>84</ID>
             <Type>TECH_ANCIENT_AP2</Type>
-            <Cost>35</Cost>
-            <Description>AP 2</Description>
-            <Help>AP 2</Help>
+            <Cost>{tech_ancient_ap2_cost}</Cost>
+            <Description>{tech_ancient_ap2_flag} AP 2</Description>
+            <Help>{tech_ancient_ap2_item}</Help>
             <Era>ERA_ANCIENT</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>1</GridX>
             <GridY>4</GridY>
-            <Quote>AP 2</Quote>
+            <Quote>{tech_ancient_ap2_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>85</ID>
             <Type>TECH_ANCIENT_AP3</Type>
-            <Cost>35</Cost>
-            <Description>AP 3</Description>
-            <Help>AP 3</Help>
+            <Cost>{tech_ancient_ap3_cost}</Cost>
+            <Description>{tech_ancient_ap3_flag} AP 3</Description>
+            <Help>{tech_ancient_ap3_item}</Help>
             <Era>ERA_ANCIENT</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>1</GridX>
             <GridY>6</GridY>
-            <Quote>AP 3</Quote>
+            <Quote>{tech_ancient_ap3_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>86</ID>
             <Type>TECH_ANCIENT_AP4</Type>
-            <Cost>35</Cost>
-            <Description>AP 4</Description>
-            <Help>AP 4</Help>
+            <Cost>{tech_ancient_ap4_cost}</Cost>
+            <Description>{tech_ancient_ap4_flag} AP 4</Description>
+            <Help>{tech_ancient_ap4_item}</Help>
             <Era>ERA_ANCIENT</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>1</GridX>
             <GridY>8</GridY>
-            <Quote>AP 4</Quote>
+            <Quote>{tech_ancient_ap4_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>87</ID>
             <Type>TECH_ANCIENT_AP5</Type>
-            <Cost>55</Cost>
-            <Description>AP 5</Description>
-            <Help>AP 5</Help>
+            <Cost>{tech_ancient_ap5_cost}</Cost>
+            <Description>{tech_ancient_ap5_flag} AP 5</Description>
+            <Help>{tech_ancient_ap5_item}</Help>
             <Era>ERA_ANCIENT</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>2</GridX>
             <GridY>0</GridY>
-            <Quote>AP 5</Quote>
+            <Quote>{tech_ancient_ap5_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>88</ID>
             <Type>TECH_ANCIENT_AP6</Type>
-            <Cost>55</Cost>
-            <Description>AP 6</Description>
-            <Help>AP 6</Help>
+            <Cost>{tech_ancient_ap6_cost}</Cost>
+            <Description>{tech_ancient_ap6_flag} AP 6</Description>
+            <Help>{tech_ancient_ap6_item}</Help>
             <Era>ERA_ANCIENT</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>2</GridX>
             <GridY>1</GridY>
-            <Quote>AP 6</Quote>
+            <Quote>{tech_ancient_ap6_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>89</ID>
             <Type>TECH_ANCIENT_AP7</Type>
-            <Cost>55</Cost>
-            <Description>AP 7</Description>
-            <Help>AP 7</Help>
+            <Cost>{tech_ancient_ap7_cost}</Cost>
+            <Description>{tech_ancient_ap7_flag} AP 7</Description>
+            <Help>{tech_ancient_ap7_item}</Help>
             <Era>ERA_ANCIENT</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>2</GridX>
             <GridY>2</GridY>
-            <Quote>AP 7</Quote>
+            <Quote>{tech_ancient_ap7_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>90</ID>
             <Type>TECH_ANCIENT_AP8</Type>
-            <Cost>55</Cost>
-            <Description>AP 8</Description>
-            <Help>AP 8</Help>
+            <Cost>{tech_ancient_ap8_cost}</Cost>
+            <Description>{tech_ancient_ap8_flag} AP 8</Description>
+            <Help>{tech_ancient_ap8_item}</Help>
             <Era>ERA_ANCIENT</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>2</GridX>
             <GridY>4</GridY>
-            <Quote>AP 8</Quote>
+            <Quote>{tech_ancient_ap8_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>91</ID>
             <Type>TECH_ANCIENT_AP9</Type>
-            <Cost>55</Cost>
-            <Description>AP 9</Description>
-            <Help>AP 9</Help>
+            <Cost>{tech_ancient_ap9_cost}</Cost>
+            <Description>{tech_ancient_ap9_flag} AP 9</Description>
+            <Help>{tech_ancient_ap9_item}</Help>
             <Era>ERA_ANCIENT</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>2</GridX>
             <GridY>6</GridY>
-            <Quote>AP 9</Quote>
+            <Quote>{tech_ancient_ap9_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>92</ID>
             <Type>TECH_ANCIENT_AP10</Type>
-            <Cost>55</Cost>
-            <Description>AP 10</Description>
-            <Help>AP 10</Help>
+            <Cost>{tech_ancient_ap10_cost}</Cost>
+            <Description>{tech_ancient_ap10_flag} AP 10</Description>
+            <Help>{tech_ancient_ap10_item}</Help>
             <Era>ERA_ANCIENT</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>2</GridX>
             <GridY>8</GridY>
-            <Quote>AP 10</Quote>
+            <Quote>{tech_ancient_ap10_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>93</ID>
             <Type>TECH_ANCIENT_AP11</Type>
-            <Cost>55</Cost>
-            <Description>AP 11</Description>
-            <Help>AP 11</Help>
+            <Cost>{tech_ancient_ap11_cost}</Cost>
+            <Description>{tech_ancient_ap11_flag} AP 11</Description>
+            <Help>{tech_ancient_ap11_item}</Help>
             <Era>ERA_ANCIENT</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>2</GridX>
             <GridY>9</GridY>
-            <Quote>AP 11</Quote>
+            <Quote>{tech_ancient_ap11_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>94</ID>
             <Type>TECH_CLASSICAL_AP1</Type>
-            <Cost>85</Cost>
-            <Description>AP 1</Description>
-            <Help>AP 1</Help>
+            <Cost>{tech_classical_ap1_cost}</Cost>
+            <Description>{tech_classical_ap1_flag} AP 1</Description>
+            <Help>{tech_classical_ap1_item}</Help>
             <Era>ERA_CLASSICAL</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>4</GridX>
             <GridY>2</GridY>
-            <Quote>AP 1</Quote>
+            <Quote>{tech_classical_ap1_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>95</ID>
             <Type>TECH_CLASSICAL_AP2</Type>
-            <Cost>105</Cost>
-            <Description>AP 2</Description>
-            <Help>AP 2</Help>
+            <Cost>{tech_classical_ap2_cost}</Cost>
+            <Description>{tech_classical_ap2_flag} AP 2</Description>
+            <Help>{tech_classical_ap2_item}</Help>
             <Era>ERA_CLASSICAL</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>4</GridX>
             <GridY>4</GridY>
-            <Quote>AP 2</Quote>
+            <Quote>{tech_classical_ap2_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>96</ID>
             <Type>TECH_CLASSICAL_AP3</Type>
-            <Cost>105</Cost>
-            <Description>AP 3</Description>
-            <Help>AP 3</Help>
+            <Cost>{tech_classical_ap3_cost}</Cost>
+            <Description>{tech_classical_ap3_flag} AP 3</Description>
+            <Help>{tech_classical_ap3_item}</Help>
             <Era>ERA_CLASSICAL</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>4</GridX>
             <GridY>6</GridY>
-            <Quote>AP 3</Quote>
+            <Quote>{tech_classical_ap3_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>97</ID>
             <Type>TECH_CLASSICAL_AP4</Type>
-            <Cost>105</Cost>
-            <Description>AP 4</Description>
-            <Help>AP 4</Help>
+            <Cost>{tech_classical_ap4_cost}</Cost>
+            <Description>{tech_classical_ap4_flag} AP 4</Description>
+            <Help>{tech_classical_ap4_item}</Help>
             <Era>ERA_CLASSICAL</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>4</GridX>
             <GridY>8</GridY>
-            <Quote>AP 4</Quote>
+            <Quote>{tech_classical_ap4_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>98</ID>
             <Type>TECH_CLASSICAL_AP5</Type>
-            <Cost>175</Cost>
-            <Description>AP 5</Description>
-            <Help>AP 5</Help>
+            <Cost>{tech_classical_ap5_cost}</Cost>
+            <Description>{tech_classical_ap5_flag} AP 5</Description>
+            <Help>{tech_classical_ap5_item}</Help>
             <Era>ERA_CLASSICAL</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>5</GridX>
             <GridY>1</GridY>
-            <Quote>AP 5</Quote>
+            <Quote>{tech_classical_ap5_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>99</ID>
             <Type>TECH_CLASSICAL_AP6</Type>
-            <Cost>175</Cost>
-            <Description>AP 6</Description>
-            <Help>AP 6</Help>
+            <Cost>{tech_classical_ap6_cost}</Cost>
+            <Description>{tech_classical_ap6_flag} AP 6</Description>
+            <Help>{tech_classical_ap6_item}</Help>
             <Era>ERA_CLASSICAL</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>5</GridX>
             <GridY>2</GridY>
-            <Quote>AP 6</Quote>
+            <Quote>{tech_classical_ap6_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>100</ID>
             <Type>TECH_CLASSICAL_AP7</Type>
-            <Cost>175</Cost>
-            <Description>AP 7</Description>
-            <Help>AP 7</Help>
+            <Cost>{tech_classical_ap7_cost}</Cost>
+            <Description>{tech_classical_ap7_flag} AP 7</Description>
+            <Help>{tech_classical_ap7_item}</Help>
             <Era>ERA_CLASSICAL</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>5</GridX>
             <GridY>6</GridY>
-            <Quote>AP 7</Quote>
+            <Quote>{tech_classical_ap7_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>101</ID>
             <Type>TECH_CLASSICAL_AP8</Type>
-            <Cost>175</Cost>
-            <Description>AP 8</Description>
-            <Help>AP 8</Help>
+            <Cost>{tech_classical_ap8_cost}</Cost>
+            <Description>{tech_classical_ap8_flag} AP 8</Description>
+            <Help>{tech_classical_ap8_item}</Help>
             <Era>ERA_CLASSICAL</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>5</GridX>
             <GridY>7</GridY>
-            <Quote>AP 8</Quote>
+            <Quote>{tech_classical_ap8_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>102</ID>
             <Type>TECH_CLASSICAL_AP9</Type>
-            <Cost>175</Cost>
-            <Description>AP 9</Description>
-            <Help>AP 9</Help>
+            <Cost>{tech_classical_ap9_cost}</Cost>
+            <Description>{tech_classical_ap9_flag} AP 9</Description>
+            <Help>{tech_classical_ap9_item}</Help>
             <Era>ERA_CLASSICAL</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>5</GridX>
             <GridY>9</GridY>
-            <Quote>AP 9</Quote>
+            <Quote>{tech_classical_ap9_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>103</ID>
             <Type>TECH_MEDIEVAL_AP1</Type>
-            <Cost>275</Cost>
-            <Description>AP 1</Description>
-            <Help>AP 1</Help>
+            <Cost>{tech_medieval_ap1_cost}</Cost>
+            <Description>{tech_medieval_ap1_flag} AP 1</Description>
+            <Help>{tech_medieval_ap1_item}</Help>
             <Era>ERA_MEDIEVAL</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>7</GridX>
             <GridY>1</GridY>
-            <Quote>AP 1</Quote>
+            <Quote>{tech_medieval_ap1_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>104</ID>
             <Type>TECH_MEDIEVAL_AP2</Type>
-            <Cost>275</Cost>
-            <Description>AP 2</Description>
-            <Help>AP 2</Help>
+            <Cost>{tech_medieval_ap2_cost}</Cost>
+            <Description>{tech_medieval_ap2_flag} AP 2</Description>
+            <Help>{tech_medieval_ap2_item}</Help>
             <Era>ERA_MEDIEVAL</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>7</GridX>
             <GridY>4</GridY>
-            <Quote>AP 2</Quote>
+            <Quote>{tech_medieval_ap2_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>105</ID>
             <Type>TECH_MEDIEVAL_AP3</Type>
-            <Cost>275</Cost>
-            <Description>AP 3</Description>
-            <Help>AP 3</Help>
+            <Cost>{tech_medieval_ap3_cost}</Cost>
+            <Description>{tech_medieval_ap3_flag} AP 3</Description>
+            <Help>{tech_medieval_ap3_item}</Help>
             <Era>ERA_MEDIEVAL</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>7</GridX>
             <GridY>6</GridY>
-            <Quote>AP 3</Quote>
+            <Quote>{tech_medieval_ap3_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>106</ID>
             <Type>TECH_MEDIEVAL_AP4</Type>
-            <Cost>275</Cost>
-            <Description>AP 4</Description>
-            <Help>AP 4</Help>
+            <Cost>{tech_medieval_ap4_cost}</Cost>
+            <Description>{tech_medieval_ap4_flag} AP 4</Description>
+            <Help>{tech_medieval_ap4_item}</Help>
             <Era>ERA_MEDIEVAL</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>7</GridX>
             <GridY>8</GridY>
-            <Quote>AP 4</Quote>
+            <Quote>{tech_medieval_ap4_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>107</ID>
             <Type>TECH_MEDIEVAL_AP5</Type>
-            <Cost>375</Cost>
-            <Description>AP 5</Description>
-            <Help>AP 5</Help>
+            <Cost>{tech_medieval_ap5_cost}</Cost>
+            <Description>{tech_medieval_ap5_flag} AP 5</Description>
+            <Help>{tech_medieval_ap5_item}</Help>
             <Era>ERA_MEDIEVAL</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>8</GridX>
             <GridY>0</GridY>
-            <Quote>AP 5</Quote>
+            <Quote>{tech_medieval_ap5_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>108</ID>
             <Type>TECH_MEDIEVAL_AP6</Type>
-            <Cost>485</Cost>
-            <Description>AP 6</Description>
-            <Help>AP 6</Help>
+            <Cost>{tech_medieval_ap6_cost}</Cost>
+            <Description>{tech_medieval_ap6_flag} AP 6</Description>
+            <Help>{tech_medieval_ap6_item}</Help>
             <Era>ERA_MEDIEVAL</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>8</GridX>
             <GridY>2</GridY>
-            <Quote>AP 6</Quote>
+            <Quote>{tech_medieval_ap6_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>109</ID>
             <Type>TECH_MEDIEVAL_AP7</Type>
-            <Cost>485</Cost>
-            <Description>AP 7</Description>
-            <Help>AP 7</Help>
+            <Cost>{tech_medieval_ap7_cost}</Cost>
+            <Description>{tech_medieval_ap7_flag} AP 7</Description>
+            <Help>{tech_medieval_ap7_item}</Help>
             <Era>ERA_MEDIEVAL</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>8</GridX>
             <GridY>5</GridY>
-            <Quote>AP 7</Quote>
+            <Quote>{tech_medieval_ap7_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>110</ID>
             <Type>TECH_MEDIEVAL_AP8</Type>
-            <Cost>485</Cost>
-            <Description>AP 8</Description>
-            <Help>AP 8</Help>
+            <Cost>{tech_medieval_ap8_cost}</Cost>
+            <Description>{tech_medieval_ap8_flag} AP 8</Description>
+            <Help>{tech_medieval_ap8_item}</Help>
             <Era>ERA_MEDIEVAL</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>8</GridX>
             <GridY>7</GridY>
-            <Quote>AP 8</Quote>
+            <Quote>{tech_medieval_ap8_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>111</ID>
             <Type>TECH_MEDIEVAL_AP9</Type>
-            <Cost>485</Cost>
-            <Description>AP 9</Description>
-            <Help>AP 9</Help>
+            <Cost>{tech_medieval_ap9_cost}</Cost>
+            <Description>{tech_medieval_ap9_flag} AP 9</Description>
+            <Help>{tech_medieval_ap9_item}</Help>
             <Era>ERA_MEDIEVAL</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>8</GridX>
             <GridY>8</GridY>
-            <Quote>AP 9</Quote>
+            <Quote>{tech_medieval_ap9_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>112</ID>
             <Type>TECH_MEDIEVAL_AP10</Type>
-            <Cost>485</Cost>
-            <Description>AP 10</Description>
-            <Help>AP 10</Help>
+            <Cost>{tech_medieval_ap10_cost}</Cost>
+            <Description>{tech_medieval_ap10_flag} AP 10</Description>
+            <Help>{tech_medieval_ap10_item}</Help>
             <Era>ERA_MEDIEVAL</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>8</GridX>
             <GridY>9</GridY>
-            <Quote>AP 10</Quote>
+            <Quote>{tech_medieval_ap10_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>113</ID>
             <Type>TECH_RENAISSANCE_AP1</Type>
-            <Cost>780</Cost>
-            <Description>AP 1</Description>
-            <Help>AP 1</Help>
+            <Cost>{tech_renaissance_ap1_cost}</Cost>
+            <Description>{tech_renaissance_ap1_flag} AP 1</Description>
+            <Help>{tech_renaissance_ap1_item}</Help>
             <Era>ERA_RENAISSANCE</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>10</GridX>
             <GridY>1</GridY>
-            <Quote>AP 1</Quote>
+            <Quote>{tech_renaissance_ap1_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>114</ID>
             <Type>TECH_RENAISSANCE_AP2</Type>
-            <Cost>780</Cost>
-            <Description>AP 2</Description>
-            <Help>AP 2</Help>
+            <Cost>{tech_renaissance_ap2_cost}</Cost>
+            <Description>{tech_renaissance_ap2_flag} AP 2</Description>
+            <Help>{tech_renaissance_ap2_item}</Help>
             <Era>ERA_RENAISSANCE</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>10</GridX>
             <GridY>3</GridY>
-            <Quote>AP 2</Quote>
+            <Quote>{tech_renaissance_ap2_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>115</ID>
             <Type>TECH_RENAISSANCE_AP3</Type>
-            <Cost>780</Cost>
-            <Description>AP 3</Description>
-            <Help>AP 3</Help>
+            <Cost>{tech_renaissance_ap3_cost}</Cost>
+            <Description>{tech_renaissance_ap3_flag} AP 3</Description>
+            <Help>{tech_renaissance_ap3_item}</Help>
             <Era>ERA_RENAISSANCE</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>10</GridX>
             <GridY>5</GridY>
-            <Quote>AP 3</Quote>
+            <Quote>{tech_renaissance_ap3_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>116</ID>
             <Type>TECH_RENAISSANCE_AP4</Type>
-            <Cost>780</Cost>
-            <Description>AP 4</Description>
-            <Help>AP 4</Help>
+            <Cost>{tech_renaissance_ap4_cost}</Cost>
+            <Description>{tech_renaissance_ap4_flag} AP 4</Description>
+            <Help>{tech_renaissance_ap4_item}</Help>
             <Era>ERA_RENAISSANCE</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>10</GridX>
             <GridY>7</GridY>
-            <Quote>AP 4</Quote>
+            <Quote>{tech_renaissance_ap4_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>117</ID>
             <Type>TECH_RENAISSANCE_AP5</Type>
-            <Cost>780</Cost>
-            <Description>AP 5</Description>
-            <Help>AP 5</Help>
+            <Cost>{tech_renaissance_ap5_cost}</Cost>
+            <Description>{tech_renaissance_ap5_flag} AP 5</Description>
+            <Help>{tech_renaissance_ap5_item}</Help>
             <Era>ERA_RENAISSANCE</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>10</GridX>
             <GridY>9</GridY>
-            <Quote>AP 5</Quote>
+            <Quote>{tech_renaissance_ap5_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>118</ID>
             <Type>TECH_RENAISSANCE_AP6</Type>
-            <Cost>1150</Cost>
-            <Description>AP 6</Description>
-            <Help>AP 6</Help>
+            <Cost>{tech_renaissance_ap6_cost}</Cost>
+            <Description>{tech_renaissance_ap6_flag} AP 6</Description>
+            <Help>{tech_renaissance_ap6_item}</Help>
             <Era>ERA_RENAISSANCE</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>11</GridX>
             <GridY>1</GridY>
-            <Quote>AP 6</Quote>
+            <Quote>{tech_renaissance_ap6_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>119</ID>
             <Type>TECH_RENAISSANCE_AP7</Type>
-            <Cost>1150</Cost>
-            <Description>AP 7</Description>
-            <Help>AP 7</Help>
+            <Cost>{tech_renaissance_ap7_cost}</Cost>
+            <Description>{tech_renaissance_ap7_flag} AP 7</Description>
+            <Help>{tech_renaissance_ap7_item}</Help>
             <Era>ERA_RENAISSANCE</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>11</GridX>
             <GridY>3</GridY>
-            <Quote>AP 7</Quote>
+            <Quote>{tech_renaissance_ap7_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>120</ID>
             <Type>TECH_RENAISSANCE_AP8</Type>
-            <Cost>1150</Cost>
-            <Description>AP 8</Description>
-            <Help>AP 8</Help>
+            <Cost>{tech_renaissance_ap8_cost}</Cost>
+            <Description>{tech_renaissance_ap8_flag} AP 8</Description>
+            <Help>{tech_renaissance_ap8_item}</Help>
             <Era>ERA_RENAISSANCE</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>11</GridX>
             <GridY>5</GridY>
-            <Quote>AP 8</Quote>
+            <Quote>{tech_renaissance_ap8_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>121</ID>
             <Type>TECH_RENAISSANCE_AP9</Type>
-            <Cost>1150</Cost>
-            <Description>AP 9</Description>
-            <Help>AP 9</Help>
+            <Cost>{tech_renaissance_ap9_cost}</Cost>
+            <Description>{tech_renaissance_ap9_flag} AP 9</Description>
+            <Help>{tech_renaissance_ap9_item}</Help>
             <Era>ERA_RENAISSANCE</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>11</GridX>
             <GridY>8</GridY>
-            <Quote>AP 9</Quote>
+            <Quote>{tech_renaissance_ap9_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>122</ID>
             <Type>TECH_RENAISSANCE_AP10</Type>
-            <Cost>1150</Cost>
-            <Description>AP 10</Description>
-            <Help>AP 10</Help>
+            <Cost>{tech_renaissance_ap10_cost}</Cost>
+            <Description>{tech_renaissance_ap10_flag} AP 10</Description>
+            <Help>{tech_renaissance_ap10_item}</Help>
             <Era>ERA_RENAISSANCE</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>11</GridX>
             <GridY>9</GridY>
-            <Quote>AP 10</Quote>
+            <Quote>{tech_renaissance_ap10_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>123</ID>
             <Type>TECH_INDUSTRIAL_AP1</Type>
-            <Cost>1600</Cost>
-            <Description>AP 1</Description>
-            <Help>AP 1</Help>
+            <Cost>{tech_industrial_ap1_cost}</Cost>
+            <Description>{tech_industrial_ap1_flag} AP 1</Description>
+            <Help>{tech_industrial_ap1_item}</Help>
             <Era>ERA_INDUSTRIAL</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>13</GridX>
             <GridY>1</GridY>
-            <Quote>AP 1</Quote>
+            <Quote>{tech_industrial_ap1_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>124</ID>
             <Type>TECH_INDUSTRIAL_AP2</Type>
-            <Cost>1600</Cost>
-            <Description>AP 2</Description>
-            <Help>AP 2</Help>
+            <Cost>{tech_industrial_ap2_cost}</Cost>
+            <Description>{tech_industrial_ap2_flag} AP 2</Description>
+            <Help>{tech_industrial_ap2_item}</Help>
             <Era>ERA_INDUSTRIAL</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>13</GridX>
             <GridY>3</GridY>
-            <Quote>AP 2</Quote>
+            <Quote>{tech_industrial_ap2_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>125</ID>
             <Type>TECH_INDUSTRIAL_AP3</Type>
-            <Cost>1600</Cost>
-            <Description>AP 3</Description>
-            <Help>AP 3</Help>
+            <Cost>{tech_industrial_ap3_cost}</Cost>
+            <Description>{tech_industrial_ap3_flag} AP 3</Description>
+            <Help>{tech_industrial_ap3_item}</Help>
             <Era>ERA_INDUSTRIAL</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>13</GridX>
             <GridY>5</GridY>
-            <Quote>AP 3</Quote>
+            <Quote>{tech_industrial_ap3_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>126</ID>
             <Type>TECH_INDUSTRIAL_AP4</Type>
-            <Cost>1600</Cost>
-            <Description>AP 4</Description>
-            <Help>AP 4</Help>
+            <Cost>{tech_industrial_ap4_cost}</Cost>
+            <Description>{tech_industrial_ap4_flag} AP 4</Description>
+            <Help>{tech_industrial_ap4_item}</Help>
             <Era>ERA_INDUSTRIAL</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>13</GridX>
             <GridY>6</GridY>
-            <Quote>AP 4</Quote>
+            <Quote>{tech_industrial_ap4_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>127</ID>
             <Type>TECH_INDUSTRIAL_AP5</Type>
-            <Cost>1600</Cost>
-            <Description>AP 5</Description>
-            <Help>AP 5</Help>
+            <Cost>{tech_industrial_ap5_cost}</Cost>
+            <Description>{tech_industrial_ap5_flag} AP 5</Description>
+            <Help>{tech_industrial_ap5_item}</Help>
             <Era>ERA_INDUSTRIAL</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>13</GridX>
             <GridY>8</GridY>
-            <Quote>AP 5</Quote>
+            <Quote>{tech_industrial_ap5_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>128</ID>
             <Type>TECH_INDUSTRIAL_AP6</Type>
-            <Cost>1600</Cost>
-            <Description>AP 6</Description>
-            <Help>AP 6</Help>
+            <Cost>{tech_industrial_ap6_cost}</Cost>
+            <Description>{tech_industrial_ap6_flag} AP 6</Description>
+            <Help>{tech_industrial_ap6_item}</Help>
             <Era>ERA_INDUSTRIAL</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>13</GridX>
             <GridY>9</GridY>
-            <Quote>AP 6</Quote>
+            <Quote>{tech_industrial_ap6_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>129</ID>
             <Type>TECH_INDUSTRIAL_AP7</Type>
-            <Cost>2350</Cost>
-            <Description>AP 7</Description>
-            <Help>AP 7</Help>
+            <Cost>{tech_industrial_ap7_cost}</Cost>
+            <Description>{tech_industrial_ap7_flag} AP 7</Description>
+            <Help>{tech_industrial_ap7_item}</Help>
             <Era>ERA_INDUSTRIAL</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>14</GridX>
             <GridY>1</GridY>
-            <Quote>AP 7</Quote>
+            <Quote>{tech_industrial_ap7_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>130</ID>
             <Type>TECH_INDUSTRIAL_AP8</Type>
-            <Cost>2350</Cost>
-            <Description>AP 8</Description>
-            <Help>AP 8</Help>
+            <Cost>{tech_industrial_ap8_cost}</Cost>
+            <Description>{tech_industrial_ap8_flag} AP 8</Description>
+            <Help>{tech_industrial_ap8_item}</Help>
             <Era>ERA_INDUSTRIAL</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>14</GridX>
             <GridY>2</GridY>
-            <Quote>AP 8</Quote>
+            <Quote>{tech_industrial_ap8_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>131</ID>
             <Type>TECH_INDUSTRIAL_AP9</Type>
-            <Cost>2350</Cost>
-            <Description>AP 9</Description>
-            <Help>AP 9</Help>
+            <Cost>{tech_industrial_ap9_cost}</Cost>
+            <Description>{tech_industrial_ap9_flag} AP 9</Description>
+            <Help>{tech_industrial_ap9_item}</Help>
             <Era>ERA_INDUSTRIAL</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>14</GridX>
             <GridY>5</GridY>
-            <Quote>AP 9</Quote>
+            <Quote>{tech_industrial_ap9_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>132</ID>
             <Type>TECH_INDUSTRIAL_AP10</Type>
-            <Cost>2350</Cost>
-            <Description>AP 10</Description>
-            <Help>AP 10</Help>
+            <Cost>{tech_industrial_ap10_cost}</Cost>
+            <Description>{tech_industrial_ap10_flag} AP 10</Description>
+            <Help>{tech_industrial_ap10_item}</Help>
             <Era>ERA_INDUSTRIAL</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>14</GridX>
             <GridY>8</GridY>
-            <Quote>AP 10</Quote>
+            <Quote>{tech_industrial_ap10_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>133</ID>
             <Type>TECH_MODERN_AP1</Type>
-            <Cost>3100</Cost>
-            <Description>AP 1</Description>
-            <Help>AP 1</Help>
+            <Cost>{tech_modern_ap1_cost}</Cost>
+            <Description>{tech_modern_ap1_flag} AP 1</Description>
+            <Help>{tech_modern_ap1_item}</Help>
             <Era>ERA_MODERN</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>16</GridX>
             <GridY>1</GridY>
-            <Quote>AP 1</Quote>
+            <Quote>{tech_modern_ap1_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>134</ID>
             <Type>TECH_MODERN_AP2</Type>
-            <Cost>3100</Cost>
-            <Description>AP 2</Description>
-            <Help>AP 2</Help>
+            <Cost>{tech_modern_ap2_cost}</Cost>
+            <Description>{tech_modern_ap2_flag} AP 2</Description>
+            <Help>{tech_modern_ap2_item}</Help>
             <Era>ERA_MODERN</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>16</GridX>
             <GridY>2</GridY>
-            <Quote>AP 2</Quote>
+            <Quote>{tech_modern_ap2_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>135</ID>
             <Type>TECH_MODERN_AP3</Type>
-            <Cost>3100</Cost>
-            <Description>AP 3</Description>
-            <Help>AP 3</Help>
+            <Cost>{tech_modern_ap3_cost}</Cost>
+            <Description>{tech_modern_ap3_flag} AP 3</Description>
+            <Help>{tech_modern_ap3_item}</Help>
             <Era>ERA_MODERN</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>16</GridX>
             <GridY>3</GridY>
-            <Quote>AP 3</Quote>
+            <Quote>{tech_modern_ap3_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>136</ID>
             <Type>TECH_MODERN_AP4</Type>
-            <Cost>3100</Cost>
-            <Description>AP 4</Description>
-            <Help>AP 4</Help>
+            <Cost>{tech_modern_ap4_cost}</Cost>
+            <Description>{tech_modern_ap4_flag} AP 4</Description>
+            <Help>{tech_modern_ap4_item}</Help>
             <Era>ERA_MODERN</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>16</GridX>
             <GridY>5</GridY>
-            <Quote>AP 4</Quote>
+            <Quote>{tech_modern_ap4_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>137</ID>
             <Type>TECH_MODERN_AP5</Type>
-            <Cost>3100</Cost>
-            <Description>AP 5</Description>
-            <Help>AP 5</Help>
+            <Cost>{tech_modern_ap5_cost}</Cost>
+            <Description>{tech_modern_ap5_flag} AP 5</Description>
+            <Help>{tech_modern_ap5_item}</Help>
             <Era>ERA_MODERN</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>16</GridX>
             <GridY>7</GridY>
-            <Quote>AP 5</Quote>
+            <Quote>{tech_modern_ap5_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>138</ID>
             <Type>TECH_MODERN_AP6</Type>
-            <Cost>4100</Cost>
-            <Description>AP 6</Description>
-            <Help>AP 6</Help>
+            <Cost>{tech_modern_ap6_cost}</Cost>
+            <Description>{tech_modern_ap6_flag} AP 6</Description>
+            <Help>{tech_modern_ap6_item}</Help>
             <Era>ERA_MODERN</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>17</GridX>
             <GridY>2</GridY>
-            <Quote>AP 6</Quote>
+            <Quote>{tech_modern_ap6_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>139</ID>
             <Type>TECH_MODERN_AP7</Type>
-            <Cost>4100</Cost>
-            <Description>AP 7</Description>
-            <Help>AP 7</Help>
+            <Cost>{tech_modern_ap7_cost}</Cost>
+            <Description>{tech_modern_ap7_flag} AP 7</Description>
+            <Help>{tech_modern_ap7_item}</Help>
             <Era>ERA_MODERN</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>17</GridX>
             <GridY>4</GridY>
-            <Quote>AP 7</Quote>
+            <Quote>{tech_modern_ap7_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>140</ID>
             <Type>TECH_MODERN_AP8</Type>
-            <Cost>4100</Cost>
-            <Description>AP 8</Description>
-            <Help>AP 8</Help>
+            <Cost>{tech_modern_ap8_cost}</Cost>
+            <Description>{tech_modern_ap8_flag} AP 8</Description>
+            <Help>{tech_modern_ap8_item}</Help>
             <Era>ERA_MODERN</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>17</GridX>
             <GridY>5</GridY>
-            <Quote>AP 8</Quote>
+            <Quote>{tech_modern_ap8_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>141</ID>
             <Type>TECH_MODERN_AP9</Type>
-            <Cost>4100</Cost>
-            <Description>AP 9</Description>
-            <Help>AP 9</Help>
+            <Cost>{tech_modern_ap9_cost}</Cost>
+            <Description>{tech_modern_ap9_flag} AP 9</Description>
+            <Help>{tech_modern_ap9_item}</Help>
             <Era>ERA_MODERN</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>17</GridX>
             <GridY>7</GridY>
-            <Quote>AP 9</Quote>
+            <Quote>{tech_modern_ap9_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>142</ID>
             <Type>TECH_ATOMIC_AP1</Type>
-            <Cost>5100</Cost>
-            <Description>AP 1</Description>
-            <Help>AP 1</Help>
+            <Cost>{tech_atomic_ap1_cost}</Cost>
+            <Description>{tech_atomic_ap1_flag} AP 1</Description>
+            <Help>{tech_atomic_ap1_item}</Help>
             <Era>ERA_POSTMODERN</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>19</GridX>
             <GridY>1</GridY>
-            <Quote>AP 1</Quote>
+            <Quote>{tech_atomic_ap1_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>143</ID>
             <Type>TECH_ATOMIC_AP2</Type>
-            <Cost>5100</Cost>
-            <Description>AP 2</Description>
-            <Help>AP 2</Help>
+            <Cost>{tech_atomic_ap2_cost}</Cost>
+            <Description>{tech_atomic_ap2_flag} AP 2</Description>
+            <Help>{tech_atomic_ap2_item}</Help>
             <Era>ERA_POSTMODERN</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>19</GridX>
             <GridY>3</GridY>
-            <Quote>AP 2</Quote>
+            <Quote>{tech_atomic_ap2_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>144</ID>
             <Type>TECH_ATOMIC_AP3</Type>
-            <Cost>5100</Cost>
-            <Description>AP 3</Description>
-            <Help>AP 3</Help>
+            <Cost>{tech_atomic_ap3_cost}</Cost>
+            <Description>{tech_atomic_ap3_flag} AP 3</Description>
+            <Help>{tech_atomic_ap3_item}</Help>
             <Era>ERA_POSTMODERN</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>19</GridX>
             <GridY>5</GridY>
-            <Quote>AP 3</Quote>
+            <Quote>{tech_atomic_ap3_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>145</ID>
             <Type>TECH_ATOMIC_AP4</Type>
-            <Cost>5100</Cost>
-            <Description>AP 4</Description>
-            <Help>AP 4</Help>
+            <Cost>{tech_atomic_ap4_cost}</Cost>
+            <Description>{tech_atomic_ap4_flag} AP 4</Description>
+            <Help>{tech_atomic_ap4_item}</Help>
             <Era>ERA_POSTMODERN</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>19</GridX>
             <GridY>7</GridY>
-            <Quote>AP 4</Quote>
+            <Quote>{tech_atomic_ap4_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>146</ID>
             <Type>TECH_ATOMIC_AP5</Type>
-            <Cost>6400</Cost>
-            <Description>AP 5</Description>
-            <Help>AP 5</Help>
+            <Cost>{tech_atomic_ap5_cost}</Cost>
+            <Description>{tech_atomic_ap5_flag} AP 5</Description>
+            <Help>{tech_atomic_ap5_item}</Help>
             <Era>ERA_POSTMODERN</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>20</GridX>
             <GridY>1</GridY>
-            <Quote>AP 5</Quote>
+            <Quote>{tech_atomic_ap5_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>147</ID>
             <Type>TECH_ATOMIC_AP6</Type>
-            <Cost>6400</Cost>
-            <Description>AP 6</Description>
-            <Help>AP 6</Help>
+            <Cost>{tech_atomic_ap6_cost}</Cost>
+            <Description>{tech_atomic_ap6_flag} AP 6</Description>
+            <Help>{tech_atomic_ap6_item}</Help>
             <Era>ERA_POSTMODERN</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>20</GridX>
             <GridY>3</GridY>
-            <Quote>AP 6</Quote>
+            <Quote>{tech_atomic_ap6_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>148</ID>
             <Type>TECH_ATOMIC_AP7</Type>
-            <Cost>6400</Cost>
-            <Description>AP 7</Description>
-            <Help>AP 7</Help>
+            <Cost>{tech_atomic_ap7_cost}</Cost>
+            <Description>{tech_atomic_ap7_flag} AP 7</Description>
+            <Help>{tech_atomic_ap7_item}</Help>
             <Era>ERA_POSTMODERN</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>20</GridX>
             <GridY>5</GridY>
-            <Quote>AP 7</Quote>
+            <Quote>{tech_atomic_ap7_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>149</ID>
             <Type>TECH_ATOMIC_AP8</Type>
-            <Cost>6400</Cost>
-            <Description>AP 8</Description>
-            <Help>AP 8</Help>
+            <Cost>{tech_atomic_ap8_cost}</Cost>
+            <Description>{tech_atomic_ap8_flag} AP 8</Description>
+            <Help>{tech_atomic_ap8_item}</Help>
             <Era>ERA_POSTMODERN</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>20</GridX>
             <GridY>7</GridY>
-            <Quote>AP 8</Quote>
+            <Quote>{tech_atomic_ap8_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>150</ID>
             <Type>TECH_INFORMATION_AP1</Type>
-            <Cost>7700</Cost>
-            <Description>AP 1</Description>
-            <Help>AP 1</Help>
+            <Cost>{tech_information_ap1_cost}</Cost>
+            <Description>{tech_information_ap1_flag} AP 1</Description>
+            <Help>{tech_information_ap1_item}</Help>
             <Era>ERA_FUTURE</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>22</GridX>
             <GridY>1</GridY>
-            <Quote>AP 1</Quote>
+            <Quote>{tech_information_ap1_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>151</ID>
             <Type>TECH_INFORMATION_AP2</Type>
-            <Cost>7700</Cost>
-            <Description>AP 2</Description>
-            <Help>AP 2</Help>
+            <Cost>{tech_information_ap2_cost}</Cost>
+            <Description>{tech_information_ap2_flag} AP 2</Description>
+            <Help>{tech_information_ap2_item}</Help>
             <Era>ERA_FUTURE</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>22</GridX>
             <GridY>2</GridY>
-            <Quote>AP 2</Quote>
+            <Quote>{tech_information_ap2_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>152</ID>
             <Type>TECH_INFORMATION_AP3</Type>
-            <Cost>7700</Cost>
-            <Description>AP 3</Description>
-            <Help>AP 3</Help>
+            <Cost>{tech_information_ap3_cost}</Cost>
+            <Description>{tech_information_ap3_flag} AP 3</Description>
+            <Help>{tech_information_ap3_item}</Help>
             <Era>ERA_FUTURE</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>22</GridX>
             <GridY>4</GridY>
-            <Quote>AP 3</Quote>
+            <Quote>{tech_information_ap3_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>153</ID>
             <Type>TECH_INFORMATION_AP4</Type>
-            <Cost>7700</Cost>
-            <Description>AP 4</Description>
-            <Help>AP 4</Help>
+            <Cost>{tech_information_ap4_cost}</Cost>
+            <Description>{tech_information_ap4_flag} AP 4</Description>
+            <Help>{tech_information_ap4_item}</Help>
             <Era>ERA_FUTURE</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>22</GridX>
             <GridY>5</GridY>
-            <Quote>AP 4</Quote>
+            <Quote>{tech_information_ap4_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>154</ID>
             <Type>TECH_INFORMATION_AP5</Type>
-            <Cost>7700</Cost>
-            <Description>AP 5</Description>
-            <Help>AP 5</Help>
+            <Cost>{tech_information_ap5_cost}</Cost>
+            <Description>{tech_information_ap5_flag} AP 5</Description>
+            <Help>{tech_information_ap5_item}</Help>
             <Era>ERA_FUTURE</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>22</GridX>
             <GridY>6</GridY>
-            <Quote>AP 5</Quote>
+            <Quote>{tech_information_ap5_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>155</ID>
             <Type>TECH_INFORMATION_AP6</Type>
-            <Cost>7700</Cost>
-            <Description>AP 6</Description>
-            <Help>AP 6</Help>
+            <Cost>{tech_information_ap6_cost}</Cost>
+            <Description>{tech_information_ap6_flag} AP 6</Description>
+            <Help>{tech_information_ap6_item}</Help>
             <Era>ERA_FUTURE</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>22</GridX>
             <GridY>7</GridY>
-            <Quote>AP 6</Quote>
+            <Quote>{tech_information_ap6_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>156</ID>
             <Type>TECH_INFORMATION_AP7</Type>
-            <Cost>8800</Cost>
-            <Description>AP 7</Description>
-            <Help>AP 7</Help>
+            <Cost>{tech_information_ap7_cost}</Cost>
+            <Description>{tech_information_ap7_flag} AP 7</Description>
+            <Help>{tech_information_ap7_item}</Help>
             <Era>ERA_FUTURE</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>23</GridX>
             <GridY>0</GridY>
-            <Quote>AP 7</Quote>
+            <Quote>{tech_information_ap7_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>157</ID>
             <Type>TECH_INFORMATION_AP8</Type>
-            <Cost>8800</Cost>
-            <Description>AP 8</Description>
-            <Help>AP 8</Help>
+            <Cost>{tech_information_ap8_cost}</Cost>
+            <Description>{tech_information_ap8_flag} AP 8</Description>
+            <Help>{tech_information_ap8_item}</Help>
             <Era>ERA_FUTURE</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>23</GridX>
             <GridY>1</GridY>
-            <Quote>AP 8</Quote>
+            <Quote>{tech_information_ap8_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>158</ID>
             <Type>TECH_INFORMATION_AP9</Type>
-            <Cost>8800</Cost>
-            <Description>AP 9</Description>
-            <Help>AP 9</Help>
+            <Cost>{tech_information_ap9_cost}</Cost>
+            <Description>{tech_information_ap9_flag} AP 9</Description>
+            <Help>{tech_information_ap9_item}</Help>
             <Era>ERA_FUTURE</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>23</GridX>
             <GridY>2</GridY>
-            <Quote>AP 9</Quote>
+            <Quote>{tech_information_ap9_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>159</ID>
             <Type>TECH_INFORMATION_AP10</Type>
-            <Cost>8800</Cost>
-            <Description>AP 10</Description>
-            <Help>AP 10</Help>
+            <Cost>{tech_information_ap10_cost}</Cost>
+            <Description>{tech_information_ap10_flag} AP 10</Description>
+            <Help>{tech_information_ap10_item}</Help>
             <Era>ERA_FUTURE</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>23</GridX>
             <GridY>5</GridY>
-            <Quote>AP 10</Quote>
+            <Quote>{tech_information_ap10_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>160</ID>
             <Type>TECH_INFORMATION_AP11</Type>
-            <Cost>8800</Cost>
-            <Description>AP 11</Description>
-            <Help>AP 11</Help>
+            <Cost>{tech_information_ap11_cost}</Cost>
+            <Description>{tech_information_ap11_flag} AP 11</Description>
+            <Help>{tech_information_ap11_item}</Help>
             <Era>ERA_FUTURE</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>23</GridX>
             <GridY>6</GridY>
-            <Quote>AP 11</Quote>
+            <Quote>{tech_information_ap11_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>161</ID>
             <Type>TECH_INFORMATION_AP12</Type>
-            <Cost>8800</Cost>
-            <Description>AP 12</Description>
-            <Help>AP 12</Help>
+            <Cost>{tech_information_ap12_cost}</Cost>
+            <Description>{tech_information_ap12_flag} AP 12</Description>
+            <Help>{tech_information_ap12_item}</Help>
             <Era>ERA_FUTURE</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>23</GridX>
             <GridY>7</GridY>
-            <Quote>AP 12</Quote>
+            <Quote>{tech_information_ap12_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>162</ID>
             <Type>TECH_ANCIENT_AP_BONUS</Type>
-            <Cost>35</Cost>
-            <Description>AP Bonus</Description>
-            <Help>AP Bonus</Help>
+            <Cost>{tech_ancient_ap_bonus_cost}</Cost>
+            <Description>{tech_ancient_ap_bonus_flag} AP Bonus</Description>
+            <Help>{tech_ancient_ap_bonus_item}</Help>
             <Era>ERA_ANCIENT</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>1</GridX>
             <GridY>0</GridY>
-            <Quote>AP Bonus</Quote>
+            <Quote>{tech_ancient_ap_bonus_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>163</ID>
             <Type>TECH_CLASSICAL_AP_BONUS</Type>
-            <Cost>85</Cost>
-            <Description>AP Bonus</Description>
-            <Help>AP Bonus</Help>
+            <Cost>{tech_classical_ap_bonus_cost}</Cost>
+            <Description>{tech_classical_ap_bonus_flag} AP Bonus</Description>
+            <Help>{tech_classical_ap_bonus_item}</Help>
             <Era>ERA_CLASSICAL</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>4</GridX>
             <GridY>0</GridY>
-            <Quote>AP Bonus</Quote>
+            <Quote>{tech_classical_ap_bonus_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>164</ID>
             <Type>TECH_MEDIEVAL_AP_BONUS</Type>
-            <Cost>275</Cost>
-            <Description>AP Bonus</Description>
-            <Help>AP Bonus</Help>
+            <Cost>{tech_medieval_ap_bonus_cost}</Cost>
+            <Description>{tech_medieval_ap_bonus_flag} AP Bonus</Description>
+            <Help>{tech_medieval_ap_bonus_item}</Help>
             <Era>ERA_MEDIEVAL</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>7</GridX>
             <GridY>0</GridY>
-            <Quote>AP Bonus</Quote>
+            <Quote>{tech_medieval_ap_bonus_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>165</ID>
             <Type>TECH_RENAISSANCE_AP_BONUS</Type>
-            <Cost>780</Cost>
-            <Description>AP Bonus</Description>
-            <Help>AP Bonus</Help>
+            <Cost>{tech_renaissance_ap_bonus_cost}</Cost>
+            <Description>{tech_renaissance_ap_bonus_flag} AP Bonus</Description>
+            <Help>{tech_renaissance_ap_bonus_item}</Help>
             <Era>ERA_RENAISSANCE</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>10</GridX>
             <GridY>0</GridY>
-            <Quote>AP Bonus</Quote>
+            <Quote>{tech_renaissance_ap_bonus_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>166</ID>
             <Type>TECH_INDUSTRIAL_AP_BONUS</Type>
-            <Cost>1600</Cost>
-            <Description>AP Bonus</Description>
-            <Help>AP Bonus</Help>
+            <Cost>{tech_industrial_ap_bonus_cost}</Cost>
+            <Description>{tech_industrial_ap_bonus_flag} AP Bonus</Description>
+            <Help>{tech_industrial_ap_bonus_item}</Help>
             <Era>ERA_INDUSTRIAL</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>13</GridX>
             <GridY>0</GridY>
-            <Quote>AP Bonus</Quote>
+            <Quote>{tech_industrial_ap_bonus_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>167</ID>
             <Type>TECH_MODERN_AP_BONUS</Type>
-            <Cost>3100</Cost>
-            <Description>AP Bonus</Description>
-            <Help>AP Bonus</Help>
+            <Cost>{tech_modern_ap_bonus_cost}</Cost>
+            <Description>{tech_modern_ap_bonus_flag} AP Bonus</Description>
+            <Help>{tech_modern_ap_bonus_item}</Help>
             <Era>ERA_MODERN</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>16</GridX>
             <GridY>0</GridY>
-            <Quote>AP Bonus</Quote>
+            <Quote>{tech_modern_ap_bonus_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>168</ID>
             <Type>TECH_ATOMIC_AP_BONUS</Type>
-            <Cost>5100</Cost>
-            <Description>AP Bonus</Description>
-            <Help>AP Bonus</Help>
+            <Cost>{tech_atomic_ap_bonus_cost}</Cost>
+            <Description>{tech_atomic_ap_bonus_flag} AP Bonus</Description>
+            <Help>{tech_atomic_ap_bonus_item}</Help>
             <Era>ERA_POSTMODERN</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
             <GridX>19</GridX>
             <GridY>0</GridY>
-            <Quote>AP Bonus</Quote>
+            <Quote>{tech_atomic_ap_bonus_item}</Quote>
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
         </Row>
