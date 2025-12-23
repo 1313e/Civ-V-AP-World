@@ -2,7 +2,7 @@
 <GameData>
     <Buildings>
         <Update>
-            <Set PolicyCostModifier="-5"/>
+            <Set PolicyCostModifier="{policy_cost_modifier}"/>
             <Where Type="BUILDING_PALACE"/>
         </Update>
     </Buildings>

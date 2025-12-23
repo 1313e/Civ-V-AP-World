@@ -63,6 +63,30 @@ class EmbarkingGoalLogic(Toggle):
     display_name = "Embarking Goal Logic"
 
 
+class PolicyCostModifier(Range):
+    """
+    Multiplies the base cost of adopting social policies with the given percentage.
+
+    """
+
+    display_name = "Policy Cost Modifier"
+    range_start = 0
+    range_end = 1000
+    default = 90
+
+
+class TechCostModifier(Range):
+    """
+    Multiplies the base cost of researching technologies with the given percentage.
+
+    """
+
+    display_name = "Tech Cost Modifier"
+    range_start = 0
+    range_end = 1000
+    default = 100
+
+
 class ProgressiveTechs(DefaultOnToggle):
     """
     Use progressive technologies.
@@ -98,6 +122,24 @@ class WorldWonderSanity(Toggle):
     """
 
     display_name = "World Wonder Sanity"
+
+
+class EnableHints(Choice):
+    """
+    Enable item hints for all policy branch; policy; and technology locations.
+
+    Options are:
+    - full: Locations state their exact item.
+    - classification: Locations state the classification of their item (progression; useful; filler; trap).
+    - none: Locations do not state their item.
+
+    """
+
+    display_name = "Enable Hints"
+    option_full = 0
+    option_classification = 1
+    option_none = 2
+    default = option_classification
 
 
 class EnableTraps(Toggle):
@@ -145,9 +187,12 @@ class CivVOptions(PerGameCommonOptions):
     victory_goal_logic: VictoryGoalLogic
     era_goal_logic: EraGoalLogic
     embarking_goal_logic: EmbarkingGoalLogic
+    policy_cost_modifier: PolicyCostModifier
+    tech_cost_modifier: TechCostModifier
     progressive_techs: ProgressiveTechs
     national_wonder_sanity: NationalWonderSanity
     world_wonder_sanity: WorldWonderSanity
+    enable_hints: EnableHints
     enable_traps: EnableTraps
     trap_blacklist: TrapBlacklist
     trap_filler_chance: TrapFillerChance

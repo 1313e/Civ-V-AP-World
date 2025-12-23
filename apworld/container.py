@@ -69,20 +69,35 @@ class CivVContainer(APPlayerContainer):
 
         """
 
+        # Format the item into a string depending on the hint mode
         color = getattr(CivVItemClassificationColors, item.classification.name)
-        return (
-            f"{self.clean_text(self.world.multiworld.player_name[item.player])}'s "
-            f"[{color}]{self.clean_text(item.name)}[ENDCOLOR]"
-        )
+        match self.world.options.enable_hints:
+            case "full":
+                return (
+                    f"{self.clean_text(self.world.multiworld.player_name[item.player])}'s "
+                    f"[{color}]{self.clean_text(item.name)}[ENDCOLOR]"
+                )
+            case "classification":
+                return f"A [{color}]{item.classification.name} item[ENDCOLOR]"
+            case "none":
+                return f"An item"
+            case _:
+                raise NotImplementedError
 
-    @staticmethod
-    def _get_formatted_item_flag(item: Item) -> str:
+    def _get_formatted_item_flag(self, item: Item) -> str:
         """
         Returns the formatted flag icon for the given `item` usable in the Civ V XML databases.
 
         """
 
-        return f"[{getattr(CivVItemClassificationFlags, item.classification.name)}]"
+        # Format the item flag into a string depending on the hint mode
+        match self.world.options.enable_hints:
+            case "full" | "classification":
+                return f"[{getattr(CivVItemClassificationFlags, item.classification.name)}] "
+            case "none":
+                return ""
+            case _:
+                raise NotImplementedError
 
     def _get_substitution_dict(self) -> dict[str, str]:
         """
@@ -90,13 +105,14 @@ class CivVContainer(APPlayerContainer):
 
         """
 
-        # Create empty dict holding all substitutions
-        dct = {}
+        # Create dict holding all substitutions
+        dct = {"policy_cost_modifier": str(self.world.options.policy_cost_modifier-100)}
 
         # Get all placed locations for this player. Ignore the Victory location
         locations = [x for x in self.world.multiworld.get_filled_locations(self.world.player) if x.name != "Victory"]
 
         # Loop over all these locations and add their substitution strings
+        tech_cost_modifier = self.world.options.tech_cost_modifier / 100
         for location in locations:
             # Get the location data for this location
             location_data = LOCATIONS_DATA_BY_ID[location.address]
@@ -116,7 +132,7 @@ class CivVContainer(APPlayerContainer):
                 case CivVLocationType.tech:
                     dct[f"{location_data.database_key_prefix}_item"] = self._get_formatted_item(location.item)
                     dct[f"{location_data.database_key_prefix}_flag"] = self._get_formatted_item_flag(location.item)
-                    dct[f"{location_data.database_key_prefix}_cost"] = str(location_data.cost)
+                    dct[f"{location_data.database_key_prefix}_cost"] = str(int(location_data.cost * tech_cost_modifier))
 
                 # For all other types, do nothing
                 case _:

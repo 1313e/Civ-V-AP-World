@@ -23,16 +23,16 @@
   <Blocks />
   <Files>
     <File md5="E9F5C0BD9CB78C8699CCA5ADCEC207CF" import="0">APFunctions.lua</File>
-    <File md5="19BBC87D831636A0B7061531A59D1544" import="0">Buildings.xml</File>
+    <File md5="4D3B55334610BECE54120C00A0EF0D92" import="0">Buildings.xml</File>
     <File md5="DF67A36106C1E7756A31C383AFF967D1" import="0">PolicyBranches.xml</File>
-    <File md5="D4B612D009BAECED0D793C060C13C348" import="0">Policies.xml</File>
+    <File md5="E8A7092C16C3D7A7942E9FDC595337B4" import="0">Policies.xml</File>
     <File md5="9FDB79374AFADA7249B402C1A84FDC99" import="1">Icons/AP_Tech_128.dds</File>
     <File md5="4DCA93CF29178E5CA21DB8E78BB3FA24" import="1">Icons/AP_Tech_214.dds</File>
     <File md5="B080E5912DB08B0196596C7326C5EF39" import="1">Icons/AP_Tech_256.dds</File>
     <File md5="536D1657CA0D395709042AEDC33FC425" import="1">Icons/AP_Tech_64.dds</File>
     <File md5="07B4C010B9F49B9134BB67DF3A6B2D50" import="1">Icons/AP_Tech_80.dds</File>
     <File md5="3E65B80EC0B93372140938CAB0DC29A8" import="0">Icons/AP_Tech_Icons.xml</File>
-    <File md5="4C43FBDE31AA9AF5519D997D55F804E7" import="0">Technologies.xml</File>
+    <File md5="5143BBA73C5E4B366460BD01E4313AD3" import="0">Technologies.xml</File>
   </Files>
   <Actions>
     <OnModActivated>
