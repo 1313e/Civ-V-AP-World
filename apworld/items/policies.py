@@ -171,8 +171,8 @@ POLICY_ITEMS: dict[str, CivVProgressionItemData | CivVUsefulItemData] = {
         game_id=30,
         prefix="Policy Branch",
     ),
-    "Trade Unions": CivVUsefulItemData(
-        name="Trade Unions",
+    "Mercenary Army": CivVUsefulItemData(
+        name="Mercenary Army",
         type=CivVItemType.policy,
         game_id=31,
     ),
@@ -186,8 +186,8 @@ POLICY_ITEMS: dict[str, CivVProgressionItemData | CivVUsefulItemData] = {
         type=CivVItemType.policy,
         game_id=33,
     ),
-    "Caravans": CivVUsefulItemData(
-        name="Caravans",
+    "Wagon Trains": CivVUsefulItemData(
+        name="Wagon Trains",
         type=CivVItemType.policy,
         game_id=34,
     ),
