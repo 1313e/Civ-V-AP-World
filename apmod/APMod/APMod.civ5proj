@@ -12,7 +12,7 @@
     <Authors>1313e</Authors>
     <SpecialThanks>Battary</SpecialThanks>
     <AffectsSavedGames>true</AffectsSavedGames>
-    <MinCompatibleSaveVersion>11</MinCompatibleSaveVersion>
+    <MinCompatibleSaveVersion>1</MinCompatibleSaveVersion>
     <SupportsSinglePlayer>true</SupportsSinglePlayer>
     <SupportsMultiplayer>true</SupportsMultiplayer>
     <SupportsHotSeat>true</SupportsHotSeat>
@@ -21,6 +21,11 @@
     <RootNamespace>APMod</RootNamespace>
     <ModReferences />
     <ModActions>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>TextInfos.xml</FileName>
+      </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
@@ -105,6 +110,10 @@
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="Icons\AP_Tech_Icons.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="TextInfos.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>

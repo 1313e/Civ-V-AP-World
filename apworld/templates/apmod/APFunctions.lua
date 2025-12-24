@@ -475,7 +475,7 @@ function Init()
 	RequestSync()
 
 	-- Send notification to player that APMod was loaded successfully
-	AP.SendNotification("APMod loaded", "APMod was loaded successfully.")
+	AP.SendNotification("AP Mod loaded", "AP Mod was loaded successfully.")
 end
 
 Init()
