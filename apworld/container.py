@@ -8,7 +8,7 @@ from pathlib import Path
 from typing import TYPE_CHECKING, Any
 from xml.etree import ElementTree
 
-from BaseClasses import Item
+from BaseClasses import Item, ItemClassification
 from worlds.Files import APPlayerContainer
 
 from .constants import CONTAINER_EXTENSION, GAME_NAME
@@ -34,6 +34,7 @@ class CivVContainer(APPlayerContainer):
         "templates/apmod/Policies.xml",
         "templates/apmod/PolicyBranches.xml",
         "templates/apmod/Technologies.xml",
+        "templates/apmod/TextInfos.xml",
         "templates/apmod/Icons/AP_Tech_64.dds",
         "templates/apmod/Icons/AP_Tech_80.dds",
         "templates/apmod/Icons/AP_Tech_128.dds",
@@ -69,16 +70,21 @@ class CivVContainer(APPlayerContainer):
 
         """
 
+        # If traps are to be disguised, use progression instead of trap
+        classification = item.classification
+        if classification == ItemClassification.trap and self.world.options.disguise_traps:
+            classification = ItemClassification.progression
+
         # Format the item into a string depending on the hint mode
-        color = getattr(CivVItemClassificationColors, item.classification.name)
-        match self.world.options.enable_hints:
+        color = getattr(CivVItemClassificationColors, classification.name)
+        match self.world.options.item_hints:
             case "full":
                 return (
                     f"{self.clean_text(self.world.multiworld.player_name[item.player])}'s "
                     f"[{color}]{self.clean_text(item.name)}[ENDCOLOR]"
                 )
             case "classification":
-                return f"A [{color}]{item.classification.name} item[ENDCOLOR]"
+                return f"A [{color}]{classification.name} item[ENDCOLOR]"
             case "none":
                 return f"An item"
             case _:
@@ -90,10 +96,15 @@ class CivVContainer(APPlayerContainer):
 
         """
 
+        # If traps are to be disguised, use progression instead of trap
+        classification = item.classification
+        if classification == ItemClassification.trap and self.world.options.disguise_traps:
+            classification = ItemClassification.progression
+
         # Format the item flag into a string depending on the hint mode
-        match self.world.options.enable_hints:
+        match self.world.options.item_hints:
             case "full" | "classification":
-                return f"[{getattr(CivVItemClassificationFlags, item.classification.name)}] "
+                return f"[{getattr(CivVItemClassificationFlags, classification.name)}] "
             case "none":
                 return ""
             case _:

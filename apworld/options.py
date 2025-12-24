@@ -52,7 +52,7 @@ class EraGoalLogic(Choice):
     default = option_information
 
 
-class EmbarkingGoalLogic(Toggle):
+class EmbarkingGoalLogic(DefaultOnToggle):
     """
     Add Optics and Astronomy as requirements before the game is considered beatable.
 
@@ -100,6 +100,35 @@ class ProgressiveTechs(DefaultOnToggle):
     display_name = "Progressive Techs"
 
 
+class ItemHints(Choice):
+    """
+    Enable item hints for all policy branch; policy; and technology locations.
+
+    Options are:
+    - full: Locations state their exact item.
+    - classification: Locations state the classification of their item (progression; useful; filler; trap).
+    - none: Locations do not state their item.
+
+    """
+
+    display_name = "Item Hints"
+    option_full = 0
+    option_classification = 1
+    option_none = 2
+    default = option_classification
+
+
+class DisguiseTraps(Toggle):
+    """
+    Item classification hints will classify traps as progression items.
+
+    Has no effect if item hints are set to 'none'.
+
+    """
+
+    display_name = "Disguise Traps"
+
+
 class NationalWonderSanity(Toggle):
     """
     Add all national wonders to the location pool.
@@ -122,24 +151,6 @@ class WorldWonderSanity(Toggle):
     """
 
     display_name = "World Wonder Sanity"
-
-
-class EnableHints(Choice):
-    """
-    Enable item hints for all policy branch; policy; and technology locations.
-
-    Options are:
-    - full: Locations state their exact item.
-    - classification: Locations state the classification of their item (progression; useful; filler; trap).
-    - none: Locations do not state their item.
-
-    """
-
-    display_name = "Enable Hints"
-    option_full = 0
-    option_classification = 1
-    option_none = 2
-    default = option_classification
 
 
 class EnableTraps(Toggle):
@@ -190,9 +201,10 @@ class CivVOptions(PerGameCommonOptions):
     policy_cost_modifier: PolicyCostModifier
     tech_cost_modifier: TechCostModifier
     progressive_techs: ProgressiveTechs
+    item_hints: ItemHints
+    disguise_traps: DisguiseTraps
     national_wonder_sanity: NationalWonderSanity
     world_wonder_sanity: WorldWonderSanity
-    enable_hints: EnableHints
     enable_traps: EnableTraps
     trap_blacklist: TrapBlacklist
     trap_filler_chance: TrapFillerChance
