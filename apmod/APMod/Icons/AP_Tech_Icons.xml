@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<IconTextureAtlases>
+		<Row>
+			<Atlas>AP_TECH_ICON_ATLAS</Atlas>
+			<IconSize>256</IconSize>
+			<Filename>AP_Tech_256.dds</Filename>
+			<IconsPerRow>1</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>AP_TECH_ICON_ATLAS</Atlas>
+			<IconSize>214</IconSize>
+			<Filename>AP_Tech_214.dds</Filename>
+			<IconsPerRow>1</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>AP_TECH_ICON_ATLAS</Atlas>
+			<IconSize>128</IconSize>
+			<Filename>AP_Tech_128.dds</Filename>
+			<IconsPerRow>1</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>AP_TECH_ICON_ATLAS</Atlas>
+			<IconSize>80</IconSize>
+			<Filename>AP_Tech_80.dds</Filename>
+			<IconsPerRow>1</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>AP_TECH_ICON_ATLAS</Atlas>
+			<IconSize>64</IconSize>
+			<Filename>AP_Tech_64.dds</Filename>
+			<IconsPerRow>1</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+	</IconTextureAtlases>
+</GameData>
