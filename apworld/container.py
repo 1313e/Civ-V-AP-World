@@ -79,10 +79,11 @@ class CivVContainer(APPlayerContainer):
         color = getattr(CivVItemClassificationColors, classification.name)
         match self.world.options.item_hints:
             case "full":
-                return (
-                    f"{self.clean_text(self.world.multiworld.player_name[item.player])}'s "
-                    f"[{color}]{self.clean_text(item.name)}[ENDCOLOR]"
+                player_name = (
+                    f"{self.clean_text(self.world.multiworld.player_name[item.player])}'s"
+                    if item.player != self.world.player else "Your"
                 )
+                return f"{player_name} [{color}]{self.clean_text(item.name)}[ENDCOLOR]"
             case "classification":
                 return f"A [{color}]{classification.name} item[ENDCOLOR]"
             case "none":
