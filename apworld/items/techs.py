@@ -425,7 +425,7 @@ TECH_ITEMS: dict[str, CivVProgressionItemData] = {
         name="Refrigeration",
         type=CivVItemType.tech,
         game_id=51,
-        progressive_parent=PROGRESSIVE_TECH_ITEMS["Happiness"],
+        progressive_parent=PROGRESSIVE_TECH_ITEMS["Culture"],
         groups={CivVItemGroup.modern_era},
     ),
     "Radio": CivVProgressionItemData(

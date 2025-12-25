@@ -50,6 +50,7 @@ All locations and victory itself can, theoretically, be obtained without ever re
 - Science (if victory goal logic is set to Science). Focuses on building the Space Station:
   - Tech: Mining (*mining Aluminum*)
   - Tech: Electricity (*reveals Aluminum*)
+  - Tech: Ecology (*Recycling Center*)
   - Tech: Rocketry (*Apollo Program*)
   - Tech: Advanced Ballistics (*SS Booster*)
   - Tech: Particle Physics (*SS Engine*)
@@ -63,6 +64,7 @@ All locations and victory itself can, theoretically, be obtained without ever re
   - Tech: Drama and Poetry (*Amphitheater*)
   - Tech: Acoustics (*Opera House*)
   - Tech: Archaeology (*Museum* and *Archaeologists*)
+  - Tech: Refrigeration (*Hotel*)
   - Tech: Radio (*Broadcast Tower*)
   - Tech: The Internet (*doubles Tourism*)
   - Tech: Telecommunications (*National Visitor's Center* and *CN Tower*)

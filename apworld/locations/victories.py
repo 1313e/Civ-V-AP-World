@@ -19,6 +19,7 @@ VICTORY_LOCATIONS = {
             progression={
                 items.TECH_ITEMS["Mining"],
                 items.TECH_ITEMS["Electricity"],
+                items.TECH_ITEMS["Ecology"],
                 items.TECH_ITEMS["Rocketry"],
                 items.TECH_ITEMS["Advanced Ballistics"],
                 items.TECH_ITEMS["Particle Physics"],
@@ -39,6 +40,7 @@ VICTORY_LOCATIONS = {
                 items.TECH_ITEMS["Drama and Poetry"],
                 items.TECH_ITEMS["Acoustics"],
                 items.TECH_ITEMS["Archaeology"],
+                items.TECH_ITEMS["Refrigeration"],
                 items.TECH_ITEMS["Radio"],
                 items.TECH_ITEMS["The Internet"],
                 items.TECH_ITEMS["Telecommunications"],
