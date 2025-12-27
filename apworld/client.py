@@ -147,7 +147,7 @@ class CivVClient:
 
             # Create context and add it as a task to the AP server loop
             ctx = CivVContext(_server_address, _password)
-            ctx.username = _name
+            ctx.auth = _name
             ctx.server_task = asyncio.create_task(server_loop(ctx), name="ServerLoop")
 
             # Run the GUI for the client if GUIs are enabled

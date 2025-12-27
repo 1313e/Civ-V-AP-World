@@ -13,7 +13,7 @@ from worlds.Files import APPlayerContainer
 
 from .constants import CONTAINER_EXTENSION, GAME_NAME
 from .enums import CivVLocationType, CivVItemClassificationColors, CivVItemClassificationFlags
-from .locations import LOCATIONS_DATA_BY_ID
+from .locations import LOCATIONS_DATA
 if TYPE_CHECKING:
     from .world import CivVWorld
 
@@ -31,10 +31,12 @@ class CivVContainer(APPlayerContainer):
         "templates/apmod/APFunctions.lua",
         "templates/apmod/Buildings.xml",
         "templates/apmod/CivVAPMod (v 1).modinfo",
+        "templates/apmod/NationalWonders.xml",
         "templates/apmod/Policies.xml",
         "templates/apmod/PolicyBranches.xml",
+        "templates/apmod/PolicyBranchTextInfos.xml",
         "templates/apmod/Technologies.xml",
-        "templates/apmod/TextInfos.xml",
+        "templates/apmod/WorldWonders.xml",
         "templates/apmod/Icons/AP_Tech_64.dds",
         "templates/apmod/Icons/AP_Tech_80.dds",
         "templates/apmod/Icons/AP_Tech_128.dds",
@@ -111,6 +113,18 @@ class CivVContainer(APPlayerContainer):
             case _:
                 raise NotImplementedError
 
+    def _get_location_description_building(self, item: Item) -> str:
+        """
+        Formats the given `item` placement into a location description string usable for buildings in the Civ V XML
+        databases.
+
+        """
+
+        return (
+            f"[NEWLINE][NEWLINE]Constructing this building for the first time counts as an "
+            f"[COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] ({self._get_formatted_item(item)})."
+        )
+
     def _get_substitution_dict(self) -> dict[str, str]:
         """
         Generates and returns a dictionary that should be used for XML file substitution.
@@ -121,30 +135,41 @@ class CivVContainer(APPlayerContainer):
         dct = {"policy_cost_modifier": str(self.world.options.policy_cost_modifier-100)}
 
         # Get all placed locations for this player. Ignore the Victory location
-        locations = [x for x in self.world.multiworld.get_filled_locations(self.world.player) if x.name != "Victory"]
+        filled_locations = {
+            x.address: x for x in self.world.multiworld.get_filled_locations(self.world.player) if x.name != "Victory"
+        }
 
-        # Loop over all these locations and add their substitution strings
+        # Loop over all defined locations and add their substitution strings
         tech_cost_modifier = self.world.options.tech_cost_modifier / 100
-        for location in locations:
-            # Get the location data for this location
-            location_data = LOCATIONS_DATA_BY_ID[location.address]
+        for location in LOCATIONS_DATA:
+            # Get the filled location for this location
+            filled_location = filled_locations.get(location.ap_id)
 
             # Act according to the type of location this is
-            match location_data.type:
+            match location.type:
+                # For buildings, we need a location description at that location if an item was placed there
+                # TODO: Also add item classification flags to all buildings?
+                case CivVLocationType.building | CivVLocationType.national_wonder | CivVLocationType.world_wonder:
+                    if filled_location is not None:
+                        location_text = self._get_location_description_building(filled_location.item)
+                    else:
+                        location_text = ""
+                    dct[f"{location.database_key_prefix}_location"] = location_text
+
                 # For policy branches, we need just the formatted item at that location
                 case CivVLocationType.policy_branch:
-                    dct[f"{location_data.database_key_prefix}_item"] = self._get_formatted_item(location.item)
+                    dct[f"{location.database_key_prefix}_item"] = self._get_formatted_item(filled_location.item)
 
                 # For policies, we need the formatted item and the classification flag
                 case CivVLocationType.policy:
-                    dct[f"{location_data.database_key_prefix}_item"] = self._get_formatted_item(location.item)
-                    dct[f"{location_data.database_key_prefix}_flag"] = self._get_formatted_item_flag(location.item)
+                    dct[f"{location.database_key_prefix}_item"] = self._get_formatted_item(filled_location.item)
+                    dct[f"{location.database_key_prefix}_flag"] = self._get_formatted_item_flag(filled_location.item)
 
                 # For techs, we need formatted item; classification flag; and the cost of that location
                 case CivVLocationType.tech:
-                    dct[f"{location_data.database_key_prefix}_item"] = self._get_formatted_item(location.item)
-                    dct[f"{location_data.database_key_prefix}_flag"] = self._get_formatted_item_flag(location.item)
-                    dct[f"{location_data.database_key_prefix}_cost"] = str(int(location_data.cost * tech_cost_modifier))
+                    dct[f"{location.database_key_prefix}_item"] = self._get_formatted_item(filled_location.item)
+                    dct[f"{location.database_key_prefix}_flag"] = self._get_formatted_item_flag(filled_location.item)
+                    dct[f"{location.database_key_prefix}_cost"] = str(int(location.cost * tech_cost_modifier))
 
                 # For all other types, do nothing
                 case _:

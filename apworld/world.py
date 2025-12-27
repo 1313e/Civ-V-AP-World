@@ -27,6 +27,7 @@ from .items import (
     ItemRequirements,
 )
 from .locations import (
+    BUILDING_LOCATIONS,
     LOCATIONS_DATA,
     LOCATIONS_DATA_BY_TYPE_ID,
     NATIONAL_WONDER_LOCATIONS,
@@ -165,7 +166,9 @@ class CivVWorld(World):
         # Create list with locations that are always included
         locations_data = [*POLICY_BRANCH_LOCATIONS, *POLICY_LOCATIONS, *TECH_LOCATIONS]
 
-        # Add wonder locations if corresponding wonder sanity is enabled
+        # Add building locations if corresponding sanity is enabled
+        if self.options.building_sanity:
+            locations_data.extend(BUILDING_LOCATIONS)
         if self.options.national_wonder_sanity:
             locations_data.extend(NATIONAL_WONDER_LOCATIONS)
         if self.options.world_wonder_sanity:

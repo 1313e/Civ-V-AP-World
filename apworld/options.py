@@ -129,6 +129,24 @@ class DisguiseTraps(Toggle):
     display_name = "Disguise Traps"
 
 
+class BuildingSanity(Toggle):
+    """
+    Add most standard buildings to the location pool.
+
+    Buildings that will not be added:
+    - Palace
+    - Courthouse
+    - Any religious building (Cathedral; Monastery; Mosque; and Pagoda)
+    - Any civilization-unique building (they count as the building they replace instead)
+    - Any National Wonder (see National Wonder Sanity instead)
+    - Any World Wonder (see World Wonder Sanity instead)
+    This adds 53 buildings to the location pool in total.
+
+    """
+
+    display_name = "Building Sanity"
+
+
 class NationalWonderSanity(Toggle):
     """
     Add all national wonders to the location pool.
@@ -203,6 +221,7 @@ class CivVOptions(PerGameCommonOptions):
     progressive_techs: ProgressiveTechs
     item_hints: ItemHints
     disguise_traps: DisguiseTraps
+    building_sanity: BuildingSanity
     national_wonder_sanity: NationalWonderSanity
     world_wonder_sanity: WorldWonderSanity
     enable_traps: EnableTraps

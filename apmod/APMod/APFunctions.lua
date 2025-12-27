@@ -16,7 +16,9 @@ local team = Teams[player:GetTeam()]
 local teamTechs = team:GetTeamTechs()
 
 local pushTable = {}
-local pushTableTableKeys = {policy=true, policy_branch=true, tech=true, national_wonder=true, world_wonder=true}
+local pushTableTableKeys = {
+	building=true, policy=true, policy_branch=true, tech=true, national_wonder=true, world_wonder=true,
+}
 local freePoliciesToGrant = 0
 local techIdsToEraIds = {
 	[0]=0, [1]=0, [2]=0, [3]=0, [4]=0, [5]=0, [6]=0, [7]=0, [8]=0, [9]=0, [10]=0, [11]=0,
@@ -59,21 +61,39 @@ local policyBranchIdToPolicyBranchStarterId = {
 local policyBranchIdToPolicyBranchFinisherId = {
 	[0]=42, [1]=43, [2]=44, [3]=45, [4]=46, [5]=55, [6]=47, [7]=62, [8]=48,
 }
+local buildingIds = {
+	[11]=true, [12]=true, [13]=true, [14]=true, [15]=true, [16]=true, [17]=true, [18]=true, [19]=true,
+	[20]=true, [22]=true, [23]=true, [24]=true, [25]=true, [26]=true, [27]=true, [28]=true, [29]=true,
+	[30]=true, [31]=true, [32]=true, [33]=true, [34]=true, [35]=true, [36]=true, [37]=true, [38]=true, [39]=true,
+	[40]=true, [41]=true, [42]=true, [43]=true, [44]=true, [45]=true, [46]=true, [47]=true, [48]=true, [49]=true,
+	[50]=true, [51]=true, [52]=true, [53]=true,
+	[91]=true, [92]=true,
+	[121]=true, [122]=true, [123]=true, [124]=true, [125]=true, [126]=true,
+	[151]=true, [152]=true, [153]=true,
+}
+local civUniqueBuildingToBuildingId = {
+	[0]=13, [2]=38, [3]=33, [4]=43, [5]=47, [6]=48, [7]=50, [8]=51, [9]=29,
+	[10]=29,
+	[96]=37,
+	[116]=30, [117]=16, [119]=122,
+	[140]=28, [143]=33, [144]=12, [145]=50, [146]=22, [147]=48,
+}
 local nationalWonderBuildingIds = {
-	[55]=true, [56]=true, [57]=true, [58]=true, [59]=true, [60]=true,
-	[61]=true, [62]=true,
+	[55]=true, [56]=true, [57]=true, [58]=true, [59]=true,
+	[60]=true, [61]=true, [62]=true,
 	[127]=true,
-	[141]=true, [142]=true, [148]=true, [149]=true, [150]=true,
+	[141]=true, [142]=true, [148]=true, [149]=true,
+	[150]=true,
 }
 local worldWonderBuildingIds = {
-	[63]=true, [64]=true, [65]=true, [66]=true, [67]=true, [68]=true, [69]=true, [70]=true,
-	[71]=true, [72]=true, [73]=true, [74]=true, [75]=true, [76]=true, [77]=true, [78]=true, [79]=true, [80]=true,
-	[81]=true, [82]=true, [83]=true, [84]=true, [85]=true, [86]=true, [87]=true, [88]=true, [90]=true,
-	[93]=true, [94]=true, [95]=true,
-	[128]=true, [129]=true, [130]=true,
-	[131]=true, [132]=true, [133]=true, [134]=true, [135]=true, [136]=true,
-	[154]=true, [155]=true, [156]=true, [157]=true, [158]=true, [159]=true, [160]=true,
-	[161]=true,
+	[63]=true, [64]=true, [65]=true, [66]=true, [67]=true, [68]=true, [69]=true,
+	[70]=true, [71]=true, [72]=true, [73]=true, [74]=true, [75]=true, [76]=true, [77]=true, [78]=true, [79]=true,
+	[80]=true, [81]=true, [82]=true, [83]=true, [84]=true, [85]=true, [86]=true, [87]=true, [88]=true,
+	[90]=true, [93]=true, [94]=true, [95]=true,
+	[128]=true, [129]=true,
+	[130]=true, [131]=true, [132]=true, [133]=true, [134]=true, [135]=true, [136]=true,
+	[154]=true, [155]=true, [156]=true, [157]=true, [158]=true, [159]=true,
+	[160]=true, [161]=true,
 }
 local notificationTypes = {
 	[0]=NotificationTypes.NOTIFICATION_GENERIC,		-- generic
@@ -138,10 +158,21 @@ function OnTechAcquired(playerId, techId)
 end
 
 function OnCityBuildingConstructed(playerId, cityId, buildingId, gold, faithOrCulture)
-	-- If the player constructs a building, add it to the push table if it is a wonder
+	-- If the player constructs a building, add it to the push table if it is a supported building
 	if(playerId == player:GetID()) then
-		if(nationalWonderBuildingIds[buildingId]) then
+		-- Standard buildings
+		if(buildingIds[buildingId]) then
+			table.insert(pushTable["building"], buildingId)
+
+		-- Civ-unique buildings
+		elseif(civUniqueBuildingToBuildingId[buildingId] ~= nil) then
+			table.insert(pushTable["building"], civUniqueBuildingToBuildingId[buildingId])
+
+		-- National Wonders
+		elseif(nationalWonderBuildingIds[buildingId]) then
 			table.insert(pushTable["national_wonder"], buildingId)
+
+		-- World Wonders
 		elseif(worldWonderBuildingIds[buildingId]) then
 			table.insert(pushTable["world_wonder"], buildingId)
 		end

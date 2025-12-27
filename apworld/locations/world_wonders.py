@@ -16,6 +16,7 @@ WORLD_WONDER_LOCATIONS = [
         name="Great Lighthouse",
         type=CivVLocationType.world_wonder,
         game_id=63,
+        database_key_prefix="building_great_lighthouse",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Optics"],
@@ -26,6 +27,7 @@ WORLD_WONDER_LOCATIONS = [
         name="Stonehenge",
         type=CivVLocationType.world_wonder,
         game_id=64,
+        database_key_prefix="building_stonehenge",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Calendar"],
@@ -36,6 +38,7 @@ WORLD_WONDER_LOCATIONS = [
         name="Great Library",
         type=CivVLocationType.world_wonder,
         game_id=65,
+        database_key_prefix="building_great_library",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Writing"],
@@ -47,6 +50,7 @@ WORLD_WONDER_LOCATIONS = [
         type=CivVLocationType.world_wonder,
         game_id=66,
         region=regions.CLASSICAL_ERA_POLICY,
+        database_key_prefix="building_pyramid",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Masonry"],
@@ -57,6 +61,7 @@ WORLD_WONDER_LOCATIONS = [
         name="Colossus",
         type=CivVLocationType.world_wonder,
         game_id=67,
+        database_key_prefix="building_colossus",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Iron Working"],
@@ -67,6 +72,7 @@ WORLD_WONDER_LOCATIONS = [
         name="Oracle",
         type=CivVLocationType.world_wonder,
         game_id=68,
+        database_key_prefix="building_oracle",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Philosophy"],
@@ -78,6 +84,7 @@ WORLD_WONDER_LOCATIONS = [
         type=CivVLocationType.world_wonder,
         game_id=69,
         region=regions.ANCIENT_ERA_POLICY,
+        database_key_prefix="building_hanging_garden",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Mathematics"],
@@ -88,6 +95,7 @@ WORLD_WONDER_LOCATIONS = [
         name="Great Wall",
         type=CivVLocationType.world_wonder,
         game_id=70,
+        database_key_prefix="building_great_wall",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Engineering"],
@@ -98,6 +106,7 @@ WORLD_WONDER_LOCATIONS = [
         name="Angkor Wat",
         type=CivVLocationType.world_wonder,
         game_id=71,
+        database_key_prefix="building_angkor_wat",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Education"],
@@ -108,6 +117,7 @@ WORLD_WONDER_LOCATIONS = [
         name="Hagia Sophia",
         type=CivVLocationType.world_wonder,
         game_id=72,
+        database_key_prefix="building_hagia_sophia",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Theology"],
@@ -118,6 +128,7 @@ WORLD_WONDER_LOCATIONS = [
         name="Chichen Itza",
         type=CivVLocationType.world_wonder,
         game_id=73,
+        database_key_prefix="building_chichen_itza",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Civil Service"],
@@ -128,6 +139,7 @@ WORLD_WONDER_LOCATIONS = [
         name="Machu Pichu",
         type=CivVLocationType.world_wonder,
         game_id=74,
+        database_key_prefix="building_machu_pichu",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Guilds"],
@@ -138,6 +150,7 @@ WORLD_WONDER_LOCATIONS = [
         name="Notre Dame",
         type=CivVLocationType.world_wonder,
         game_id=75,
+        database_key_prefix="building_notre_dame",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Physics"],
@@ -149,6 +162,7 @@ WORLD_WONDER_LOCATIONS = [
         type=CivVLocationType.world_wonder,
         game_id=76,
         region=regions.INFORMATION_ERA_POLICY,
+        database_key_prefix="building_porcelain_tower",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Architecture"],
@@ -159,6 +173,7 @@ WORLD_WONDER_LOCATIONS = [
         name="Himeji Castle",
         type=CivVLocationType.world_wonder,
         game_id=77,
+        database_key_prefix="building_himeji_castle",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Gunpowder"],
@@ -169,6 +184,7 @@ WORLD_WONDER_LOCATIONS = [
         name="Sistine Chapel",
         type=CivVLocationType.world_wonder,
         game_id=78,
+        database_key_prefix="building_sistine_chapel",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Acoustics"],
@@ -180,6 +196,7 @@ WORLD_WONDER_LOCATIONS = [
         type=CivVLocationType.world_wonder,
         game_id=79,
         region=regions.MODERN_ERA,
+        database_key_prefix="building_kremlin",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Railroad"],
@@ -191,6 +208,7 @@ WORLD_WONDER_LOCATIONS = [
         type=CivVLocationType.world_wonder,
         game_id=80,
         region=regions.INDUSTRIAL_ERA_POLICY,
+        database_key_prefix="building_forbidden_palace",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Banking"],
@@ -201,6 +219,7 @@ WORLD_WONDER_LOCATIONS = [
         name="Taj Mahal",
         type=CivVLocationType.world_wonder,
         game_id=81,
+        database_key_prefix="building_taj_mahal",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Architecture"],
@@ -212,6 +231,7 @@ WORLD_WONDER_LOCATIONS = [
         type=CivVLocationType.world_wonder,
         game_id=82,
         region=regions.ATOMIC_ERA_POLICY,
+        database_key_prefix="building_big_ben",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Industrialization"],
@@ -223,6 +243,7 @@ WORLD_WONDER_LOCATIONS = [
         type=CivVLocationType.world_wonder,
         game_id=83,
         region=regions.INFORMATION_ERA_POLICY,
+        database_key_prefix="building_louvre",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Archaeology"],
@@ -233,6 +254,7 @@ WORLD_WONDER_LOCATIONS = [
         name="Brandenburg Gate",
         type=CivVLocationType.world_wonder,
         game_id=84,
+        database_key_prefix="building_brandenburg_gate",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Military Science"],
@@ -244,6 +266,7 @@ WORLD_WONDER_LOCATIONS = [
         type=CivVLocationType.world_wonder,
         game_id=85,
         region=regions.MODERN_ERA,
+        database_key_prefix="building_statue_of_liberty",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Replaceable Parts"],
@@ -254,6 +277,7 @@ WORLD_WONDER_LOCATIONS = [
         name="Cristo Redentor",
         type=CivVLocationType.world_wonder,
         game_id=86,
+        database_key_prefix="building_cristo_redentor",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Plastics"],
@@ -264,6 +288,7 @@ WORLD_WONDER_LOCATIONS = [
         name="Eiffel Tower",
         type=CivVLocationType.world_wonder,
         game_id=87,
+        database_key_prefix="building_eiffel_tower",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Radio"],
@@ -274,6 +299,7 @@ WORLD_WONDER_LOCATIONS = [
         name="Pentagon",
         type=CivVLocationType.world_wonder,
         game_id=88,
+        database_key_prefix="building_pentagon",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Combined Arms"],
@@ -284,6 +310,7 @@ WORLD_WONDER_LOCATIONS = [
         name="Sydney Opera House",
         type=CivVLocationType.world_wonder,
         game_id=90,
+        database_key_prefix="building_sydney_opera_house",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Ecology"],
@@ -295,6 +322,7 @@ WORLD_WONDER_LOCATIONS = [
         type=CivVLocationType.world_wonder,
         game_id=93,
         region=regions.MEDIEVAL_ERA_POLICY,
+        database_key_prefix="building_statue_zeus",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Bronze Working"],
@@ -305,6 +333,7 @@ WORLD_WONDER_LOCATIONS = [
         name="Temple of Artemis",
         type=CivVLocationType.world_wonder,
         game_id=94,
+        database_key_prefix="building_temple_artemis",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Archery"],
@@ -315,6 +344,7 @@ WORLD_WONDER_LOCATIONS = [
         name="Mausoleum of Halicarnassus",
         type=CivVLocationType.world_wonder,
         game_id=95,
+        database_key_prefix="building_mausoleum_halicarnassus",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Masonry"],
@@ -325,6 +355,7 @@ WORLD_WONDER_LOCATIONS = [
         name="Alhambra",
         type=CivVLocationType.world_wonder,
         game_id=128,
+        database_key_prefix="building_alhambra",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Chivalry"],
@@ -335,6 +366,7 @@ WORLD_WONDER_LOCATIONS = [
         name="CN Tower",
         type=CivVLocationType.world_wonder,
         game_id=129,
+        database_key_prefix="building_cn_tower",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Telecommunications"],
@@ -345,6 +377,7 @@ WORLD_WONDER_LOCATIONS = [
         name="Hubble Space Telescope",
         type=CivVLocationType.world_wonder,
         game_id=130,
+        database_key_prefix="building_hubble",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Satellites"],
@@ -355,6 +388,7 @@ WORLD_WONDER_LOCATIONS = [
         name="Leaning Tower of Pisa",
         type=CivVLocationType.world_wonder,
         game_id=131,
+        database_key_prefix="building_leaning_tower",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Printing Press"],
@@ -366,6 +400,7 @@ WORLD_WONDER_LOCATIONS = [
         type=CivVLocationType.world_wonder,
         game_id=132,
         region=regions.RENAISSANCE_ERA_POLICY,
+        database_key_prefix="building_mosque_of_djenne",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Theology"],
@@ -376,6 +411,7 @@ WORLD_WONDER_LOCATIONS = [
         name="Neuschwanstein",
         type=CivVLocationType.world_wonder,
         game_id=133,
+        database_key_prefix="building_neuschwanstein",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Railroad"],
@@ -386,6 +422,7 @@ WORLD_WONDER_LOCATIONS = [
         name="Petra",
         type=CivVLocationType.world_wonder,
         game_id=134,
+        database_key_prefix="building_petra",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Currency"],
@@ -396,6 +433,7 @@ WORLD_WONDER_LOCATIONS = [
         name="Terracotta Army",
         type=CivVLocationType.world_wonder,
         game_id=135,
+        database_key_prefix="building_terracotta_army",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Construction"],
@@ -406,6 +444,7 @@ WORLD_WONDER_LOCATIONS = [
         name="Great Firewall",
         type=CivVLocationType.world_wonder,
         game_id=136,
+        database_key_prefix="building_great_firewall",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Computers"],
@@ -417,6 +456,7 @@ WORLD_WONDER_LOCATIONS = [
         type=CivVLocationType.world_wonder,
         game_id=154,
         region=regions.MODERN_ERA_POLICY,
+        database_key_prefix="building_uffizi",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Architecture"],
@@ -427,6 +467,7 @@ WORLD_WONDER_LOCATIONS = [
         name="Globe Theatre",
         type=CivVLocationType.world_wonder,
         game_id=155,
+        database_key_prefix="building_globe_theater",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Printing Press"],
@@ -437,6 +478,7 @@ WORLD_WONDER_LOCATIONS = [
         name="Broadway",
         type=CivVLocationType.world_wonder,
         game_id=156,
+        database_key_prefix="building_broadway",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Radio"],
@@ -447,6 +489,7 @@ WORLD_WONDER_LOCATIONS = [
         name="Red Fort",
         type=CivVLocationType.world_wonder,
         game_id=157,
+        database_key_prefix="building_red_fort",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Metallurgy"],
@@ -458,6 +501,7 @@ WORLD_WONDER_LOCATIONS = [
         type=CivVLocationType.world_wonder,
         game_id=158,
         region=regions.MODERN_ERA,
+        database_key_prefix="building_prora_resort",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Flight"],
@@ -468,6 +512,7 @@ WORLD_WONDER_LOCATIONS = [
         name="Borobudur",
         type=CivVLocationType.world_wonder,
         game_id=159,
+        database_key_prefix="building_borobudur",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Theology"],
@@ -478,6 +523,7 @@ WORLD_WONDER_LOCATIONS = [
         name="Parthenon",
         type=CivVLocationType.world_wonder,
         game_id=160,
+        database_key_prefix="building_parthenon",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Drama and Poetry"],
@@ -488,6 +534,7 @@ WORLD_WONDER_LOCATIONS = [
         name="International Space Station",
         type=CivVLocationType.world_wonder,
         game_id=161,
+        database_key_prefix="building_international_space_station",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Satellites"],

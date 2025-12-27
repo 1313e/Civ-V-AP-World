@@ -103,6 +103,7 @@ class CivVLocationType(StrEnum):
 
     """
 
+    building = "building"
     policy = "policy"
     policy_branch = "policy_branch"
     tech = "tech"

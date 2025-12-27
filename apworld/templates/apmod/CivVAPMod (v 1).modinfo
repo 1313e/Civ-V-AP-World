@@ -22,8 +22,9 @@
   <References />
   <Blocks />
   <Files>
-    <File md5="D40DE5D8F586DB7D01BC0330EB1F1202" import="0">APFunctions.lua</File>
-    <File md5="4D3B55334610BECE54120C00A0EF0D92" import="0">Buildings.xml</File>
+    <File md5="F1B1722480F94300D225B22F97982B8D" import="0">APFunctions.lua</File>
+    <File md5="510587D961C4BAB32250CF0084AC4A5A" import="0">Buildings.xml</File>
+    <File md5="0B9024194311E001AA12933CC1E71ED8" import="0">NationalWonders.xml</File>
     <File md5="8382C7420D4F319681DD5D0B82C8F969" import="0">PolicyBranches.xml</File>
     <File md5="E8A7092C16C3D7A7942E9FDC595337B4" import="0">Policies.xml</File>
     <File md5="9FDB79374AFADA7249B402C1A84FDC99" import="1">Icons/AP_Tech_128.dds</File>
@@ -31,17 +32,20 @@
     <File md5="B080E5912DB08B0196596C7326C5EF39" import="1">Icons/AP_Tech_256.dds</File>
     <File md5="536D1657CA0D395709042AEDC33FC425" import="1">Icons/AP_Tech_64.dds</File>
     <File md5="07B4C010B9F49B9134BB67DF3A6B2D50" import="1">Icons/AP_Tech_80.dds</File>
-    <File md5="3E65B80EC0B93372140938CAB0DC29A8" import="0">Icons/AP_Tech_Icons.xml</File>
-    <File md5="490F4373F77EBB8ED79C09298D9FE85C" import="0">TextInfos.xml</File>
+    <File md5="7152D0357C288208BCFDCEC907C86627" import="0">Icons/AP_Tech_Icons.xml</File>
+    <File md5="490F4373F77EBB8ED79C09298D9FE85C" import="0">PolicyBranchTextInfos.xml</File>
     <File md5="5143BBA73C5E4B366460BD01E4313AD3" import="0">Technologies.xml</File>
+    <File md5="712984FFC3134B771857611331454569" import="0">WorldWonders.xml</File>
   </Files>
   <Actions>
     <OnModActivated>
-      <UpdateDatabase>TextInfos.xml</UpdateDatabase>
+      <UpdateDatabase>PolicyBranchTextInfos.xml</UpdateDatabase>
       <UpdateDatabase>Buildings.xml</UpdateDatabase>
+      <UpdateDatabase>NationalWonders.xml</UpdateDatabase>
       <UpdateDatabase>PolicyBranches.xml</UpdateDatabase>
       <UpdateDatabase>Policies.xml</UpdateDatabase>
       <UpdateDatabase>Technologies.xml</UpdateDatabase>
+      <UpdateDatabase>WorldWonders.xml</UpdateDatabase>
       <UpdateDatabase>Icons/AP_Tech_Icons.xml</UpdateDatabase>
     </OnModActivated>
   </Actions>

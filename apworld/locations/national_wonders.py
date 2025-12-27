@@ -16,6 +16,7 @@ NATIONAL_WONDER_LOCATIONS = [
         name="Heroic Epic",
         type=CivVLocationType.national_wonder,
         game_id=55,
+        database_key_prefix="building_heroic_epic",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Iron Working"],
@@ -27,6 +28,7 @@ NATIONAL_WONDER_LOCATIONS = [
         name="National College",
         type=CivVLocationType.national_wonder,
         game_id=56,
+        database_key_prefix="building_national_college",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Philosophy"],
@@ -38,6 +40,7 @@ NATIONAL_WONDER_LOCATIONS = [
         name="National Epic",
         type=CivVLocationType.national_wonder,
         game_id=57,
+        database_key_prefix="building_national_epic",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Drama and Poetry"],
@@ -48,6 +51,7 @@ NATIONAL_WONDER_LOCATIONS = [
         name="Circus Maximus",
         type=CivVLocationType.national_wonder,
         game_id=58,
+        database_key_prefix="building_circus_maximus",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Horseback Riding"],
@@ -59,6 +63,7 @@ NATIONAL_WONDER_LOCATIONS = [
         name="East India Company",
         type=CivVLocationType.national_wonder,
         game_id=59,
+        database_key_prefix="building_national_treasury",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Guilds"],
@@ -70,6 +75,7 @@ NATIONAL_WONDER_LOCATIONS = [
         name="Ironworks",
         type=CivVLocationType.national_wonder,
         game_id=60,
+        database_key_prefix="building_ironworks",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Machinery"],
@@ -81,6 +87,7 @@ NATIONAL_WONDER_LOCATIONS = [
         name="Oxford University",
         type=CivVLocationType.national_wonder,
         game_id=61,
+        database_key_prefix="building_oxford_university",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Education"],
@@ -92,6 +99,7 @@ NATIONAL_WONDER_LOCATIONS = [
         name="Hermitage",
         type=CivVLocationType.national_wonder,
         game_id=62,
+        database_key_prefix="building_hermitage",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Architecture"],
@@ -104,6 +112,7 @@ NATIONAL_WONDER_LOCATIONS = [
         name="National Intelligence Agency",
         type=CivVLocationType.national_wonder,
         game_id=127,
+        database_key_prefix="building_intelligence_agency",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Radio"],
@@ -116,6 +125,7 @@ NATIONAL_WONDER_LOCATIONS = [
         name="Grand Temple",
         type=CivVLocationType.national_wonder,
         game_id=141,
+        database_key_prefix="building_grand_temple",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Theology"],
@@ -128,6 +138,7 @@ NATIONAL_WONDER_LOCATIONS = [
         name="National Visitor Center",
         type=CivVLocationType.national_wonder,
         game_id=142,
+        database_key_prefix="building_tourist_center",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Telecommunications"],
@@ -139,6 +150,7 @@ NATIONAL_WONDER_LOCATIONS = [
         name="Writers' Guild",
         type=CivVLocationType.national_wonder,
         game_id=148,
+        database_key_prefix="building_writers_guild",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Drama and Poetry"],
@@ -149,6 +161,7 @@ NATIONAL_WONDER_LOCATIONS = [
         name="Artists' Guild",
         type=CivVLocationType.national_wonder,
         game_id=149,
+        database_key_prefix="building_artists_guild",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Guilds"],
@@ -159,6 +172,7 @@ NATIONAL_WONDER_LOCATIONS = [
         name="Musicians' Guild",
         type=CivVLocationType.national_wonder,
         game_id=150,
+        database_key_prefix="building_musicians_guild",
         requirements=items.ItemRequirements(
             progression={
                 items.TECH_ITEMS["Acoustics"],

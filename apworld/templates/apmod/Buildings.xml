@@ -5,5 +5,297 @@
             <Set PolicyCostModifier="{policy_cost_modifier}"/>
             <Where Type="BUILDING_PALACE"/>
         </Update>
+        <Update>
+            <Set Help="+15% [ICON_FOOD] Food. Each worked Lake tile provides +2 [ICON_FOOD] Food.[NEWLINE][NEWLINE]City must be built next to a River or Lake.{building_watermill_location}"/>
+            <Where Type="BUILDING_FLOATING_GARDENS"/>
+        </Update>
+        <Update>
+            <Set Help="Provides [ICON_GOLD] Gold after Flight is researched.[NEWLINE][NEWLINE]City must have Walls.{building_castle_location}"/>
+            <Where Type="BUILDING_MUGHAL_FORT"/>
+        </Update>
+        <Update>
+            <Set Help="+15 XP for all Units. [ICON_CULTURE] Culture and [ICON_GOLD] Gold costs of acquiring new tiles reduced by 25% in this city.{building_barracks_location}"/>
+            <Where Type="BUILDING_KREPOST"/>
+        </Update>
+        <Update>
+            <Set Help="+1 [ICON_PRODUCTION] Production from each worked Forest tile.{building_workshop_location}"/>
+            <Where Type="BUILDING_LONGHOUSE"/>
+        </Update>
+        <Update>
+            <Set Help="Provides 1 extra copy of each improved luxury resource near this City.  Each source of [ICON_RES_OIL] Oil and each Oasis provides +2 [ICON_GOLD] Gold.{building_market_location}"/>
+            <Where Type="BUILDING_BAZAAR"/>
+        </Update>
+        <Update>
+            <Set Help="City must have a Market.{building_bank_location}"/>
+            <Where Type="BUILDING_SATRAPS_COURT"/>
+        </Update>
+        <Update>
+            <Set Help="+1 [ICON_RESEARCH] Science for every 2 [ICON_CITIZEN] Citizens in this City. +2[ICON_GOLD] Gold.{building_library_location}"/>
+            <Where Type="BUILDING_PAPER_MAKER"/>
+        </Update>
+        <Update>
+            <Set Help="+2 [ICON_RESEARCH] Science from Jungle tiles worked by this City.[NEWLINE][NEWLINE]City must have a Library.{building_university_location}"/>
+            <Where Type="BUILDING_WAT"/>
+        </Update>
+        <Update>
+            <Set Help="Requires no [ICON_GOLD] Gold maintenance.{building_temple_location}"/>
+            <Where Type="BUILDING_MUD_PYRAMID_MOSQUE"/>
+        </Update>
+        <Update>
+            <Set Help="Requires no [ICON_GOLD] Gold maintenance.[NEWLINE][NEWLINE]Should this city be captured, the amount of [ICON_GOLD] Gold plundered by the enemy is doubled.{building_temple_location}"/>
+            <Where Type="BUILDING_BURIAL_TOMB"/>
+        </Update>
+        <Update>
+            <Set Help="+1 [ICON_PRODUCTION] Production and [ICON_GOLD] Gold from Sea Resources worked by this City.  +15% [ICON_PRODUCTION] Production when building Naval Units.[NEWLINE][NEWLINE]City must be built on the coast.{building_seaport_location}"/>
+            <Where Type="BUILDING_SEAPORT"/>
+        </Update>
+        <Update>
+            <Set Help="+15% [ICON_PRODUCTION] Production when building Mounted Units.[NEWLINE][NEWLINE]Each source of [ICON_RES_HORSE] Horses [ICON_RES_SHEEP] Sheep and [ICON_RES_COW] Cattle worked by this City produce +1 [ICON_PRODUCTION] Production.[NEWLINE][NEWLINE]City must have at least one of these resources improved with a Pasture.{building_stable_location}"/>
+            <Where Type="BUILDING_STABLE"/>
+        </Update>
+        <Update>
+            <Set Help="City must be built next to a River.{building_watermill_location}"/>
+            <Where Type="BUILDING_WATERMILL"/>
+        </Update>
+        <Update>
+            <Set Help="City must have an improved source of [ICON_RES_HORSE] Horses or [ICON_RES_IVORY] Ivory nearby.{building_circus_location}"/>
+            <Where Type="BUILDING_CIRCUS"/>
+        </Update>
+        <Update>
+            <Set Help="+15% [ICON_PRODUCTION] Production when building Land Units.[NEWLINE][NEWLINE]Each source of [ICON_RES_IRON] Iron worked by this City produces +1 [ICON_PRODUCTION] Production.[NEWLINE][NEWLINE]City must have a mined source of Iron nearby.{building_forge_location}"/>
+            <Where Type="BUILDING_FORGE"/>
+        </Update>
+        <Update>
+            <Set Help="+10% [ICON_PRODUCTION] Production when constructing Buildings.[NEWLINE][NEWLINE]City must not be built on Hills.{building_windmill_location}"/>
+            <Where Type="BUILDING_WINDMILL"/>
+        </Update>
+        <Update>
+            <Set Help="+1 [ICON_PRODUCTION] Production in every tile next to a River. Requires 1 [ICON_RES_ALUMINUM] Aluminum.[NEWLINE][NEWLINE]City must be built next to a River.{building_hydro_plant_location}"/>
+            <Where Type="BUILDING_HYDRO_PLANT"/>
+        </Update>
+        <Update>
+            <Set Help="City must be built on or next to Desert and must not contain a Nuclear Plant.[NEWLINE][NEWLINE]City must have a Factory.{building_solar_plant_location}"/>
+            <Where Type="BUILDING_SOLAR_PLANT"/>
+        </Update>
+        <Update>
+            <Set Help="Each source of [ICON_RES_GOLD] Gold and [ICON_RES_SILVER] Silver worked by this City produces +2 [ICON_GOLD] Gold.[NEWLINE][NEWLINE]City must have at least one of these resources mined nearby.{building_mint_location}"/>
+            <Where Type="BUILDING_MINT"/>
+        </Update>
+        <Update>
+            <Set Help="City must be built next to a Mountain.{building_observatory_location}"/>
+            <Where Type="BUILDING_OBSERVATORY"/>
+        </Update>
+        <Update>
+            <Set Help="+25% [ICON_GREAT_PEOPLE] Great People generation in this City.[NEWLINE][NEWLINE]City must be built next to a River or Lake.{building_garden_location}"/>
+            <Where Type="BUILDING_GARDEN"/>
+        </Update>
+        <Update>
+            <Set Help="+1 [ICON_FOOD] Food from Coast and Ocean Tiles. +1 [ICON_PRODUCTION] Production from Sea Resources worked by this City.[NEWLINE][NEWLINE]Each source of [ICON_RES_FISH] Fish worked by this City produces +1 [ICON_FOOD] Food.[NEWLINE][NEWLINE]City must be built on the coast.{building_lighthouse_location}"/>
+            <Where Type="BUILDING_LIGHTHOUSE"/>
+        </Update>
+        <Update>
+            <Set Help="Forms a [ICON_CONNECTED] City Connection with the [ICON_CAPITAL] Capital over water (if they're not already [ICON_CONNECTED] connected by land). Sea trade routes originating from this city have a 50% increase in range and produce an additional 1 [ICON_GOLD] Gold when connecting to another civilization.[NEWLINE][NEWLINE]City must be built on the coast.{building_harbor_location}"/>
+            <Where Type="BUILDING_HARBOR"/>
+        </Update>
+        <Update>
+            <Set Help="The Colosseum increases a civilization's [ICON_HAPPINESS_1] Happiness. It cannot provide more Happiness than there are [ICON_CITIZEN] Citizens in a city.{building_colosseum_location}"/>
+            <Where Type="BUILDING_COLOSSEUM"/>
+        </Update>
+        <Update>
+            <Set Help="It cannot provide more [ICON_HAPPINESS_1] Happiness than there are [ICON_CITIZEN] Citizens in a city. City must have a Colosseum.{building_theatre_location}"/>
+            <Where Type="BUILDING_THEATRE"/>
+        </Update>
+        <Update>
+            <Set Help="It cannot provide more [ICON_HAPPINESS_1] Happiness than there are [ICON_CITIZEN] Citizens in a city. City must have a Zoo.{building_stadium_location}"/>
+            <Where Type="BUILDING_STADIUM"/>
+        </Update>
+        <Update>
+            <Set Help="The Monument increases the [ICON_CULTURE] Culture of a city, speeding the growth of the city's territory and the civilization's acquisition of Social Policies.{building_monument_location}"/>
+            <Where Type="BUILDING_MONUMENT"/>
+        </Update>
+        <Update>
+            <Set Help="City must have a Shrine.{building_temple_location}"/>
+            <Where Type="BUILDING_TEMPLE"/>
+        </Update>
+        <Update>
+            <Set Help="Contains 1 slot for a Great Work of Music.[NEWLINE][NEWLINE]City must have an Amphitheater.{building_opera_house_location}"/>
+            <Where Type="BUILDING_OPERA_HOUSE"/>
+        </Update>
+        <Update>
+            <Set Help="Contains 2 slots for Great Works of Art.[NEWLINE][NEWLINE]City must have an Opera House.{building_museum_location}"/>
+            <Where Type="BUILDING_MUSEUM"/>
+        </Update>
+        <Update>
+            <Set Help="+33% [ICON_CULTURE] Culture in this City. Contains 1 slot for a Great Work of Music.[NEWLINE][NEWLINE]City must have a Museum.{building_broadcast_tower_location}"/>
+            <Where Type="BUILDING_BROADCAST_TOWER"/>
+        </Update>
+        <Update>
+            <Set Help="+15 XP for all Units.{building_barracks_location}"/>
+            <Where Type="BUILDING_BARRACKS"/>
+        </Update>
+        <Update>
+            <Set Help="+15 XP for all Units.[NEWLINE][NEWLINE]City must have a Barracks or Krepost.{building_armory_location}"/>
+            <Where Type="BUILDING_ARMORY"/>
+        </Update>
+        <Update>
+            <Set Help="+15 XP for all Units.[NEWLINE][NEWLINE]City must have an Armory.{building_military_academy_location}"/>
+            <Where Type="BUILDING_MILITARY_ACADEMY"/>
+        </Update>
+        <Update>
+            <Set Help="City must have a Castle or Mughal Fort.{building_arsenal_location}"/>
+            <Where Type="BUILDING_ARSENAL"/>
+        </Update>
+        <Update>
+            <Set Help="Walls increase a city's Defense Strength, making the city more difficult to capture. Walls are quite useful for cities located along a civilization's frontier.{building_walls_location}"/>
+            <Where Type="BUILDING_WALLS"/>
+        </Update>
+        <Update>
+            <Set Help="City must have Walls.{building_castle_location}"/>
+            <Where Type="BUILDING_CASTLE"/>
+        </Update>
+        <Update>
+            <Set Help="City must have an Arsenal.{building_military_base_location}"/>
+            <Where Type="BUILDING_MILITARY_BASE"/>
+        </Update>
+        <Update>
+            <Set Help="Each source of [ICON_RES_WHEAT] Wheat [ICON_RES_BANANA] Bananas and [ICON_RES_DEER] Deer worked by this City produce +1 [ICON_FOOD] Food.[NEWLINE][NEWLINE]Allows [ICON_FOOD] Food to be moved from this city along trade routes inside your civilization.{building_granary_location}"/>
+            <Where Type="BUILDING_GRANARY"/>
+        </Update>
+        <Update>
+            <Set Help="The Hospital is an Industrial-era building.  It's useful when you want to create a large city, fast.{building_hospital_location}"/>
+            <Where Type="BUILDING_HOSPITAL"/>
+        </Update>
+        <Update>
+            <Set Help="25% of [ICON_FOOD] Food is carried over after a new [ICON_CITIZEN] Citizen is born (effect stacks with Aqueduct).{building_medical_lab_location}"/>
+            <Where Type="BUILDING_MEDICAL_LAB"/>
+        </Update>
+        <Update>
+            <Set Help="Allows [ICON_PRODUCTION] Production to be moved from this city along trade routes inside your civilization.{building_workshop_location}"/>
+            <Where Type="BUILDING_WORKSHOP"/>
+        </Update>
+        <Update>
+            <Set Help="Requires 1 [ICON_RES_COAL] Coal.{building_factory_location}"/>
+            <Where Type="BUILDING_FACTORY"/>
+        </Update>
+        <Update>
+            <Set Help="Requires 1 [ICON_RES_URANIUM] Uranium.  City must not contain a Solar Plant.{building_nuclear_plant_location}"/>
+            <Where Type="BUILDING_NUCLEAR_PLANT"/>
+        </Update>
+        <Update>
+            <Set Help="+50% [ICON_PRODUCTION] Production when building Spaceship Parts. Requires 1 [ICON_RES_ALUMINUM] Aluminum.[NEWLINE][NEWLINE]City must have a Factory.{building_spaceship_factory_location}"/>
+            <Where Type="BUILDING_SPACESHIP_FACTORY"/>
+        </Update>
+        <Update>
+            <Set Help="The Market significantly increases a city's output of [ICON_GOLD] Gold.{building_market_location}"/>
+            <Where Type="BUILDING_MARKET"/>
+        </Update>
+        <Update>
+            <Set Help="City must have a Market.{building_bank_location}"/>
+            <Where Type="BUILDING_BANK"/>
+        </Update>
+        <Update>
+            <Set Help="City must have a Bank.{building_stock_exchange_location}"/>
+            <Where Type="BUILDING_STOCK_EXCHANGE"/>
+        </Update>
+        <Update>
+            <Set Help="+1 [ICON_RESEARCH] Science for every 2 [ICON_CITIZEN] Citizens in this City.{building_library_location}"/>
+            <Where Type="BUILDING_LIBRARY"/>
+        </Update>
+        <Update>
+            <Set Help="+2 [ICON_RESEARCH] Science from Jungle tiles worked by this City. Allows Archaeologists to be built in this city.[NEWLINE][NEWLINE]City must have a Library.{building_university_location}"/>
+            <Where Type="BUILDING_UNIVERSITY"/>
+        </Update>
+        <Update>
+            <Set Help="+1 [ICON_RESEARCH] Science for every 2 [ICON_CITIZEN] Citizens in this City.[NEWLINE][NEWLINE]City must have a University.{building_public_school_location}"/>
+            <Where Type="BUILDING_PUBLIC_SCHOOL"/>
+        </Update>
+        <Update>
+            <Set Help="City must have a Public School.{building_laboratory_location}"/>
+            <Where Type="BUILDING_LABORATORY"/>
+        </Update>
+        <Update>
+            <Set Help="40% of [ICON_FOOD] Food is carried over after a new [ICON_CITIZEN] Citizen is born.{building_aqueduct_location}"/>
+            <Where Type="BUILDING_AQUEDUCT"/>
+        </Update>
+        <Update>
+            <Set Help="Each source of [ICON_RES_MARBLE] Marble and [ICON_RES_STONE] Stone worked by this City produce +1 [ICON_PRODUCTION] Production.[NEWLINE][NEWLINE]City must have at least one of these resources improved with a Quarry.[NEWLINE][NEWLINE]City must not be in Plains.{building_stone_works_location}"/>
+            <Where Type="BUILDING_STONE_WORKS"/>
+        </Update>
+        <Update>
+            <Set Help="The Walls of Babylon increase the damage output of all the city's ranged attacks and increase the city's defense.{building_walls_location}"/>
+            <Where Type="BUILDING_WALLS_OF_BABYLON"/>
+        </Update>
+        <Update>
+            <Set Help="Contains 1 slot for a Great Work of Music.[NEWLINE][NEWLINE]City must have an Amphitheater.{building_opera_house_location}"/>
+            <Where Type="BUILDING_CEILIDH_HALL"/>
+        </Update>
+        <Update>
+            <Set Help="+25% [ICON_GREAT_PEOPLE] Great People generation in this City.{building_windmill_location}"/>
+            <Where Type="BUILDING_COFFEE_HOUSE"/>
+        </Update>
+        <Update>
+            <Set Help="The Pyramid increases the [ICON_RESEARCH] Science and [ICON_PEACE] Faith generated by a city, speeding up Research and the civilization's acquisition of Religions.{building_shrine_location}"/>
+            <Where Type="BUILDING_MAYA_PYRAMID"/>
+        </Update>
+        <Update>
+            <Set Help="Contains 1 slot for a Great Work of Writing.[NEWLINE][NEWLINE]City must have a Monument.{building_amphitheater_location}"/>
+            <Where Type="BUILDING_AMPHITHEATER"/>
+        </Update>
+        <Update>
+            <Set Help="The Shrine increases the [ICON_PEACE] Faith generated by a city, allowing you to found and spread religions.{building_shrine_location}"/>
+            <Where Type="BUILDING_SHRINE"/>
+        </Update>
+        <Update>
+            <Set Help="Provides 2 [ICON_RES_ALUMINUM] Aluminum. Maximum of 5 of these buildings in your empire.{building_recycling_center_location}"/>
+            <Where Type="BUILDING_RECYCLING_CENTER"/>
+        </Update>
+        <Update>
+            <Set Help="Reduces population loss from nuclear attack by 75%.{building_bomb_shelter_location}"/>
+            <Where Type="BUILDING_BOMB_SHELTER"/>
+        </Update>
+        <Update>
+            <Set Help="Reduces enemy spy stealing rate by 25%.{building_constable_location}"/>
+            <Where Type="BUILDING_CONSTABLE"/>
+        </Update>
+        <Update>
+            <Set Help="Reduces enemy spy stealing rate by 25%.[NEWLINE][NEWLINE]City must have a Constabulary.{building_police_station_location}"/>
+            <Where Type="BUILDING_POLICE_STATION"/>
+        </Update>
+        <Update>
+            <Set Help="The Stele increases the [ICON_CULTURE] Culture and [ICON_PEACE] Faith of a city, speeding the growth of the city's territory and the civilization's acquisition of Social Policies and Religions.{building_monument_location}"/>
+            <Where Type="BUILDING_STELE"/>
+        </Update>
+        <Update>
+            <Set Help="Unique Zulu Barracks replacement. Grants unique promotions to pre-gunpowder melee units.{building_barracks_location}"/>
+            <Where Type="BUILDING_IKANDA"/>
+        </Update>
+        <Update>
+            <Set Help="Unique Polish Stable replacement. +15% [ICON_PRODUCTION] Production and +15 XP for Mounted Units.[NEWLINE][NEWLINE]Each Pasture worked by this City produces +1 [ICON_PRODUCTION] Production and +1 [ICON_GOLD] Gold.{building_stable_location}"/>
+            <Where Type="BUILDING_DUCAL_STABLE"/>
+        </Update>
+        <Update>
+            <Set Help="Unique Assyrian Library replacement. +1 [ICON_RESEARCH] Science for every 2 [ICON_CITIZEN] Citizens in this City. Also has a slot for a Great Work of Writing which, when filled, gives extra XP to trained Units.{building_library_location}"/>
+            <Where Type="BUILDING_ROYAL_LIBRARY"/>
+        </Update>
+        <Update>
+            <Set Help="Unique Indonesian Garden replacement. +25% [ICON_GREAT_PEOPLE] Great People generation in this City, and +2 [ICON_PEACE] Faith for each World Religion that has at least 1 follower in the city.[NEWLINE][NEWLINE]Unlike the Garden the Candi does not have to be built next to a River or Lake.{building_garden_location}"/>
+            <Where Type="BUILDING_CANDI"/>
+        </Update>
+        <Update>
+            <Set Help="Unique German Bank replacement. +5% [ICON_PRODUCTION] Production for each Trade Route your civilization has with a City-State. Trade routes other players make to a city with a Hanse will generate an extra 1 [ICON_GOLD] Gold for the city owner and the trade route owner gains an additional 1 [ICON_GOLD] Gold for the trade route.{building_bank_location}"/>
+            <Where Type="BUILDING_HANSE"/>
+        </Update>
+        <Update>
+            <Set Help="50% of the [ICON_CULTURE] Culture from World Wonders, Natural Wonders, and Improvements (Landmarks, Moai, Chateau) is added to the [ICON_TOURISM] Tourism output of the city. [ICON_TOURISM] Tourism output from Great Works +50%.{building_hotel_location}"/>
+            <Where Type="BUILDING_HOTEL"/>
+        </Update>
+        <Update>
+            <Set Help="Land trade routes originating from this city have a 50% increase in range and produce an additional 2 [ICON_GOLD] Gold when connecting to another civilization.{building_caravansary_location}"/>
+            <Where Type="BUILDING_CARAVANSARY"/>
+        </Update>
+        <Update>
+            <Set Help="Allows airlifts to or from this city. [COLOR_POSITIVE_TEXT]Increases air unit capacity of the city from 6 to 10.[ENDCOLOR] 50% of the [ICON_CULTURE] Culture from World Wonders, Natural Wonders, and Improvements (Landmarks, Moai, Chateau) is added to the [ICON_TOURISM] Tourism output of the city. [ICON_TOURISM] Tourism output from Great Works +50%.{building_airport_location}"/>
+            <Where Type="BUILDING_AIRPORT"/>
+        </Update>
     </Buildings>
 </GameData>

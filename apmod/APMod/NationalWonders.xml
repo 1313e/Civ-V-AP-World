@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+    <Buildings>
+        <Update>
+            <Set Help="All newly-trained non-air Units in this City receive the [COLOR_POSITIVE_TEXT]Morale[ENDCOLOR] Promotion, improving [ICON_STRENGTH] combat strength by 15%. Contains 1 slot for a Great Work of Writing.[NEWLINE][NEWLINE]Must have built a Barracks in all Cities. The cost goes up the more cities there are in the empire.{building_heroic_epic_location}"/>
+            <Where Type="BUILDING_HEROIC_EPIC"/>
+        </Update>
+        <Update>
+            <Set Help="Must have built a Library in all Cities. The cost goes up the more cities there are in the empire.{building_national_college_location}"/>
+            <Where Type="BUILDING_NATIONAL_COLLEGE"/>
+        </Update>
+        <Update>
+            <Set Help="+25% [ICON_GREAT_PEOPLE] Great People generation in this City. Contains 1 slot for a Great Work of Writing.[NEWLINE][NEWLINE]Must have built a Monument in all Cities. The cost goes up the more cities there are in the empire.{building_national_epic_location}"/>
+            <Where Type="BUILDING_NATIONAL_EPIC"/>
+        </Update>
+        <Update>
+            <Set Help="Must have built a Colosseum in all Cities. The cost goes up the more cities there are in the empire.{building_circus_maximus_location}"/>
+            <Where Type="BUILDING_CIRCUS_MAXIMUS"/>
+        </Update>
+        <Update>
+            <Set Help="Must have built a Market in all Cities. The cost goes up the more cities there are in the empire. Trade routes other players make to a city with an East India Company will generate an extra 4 [ICON_GOLD] Gold for the city owner and the trade route owner gains an additional 2 [ICON_GOLD] Gold for the trade route.{building_national_treasury_location}"/>
+            <Where Type="BUILDING_NATIONAL_TREASURY"/>
+        </Update>
+        <Update>
+            <Set Help="Must have built a Workshop in all Cities. The cost goes up the more cities there are in the empire.{building_ironworks_location}"/>
+            <Where Type="BUILDING_IRONWORKS"/>
+        </Update>
+        <Update>
+            <Set Help="1 Free Technology. Contains 2 slots for Great Works of Writing.[NEWLINE][NEWLINE]Must have built a University in all Cities. The cost goes up the more cities there are in the empire.{building_oxford_university_location}"/>
+            <Where Type="BUILDING_OXFORD_UNIVERSITY"/>
+        </Update>
+        <Update>
+            <Set Help="+50% [ICON_CULTURE] Culture in this City. Contains 3 slots for Great Works of Art.[NEWLINE][NEWLINE]Must have built an Opera House in all Cities. The cost goes up the more cities there are in the empire.{building_hermitage_location}"/>
+            <Where Type="BUILDING_HERMITAGE"/>
+        </Update>
+        <Update>
+            <Set Help="Provides an additional spy and levels up all your existing spies. Also provides a 15% reduction in enemy spy effectiveness. Must have a Police Station in all cities.{building_intelligence_agency_location}"/>
+            <Where Type="BUILDING_INTELLIGENCE_AGENCY"/>
+        </Update>
+        <Update>
+            <Set Help="Doubles religious pressure emanating from this City.[NEWLINE][NEWLINE]Must be built in a Holy City. Must have built a Temple in all Cities. The cost goes up the more cities there are in the empire.{building_grand_temple_location}"/>
+            <Where Type="BUILDING_GRAND_TEMPLE"/>
+        </Update>
+        <Update>
+            <Set Help="Must have built a Hotel in all Cities. The cost goes up the more cities there are in the empire. 100% of the [ICON_CULTURE] Culture from World Wonders, Natural Wonders, and Improvements (Landmarks, Moai, Chateau) is added to the [ICON_TOURISM] Tourism output of the city. [ICON_TOURISM] Tourism output from Great Works +100%.{building_tourist_center_location}"/>
+            <Where Type="BUILDING_TOURIST_CENTER"/>
+        </Update>
+        <Update>
+            <Set Help="Provides 1 [ICON_GREAT_PEOPLE] Great Person Point (GPP) towards a Great Writer. Add up to two specialists to this building to gain [ICON_CULTURE] Culture and increase the rate of Great Writer acquisition (3 [ICON_CULTURE] Culture and 3 [ICON_GREAT_PEOPLE] GPP per specialist).{building_writers_guild_location}"/>
+            <Where Type="BUILDING_WRITERS_GUILD"/>
+        </Update>
+        <Update>
+            <Set Help="Provides 2 [ICON_GREAT_PEOPLE] Great Person Points (GPP) towards a Great Artist. Add up to two specialists to this building to gain [ICON_CULTURE] Culture and increase the rate of Great Artist acquisition (3 [ICON_CULTURE] Culture and 3 [ICON_GREAT_PEOPLE] GPP per specialist).{building_artists_guild_location}"/>
+            <Where Type="BUILDING_ARTISTS_GUILD"/>
+        </Update>
+        <Update>
+            <Set Help="Provides 3 [ICON_GREAT_PEOPLE] Great Person Points (GPP) towards a Great Musician. Add up to two specialists to this building to gain [ICON_CULTURE] Culture and increase the rate of Great Musician acquisition (3 [ICON_CULTURE] Culture and 3 [ICON_GREAT_PEOPLE] GPP per specialist).{building_musicians_guild_location}"/>
+            <Where Type="BUILDING_MUSICIANS_GUILD"/>
+        </Update>
+    </Buildings>
+</GameData>
