@@ -366,7 +366,7 @@
             <Type>POLICY_TRADITION_AP1</Type>
             <Description>{policy_tradition_ap1_flag}AP 1</Description>
             <Civilopedia>{policy_tradition_ap1_item}</Civilopedia>
-            <Help>{policy_tradition_ap1_item}</Help>
+            <Help>{policy_tradition_ap1_flag}AP 1[NEWLINE]{policy_tradition_ap1_item}</Help>
             <PolicyBranchType>POLICY_BRANCH_TRADITION</PolicyBranchType>
             <CultureCost>1</CultureCost>
             <GridX>1</GridX>
@@ -381,7 +381,7 @@
             <Type>POLICY_TRADITION_AP2</Type>
             <Description>{policy_tradition_ap2_flag}AP 2</Description>
             <Civilopedia>{policy_tradition_ap2_item}</Civilopedia>
-            <Help>{policy_tradition_ap2_item}</Help>
+            <Help>{policy_tradition_ap2_flag}AP 2[NEWLINE]{policy_tradition_ap2_item}</Help>
             <PolicyBranchType>POLICY_BRANCH_TRADITION</PolicyBranchType>
             <CultureCost>1</CultureCost>
             <GridX>3</GridX>
@@ -396,7 +396,7 @@
             <Type>POLICY_TRADITION_AP3</Type>
             <Description>{policy_tradition_ap3_flag}AP 3</Description>
             <Civilopedia>{policy_tradition_ap3_item}</Civilopedia>
-            <Help>{policy_tradition_ap3_item}</Help>
+            <Help>{policy_tradition_ap3_flag}AP 3[NEWLINE]{policy_tradition_ap3_item}</Help>
             <PolicyBranchType>POLICY_BRANCH_TRADITION</PolicyBranchType>
             <CultureCost>1</CultureCost>
             <GridX>3</GridX>
@@ -411,7 +411,7 @@
             <Type>POLICY_TRADITION_AP4</Type>
             <Description>{policy_tradition_ap4_flag}AP 4</Description>
             <Civilopedia>{policy_tradition_ap4_item}</Civilopedia>
-            <Help>{policy_tradition_ap4_item}</Help>
+            <Help>{policy_tradition_ap4_flag}AP 4[NEWLINE]{policy_tradition_ap4_item}</Help>
             <PolicyBranchType>POLICY_BRANCH_TRADITION</PolicyBranchType>
             <CultureCost>1</CultureCost>
             <GridX>2</GridX>
@@ -426,7 +426,7 @@
             <Type>POLICY_TRADITION_AP5</Type>
             <Description>{policy_tradition_ap5_flag}AP 5</Description>
             <Civilopedia>{policy_tradition_ap5_item}</Civilopedia>
-            <Help>{policy_tradition_ap5_item}</Help>
+            <Help>{policy_tradition_ap5_flag}AP 5[NEWLINE]{policy_tradition_ap5_item}</Help>
             <PolicyBranchType>POLICY_BRANCH_TRADITION</PolicyBranchType>
             <CultureCost>1</CultureCost>
             <GridX>4</GridX>
@@ -441,7 +441,7 @@
             <Type>POLICY_LIBERTY_AP1</Type>
             <Description>{policy_liberty_ap1_flag}AP 1</Description>
             <Civilopedia>{policy_liberty_ap1_item}</Civilopedia>
-            <Help>{policy_liberty_ap1_item}</Help>
+            <Help>{policy_liberty_ap1_flag}AP 1[NEWLINE]{policy_liberty_ap1_item}</Help>
             <PolicyBranchType>POLICY_BRANCH_LIBERTY</PolicyBranchType>
             <CultureCost>1</CultureCost>
             <GridX>1</GridX>
@@ -456,7 +456,7 @@
             <Type>POLICY_LIBERTY_AP2</Type>
             <Description>{policy_liberty_ap2_flag}AP 2</Description>
             <Civilopedia>{policy_liberty_ap2_item}</Civilopedia>
-            <Help>{policy_liberty_ap2_item}</Help>
+            <Help>{policy_liberty_ap2_flag}AP 2[NEWLINE]{policy_liberty_ap2_item}</Help>
             <PolicyBranchType>POLICY_BRANCH_LIBERTY</PolicyBranchType>
             <CultureCost>1</CultureCost>
             <GridX>4</GridX>
@@ -471,7 +471,7 @@
             <Type>POLICY_LIBERTY_AP3</Type>
             <Description>{policy_liberty_ap3_flag}AP 3</Description>
             <Civilopedia>{policy_liberty_ap3_item}</Civilopedia>
-            <Help>{policy_liberty_ap3_item}</Help>
+            <Help>{policy_liberty_ap3_flag}AP 3[NEWLINE]{policy_liberty_ap3_item}</Help>
             <PolicyBranchType>POLICY_BRANCH_LIBERTY</PolicyBranchType>
             <CultureCost>1</CultureCost>
             <GridX>1</GridX>
@@ -486,7 +486,7 @@
             <Type>POLICY_LIBERTY_AP4</Type>
             <Description>{policy_liberty_ap4_flag}AP 4</Description>
             <Civilopedia>{policy_liberty_ap4_item}</Civilopedia>
-            <Help>{policy_liberty_ap4_item}</Help>
+            <Help>{policy_liberty_ap4_flag}AP 4[NEWLINE]{policy_liberty_ap4_item}</Help>
             <PolicyBranchType>POLICY_BRANCH_LIBERTY</PolicyBranchType>
             <CultureCost>1</CultureCost>
             <GridX>3</GridX>
@@ -501,7 +501,7 @@
             <Type>POLICY_LIBERTY_AP5</Type>
             <Description>{policy_liberty_ap5_flag}AP 5</Description>
             <Civilopedia>{policy_liberty_ap5_item}</Civilopedia>
-            <Help>{policy_liberty_ap5_item}</Help>
+            <Help>{policy_liberty_ap5_flag}AP 5[NEWLINE]{policy_liberty_ap5_item}</Help>
             <PolicyBranchType>POLICY_BRANCH_LIBERTY</PolicyBranchType>
             <CultureCost>1</CultureCost>
             <GridX>5</GridX>
@@ -516,7 +516,7 @@
             <Type>POLICY_HONOR_AP1</Type>
             <Description>{policy_honor_ap1_flag}AP 1</Description>
             <Civilopedia>{policy_honor_ap1_item}</Civilopedia>
-            <Help>{policy_honor_ap1_item}</Help>
+            <Help>{policy_honor_ap1_flag}AP 1[NEWLINE]{policy_honor_ap1_item}</Help>
             <PolicyBranchType>POLICY_BRANCH_HONOR</PolicyBranchType>
             <CultureCost>1</CultureCost>
             <GridX>2</GridX>
@@ -531,7 +531,7 @@
             <Type>POLICY_HONOR_AP2</Type>
             <Description>{policy_honor_ap2_flag}AP 2</Description>
             <Civilopedia>{policy_honor_ap2_item}</Civilopedia>
-            <Help>{policy_honor_ap2_item}</Help>
+            <Help>{policy_honor_ap2_flag}AP 2[NEWLINE]{policy_honor_ap2_item}</Help>
             <PolicyBranchType>POLICY_BRANCH_HONOR</PolicyBranchType>
             <CultureCost>1</CultureCost>
             <GridX>4</GridX>
@@ -546,7 +546,7 @@
             <Type>POLICY_HONOR_AP3</Type>
             <Description>{policy_honor_ap3_flag}AP 3</Description>
             <Civilopedia>{policy_honor_ap3_item}</Civilopedia>
-            <Help>{policy_honor_ap3_item}</Help>
+            <Help>{policy_honor_ap3_flag}AP 3[NEWLINE]{policy_honor_ap3_item}</Help>
             <PolicyBranchType>POLICY_BRANCH_HONOR</PolicyBranchType>
             <CultureCost>1</CultureCost>
             <GridX>2</GridX>
@@ -561,7 +561,7 @@
             <Type>POLICY_HONOR_AP4</Type>
             <Description>{policy_honor_ap4_flag}AP 4</Description>
             <Civilopedia>{policy_honor_ap4_item}</Civilopedia>
-            <Help>{policy_honor_ap4_item}</Help>
+            <Help>{policy_honor_ap4_flag}AP 4[NEWLINE]{policy_honor_ap4_item}</Help>
             <PolicyBranchType>POLICY_BRANCH_HONOR</PolicyBranchType>
             <CultureCost>1</CultureCost>
             <GridX>4</GridX>
@@ -576,7 +576,7 @@
             <Type>POLICY_HONOR_AP5</Type>
             <Description>{policy_honor_ap5_flag}AP 5</Description>
             <Civilopedia>{policy_honor_ap5_item}</Civilopedia>
-            <Help>{policy_honor_ap5_item}</Help>
+            <Help>{policy_honor_ap5_flag}AP 5[NEWLINE]{policy_honor_ap5_item}</Help>
             <PolicyBranchType>POLICY_BRANCH_HONOR</PolicyBranchType>
             <CultureCost>1</CultureCost>
             <GridX>4</GridX>
@@ -591,7 +591,7 @@
             <Type>POLICY_PIETY_AP1</Type>
             <Description>{policy_piety_ap1_flag}AP 1</Description>
             <Civilopedia>{policy_piety_ap1_item}</Civilopedia>
-            <Help>{policy_piety_ap1_item}</Help>
+            <Help>{policy_piety_ap1_flag}AP 1[NEWLINE]{policy_piety_ap1_item}</Help>
             <PolicyBranchType>POLICY_BRANCH_PIETY</PolicyBranchType>
             <CultureCost>1</CultureCost>
             <GridX>2</GridX>
@@ -606,7 +606,7 @@
             <Type>POLICY_PIETY_AP2</Type>
             <Description>{policy_piety_ap2_flag}AP 2</Description>
             <Civilopedia>{policy_piety_ap2_item}</Civilopedia>
-            <Help>{policy_piety_ap2_item}</Help>
+            <Help>{policy_piety_ap2_flag}AP 2[NEWLINE]{policy_piety_ap2_item}</Help>
             <PolicyBranchType>POLICY_BRANCH_PIETY</PolicyBranchType>
             <CultureCost>1</CultureCost>
             <GridX>5</GridX>
@@ -621,7 +621,7 @@
             <Type>POLICY_PIETY_AP3</Type>
             <Description>{policy_piety_ap3_flag}AP 3</Description>
             <Civilopedia>{policy_piety_ap3_item}</Civilopedia>
-            <Help>{policy_piety_ap3_item}</Help>
+            <Help>{policy_piety_ap3_flag}AP 3[NEWLINE]{policy_piety_ap3_item}</Help>
             <PolicyBranchType>POLICY_BRANCH_PIETY</PolicyBranchType>
             <CultureCost>1</CultureCost>
             <GridX>1</GridX>
@@ -636,7 +636,7 @@
             <Type>POLICY_PIETY_AP4</Type>
             <Description>{policy_piety_ap4_flag}AP 4</Description>
             <Civilopedia>{policy_piety_ap4_item}</Civilopedia>
-            <Help>{policy_piety_ap4_item}</Help>
+            <Help>{policy_piety_ap4_flag}AP 4[NEWLINE]{policy_piety_ap4_item}</Help>
             <PolicyBranchType>POLICY_BRANCH_PIETY</PolicyBranchType>
             <CultureCost>1</CultureCost>
             <GridX>3</GridX>
@@ -651,7 +651,7 @@
             <Type>POLICY_PIETY_AP5</Type>
             <Description>{policy_piety_ap5_flag}AP 5</Description>
             <Civilopedia>{policy_piety_ap5_item}</Civilopedia>
-            <Help>{policy_piety_ap5_item}</Help>
+            <Help>{policy_piety_ap5_flag}AP 5[NEWLINE]{policy_piety_ap5_item}</Help>
             <PolicyBranchType>POLICY_BRANCH_PIETY</PolicyBranchType>
             <CultureCost>1</CultureCost>
             <GridX>3</GridX>
@@ -666,7 +666,7 @@
             <Type>POLICY_PATRONAGE_AP1</Type>
             <Description>{policy_patronage_ap1_flag}AP 1</Description>
             <Civilopedia>{policy_patronage_ap1_item}</Civilopedia>
-            <Help>{policy_patronage_ap1_item}</Help>
+            <Help>{policy_patronage_ap1_flag}AP 1[NEWLINE]{policy_patronage_ap1_item}</Help>
             <PolicyBranchType>POLICY_BRANCH_PATRONAGE</PolicyBranchType>
             <CultureCost>1</CultureCost>
             <GridX>2</GridX>
@@ -681,7 +681,7 @@
             <Type>POLICY_PATRONAGE_AP2</Type>
             <Description>{policy_patronage_ap2_flag}AP 2</Description>
             <Civilopedia>{policy_patronage_ap2_item}</Civilopedia>
-            <Help>{policy_patronage_ap2_item}</Help>
+            <Help>{policy_patronage_ap2_flag}AP 2[NEWLINE]{policy_patronage_ap2_item}</Help>
             <PolicyBranchType>POLICY_BRANCH_PATRONAGE</PolicyBranchType>
             <CultureCost>1</CultureCost>
             <GridX>4</GridX>
@@ -696,7 +696,7 @@
             <Type>POLICY_PATRONAGE_AP3</Type>
             <Description>{policy_patronage_ap3_flag}AP 3</Description>
             <Civilopedia>{policy_patronage_ap3_item}</Civilopedia>
-            <Help>{policy_patronage_ap3_item}</Help>
+            <Help>{policy_patronage_ap3_flag}AP 3[NEWLINE]{policy_patronage_ap3_item}</Help>
             <PolicyBranchType>POLICY_BRANCH_PATRONAGE</PolicyBranchType>
             <CultureCost>1</CultureCost>
             <GridX>2</GridX>
@@ -711,7 +711,7 @@
             <Type>POLICY_PATRONAGE_AP4</Type>
             <Description>{policy_patronage_ap4_flag}AP 4</Description>
             <Civilopedia>{policy_patronage_ap4_item}</Civilopedia>
-            <Help>{policy_patronage_ap4_item}</Help>
+            <Help>{policy_patronage_ap4_flag}AP 4[NEWLINE]{policy_patronage_ap4_item}</Help>
             <PolicyBranchType>POLICY_BRANCH_PATRONAGE</PolicyBranchType>
             <CultureCost>1</CultureCost>
             <GridX>2</GridX>
@@ -726,7 +726,7 @@
             <Type>POLICY_PATRONAGE_AP5</Type>
             <Description>{policy_patronage_ap5_flag}AP 5</Description>
             <Civilopedia>{policy_patronage_ap5_item}</Civilopedia>
-            <Help>{policy_patronage_ap5_item}</Help>
+            <Help>{policy_patronage_ap5_flag}AP 5[NEWLINE]{policy_patronage_ap5_item}</Help>
             <PolicyBranchType>POLICY_BRANCH_PATRONAGE</PolicyBranchType>
             <CultureCost>1</CultureCost>
             <GridX>4</GridX>
@@ -741,7 +741,7 @@
             <Type>POLICY_AESTHETICS_AP1</Type>
             <Description>{policy_aesthetics_ap1_flag}AP 1</Description>
             <Civilopedia>{policy_aesthetics_ap1_item}</Civilopedia>
-            <Help>{policy_aesthetics_ap1_item}</Help>
+            <Help>{policy_aesthetics_ap1_flag}AP 1[NEWLINE]{policy_aesthetics_ap1_item}</Help>
             <PolicyBranchType>POLICY_BRANCH_AESTHETICS</PolicyBranchType>
             <CultureCost>1</CultureCost>
             <GridX>2</GridX>
@@ -756,7 +756,7 @@
             <Type>POLICY_AESTHETICS_AP2</Type>
             <Description>{policy_aesthetics_ap2_flag}AP 2</Description>
             <Civilopedia>{policy_aesthetics_ap2_item}</Civilopedia>
-            <Help>{policy_aesthetics_ap2_item}</Help>
+            <Help>{policy_aesthetics_ap2_flag}AP 2[NEWLINE]{policy_aesthetics_ap2_item}</Help>
             <PolicyBranchType>POLICY_BRANCH_AESTHETICS</PolicyBranchType>
             <CultureCost>1</CultureCost>
             <GridX>4</GridX>
@@ -771,7 +771,7 @@
             <Type>POLICY_AESTHETICS_AP3</Type>
             <Description>{policy_aesthetics_ap3_flag}AP 3</Description>
             <Civilopedia>{policy_aesthetics_ap3_item}</Civilopedia>
-            <Help>{policy_aesthetics_ap3_item}</Help>
+            <Help>{policy_aesthetics_ap3_flag}AP 3[NEWLINE]{policy_aesthetics_ap3_item}</Help>
             <PolicyBranchType>POLICY_BRANCH_AESTHETICS</PolicyBranchType>
             <CultureCost>1</CultureCost>
             <GridX>2</GridX>
@@ -786,7 +786,7 @@
             <Type>POLICY_AESTHETICS_AP4</Type>
             <Description>{policy_aesthetics_ap4_flag}AP 4</Description>
             <Civilopedia>{policy_aesthetics_ap4_item}</Civilopedia>
-            <Help>{policy_aesthetics_ap4_item}</Help>
+            <Help>{policy_aesthetics_ap4_flag}AP 4[NEWLINE]{policy_aesthetics_ap4_item}</Help>
             <PolicyBranchType>POLICY_BRANCH_AESTHETICS</PolicyBranchType>
             <CultureCost>1</CultureCost>
             <GridX>4</GridX>
@@ -801,7 +801,7 @@
             <Type>POLICY_AESTHETICS_AP5</Type>
             <Description>{policy_aesthetics_ap5_flag}AP 5</Description>
             <Civilopedia>{policy_aesthetics_ap5_item}</Civilopedia>
-            <Help>{policy_aesthetics_ap5_item}</Help>
+            <Help>{policy_aesthetics_ap5_flag}AP 5[NEWLINE]{policy_aesthetics_ap5_item}</Help>
             <PolicyBranchType>POLICY_BRANCH_AESTHETICS</PolicyBranchType>
             <CultureCost>1</CultureCost>
             <GridX>2</GridX>
@@ -816,7 +816,7 @@
             <Type>POLICY_COMMERCE_AP1</Type>
             <Description>{policy_commerce_ap1_flag}AP 1</Description>
             <Civilopedia>{policy_commerce_ap1_item}</Civilopedia>
-            <Help>{policy_commerce_ap1_item}</Help>
+            <Help>{policy_commerce_ap1_flag}AP 1[NEWLINE]{policy_commerce_ap1_item}</Help>
             <PolicyBranchType>POLICY_BRANCH_COMMERCE</PolicyBranchType>
             <CultureCost>1</CultureCost>
             <GridX>2</GridX>
@@ -831,7 +831,7 @@
             <Type>POLICY_COMMERCE_AP2</Type>
             <Description>{policy_commerce_ap2_flag}AP 2</Description>
             <Civilopedia>{policy_commerce_ap2_item}</Civilopedia>
-            <Help>{policy_commerce_ap2_item}</Help>
+            <Help>{policy_commerce_ap2_flag}AP 2[NEWLINE]{policy_commerce_ap2_item}</Help>
             <PolicyBranchType>POLICY_BRANCH_COMMERCE</PolicyBranchType>
             <CultureCost>1</CultureCost>
             <GridX>4</GridX>
@@ -846,7 +846,7 @@
             <Type>POLICY_COMMERCE_AP3</Type>
             <Description>{policy_commerce_ap3_flag}AP 3</Description>
             <Civilopedia>{policy_commerce_ap3_item}</Civilopedia>
-            <Help>{policy_commerce_ap3_item}</Help>
+            <Help>{policy_commerce_ap3_flag}AP 3[NEWLINE]{policy_commerce_ap3_item}</Help>
             <PolicyBranchType>POLICY_BRANCH_COMMERCE</PolicyBranchType>
             <CultureCost>1</CultureCost>
             <GridX>2</GridX>
@@ -861,7 +861,7 @@
             <Type>POLICY_COMMERCE_AP4</Type>
             <Description>{policy_commerce_ap4_flag}AP 4</Description>
             <Civilopedia>{policy_commerce_ap4_item}</Civilopedia>
-            <Help>{policy_commerce_ap4_item}</Help>
+            <Help>{policy_commerce_ap4_flag}AP 4[NEWLINE]{policy_commerce_ap4_item}</Help>
             <PolicyBranchType>POLICY_BRANCH_COMMERCE</PolicyBranchType>
             <CultureCost>1</CultureCost>
             <GridX>4</GridX>
@@ -876,7 +876,7 @@
             <Type>POLICY_COMMERCE_AP5</Type>
             <Description>{policy_commerce_ap5_flag}AP 5</Description>
             <Civilopedia>{policy_commerce_ap5_item}</Civilopedia>
-            <Help>{policy_commerce_ap5_item}</Help>
+            <Help>{policy_commerce_ap5_flag}AP 5[NEWLINE]{policy_commerce_ap5_item}</Help>
             <PolicyBranchType>POLICY_BRANCH_COMMERCE</PolicyBranchType>
             <CultureCost>1</CultureCost>
             <GridX>4</GridX>
@@ -891,7 +891,7 @@
             <Type>POLICY_EXPLORATION_AP1</Type>
             <Description>{policy_exploration_ap1_flag}AP 1</Description>
             <Civilopedia>{policy_exploration_ap1_item}</Civilopedia>
-            <Help>{policy_exploration_ap1_item}</Help>
+            <Help>{policy_exploration_ap1_flag}AP 1[NEWLINE]{policy_exploration_ap1_item}</Help>
             <PolicyBranchType>POLICY_BRANCH_EXPLORATION</PolicyBranchType>
             <CultureCost>1</CultureCost>
             <GridX>2</GridX>
@@ -906,7 +906,7 @@
             <Type>POLICY_EXPLORATION_AP2</Type>
             <Description>{policy_exploration_ap2_flag}AP 2</Description>
             <Civilopedia>{policy_exploration_ap2_item}</Civilopedia>
-            <Help>{policy_exploration_ap2_item}</Help>
+            <Help>{policy_exploration_ap2_flag}AP 2[NEWLINE]{policy_exploration_ap2_item}</Help>
             <PolicyBranchType>POLICY_BRANCH_EXPLORATION</PolicyBranchType>
             <CultureCost>1</CultureCost>
             <GridX>4</GridX>
@@ -921,7 +921,7 @@
             <Type>POLICY_EXPLORATION_AP3</Type>
             <Description>{policy_exploration_ap3_flag}AP 3</Description>
             <Civilopedia>{policy_exploration_ap3_item}</Civilopedia>
-            <Help>{policy_exploration_ap3_item}</Help>
+            <Help>{policy_exploration_ap3_flag}AP 3[NEWLINE]{policy_exploration_ap3_item}</Help>
             <PolicyBranchType>POLICY_BRANCH_EXPLORATION</PolicyBranchType>
             <CultureCost>1</CultureCost>
             <GridX>2</GridX>
@@ -936,7 +936,7 @@
             <Type>POLICY_EXPLORATION_AP4</Type>
             <Description>{policy_exploration_ap4_flag}AP 4</Description>
             <Civilopedia>{policy_exploration_ap4_item}</Civilopedia>
-            <Help>{policy_exploration_ap4_item}</Help>
+            <Help>{policy_exploration_ap4_flag}AP 4[NEWLINE]{policy_exploration_ap4_item}</Help>
             <PolicyBranchType>POLICY_BRANCH_EXPLORATION</PolicyBranchType>
             <CultureCost>1</CultureCost>
             <GridX>4</GridX>
@@ -951,7 +951,7 @@
             <Type>POLICY_EXPLORATION_AP5</Type>
             <Description>{policy_exploration_ap5_flag}AP 5</Description>
             <Civilopedia>{policy_exploration_ap5_item}</Civilopedia>
-            <Help>{policy_exploration_ap5_item}</Help>
+            <Help>{policy_exploration_ap5_flag}AP 5[NEWLINE]{policy_exploration_ap5_item}</Help>
             <PolicyBranchType>POLICY_BRANCH_EXPLORATION</PolicyBranchType>
             <CultureCost>1</CultureCost>
             <GridX>2</GridX>
@@ -966,7 +966,7 @@
             <Type>POLICY_RATIONALISM_AP1</Type>
             <Description>{policy_rationalism_ap1_flag}AP 1</Description>
             <Civilopedia>{policy_rationalism_ap1_item}</Civilopedia>
-            <Help>{policy_rationalism_ap1_item}</Help>
+            <Help>{policy_rationalism_ap1_flag}AP 1[NEWLINE]{policy_rationalism_ap1_item}</Help>
             <PolicyBranchType>POLICY_BRANCH_RATIONALISM</PolicyBranchType>
             <CultureCost>1</CultureCost>
             <GridX>2</GridX>
@@ -981,7 +981,7 @@
             <Type>POLICY_RATIONALISM_AP2</Type>
             <Description>{policy_rationalism_ap2_flag}AP 2</Description>
             <Civilopedia>{policy_rationalism_ap2_item}</Civilopedia>
-            <Help>{policy_rationalism_ap2_item}</Help>
+            <Help>{policy_rationalism_ap2_flag}AP 2[NEWLINE]{policy_rationalism_ap2_item}</Help>
             <PolicyBranchType>POLICY_BRANCH_RATIONALISM</PolicyBranchType>
             <CultureCost>1</CultureCost>
             <GridX>4</GridX>
@@ -996,7 +996,7 @@
             <Type>POLICY_RATIONALISM_AP3</Type>
             <Description>{policy_rationalism_ap3_flag}AP 3</Description>
             <Civilopedia>{policy_rationalism_ap3_item}</Civilopedia>
-            <Help>{policy_rationalism_ap3_item}</Help>
+            <Help>{policy_rationalism_ap3_flag}AP 3[NEWLINE]{policy_rationalism_ap3_item}</Help>
             <PolicyBranchType>POLICY_BRANCH_RATIONALISM</PolicyBranchType>
             <CultureCost>1</CultureCost>
             <GridX>2</GridX>
@@ -1011,7 +1011,7 @@
             <Type>POLICY_RATIONALISM_AP4</Type>
             <Description>{policy_rationalism_ap4_flag}AP 4</Description>
             <Civilopedia>{policy_rationalism_ap4_item}</Civilopedia>
-            <Help>{policy_rationalism_ap4_item}</Help>
+            <Help>{policy_rationalism_ap4_flag}AP 4[NEWLINE]{policy_rationalism_ap4_item}</Help>
             <PolicyBranchType>POLICY_BRANCH_RATIONALISM</PolicyBranchType>
             <CultureCost>1</CultureCost>
             <GridX>4</GridX>
@@ -1026,7 +1026,7 @@
             <Type>POLICY_RATIONALISM_AP5</Type>
             <Description>{policy_rationalism_ap5_flag}AP 5</Description>
             <Civilopedia>{policy_rationalism_ap5_item}</Civilopedia>
-            <Help>{policy_rationalism_ap5_item}</Help>
+            <Help>{policy_rationalism_ap5_flag}AP 5[NEWLINE]{policy_rationalism_ap5_item}</Help>
             <PolicyBranchType>POLICY_BRANCH_RATIONALISM</PolicyBranchType>
             <CultureCost>1</CultureCost>
             <GridX>2</GridX>

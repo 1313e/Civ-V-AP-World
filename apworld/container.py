@@ -148,13 +148,15 @@ class CivVContainer(APPlayerContainer):
             # Act according to the type of location this is
             match location.type:
                 # For buildings, we need a location description at that location if an item was placed there
-                # TODO: Also add item classification flags to all buildings?
                 case CivVLocationType.building | CivVLocationType.national_wonder | CivVLocationType.world_wonder:
                     if filled_location is not None:
                         location_text = self._get_location_description_building(filled_location.item)
+                        flag = self._get_formatted_item_flag(filled_location.item)
                     else:
                         location_text = ""
+                        flag = ""
                     dct[f"{location.database_key_prefix}_location"] = location_text
+                    dct[f"{location.database_key_prefix}_flag"] = flag
 
                 # For policy branches, we need just the formatted item at that location
                 case CivVLocationType.policy_branch:

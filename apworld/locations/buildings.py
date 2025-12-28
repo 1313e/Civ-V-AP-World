@@ -1,6 +1,6 @@
 # %% IMPORTS
 from .core import CivVLocationData
-from .. import items
+from .. import requirements
 from ..enums import CivVLocationType
 
 # All declaration
@@ -10,431 +10,377 @@ __all__ = [
 
 
 # %% LOCATION DECLARATIONS
-# TODO: Add requirements to all locations
 BUILDING_LOCATIONS = [
     CivVLocationData(
         name="Seaport",
         type=CivVLocationType.building,
         game_id=11,
         database_key_prefix="building_seaport",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.SEAPORT,
     ),
     CivVLocationData(
         name="Stable",
         type=CivVLocationType.building,
         game_id=12,
         database_key_prefix="building_stable",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.STABLE,
     ),
     CivVLocationData(
-        name="Watermill",
+        name="Water Mill",
         type=CivVLocationType.building,
         game_id=13,
         database_key_prefix="building_watermill",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.WATER_MILL,
     ),
     CivVLocationData(
         name="Circus",
         type=CivVLocationType.building,
         game_id=14,
         database_key_prefix="building_circus",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.CIRCUS,
     ),
     CivVLocationData(
         name="Forge",
         type=CivVLocationType.building,
         game_id=15,
         database_key_prefix="building_forge",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.FORGE,
     ),
     CivVLocationData(
         name="Windmill",
         type=CivVLocationType.building,
         game_id=16,
         database_key_prefix="building_windmill",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.WINDMILL,
     ),
     CivVLocationData(
         name="Hydro Plant",
         type=CivVLocationType.building,
         game_id=17,
         database_key_prefix="building_hydro_plant",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.HYDRO_PLANT,
     ),
     CivVLocationData(
         name="Solar Plant",
         type=CivVLocationType.building,
         game_id=18,
         database_key_prefix="building_solar_plant",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.SOLAR_PLANT,
     ),
     CivVLocationData(
         name="Mint",
         type=CivVLocationType.building,
         game_id=19,
         database_key_prefix="building_mint",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.MINT,
     ),
     CivVLocationData(
         name="Observatory",
         type=CivVLocationType.building,
         game_id=20,
         database_key_prefix="building_observatory",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.OBSERVATORY,
     ),
     CivVLocationData(
         name="Garden",
         type=CivVLocationType.building,
         game_id=22,
         database_key_prefix="building_garden",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.GARDEN,
     ),
     CivVLocationData(
         name="Lighthouse",
         type=CivVLocationType.building,
         game_id=23,
         database_key_prefix="building_lighthouse",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.LIGHTHOUSE,
     ),
     CivVLocationData(
         name="Harbor",
         type=CivVLocationType.building,
         game_id=24,
         database_key_prefix="building_harbor",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.HARBOR,
     ),
     CivVLocationData(
         name="Colosseum",
         type=CivVLocationType.building,
         game_id=25,
         database_key_prefix="building_colosseum",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.COLOSSEUM
     ),
     CivVLocationData(
         name="Zoo",
         type=CivVLocationType.building,
         game_id=26,
         database_key_prefix="building_theatre",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.ZOO,
     ),
     CivVLocationData(
         name="Stadium",
         type=CivVLocationType.building,
         game_id=27,
         database_key_prefix="building_stadium",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.STADIUM,
     ),
     CivVLocationData(
         name="Monument",
         type=CivVLocationType.building,
         game_id=28,
         database_key_prefix="building_monument",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.MONUMENT
     ),
     CivVLocationData(
         name="Temple",
         type=CivVLocationType.building,
         game_id=29,
         database_key_prefix="building_temple",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.TEMPLE,
     ),
     CivVLocationData(
         name="Opera House",
         type=CivVLocationType.building,
         game_id=30,
         database_key_prefix="building_opera_house",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.OPERA_HOUSE,
     ),
     CivVLocationData(
         name="Museum",
         type=CivVLocationType.building,
         game_id=31,
         database_key_prefix="building_museum",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.MUSEUM,
     ),
     CivVLocationData(
         name="Broadcast Tower",
         type=CivVLocationType.building,
         game_id=32,
         database_key_prefix="building_broadcast_tower",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.BROADCAST_TOWER,
     ),
     CivVLocationData(
         name="Barracks",
         type=CivVLocationType.building,
         game_id=33,
         database_key_prefix="building_barracks",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.BARRACKS,
     ),
     CivVLocationData(
         name="Armory",
         type=CivVLocationType.building,
         game_id=34,
         database_key_prefix="building_armory",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.ARMORY,
     ),
     CivVLocationData(
         name="Military Academy",
         type=CivVLocationType.building,
         game_id=35,
         database_key_prefix="building_military_academy",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.MILITARY_ACADEMY,
     ),
     CivVLocationData(
         name="Arsenal",
         type=CivVLocationType.building,
         game_id=36,
         database_key_prefix="building_arsenal",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.ARSENAL,
     ),
     CivVLocationData(
         name="Walls",
         type=CivVLocationType.building,
         game_id=37,
         database_key_prefix="building_walls",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.WALLS,
     ),
     CivVLocationData(
         name="Castle",
         type=CivVLocationType.building,
         game_id=38,
         database_key_prefix="building_castle",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.CASTLE,
     ),
     CivVLocationData(
         name="Military Base",
         type=CivVLocationType.building,
         game_id=39,
         database_key_prefix="building_military_base",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.MILITARY_BASE,
     ),
     CivVLocationData(
         name="Granary",
         type=CivVLocationType.building,
         game_id=40,
         database_key_prefix="building_granary",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.GRANARY,
     ),
     CivVLocationData(
         name="Hospital",
         type=CivVLocationType.building,
         game_id=41,
         database_key_prefix="building_hospital",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.HOSPITAL,
     ),
     CivVLocationData(
         name="Medical Lab",
         type=CivVLocationType.building,
         game_id=42,
         database_key_prefix="building_medical_lab",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.MEDICAL_LAB,
     ),
     CivVLocationData(
         name="Workshop",
         type=CivVLocationType.building,
         game_id=43,
         database_key_prefix="building_workshop",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.WORKSHOP,
     ),
     CivVLocationData(
         name="Factory",
         type=CivVLocationType.building,
         game_id=44,
         database_key_prefix="building_factory",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.FACTORY,
     ),
     CivVLocationData(
         name="Nuclear Plant",
         type=CivVLocationType.building,
         game_id=45,
         database_key_prefix="building_nuclear_plant",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.NUCLEAR_PLANT,
     ),
     CivVLocationData(
         name="Spaceship Factory",
         type=CivVLocationType.building,
         game_id=46,
         database_key_prefix="building_spaceship_factory",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.SPACESHIP_FACTORY,
     ),
     CivVLocationData(
         name="Market",
         type=CivVLocationType.building,
         game_id=47,
         database_key_prefix="building_market",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.MARKET,
     ),
     CivVLocationData(
         name="Bank",
         type=CivVLocationType.building,
         game_id=48,
         database_key_prefix="building_bank",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.BANK,
     ),
     CivVLocationData(
         name="Stock Exchange",
         type=CivVLocationType.building,
         game_id=49,
         database_key_prefix="building_stock_exchange",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.STOCK_EXCHANGE,
     ),
     CivVLocationData(
         name="Library",
         type=CivVLocationType.building,
         game_id=50,
         database_key_prefix="building_library",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.LIBRARY,
     ),
     CivVLocationData(
         name="University",
         type=CivVLocationType.building,
         game_id=51,
         database_key_prefix="building_university",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.UNIVERSITY,
     ),
     CivVLocationData(
         name="Public School",
         type=CivVLocationType.building,
         game_id=52,
         database_key_prefix="building_public_school",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.PUBLIC_SCHOOL,
     ),
     CivVLocationData(
-        name="Laboratory",
+        name="Research Lab",
         type=CivVLocationType.building,
         game_id=53,
         database_key_prefix="building_laboratory",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.RESEARCH_LAB,
     ),
     CivVLocationData(
         name="Aqueduct",
         type=CivVLocationType.building,
         game_id=91,
         database_key_prefix="building_aqueduct",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.AQUEDUCT,
     ),
     CivVLocationData(
         name="Stone Works",
         type=CivVLocationType.building,
         game_id=92,
         database_key_prefix="building_stone_works",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.STONE_WORKS,
     ),
     CivVLocationData(
         name="Amphitheater",
         type=CivVLocationType.building,
         game_id=121,
         database_key_prefix="building_amphitheater",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.AMPHITHEATER,
     ),
     CivVLocationData(
         name="Shrine",
         type=CivVLocationType.building,
         game_id=122,
         database_key_prefix="building_shrine",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.SHRINE,
     ),
     CivVLocationData(
         name="Recycling Center",
         type=CivVLocationType.building,
         game_id=123,
         database_key_prefix="building_recycling_center",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.RECYCLING_CENTER,
     ),
     CivVLocationData(
         name="Bomb Shelter",
         type=CivVLocationType.building,
         game_id=124,
         database_key_prefix="building_bomb_shelter",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.BOMB_SHELTER,
     ),
     CivVLocationData(
         name="Constabulary",
         type=CivVLocationType.building,
         game_id=125,
         database_key_prefix="building_constable",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.CONSTABULARY,
     ),
     CivVLocationData(
         name="Police Station",
         type=CivVLocationType.building,
         game_id=126,
         database_key_prefix="building_police_station",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.POLICE_STATION,
     ),
     CivVLocationData(
         name="Hotel",
         type=CivVLocationType.building,
         game_id=151,
         database_key_prefix="building_hotel",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.HOTEL,
     ),
     CivVLocationData(
         name="Caravansary",
         type=CivVLocationType.building,
         game_id=152,
         database_key_prefix="building_caravansary",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.CARAVANSARY,
     ),
     CivVLocationData(
         name="Airport",
         type=CivVLocationType.building,
         game_id=153,
         database_key_prefix="building_airport",
-        requirements=items.ItemRequirements(
-        )
+        requirements=requirements.AIRPORT,
     ),
 ]
 "List of all standard building locations"

@@ -121,37 +121,37 @@ ANCIENT_ERA_TECH = CivVRegionData(
 CLASSICAL_ERA_TECH = CivVRegionData(
     name="Classical Era Tech",
     parent=CLASSICAL_ERA,
-    requirements=requirements.BUILDING_REQUIREMENTS["Library"]
+    requirements=requirements.LIBRARY
 )
 MEDIEVAL_ERA_TECH = CivVRegionData(
     name="Medieval Era Tech",
     parent=MEDIEVAL_ERA,
-    requirements=requirements.BUILDING_REQUIREMENTS["Library"]
+    requirements=requirements.LIBRARY
 )
 RENAISSANCE_ERA_TECH = CivVRegionData(
     name="Renaissance Era Tech",
     parent=RENAISSANCE_ERA,
-    requirements=requirements.BUILDING_REQUIREMENTS["University"]
+    requirements=requirements.UNIVERSITY
 )
 INDUSTRIAL_ERA_TECH = CivVRegionData(
     name="Industrial Era Tech",
     parent=INDUSTRIAL_ERA,
-    requirements=requirements.BUILDING_REQUIREMENTS["University"]
+    requirements=requirements.UNIVERSITY
 )
 MODERN_ERA_TECH = CivVRegionData(
     name="Modern Era Tech",
     parent=MODERN_ERA,
-    requirements=requirements.BUILDING_REQUIREMENTS["Public School"]
+    requirements=requirements.PUBLIC_SCHOOL
 )
 ATOMIC_ERA_TECH = CivVRegionData(
     name="Atomic Era Tech",
     parent=ATOMIC_ERA,
-    requirements=requirements.BUILDING_REQUIREMENTS["Public School"]
+    requirements=requirements.PUBLIC_SCHOOL
 )
 INFORMATION_ERA_TECH = CivVRegionData(
     name="Information Era Tech",
     parent=INFORMATION_ERA,
-    requirements=requirements.BUILDING_REQUIREMENTS["Research Lab"]
+    requirements=requirements.RESEARCH_LAB
 )
 ERA_TECH_REGIONS = [
     ANCIENT_ERA_TECH,
@@ -173,37 +173,37 @@ ANCIENT_ERA_POLICY = CivVRegionData(
 CLASSICAL_ERA_POLICY = CivVRegionData(
     name="Classical Era Policy",
     parent=CLASSICAL_ERA,
-    requirements=requirements.BUILDING_REQUIREMENTS["Amphitheater"]
+    requirements=requirements.AMPHITHEATER
 )
 MEDIEVAL_ERA_POLICY = CivVRegionData(
     name="Medieval Era Policy",
     parent=MEDIEVAL_ERA,
-    requirements=requirements.BUILDING_REQUIREMENTS["Amphitheater"]
+    requirements=requirements.AMPHITHEATER
 )
 RENAISSANCE_ERA_POLICY = CivVRegionData(
     name="Renaissance Era Policy",
     parent=RENAISSANCE_ERA,
-    requirements=requirements.BUILDING_REQUIREMENTS["Opera House"]
+    requirements=requirements.OPERA_HOUSE
 )
 INDUSTRIAL_ERA_POLICY = CivVRegionData(
     name="Industrial Era Policy",
     parent=INDUSTRIAL_ERA,
-    requirements=requirements.BUILDING_REQUIREMENTS["Opera House"]
+    requirements=requirements.OPERA_HOUSE
 )
 MODERN_ERA_POLICY = CivVRegionData(
     name="Modern Era Policy",
     parent=MODERN_ERA,
-    requirements=requirements.BUILDING_REQUIREMENTS["Museum"]
+    requirements=requirements.MUSEUM
 )
 ATOMIC_ERA_POLICY = CivVRegionData(
     name="Atomic Era Policy",
     parent=ATOMIC_ERA,
-    requirements=requirements.BUILDING_REQUIREMENTS["Museum"]
+    requirements=requirements.MUSEUM
 )
 INFORMATION_ERA_POLICY = CivVRegionData(
     name="Information Era Policy",
     parent=INFORMATION_ERA,
-    requirements=requirements.BUILDING_REQUIREMENTS["Broadcast Tower"]
+    requirements=requirements.BROADCAST_TOWER
 )
 ERA_POLICY_REGIONS = [
     ANCIENT_ERA_POLICY,

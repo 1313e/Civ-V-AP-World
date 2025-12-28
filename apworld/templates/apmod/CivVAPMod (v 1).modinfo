@@ -23,10 +23,10 @@
   <Blocks />
   <Files>
     <File md5="F1B1722480F94300D225B22F97982B8D" import="0">APFunctions.lua</File>
-    <File md5="510587D961C4BAB32250CF0084AC4A5A" import="0">Buildings.xml</File>
-    <File md5="0B9024194311E001AA12933CC1E71ED8" import="0">NationalWonders.xml</File>
+    <File md5="DE34F8CD1D0407D0018DB1DBCA7984B4" import="0">Buildings.xml</File>
+    <File md5="98D658C283A4A544D7EB8A50F2C628B0" import="0">NationalWonders.xml</File>
     <File md5="8382C7420D4F319681DD5D0B82C8F969" import="0">PolicyBranches.xml</File>
-    <File md5="E8A7092C16C3D7A7942E9FDC595337B4" import="0">Policies.xml</File>
+    <File md5="F50AF4983469D2AA71A8EA168B37A204" import="0">Policies.xml</File>
     <File md5="9FDB79374AFADA7249B402C1A84FDC99" import="1">Icons/AP_Tech_128.dds</File>
     <File md5="4DCA93CF29178E5CA21DB8E78BB3FA24" import="1">Icons/AP_Tech_214.dds</File>
     <File md5="B080E5912DB08B0196596C7326C5EF39" import="1">Icons/AP_Tech_256.dds</File>
@@ -35,7 +35,7 @@
     <File md5="7152D0357C288208BCFDCEC907C86627" import="0">Icons/AP_Tech_Icons.xml</File>
     <File md5="490F4373F77EBB8ED79C09298D9FE85C" import="0">PolicyBranchTextInfos.xml</File>
     <File md5="5143BBA73C5E4B366460BD01E4313AD3" import="0">Technologies.xml</File>
-    <File md5="712984FFC3134B771857611331454569" import="0">WorldWonders.xml</File>
+    <File md5="3CA2E781809659F0C7272B37288E365F" import="0">WorldWonders.xml</File>
   </Files>
   <Actions>
     <OnModActivated>

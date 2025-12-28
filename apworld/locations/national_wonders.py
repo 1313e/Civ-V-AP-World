@@ -1,6 +1,6 @@
 # %% IMPORTS
 from .core import CivVLocationData
-from .. import items
+from .. import items, requirements
 from ..enums import CivVLocationType
 
 # All declaration
@@ -18,9 +18,9 @@ NATIONAL_WONDER_LOCATIONS = [
         game_id=55,
         database_key_prefix="building_heroic_epic",
         requirements=items.ItemRequirements(
+            requirements.BARRACKS,
             progression={
                 items.TECH_ITEMS["Iron Working"],
-                items.TECH_ITEMS["Bronze Working"],
             },
         )
     ),
@@ -30,9 +30,9 @@ NATIONAL_WONDER_LOCATIONS = [
         game_id=56,
         database_key_prefix="building_national_college",
         requirements=items.ItemRequirements(
+            requirements.LIBRARY,
             progression={
                 items.TECH_ITEMS["Philosophy"],
-                items.TECH_ITEMS["Writing"],
             },
         )
     ),
@@ -42,6 +42,7 @@ NATIONAL_WONDER_LOCATIONS = [
         game_id=57,
         database_key_prefix="building_national_epic",
         requirements=items.ItemRequirements(
+            requirements.MONUMENT,
             progression={
                 items.TECH_ITEMS["Drama and Poetry"],
             },
@@ -53,9 +54,9 @@ NATIONAL_WONDER_LOCATIONS = [
         game_id=58,
         database_key_prefix="building_circus_maximus",
         requirements=items.ItemRequirements(
+            requirements.COLOSSEUM,
             progression={
                 items.TECH_ITEMS["Horseback Riding"],
-                items.TECH_ITEMS["Construction"],
             },
         )
     ),
@@ -65,9 +66,9 @@ NATIONAL_WONDER_LOCATIONS = [
         game_id=59,
         database_key_prefix="building_national_treasury",
         requirements=items.ItemRequirements(
+            requirements.MARKET,
             progression={
                 items.TECH_ITEMS["Guilds"],
-                items.TECH_ITEMS["Currency"],
             },
         )
     ),
@@ -77,9 +78,9 @@ NATIONAL_WONDER_LOCATIONS = [
         game_id=60,
         database_key_prefix="building_ironworks",
         requirements=items.ItemRequirements(
+            requirements.WORKSHOP,
             progression={
                 items.TECH_ITEMS["Machinery"],
-                items.TECH_ITEMS["Metal Casting"],
             },
         )
     ),
@@ -89,9 +90,9 @@ NATIONAL_WONDER_LOCATIONS = [
         game_id=61,
         database_key_prefix="building_oxford_university",
         requirements=items.ItemRequirements(
+            requirements.UNIVERSITY,
             progression={
                 items.TECH_ITEMS["Education"],
-                items.TECH_ITEMS["Writing"],
             },
         )
     ),
@@ -101,10 +102,9 @@ NATIONAL_WONDER_LOCATIONS = [
         game_id=62,
         database_key_prefix="building_hermitage",
         requirements=items.ItemRequirements(
+            requirements.OPERA_HOUSE,
             progression={
                 items.TECH_ITEMS["Architecture"],
-                items.TECH_ITEMS["Acoustics"],
-                items.TECH_ITEMS["Drama and Poetry"],
             },
         )
     ),
@@ -114,10 +114,9 @@ NATIONAL_WONDER_LOCATIONS = [
         game_id=127,
         database_key_prefix="building_intelligence_agency",
         requirements=items.ItemRequirements(
+            requirements.POLICE_STATION,
             progression={
                 items.TECH_ITEMS["Radio"],
-                items.TECH_ITEMS["Electricity"],
-                items.TECH_ITEMS["Banking"],
             },
         )
     ),
@@ -127,10 +126,9 @@ NATIONAL_WONDER_LOCATIONS = [
         game_id=141,
         database_key_prefix="building_grand_temple",
         requirements=items.ItemRequirements(
+            requirements.TEMPLE,
             progression={
                 items.TECH_ITEMS["Theology"],
-                items.TECH_ITEMS["Philosophy"],
-                items.TECH_ITEMS["Pottery"],
             },
         )
     ),
@@ -140,9 +138,9 @@ NATIONAL_WONDER_LOCATIONS = [
         game_id=142,
         database_key_prefix="building_tourist_center",
         requirements=items.ItemRequirements(
+            requirements.HOTEL,
             progression={
                 items.TECH_ITEMS["Telecommunications"],
-                items.TECH_ITEMS["Refrigeration"],
             },
         )
     ),
