@@ -1,4 +1,6 @@
 # %% IMPORTS
+import functools
+import itertools
 from collections import defaultdict
 from collections.abc import Callable
 from dataclasses import dataclass, field
@@ -59,30 +61,59 @@ class CivVItem(Item):
 
 
 # %% ITEM_REQUIREMENTS CLASS DEFINITION
-@dataclass
 class ItemRequirements:
     """
-    Dataclass used for specifying the item requirements of a region or location.
+    Class used for specifying the item requirements of a region or location.
 
     """
 
-    progressive: dict["CivVProgressiveItemData", int] = field(default_factory=dict)
-    "Dict of progressive items and their corresponding required count"
-    progression: set["CivVProgressionItemData"] = field(default_factory=set)
-    "Set of required progression items"
+    def __init__(
+            self,
+            *requirements: "ItemRequirements",
+            progressive: dict["CivVProgressiveItemData", int] | None = None,
+            progression: set["CivVProgressionItemData"] | None = None,
+    ):
+        """
+        Initializes this item requirements, combining the given base `requirements` with the provided `progressive` and
+        `progression` requirements.
 
-    def __post_init__(self):
+        Args:
+             requirements: Base requirements to use for this requirement.
+             progressive: Dict of progressive items and their corresponding required count.
+             progression: Set of required progression items.
+
+        """
+
+        # Set progressive and progression to empty containers if their defaults are used
+        progressive = progressive or {}
+        progression = progression or set()
+
         # Check that each item in progressive and progression are marked as progression items
-        for item in [*self.progressive.keys(), *self.progression]:
+        for item in [*progressive.keys(), *progression]:
             if item.classification != ItemClassification.progression:
                 raise ValueError(f"Required item with name {item.name!r} is not a progression item")
 
-    def __or__(self, other: "ItemRequirements") -> "ItemRequirements":
-        # Combine the two item requirements objects together
-        return ItemRequirements(
-            progressive=self._merge_dicts(self.progressive, other.progressive),
-            progression={*self.progression, *other.progression},
-        )
+        # Combine the base item requirements together with the additional requirements and store them
+        self._progressive = functools.reduce(self._merge_dicts, (x.progressive for x in requirements), progressive)
+        self._progression = {*itertools.chain.from_iterable(x.progression for x in requirements), *progression}
+
+    @property
+    def progressive(self) -> dict["CivVProgressiveItemData", int]:
+        """
+        Dict of progressive items and their corresponding required count.
+
+        """
+
+        return self._progressive
+
+    @property
+    def progression(self) -> set["CivVProgressionItemData"]:
+        """
+        Set of required progression items.
+
+        """
+
+        return self._progression
 
     @staticmethod
     def _merge_dicts(dct1: dict, dct2: dict) -> dict:
@@ -100,13 +131,13 @@ class ItemRequirements:
         requirements: dict[str, int] = {}
 
         # Add all the progressive requirements
-        for item, count in self.progressive.items():
+        for item, count in self._progressive.items():
             # If this progressive item is always required or is toggled on in the options, add it
             if item.option_toggle_name is None or getattr(options, item.option_toggle_name):
                 requirements[item.name] = count
 
         # Add all the progression requirements
-        for item in self.progression:
+        for item in self._progression:
             # If this progression item is always required or its progressive parent is NOT in use, add it
             if item.progressive_parent is None or not (
                     item.progressive_parent.option_toggle_name is None
