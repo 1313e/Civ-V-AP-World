@@ -49,6 +49,11 @@
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
+        <FileName>NationalWonders.xml</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
         <FileName>PolicyBranches.xml</FileName>
       </Action>
       <Action>
@@ -102,6 +107,10 @@
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
     <Content Include="BuildingTextInfos.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="NationalWonders.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>

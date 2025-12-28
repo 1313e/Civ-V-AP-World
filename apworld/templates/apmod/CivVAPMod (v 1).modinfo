@@ -23,9 +23,10 @@
   <Blocks />
   <Files>
     <File md5="F1B1722480F94300D225B22F97982B8D" import="0">APFunctions.lua</File>
-    <File md5="4C5159CC08367FB6D372AF41D18A3202" import="0">Buildings.xml</File>
+    <File md5="5B9C45533A8E74AF2E2730D92A306343" import="0">Buildings.xml</File>
     <File md5="0550950711859D26B6FA12B4F9994D23" import="0">BuildingTextInfos.xml</File>
-    <File md5="F713F105D744EA1301493FD50D154BBD" import="0">NationalWonderTextInfos.xml</File>
+    <File md5="2123DEBFD539012CEA9E57B05465D219" import="0">NationalWonders.xml</File>
+    <File md5="3AC2F3CD19C337D0C9E6F29F9E3D894F" import="0">NationalWonderTextInfos.xml</File>
     <File md5="8382C7420D4F319681DD5D0B82C8F969" import="0">PolicyBranches.xml</File>
     <File md5="F50AF4983469D2AA71A8EA168B37A204" import="0">Policies.xml</File>
     <File md5="9FDB79374AFADA7249B402C1A84FDC99" import="1">Icons/AP_Tech_128.dds</File>
@@ -46,6 +47,7 @@
       <UpdateDatabase>PolicyBranchTextInfos.xml</UpdateDatabase>
       <UpdateDatabase>WorldWonderTextInfos.xml</UpdateDatabase>
       <UpdateDatabase>Buildings.xml</UpdateDatabase>
+      <UpdateDatabase>NationalWonders.xml</UpdateDatabase>
       <UpdateDatabase>PolicyBranches.xml</UpdateDatabase>
       <UpdateDatabase>Policies.xml</UpdateDatabase>
       <UpdateDatabase>Technologies.xml</UpdateDatabase>

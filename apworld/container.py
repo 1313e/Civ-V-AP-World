@@ -32,6 +32,7 @@ class CivVContainer(APPlayerContainer):
         "templates/apmod/Buildings.xml",
         "templates/apmod/BuildingTextInfos.xml",
         "templates/apmod/CivVAPMod (v 1).modinfo",
+        "templates/apmod/NationalWonders.xml",
         "templates/apmod/NationalWonderTextInfos.xml",
         "templates/apmod/Policies.xml",
         "templates/apmod/PolicyBranches.xml",

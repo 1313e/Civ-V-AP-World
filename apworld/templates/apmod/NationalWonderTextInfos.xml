@@ -3,7 +3,7 @@
     <Language_en_US>
         <Delete Tag="TXT_KEY_BUILDING_PALACE_HELP"/>
         <Row Tag="TXT_KEY_BUILDING_PALACE_HELP">
-            <Text>Indicates this City is the [ICON_CAPITAL] Capital of the empire. Contains 1 slot for a Great Work of Art.[NEWLINE][NEWLINE][ICON_CONNECTED] Connecting other Cities to the [ICON_CAPITAL] Capital by Road will produce additional [ICON_GOLD] Gold.</Text>
+            <Text>Indicates this City is the [ICON_CAPITAL] Capital of the empire. Modifies [ICON_CULTURE] Culture cost of adopting new Policies by {policy_cost_modifier}%. Contains 1 slot for a Great Work of Art.[NEWLINE][NEWLINE][ICON_CONNECTED] Connecting other Cities to the [ICON_CAPITAL] Capital by Road will produce additional [ICON_GOLD] Gold.</Text>
         </Row>
         <Delete Tag="TXT_KEY_BUILDING_HEROIC_EPIC"/>
         <Row Tag="TXT_KEY_BUILDING_HEROIC_EPIC">

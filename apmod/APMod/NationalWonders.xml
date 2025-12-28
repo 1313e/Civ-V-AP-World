@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+    <Buildings>
+        <Update>
+            <Set PolicyCostModifier="{policy_cost_modifier}"/>
+            <Where Type="BUILDING_PALACE"/>
+        </Update>
+		<Update>
+			<Set UnmoddedHappiness="5"/>
+            <Where Type="BUILDING_PALACE"/>
+		</Update>
+    </Buildings>
+    <Building_YieldChanges>
+        <Row>
+			<BuildingType>BUILDING_PALACE</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>15</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_PALACE</BuildingType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>15</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_PALACE</BuildingType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>15</Yield>
+		</Row>
+        <Row>
+			<BuildingType>BUILDING_PALACE</BuildingType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>5</Yield>
+		</Row>
+        <Row>
+			<BuildingType>BUILDING_PALACE</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>5</Yield>
+		</Row>
+        <Row>
+			<BuildingType>BUILDING_PALACE</BuildingType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>5</Yield>
+		</Row>
+    </Building_YieldChanges>
+</GameData>
