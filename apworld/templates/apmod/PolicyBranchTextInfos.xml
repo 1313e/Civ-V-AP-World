@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GameData>
-	<Language_en_US>
-		<Update>
-			<Set Text="Adopting Tradition counts as an [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] ({policy_branch_tradition_item}) and unlocks access to the [COLOR_POSITIVE_TEXT]5 AP Policies[ENDCOLOR] in this tree.[NEWLINE][NEWLINE]Adopting all Policies in the Tradition tree counts as an additional [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] ({policy_branch_tradition_finisher_item})."/>
-			<Where Tag="TXT_KEY_POLICY_BRANCH_TRADITION_HELP"/>
-		</Update>
-		<Update>
-			<Set Text="Adopting Liberty counts as an [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] ({policy_branch_liberty_item}) and unlocks access to the [COLOR_POSITIVE_TEXT]5 AP Policies[ENDCOLOR] in this tree.[NEWLINE][NEWLINE]Adopting all Policies in the Liberty tree counts as an additional [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] ({policy_branch_liberty_finisher_item})."/>
-			<Where Tag="TXT_KEY_POLICY_BRANCH_LIBERTY_HELP"/>
-		</Update>
-		<Update>
-			<Set Text="Adopting Honor counts as an [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] ({policy_branch_honor_item}) and unlocks access to the [COLOR_POSITIVE_TEXT]5 AP Policies[ENDCOLOR] in this tree.[NEWLINE][NEWLINE]Adopting all Policies in the Honor tree counts as an additional [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] ({policy_branch_honor_finisher_item})."/>
-			<Where Tag="TXT_KEY_POLICY_BRANCH_HONOR_HELP"/>
-		</Update>
-		<Update>
-			<Set Text="Adopting Piety counts as an [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] ({policy_branch_piety_item}) and unlocks access to the [COLOR_POSITIVE_TEXT]5 AP Policies[ENDCOLOR] in this tree.[NEWLINE][NEWLINE]Adopting all Policies in the Piety tree counts as an additional [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] ({policy_branch_piety_finisher_item})."/>
-			<Where Tag="TXT_KEY_POLICY_BRANCH_PIETY_HELP"/>
-		</Update>
-		<Update>
-			<Set Text="Adopting Patronage counts as an [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] ({policy_branch_patronage_item}) and unlocks access to the [COLOR_POSITIVE_TEXT]5 AP Policies[ENDCOLOR] in this tree.[NEWLINE][NEWLINE]Adopting all Policies in the Patronage tree counts as an additional [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] ({policy_branch_patronage_finisher_item})."/>
-			<Where Tag="TXT_KEY_POLICY_BRANCH_PATRONAGE_HELP"/>
-		</Update>
-		<Update>
-			<Set Text="Adopting Aesthetics counts as an [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] ({policy_branch_aesthetics_item}) and unlocks access to the [COLOR_POSITIVE_TEXT]5 AP Policies[ENDCOLOR] in this tree.[NEWLINE][NEWLINE]Adopting all Policies in the Aesthetics tree counts as an additional [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] ({policy_branch_aesthetics_finisher_item})."/>
-			<Where Tag="TXT_KEY_POLICY_BRANCH_AESTHETICS_HELP"/>
-		</Update>
-		<Update>
-			<Set Text="Adopting Commerce counts as an [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] ({policy_branch_commerce_item}) and unlocks access to the [COLOR_POSITIVE_TEXT]5 AP Policies[ENDCOLOR] in this tree.[NEWLINE][NEWLINE]Adopting all Policies in the Commerce tree counts as an additional [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] ({policy_branch_commerce_finisher_item})."/>
-			<Where Tag="TXT_KEY_POLICY_BRANCH_COMMERCE_HELP"/>
-		</Update>
-		<Update>
-			<Set Text="Adopting Exploration counts as an [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] ({policy_branch_exploration_item}) and unlocks access to the [COLOR_POSITIVE_TEXT]5 AP Policies[ENDCOLOR] in this tree.[NEWLINE][NEWLINE]Adopting all Policies in the Exploration tree counts as an additional [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] ({policy_branch_exploration_finisher_item})."/>
-			<Where Tag="TXT_KEY_POLICY_BRANCH_EXPLORATION_HELP"/>
-		</Update>
-		<Update>
-			<Set Text="Adopting Rationalism counts as an [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] ({policy_branch_rationalism_item}) and unlocks access to the [COLOR_POSITIVE_TEXT]5 AP Policies[ENDCOLOR] in this tree.[NEWLINE][NEWLINE]Adopting all Policies in the Rationalism tree counts as an additional [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] ({policy_branch_rationalism_finisher_item})."/>
-			<Where Tag="TXT_KEY_POLICY_BRANCH_RATIONALISM_HELP"/>
-		</Update>
-	</Language_en_US>
+    <Language_en_US>
+        <Delete Tag="TXT_KEY_POLICY_BRANCH_TRADITION_HELP"/>
+        <Row Tag="TXT_KEY_POLICY_BRANCH_TRADITION_HELP">
+            <Text>Adopting Tradition counts as an [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] ({policy_branch_tradition_item}) and unlocks access to the [COLOR_POSITIVE_TEXT]5 AP Policies[ENDCOLOR] in this tree.[NEWLINE][NEWLINE]Adopting all Policies in the Tradition tree counts as an additional [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] ({policy_branch_tradition_finisher_item}).</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_POLICY_BRANCH_LIBERTY_HELP"/>
+        <Row Tag="TXT_KEY_POLICY_BRANCH_LIBERTY_HELP">
+            <Text>Adopting Liberty counts as an [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] ({policy_branch_liberty_item}) and unlocks access to the [COLOR_POSITIVE_TEXT]5 AP Policies[ENDCOLOR] in this tree.[NEWLINE][NEWLINE]Adopting all Policies in the Liberty tree counts as an additional [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] ({policy_branch_liberty_finisher_item}).</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_POLICY_BRANCH_HONOR_HELP"/>
+        <Row Tag="TXT_KEY_POLICY_BRANCH_HONOR_HELP">
+            <Text>Adopting Honor counts as an [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] ({policy_branch_honor_item}) and unlocks access to the [COLOR_POSITIVE_TEXT]5 AP Policies[ENDCOLOR] in this tree.[NEWLINE][NEWLINE]Adopting all Policies in the Honor tree counts as an additional [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] ({policy_branch_honor_finisher_item}).</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_POLICY_BRANCH_PIETY_HELP"/>
+        <Row Tag="TXT_KEY_POLICY_BRANCH_PIETY_HELP">
+            <Text>Adopting Piety counts as an [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] ({policy_branch_piety_item}) and unlocks access to the [COLOR_POSITIVE_TEXT]5 AP Policies[ENDCOLOR] in this tree.[NEWLINE][NEWLINE]Adopting all Policies in the Piety tree counts as an additional [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] ({policy_branch_piety_finisher_item}).</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_POLICY_BRANCH_PATRONAGE_HELP"/>
+        <Row Tag="TXT_KEY_POLICY_BRANCH_PATRONAGE_HELP">
+            <Text>Adopting Patronage counts as an [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] ({policy_branch_patronage_item}) and unlocks access to the [COLOR_POSITIVE_TEXT]5 AP Policies[ENDCOLOR] in this tree.[NEWLINE][NEWLINE]Adopting all Policies in the Patronage tree counts as an additional [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] ({policy_branch_patronage_finisher_item}).</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_POLICY_BRANCH_AESTHETICS_HELP"/>
+        <Row Tag="TXT_KEY_POLICY_BRANCH_AESTHETICS_HELP">
+            <Text>Adopting Aesthetics counts as an [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] ({policy_branch_aesthetics_item}) and unlocks access to the [COLOR_POSITIVE_TEXT]5 AP Policies[ENDCOLOR] in this tree.[NEWLINE][NEWLINE]Adopting all Policies in the Aesthetics tree counts as an additional [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] ({policy_branch_aesthetics_finisher_item}).</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_POLICY_BRANCH_COMMERCE_HELP"/>
+        <Row Tag="TXT_KEY_POLICY_BRANCH_COMMERCE_HELP">
+            <Text>Adopting Commerce counts as an [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] ({policy_branch_commerce_item}) and unlocks access to the [COLOR_POSITIVE_TEXT]5 AP Policies[ENDCOLOR] in this tree.[NEWLINE][NEWLINE]Adopting all Policies in the Commerce tree counts as an additional [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] ({policy_branch_commerce_finisher_item}).</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_POLICY_BRANCH_EXPLORATION_HELP"/>
+        <Row Tag="TXT_KEY_POLICY_BRANCH_EXPLORATION_HELP">
+            <Text>Adopting Exploration counts as an [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] ({policy_branch_exploration_item}) and unlocks access to the [COLOR_POSITIVE_TEXT]5 AP Policies[ENDCOLOR] in this tree.[NEWLINE][NEWLINE]Adopting all Policies in the Exploration tree counts as an additional [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] ({policy_branch_exploration_finisher_item}).</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_POLICY_BRANCH_RATIONALISM_HELP"/>
+        <Row Tag="TXT_KEY_POLICY_BRANCH_RATIONALISM_HELP">
+            <Text>Adopting Rationalism counts as an [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] ({policy_branch_rationalism_item}) and unlocks access to the [COLOR_POSITIVE_TEXT]5 AP Policies[ENDCOLOR] in this tree.[NEWLINE][NEWLINE]Adopting all Policies in the Rationalism tree counts as an additional [COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] ({policy_branch_rationalism_finisher_item}).</Text>
+        </Row>
+    </Language_en_US>
 </GameData>

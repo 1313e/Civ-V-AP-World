@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+    <Language_en_US>
+        <Delete Tag="TXT_KEY_BUILDING_PALACE_HELP"/>
+        <Row Tag="TXT_KEY_BUILDING_PALACE_HELP">
+            <Text>Indicates this City is the [ICON_CAPITAL] Capital of the empire. Contains 1 slot for a Great Work of Art.[NEWLINE][NEWLINE][ICON_CONNECTED] Connecting other Cities to the [ICON_CAPITAL] Capital by Road will produce additional [ICON_GOLD] Gold.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_BUILDING_HEROIC_EPIC"/>
+        <Row Tag="TXT_KEY_BUILDING_HEROIC_EPIC">
+            <Text>{building_heroic_epic_flag}Heroic Epic</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_BUILDING_HEROIC_EPIC_HELP"/>
+        <Row Tag="TXT_KEY_BUILDING_HEROIC_EPIC_HELP">
+            <Text>All newly-trained non-air Units in this City receive the [COLOR_POSITIVE_TEXT]Morale[ENDCOLOR] Promotion, improving [ICON_STRENGTH] combat strength by 15%. Contains 1 slot for a Great Work of Writing.[NEWLINE][NEWLINE]Must have built a Barracks in all Cities. The cost goes up the more cities there are in the empire.{building_heroic_epic_location}</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_BUILDING_NATIONAL_COLLEGE"/>
+        <Row Tag="TXT_KEY_BUILDING_NATIONAL_COLLEGE">
+            <Text>{building_national_college_flag}National College</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_BUILDING_NATIONAL_COLLEGE_HELP"/>
+        <Row Tag="TXT_KEY_BUILDING_NATIONAL_COLLEGE_HELP">
+            <Text>Must have built a Library in all Cities. The cost goes up the more cities there are in the empire.{building_national_college_location}</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_BUILDING_NATIONAL_EPIC"/>
+        <Row Tag="TXT_KEY_BUILDING_NATIONAL_EPIC">
+            <Text>{building_national_epic_flag}National Epic</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_BUILDING_NATIONAL_EPIC_HELP"/>
+        <Row Tag="TXT_KEY_BUILDING_NATIONAL_EPIC_HELP">
+            <Text>+25% [ICON_GREAT_PEOPLE] Great People generation in this City. Contains 1 slot for a Great Work of Writing.[NEWLINE][NEWLINE]Must have built a Monument in all Cities. The cost goes up the more cities there are in the empire.{building_national_epic_location}</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_BUILDING_CIRCUS_MAXIMUS"/>
+        <Row Tag="TXT_KEY_BUILDING_CIRCUS_MAXIMUS">
+            <Text>{building_circus_maximus_flag}Circus Maximus</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_BUILDING_CIRCUS_MAXIMUS_HELP"/>
+        <Row Tag="TXT_KEY_BUILDING_CIRCUS_MAXIMUS_HELP">
+            <Text>Must have built a Colosseum in all Cities. The cost goes up the more cities there are in the empire.{building_circus_maximus_location}</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_BUILDING_EAST_INDIA"/>
+        <Row Tag="TXT_KEY_BUILDING_EAST_INDIA">
+            <Text>{building_national_treasury_flag}East India Company</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_BUILDING_NATIONAL_TREASURY_HELP"/>
+        <Row Tag="TXT_KEY_BUILDING_NATIONAL_TREASURY_HELP">
+            <Text>Must have built a Market in all Cities. The cost goes up the more cities there are in the empire. Trade routes other players make to a city with an East India Company will generate an extra 4 [ICON_GOLD] Gold for the city owner and the trade route owner gains an additional 2 [ICON_GOLD] Gold for the trade route.{building_national_treasury_location}</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_BUILDING_IRONWORKS"/>
+        <Row Tag="TXT_KEY_BUILDING_IRONWORKS">
+            <Text>{building_ironworks_flag}Ironworks</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_BUILDING_IRONWORKS_HELP"/>
+        <Row Tag="TXT_KEY_BUILDING_IRONWORKS_HELP">
+            <Text>Must have built a Workshop in all Cities. The cost goes up the more cities there are in the empire.{building_ironworks_location}</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_BUILDING_OXFORD_UNIVERSITY"/>
+        <Row Tag="TXT_KEY_BUILDING_OXFORD_UNIVERSITY">
+            <Text>{building_oxford_university_flag}Oxford University</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_BUILDING_OXFORD_UNIVERSITY_HELP"/>
+        <Row Tag="TXT_KEY_BUILDING_OXFORD_UNIVERSITY_HELP">
+            <Text>1 Free Technology. Contains 2 slots for Great Works of Writing.[NEWLINE][NEWLINE]Must have built a University in all Cities. The cost goes up the more cities there are in the empire.{building_oxford_university_location}</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_BUILDING_HERMITAGE"/>
+        <Row Tag="TXT_KEY_BUILDING_HERMITAGE">
+            <Text>{building_hermitage_flag}Hermitage</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_BUILDING_HERMITAGE_HELP"/>
+        <Row Tag="TXT_KEY_BUILDING_HERMITAGE_HELP">
+            <Text>+50% [ICON_CULTURE] Culture in this City. Contains 3 slots for Great Works of Art.[NEWLINE][NEWLINE]Must have built an Opera House in all Cities. The cost goes up the more cities there are in the empire.{building_hermitage_location}</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_BUILDING_INTELLIGENCE_AGENCY"/>
+        <Row Tag="TXT_KEY_BUILDING_INTELLIGENCE_AGENCY">
+            <Text>{building_intelligence_agency_flag}National Intelligence Agency</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_BUILDING_INTELLIGENCE_AGENCY_HELP"/>
+        <Row Tag="TXT_KEY_BUILDING_INTELLIGENCE_AGENCY_HELP">
+            <Text>Provides an additional spy and levels up all your existing spies. Also provides a 15% reduction in enemy spy effectiveness. Must have a Police Station in all cities.{building_intelligence_agency_location}</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_BUILDING_GRAND_TEMPLE"/>
+        <Row Tag="TXT_KEY_BUILDING_GRAND_TEMPLE">
+            <Text>{building_grand_temple_flag}Grand Temple</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_BUILDING_GRAND_TEMPLE_HELP"/>
+        <Row Tag="TXT_KEY_BUILDING_GRAND_TEMPLE_HELP">
+            <Text>Doubles religious pressure emanating from this City.[NEWLINE][NEWLINE]Must be built in a Holy City. Must have built a Temple in all Cities. The cost goes up the more cities there are in the empire.{building_grand_temple_location}</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_BUILDING_TOURIST_CENTER"/>
+        <Row Tag="TXT_KEY_BUILDING_TOURIST_CENTER">
+            <Text>{building_tourist_center_flag}National Visitor Center</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_BUILDING_TOURIST_CENTER_HELP"/>
+        <Row Tag="TXT_KEY_BUILDING_TOURIST_CENTER_HELP">
+            <Text>Must have built a Hotel in all Cities. The cost goes up the more cities there are in the empire. 100% of the [ICON_CULTURE] Culture from World Wonders, Natural Wonders, and Improvements (Landmarks, Moai, Chateau) is added to the [ICON_TOURISM] Tourism output of the city. [ICON_TOURISM] Tourism output from Great Works +100%.{building_tourist_center_location}</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_BUILDING_WRITERS_GUILD"/>
+        <Row Tag="TXT_KEY_BUILDING_WRITERS_GUILD">
+            <Text>{building_writers_guild_flag}Writers' Guild</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_BUILDING_WRITERS_GUILD_HELP"/>
+        <Row Tag="TXT_KEY_BUILDING_WRITERS_GUILD_HELP">
+            <Text>Provides 1 [ICON_GREAT_PEOPLE] Great Person Point (GPP) towards a Great Writer. Add up to two specialists to this building to gain [ICON_CULTURE] Culture and increase the rate of Great Writer acquisition (3 [ICON_CULTURE] Culture and 3 [ICON_GREAT_PEOPLE] GPP per specialist).{building_writers_guild_location}</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_BUILDING_ARTISTS_GUILD"/>
+        <Row Tag="TXT_KEY_BUILDING_ARTISTS_GUILD">
+            <Text>{building_artists_guild_flag}Artists' Guild</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_BUILDING_ARTISTS_GUILD_HELP"/>
+        <Row Tag="TXT_KEY_BUILDING_ARTISTS_GUILD_HELP">
+            <Text>Provides 2 [ICON_GREAT_PEOPLE] Great Person Points (GPP) towards a Great Artist. Add up to two specialists to this building to gain [ICON_CULTURE] Culture and increase the rate of Great Artist acquisition (3 [ICON_CULTURE] Culture and 3 [ICON_GREAT_PEOPLE] GPP per specialist).{building_artists_guild_location}</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_BUILDING_MUSICIANS_GUILD"/>
+        <Row Tag="TXT_KEY_BUILDING_MUSICIANS_GUILD">
+            <Text>{building_musicians_guild_flag}Musicians' Guild</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_BUILDING_MUSICIANS_GUILD_HELP"/>
+        <Row Tag="TXT_KEY_BUILDING_MUSICIANS_GUILD_HELP">
+            <Text>Provides 3 [ICON_GREAT_PEOPLE] Great Person Points (GPP) towards a Great Musician. Add up to two specialists to this building to gain [ICON_CULTURE] Culture and increase the rate of Great Musician acquisition (3 [ICON_CULTURE] Culture and 3 [ICON_GREAT_PEOPLE] GPP per specialist).{building_musicians_guild_location}</Text>
+        </Row>
+    </Language_en_US>
+</GameData>
