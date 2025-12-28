@@ -102,7 +102,7 @@ class ProgressiveTechs(DefaultOnToggle):
 
 class ItemHints(Choice):
     """
-    Enable item hints for all policy branch; policy; and technology locations.
+    Enable item hints for all locations.
 
     Options are:
     - full: Locations state their exact item.
@@ -122,6 +122,9 @@ class DisguiseTraps(Toggle):
     """
     Item classification hints will classify traps as progression items.
 
+    Keep in mind that if item hints are set to 'full', the name of the trap is still visible and could potentially spoil
+    you of the true nature of the item.
+
     Has no effect if item hints are set to 'none'.
 
     """
@@ -133,6 +136,8 @@ class BuildingSanity(Toggle):
     """
     Add most standard buildings to the location pool.
 
+    This adds 53 buildings to the location pool in total.
+
     Buildings that will not be added:
     - Palace
     - Courthouse
@@ -140,7 +145,6 @@ class BuildingSanity(Toggle):
     - Any civilization-unique building (they count as the building they replace instead)
     - Any National Wonder (see National Wonder Sanity instead)
     - Any World Wonder (see World Wonder Sanity instead)
-    This adds 53 buildings to the location pool in total.
 
     """
 
