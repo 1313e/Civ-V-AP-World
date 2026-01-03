@@ -12,7 +12,12 @@ from BaseClasses import Item, ItemClassification
 from worlds.Files import APPlayerContainer
 
 from .constants import CONTAINER_EXTENSION, GAME_NAME
-from .enums import CivVLocationType, CivVItemClassificationColors, CivVItemClassificationFlags
+from .enums import (
+    CivVLocationType,
+    CivVItemClassificationColors,
+    CivVItemClassificationFlags,
+    CivVItemClassificationNames,
+)
 from .locations import LOCATIONS_DATA
 if TYPE_CHECKING:
     from .world import CivVWorld
@@ -81,7 +86,7 @@ class CivVContainer(APPlayerContainer):
             classification = ItemClassification.progression
 
         # Format the item into a string depending on the hint mode
-        color = getattr(CivVItemClassificationColors, classification.name)
+        color = CivVItemClassificationColors.get_color(classification)
         match self.world.options.item_hints:
             case "full":
                 player_name = (
@@ -90,7 +95,7 @@ class CivVContainer(APPlayerContainer):
                 )
                 return f"{player_name} [{color}]{self.clean_text(item.name)}[ENDCOLOR]"
             case "classification":
-                return f"A [{color}]{classification.name} item[ENDCOLOR]"
+                return f"A [{color}]{CivVItemClassificationNames.get_name(classification)} item[ENDCOLOR]"
             case "none":
                 return f"An item"
             case _:
@@ -110,7 +115,7 @@ class CivVContainer(APPlayerContainer):
         # Format the item flag into a string depending on the hint mode
         match self.world.options.item_hints:
             case "full" | "classification":
-                return f"[{getattr(CivVItemClassificationFlags, classification.name)}] "
+                return f"[{CivVItemClassificationFlags.get_flag(classification)}] "
             case "none":
                 return ""
             case _:
