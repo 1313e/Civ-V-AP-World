@@ -366,7 +366,7 @@ function AP.GrantPolicies(policyIds)
 		-- If this policy is a non-AP policy, we want to give it to the player for free
 		-- This avoids the policy culture cost going up when receiving policy items
 		-- For whatever reason, the following marks the next policy granted as free
-		if(policyId < LOWER_POLICY_ID) then
+		if(policyId < LOWER_POLICY_ID and not player:HasPolicy(policyId)) then
 			player:ChangeNumFreePolicies(1);
 			player:ChangeNumFreePolicies(-1);
 		end
