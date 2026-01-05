@@ -95,6 +95,12 @@ local worldWonderBuildingIds = {
 	[154]=true, [155]=true, [156]=true, [157]=true, [158]=true, [159]=true,
 	[160]=true, [161]=true,
 }
+local worldWonderToFreeBuildingId = {
+	[63]=23, [65]=50, [69]=22,
+	[70]=37, [72]=29, [77]=38,
+	[128]=38, [129]=32,
+	[130]=46,
+}
 local notificationTypes = {
 	[0]=NotificationTypes.NOTIFICATION_GENERIC,		-- generic
 	[1]=NotificationTypes.NOTIFICATION_CITY_GROWTH,	-- positive
@@ -175,6 +181,11 @@ function OnCityBuildingConstructed(playerId, cityId, buildingId, gold, faithOrCu
 		-- World Wonders
 		elseif(worldWonderBuildingIds[buildingId]) then
 			table.insert(pushTable["world_wonder"], buildingId)
+
+			-- If this world wonder provides a free building, add it to the push table as well
+			if(worldWonderToFreeBuildingId[buildingId] ~= nil) then
+				table.insert(pushTable["building"], worldWonderToFreeBuildingId[buildingId])
+			end
 		end
 	end
 end
@@ -278,6 +289,26 @@ function RequestSync()
 	for i=LOWER_TECH_ID, UPPER_TECH_ID do
 		if teamTechs:HasTech(i) then
 		    table.insert(pushTable["tech"], i)
+		end
+	end
+
+	-- Add all constructed standard buildings to the push table
+	for i in pairs(buildingIds) do
+		for cityId=0, player:GetNumCities()-1 do
+			if player:GetCityByID(cityId):IsHasBuilding(i) then
+				table.insert(pushTable["building"], i)
+				break
+			end
+		end
+	end
+
+	-- Add all constructed civ-unique buildings to the push table as standard buildings
+	for i in pairs(civUniqueBuildingToBuildingId) do
+		for cityId=0, player:GetNumCities()-1 do
+			if player:GetCityByID(cityId):IsHasBuilding(i) then
+				table.insert(pushTable["building"], civUniqueBuildingToBuildingId[i])
+				break
+			end
 		end
 	end
 
