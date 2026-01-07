@@ -4,6 +4,7 @@ from . import items
 # All declaration
 __all__ = [
     "AIRPORT",
+    "ALUMINUM",
     "AMPHITHEATER",
     "AQUEDUCT",
     "ARCHAEOLOGISTS",
@@ -16,16 +17,20 @@ __all__ = [
     "CARAVANSARY",
     "CASTLE",
     "CIRCUS",
+    "COAL",
     "COLOSSEUM",
     "CONSTABULARY",
     "EMBARKING",
     "FACTORY",
     "FORGE",
+    "GOLD_SILVER",
     "GRANARY",
     "HARBOR",
+    "HORSES_SHEEP_CATTLE",
     "HOSPITAL",
     "HOTEL",
     "HYDRO_PLANT",
+    "IRON",
     "LIBRARY",
     "LIGHTHOUSE",
     "MARKET",
@@ -48,6 +53,7 @@ __all__ = [
     "STABLE",
     "STADIUM",
     "STOCK_EXCHANGE",
+    "STONE_MARBLE",
     "STONE_WORKS",
     "TEMPLE",
     "UNIVERSITY",
@@ -56,8 +62,58 @@ __all__ = [
     "WATER_MILL",
     "WINDMILL",
     "WORKSHOP",
+    "URANIUM",
     "ZOO",
 ]
+
+
+# %% RESOURCE REQUIREMENTS DEFINITIONS
+ALUMINUM = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Mining"],
+        items.TECH_ITEMS["Electricity"],
+    }
+)
+"Requirements for obtaining Aluminum"
+COAL = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Mining"],
+        items.TECH_ITEMS["Industrialization"],
+    }
+)
+"Requirements for obtaining Coal"
+GOLD_SILVER = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Mining"],
+    }
+)
+"Requirements for obtaining Gold or Silver"
+HORSES_SHEEP_CATTLE = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Animal Husbandry"],
+    }
+)
+"Requirements for obtaining Horses; Sheep; or Cattle"
+IRON = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Mining"],
+        items.TECH_ITEMS["Iron Working"],
+    }
+)
+"Requirements for obtaining Iron"
+STONE_MARBLE = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Masonry"],
+    }
+)
+"Requirements for obtaining Stone or Marble"
+URANIUM = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Mining"],
+        items.TECH_ITEMS["Atomic Theory"],
+    }
+)
+"Requirements for obtaining Uranium"
 
 
 # %% GROWTH BUILDING REQUIREMENTS DEFINITIONS
@@ -247,6 +303,7 @@ WORKSHOP = items.ItemRequirements(
 "Requirements for building a Workshop"
 FACTORY = items.ItemRequirements(
     WORKSHOP,
+    COAL,
     progression={
         items.TECH_ITEMS["Industrialization"],
     }
@@ -254,6 +311,7 @@ FACTORY = items.ItemRequirements(
 "Requirements for building a Factory"
 NUCLEAR_PLANT = items.ItemRequirements(
     FACTORY,
+    URANIUM,
     progression={
         items.TECH_ITEMS["Nuclear Fission"],
     }
@@ -266,6 +324,14 @@ SOLAR_PLANT = items.ItemRequirements(
     }
 )
 "Requirements for building a Solar Plant"
+SPACESHIP_FACTORY = items.ItemRequirements(
+    FACTORY,
+    ALUMINUM,
+    progression={
+        items.TECH_ITEMS["Robotics"],
+    }
+)
+"Requirements for building a Spaceship Factory"
 
 
 # %% COAST BUILDING REQUIREMENTS DEFINITIONS
@@ -372,6 +438,7 @@ CARAVANSARY = items.ItemRequirements(
 )
 "Requirements for building a Caravansary"
 FORGE = items.ItemRequirements(
+    IRON,
     progression={
         items.TECH_ITEMS["Metal Casting"],
     }
@@ -384,12 +451,14 @@ GARDEN = items.ItemRequirements(
 )
 "Requirements for building a Garden"
 HYDRO_PLANT = items.ItemRequirements(
+    ALUMINUM,
     progression={
         items.TECH_ITEMS["Electricity"],
     }
 )
 "Requirements for building a Hydro Plant"
 MINT = items.ItemRequirements(
+    GOLD_SILVER,
     progression={
         items.TECH_ITEMS["Currency"],
     }
@@ -407,19 +476,15 @@ RECYCLING_CENTER = items.ItemRequirements(
     }
 )
 "Requirements for building a Recycling Center"
-SPACESHIP_FACTORY = items.ItemRequirements(
-    progression={
-        items.TECH_ITEMS["Robotics"],
-    }
-)
-"Requirements for building a Spaceship Factory"
 STABLE = items.ItemRequirements(
+    HORSES_SHEEP_CATTLE,
     progression={
         items.TECH_ITEMS["Horseback Riding"],
     }
 )
 "Requirements for building a Stable"
 STONE_WORKS = items.ItemRequirements(
+    STONE_MARBLE,
     progression={
         items.TECH_ITEMS["Calendar"],
     }
@@ -453,10 +518,9 @@ EMBARKING = items.ItemRequirements(
 # %% VICTORY REQUIREMENTS DEFINITIONS
 VICTORIES = {
     "Science": items.ItemRequirements(
+        ALUMINUM,
         RECYCLING_CENTER,
         progression={
-            items.TECH_ITEMS["Mining"],
-            items.TECH_ITEMS["Electricity"],
             items.TECH_ITEMS["Rocketry"],
             items.TECH_ITEMS["Advanced Ballistics"],
             items.TECH_ITEMS["Particle Physics"],
@@ -465,7 +529,6 @@ VICTORIES = {
         },
     ),
     "Culture": items.ItemRequirements(
-        AIRPORT,
         ARCHAEOLOGISTS,
         BROADCAST_TOWER,
         HOTEL,
