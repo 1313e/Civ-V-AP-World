@@ -136,7 +136,7 @@ WORLD_WONDER_LOCATIONS = [
         )
     ),
     CivVLocationData(
-        name="Machu Pichu",
+        name="Machu Picchu",
         type=CivVLocationType.world_wonder,
         game_id=74,
         database_key_prefix="building_machu_pichu",
