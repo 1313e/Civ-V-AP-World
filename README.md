@@ -4,6 +4,7 @@
 
 - Civilization V on the Steam store with both Gods & Kings and Brave New World Expansions. Other versions will not work due to adjustments the expansions made to the base game.
 - [Civilization V AP World](https://github.com/1313e/Civ-V-AP-World/releases)
+- OPTIONAL: [Civilization V AP PopTracker Pack](https://github.com/Sparky5000/Civ5APpoptracker/releases)
 
 ## Setup
 - Download the latest APWorld from the [releases](https://github.com/1313e/Civ-V-AP-World/releases) page.
