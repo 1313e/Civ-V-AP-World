@@ -8,7 +8,7 @@ from worlds.AutoWorld import World
 
 from .constants import GAME_NAME
 from .container import CivVContainer
-from .dataclasses import CivVSlotData
+from .dataclasses import CivVAPModOptions, CivVSlotData
 from .items import (
     FILLER_ITEMS,
     ITEMS_DATA,
@@ -248,4 +248,7 @@ class CivVWorld(World):
     def fill_slot_data(self) -> dict[str, Any]:
         return CivVSlotData(
             output_file_id=self.output_file_id,
+            apmod_options=CivVAPModOptions(
+                satellites_meets_all=bool(self.options.satellites_meets_all),
+            )
         ).to_dict()

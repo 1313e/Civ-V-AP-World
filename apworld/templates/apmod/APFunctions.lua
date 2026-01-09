@@ -10,11 +10,16 @@ local LOWER_POLICY_ID = 111
 local UPPER_POLICY_ID = 155
 local LOWER_TECH_ID = 83
 local UPPER_TECH_ID = 168
+local LOWER_TEAM_ID = 0
+local UPPER_TEAM_ID = 62
 
 local player = Players[Game.GetActivePlayer()]
 local team = Teams[player:GetTeam()]
 local teamTechs = team:GetTeamTechs()
 
+local optionsTable = {
+	satellites_meets_all=nil,
+}
 local pushTable = {}
 local pushTableTableKeys = {
 	building=true, policy=true, policy_branch=true, tech=true, national_wonder=true, world_wonder=true,
@@ -149,6 +154,13 @@ function OnPolicyBranchAdopted(playerId, policyBranchId)
 end
 
 function OnTechAcquired(playerId, techId)
+	-- Upon acquiring Satellites, make sure the player's team discovers/meets all other teams
+	if(techId == 71 and optionsTable["satellites_meets_all"]) then
+		for i=LOWER_TEAM_ID, UPPER_TEAM_ID do
+			team:Meet(i)
+		end
+	end
+
 	-- If the player gets an AP tech, add it to the push table
 	if(playerId == player:GetID() and techId >= LOWER_TECH_ID and techId <= UPPER_TECH_ID) then
 		table.insert(pushTable["tech"], techId)
@@ -477,6 +489,13 @@ function AP.DeclareWarRandom(n)
 	-- Pick n times a random AI team that declares war on the player
 	for _=1, n do
 		Teams[aiTeamIds[math.random(1, #aiTeamIds)]]:DeclareWar(team:GetID())
+	end
+end
+
+function AP.SetOptionsTable(options)
+	-- Update the optionsTable with the given option values
+	for key, value in pairs(options) do
+		optionsTable[key] = value
 	end
 end
 

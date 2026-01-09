@@ -132,6 +132,15 @@ class DisguiseTraps(Toggle):
     display_name = "Disguise Traps"
 
 
+class SatellitesMeetsAll(Toggle):
+    """
+    Receiving the Satellites technology will also meet all civilizations and city-states.
+
+    """
+
+    display_name = "Satellites Meets All"
+
+
 class BuildingSanity(Toggle):
     """
     Add most standard buildings to the location pool.
@@ -225,6 +234,7 @@ class CivVOptions(PerGameCommonOptions):
     progressive_techs: ProgressiveTechs
     item_hints: ItemHints
     disguise_traps: DisguiseTraps
+    satellites_meets_all: SatellitesMeetsAll
     building_sanity: BuildingSanity
     national_wonder_sanity: NationalWonderSanity
     world_wonder_sanity: WorldWonderSanity

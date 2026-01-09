@@ -329,6 +329,9 @@ class CivVClient:
 
         """
 
+        # Set the options table in the game
+        await self.tuner.set_options_table(self.ctx.slot_data.apmod_options)
+
         # Mark all checked locations for the player
         policies_to_send = []
         policy_branches_to_unlock = []

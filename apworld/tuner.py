@@ -7,6 +7,7 @@ from typing import Any
 
 from CommonClient import logger
 
+from .dataclasses import CivVAPModOptions
 from .enums import CivVNotificationTypes
 from .exceptions import (
     TunerConnectionException,
@@ -352,6 +353,15 @@ class Tuner:
         """
 
         await self._send_mod_command(f"DeclareWarRandom({value})")
+
+    async def set_options_table(self, options: CivVAPModOptions) -> None:
+        """
+        Sets the options table in the Civ V APMod to the given mod options.
+
+        """
+
+        options_str = f"{{{','.join((f'{key}={json.dumps(value)}' for key, value in options.to_dict().items()))}}}"
+        await self._send_mod_command(f"SetOptionsTable({options_str})")
 
     async def get_push_table(self) -> dict[str, Any]:
         """
