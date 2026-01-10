@@ -74,7 +74,7 @@
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>Icons/AP_Tech_Icons.xml</FileName>
+        <FileName>Icons/AP_Icons.xml</FileName>
       </Action>
     </ModActions>
     <ModContent>
@@ -109,6 +109,18 @@
     <Content Include="BuildingTextInfos.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="Icons\AP_Policy_256.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Icons\AP_Policy_64.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Icons\AP_Policy_Adopted_64.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="NationalWonders.xml">
       <SubType>Lua</SubType>
@@ -146,7 +158,7 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="Icons\AP_Tech_Icons.xml">
+    <Content Include="Icons\AP_Icons.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>

@@ -373,8 +373,8 @@
             <GridY>1</GridY>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
-            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+            <IconAtlas>AP_POLICY_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_POLICY_A_ATLAS</IconAtlasAchieved>
         </Row>
         <Row>
             <ID>112</ID>
@@ -388,8 +388,8 @@
             <GridY>1</GridY>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
-            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+            <IconAtlas>AP_POLICY_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_POLICY_A_ATLAS</IconAtlasAchieved>
         </Row>
         <Row>
             <ID>113</ID>
@@ -403,8 +403,8 @@
             <GridY>2</GridY>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
-            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+            <IconAtlas>AP_POLICY_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_POLICY_A_ATLAS</IconAtlasAchieved>
         </Row>
         <Row>
             <ID>114</ID>
@@ -418,8 +418,8 @@
             <GridY>3</GridY>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
-            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+            <IconAtlas>AP_POLICY_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_POLICY_A_ATLAS</IconAtlasAchieved>
         </Row>
         <Row>
             <ID>115</ID>
@@ -433,8 +433,8 @@
             <GridY>3</GridY>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
-            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+            <IconAtlas>AP_POLICY_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_POLICY_A_ATLAS</IconAtlasAchieved>
         </Row>
         <Row>
             <ID>116</ID>
@@ -448,8 +448,8 @@
             <GridY>1</GridY>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
-            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+            <IconAtlas>AP_POLICY_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_POLICY_A_ATLAS</IconAtlasAchieved>
         </Row>
         <Row>
             <ID>117</ID>
@@ -463,8 +463,8 @@
             <GridY>1</GridY>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
-            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+            <IconAtlas>AP_POLICY_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_POLICY_A_ATLAS</IconAtlasAchieved>
         </Row>
         <Row>
             <ID>118</ID>
@@ -478,8 +478,8 @@
             <GridY>2</GridY>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
-            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+            <IconAtlas>AP_POLICY_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_POLICY_A_ATLAS</IconAtlasAchieved>
         </Row>
         <Row>
             <ID>119</ID>
@@ -493,8 +493,8 @@
             <GridY>2</GridY>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
-            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+            <IconAtlas>AP_POLICY_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_POLICY_A_ATLAS</IconAtlasAchieved>
         </Row>
         <Row>
             <ID>120</ID>
@@ -508,8 +508,8 @@
             <GridY>2</GridY>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
-            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+            <IconAtlas>AP_POLICY_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_POLICY_A_ATLAS</IconAtlasAchieved>
         </Row>
         <Row>
             <ID>121</ID>
@@ -523,8 +523,8 @@
             <GridY>1</GridY>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
-            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+            <IconAtlas>AP_POLICY_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_POLICY_A_ATLAS</IconAtlasAchieved>
         </Row>
         <Row>
             <ID>122</ID>
@@ -538,8 +538,8 @@
             <GridY>1</GridY>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
-            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+            <IconAtlas>AP_POLICY_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_POLICY_A_ATLAS</IconAtlasAchieved>
         </Row>
         <Row>
             <ID>123</ID>
@@ -553,8 +553,8 @@
             <GridY>2</GridY>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
-            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+            <IconAtlas>AP_POLICY_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_POLICY_A_ATLAS</IconAtlasAchieved>
         </Row>
         <Row>
             <ID>124</ID>
@@ -568,8 +568,8 @@
             <GridY>2</GridY>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
-            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+            <IconAtlas>AP_POLICY_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_POLICY_A_ATLAS</IconAtlasAchieved>
         </Row>
         <Row>
             <ID>125</ID>
@@ -583,8 +583,8 @@
             <GridY>3</GridY>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
-            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+            <IconAtlas>AP_POLICY_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_POLICY_A_ATLAS</IconAtlasAchieved>
         </Row>
         <Row>
             <ID>126</ID>
@@ -598,8 +598,8 @@
             <GridY>1</GridY>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
-            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+            <IconAtlas>AP_POLICY_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_POLICY_A_ATLAS</IconAtlasAchieved>
         </Row>
         <Row>
             <ID>127</ID>
@@ -613,8 +613,8 @@
             <GridY>1</GridY>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
-            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+            <IconAtlas>AP_POLICY_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_POLICY_A_ATLAS</IconAtlasAchieved>
         </Row>
         <Row>
             <ID>128</ID>
@@ -628,8 +628,8 @@
             <GridY>2</GridY>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
-            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+            <IconAtlas>AP_POLICY_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_POLICY_A_ATLAS</IconAtlasAchieved>
         </Row>
         <Row>
             <ID>129</ID>
@@ -643,8 +643,8 @@
             <GridY>2</GridY>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
-            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+            <IconAtlas>AP_POLICY_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_POLICY_A_ATLAS</IconAtlasAchieved>
         </Row>
         <Row>
             <ID>130</ID>
@@ -658,8 +658,8 @@
             <GridY>3</GridY>
             <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
-            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+            <IconAtlas>AP_POLICY_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_POLICY_A_ATLAS</IconAtlasAchieved>
         </Row>
         <Row>
             <ID>131</ID>
@@ -673,8 +673,8 @@
             <GridY>1</GridY>
             <TechPrereq>TECH_CLASSICAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
-            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+            <IconAtlas>AP_POLICY_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_POLICY_A_ATLAS</IconAtlasAchieved>
         </Row>
         <Row>
             <ID>132</ID>
@@ -688,8 +688,8 @@
             <GridY>1</GridY>
             <TechPrereq>TECH_CLASSICAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
-            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+            <IconAtlas>AP_POLICY_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_POLICY_A_ATLAS</IconAtlasAchieved>
         </Row>
         <Row>
             <ID>133</ID>
@@ -703,8 +703,8 @@
             <GridY>2</GridY>
             <TechPrereq>TECH_CLASSICAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
-            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+            <IconAtlas>AP_POLICY_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_POLICY_A_ATLAS</IconAtlasAchieved>
         </Row>
         <Row>
             <ID>134</ID>
@@ -718,8 +718,8 @@
             <GridY>3</GridY>
             <TechPrereq>TECH_CLASSICAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
-            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+            <IconAtlas>AP_POLICY_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_POLICY_A_ATLAS</IconAtlasAchieved>
         </Row>
         <Row>
             <ID>135</ID>
@@ -733,8 +733,8 @@
             <GridY>3</GridY>
             <TechPrereq>TECH_CLASSICAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
-            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+            <IconAtlas>AP_POLICY_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_POLICY_A_ATLAS</IconAtlasAchieved>
         </Row>
         <Row>
             <ID>136</ID>
@@ -748,8 +748,8 @@
             <GridY>1</GridY>
             <TechPrereq>TECH_CLASSICAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
-            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+            <IconAtlas>AP_POLICY_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_POLICY_A_ATLAS</IconAtlasAchieved>
         </Row>
         <Row>
             <ID>137</ID>
@@ -763,8 +763,8 @@
             <GridY>1</GridY>
             <TechPrereq>TECH_CLASSICAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
-            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+            <IconAtlas>AP_POLICY_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_POLICY_A_ATLAS</IconAtlasAchieved>
         </Row>
         <Row>
             <ID>138</ID>
@@ -778,8 +778,8 @@
             <GridY>2</GridY>
             <TechPrereq>TECH_CLASSICAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
-            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+            <IconAtlas>AP_POLICY_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_POLICY_A_ATLAS</IconAtlasAchieved>
         </Row>
         <Row>
             <ID>139</ID>
@@ -793,8 +793,8 @@
             <GridY>2</GridY>
             <TechPrereq>TECH_CLASSICAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
-            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+            <IconAtlas>AP_POLICY_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_POLICY_A_ATLAS</IconAtlasAchieved>
         </Row>
         <Row>
             <ID>140</ID>
@@ -808,8 +808,8 @@
             <GridY>3</GridY>
             <TechPrereq>TECH_CLASSICAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
-            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+            <IconAtlas>AP_POLICY_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_POLICY_A_ATLAS</IconAtlasAchieved>
         </Row>
         <Row>
             <ID>141</ID>
@@ -823,8 +823,8 @@
             <GridY>1</GridY>
             <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
-            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+            <IconAtlas>AP_POLICY_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_POLICY_A_ATLAS</IconAtlasAchieved>
         </Row>
         <Row>
             <ID>142</ID>
@@ -838,8 +838,8 @@
             <GridY>1</GridY>
             <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
-            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+            <IconAtlas>AP_POLICY_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_POLICY_A_ATLAS</IconAtlasAchieved>
         </Row>
         <Row>
             <ID>143</ID>
@@ -853,8 +853,8 @@
             <GridY>2</GridY>
             <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
-            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+            <IconAtlas>AP_POLICY_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_POLICY_A_ATLAS</IconAtlasAchieved>
         </Row>
         <Row>
             <ID>144</ID>
@@ -868,8 +868,8 @@
             <GridY>2</GridY>
             <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
-            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+            <IconAtlas>AP_POLICY_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_POLICY_A_ATLAS</IconAtlasAchieved>
         </Row>
         <Row>
             <ID>145</ID>
@@ -883,8 +883,8 @@
             <GridY>3</GridY>
             <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
-            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+            <IconAtlas>AP_POLICY_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_POLICY_A_ATLAS</IconAtlasAchieved>
         </Row>
         <Row>
             <ID>146</ID>
@@ -898,8 +898,8 @@
             <GridY>1</GridY>
             <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
-            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+            <IconAtlas>AP_POLICY_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_POLICY_A_ATLAS</IconAtlasAchieved>
         </Row>
         <Row>
             <ID>147</ID>
@@ -913,8 +913,8 @@
             <GridY>1</GridY>
             <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
-            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+            <IconAtlas>AP_POLICY_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_POLICY_A_ATLAS</IconAtlasAchieved>
         </Row>
         <Row>
             <ID>148</ID>
@@ -928,8 +928,8 @@
             <GridY>2</GridY>
             <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
-            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+            <IconAtlas>AP_POLICY_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_POLICY_A_ATLAS</IconAtlasAchieved>
         </Row>
         <Row>
             <ID>149</ID>
@@ -943,8 +943,8 @@
             <GridY>2</GridY>
             <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
-            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+            <IconAtlas>AP_POLICY_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_POLICY_A_ATLAS</IconAtlasAchieved>
         </Row>
         <Row>
             <ID>150</ID>
@@ -958,8 +958,8 @@
             <GridY>3</GridY>
             <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
-            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+            <IconAtlas>AP_POLICY_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_POLICY_A_ATLAS</IconAtlasAchieved>
         </Row>
         <Row>
             <ID>151</ID>
@@ -973,8 +973,8 @@
             <GridY>1</GridY>
             <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
-            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+            <IconAtlas>AP_POLICY_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_POLICY_A_ATLAS</IconAtlasAchieved>
         </Row>
         <Row>
             <ID>152</ID>
@@ -988,8 +988,8 @@
             <GridY>1</GridY>
             <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
-            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+            <IconAtlas>AP_POLICY_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_POLICY_A_ATLAS</IconAtlasAchieved>
         </Row>
         <Row>
             <ID>153</ID>
@@ -1003,8 +1003,8 @@
             <GridY>2</GridY>
             <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
-            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+            <IconAtlas>AP_POLICY_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_POLICY_A_ATLAS</IconAtlasAchieved>
         </Row>
         <Row>
             <ID>154</ID>
@@ -1018,8 +1018,8 @@
             <GridY>2</GridY>
             <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
-            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+            <IconAtlas>AP_POLICY_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_POLICY_A_ATLAS</IconAtlasAchieved>
         </Row>
         <Row>
             <ID>155</ID>
@@ -1033,8 +1033,8 @@
             <GridY>3</GridY>
             <TechPrereq>TECH_MEDIEVAL_ERA</TechPrereq>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
-            <IconAtlasAchieved>AP_TECH_ICON_ATLAS</IconAtlasAchieved>
+            <IconAtlas>AP_POLICY_ATLAS</IconAtlas>
+            <IconAtlasAchieved>AP_POLICY_A_ATLAS</IconAtlasAchieved>
         </Row>
     </Policies>
     <Policy_PreReqPolicies>

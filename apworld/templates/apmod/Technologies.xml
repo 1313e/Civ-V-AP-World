@@ -1299,7 +1299,7 @@
             <GridY>4</GridY>
             <Quote>[NEWLINE]"Ah shit, here we go again."[NEWLINE] - CJ, GTA: San Andreas (suggested by [COLOR_POSITIVE_TEXT]@1313e[ENDCOLOR])</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>82</ID>
@@ -1315,7 +1315,7 @@
             <GridY>30</GridY>
             <Quote>AI Start</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>83</ID>
@@ -1330,7 +1330,7 @@
             <GridY>1</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>84</ID>
@@ -1345,7 +1345,7 @@
             <GridY>4</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>85</ID>
@@ -1360,7 +1360,7 @@
             <GridY>6</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>86</ID>
@@ -1375,7 +1375,7 @@
             <GridY>8</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>87</ID>
@@ -1390,7 +1390,7 @@
             <GridY>0</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>88</ID>
@@ -1405,7 +1405,7 @@
             <GridY>1</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>89</ID>
@@ -1420,7 +1420,7 @@
             <GridY>2</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>90</ID>
@@ -1435,7 +1435,7 @@
             <GridY>4</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>91</ID>
@@ -1450,7 +1450,7 @@
             <GridY>6</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>92</ID>
@@ -1465,7 +1465,7 @@
             <GridY>8</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>93</ID>
@@ -1480,7 +1480,7 @@
             <GridY>9</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>94</ID>
@@ -1495,7 +1495,7 @@
             <GridY>2</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>95</ID>
@@ -1510,7 +1510,7 @@
             <GridY>4</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>96</ID>
@@ -1525,7 +1525,7 @@
             <GridY>6</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>97</ID>
@@ -1540,7 +1540,7 @@
             <GridY>8</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>98</ID>
@@ -1555,7 +1555,7 @@
             <GridY>1</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>99</ID>
@@ -1570,7 +1570,7 @@
             <GridY>2</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>100</ID>
@@ -1585,7 +1585,7 @@
             <GridY>6</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>101</ID>
@@ -1600,7 +1600,7 @@
             <GridY>7</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>102</ID>
@@ -1615,7 +1615,7 @@
             <GridY>9</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>103</ID>
@@ -1630,7 +1630,7 @@
             <GridY>1</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>104</ID>
@@ -1645,7 +1645,7 @@
             <GridY>4</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>105</ID>
@@ -1660,7 +1660,7 @@
             <GridY>6</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>106</ID>
@@ -1675,7 +1675,7 @@
             <GridY>8</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>107</ID>
@@ -1690,7 +1690,7 @@
             <GridY>0</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>108</ID>
@@ -1705,7 +1705,7 @@
             <GridY>2</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>109</ID>
@@ -1720,7 +1720,7 @@
             <GridY>5</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>110</ID>
@@ -1735,7 +1735,7 @@
             <GridY>7</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>111</ID>
@@ -1750,7 +1750,7 @@
             <GridY>8</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>112</ID>
@@ -1765,7 +1765,7 @@
             <GridY>9</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>113</ID>
@@ -1780,7 +1780,7 @@
             <GridY>1</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>114</ID>
@@ -1795,7 +1795,7 @@
             <GridY>3</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>115</ID>
@@ -1810,7 +1810,7 @@
             <GridY>5</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>116</ID>
@@ -1825,7 +1825,7 @@
             <GridY>7</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>117</ID>
@@ -1840,7 +1840,7 @@
             <GridY>9</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>118</ID>
@@ -1855,7 +1855,7 @@
             <GridY>1</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>119</ID>
@@ -1870,7 +1870,7 @@
             <GridY>3</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>120</ID>
@@ -1885,7 +1885,7 @@
             <GridY>5</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>121</ID>
@@ -1900,7 +1900,7 @@
             <GridY>8</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>122</ID>
@@ -1915,7 +1915,7 @@
             <GridY>9</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>123</ID>
@@ -1930,7 +1930,7 @@
             <GridY>1</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>124</ID>
@@ -1945,7 +1945,7 @@
             <GridY>3</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>125</ID>
@@ -1960,7 +1960,7 @@
             <GridY>5</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>126</ID>
@@ -1975,7 +1975,7 @@
             <GridY>6</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>127</ID>
@@ -1990,7 +1990,7 @@
             <GridY>8</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>128</ID>
@@ -2005,7 +2005,7 @@
             <GridY>9</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>129</ID>
@@ -2020,7 +2020,7 @@
             <GridY>1</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>130</ID>
@@ -2035,7 +2035,7 @@
             <GridY>2</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>131</ID>
@@ -2050,7 +2050,7 @@
             <GridY>5</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>132</ID>
@@ -2065,7 +2065,7 @@
             <GridY>8</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>133</ID>
@@ -2080,7 +2080,7 @@
             <GridY>1</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>134</ID>
@@ -2095,7 +2095,7 @@
             <GridY>2</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>135</ID>
@@ -2110,7 +2110,7 @@
             <GridY>3</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>136</ID>
@@ -2125,7 +2125,7 @@
             <GridY>5</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>137</ID>
@@ -2140,7 +2140,7 @@
             <GridY>7</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>138</ID>
@@ -2155,7 +2155,7 @@
             <GridY>2</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>139</ID>
@@ -2170,7 +2170,7 @@
             <GridY>4</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>140</ID>
@@ -2185,7 +2185,7 @@
             <GridY>5</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>141</ID>
@@ -2200,7 +2200,7 @@
             <GridY>7</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>142</ID>
@@ -2215,7 +2215,7 @@
             <GridY>1</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>143</ID>
@@ -2230,7 +2230,7 @@
             <GridY>3</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>144</ID>
@@ -2245,7 +2245,7 @@
             <GridY>5</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>145</ID>
@@ -2260,7 +2260,7 @@
             <GridY>7</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>146</ID>
@@ -2275,7 +2275,7 @@
             <GridY>1</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>147</ID>
@@ -2290,7 +2290,7 @@
             <GridY>3</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>148</ID>
@@ -2305,7 +2305,7 @@
             <GridY>5</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>149</ID>
@@ -2320,7 +2320,7 @@
             <GridY>7</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>150</ID>
@@ -2335,7 +2335,7 @@
             <GridY>1</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>151</ID>
@@ -2350,7 +2350,7 @@
             <GridY>2</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>152</ID>
@@ -2365,7 +2365,7 @@
             <GridY>4</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>153</ID>
@@ -2380,7 +2380,7 @@
             <GridY>5</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>154</ID>
@@ -2395,7 +2395,7 @@
             <GridY>6</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>155</ID>
@@ -2410,7 +2410,7 @@
             <GridY>7</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>156</ID>
@@ -2425,7 +2425,7 @@
             <GridY>0</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>157</ID>
@@ -2440,7 +2440,7 @@
             <GridY>1</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>158</ID>
@@ -2455,7 +2455,7 @@
             <GridY>2</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>159</ID>
@@ -2470,7 +2470,7 @@
             <GridY>5</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>160</ID>
@@ -2485,7 +2485,7 @@
             <GridY>6</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>161</ID>
@@ -2500,7 +2500,7 @@
             <GridY>7</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>162</ID>
@@ -2515,7 +2515,7 @@
             <GridY>0</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>163</ID>
@@ -2530,7 +2530,7 @@
             <GridY>0</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>164</ID>
@@ -2545,7 +2545,7 @@
             <GridY>0</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>165</ID>
@@ -2560,7 +2560,7 @@
             <GridY>0</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>166</ID>
@@ -2575,7 +2575,7 @@
             <GridY>0</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>167</ID>
@@ -2590,7 +2590,7 @@
             <GridY>0</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>168</ID>
@@ -2605,7 +2605,7 @@
             <GridY>0</GridY>
             <Quote>---</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>169</ID>
@@ -2621,7 +2621,7 @@
             <GridY>4</GridY>
             <Quote>[NEWLINE]"If you could see the vegetables I grow with my own hands, you wouldn't talk to me about empire."[NEWLINE] - Roman Emperor Diocletian (suggested by [COLOR_POSITIVE_TEXT]@vanhalt[ENDCOLOR])</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>170</ID>
@@ -2637,7 +2637,7 @@
             <GridY>4</GridY>
             <Quote>[NEWLINE]"Had I been present at the Creation, I would have given some useful hints for the better ordering of the universe."[NEWLINE] - Alfonso X, King of Castile (suggested by [COLOR_POSITIVE_TEXT]@vanhalt[ENDCOLOR])</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>171</ID>
@@ -2653,7 +2653,7 @@
             <GridY>4</GridY>
             <Quote>[NEWLINE]If you have a good quote to put here, please DM me ([COLOR_POSITIVE_TEXT]@1313e[ENDCOLOR])</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>172</ID>
@@ -2669,7 +2669,7 @@
             <GridY>4</GridY>
             <Quote>[NEWLINE]If you have a good quote to put here, please DM me ([COLOR_POSITIVE_TEXT]@1313e[ENDCOLOR])</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>173</ID>
@@ -2685,7 +2685,7 @@
             <GridY>4</GridY>
             <Quote>[NEWLINE]If you have a good quote to put here, please DM me ([COLOR_POSITIVE_TEXT]@1313e[ENDCOLOR])</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>174</ID>
@@ -2701,7 +2701,7 @@
             <GridY>4</GridY>
             <Quote>[NEWLINE]If you have a good quote to put here, please DM me ([COLOR_POSITIVE_TEXT]@1313e[ENDCOLOR])</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
         <Row>
             <ID>175</ID>
@@ -2717,7 +2717,7 @@
             <GridY>4</GridY>
             <Quote>[NEWLINE]"We value your privacy ;)"[NEWLINE] - Obnoxious cookie banner (suggested by [COLOR_POSITIVE_TEXT]@mrrickw[ENDCOLOR])[NEWLINE]</Quote>
             <PortraitIndex>0</PortraitIndex>
-            <IconAtlas>AP_TECH_ICON_ATLAS</IconAtlas>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
     </Technologies>
     <Technology_PrereqTechs>

@@ -45,12 +45,15 @@ class CivVContainer(APPlayerContainer):
         "templates/apmod/Technologies.xml",
         "templates/apmod/WorldWonders.xml",
         "templates/apmod/WorldWonderTextInfos.xml",
+        "templates/apmod/Icons/AP_Icons.xml",
+        "templates/apmod/Icons/AP_Policy_64.dds",
+        "templates/apmod/Icons/AP_Policy_256.dds",
+        "templates/apmod/Icons/AP_Policy_Adopted_64.dds",
         "templates/apmod/Icons/AP_Tech_64.dds",
         "templates/apmod/Icons/AP_Tech_80.dds",
         "templates/apmod/Icons/AP_Tech_128.dds",
         "templates/apmod/Icons/AP_Tech_214.dds",
         "templates/apmod/Icons/AP_Tech_256.dds",
-        "templates/apmod/Icons/AP_Tech_Icons.xml",
     ]
     "List of paths of all Civ V AP Mod template files"
     AP_MOD_NAME: str = "apmod"

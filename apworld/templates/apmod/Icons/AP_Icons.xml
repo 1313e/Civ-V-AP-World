@@ -2,37 +2,58 @@
 <GameData>
 	<IconTextureAtlases>
 		<Row>
-			<Atlas>AP_TECH_ICON_ATLAS</Atlas>
+			<Atlas>AP_TECH_ATLAS</Atlas>
 			<IconSize>256</IconSize>
 			<Filename>AP_Tech_256.dds</Filename>
 			<IconsPerRow>1</IconsPerRow>
 			<IconsPerColumn>1</IconsPerColumn>
 		</Row>
 		<Row>
-			<Atlas>AP_TECH_ICON_ATLAS</Atlas>
+			<Atlas>AP_TECH_ATLAS</Atlas>
 			<IconSize>214</IconSize>
 			<Filename>AP_Tech_214.dds</Filename>
 			<IconsPerRow>1</IconsPerRow>
 			<IconsPerColumn>1</IconsPerColumn>
 		</Row>
 		<Row>
-			<Atlas>AP_TECH_ICON_ATLAS</Atlas>
+			<Atlas>AP_TECH_ATLAS</Atlas>
 			<IconSize>128</IconSize>
 			<Filename>AP_Tech_128.dds</Filename>
 			<IconsPerRow>1</IconsPerRow>
 			<IconsPerColumn>1</IconsPerColumn>
 		</Row>
 		<Row>
-			<Atlas>AP_TECH_ICON_ATLAS</Atlas>
+			<Atlas>AP_TECH_ATLAS</Atlas>
 			<IconSize>80</IconSize>
 			<Filename>AP_Tech_80.dds</Filename>
 			<IconsPerRow>1</IconsPerRow>
 			<IconsPerColumn>1</IconsPerColumn>
 		</Row>
 		<Row>
-			<Atlas>AP_TECH_ICON_ATLAS</Atlas>
+			<Atlas>AP_TECH_ATLAS</Atlas>
 			<IconSize>64</IconSize>
 			<Filename>AP_Tech_64.dds</Filename>
+			<IconsPerRow>1</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>AP_POLICY_ATLAS</Atlas>
+			<IconSize>256</IconSize>
+			<Filename>AP_Policy_256.dds</Filename>
+			<IconsPerRow>1</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>AP_POLICY_ATLAS</Atlas>
+			<IconSize>64</IconSize>
+			<Filename>AP_Policy_64.dds</Filename>
+			<IconsPerRow>1</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>AP_POLICY_A_ATLAS</Atlas>
+			<IconSize>64</IconSize>
+			<Filename>AP_Policy_Adopted_64.dds</Filename>
 			<IconsPerRow>1</IconsPerRow>
 			<IconsPerColumn>1</IconsPerColumn>
 		</Row>

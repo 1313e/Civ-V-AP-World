@@ -22,21 +22,24 @@
   <References />
   <Blocks />
   <Files>
-    <File md5="B056E9474D39953F4EC5CB6B4106E546" import="0">APFunctions.lua</File>
+    <File md5="F753886C9886C891F7F5C264E3DC4061" import="0">APFunctions.lua</File>
     <File md5="5B9C45533A8E74AF2E2730D92A306343" import="0">Buildings.xml</File>
     <File md5="0550950711859D26B6FA12B4F9994D23" import="0">BuildingTextInfos.xml</File>
+    <File md5="A0D841E35C89A0E2F38C79831BC2C4CC" import="1">Icons/AP_Policy_256.dds</File>
+    <File md5="1CE11AA50D0E300ED7C113FBE4C8B44E" import="1">Icons/AP_Policy_64.dds</File>
+    <File md5="718041914E0DDEFF0C3B79FC206C53DE" import="1">Icons/AP_Policy_Adopted_64.dds</File>
     <File md5="2123DEBFD539012CEA9E57B05465D219" import="0">NationalWonders.xml</File>
     <File md5="3AC2F3CD19C337D0C9E6F29F9E3D894F" import="0">NationalWonderTextInfos.xml</File>
     <File md5="8382C7420D4F319681DD5D0B82C8F969" import="0">PolicyBranches.xml</File>
-    <File md5="F50AF4983469D2AA71A8EA168B37A204" import="0">Policies.xml</File>
-    <File md5="9FDB79374AFADA7249B402C1A84FDC99" import="1">Icons/AP_Tech_128.dds</File>
-    <File md5="4DCA93CF29178E5CA21DB8E78BB3FA24" import="1">Icons/AP_Tech_214.dds</File>
-    <File md5="B080E5912DB08B0196596C7326C5EF39" import="1">Icons/AP_Tech_256.dds</File>
-    <File md5="536D1657CA0D395709042AEDC33FC425" import="1">Icons/AP_Tech_64.dds</File>
-    <File md5="07B4C010B9F49B9134BB67DF3A6B2D50" import="1">Icons/AP_Tech_80.dds</File>
-    <File md5="7152D0357C288208BCFDCEC907C86627" import="0">Icons/AP_Tech_Icons.xml</File>
+    <File md5="9B99DBCF2F7537F32951FAFE1616EEFC" import="0">Policies.xml</File>
+    <File md5="0526A24BDBC9DE50FA4A59BBCCC73FF6" import="1">Icons/AP_Tech_128.dds</File>
+    <File md5="1D1C9CF916CBDDBC4D5BB082CF209FA1" import="1">Icons/AP_Tech_214.dds</File>
+    <File md5="3D1982058EC00C6D6B9CD45E434EF9CB" import="1">Icons/AP_Tech_256.dds</File>
+    <File md5="5EEE6AEABC8EBD9E5F118A924772A48F" import="1">Icons/AP_Tech_64.dds</File>
+    <File md5="8D78AC561EDB6F759E31E87F16BA9BB8" import="1">Icons/AP_Tech_80.dds</File>
+    <File md5="EE05402EF6777005921271E7080B115C" import="0">Icons/AP_Icons.xml</File>
     <File md5="818E5B623F9F56C4C44E0CF87C2518F3" import="0">PolicyBranchTextInfos.xml</File>
-    <File md5="5143BBA73C5E4B366460BD01E4313AD3" import="0">Technologies.xml</File>
+    <File md5="543C7E1F8CE5E66CF45B3A2B726F3755" import="0">Technologies.xml</File>
     <File md5="23394FEC3BB005F4FAC845430B3E0418" import="0">WorldWonders.xml</File>
     <File md5="DA6408B067FF5C864D12B3CA5C8023EE" import="0">WorldWonderTextInfos.xml</File>
   </Files>
@@ -52,7 +55,7 @@
       <UpdateDatabase>Policies.xml</UpdateDatabase>
       <UpdateDatabase>Technologies.xml</UpdateDatabase>
       <UpdateDatabase>WorldWonders.xml</UpdateDatabase>
-      <UpdateDatabase>Icons/AP_Tech_Icons.xml</UpdateDatabase>
+      <UpdateDatabase>Icons/AP_Icons.xml</UpdateDatabase>
     </OnModActivated>
   </Actions>
   <EntryPoints>
