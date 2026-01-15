@@ -1,4 +1,5 @@
 # %% IMPORTS
+import functools
 import itertools
 import pkgutil
 import shutil
@@ -58,6 +59,15 @@ class CivVContainer(APPlayerContainer):
     "List of paths of all Civ V AP Mod template files"
     AP_MOD_NAME: str = "apmod"
     "Name of the Civ V AP Mod"
+    XML_CHARS_SUBSTITUTIONS: dict[str, str] = {
+        '"': "'",
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        "{": "",
+        "}": "",
+    }
+    "Substitution dict for invalid XML characters"
 
     def __init__(self, path: Path, world: "CivVWorld | None", **kwargs):
         # Call super method
@@ -68,14 +78,14 @@ class CivVContainer(APPlayerContainer):
         self.world: "CivVWorld | None" = world
         "The instance of the Civ V AP world to use for this container"
 
-    @staticmethod
-    def clean_text(text: str) -> str:
+    @classmethod
+    def clean_text(cls, text: str) -> str:
         """
         Clean the given `text` into a version that is safe for XML.
 
         """
 
-        return text.replace('"', "'").replace('&', 'and').replace('{', '').replace('}', '')
+        return functools.reduce(lambda x, y: x.replace(y[0], y[1]), cls.XML_CHARS_SUBSTITUTIONS.items(), text)
 
     def _get_formatted_item(self, item: Item) -> str:
         """
