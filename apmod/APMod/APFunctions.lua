@@ -161,6 +161,11 @@ function OnTechAcquired(playerId, techId)
 		end
 	end
 
+	-- Upon acquiring Industrial Era, if player has not founded a religion yet, provide player with a free Great Prophet
+	if(playerId == player:GetID() and techId == 172 and not player:HasCreatedReligion()) then
+		player:AddFreeUnit(128)
+	end
+
 	-- If the player gets an AP tech, add it to the push table
 	if(playerId == player:GetID() and techId >= LOWER_TECH_ID and techId <= UPPER_TECH_ID) then
 		table.insert(pushTable["tech"], techId)

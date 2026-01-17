@@ -22,7 +22,7 @@
   <References />
   <Blocks />
   <Files>
-    <File md5="F753886C9886C891F7F5C264E3DC4061" import="0">APFunctions.lua</File>
+    <File md5="9D68EF00EE7D7227F584424C1409FC6A" import="0">APFunctions.lua</File>
     <File md5="5B9C45533A8E74AF2E2730D92A306343" import="0">Buildings.xml</File>
     <File md5="0550950711859D26B6FA12B4F9994D23" import="0">BuildingTextInfos.xml</File>
     <File md5="A0D841E35C89A0E2F38C79831BC2C4CC" import="1">Icons/AP_Policy_256.dds</File>
@@ -39,7 +39,7 @@
     <File md5="8D78AC561EDB6F759E31E87F16BA9BB8" import="1">Icons/AP_Tech_80.dds</File>
     <File md5="EE05402EF6777005921271E7080B115C" import="0">Icons/AP_Icons.xml</File>
     <File md5="818E5B623F9F56C4C44E0CF87C2518F3" import="0">PolicyBranchTextInfos.xml</File>
-    <File md5="543C7E1F8CE5E66CF45B3A2B726F3755" import="0">Technologies.xml</File>
+    <File md5="064B59ABB8C69A591AEC052B2DF97BB8" import="0">Technologies.xml</File>
     <File md5="23394FEC3BB005F4FAC845430B3E0418" import="0">WorldWonders.xml</File>
     <File md5="DA6408B067FF5C864D12B3CA5C8023EE" import="0">WorldWonderTextInfos.xml</File>
   </Files>

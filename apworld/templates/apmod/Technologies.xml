@@ -2660,7 +2660,7 @@
             <Type>TECH_INDUSTRIAL_ERA</Type>
             <Cost>0</Cost>
             <Description>Industrial Era</Description>
-            <Help>Unlocks researching all [COLOR_POSITIVE_TEXT]Industrial Era[ENDCOLOR] AP technologies.</Help>
+            <Help>Unlocks researching all [COLOR_POSITIVE_TEXT]Industrial Era[ENDCOLOR] AP technologies.[NEWLINE][NEWLINE]Provides a free Great Prophet if player has not founded a religion yet.</Help>
             <Era>ERA_INDUSTRIAL</Era>
             <Trade>false</Trade>
             <Disable>true</Disable>
