@@ -45,8 +45,8 @@ class CivVItemClassificationColors(StrEnum):
     """
 
     progression = "COLOR:117:255:43:255"
-    useful = "COLOR:39:113:255:255"
-    filler = "COLOR:64:251:252:255"
+    useful = "COLOR:64:251:252:255"
+    filler = "COLOR:39:113:255:255"
     trap = "COLOR:248:38:38:255"
 
     @classmethod
@@ -69,8 +69,8 @@ class CivVItemClassificationFlags(StrEnum):
     """
 
     progression = "ICON_TEAM_4"
-    useful = "ICON_TEAM_8"
-    filler = "ICON_TEAM_5"
+    useful = "ICON_TEAM_5"
+    filler = "ICON_TEAM_8"
     trap = "ICON_TEAM_2"
 
     @classmethod
