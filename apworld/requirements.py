@@ -10,6 +10,7 @@ __all__ = [
     "ARCHAEOLOGISTS",
     "ARMORY",
     "ARSENAL",
+    "ARTISTS_GUILD",
     "BANK",
     "BARRACKS",
     "BOMB_SHELTER",
@@ -40,6 +41,7 @@ __all__ = [
     "MINT",
     "MONUMENT",
     "MUSEUM",
+    "MUSICIANS_GUILD",
     "NUCLEAR_PLANT",
     "OPERA_HOUSE",
     "POLICE_STATION",
@@ -62,6 +64,7 @@ __all__ = [
     "WATER_MILL",
     "WINDMILL",
     "WORKSHOP",
+    "WRITERS_GUILD",
     "URANIUM",
     "ZOO",
 ]
@@ -424,6 +427,27 @@ POLICE_STATION = items.ItemRequirements(
 "Requirements for building a Police Station"
 
 
+# %% GUILDS
+ARTISTS_GUILD = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Guilds"],
+    }
+)
+"Requirements for building a Artists' Guild"
+MUSICIANS_GUILD = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Acoustics"],
+    }
+)
+"Requirements for building a Musicians' Guild"
+WRITERS_GUILD = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Drama and Poetry"],
+    }
+)
+"Requirements for building a Writers' Guild"
+
+
 # %% BONUS/MISC BUILDING REQUIREMENTS DEFINITIONS
 BOMB_SHELTER = items.ItemRequirements(
     progression={
@@ -530,8 +554,11 @@ VICTORIES = {
     ),
     "Culture": items.ItemRequirements(
         ARCHAEOLOGISTS,
+        ARTISTS_GUILD,
         BROADCAST_TOWER,
         HOTEL,
+        MUSICIANS_GUILD,
+        WRITERS_GUILD,
         progression={
             items.POLICY_ITEMS["Aesthetics"],
             items.POLICY_ITEMS["Cultural Exchange"],
