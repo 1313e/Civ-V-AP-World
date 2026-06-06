@@ -427,12 +427,26 @@ function AP.IsModReady()
 	PrintResponse('{"id": "<insert_output_file_id>"}')
 end
 
+function AP.SendAlert(message)
+	-- Send a simple alert to the player with provided message
+	Events.GameplayAlertMessage(message)
+end
+
 function AP.SendNotification(title, message, type)
 	-- Send a notification to the player of the given type with provided title and message
 	if type == nil then
 		type = 0
 	end
 	player:AddNotification(notificationTypes[type], message, title)
+end
+
+function AP.SendPopup(message)
+	-- Send a popup to the player with provided message
+	Events.SerialEventGameMessagePopup({
+		Type=ButtonPopupTypes.BUTTONPOPUP_TEXT,
+		Data1=-1,
+		Text=message
+	})
 end
 
 function AP.GrantPolicies(policyIds)

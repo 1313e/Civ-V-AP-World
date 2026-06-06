@@ -214,6 +214,23 @@ class Tuner:
         except (TunerRuntimeException, TunerTimeoutException):
             return None
 
+    async def send_alert(self, message: str):
+        """
+        Sends an alert to the player with the provided `message`.
+
+        """
+
+        await self._send_mod_command(f"SendAlert({message!r})")
+
+    async def send_alerts(self, messages: list[str]):
+        """
+        Sends an alert to the player for each message in the provided `messages`.
+
+        """
+
+        for message in messages:
+            await self.send_alert(message)
+
     async def send_notification(self, title: str, message: str, notification_type: CivVNotificationTypes):
         """
         Sends a notification to the player of the given `notification_type` with the provided `title` and `message`.

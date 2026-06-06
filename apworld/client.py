@@ -14,9 +14,9 @@ from Utils import init_logging
 from .container import CivVContainer
 from .context import CivVContext
 from .constants import ADDRESS, GAME_NAME, PORT
-from .enums import CivVLocationType, CivVItemType, CivVNotificationTypes
+from .enums import CivVLocationType, CivVItemClassificationColors, CivVItemType, CivVNotificationTypes
 from .exceptions import TunerConnectionException
-from .items import ITEMS_DATA_BY_ID
+from .items import ITEMS_DATA_BY_ID, CivVItemData
 from .locations import LOCATIONS_DATA_BY_ID, LOCATIONS_DATA_BY_TYPE_ID
 from .tuner import Tuner
 
@@ -119,6 +119,17 @@ class CivVClient:
             return result
 
         return wrapper
+
+    @staticmethod
+    def create_received_item_message(item: CivVItemData, player_name: str) -> str:
+        """
+        Creates a message to be shown in Civ V as an alert, indicating that given `item` was received from the provided
+        `player_name`.
+
+        """
+
+        color = CivVItemClassificationColors.get_color(item.classification)
+        return f"Received [{color}]{item.name}[ENDCOLOR] from [COLOR_POSITIVE_TEXT]{player_name}[ENDCOLOR]"
 
     @classmethod
     def run_client(cls, server_address: str | None = None, password: str | None = None, name: str | None = None):
@@ -384,23 +395,27 @@ class CivVClient:
         filler_to_send = defaultdict(int)
         policies_to_send = []
         techs_to_send = []
-        item_ids_to_receive = [x.item for x in self.ctx.items_received[len(self.ctx.received_item_ids):]]
-        for id_to_receive in item_ids_to_receive:
-            # Retrieve the data on this item
-            item = ITEMS_DATA_BY_ID[id_to_receive]
+        items_to_receive = self.ctx.items_received[len(self.ctx.received_item_ids):]
+        messages = []
+        item_ids = []
+        for network_item in items_to_receive:
+            # Retrieve the data on this item and store both the item ID and player who had it for later
+            item = ITEMS_DATA_BY_ID[network_item.item]
+            item_ids.append(network_item.item)
+            messages.append(self.create_received_item_message(item, self.ctx.player_names[network_item.player]))
 
             # Retrieve the ID to send to the player according to its item type
             match item.type:
                 case CivVItemType.era | CivVItemType.tech:
-                    techs_to_send.append(item.game_ids[self.ctx.received_item_ids.count(id_to_receive)])
+                    techs_to_send.append(item.game_ids[self.ctx.received_item_ids.count(network_item.item)])
                 case CivVItemType.policy:
-                    policies_to_send.append(item.game_ids[self.ctx.received_item_ids.count(id_to_receive)])
+                    policies_to_send.append(item.game_ids[self.ctx.received_item_ids.count(network_item.item)])
                 case CivVItemType.bonus | CivVItemType.trap:
                     for name, value in item.action.items():
                         filler_to_send[name] += value
 
             # Add ID to list of received IDs to account for multiple progressive items being sent at once
-            self.ctx.received_item_ids.append(id_to_receive)
+            self.ctx.received_item_ids.append(network_item.item)
 
         # Grant all policies and techs at once, as it is far more efficient
         if policies_to_send:
@@ -412,6 +427,7 @@ class CivVClient:
         for name, value in filler_to_send.items():
             await getattr(self.tuner, name)(value)
 
-        # Finally, update the item table with all sent item IDs if any
-        if item_ids_to_receive:
-            await self.tuner.update_item_table(item_ids_to_receive)
+        # Finally, send an alert to the player for each item sent and update the item table
+        if items_to_receive:
+            await self.tuner.send_alerts(messages)
+            await self.tuner.update_item_table(item_ids)
