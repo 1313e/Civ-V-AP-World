@@ -1,3 +1,5 @@
+include( "SaveUtils" ); MY_MOD_NAME = "APMod";
+
 AP = {}
 Game.AP = AP
 
@@ -24,7 +26,11 @@ local pushTable = {}
 local pushTableTableKeys = {
 	building=true, policy=true, policy_branch=true, tech=true, national_wonder=true, world_wonder=true,
 }
+local scriptDataKeys = {
+	free_policies_to_grant="free_policies_to_grant", item_table="item_table",
+}
 local freePoliciesToGrant = 0
+local itemTable = {}
 local techIdsToEraIds = {
 	[0]=0, [1]=0, [2]=0, [3]=0, [4]=0, [5]=0, [6]=0, [7]=0, [8]=0, [9]=0, [10]=0, [11]=0,
 	[12]=1, [13]=1, [14]=1, [15]=1, [16]=1, [17]=1, [18]=1, [19]=1, [20]=1,
@@ -222,11 +228,11 @@ end
 function OnNotificationAdded(notification, notificationType, toolTip, summary, gameValue, extraGameData)
 	-- If the player gets a free social policy but has none to pick, set number of free policies to zero
 	if(notificationType == NotificationTypes.NOTIFICATION_FREE_POLICY and not HasPolicyToUnlock()) then
-		freePoliciesToGrant = freePoliciesToGrant + player:GetNumFreePolicies()
+		ChangeFreePoliciesToGrant(player:GetNumFreePolicies())
 		player:SetNumFreePolicies(0);
 	end
 
-	-- If the player gets the "Can adopy policy" notification but has none to pick, remove the notification
+	-- If the player gets the "Can adopt policy" notification but has none to pick, remove the notification
 	if(notificationType == NotificationTypes.NOTIFICATION_POLICY and not HasPolicyToUnlock()) then
 		UI.RemoveNotification(notification)
 	end
@@ -236,7 +242,7 @@ function OnTurnStart()
 	-- If the player has any waiting free policies and can unlock one currently, grant a free policy
 	if(freePoliciesToGrant > 0 and HasPolicyToUnlock()) then
 		player:ChangeNumFreePolicies(1)
-		freePoliciesToGrant = freePoliciesToGrant - 1
+		ChangeFreePoliciesToGrant(-1)
 	end
 end
 
@@ -249,6 +255,38 @@ end
 
 
 -- INTERNAL CALLABLES
+function LoadScriptData(key)
+	-- Retrieve the real key from scriptDataKeys
+	scriptDataKey = scriptDataKeys[key]
+	if scriptDataKey == nil then
+		-- If key does not exist, I fked up. Send notification to player to notify them to contact me
+		AP.SendNotification(
+			"Script data key does not exist!",
+			"The script data key with value '" .. key .. "' does not exist. Contact @1313e to tell him that he is stupid!",
+			2
+		)
+	end
+
+	-- Retrieve value and return it
+	return load(player, scriptDataKey)
+end
+
+function SaveScriptData(key, value)
+	-- Retrieve the real key from scriptDataKeys
+	scriptDataKey = scriptDataKeys[key]
+	if scriptDataKey == nil then
+		-- If key does not exist, I fked up. Send notification to player to notify them to contact me
+		AP.SendNotification(
+			"Script data key does not exist!",
+			"The script data key with value '" .. key .. "' does not exist. Contact @1313e to tell him that he is stupid!",
+			2
+		)
+	end
+
+	-- Store the value given
+	save(player, scriptDataKey, value)
+end
+
 function PrintResponse(response)
 	-- Define format for all function responses
 	print(CLIENT_PREFIX .. response .. CLIENT_POSTFIX)
@@ -274,6 +312,12 @@ function HasPolicyToUnlock()
 
 	-- If we are still here, then nothing can be unlocked, so return false
 	return false
+end
+
+function ChangeFreePoliciesToGrant(value)
+	-- Changes the number of free policies to grant by the given value for current session AND save file
+	freePoliciesToGrant = freePoliciesToGrant + value
+	SaveScriptData("free_policies_to_grant", freePoliciesToGrant)
 end
 
 function RequestSync()
@@ -359,6 +403,20 @@ function InitPushTable()
 	-- Init all keys that should be tables
 	for key, _ in pairs(pushTableTableKeys) do
 		pushTable[key] = {}
+	end
+end
+
+function SyncScriptData()
+	-- Retrieve the number of free policies to grant to the player from the script data
+	value = LoadScriptData("free_policies_to_grant")
+	if value ~= nil then
+		freePoliciesToGrant = value
+	end
+
+	-- Retrieve the item table from the script data
+	value = LoadScriptData("item_table")
+	if value ~= nil then
+		itemTable = value
 	end
 end
 
@@ -504,6 +562,14 @@ function AP.SetOptionsTable(options)
 	end
 end
 
+function AP.UpdateItemTable(apItemIds)
+	-- Store in item table that these AP items have been received
+	for _, apItemId in ipairs(apItemIds) do
+		table.insert(itemTable, apItemId)
+	end
+	SaveScriptData("item_table", itemTable)
+end
+
 function AP.GetPushTable()
 	-- Loop over all pairs in the push table
 	jsonStrings = {}
@@ -525,6 +591,11 @@ function AP.GetPushTable()
 	-- Print the response as a single JSON object and reset the push table
 	PrintResponse(table.concat({"{", table.concat(jsonStrings, ","), "}"}))
 	InitPushTable()
+end
+
+function AP.GetItemTable()
+	-- Print the item table contents as a single JSON array
+	PrintResponse(table.concat({"[", table.concat(itemTable, ","), "]"}))
 end
 
 
@@ -556,6 +627,9 @@ function Init()
 
 	-- Initialize pushTable
 	InitPushTable()
+
+	-- Synchronize all local variables with the script data
+	SyncScriptData()
 
 	-- Request a sync between game and client
 	RequestSync()

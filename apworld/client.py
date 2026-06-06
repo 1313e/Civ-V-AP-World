@@ -79,6 +79,7 @@ class CivVClient:
         if _id == self.ctx.slot_data.output_file_id:
             if not self.mod_is_ready:
                 logger.info("Civ V AP Mod is connected and ready")
+                self.ctx.received_item_ids = await self.tuner.get_item_table()
                 await self.tuner.send_notification(
                     "Connected to AP",
                     "AP Mod was successfully connected to the AP Client.",
@@ -356,20 +357,20 @@ class CivVClient:
         # Mark everything at once, as it is far more efficient
         # Also make sure to store that those locations have been sent to the multiworld now
         if policies_to_send:
-            await self.tuner.grant_policies(*policies_to_send)
+            await self.tuner.grant_policies(policies_to_send)
             self.ctx.sent_locations[CivVLocationType.policy].clear()
             self.ctx.sent_locations[CivVLocationType.policy].update(policies_to_send)
         if policy_branches_to_unlock:
-            await self.tuner.unlock_policy_branches(*policy_branches_to_unlock)
+            await self.tuner.unlock_policy_branches(policy_branches_to_unlock)
             self.ctx.sent_locations[CivVLocationType.policy_branch].clear()
             self.ctx.sent_locations[CivVLocationType.policy_branch].update(policy_branches_to_unlock)
         if techs_to_send:
-            await self.tuner.grant_techs(*techs_to_send)
+            await self.tuner.grant_techs(techs_to_send)
             self.ctx.sent_locations[CivVLocationType.tech].clear()
             self.ctx.sent_locations[CivVLocationType.tech].update(techs_to_send)
 
-        # Reset received_items to resend all items received
-        self.ctx.received_item_ids.clear()
+        # Set received_items to the item table in the game
+        self.ctx.received_item_ids = await self.tuner.get_item_table()
 
 
     @update_func
@@ -383,8 +384,8 @@ class CivVClient:
         filler_to_send = defaultdict(int)
         policies_to_send = []
         techs_to_send = []
-        items_ids_to_receive = [x.item for x in self.ctx.items_received[len(self.ctx.received_item_ids):]]
-        for id_to_receive in items_ids_to_receive:
+        item_ids_to_receive = [x.item for x in self.ctx.items_received[len(self.ctx.received_item_ids):]]
+        for id_to_receive in item_ids_to_receive:
             # Retrieve the data on this item
             item = ITEMS_DATA_BY_ID[id_to_receive]
 
@@ -403,10 +404,14 @@ class CivVClient:
 
         # Grant all policies and techs at once, as it is far more efficient
         if policies_to_send:
-            await self.tuner.grant_policies(*policies_to_send)
+            await self.tuner.grant_policies(policies_to_send)
         if techs_to_send:
-            await self.tuner.grant_techs(*techs_to_send)
+            await self.tuner.grant_techs(techs_to_send)
 
         # Send all filler items
         for name, value in filler_to_send.items():
             await getattr(self.tuner, name)(value)
+
+        # Finally, update the item table with all sent item IDs if any
+        if item_ids_to_receive:
+            await self.tuner.update_item_table(item_ids_to_receive)

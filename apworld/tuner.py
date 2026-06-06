@@ -65,7 +65,7 @@ class Tuner:
         return await asyncio.wait_for(asyncio.get_event_loop().sock_recv(self._sock, size), 2.0)
 
     @classmethod
-    def _parse_response(cls, response: bytes) -> dict[str, Any]:
+    def _parse_response(cls, response: bytes) -> dict[str, Any] | list[Any]:
         """
         Parses the given `response` coming from the Civ V socket and returns the result.
 
@@ -99,7 +99,7 @@ class Tuner:
         else:
             return {}
 
-    async def _send_commands(self, *command_strings: bytes, size: int) -> dict[str, Any]:
+    async def _send_commands(self, *command_strings: bytes, size: int) -> dict[str, Any] | list[Any]:
         """
         Sends the given `command_strings` to the game; parses the response and returns it.
 
@@ -147,7 +147,7 @@ class Tuner:
             logger.debug(f'Unhandled error occurred while receiving data: {str(e)}')
             raise TunerException(e)
 
-    async def _send_mod_command(self, command: str, size: int = 4 * 1024) -> dict[str, Any]:
+    async def _send_mod_command(self, command: str, size: int = 4 * 1024) -> dict[str, Any] | list[Any]:
         """
         Sends the given `command` provided by the Civ V AP mod to the game and returns the response.
 
@@ -222,7 +222,7 @@ class Tuner:
 
         await self._send_mod_command(f"SendNotification({title!r}, {message!r}, {int(notification_type)})")
 
-    async def grant_policies(self, *policy_ids: int) -> None:
+    async def grant_policies(self, policy_ids: list[int]) -> None:
         """
         Grants the policies with the given `policy_ids` to the player.
 
@@ -232,7 +232,7 @@ class Tuner:
         for i in range(0, len(policy_ids), 10):
             await self._send_mod_command(f"GrantPolicies({{{','.join(map(str, policy_ids[i:i+10]))}}})")
 
-    async def unlock_policy_branches(self, *policy_branch_ids: int) -> None:
+    async def unlock_policy_branches(self, policy_branch_ids: list[int]) -> None:
         """
         Unlocks the policy branches with the given `policy_branch_ids` for the player.
 
@@ -240,7 +240,7 @@ class Tuner:
 
         await self._send_mod_command(f"UnlockPolicyBranches({{{','.join(map(str, policy_branch_ids))}}})")
 
-    async def grant_techs(self, *tech_ids: int) -> None:
+    async def grant_techs(self, tech_ids: list[int]) -> None:
         """
         Grants the technologies with the given `tech_ids` to the player.
 
@@ -363,6 +363,14 @@ class Tuner:
         options_str = f"{{{','.join((f'{key}={json.dumps(value)}' for key, value in options.to_dict().items()))}}}"
         await self._send_mod_command(f"SetOptionsTable({options_str})")
 
+    async def update_item_table(self, ap_ids: list[int]) -> None:
+        """
+        Updates the item table in the Civ V APMod with the given item `ap_ids`.
+
+        """
+
+        await self._send_mod_command(f"UpdateItemTable({{{','.join(map(str, ap_ids))}}})")
+
     async def get_push_table(self) -> dict[str, Any]:
         """
         Returns the push table managed by the APMod containing requests made by the game to the client.
@@ -370,3 +378,12 @@ class Tuner:
         """
 
         return await self._send_mod_command("GetPushTable()")
+
+    async def get_item_table(self) -> list[int]:
+        """
+        Returns the item table managed by the APMod containing all item AP IDs already received by the game from the
+        client.
+
+        """
+
+        return await self._send_mod_command("GetItemTable()")

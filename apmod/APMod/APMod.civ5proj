@@ -78,7 +78,7 @@
       </Action>
     </ModActions>
     <ModContent>
-      <Content xmlns="">
+      <Content>
         <Type>InGameUIAddin</Type>
         <Name>APFunctions</Name>
         <Description>Functions for AP Client</Description>
@@ -165,6 +165,10 @@
     <Content Include="PolicyBranchTextInfos.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="SaveUtils.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="Technologies.xml">
       <SubType>Lua</SubType>
