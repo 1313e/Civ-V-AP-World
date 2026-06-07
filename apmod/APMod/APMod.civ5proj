@@ -39,6 +39,11 @@
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
+        <FileName>TechnologyTextInfos.xml</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
         <FileName>WorldWonderTextInfos.xml</FileName>
       </Action>
       <Action>
@@ -64,12 +69,12 @@
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>Technologies.xml</FileName>
+        <FileName>Processes.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>TechnologyTextInfos.xml</FileName>
+        <FileName>Technologies.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
@@ -168,6 +173,10 @@
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
     <Content Include="PolicyBranchTextInfos.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="Processes.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>

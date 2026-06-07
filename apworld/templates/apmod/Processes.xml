@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+    <Processes>
+        <Row>
+            <Type>PROCESS_BK</Type>
+            <Description>BK Mode</Description>
+            <Help>[COLOR_POSITIVE_TEXT]BK Mode[ENDCOLOR] converts 10% of the [ICON_PRODUCTION] Production of this City into [ICON_GOLD] Gold and [ICON_RESEARCH] Science each.</Help>
+            <Strategy>TXT_KEY_PROCESS_BK_STRATEGY</Strategy>
+            <TechPrereq>TECH_ANCIENT_ERA</TechPrereq>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
+        </Row>
+    </Processes>
+    <Process_Flavors>
+        <Row>
+            <ProcessType>PROCESS_BK</ProcessType>
+            <FlavorType>FLAVOR_GOLD</FlavorType>
+            <Flavor>2</Flavor>
+        </Row>
+        <Row>
+            <ProcessType>PROCESS_BK</ProcessType>
+            <FlavorType>FLAVOR_SCIENCE</FlavorType>
+            <Flavor>2</Flavor>
+        </Row>
+    </Process_Flavors>
+    <Process_ProductionYields>
+        <Row>
+            <ProcessType>PROCESS_BK</ProcessType>
+            <YieldType>YIELD_GOLD</YieldType>
+            <Yield>10</Yield>
+        </Row>
+        <Row>
+            <ProcessType>PROCESS_BK</ProcessType>
+            <YieldType>YIELD_SCIENCE</YieldType>
+            <Yield>10</Yield>
+        </Row>
+    </Process_ProductionYields>
+</GameData>

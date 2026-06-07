@@ -39,6 +39,7 @@
     <File md5="8D78AC561EDB6F759E31E87F16BA9BB8" import="1">Icons/AP_Tech_80.dds</File>
     <File md5="EE05402EF6777005921271E7080B115C" import="0">Icons/AP_Icons.xml</File>
     <File md5="818E5B623F9F56C4C44E0CF87C2518F3" import="0">PolicyBranchTextInfos.xml</File>
+    <File md5="27578FE454F371F1086368E9C3083363" import="0">Processes.xml</File>
     <File md5="5754B1BE6E37A2F9D04D9D4149E5CDDF" import="1">SaveUtils.lua</File>
     <File md5="F3CCD156DE3FE0A044715F42646F9DFD" import="0">Technologies.xml</File>
     <File md5="8E04D2664959F5E8F4B42F8D559DF582" import="0">TechnologyTextInfos.xml</File>
@@ -50,13 +51,14 @@
       <UpdateDatabase>BuildingTextInfos.xml</UpdateDatabase>
       <UpdateDatabase>NationalWonderTextInfos.xml</UpdateDatabase>
       <UpdateDatabase>PolicyBranchTextInfos.xml</UpdateDatabase>
+      <UpdateDatabase>TechnologyTextInfos.xml</UpdateDatabase>
       <UpdateDatabase>WorldWonderTextInfos.xml</UpdateDatabase>
       <UpdateDatabase>Buildings.xml</UpdateDatabase>
       <UpdateDatabase>NationalWonders.xml</UpdateDatabase>
       <UpdateDatabase>PolicyBranches.xml</UpdateDatabase>
       <UpdateDatabase>Policies.xml</UpdateDatabase>
+      <UpdateDatabase>Processes.xml</UpdateDatabase>
       <UpdateDatabase>Technologies.xml</UpdateDatabase>
-      <UpdateDatabase>TechnologyTextInfos.xml</UpdateDatabase>
       <UpdateDatabase>WorldWonders.xml</UpdateDatabase>
       <UpdateDatabase>Icons/AP_Icons.xml</UpdateDatabase>
     </OnModActivated>
