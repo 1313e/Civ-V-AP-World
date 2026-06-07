@@ -45,6 +45,7 @@ class CivVContainer(APPlayerContainer):
         "templates/apmod/PolicyBranchTextInfos.xml",
         "templates/apmod/SaveUtils.lua",
         "templates/apmod/Technologies.xml",
+        "templates/apmod/TechnologyTextInfos.xml",
         "templates/apmod/WorldWonders.xml",
         "templates/apmod/WorldWonderTextInfos.xml",
         "templates/apmod/Icons/AP_Icons.xml",

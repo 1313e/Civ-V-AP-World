@@ -40,7 +40,8 @@
     <File md5="EE05402EF6777005921271E7080B115C" import="0">Icons/AP_Icons.xml</File>
     <File md5="818E5B623F9F56C4C44E0CF87C2518F3" import="0">PolicyBranchTextInfos.xml</File>
     <File md5="5754B1BE6E37A2F9D04D9D4149E5CDDF" import="1">SaveUtils.lua</File>
-    <File md5="064B59ABB8C69A591AEC052B2DF97BB8" import="0">Technologies.xml</File>
+    <File md5="F3CCD156DE3FE0A044715F42646F9DFD" import="0">Technologies.xml</File>
+    <File md5="8E04D2664959F5E8F4B42F8D559DF582" import="0">TechnologyTextInfos.xml</File>
     <File md5="23394FEC3BB005F4FAC845430B3E0418" import="0">WorldWonders.xml</File>
     <File md5="6D4F78EDACD1735CAA37A18A7BE66E04" import="0">WorldWonderTextInfos.xml</File>
   </Files>
@@ -55,6 +56,7 @@
       <UpdateDatabase>PolicyBranches.xml</UpdateDatabase>
       <UpdateDatabase>Policies.xml</UpdateDatabase>
       <UpdateDatabase>Technologies.xml</UpdateDatabase>
+      <UpdateDatabase>TechnologyTextInfos.xml</UpdateDatabase>
       <UpdateDatabase>WorldWonders.xml</UpdateDatabase>
       <UpdateDatabase>Icons/AP_Icons.xml</UpdateDatabase>
     </OnModActivated>

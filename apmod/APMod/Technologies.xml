@@ -1282,7 +1282,11 @@
             <Where Type="TECH_STEALTH"/>
         </Update>
         <Update>
-            <Set GridX="24"/>
+            <Set GridX="0"/>
+            <Where Type="TECH_FUTURE_TECH"/>
+        </Update>
+        <Update>
+            <Set GridY="1"/>
             <Where Type="TECH_FUTURE_TECH"/>
         </Update>
         <Row>
@@ -2504,10 +2508,10 @@
         </Row>
         <Row>
             <ID>162</ID>
-            <Type>TECH_ANCIENT_AP_BONUS</Type>
-            <Cost>{tech_ancient_ap_bonus_cost}</Cost>
-            <Description>{tech_ancient_ap_bonus_flag}AP Bonus</Description>
-            <Help>{tech_ancient_ap_bonus_item}</Help>
+            <Type>TECH_ANCIENT_AP12</Type>
+            <Cost>{tech_ancient_ap12_cost}</Cost>
+            <Description>{tech_ancient_ap12_flag}AP 12</Description>
+            <Help>{tech_ancient_ap12_item}</Help>
             <Era>ERA_ANCIENT</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
@@ -2519,10 +2523,10 @@
         </Row>
         <Row>
             <ID>163</ID>
-            <Type>TECH_CLASSICAL_AP_BONUS</Type>
-            <Cost>{tech_classical_ap_bonus_cost}</Cost>
-            <Description>{tech_classical_ap_bonus_flag}AP Bonus</Description>
-            <Help>{tech_classical_ap_bonus_item}</Help>
+            <Type>TECH_CLASSICAL_AP10</Type>
+            <Cost>{tech_classical_ap10_cost}</Cost>
+            <Description>{tech_classical_ap10_flag}AP 10</Description>
+            <Help>{tech_classical_ap10_item}</Help>
             <Era>ERA_CLASSICAL</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
@@ -2534,10 +2538,10 @@
         </Row>
         <Row>
             <ID>164</ID>
-            <Type>TECH_MEDIEVAL_AP_BONUS</Type>
-            <Cost>{tech_medieval_ap_bonus_cost}</Cost>
-            <Description>{tech_medieval_ap_bonus_flag}AP Bonus</Description>
-            <Help>{tech_medieval_ap_bonus_item}</Help>
+            <Type>TECH_MEDIEVAL_AP11</Type>
+            <Cost>{tech_medieval_ap11_cost}</Cost>
+            <Description>{tech_medieval_ap11_flag}AP 11</Description>
+            <Help>{tech_medieval_ap11_item}</Help>
             <Era>ERA_MEDIEVAL</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
@@ -2549,10 +2553,10 @@
         </Row>
         <Row>
             <ID>165</ID>
-            <Type>TECH_RENAISSANCE_AP_BONUS</Type>
-            <Cost>{tech_renaissance_ap_bonus_cost}</Cost>
-            <Description>{tech_renaissance_ap_bonus_flag}AP Bonus</Description>
-            <Help>{tech_renaissance_ap_bonus_item}</Help>
+            <Type>TECH_RENAISSANCE_AP11</Type>
+            <Cost>{tech_renaissance_ap11_cost}</Cost>
+            <Description>{tech_renaissance_ap11_flag}AP 11</Description>
+            <Help>{tech_renaissance_ap11_item}</Help>
             <Era>ERA_RENAISSANCE</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
@@ -2564,10 +2568,10 @@
         </Row>
         <Row>
             <ID>166</ID>
-            <Type>TECH_INDUSTRIAL_AP_BONUS</Type>
-            <Cost>{tech_industrial_ap_bonus_cost}</Cost>
-            <Description>{tech_industrial_ap_bonus_flag}AP Bonus</Description>
-            <Help>{tech_industrial_ap_bonus_item}</Help>
+            <Type>TECH_INDUSTRIAL_AP11</Type>
+            <Cost>{tech_industrial_ap11_cost}</Cost>
+            <Description>{tech_industrial_ap11_flag}AP 11</Description>
+            <Help>{tech_industrial_ap11_item}</Help>
             <Era>ERA_INDUSTRIAL</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
@@ -2579,10 +2583,10 @@
         </Row>
         <Row>
             <ID>167</ID>
-            <Type>TECH_MODERN_AP_BONUS</Type>
-            <Cost>{tech_modern_ap_bonus_cost}</Cost>
-            <Description>{tech_modern_ap_bonus_flag}AP Bonus</Description>
-            <Help>{tech_modern_ap_bonus_item}</Help>
+            <Type>TECH_MODERN_AP10</Type>
+            <Cost>{tech_modern_ap10_cost}</Cost>
+            <Description>{tech_modern_ap10_flag}AP 10</Description>
+            <Help>{tech_modern_ap10_item}</Help>
             <Era>ERA_MODERN</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
@@ -2594,10 +2598,10 @@
         </Row>
         <Row>
             <ID>168</ID>
-            <Type>TECH_ATOMIC_AP_BONUS</Type>
-            <Cost>{tech_atomic_ap_bonus_cost}</Cost>
-            <Description>{tech_atomic_ap_bonus_flag}AP Bonus</Description>
-            <Help>{tech_atomic_ap_bonus_item}</Help>
+            <Type>TECH_ATOMIC_AP9</Type>
+            <Cost>{tech_atomic_ap9_cost}</Cost>
+            <Description>{tech_atomic_ap9_flag}AP 9</Description>
+            <Help>{tech_atomic_ap9_item}</Help>
             <Era>ERA_POSTMODERN</Era>
             <Trade>true</Trade>
             <GoodyTech>true</GoodyTech>
@@ -3277,30 +3281,12 @@
             <TechType>TECH_INFORMATION_AP12</TechType>
             <PrereqTech>TECH_INFORMATION_AP6</PrereqTech>
         </Row>
-        <Row>
-            <TechType>TECH_FUTURE_TECH</TechType>
-            <PrereqTech>TECH_INFORMATION_AP7</PrereqTech>
-        </Row>
-        <Row>
-            <TechType>TECH_FUTURE_TECH</TechType>
-            <PrereqTech>TECH_INFORMATION_AP8</PrereqTech>
-        </Row>
-        <Row>
-            <TechType>TECH_FUTURE_TECH</TechType>
-            <PrereqTech>TECH_INFORMATION_AP9</PrereqTech>
-        </Row>
-        <Row>
-            <TechType>TECH_FUTURE_TECH</TechType>
-            <PrereqTech>TECH_INFORMATION_AP10</PrereqTech>
-        </Row>
-        <Row>
-            <TechType>TECH_FUTURE_TECH</TechType>
-            <PrereqTech>TECH_INFORMATION_AP11</PrereqTech>
-        </Row>
-        <Row>
-            <TechType>TECH_FUTURE_TECH</TechType>
-            <PrereqTech>TECH_INFORMATION_AP12</PrereqTech>
-        </Row>
+        <Delete TechType="TECH_FUTURE_TECH" PrereqTech="TECH_NANOTECHNOLOGY"/>
+        <Delete TechType="TECH_FUTURE_TECH" PrereqTech="TECH_NUCLEAR_FUSION"/>
+        <Delete TechType="TECH_FUTURE_TECH" PrereqTech="TECH_STEALTH"/>
+        <Delete TechType="TECH_FUTURE_TECH" PrereqTech="TECH_PARTICLE_PHYSICS"/>
+        <Delete TechType="TECH_FUTURE_TECH" PrereqTech="TECH_GLOBALIZATION"/>
+        <Delete TechType="TECH_FUTURE_TECH" PrereqTech="TECH_INTERNET"/>
         <Row>
             <TechType>TECH_ANCIENT_AP1</TechType>
             <PrereqTech>TECH_ANCIENT_ERA</PrereqTech>
@@ -3618,31 +3604,31 @@
             <PrereqTech>TECH_INFORMATION_ERA</PrereqTech>
         </Row>
         <Row>
-            <TechType>TECH_ANCIENT_AP_BONUS</TechType>
+            <TechType>TECH_ANCIENT_AP12</TechType>
             <PrereqTech>TECH_ANCIENT_ERA</PrereqTech>
         </Row>
         <Row>
-            <TechType>TECH_CLASSICAL_AP_BONUS</TechType>
+            <TechType>TECH_CLASSICAL_AP10</TechType>
             <PrereqTech>TECH_CLASSICAL_ERA</PrereqTech>
         </Row>
         <Row>
-            <TechType>TECH_MEDIEVAL_AP_BONUS</TechType>
+            <TechType>TECH_MEDIEVAL_AP11</TechType>
             <PrereqTech>TECH_MEDIEVAL_ERA</PrereqTech>
         </Row>
         <Row>
-            <TechType>TECH_RENAISSANCE_AP_BONUS</TechType>
+            <TechType>TECH_RENAISSANCE_AP11</TechType>
             <PrereqTech>TECH_RENAISSANCE_ERA</PrereqTech>
         </Row>
         <Row>
-            <TechType>TECH_INDUSTRIAL_AP_BONUS</TechType>
+            <TechType>TECH_INDUSTRIAL_AP11</TechType>
             <PrereqTech>TECH_INDUSTRIAL_ERA</PrereqTech>
         </Row>
         <Row>
-            <TechType>TECH_MODERN_AP_BONUS</TechType>
+            <TechType>TECH_MODERN_AP10</TechType>
             <PrereqTech>TECH_MODERN_ERA</PrereqTech>
         </Row>
         <Row>
-            <TechType>TECH_ATOMIC_AP_BONUS</TechType>
+            <TechType>TECH_ATOMIC_AP9</TechType>
             <PrereqTech>TECH_ATOMIC_ERA</PrereqTech>
         </Row>
     </Technology_PrereqTechs>

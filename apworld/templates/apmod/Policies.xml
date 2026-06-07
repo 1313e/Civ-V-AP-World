@@ -1116,7 +1116,7 @@
         </Row>
         <Row>
             <PolicyType>POLICY_AESTHETICS_AP5</PolicyType>
-            <PrereqPolicy>POLICY_AESTHETICS_AP4</PrereqPolicy>
+            <PrereqPolicy>POLICY_AESTHETICS_AP3</PrereqPolicy>
         </Row>
         <Row>
             <PolicyType>POLICY_COMMERCE_AP3</PolicyType>
@@ -1132,7 +1132,7 @@
         </Row>
         <Row>
             <PolicyType>POLICY_COMMERCE_AP5</PolicyType>
-            <PrereqPolicy>POLICY_COMMERCE_AP3</PrereqPolicy>
+            <PrereqPolicy>POLICY_COMMERCE_AP4</PrereqPolicy>
         </Row>
         <Row>
             <PolicyType>POLICY_EXPLORATION_AP3</PolicyType>
