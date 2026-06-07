@@ -26,11 +26,15 @@ local pushTable = {}
 local pushTableTableKeys = {
 	building=true, policy=true, policy_branch=true, tech=true, national_wonder=true, world_wonder=true,
 }
-local scriptDataKeys = {
-	free_policies_to_grant="free_policies_to_grant", item_table="item_table",
+local textInfoTableNames = {
+	building="Buildings", policy=nil, policy_branch=nil, tech=nil, national_wonder="Buildings", world_wonder="Buildings",
 }
 local freePoliciesToGrant = 0
 local itemTable = {}
+local locationTable = {}
+for key, _ in pairs(pushTableTableKeys) do
+	locationTable[key] = {}
+end
 local techIdsToEraIds = {
 	[0]=0, [1]=0, [2]=0, [3]=0, [4]=0, [5]=0, [6]=0, [7]=0, [8]=0, [9]=0, [10]=0, [11]=0,
 	[12]=1, [13]=1, [14]=1, [15]=1, [16]=1, [17]=1, [18]=1, [19]=1, [20]=1,
@@ -121,18 +125,18 @@ local notificationTypes = {
 
 -- EVENTS
 function OnPolicyAdopted(playerId, policyId)
-    -- If the player gets a policy, add it to the push table
+    -- If the player gets a policy, send it
     if(playerId == player:GetID() and policyId >= LOWER_POLICY_ID and policyId <= UPPER_POLICY_ID) then
-        table.insert(pushTable["policy"], policyId)
+        SendLocation("policy", policyId)
 
-		-- If the player finished the branch with this policy, add branch finisher to the push table
+		-- If the player finished the branch with this policy, send branch finisher location
 		policyBranchId = policyIdToPolicyBranchId[policyId]
 		for _, apPolicyId in ipairs(policyBranchIdToAPPolicyIds[policyBranchId]) do
 			if not player:HasPolicy(apPolicyId) then
 				return
 			end
 		end
-		table.insert(pushTable["policy_branch"], policyBranchId+POLICY_BRANCH_FINISHER_OFFSET)
+		SendLocation("policy_branch", policyBranchId+POLICY_BRANCH_FINISHER_OFFSET)
     end
 
 	-- If the AI finished the branch with this policy, grant them the branch finisher
@@ -148,9 +152,9 @@ end
 function OnPolicyBranchAdopted(playerId, policyBranchId)
 	-- If one of the default 9 branches was adopted
 	if(policyBranchId >= LOWER_POLICY_BRANCH_ID and policyBranchId <= UPPER_POLICY_BRANCH_ID) then
-		-- If the player adopts a policy branch, add it to the push table
+		-- If the player adopts a policy branch, send it
 		if(playerId == player:GetID()) then
-			table.insert(pushTable["policy_branch"], policyBranchId)
+			SendLocation("policy_branch", policyBranchId)
 
 		-- Else, grant the AI the branch starter
 		else
@@ -172,9 +176,9 @@ function OnTechAcquired(playerId, techId)
 		player:AddFreeUnit(128)
 	end
 
-	-- If the player gets an AP tech, add it to the push table
+	-- If the player gets an AP tech, send it
 	if(playerId == player:GetID() and techId >= LOWER_TECH_ID and techId <= UPPER_TECH_ID) then
-		table.insert(pushTable["tech"], techId)
+		SendLocation("tech", techId)
 	end
 
 	-- If the AI gets a non-AP tech that should have given access to the next era, grant that
@@ -187,39 +191,39 @@ function OnTechAcquired(playerId, techId)
 end
 
 function OnCityBuildingConstructed(playerId, cityId, buildingId, gold, faithOrCulture)
-	-- If the player constructs a building, add it to the push table if it is a supported building
+	-- If the player constructs a building, send it if it is a supported building
 	if(playerId == player:GetID()) then
 		-- Standard buildings
 		if(buildingIds[buildingId]) then
-			table.insert(pushTable["building"], buildingId)
+			SendLocation("building", buildingId)
 
 		-- Civ-unique buildings
 		elseif(civUniqueBuildingToBuildingId[buildingId] ~= nil) then
-			table.insert(pushTable["building"], civUniqueBuildingToBuildingId[buildingId])
+			SendLocation("building", civUniqueBuildingToBuildingId[buildingId])
 
 		-- National Wonders
 		elseif(nationalWonderBuildingIds[buildingId]) then
-			table.insert(pushTable["national_wonder"], buildingId)
+			SendLocation("national_wonder", buildingId)
 
 		-- World Wonders
 		elseif(worldWonderBuildingIds[buildingId]) then
-			table.insert(pushTable["world_wonder"], buildingId)
+			SendLocation("world_wonder", buildingId)
 
-			-- If this world wonder provides a free building, add it to the push table as well
+			-- If this world wonder provides a free building, send it as well
 			if(worldWonderToFreeBuildingId[buildingId] ~= nil) then
-				table.insert(pushTable["building"], worldWonderToFreeBuildingId[buildingId])
+				SendLocation("building", worldWonderToFreeBuildingId[buildingId])
 			end
 		end
 	end
 end
 
 function OnCityCaptured(playerId, isCapital, plotX, plotY, newPlayerId)
-	-- If the player captures a city, check it for any world wonders and add them to the push table
+	-- If the player captures a city, check it for any world wonders and send them
 	if(newPlayerId == player:GetID()) then
 		city = Map.GetPlot(plotX, plotY):GetPlotCity()
-		for i in pairs(worldWonderBuildingIds) do
+		for i, _ in pairs(worldWonderBuildingIds) do
 			if city:IsHasBuilding(i) then
-				table.insert(pushTable["world_wonder"], i)
+				SendLocation("world_wonder", i)
 			end
 		end
 	end
@@ -256,35 +260,67 @@ end
 
 -- INTERNAL CALLABLES
 function LoadScriptData(key)
-	-- Retrieve the real key from scriptDataKeys
-	scriptDataKey = scriptDataKeys[key]
-	if scriptDataKey == nil then
-		-- If key does not exist, I fked up. Send notification to player to notify them to contact me
-		AP.SendNotification(
-			"Script data key does not exist!",
-			"The script data key with value '" .. key .. "' does not exist. Contact @1313e to tell him that he is stupid!",
-			2
-		)
-	end
-
 	-- Retrieve value and return it
-	return load(player, scriptDataKey)
+	return load(player, key)
 end
 
 function SaveScriptData(key, value)
-	-- Retrieve the real key from scriptDataKeys
-	scriptDataKey = scriptDataKeys[key]
-	if scriptDataKey == nil then
-		-- If key does not exist, I fked up. Send notification to player to notify them to contact me
-		AP.SendNotification(
-			"Script data key does not exist!",
-			"The script data key with value '" .. key .. "' does not exist. Contact @1313e to tell him that he is stupid!",
-			2
-		)
+	-- Store the value given
+	save(player, key, value)
+end
+
+function UpdateTextInfos(tableName, locationId, refresh)
+	-- Retrieve the description and help text infos for this ID from the given table
+	results = DB.Query(table.concat({"SELECT Description, Help FROM ", tableName, " WHERE ID = '", locationId, "'"}))()
+	clean_description = Locale.ConvertTextKey(results.Description .. "_CLEAN")
+	clean_help = Locale.ConvertTextKey(results.Help .. "_CLEAN")
+
+	-- Replace description and help text infos with their clean version. Escape single quotation marks
+	DB.Query(table.concat({"UPDATE Language_en_US SET Text = '", clean_description:gsub("'", "''"), "' WHERE Tag = '", results.Description, "'"}))()
+	DB.Query(table.concat({"UPDATE Language_en_US SET Text = '", clean_help:gsub("'", "''"), "' WHERE Tag = '", results.Help, "'"}))()
+
+	-- Refresh the text infos if requested
+	if refresh then
+		RefreshTextInfos()
+	end
+end
+
+function RefreshTextInfos()
+	-- Refresh all text infos in-game by reloading the Locale language
+	Locale.SetCurrentLanguage(Locale.GetCurrentLanguage().Type)
+end
+
+function SyncTextInfos()
+	-- Update all text infos according to the values in the location table
+	for type, tableName in pairs(textInfoTableNames) do
+		if tableName ~= nil then
+			for locationId, _ in pairs(locationTable[type]) do
+				UpdateTextInfos(tableName, locationId)
+			end
+		end
 	end
 
-	-- Store the value given
-	save(player, scriptDataKey, value)
+	-- Refresh text infos after sync
+	RefreshTextInfos()
+end
+
+function SendLocation(type, locationId)
+	-- If this location has been sent already, return immediately
+	if locationTable[type][locationId] then
+		return
+	end
+
+	-- Add location to location and push tables
+	locationTable[type][locationId] = true
+	table.insert(pushTable[type], locationId)
+
+	-- Update the text infos for this location if there is a table to update for this type
+	if textInfoTableNames[type] ~= nil then
+		UpdateTextInfos(textInfoTableNames[type], locationId, true)
+	end
+
+	-- Save the location table
+	SaveScriptData("location_table", locationTable)
 end
 
 function PrintResponse(response)
@@ -324,72 +360,10 @@ function RequestSync()
 	-- Request the syncing of all locations
 	pushTable["sync"] = true
 
-	-- Add all unlocked/finished policy branches and adopted policies to the push table
-	for policyBranchId, apPolicyIds in ipairs(policyBranchIdToAPPolicyIds) do
-		if player:IsPolicyBranchUnlocked(policyBranchId) then
-			table.insert(pushTable["policy_branch"], policyBranchId)
-
-			-- Check if all AP policies in this branch have been adopted and add them to the push table appropriately
-			finished = true
-			for _, apPolicyId in ipairs(apPolicyIds) do
-				if player:HasPolicy(apPolicyId) then
-					table.insert(pushTable["policy"], apPolicyId)
-				else
-					finished = false
-				end
-			end
-
-			-- If finished is still true, all AP policies have been adopted and thus branch is finished
-			if finished then
-				table.insert(pushTable["policy_branch"], policyBranchId+POLICY_BRANCH_FINISHER_OFFSET)
-			end
-		end
-	end
-
-	-- Add all researched technologies to the push table
-	for i=LOWER_TECH_ID, UPPER_TECH_ID do
-		if teamTechs:HasTech(i) then
-		    table.insert(pushTable["tech"], i)
-		end
-	end
-
-	-- Add all constructed standard buildings to the push table
-	for i in pairs(buildingIds) do
-		for cityId=0, player:GetNumCities()-1 do
-			if player:GetCityByID(cityId):IsHasBuilding(i) then
-				table.insert(pushTable["building"], i)
-				break
-			end
-		end
-	end
-
-	-- Add all constructed civ-unique buildings to the push table as standard buildings
-	for i in pairs(civUniqueBuildingToBuildingId) do
-		for cityId=0, player:GetNumCities()-1 do
-			if player:GetCityByID(cityId):IsHasBuilding(i) then
-				table.insert(pushTable["building"], civUniqueBuildingToBuildingId[i])
-				break
-			end
-		end
-	end
-
-	-- Add all constructed national wonders to the push table
-	for i in pairs(nationalWonderBuildingIds) do
-		for cityId=0, player:GetNumCities()-1 do
-			if player:GetCityByID(cityId):IsHasBuilding(i) then
-				table.insert(pushTable["national_wonder"], i)
-				break
-			end
-		end
-	end
-
-	-- Add all constructed world wonders to the push table
-	for i in pairs(worldWonderBuildingIds) do
-		for cityId=0, player:GetNumCities()-1 do
-			if player:GetCityByID(cityId):IsHasBuilding(i) then
-				table.insert(pushTable["world_wonder"], i)
-				break
-			end
+	-- Add all entries in the location table to the push table
+	for type, locationIds in pairs(locationTable) do
+		for locationId, _ in pairs(locationIds) do
+			table.insert(pushTable[type], locationId)
 		end
 	end
 end
@@ -417,6 +391,12 @@ function SyncScriptData()
 	value = LoadScriptData("item_table")
 	if value ~= nil then
 		itemTable = value
+	end
+
+	-- Retrieve the location table from the script data
+	value = LoadScriptData("location_table")
+	if value ~= nil then
+		locationTable = value
 	end
 end
 
@@ -460,6 +440,11 @@ function AP.GrantPolicies(policyIds)
 			player:ChangeNumFreePolicies(-1);
 		end
 		player:SetHasPolicy(policyId, true);
+
+		-- If this policy is the Tradition adoption policy, the player gets a free Aqueduct. Send that as a location
+		if(policyId == 6) then
+			SendLocation("building", 91)
+		end
 	end
 end
 
@@ -584,6 +569,24 @@ function AP.UpdateItemTable(apItemIds)
 	SaveScriptData("item_table", itemTable)
 end
 
+function AP.UpdateLocationTable(type, locationIds, is_finished)
+	-- Mark all locations with given IDs of the provided type as checked
+	for _, locationId in ipairs(locationIds) do
+		if locationTable[type][locationId] == nil then
+			locationTable[type][locationId] = true
+			if textInfoTableNames[type] ~= nil then
+				UpdateTextInfos(textInfoTableNames[type], locationId)
+			end
+		end
+	end
+
+	-- If this was the final update to be performed, also refresh the text infos and save the location table
+	if is_finished then
+		RefreshTextInfos()
+		SaveScriptData("location_table", locationTable)
+	end
+end
+
 function AP.GetPushTable()
 	-- Loop over all pairs in the push table
 	jsonStrings = {}
@@ -644,6 +647,9 @@ function Init()
 
 	-- Synchronize all local variables with the script data
 	SyncScriptData()
+
+	-- Synchronize the text infos with the location table
+	SyncTextInfos()
 
 	-- Request a sync between game and client
 	RequestSync()

@@ -8,7 +8,7 @@ from typing import Any
 from CommonClient import logger
 
 from .dataclasses import CivVAPModOptions
-from .enums import CivVNotificationTypes
+from .enums import CivVNotificationTypes, CivVLocationType
 from .exceptions import (
     TunerConnectionException,
     TunerErrorException,
@@ -386,7 +386,25 @@ class Tuner:
 
         """
 
-        await self._send_mod_command(f"UpdateItemTable({{{','.join(map(str, ap_ids))}}})")
+        # Update all received items in batches of 30
+        for i in range(0, len(ap_ids), 30):
+            await self._send_mod_command(f"UpdateItemTable({{{','.join(map(str, ap_ids[i:i+30]))}}})")
+
+    async def update_location_table(self, location_type: CivVLocationType, game_ids: list[int], is_finished: bool = False) -> None:
+        """
+        Updates the location table in the Civ V APMod with the given `game_ids` for locations of the provided
+        `location_type`.
+
+        """
+
+        # Update all sent locations in batches of 30. Only set 'is_finished' to True on the final call if required
+        args_list = [
+            f"'{str(location_type)}', {{{','.join(map(str, game_ids[i:i+30]))}}}" for i in range(0, len(game_ids), 30)
+        ]
+        if is_finished:
+            args_list[-1] = f"{args_list[-1]}, {json.dumps(is_finished)}"
+        for args in args_list:
+            await self._send_mod_command(f"UpdateLocationTable({args})")
 
     async def get_push_table(self) -> dict[str, Any]:
         """

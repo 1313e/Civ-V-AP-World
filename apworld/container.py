@@ -111,7 +111,7 @@ class CivVContainer(APPlayerContainer):
             case "classification":
                 return f"A [{color}]{CivVItemClassificationNames.get_name(classification)} item[ENDCOLOR]"
             case "none":
-                return f"An item"
+                return f"An [{CivVItemClassificationColors.default}]item[ENDCOLOR]"
             case _:
                 raise NotImplementedError
 
@@ -131,7 +131,7 @@ class CivVContainer(APPlayerContainer):
             case "full" | "classification":
                 return f"[{CivVItemClassificationFlags.get_flag(classification)}] "
             case "none":
-                return ""
+                return f"[{CivVItemClassificationFlags.default}] "
             case _:
                 raise NotImplementedError
 

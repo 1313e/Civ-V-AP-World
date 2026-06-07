@@ -48,6 +48,7 @@ class CivVItemClassificationColors(StrEnum):
     useful = "COLOR:64:251:252:255"
     filler = "COLOR:39:113:255:255"
     trap = "COLOR:248:38:38:255"
+    default = "COLOR:155:155:155:255"
 
     @classmethod
     def get_color(cls, classification: ItemClassification) -> "CivVItemClassificationColors":
@@ -72,6 +73,7 @@ class CivVItemClassificationFlags(StrEnum):
     useful = "ICON_TEAM_5"
     filler = "ICON_TEAM_8"
     trap = "ICON_TEAM_2"
+    default = "ICON_TEAM_10"
 
     @classmethod
     def get_flag(cls, classification: ItemClassification) -> "CivVItemClassificationFlags":

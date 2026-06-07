@@ -31,6 +31,10 @@ class CivVClient:
 
     """
 
+    # Class attributes
+    NUM_MOD_NOT_READY_BEFORE_ECHO: int = 2
+    "Number of consecutive times the AP mod was not ready before starting to echo this in the client"
+
     def __init__(self, ctx: CivVContext):
         # Define instance attributes
         self.ctx: CivVContext = ctx
@@ -43,6 +47,10 @@ class CivVClient:
         "Bool indicating whether game is currently ready"
         self._mod_is_ready: bool = False
         "Bool indicating whether AP mod is currently ready"
+        self._mod_first_time_ready: bool = True
+        "Bool indicating whether this is the first time the AP mod is ready"
+        self._mod_is_not_ready_count: int = 0
+        "Number of consecutive times the AP mod was not ready"
 
     @property
     def game_is_ready(self) -> bool:
@@ -59,6 +67,7 @@ class CivVClient:
         if ready and not self.game_is_ready:
             logger.info("Civ V is running")
             self._game_is_ready = True
+            self._mod_first_time_ready = True
 
         # If the game is not ready, store and send this to the client's console
         elif not ready:
@@ -78,19 +87,24 @@ class CivVClient:
         # If the mod is ready and was not ready before, store and send this to the client's console
         if _id == self.ctx.slot_data.output_file_id:
             if not self.mod_is_ready:
-                logger.info("Civ V AP Mod is connected and ready")
                 self.ctx.received_item_ids = await self.tuner.get_item_table()
-                await self.tuner.send_notification(
-                    "Connected to AP",
-                    "AP Mod was successfully connected to the AP Client.",
-                    CivVNotificationTypes.generic
-                )
                 self._mod_is_ready = True
+                if self._mod_is_not_ready_count >= self.NUM_MOD_NOT_READY_BEFORE_ECHO or self._mod_first_time_ready:
+                    logger.info("Civ V AP Mod is connected and ready")
+                    await self.tuner.send_notification(
+                        "Connected to AP",
+                        "AP Mod was successfully connected to the AP Client.",
+                        CivVNotificationTypes.generic
+                    )
+                    self._mod_first_time_ready = False
+                self._mod_is_not_ready_count = 0
 
-        # If the mod is not ready (no ID received), store and send this to the client's console
+        # If the mod is not ready (no ID received), store and send this to the client's console if exceeds limit
         elif _id is None:
-            logger.info("Waiting for Civ V AP Mod to be ready...")
             self._mod_is_ready = False
+            self._mod_is_not_ready_count += 1
+            if self._mod_is_not_ready_count >= self.NUM_MOD_NOT_READY_BEFORE_ECHO:
+                logger.info("Waiting for Civ V AP Mod to be ready...")
 
         # If the mod is ready, but its ID does not match the ID in the context, store and send this to the console
         elif _id != self.ctx.slot_data.output_file_id:
@@ -345,44 +359,36 @@ class CivVClient:
         await self.tuner.set_options_table(self.ctx.slot_data.apmod_options)
 
         # Mark all checked locations for the player
-        policies_to_send = []
-        policy_branches_to_unlock = []
-        techs_to_send = []
+        locations_to_mark: dict[CivVLocationType, list[int]] = {x: [] for x in CivVLocationType}
         for location_id_to_mark in self.ctx.checked_locations:
-            # Retrieve the corresponding location
+            # Retrieve the corresponding location and store the ID
             location = LOCATIONS_DATA_BY_ID[location_id_to_mark]
-
-            # Retrieve the ID to send to the player according to its location type
-            match location.type:
-                case CivVLocationType.policy:
-                    policies_to_send.append(location.game_id)
-                case CivVLocationType.policy_branch:
-                    policy_branches_to_unlock.append(location.game_id)
-                case CivVLocationType.tech:
-                    techs_to_send.append(location.game_id)
-
-                # All other types are not syncable
-                case _:
-                    pass
+            locations_to_mark[location.type].append(location.game_id)
 
         # Mark everything at once, as it is far more efficient
         # Also make sure to store that those locations have been sent to the multiworld now
-        if policies_to_send:
+        if policies_to_send := locations_to_mark[CivVLocationType.policy]:
             await self.tuner.grant_policies(policies_to_send)
             self.ctx.sent_locations[CivVLocationType.policy].clear()
             self.ctx.sent_locations[CivVLocationType.policy].update(policies_to_send)
-        if policy_branches_to_unlock:
+        if policy_branches_to_unlock := locations_to_mark[CivVLocationType.policy_branch]:
             await self.tuner.unlock_policy_branches(policy_branches_to_unlock)
             self.ctx.sent_locations[CivVLocationType.policy_branch].clear()
             self.ctx.sent_locations[CivVLocationType.policy_branch].update(policy_branches_to_unlock)
-        if techs_to_send:
+        if techs_to_send := locations_to_mark[CivVLocationType.tech]:
             await self.tuner.grant_techs(techs_to_send)
             self.ctx.sent_locations[CivVLocationType.tech].clear()
             self.ctx.sent_locations[CivVLocationType.tech].update(techs_to_send)
 
+        # Update the locations table for all locations to mark. The final one needs to be marked as finishing
+        items = [(x, y) for x, y in locations_to_mark.items() if y]
+        if items:
+            for location_type, game_ids in items[:-1]:
+                await self.tuner.update_location_table(location_type, game_ids)
+            await self.tuner.update_location_table(*items[-1], is_finished=True)
+
         # Set received_items to the item table in the game
         self.ctx.received_item_ids = await self.tuner.get_item_table()
-
 
     @update_func
     async def process_received_items(self) -> None:
