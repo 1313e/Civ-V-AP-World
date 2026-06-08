@@ -5,14 +5,16 @@ from .world import CivVWorld
 
 # %% COMPONENT DEFINITIONS
 # Register the run_client function as a client component
-from worlds.LauncherComponents import Component, SuffixIdentifier, Type, components
+from worlds.LauncherComponents import Component, SuffixIdentifier, Type, components, icon_paths
 from .constants import CONTAINER_EXTENSION, GAME_NAME
 components.append(
     Component(
         display_name="Civ V Client",
         func=run_client,
+        icon=GAME_NAME,
         component_type=Type.CLIENT,
         file_identifier=SuffixIdentifier(CONTAINER_EXTENSION),
         description=f"A client for connecting to {GAME_NAME}",
     )
 )
+icon_paths[GAME_NAME] = "ap:worlds.civv/assets/civv.png"
