@@ -287,6 +287,11 @@ function UpdateTextInfos(tableName, locationId, refresh)
 	clean_description = Locale.ConvertTextKey(results.Description .. "_CLEAN")
 	clean_help = Locale.ConvertTextKey(results.Help .. "_CLEAN")
 
+	-- If they are already set to their clean versions, return immediately
+	if Locale.ConvertTextKey(results.Description) == clean_description then
+		return
+	end
+
 	-- Replace description and help text infos with their clean version. Escape single quotation marks
 	DB.Query(table.concat({
 		"UPDATE Language_en_US SET Text = '",
