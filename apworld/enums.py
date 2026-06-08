@@ -57,10 +57,10 @@ class CivVItemClassificationColors(StrEnum):
             return cls.progression
         elif ItemClassification.useful in classification:
             return cls.useful
-        elif ItemClassification.filler in classification:
-            return cls.filler
-        else:
+        elif ItemClassification.trap in classification:
             return cls.trap
+        else:
+            return cls.filler
 
 
 class CivVItemClassificationFlags(StrEnum):
@@ -82,10 +82,10 @@ class CivVItemClassificationFlags(StrEnum):
             return cls.progression
         elif ItemClassification.useful in classification:
             return cls.useful
-        elif ItemClassification.filler in classification:
-            return cls.filler
-        else:
+        elif ItemClassification.trap in classification:
             return cls.trap
+        else:
+            return cls.filler
 
 class CivVItemClassificationNames(StrEnum):
     """
@@ -105,10 +105,10 @@ class CivVItemClassificationNames(StrEnum):
             return cls.progression
         elif ItemClassification.useful in classification:
             return cls.useful
-        elif ItemClassification.filler in classification:
-            return cls.filler
-        else:
+        elif ItemClassification.trap in classification:
             return cls.trap
+        else:
+            return cls.filler
 
 class CivVItemGroup(StrEnum):
     """
