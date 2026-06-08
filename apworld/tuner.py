@@ -37,6 +37,10 @@ class Tuner:
         b"\x05\x00\x00\x00\x00\x00\x00\x00LSQ:\x00",
     )
     "Tuple of specific command strings that must be sent to the game to check whether it is ready to be interacted with"
+    RESPONSE_WAIT_TIME: float = 0.2
+    "Time to wait for a response from Civ V in seconds"
+    N_RESPONSE_WAITS: int = 5
+    "Number of times the Tuner will wait for a response from Civ V when one is expected before timing out"
 
     def __init__(self):
         # Define instance attributes
@@ -65,7 +69,7 @@ class Tuner:
         return await asyncio.wait_for(asyncio.get_event_loop().sock_recv(self._sock, size), 2.0)
 
     @classmethod
-    def _parse_response(cls, response: bytes) -> dict[str, Any] | list[Any]:
+    def _parse_response(cls, response: bytes) -> dict[str, Any]:
         """
         Parses the given `response` coming from the Civ V socket and returns the result.
 
@@ -99,13 +103,15 @@ class Tuner:
         else:
             return {}
 
-    async def _send_commands(self, *command_strings: bytes, size: int) -> dict[str, Any] | list[Any]:
+    async def _send_commands(self, *command_strings: bytes, size: int, has_response: bool = False) -> dict[str, Any]:
         """
         Sends the given `command_strings` to the game; parses the response and returns it.
 
         Args:
             command_strings: The commands to send.
             size: The size of the response to retrieve.
+            has_response: If *True*, the commands should trigger a non-empty response from Civ V. If this is not
+                received, timeout error will be raised.
 
         Returns:
             dict[str, Any]: The parsed response from the Civ V socket.
@@ -122,10 +128,18 @@ class Tuner:
             # Send the commands
             for command_string in command_strings:
                 await asyncio.get_event_loop().sock_sendall(self._sock, command_string)
-            await asyncio.sleep(0.2)
+            await asyncio.sleep(self.RESPONSE_WAIT_TIME)
 
-            # Retrieve and parse the response
+            # Retrieve and parse the response. If a response is expected, try up to N_RESPONSE_WAITS times to receive it
             response = self._parse_response(await self._retrieve_response(size))
+            if has_response and not response:
+                for i in range(self.N_RESPONSE_WAITS-1):
+                    await asyncio.sleep(self.RESPONSE_WAIT_TIME)
+                    response = self._parse_response(await self._retrieve_response(size))
+                    if response:
+                        break
+                else:
+                    raise TunerTimeoutException
             logger.debug(f"Received data: {response}")
             return response
 
@@ -147,13 +161,15 @@ class Tuner:
             logger.debug(f'Unhandled error occurred while receiving data: {str(e)}')
             raise TunerException(e)
 
-    async def _send_mod_command(self, command: str, size: int = 4 * 1024) -> dict[str, Any] | list[Any]:
+    async def _send_mod_command(self, command: str, size: int = 4 * 1024, has_response: bool = False) -> dict[str, Any]:
         """
         Sends the given `command` provided by the Civ V AP mod to the game and returns the response.
 
         Args:
             command: The command to send.
             size: The size of the response to retrieve.
+            has_response: If *True*, the commands should trigger a non-empty response from Civ V. If this is not
+                received, timeout error will be raised.
 
         Returns:
             dict[str, Any]: The parsed response from the Civ V socket.
@@ -171,7 +187,7 @@ class Tuner:
 
         # Send the command
         logger.debug(f"Sending command: {command}")
-        return await self._send_commands(command_string, size=size)
+        return await self._send_commands(command_string, size=size, has_response=has_response)
 
     async def send_ready_check(self) -> bool:
         """
@@ -208,7 +224,7 @@ class Tuner:
         # Request execution of the "IsModReady" function that is defined by the AP mod
         # Use a very large response size to flush anything unrelated to AP that is still waiting on the socket
         try:
-            return (await self._send_mod_command("IsModReady()", size=100 * 1024)).get("id", None)
+            return (await self._send_mod_command("IsModReady()", size=100 * 1024, has_response=True)).get("id", None)
 
         # If the function cannot be found (runtime error) or the request times out, the mod is not ready
         except (TunerRuntimeException, TunerTimeoutException):
@@ -390,7 +406,9 @@ class Tuner:
         for i in range(0, len(ap_ids), 30):
             await self._send_mod_command(f"UpdateItemTable({{{','.join(map(str, ap_ids[i:i+30]))}}})")
 
-    async def update_location_table(self, location_type: CivVLocationType, game_ids: list[int], is_finished: bool = False) -> None:
+    async def update_location_table(
+            self, location_type: CivVLocationType, game_ids: list[int], is_finished: bool = False
+    ) -> None:
         """
         Updates the location table in the Civ V APMod with the given `game_ids` for locations of the provided
         `location_type`.
@@ -412,7 +430,7 @@ class Tuner:
 
         """
 
-        return await self._send_mod_command("GetPushTable()")
+        return await self._send_mod_command("GetPushTable()", has_response=True)
 
     async def get_item_table(self) -> list[int]:
         """
@@ -421,4 +439,4 @@ class Tuner:
 
         """
 
-        return await self._send_mod_command("GetItemTable()")
+        return (await self._send_mod_command("GetItemTable()", has_response=True))["items"]

@@ -4,6 +4,7 @@ import functools
 import traceback
 import socket
 from collections import defaultdict
+from typing import Any
 
 import colorama
 
@@ -31,10 +32,6 @@ class CivVClient:
 
     """
 
-    # Class attributes
-    NUM_MOD_NOT_READY_BEFORE_ECHO: int = 2
-    "Number of consecutive times the AP mod was not ready before starting to echo this in the client"
-
     def __init__(self, ctx: CivVContext):
         # Define instance attributes
         self.ctx: CivVContext = ctx
@@ -47,10 +44,6 @@ class CivVClient:
         "Bool indicating whether game is currently ready"
         self._mod_is_ready: bool = False
         "Bool indicating whether AP mod is currently ready"
-        self._mod_first_time_ready: bool = True
-        "Bool indicating whether this is the first time the AP mod is ready"
-        self._mod_is_not_ready_count: int = 0
-        "Number of consecutive times the AP mod was not ready"
 
     @property
     def game_is_ready(self) -> bool:
@@ -67,7 +60,6 @@ class CivVClient:
         if ready and not self.game_is_ready:
             logger.info("Civ V is running")
             self._game_is_ready = True
-            self._mod_first_time_ready = True
 
         # If the game is not ready, store and send this to the client's console
         elif not ready:
@@ -89,32 +81,28 @@ class CivVClient:
             if not self.mod_is_ready:
                 self.ctx.received_item_ids = await self.tuner.get_item_table()
                 self._mod_is_ready = True
-                if self._mod_is_not_ready_count >= self.NUM_MOD_NOT_READY_BEFORE_ECHO or self._mod_first_time_ready:
-                    logger.info("Civ V AP Mod is connected and ready")
-                    await self.tuner.send_notification(
-                        "Connected to AP",
-                        "AP Mod was successfully connected to the AP Client.",
-                        CivVNotificationTypes.generic
-                    )
-                    self._mod_first_time_ready = False
-                self._mod_is_not_ready_count = 0
+                logger.info("Civ V AP Mod is connected and ready")
+                await self.tuner.send_notification(
+                    "Connected to AP",
+                    "AP Mod was successfully connected to the AP Client.",
+                    CivVNotificationTypes.generic
+                )
 
-        # If the mod is not ready (no ID received), store and send this to the client's console if exceeds limit
+        # If the mod is not ready (no ID received), store and send this to the client's console
         elif _id is None:
             self._mod_is_ready = False
-            self._mod_is_not_ready_count += 1
-            if self._mod_is_not_ready_count >= self.NUM_MOD_NOT_READY_BEFORE_ECHO:
-                logger.info("Waiting for Civ V AP Mod to be ready...")
+            logger.info("Waiting for Civ V AP Mod to be ready...")
 
         # If the mod is ready, but its ID does not match the ID in the context, store and send this to the console
         elif _id != self.ctx.slot_data.output_file_id:
+            self._mod_is_ready = False
             logger.info("Loaded Civ V AP Mod does not match the ID of the connected slot")
             await self.tuner.send_notification(
                 "Cannot connect to AP",
                 "Loaded AP Mod does not match the ID of the slot in the AP Client. Please use the correct version.",
                 CivVNotificationTypes.negative
             )
-            self._mod_is_ready = False
+
 
     @staticmethod
     def update_func(func):
@@ -323,11 +311,12 @@ class CivVClient:
         """
 
         # Retrieve the push table and process its contents
-        for key, value in (await self.tuner.get_push_table()).items():
+        push_table = await self.tuner.get_push_table()
+        for key, value in push_table.items():
             match key:
                 # If a full game sync was requested, perform it
                 case "sync":
-                    await self._perform_sync()
+                    await self._perform_sync(push_table)
 
                 # If victory was achieved
                 case "victory":
@@ -346,12 +335,12 @@ class CivVClient:
                     )
                     self.ctx.sent_locations[key].update(locations_to_send)
 
-    async def _perform_sync(self) -> None:
+    async def _perform_sync(self, location_table: dict[str, Any]) -> None:
         """
         Performs a full sync between the game and the multiworld.
 
         This involves granting all items again that have been sent from the multiworld to the player; and marking all
-        locations that have been checked already.
+        locations that have been checked already that are not in the given `location_table`.
 
         """
 
@@ -361,9 +350,10 @@ class CivVClient:
         # Mark all checked locations for the player
         locations_to_mark: dict[CivVLocationType, list[int]] = {x: [] for x in CivVLocationType}
         for location_id_to_mark in self.ctx.checked_locations:
-            # Retrieve the corresponding location and store the ID
+            # Retrieve the corresponding location and store the ID if it is not already in the location_table
             location = LOCATIONS_DATA_BY_ID[location_id_to_mark]
-            locations_to_mark[location.type].append(location.game_id)
+            if location.game_id not in location_table[location.type]:
+                locations_to_mark[location.type].append(location.game_id)
 
         # Mark everything at once, as it is far more efficient
         # Also make sure to store that those locations have been sent to the multiworld now

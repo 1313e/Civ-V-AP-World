@@ -22,7 +22,7 @@
   <References />
   <Blocks />
   <Files>
-    <File md5="318489769A9024FF812D1E90FDF62CEA" import="0">APFunctions.lua</File>
+    <File md5="196306E7ADDD7804C689D06B68C1FCB2" import="0">APFunctions.lua</File>
     <File md5="5B9C45533A8E74AF2E2730D92A306343" import="0">Buildings.xml</File>
     <File md5="F09C389A22E4DB7CAF6929109092774C" import="0">BuildingTextInfos.xml</File>
     <File md5="A0D841E35C89A0E2F38C79831BC2C4CC" import="1">Icons/AP_Policy_256.dds</File>

@@ -649,8 +649,8 @@ function AP.GetPushTable()
 end
 
 function AP.GetItemTable()
-	-- Print the item table contents as a single JSON array
-	PrintResponse(table.concat({"[", table.concat(itemTable, ","), "]"}))
+	-- Print the item table contents as a single JSON array in a JSON object
+	PrintResponse(table.concat({'{"items": [', table.concat(itemTable, ","), "]}"}))
 end
 
 
