@@ -1282,11 +1282,19 @@
             <Where Type="TECH_STEALTH"/>
         </Update>
         <Update>
+            <Set Era="ERA_ANCIENT"/>
+            <Where Type="TECH_FUTURE_TECH"/>
+        </Update>
+        <Update>
             <Set GridX="0"/>
             <Where Type="TECH_FUTURE_TECH"/>
         </Update>
         <Update>
-            <Set GridY="1"/>
+            <Set GridY="30"/>
+            <Where Type="TECH_FUTURE_TECH"/>
+        </Update>
+        <Update>
+            <Set GoodyTech="false"/>
             <Where Type="TECH_FUTURE_TECH"/>
         </Update>
         <Row>
@@ -2723,6 +2731,22 @@
             <PortraitIndex>0</PortraitIndex>
             <IconAtlas>AP_TECH_ATLAS</IconAtlas>
         </Row>
+        <Row>
+            <ID>176</ID>
+            <Type>TECH_CULTURE_BOOST</Type>
+            <Cost>5000</Cost>
+            <Description>Culture Boost</Description>
+            <Help>TXT_KEY_TECH_CULTURE_BOOST_HELP</Help>
+            <Era>ERA_ANCIENT</Era>
+            <Repeat>true</Repeat>
+            <Trade>true</Trade>
+            <GoodyTech>true</GoodyTech>
+            <GridX>0</GridX>
+            <GridY>1</GridY>
+            <Quote>---</Quote>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_TECH_ATLAS</IconAtlas>
+        </Row>
     </Technologies>
     <Technology_PrereqTechs>
         <Row>
@@ -3042,6 +3066,10 @@
             <PrereqTech>TECH_AI_START</PrereqTech>
         </Row>
         <Row>
+            <TechType>TECH_FUTURE_TECH</TechType>
+            <PrereqTech>TECH_AI_START</PrereqTech>
+        </Row>
+        <Row>
             <TechType>TECH_ANCIENT_AP5</TechType>
             <PrereqTech>TECH_ANCIENT_AP1</PrereqTech>
         </Row>
@@ -3281,12 +3309,6 @@
             <TechType>TECH_INFORMATION_AP12</TechType>
             <PrereqTech>TECH_INFORMATION_AP6</PrereqTech>
         </Row>
-        <Delete TechType="TECH_FUTURE_TECH" PrereqTech="TECH_NANOTECHNOLOGY"/>
-        <Delete TechType="TECH_FUTURE_TECH" PrereqTech="TECH_NUCLEAR_FUSION"/>
-        <Delete TechType="TECH_FUTURE_TECH" PrereqTech="TECH_STEALTH"/>
-        <Delete TechType="TECH_FUTURE_TECH" PrereqTech="TECH_PARTICLE_PHYSICS"/>
-        <Delete TechType="TECH_FUTURE_TECH" PrereqTech="TECH_GLOBALIZATION"/>
-        <Delete TechType="TECH_FUTURE_TECH" PrereqTech="TECH_INTERNET"/>
         <Row>
             <TechType>TECH_ANCIENT_AP1</TechType>
             <PrereqTech>TECH_ANCIENT_ERA</PrereqTech>
@@ -3630,6 +3652,10 @@
         <Row>
             <TechType>TECH_ATOMIC_AP9</TechType>
             <PrereqTech>TECH_ATOMIC_ERA</PrereqTech>
+        </Row>
+        <Row>
+            <TechType>TECH_CULTURE_BOOST</TechType>
+            <PrereqTech>TECH_ANCIENT_ERA</PrereqTech>
         </Row>
     </Technology_PrereqTechs>
 </GameData>

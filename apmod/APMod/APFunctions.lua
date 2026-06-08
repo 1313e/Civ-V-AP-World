@@ -14,10 +14,10 @@ local LOWER_TECH_ID = 83
 local UPPER_TECH_ID = 168
 local LOWER_TEAM_ID = 0
 local UPPER_TEAM_ID = 62
+local BASE_CULTURE_TECH_YIELD = 1800
 
 local player = Players[Game.GetActivePlayer()]
 local team = Teams[player:GetTeam()]
-local teamTechs = team:GetTeamTechs()
 
 local optionsTable = {
 	satellites_meets_all=nil,
@@ -121,6 +121,13 @@ local notificationTypes = {
 	[1]=NotificationTypes.NOTIFICATION_CITY_GROWTH,	-- positive
 	[2]=NotificationTypes.NOTIFICATION_STARVING,	-- negative
 }
+local cultureTechYieldSpeedModifier = {
+	[0]=3, [1]=1.5, [2]=1, [3]=0.67
+}
+local cultureTechYieldDifficultyModifier = {
+	[0]=0.5, [1]=0.67, [2]=0.85, [3]=1, [4]=1, [5]=1, [6]=1, [7]=1,
+}
+local cultureTechYield = 0
 
 
 -- EVENTS
@@ -164,21 +171,26 @@ function OnPolicyBranchAdopted(playerId, policyBranchId)
 end
 
 function OnTechAcquired(playerId, techId)
-	-- Upon acquiring Satellites, make sure the player's team discovers/meets all other teams
-	if(techId == 71 and optionsTable["satellites_meets_all"]) then
-		for i=LOWER_TEAM_ID, UPPER_TEAM_ID do
-			team:Meet(i)
+	-- If the player received this tech
+	if playerId == player:GetID() then
+		-- If the player gets an AP tech, send it
+		if(techId >= LOWER_TECH_ID and techId <= UPPER_TECH_ID) then
+			SendLocation("tech", techId)
+
+		-- Upon acquiring Satellites, make sure the player's team discovers/meets all other teams
+		elseif(techId == 71 and optionsTable["satellites_meets_all"]) then
+			for i=LOWER_TEAM_ID, UPPER_TEAM_ID do
+				team:Meet(i)
+			end
+
+		-- Upon acquiring Industrial Era, if player has not founded a religion yet, provide player with a free Great Prophet
+		elseif(techId == 172 and not player:HasCreatedReligion()) then
+			player:AddFreeUnit(128)
+
+		-- Upon acquiring Culture Boost, grant culture to player
+		elseif(techId == 176) then
+			AP.ChangeCulture(cultureTechYield)
 		end
-	end
-
-	-- Upon acquiring Industrial Era, if player has not founded a religion yet, provide player with a free Great Prophet
-	if(playerId == player:GetID() and techId == 172 and not player:HasCreatedReligion()) then
-		player:AddFreeUnit(128)
-	end
-
-	-- If the player gets an AP tech, send it
-	if(playerId == player:GetID() and techId >= LOWER_TECH_ID and techId <= UPPER_TECH_ID) then
-		SendLocation("tech", techId)
 	end
 
 	-- If the AI gets a non-AP tech that should have given access to the next era, grant that
@@ -276,8 +288,20 @@ function UpdateTextInfos(tableName, locationId, refresh)
 	clean_help = Locale.ConvertTextKey(results.Help .. "_CLEAN")
 
 	-- Replace description and help text infos with their clean version. Escape single quotation marks
-	DB.Query(table.concat({"UPDATE Language_en_US SET Text = '", clean_description:gsub("'", "''"), "' WHERE Tag = '", results.Description, "'"}))()
-	DB.Query(table.concat({"UPDATE Language_en_US SET Text = '", clean_help:gsub("'", "''"), "' WHERE Tag = '", results.Help, "'"}))()
+	DB.Query(table.concat({
+		"UPDATE Language_en_US SET Text = '",
+		clean_description:gsub("'", "''"),
+		"' WHERE Tag = '",
+		results.Description,
+		"'",
+	}))()
+	DB.Query(table.concat({
+		"UPDATE Language_en_US SET Text = '",
+		clean_help:gsub("'", "''"),
+		"' WHERE Tag = '",
+		results.Help,
+		"'",
+	}))()
 
 	-- Refresh the text infos if requested
 	if refresh then
@@ -354,6 +378,20 @@ function ChangeFreePoliciesToGrant(value)
 	-- Changes the number of free policies to grant by the given value for current session AND save file
 	freePoliciesToGrant = freePoliciesToGrant + value
 	SaveScriptData("free_policies_to_grant", freePoliciesToGrant)
+end
+
+function SetCultureTechYield()
+	-- Set the culture yield for the culture tech to a value based on game speed and difficulty
+	speedModifier = cultureTechYieldSpeedModifier[Game.GetGameSpeedType()]
+	difficultyModifier = cultureTechYieldDifficultyModifier[Game.GetHandicapType()]
+	cultureTechYield = math.floor(BASE_CULTURE_TECH_YIELD * speedModifier * difficultyModifier)
+
+	-- Update the text info entry for this tech to state how much culture is rewarded
+	DB.Query(table.concat({
+		"UPDATE Language_en_US SET Text = 'A repeatable technology that grants ",
+		 cultureTechYield,
+		 " [ICON_CULTURE] Culture each time it is researched.' WHERE Tag = 'TXT_KEY_TECH_CULTURE_BOOST_HELP'",
+	}))()
 end
 
 function RequestSync()
@@ -630,6 +668,9 @@ function Init()
 
 	-- Make sure that allow policy saving is turned on
 	Game.SetOption(GameOptionTypes.GAMEOPTION_POLICY_SAVING, true)
+
+	-- Set the culture tech yield
+	SetCultureTechYield()
 
 	-- Give player and AI their corresponding modified techs at the start
 	for i = 0, GameDefines.MAX_CIV_PLAYERS-1, 1 do
