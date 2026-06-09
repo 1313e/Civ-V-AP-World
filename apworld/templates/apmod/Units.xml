@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+    <Units>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_SCOUT"/>
+        </Update>
+    </Units>
+</GameData>

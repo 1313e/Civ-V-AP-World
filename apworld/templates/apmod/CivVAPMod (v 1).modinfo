@@ -43,6 +43,7 @@
     <File md5="5754B1BE6E37A2F9D04D9D4149E5CDDF" import="1">SaveUtils.lua</File>
     <File md5="E526E7FF1D4329FE3554C3D15F5E3583" import="0">Technologies.xml</File>
     <File md5="F4D875FCCFEE835FF124FD5CE4EC5D82" import="0">TechnologyTextInfos.xml</File>
+    <File md5="B853A93AC6FAE370D757CC173A74164A" import="0">Units.xml</File>
     <File md5="23394FEC3BB005F4FAC845430B3E0418" import="0">WorldWonders.xml</File>
     <File md5="6D4F78EDACD1735CAA37A18A7BE66E04" import="0">WorldWonderTextInfos.xml</File>
   </Files>
@@ -59,6 +60,7 @@
       <UpdateDatabase>Policies.xml</UpdateDatabase>
       <UpdateDatabase>Processes.xml</UpdateDatabase>
       <UpdateDatabase>Technologies.xml</UpdateDatabase>
+      <UpdateDatabase>Units.xml</UpdateDatabase>
       <UpdateDatabase>WorldWonders.xml</UpdateDatabase>
       <UpdateDatabase>Icons/AP_Icons.xml</UpdateDatabase>
     </OnModActivated>
