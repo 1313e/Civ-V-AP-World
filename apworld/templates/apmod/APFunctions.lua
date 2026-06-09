@@ -501,8 +501,8 @@ function AP.GrantPolicies(policyIds)
 		end
 		player:SetHasPolicy(policyId, true);
 
-		-- If this policy is the Tradition adoption policy, the player gets a free Aqueduct. Send that as a location
-		if(policyId == 6) then
+		-- If this policy is the Tradition finisher policy, the player gets a free Aqueduct. Send that as a location
+		if(policyId == 42) then
 			SendLocation("building", 91)
 		end
 	end
