@@ -93,6 +93,16 @@ local civUniqueBuildingToBuildingId = {
 	[116]=30, [117]=16, [119]=122,
 	[140]=28, [143]=33, [144]=12, [145]=50, [146]=22, [147]=48,
 }
+local textInfoLinkedIds = {
+	Buildings={
+		[12]={144}, [13]={0}, [16]={117},
+		[22]={146}, [28]={140}, [29]={9, 10},
+		[30]={116}, [33]={3, 143}, [37]={96}, [38]={2},
+		[43]={4}, [47]={5}, [48]={6, 147},
+		[50]={7, 145}, [51]={8},
+		[122]={119},
+	},
+}
 local nationalWonderBuildingIds = {
 	[55]=true, [56]=true, [57]=true, [58]=true, [59]=true,
 	[60]=true, [61]=true, [62]=true,
@@ -282,6 +292,13 @@ function SaveScriptData(key, value)
 end
 
 function UpdateTextInfos(tableName, locationId, refresh)
+	-- If this table plus location ID has linked IDs, update those first
+	if(textInfoLinkedIds[tableName] ~= nil and textInfoLinkedIds[tableName][locationId] ~= nil) then
+		for _, linkedId in ipairs(textInfoLinkedIds[tableName][locationId]) do
+			UpdateTextInfos(tableName, linkedId, false)
+		end
+	end
+
 	-- Retrieve the description and help text infos for this ID from the given table
 	results = DB.Query(table.concat({"SELECT Description, Help FROM ", tableName, " WHERE ID = '", locationId, "'"}))()
 	clean_description = Locale.ConvertTextKey(results.Description .. "_CLEAN")
