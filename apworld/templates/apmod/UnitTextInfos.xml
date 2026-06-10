@@ -1,0 +1,1713 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+    <Language_en_US>
+        <Delete Tag="TXT_KEY_UNIT_SETTLER"/>
+        <Row Tag="TXT_KEY_UNIT_SETTLER">
+            <Text>{unit_settler_flag}Settler</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_SETTLER_CLEAN">
+            <Text>Settler</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_SETTLER"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_SETTLER">
+            <Text>Founds new Cities to expand your empire.[NEWLINE][NEWLINE][ICON_FOOD] Growth of the City is stopped while this Unit is being built.{unit_settler_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_SETTLER_CLEAN">
+            <Text>Founds new Cities to expand your empire.[NEWLINE][NEWLINE][ICON_FOOD] Growth of the City is stopped while this Unit is being built.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_WORKER"/>
+        <Row Tag="TXT_KEY_UNIT_WORKER">
+            <Text>{unit_worker_flag}Worker</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_WORKER_CLEAN">
+            <Text>Worker</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_WORKER"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_WORKER">
+            <Text>Improves [ICON_FOOD] Food [ICON_PRODUCTION] Production and [ICON_GOLD] Gold by constructing Improvements on map tiles outside of Cities.{unit_worker_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_WORKER_CLEAN">
+            <Text>Improves [ICON_FOOD] Food [ICON_PRODUCTION] Production and [ICON_GOLD] Gold by constructing Improvements on map tiles outside of Cities.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_WORK_BOAT"/>
+        <Row Tag="TXT_KEY_UNIT_WORK_BOAT">
+            <Text>{unit_work_boat_flag}Work Boat</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_WORK_BOAT_CLEAN">
+            <Text>Work Boat</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_WORKBOAT"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_WORKBOAT">
+            <Text>Creates Improvements on water resources like [ICON_RES_FISH] Fish. The Work Boat is consumed in the process. It is defenseless, and will be killed if it comes into contact with an enemy.{unit_work_boat_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_WORKBOAT_CLEAN">
+            <Text>Creates Improvements on water resources like [ICON_RES_FISH] Fish. The Work Boat is consumed in the process. It is defenseless, and will be killed if it comes into contact with an enemy.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_MISSILE_CRUISER"/>
+        <Row Tag="TXT_KEY_UNIT_MISSILE_CRUISER">
+            <Text>{unit_missile_cruiser_flag}Missile Cruiser</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_MISSILE_CRUISER_CLEAN">
+            <Text>Missile Cruiser</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_MISSILE_CRUISER"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_MISSILE_CRUISER">
+            <Text>Naval Unit specialized in warding off enemy aircraft. Can hold 3 Missiles.  Used to hunt down and destroy enemy Submarines.{unit_missile_cruiser_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_MISSILE_CRUISER_CLEAN">
+            <Text>Naval Unit specialized in warding off enemy aircraft. Can hold 3 Missiles.  Used to hunt down and destroy enemy Submarines.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_NUCLEAR_SUBMARINE"/>
+        <Row Tag="TXT_KEY_UNIT_NUCLEAR_SUBMARINE">
+            <Text>{unit_nuclear_submarine_flag}Nuclear Submarine</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_NUCLEAR_SUBMARINE_CLEAN">
+            <Text>Nuclear Submarine</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_NUCLEAR_SUBMARINE"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_NUCLEAR_SUBMARINE">
+            <Text>Invisible to all Units except Destroyers, Missile Cruisers and other Submarines, or until it attacks or is adjacent to another unit. Can carry 2 Missiles, and is specialized in attacking Naval Units.{unit_nuclear_submarine_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_NUCLEAR_SUBMARINE_CLEAN">
+            <Text>Invisible to all Units except Destroyers, Missile Cruisers and other Submarines, or until it attacks or is adjacent to another unit. Can carry 2 Missiles, and is specialized in attacking Naval Units.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_CARRIER"/>
+        <Row Tag="TXT_KEY_UNIT_CARRIER">
+            <Text>{unit_carrier_flag}Carrier</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_CARRIER_CLEAN">
+            <Text>Carrier</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_CARRIER"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_CARRIER">
+            <Text>Initially carries 2 Aircraft; capacity may be boosted through promotions.{unit_carrier_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_CARRIER_CLEAN">
+            <Text>Initially carries 2 Aircraft; capacity may be boosted through promotions.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_BATTLESHIP"/>
+        <Row Tag="TXT_KEY_UNIT_BATTLESHIP">
+            <Text>{unit_battleship_flag}Battleship</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_BATTLESHIP_CLEAN">
+            <Text>Battleship</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_BATTLESHIP"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_BATTLESHIP">
+            <Text>Most powerful ranged Naval unit in the game until the Missile Cruiser.{unit_battleship_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_BATTLESHIP_CLEAN">
+            <Text>Most powerful ranged Naval unit in the game until the Missile Cruiser.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_SUBMARINE"/>
+        <Row Tag="TXT_KEY_UNIT_SUBMARINE">
+            <Text>{unit_submarine_flag}Submarine</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_SUBMARINE_CLEAN">
+            <Text>Submarine</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_SUBMARINE"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_SUBMARINE">
+            <Text>Invisible to all Units except Destroyers, Missile Cruisers and other Submarines, or until it attacks or is adjacent to another unit. Can cause major damage to other ships if they get into range without being seen.{unit_submarine_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_SUBMARINE_CLEAN">
+            <Text>Invisible to all Units except Destroyers, Missile Cruisers and other Submarines, or until it attacks or is adjacent to another unit. Can cause major damage to other ships if they get into range without being seen.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_DESTROYER"/>
+        <Row Tag="TXT_KEY_UNIT_DESTROYER">
+            <Text>{unit_destroyer_flag}Destroyer</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_DESTROYER_CLEAN">
+            <Text>Destroyer</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_DESTROYER"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_DESTROYER">
+            <Text>Fast late game ship making it highly effective at recon. Also used to hunt down and destroy enemy Submarines. Fights as a naval melee unit.{unit_destroyer_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_DESTROYER_CLEAN">
+            <Text>Fast late game ship making it highly effective at recon. Also used to hunt down and destroy enemy Submarines. Fights as a naval melee unit.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_IRONCLAD"/>
+        <Row Tag="TXT_KEY_UNIT_IRONCLAD">
+            <Text>{unit_ironclad_flag}Ironclad</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_IRONCLAD_CLEAN">
+            <Text>Ironclad</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_IRONCLAD"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_IRONCLAD">
+            <Text>A very powerful naval melee unit, the Ironclad pays for its strength by being slower in ocean tiles.{unit_ironclad_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_IRONCLAD_CLEAN">
+            <Text>A very powerful naval melee unit, the Ironclad pays for its strength by being slower in ocean tiles.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_FRIGATE"/>
+        <Row Tag="TXT_KEY_UNIT_FRIGATE">
+            <Text>{unit_frigate_flag}Frigate</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_FRIGATE_CLEAN">
+            <Text>Frigate</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_FRIGATE"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_FRIGATE">
+            <Text>Powerful Renaissance Era naval Unit used to wrest control of the seas.{unit_frigate_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_FRIGATE_CLEAN">
+            <Text>Powerful Renaissance Era naval Unit used to wrest control of the seas.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_ENGLISH_SHIPOFTHELINE"/>
+        <Row Tag="TXT_KEY_UNIT_ENGLISH_SHIPOFTHELINE">
+            <Text>{unit_frigate_flag}Ship of the Line</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_ENGLISH_SHIPOFTHELINE_CLEAN">
+            <Text>Ship of the Line</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_SHIPOFTHELINE"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_SHIPOFTHELINE">
+            <Text>Powerful Renaissance Era Naval Unit used to wrest control of the seas. Only the English may build it.{unit_frigate_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_SHIPOFTHELINE_CLEAN">
+            <Text>Powerful Renaissance Era Naval Unit used to wrest control of the seas. Only the English may build it.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_CARAVEL"/>
+        <Row Tag="TXT_KEY_UNIT_CARAVEL">
+            <Text>{unit_caravel_flag}Caravel</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_CARAVEL_CLEAN">
+            <Text>Caravel</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_CARAVEL"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_CARAVEL">
+            <Text>Fast Renaissance exploration Unit with an enhanced sight radius that can enter Ocean. Fights as a naval melee unit.{unit_caravel_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_CARAVEL_CLEAN">
+            <Text>Fast Renaissance exploration Unit with an enhanced sight radius that can enter Ocean. Fights as a naval melee unit.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_TRIREME"/>
+        <Row Tag="TXT_KEY_UNIT_TRIREME">
+            <Text>{unit_trireme_flag}Trireme</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_TRIREME_CLEAN">
+            <Text>Trireme</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_TRIREME"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_TRIREME">
+            <Text>Ancient Era Naval Unit used to wrest control of the seas through melee attacks on naval units and cities.{unit_trireme_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_TRIREME_CLEAN">
+            <Text>Ancient Era Naval Unit used to wrest control of the seas through melee attacks on naval units and cities.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_MECH"/>
+        <Row Tag="TXT_KEY_UNIT_MECH">
+            <Text>{unit_mech_flag}Giant Death Robot</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_MECH_CLEAN">
+            <Text>Giant Death Robot</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_MECH"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_MECH">
+            <Text>Isn't benefiting from any defensive terrain bonuses, but is otherwise stronger than any other military unit in the game.{unit_mech_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_MECH_CLEAN">
+            <Text>Isn't benefiting from any defensive terrain bonuses, but is otherwise stronger than any other military unit in the game.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_NUCLEAR_MISSILE"/>
+        <Row Tag="TXT_KEY_UNIT_NUCLEAR_MISSILE">
+            <Text>{unit_nuclear_missile_flag}Nuclear Missile</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_NUCLEAR_MISSILE_CLEAN">
+            <Text>Nuclear Missile</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_NUCLEAR_MISSILE"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_NUCLEAR_MISSILE">
+            <Text>Unleash nuclear destruction upon your foes. Does great damage to Cities and damages any Unit caught in the blast radius.[NEWLINE][NEWLINE]Requires Manhattan Project and two Uranium resources.{unit_nuclear_missile_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_NUCLEAR_MISSILE_CLEAN">
+            <Text>Unleash nuclear destruction upon your foes. Does great damage to Cities and damages any Unit caught in the blast radius.[NEWLINE][NEWLINE]Requires Manhattan Project and two Uranium resources.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_STEALTH_BOMBER"/>
+        <Row Tag="TXT_KEY_UNIT_STEALTH_BOMBER">
+            <Text>{unit_stealth_bomber_flag}Stealth Bomber</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_STEALTH_BOMBER_CLEAN">
+            <Text>Stealth Bomber</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_STEALTH_BOMBER"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_STEALTH_BOMBER">
+            <Text>A long-range Air Unit that rains death from above onto enemy Units and Cities.{unit_stealth_bomber_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_STEALTH_BOMBER_CLEAN">
+            <Text>A long-range Air Unit that rains death from above onto enemy Units and Cities.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_JET_FIGHTER"/>
+        <Row Tag="TXT_KEY_UNIT_JET_FIGHTER">
+            <Text>{unit_jet_fighter_flag}Jet Fighter</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_JET_FIGHTER_CLEAN">
+            <Text>Jet Fighter</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_JET_FIGHTER"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_JET_FIGHTER">
+            <Text>Air Unit designed to wrest control of the skies and intercept incoming enemy aircraft.{unit_jet_fighter_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_JET_FIGHTER_CLEAN">
+            <Text>Air Unit designed to wrest control of the skies and intercept incoming enemy aircraft.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_GUIDED_MISSILE"/>
+        <Row Tag="TXT_KEY_UNIT_GUIDED_MISSILE">
+            <Text>{unit_guided_missile_flag}Guided Missile</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_GUIDED_MISSILE_CLEAN">
+            <Text>Guided Missile</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_GUIDED_MISSILE"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_GUIDED_MISSILE">
+            <Text>A cheap Unit that may be used once to damage enemy Units or Cities.{unit_guided_missile_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_GUIDED_MISSILE_CLEAN">
+            <Text>A cheap Unit that may be used once to damage enemy Units or Cities.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_MODERN_ARMOR"/>
+        <Row Tag="TXT_KEY_UNIT_MODERN_ARMOR">
+            <Text>{unit_modern_armor_flag}Modern Armor</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_MODERN_ARMOR_CLEAN">
+            <Text>Modern Armor</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_MODERN_ARMOR"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_MODERN_ARMOR">
+            <Text>Fast and powerful late-game Unit.{unit_modern_armor_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_MODERN_ARMOR_CLEAN">
+            <Text>Fast and powerful late-game Unit.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELICOPTER_GUNSHIP"/>
+        <Row Tag="TXT_KEY_UNIT_HELICOPTER_GUNSHIP">
+            <Text>{unit_helicopter_gunship_flag}Helicopter Gunship</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELICOPTER_GUNSHIP_CLEAN">
+            <Text>Helicopter Gunship</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_HELICOPTER_GUNSHIP"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_HELICOPTER_GUNSHIP">
+            <Text>Unit specialized in fighting Modern Armor and Tanks. It is capable of hovering over mountains, but takes damage if ending its turn on one.{unit_helicopter_gunship_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_HELICOPTER_GUNSHIP_CLEAN">
+            <Text>Unit specialized in fighting Modern Armor and Tanks. It is capable of hovering over mountains, but takes damage if ending its turn on one.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_MOBILE_SAM"/>
+        <Row Tag="TXT_KEY_UNIT_MOBILE_SAM">
+            <Text>{unit_mobile_sam_flag}Mobile SAM</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_MOBILE_SAM_CLEAN">
+            <Text>Mobile SAM</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_MOBILE_SAM"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_MOBILE_SAM">
+            <Text>Will intercept enemy aircraft which try to bomb nearby Units.{unit_mobile_sam_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_MOBILE_SAM_CLEAN">
+            <Text>Will intercept enemy aircraft which try to bomb nearby Units.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_ROCKET_ARTILLERY"/>
+        <Row Tag="TXT_KEY_UNIT_ROCKET_ARTILLERY">
+            <Text>{unit_rocket_artillery_flag}Rocket Artillery</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_ROCKET_ARTILLERY_CLEAN">
+            <Text>Rocket Artillery</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_ROCKET_ARTILLERY"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_ROCKET_ARTILLERY">
+            <Text>Fast Siege Unit of the late-game. Unlike other Siege Units, it does not need to set up prior to firing.{unit_rocket_artillery_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_ROCKET_ARTILLERY_CLEAN">
+            <Text>Fast Siege Unit of the late-game. Unlike other Siege Units, it does not need to set up prior to firing.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_MECHANIZED_INFANTRY"/>
+        <Row Tag="TXT_KEY_UNIT_MECHANIZED_INFANTRY">
+            <Text>{unit_mechanized_infantry_flag}Mechanized Infantry</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_MECHANIZED_INFANTRY_CLEAN">
+            <Text>Mechanized Infantry</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_MECHANIZED_INFANTRY"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_MECHANIZED_INFANTRY">
+            <Text>Fast, basic Unit of the late-game that requires no special resources to build.{unit_mechanized_infantry_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_MECHANIZED_INFANTRY_CLEAN">
+            <Text>Fast, basic Unit of the late-game that requires no special resources to build.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_ATOMIC_BOMB"/>
+        <Row Tag="TXT_KEY_UNIT_ATOMIC_BOMB">
+            <Text>{unit_atomic_bomb_flag}Atomic Bomb</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_ATOMIC_BOMB_CLEAN">
+            <Text>Atomic Bomb</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_ATOMIC_BOMB"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_ATOMIC_BOMB">
+            <Text>Unleash nuclear destruction upon your foes. Does great damage to Cities and damages any Unit caught in the blast radius. May be stationed on Aircraft Carriers.[NEWLINE][NEWLINE]Requires Manhattan Project and a Uranium resource.{unit_atomic_bomb_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_ATOMIC_BOMB_CLEAN">
+            <Text>Unleash nuclear destruction upon your foes. Does great damage to Cities and damages any Unit caught in the blast radius. May be stationed on Aircraft Carriers.[NEWLINE][NEWLINE]Requires Manhattan Project and a Uranium resource.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_BOMBER"/>
+        <Row Tag="TXT_KEY_UNIT_BOMBER">
+            <Text>{unit_bomber_flag}Bomber</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_BOMBER_CLEAN">
+            <Text>Bomber</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_BOMBER"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_BOMBER">
+            <Text>Air Unit that rains death from above onto enemy Units and Cities.{unit_bomber_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_BOMBER_CLEAN">
+            <Text>Air Unit that rains death from above onto enemy Units and Cities.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_CIV5_INDUSTRIAL_B17_HEADING"/>
+        <Row Tag="TXT_KEY_CIV5_INDUSTRIAL_B17_HEADING">
+            <Text>{unit_bomber_flag}B17</Text>
+        </Row>
+        <Row Tag="TXT_KEY_CIV5_INDUSTRIAL_B17_HEADING_CLEAN">
+            <Text>B17</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_B17"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_B17">
+            <Text>Air Unit that rains death from above onto enemy Units and Cities. Only the Americans may build it. This Unit has a chance of evading interception, and does additional damage to Cities compared to the Bomber, which it replaces.{unit_bomber_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_B17_CLEAN">
+            <Text>Air Unit that rains death from above onto enemy Units and Cities. Only the Americans may build it. This Unit has a chance of evading interception, and does additional damage to Cities compared to the Bomber, which it replaces.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_FIGHTER"/>
+        <Row Tag="TXT_KEY_UNIT_FIGHTER">
+            <Text>{unit_fighter_flag}Fighter</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_FIGHTER_CLEAN">
+            <Text>Fighter</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_FIGHTER"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_FIGHTER">
+            <Text>Air Unit designed to wrest control of the skies and intercept incoming enemy aircraft.{unit_fighter_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_FIGHTER_CLEAN">
+            <Text>Air Unit designed to wrest control of the skies and intercept incoming enemy aircraft.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_JAPANESE_ZERO"/>
+        <Row Tag="TXT_KEY_UNIT_JAPANESE_ZERO">
+            <Text>{unit_fighter_flag}Zero</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_JAPANESE_ZERO_CLEAN">
+            <Text>Zero</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_ZERO"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_ZERO">
+            <Text>Air Unit designed to wrest control of the skies and intercept incoming enemy aircraft. Only the Japanese may build it. This Unit has a bonus against other Fighters and does not require Oil.{unit_fighter_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_ZERO_CLEAN">
+            <Text>Air Unit designed to wrest control of the skies and intercept incoming enemy aircraft. Only the Japanese may build it. This Unit has a bonus against other Fighters and does not require Oil.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_PARATROOPER"/>
+        <Row Tag="TXT_KEY_UNIT_PARATROOPER">
+            <Text>{unit_paratrooper_flag}Paratrooper</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_PARATROOPER_CLEAN">
+            <Text>Paratrooper</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_PARATROOPER"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_PARATROOPER">
+            <Text>Strong infantry Unit capable of paradropping up to 9 tiles from friendly territory. Paratrooper can also move and pillage after paradropping, but cannot enter combat until the following turn.{unit_paratrooper_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_PARATROOPER_CLEAN">
+            <Text>Strong infantry Unit capable of paradropping up to 9 tiles from friendly territory. Paratrooper can also move and pillage after paradropping, but cannot enter combat until the following turn.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_TANK"/>
+        <Row Tag="TXT_KEY_UNIT_TANK">
+            <Text>{unit_tank_flag}Tank</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_TANK_CLEAN">
+            <Text>Tank</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_TANK"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_TANK">
+            <Text>Fast and powerful late game Unit.{unit_tank_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_TANK_CLEAN">
+            <Text>Fast and powerful late game Unit.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_GERMAN_PANZER"/>
+        <Row Tag="TXT_KEY_UNIT_GERMAN_PANZER">
+            <Text>{unit_tank_flag}Panzer</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_GERMAN_PANZER_CLEAN">
+            <Text>Panzer</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_PANZER"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_PANZER">
+            <Text>Fast and powerful late game Unit.[NEWLINE][NEWLINE]Only the Germans may build it. This Unit has 1 additional movement compared to the Tank, which it replaces.{unit_tank_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_PANZER_CLEAN">
+            <Text>Fast and powerful late game Unit.[NEWLINE][NEWLINE]Only the Germans may build it. This Unit has 1 additional movement compared to the Tank, which it replaces.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_ARTILLERY"/>
+        <Row Tag="TXT_KEY_UNIT_ARTILLERY">
+            <Text>{unit_artillery_flag}Artillery</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_ARTILLERY_CLEAN">
+            <Text>Artillery</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_ARTILLERY"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_ARTILLERY">
+            <Text>The first Siege Unit in the game capable of firing 3 tiles away. Must set up prior to firing.{unit_artillery_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_ARTILLERY_CLEAN">
+            <Text>The first Siege Unit in the game capable of firing 3 tiles away. Must set up prior to firing.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_ANTI_AIRCRAFT_GUN"/>
+        <Row Tag="TXT_KEY_UNIT_ANTI_AIRCRAFT_GUN">
+            <Text>{unit_anti_aircraft_gun_flag}Anti-Aircraft Gun</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_ANTI_AIRCRAFT_GUN_CLEAN">
+            <Text>Anti-Aircraft Gun</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_ANTI_AIRCRAFT_GUN"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_ANTI_AIRCRAFT_GUN">
+            <Text>Will intercept enemy aircraft which try to bomb nearby Units.{unit_anti_aircraft_gun_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_ANTI_AIRCRAFT_GUN_CLEAN">
+            <Text>Will intercept enemy aircraft which try to bomb nearby Units.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_AT_GUN"/>
+        <Row Tag="TXT_KEY_UNIT_AT_GUN">
+            <Text>{unit_anti_tank_gun_flag}Anti-Tank Gun</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_AT_GUN_CLEAN">
+            <Text>Anti-Tank Gun</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_ANTI_TANK_GUN"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_ANTI_TANK_GUN">
+            <Text>Relatively cheap Unit specialized in fighting Tanks.{unit_anti_tank_gun_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_ANTI_TANK_GUN_CLEAN">
+            <Text>Relatively cheap Unit specialized in fighting Tanks.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_INFANTRY"/>
+        <Row Tag="TXT_KEY_UNIT_INFANTRY">
+            <Text>{unit_infantry_flag}Infantry</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_INFANTRY_CLEAN">
+            <Text>Infantry</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_INFANTRY"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_INFANTRY">
+            <Text>Most powerful Infantry Unit in the game until Mechanized Infantry.{unit_infantry_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_INFANTRY_CLEAN">
+            <Text>Most powerful Infantry Unit in the game until Mechanized Infantry.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_CAVALRY"/>
+        <Row Tag="TXT_KEY_UNIT_CAVALRY">
+            <Text>{unit_cavalry_flag}Cavalry</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_CAVALRY_CLEAN">
+            <Text>Cavalry</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_CAVALRY"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_CAVALRY">
+            <Text>Mounted Unit capable of fighting toe-to-toe with contemporary infantry units.{unit_cavalry_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_CAVALRY_CLEAN">
+            <Text>Mounted Unit capable of fighting toe-to-toe with contemporary infantry units.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_RUSSIAN_COSSACK"/>
+        <Row Tag="TXT_KEY_UNIT_RUSSIAN_COSSACK">
+            <Text>{unit_cavalry_flag}Cossack</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_RUSSIAN_COSSACK_CLEAN">
+            <Text>Cossack</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_COSSACK"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_COSSACK">
+            <Text>Mounted Unit capable of fighting toe-to-toe with contemporary infantry units. [NEWLINE][NEWLINE]Only the Russians may build it. This Unit has a combat bonus when fighting enemies that have already taken damage.{unit_cavalry_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_COSSACK_CLEAN">
+            <Text>Mounted Unit capable of fighting toe-to-toe with contemporary infantry units. [NEWLINE][NEWLINE]Only the Russians may build it. This Unit has a combat bonus when fighting enemies that have already taken damage.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_RIFLEMAN"/>
+        <Row Tag="TXT_KEY_UNIT_RIFLEMAN">
+            <Text>{unit_rifleman_flag}Rifleman</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_RIFLEMAN_CLEAN">
+            <Text>Rifleman</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_RIFLEMAN"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_RIFLEMAN">
+            <Text>Strong, front-line land Unit of the mid-game.{unit_rifleman_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_RIFLEMAN_CLEAN">
+            <Text>Strong, front-line land Unit of the mid-game.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_LANCER"/>
+        <Row Tag="TXT_KEY_UNIT_LANCER">
+            <Text>{unit_lancer_flag}Lancer</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_LANCER_CLEAN">
+            <Text>Lancer</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_LANCER"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_LANCER">
+            <Text>Mounted Unit specialized in defeating enemy Mounted Units.{unit_lancer_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_LANCER_CLEAN">
+            <Text>Mounted Unit specialized in defeating enemy Mounted Units.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_OTTOMAN_SIPAHI"/>
+        <Row Tag="TXT_KEY_UNIT_OTTOMAN_SIPAHI">
+            <Text>{unit_lancer_flag}Sipahi</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_OTTOMAN_SIPAHI_CLEAN">
+            <Text>Sipahi</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_SIPAHI"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_SIPAHI">
+            <Text>Mounted Unit specialized in defeating enemy Mounted Units. May only be built by the Ottomans. This Unit is faster and can see further than the Lancer, which it replaces.{unit_lancer_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_SIPAHI_CLEAN">
+            <Text>Mounted Unit specialized in defeating enemy Mounted Units. May only be built by the Ottomans. This Unit is faster and can see further than the Lancer, which it replaces.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_CANNON"/>
+        <Row Tag="TXT_KEY_UNIT_CANNON">
+            <Text>{unit_cannon_flag}Cannon</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_CANNON_CLEAN">
+            <Text>Cannon</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_CANNON"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_CANNON">
+            <Text>Powerful Renaissance Era Siege Unit. Must set up prior to firing.{unit_cannon_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_CANNON_CLEAN">
+            <Text>Powerful Renaissance Era Siege Unit. Must set up prior to firing.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_MUSKETMAN"/>
+        <Row Tag="TXT_KEY_UNIT_MUSKETMAN">
+            <Text>{unit_musketman_flag}Musketman</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_MUSKETMAN_CLEAN">
+            <Text>Musketman</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_MUSKETMAN"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_MUSKETMAN">
+            <Text>First gunpowder Unit of the game. Fairly cheap and powerful.{unit_musketman_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_MUSKETMAN_CLEAN">
+            <Text>First gunpowder Unit of the game. Fairly cheap and powerful.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_AMERICAN_MINUTEMAN"/>
+        <Row Tag="TXT_KEY_UNIT_AMERICAN_MINUTEMAN">
+            <Text>{unit_musketman_flag}Minuteman</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_AMERICAN_MINUTEMAN_CLEAN">
+            <Text>Minuteman</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_MINUTEMAN"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_MINUTEMAN">
+            <Text>One of the first gunpowder units of the game. Only the Americans may build it. Replaces the Musketman. This Unit may move through rough ground as though it were flat, receives a bonus when fighting in rough terrain, and earns points toward a [ICON_GOLDEN_AGE] Golden Age when it defeats an enemy.{unit_musketman_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_MINUTEMAN_CLEAN">
+            <Text>One of the first gunpowder units of the game. Only the Americans may build it. Replaces the Musketman. This Unit may move through rough ground as though it were flat, receives a bonus when fighting in rough terrain, and earns points toward a [ICON_GOLDEN_AGE] Golden Age when it defeats an enemy.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_FRENCH_MUSKETEER"/>
+        <Row Tag="TXT_KEY_UNIT_FRENCH_MUSKETEER">
+            <Text>{unit_musketman_flag}Musketeer</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_FRENCH_MUSKETEER_CLEAN">
+            <Text>Musketeer</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_MUSKETEER"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_MUSKETEER">
+            <Text>One of the first gunpowder units of the game. Only the French may build it. This Unit has a higher [ICON_STRENGTH] Combat Strength than the Musketman, which it replaces.{unit_musketman_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_MUSKETEER_CLEAN">
+            <Text>One of the first gunpowder units of the game. Only the French may build it. This Unit has a higher [ICON_STRENGTH] Combat Strength than the Musketman, which it replaces.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_OTTOMAN_JANISSARY"/>
+        <Row Tag="TXT_KEY_UNIT_OTTOMAN_JANISSARY">
+            <Text>{unit_musketman_flag}Janissary</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_OTTOMAN_JANISSARY_CLEAN">
+            <Text>Janissary</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_JANISSARY"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_JANISSARY">
+            <Text>One of the first gunpowder units of the game. Only the Ottomans may build it. This Unit is stronger on offense and heals when it kills an enemy, unlike the Musketman which it replaces.{unit_musketman_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_JANISSARY_CLEAN">
+            <Text>One of the first gunpowder units of the game. Only the Ottomans may build it. This Unit is stronger on offense and heals when it kills an enemy, unlike the Musketman which it replaces.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_LONGSWORDSMAN"/>
+        <Row Tag="TXT_KEY_UNIT_LONGSWORDSMAN">
+            <Text>{unit_longswordsman_flag}Longswordsman</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_LONGSWORDSMAN_CLEAN">
+            <Text>Longswordsman</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_LONGSWORDSMAN"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_LONGSWORDSMAN">
+            <Text>Powerful Medieval infantry Unit.{unit_longswordsman_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_LONGSWORDSMAN_CLEAN">
+            <Text>Powerful Medieval infantry Unit.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_JAPANESE_SAMURAI"/>
+        <Row Tag="TXT_KEY_UNIT_JAPANESE_SAMURAI">
+            <Text>{unit_longswordsman_flag}Samurai</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_JAPANESE_SAMURAI_CLEAN">
+            <Text>Samurai</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_SAMURAI"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_SAMURAI">
+            <Text>Powerful Medieval infantry Unit. Only the Japanese may build it. This Unit fights more effectively and helps produce Great Generals more quickly than the Longswordsman, which it replaces. Embarked Samurai can build Fishing Boats in one turn without being consumed (which makes them useful even in times of peace).{unit_longswordsman_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_SAMURAI_CLEAN">
+            <Text>Powerful Medieval infantry Unit. Only the Japanese may build it. This Unit fights more effectively and helps produce Great Generals more quickly than the Longswordsman, which it replaces. Embarked Samurai can build Fishing Boats in one turn without being consumed (which makes them useful even in times of peace).</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_TREBUCHET"/>
+        <Row Tag="TXT_KEY_UNIT_TREBUCHET">
+            <Text>{unit_trebuchet_flag}Trebuchet</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_TREBUCHET_CLEAN">
+            <Text>Trebuchet</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_TREBUCHET"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_TREBUCHET">
+            <Text>Powerful Medieval Siege Unit, good at reducing the defenses of enemy Cities. Must set up prior to firing.{unit_trebuchet_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_TREBUCHET_CLEAN">
+            <Text>Powerful Medieval Siege Unit, good at reducing the defenses of enemy Cities. Must set up prior to firing.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_KNIGHT"/>
+        <Row Tag="TXT_KEY_UNIT_KNIGHT">
+            <Text>{unit_knight_flag}Knight</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_KNIGHT_CLEAN">
+            <Text>Knight</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_KNIGHT"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_KNIGHT">
+            <Text>Powerful Medieval Mounted Unit, weak to Pikemen.{unit_knight_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_KNIGHT_CLEAN">
+            <Text>Powerful Medieval Mounted Unit, weak to Pikemen.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_ARABIAN_CAMELARCHER"/>
+        <Row Tag="TXT_KEY_UNIT_ARABIAN_CAMELARCHER">
+            <Text>{unit_knight_flag}Camel Archer</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_ARABIAN_CAMELARCHER_CLEAN">
+            <Text>Camel Archer</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_CAMEL_ARCHER"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_CAMEL_ARCHER">
+            <Text>Fast Medieval ranged Unit, weak to Pikemen. Only the Arabians may build it. It is a ranged unit, unlike the Knight which it replaces.{unit_knight_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_CAMEL_ARCHER_CLEAN">
+            <Text>Fast Medieval ranged Unit, weak to Pikemen. Only the Arabians may build it. It is a ranged unit, unlike the Knight which it replaces.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_SIAMESE_WARELEPHANT"/>
+        <Row Tag="TXT_KEY_UNIT_SIAMESE_WARELEPHANT">
+            <Text>{unit_knight_flag}Naresuan's Elephant</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_SIAMESE_WARELEPHANT_CLEAN">
+            <Text>Naresuan's Elephant</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_SIAMESE_WARELEPHANT"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_SIAMESE_WARELEPHANT">
+            <Text>Powerful Medieval Mounted Unit, weak to Pikemen. Only the Siamese may build it. This Unit receives a bonus against other mounted Units and has a higher [ICON_STRENGTH] Combat Strength than the Knight, which it replaces.{unit_knight_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_SIAMESE_WARELEPHANT_CLEAN">
+            <Text>Powerful Medieval Mounted Unit, weak to Pikemen. Only the Siamese may build it. This Unit receives a bonus against other mounted Units and has a higher [ICON_STRENGTH] Combat Strength than the Knight, which it replaces.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_SONGHAI_MUSLIMCAVALRY"/>
+        <Row Tag="TXT_KEY_UNIT_SONGHAI_MUSLIMCAVALRY">
+            <Text>{unit_knight_flag}Mandekalu Cavalry</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_SONGHAI_MUSLIMCAVALRY_CLEAN">
+            <Text>Mandekalu Cavalry</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_MUSLIM_CAVALRY"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_MUSLIM_CAVALRY">
+            <Text>Powerful Medieval Mounted Unit, weak to Pikemen. Only the Songhai may build it. This Unit is not penalized when attacking Cities, unlike the Knight which it replaces.{unit_knight_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_MUSLIM_CAVALRY_CLEAN">
+            <Text>Powerful Medieval Mounted Unit, weak to Pikemen. Only the Songhai may build it. This Unit is not penalized when attacking Cities, unlike the Knight which it replaces.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_CROSSBOWMAN"/>
+        <Row Tag="TXT_KEY_UNIT_CROSSBOWMAN">
+            <Text>{unit_crossbowman_flag}Crossbowman</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_CROSSBOWMAN_CLEAN">
+            <Text>Crossbowman</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_CROSSBOWMAN"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_CROSSBOWMAN">
+            <Text>Medieval ranged infantry Unit.{unit_crossbowman_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_CROSSBOWMAN_CLEAN">
+            <Text>Medieval ranged infantry Unit.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_CHINESE_CHUKONU"/>
+        <Row Tag="TXT_KEY_UNIT_CHINESE_CHUKONU">
+            <Text>{unit_crossbowman_flag}Chu-Ko-Nu</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_CHINESE_CHUKONU_CLEAN">
+            <Text>Chu-Ko-Nu</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_CHUKONU"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_CHUKONU">
+            <Text>Medieval ranged infantry Unit. Only the Chinese may build it. This Unit may fire twice in one turn, unlike the Crossbowman which it replaces.{unit_crossbowman_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_CHUKONU_CLEAN">
+            <Text>Medieval ranged infantry Unit. Only the Chinese may build it. This Unit may fire twice in one turn, unlike the Crossbowman which it replaces.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_ENGLISH_LONGBOWMAN"/>
+        <Row Tag="TXT_KEY_UNIT_ENGLISH_LONGBOWMAN">
+            <Text>{unit_crossbowman_flag}Longbowman</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_ENGLISH_LONGBOWMAN_CLEAN">
+            <Text>Longbowman</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_LONGBOWMAN"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_LONGBOWMAN">
+            <Text>Medieval ranged infantry Unit. Only the English may build it. This Unit has 1 additional range compared to the Crossbowman, which it replaces.{unit_crossbowman_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_LONGBOWMAN_CLEAN">
+            <Text>Medieval ranged infantry Unit. Only the English may build it. This Unit has 1 additional range compared to the Crossbowman, which it replaces.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_PIKEMAN"/>
+        <Row Tag="TXT_KEY_UNIT_PIKEMAN">
+            <Text>{unit_pikeman_flag}Pikeman</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_PIKEMAN_CLEAN">
+            <Text>Pikeman</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_PIKEMAN"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_PIKEMAN">
+            <Text>Specialized in defeating Knights and other mounted Units.{unit_pikeman_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_PIKEMAN_CLEAN">
+            <Text>Specialized in defeating Knights and other mounted Units.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_GERMAN_LANDSKNECHT"/>
+        <Row Tag="TXT_KEY_UNIT_GERMAN_LANDSKNECHT">
+            <Text>{unit_landsknecht_flag}Landsknecht</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_GERMAN_LANDSKNECHT_CLEAN">
+            <Text>Landsknecht</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_LANDSKNECHT"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_LANDSKNECHT">
+            <Text>This unit is much cheaper than the Pikeman, and can pillage without using any movement points. Steals gold when attacking a city. Unlocked through the Mercenary Army social policy, these units may not be built; they must be purchased through gold. May move immediately after purchase.{unit_landsknecht_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_LANDSKNECHT_CLEAN">
+            <Text>This unit is much cheaper than the Pikeman, and can pillage without using any movement points. Steals gold when attacking a city. Unlocked through the Mercenary Army social policy, these units may not be built; they must be purchased through gold. May move immediately after purchase.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_CATAPULT"/>
+        <Row Tag="TXT_KEY_UNIT_CATAPULT">
+            <Text>{unit_catapult_flag}Catapult</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_CATAPULT_CLEAN">
+            <Text>Catapult</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_CATAPULT"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_CATAPULT">
+            <Text>First siege Unit of the game. Does major damage to Units and Cities from a distance, but must set up prior to firing.{unit_catapult_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_CATAPULT_CLEAN">
+            <Text>First siege Unit of the game. Does major damage to Units and Cities from a distance, but must set up prior to firing.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_ROMAN_BALLISTA"/>
+        <Row Tag="TXT_KEY_UNIT_ROMAN_BALLISTA">
+            <Text>{unit_catapult_flag}Ballista</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_ROMAN_BALLISTA_CLEAN">
+            <Text>Ballista</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_BALLISTA"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_BALLISTA">
+            <Text>Siege Unit that does major damage from a distance, but must set up prior to firing. Only the Romans may build it. This Unit has a higher [ICON_RANGE_STRENGTH] Ranged Combat Strength than the Catapult, which it replaces.{unit_catapult_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_BALLISTA_CLEAN">
+            <Text>Siege Unit that does major damage from a distance, but must set up prior to firing. Only the Romans may build it. This Unit has a higher [ICON_RANGE_STRENGTH] Ranged Combat Strength than the Catapult, which it replaces.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HORSEMAN"/>
+        <Row Tag="TXT_KEY_UNIT_HORSEMAN">
+            <Text>{unit_horseman_flag}Horseman</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HORSEMAN_CLEAN">
+            <Text>Horseman</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_HORSEMAN"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_HORSEMAN">
+            <Text>Fast and powerful early game Mounted Unit. Weak to Spearmen.{unit_horseman_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_HORSEMAN_CLEAN">
+            <Text>Fast and powerful early game Mounted Unit. Weak to Spearmen.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_GREEK_COMPANIONCAVALRY"/>
+        <Row Tag="TXT_KEY_UNIT_GREEK_COMPANIONCAVALRY">
+            <Text>{unit_horseman_flag}Companion Cavalry</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_GREEK_COMPANIONCAVALRY_CLEAN">
+            <Text>Companion Cavalry</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_COMPANION_CAVALRY"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_COMPANION_CAVALRY">
+            <Text>Fast and powerful early game Mounted Unit. Weak to Spearmen. Only the Greeks may build it. This Unit is faster, has a higher [ICON_STRENGTH] Combat Strength and helps produce Great Generals more quickly than the Horseman which it replaces.{unit_horseman_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_COMPANION_CAVALRY_CLEAN">
+            <Text>Fast and powerful early game Mounted Unit. Weak to Spearmen. Only the Greeks may build it. This Unit is faster, has a higher [ICON_STRENGTH] Combat Strength and helps produce Great Generals more quickly than the Horseman which it replaces.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_SWORDSMAN"/>
+        <Row Tag="TXT_KEY_UNIT_SWORDSMAN">
+            <Text>{unit_swordsman_flag}Swordsman</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_SWORDSMAN_CLEAN">
+            <Text>Swordsman</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_SWORDSMAN"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_SWORDSMAN">
+            <Text>Strong, front-line land Unit of the Classical Era.{unit_swordsman_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_SWORDSMAN_CLEAN">
+            <Text>Strong, front-line land Unit of the Classical Era.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_IROQUOIAN_MOHAWKWARRIOR"/>
+        <Row Tag="TXT_KEY_UNIT_IROQUOIAN_MOHAWKWARRIOR">
+            <Text>{unit_swordsman_flag}Mohawk Warrior</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_IROQUOIAN_MOHAWKWARRIOR_CLEAN">
+            <Text>Mohawk Warrior</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_MOHAWK_WARRIOR"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_MOHAWK_WARRIOR">
+            <Text>Strong, front-line land Unit of the Classical Era. Only the Iroquois may build it. This Unit receives a major bonus when fighting on Forest and Jungle, unlike the Swordsman which it replaces.{unit_swordsman_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_MOHAWK_WARRIOR_CLEAN">
+            <Text>Strong, front-line land Unit of the Classical Era. Only the Iroquois may build it. This Unit receives a major bonus when fighting on Forest and Jungle, unlike the Swordsman which it replaces.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_ROMAN_LEGION"/>
+        <Row Tag="TXT_KEY_UNIT_ROMAN_LEGION">
+            <Text>{unit_swordsman_flag}Legion</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_ROMAN_LEGION_CLEAN">
+            <Text>Legion</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_ROMAN_LEGION"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_ROMAN_LEGION">
+            <Text>Strong, front-line land Unit of the Classical Era. Only the Romans may build it. This Unit has a higher [ICON_STRENGTH] Combat Strength than the Swordsman, which it replaces.{unit_swordsman_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_ROMAN_LEGION_CLEAN">
+            <Text>Strong, front-line land Unit of the Classical Era. Only the Romans may build it. This Unit has a higher [ICON_STRENGTH] Combat Strength than the Swordsman, which it replaces.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_CHARIOT_ARCHER"/>
+        <Row Tag="TXT_KEY_UNIT_CHARIOT_ARCHER">
+            <Text>{unit_chariot_archer_flag}Chariot Archer</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_CHARIOT_ARCHER_CLEAN">
+            <Text>Chariot Archer</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_CHARIOT_ARCHER"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_CHARIOT_ARCHER">
+            <Text>A fast Ranged Unit highly effective on flat ground.{unit_chariot_archer_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_CHARIOT_ARCHER_CLEAN">
+            <Text>A fast Ranged Unit highly effective on flat ground.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_EGYPT_WARCHARIOT"/>
+        <Row Tag="TXT_KEY_UNIT_EGYPT_WARCHARIOT">
+            <Text>{unit_chariot_archer_flag}War Chariot</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_EGYPT_WARCHARIOT_CLEAN">
+            <Text>War Chariot</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_EGYPTIAN_WAR_CHARIOT"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_EGYPTIAN_WAR_CHARIOT">
+            <Text>A fast Ranged Unit. Only the Egyptians may build it. This Unit does not require [ICON_RES_HORSE] Horses to be built, unlike the Chariot Archer which it replaces.{unit_chariot_archer_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_EGYPTIAN_WAR_CHARIOT_CLEAN">
+            <Text>A fast Ranged Unit. Only the Egyptians may build it. This Unit does not require [ICON_RES_HORSE] Horses to be built, unlike the Chariot Archer which it replaces.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_INDIAN_WARELEPHANT"/>
+        <Row Tag="TXT_KEY_UNIT_INDIAN_WARELEPHANT">
+            <Text>{unit_chariot_archer_flag}War Elephant</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_INDIAN_WARELEPHANT_CLEAN">
+            <Text>War Elephant</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_INDIAN_WAR_ELEPHANT"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_INDIAN_WAR_ELEPHANT">
+            <Text>A fast Ranged Unit highly effective on flat ground. Only the Indians may build it. This Unit has a higher [ICON_STRENGTH] Combat and Ranged Strength than the Chariot Archer, which it replaces.{unit_chariot_archer_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_INDIAN_WAR_ELEPHANT_CLEAN">
+            <Text>A fast Ranged Unit highly effective on flat ground. Only the Indians may build it. This Unit has a higher [ICON_STRENGTH] Combat and Ranged Strength than the Chariot Archer, which it replaces.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_SPEARMAN"/>
+        <Row Tag="TXT_KEY_UNIT_SPEARMAN">
+            <Text>{unit_spearman_flag}Spearman</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_SPEARMAN_CLEAN">
+            <Text>Spearman</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_SPEARMAN"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_SPEARMAN">
+            <Text>Ancient Era Unit which specializes in defeating Mounted Units.{unit_spearman_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_SPEARMAN_CLEAN">
+            <Text>Ancient Era Unit which specializes in defeating Mounted Units.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_GREEK_HOPLITE"/>
+        <Row Tag="TXT_KEY_UNIT_GREEK_HOPLITE">
+            <Text>{unit_spearman_flag}Hoplite</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_GREEK_HOPLITE_CLEAN">
+            <Text>Hoplite</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_HOPLITE"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_HOPLITE">
+            <Text>Ancient Era Unit which specializes in defeating Mounted Units. Only the Greeks may build it. This Unit has a higher [ICON_STRENGTH] Combat Strength than the Spearman which it replaces.{unit_spearman_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_HOPLITE_CLEAN">
+            <Text>Ancient Era Unit which specializes in defeating Mounted Units. Only the Greeks may build it. This Unit has a higher [ICON_STRENGTH] Combat Strength than the Spearman which it replaces.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_PERSIAN_IMMORTAL"/>
+        <Row Tag="TXT_KEY_UNIT_PERSIAN_IMMORTAL">
+            <Text>{unit_spearman_flag}Immortal</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_PERSIAN_IMMORTAL_CLEAN">
+            <Text>Immortal</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_IMMORTAL"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_IMMORTAL">
+            <Text>Ancient Era Unit which specializes in defeating Mounted Units. Only the Persians may build it. This Unit has a higher [ICON_STRENGTH] Combat Strength and heals more quickly than the Spearman, which it replaces.{unit_spearman_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_IMMORTAL_CLEAN">
+            <Text>Ancient Era Unit which specializes in defeating Mounted Units. Only the Persians may build it. This Unit has a higher [ICON_STRENGTH] Combat Strength and heals more quickly than the Spearman, which it replaces.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_ARCHER"/>
+        <Row Tag="TXT_KEY_UNIT_ARCHER">
+            <Text>{unit_archer_flag}Archer</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_ARCHER_CLEAN">
+            <Text>Archer</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_ARCHER"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_ARCHER">
+            <Text>Powerful Ancient Era ranged Unit that can strike foes from afar.{unit_archer_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_ARCHER_CLEAN">
+            <Text>Powerful Ancient Era ranged Unit that can strike foes from afar.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_SCOUT"/>
+        <Row Tag="TXT_KEY_UNIT_SCOUT">
+            <Text>{unit_scout_flag}Scout</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_SCOUT_CLEAN">
+            <Text>Scout</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_SCOUT"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_SCOUT">
+            <Text>Excellent at exploring, this Unit is not slowed by rough terrain, but is vulnerable to attack.{unit_scout_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_SCOUT_CLEAN">
+            <Text>Excellent at exploring, this Unit is not slowed by rough terrain, but is vulnerable to attack.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_WARRIOR"/>
+        <Row Tag="TXT_KEY_UNIT_WARRIOR">
+            <Text>{unit_warrior_flag}Warrior</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_WARRIOR_CLEAN">
+            <Text>Warrior</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_WARRIOR"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_WARRIOR">
+            <Text>Fairly weak early-game military Unit.{unit_warrior_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_WARRIOR_CLEAN">
+            <Text>Fairly weak early-game military Unit.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_AZTEC_JAGUAR"/>
+        <Row Tag="TXT_KEY_UNIT_AZTEC_JAGUAR">
+            <Text>{unit_warrior_flag}Jaguar</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_AZTEC_JAGUAR_CLEAN">
+            <Text>Jaguar</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_JAGUAR"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_JAGUAR">
+            <Text>Fairly weak early-game military Unit. Only the Aztecs may build it. This Unit fights more effectively in Jungle and heals damage when it kills an enemy Unit, unlike the Warrior which it replaces.{unit_warrior_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_JAGUAR_CLEAN">
+            <Text>Fairly weak early-game military Unit. Only the Aztecs may build it. This Unit fights more effectively in Jungle and heals damage when it kills an enemy Unit, unlike the Warrior which it replaces.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_MONGOL_KESHIK"/>
+        <Row Tag="TXT_KEY_UNIT_MONGOL_KESHIK">
+            <Text>{unit_knight_flag}Keshik</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_MONGOL_KESHIK_CLEAN">
+            <Text>Keshik</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_CIV5_MONGOLIA_KESHIK_HELP"/>
+        <Row Tag="TXT_KEY_CIV5_MONGOLIA_KESHIK_HELP">
+            <Text>This Mongolian Unique Unit replaces the standard Knight. It possesses a strong ranged attack, increased movement rate, and earns promotions 50% faster. Unit battles also contribute double the amount of points towards earning a Great General.{unit_knight_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_CIV5_MONGOLIA_KESHIK_HELP_CLEAN">
+            <Text>This Mongolian Unique Unit replaces the standard Knight. It possesses a strong ranged attack, increased movement rate, and earns promotions 50% faster. Unit battles also contribute double the amount of points towards earning a Great General.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_INCAN_SLINGER"/>
+        <Row Tag="TXT_KEY_UNIT_INCAN_SLINGER">
+            <Text>{unit_archer_flag}Slinger</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_INCAN_SLINGER_CLEAN">
+            <Text>Slinger</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_CIV5_INCA_SLINGER_HELP"/>
+        <Row Tag="TXT_KEY_CIV5_INCA_SLINGER_HELP">
+            <Text>One of the first available ranged Units, this Incan Unique Unit replaces the Archer. The Slinger is no more powerful than the Archer, and is even more fragile if subjected to a melee attack. However it possesses a promotion that gives it a good chance to withdraw to the rear before an enemy.{unit_archer_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_CIV5_INCA_SLINGER_HELP_CLEAN">
+            <Text>One of the first available ranged Units, this Incan Unique Unit replaces the Archer. The Slinger is no more powerful than the Archer, and is even more fragile if subjected to a melee attack. However it possesses a promotion that gives it a good chance to withdraw to the rear before an enemy.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_SPANISH_TERCIO"/>
+        <Row Tag="TXT_KEY_UNIT_SPANISH_TERCIO">
+            <Text>{unit_musketman_flag}Tercio</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_SPANISH_TERCIO_CLEAN">
+            <Text>Tercio</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_CIV5_SPAIN_TERCIO_HELP"/>
+        <Row Tag="TXT_KEY_CIV5_SPAIN_TERCIO_HELP">
+            <Text>Dominant military Unit of the Renaissance Era. Only Spain may build it. This Unit has a higher [ICON_STRENGTH] Combat Strength than the Musketman which it replaces, as well as the Bonus vs Mounted (50) promotion. However it is also more expensive to build.{unit_musketman_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_CIV5_SPAIN_TERCIO_HELP_CLEAN">
+            <Text>Dominant military Unit of the Renaissance Era. Only Spain may build it. This Unit has a higher [ICON_STRENGTH] Combat Strength than the Musketman which it replaces, as well as the Bonus vs Mounted (50) promotion. However it is also more expensive to build.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_SPANISH_CONQUISTADOR"/>
+        <Row Tag="TXT_KEY_UNIT_SPANISH_CONQUISTADOR">
+            <Text>{unit_knight_flag}Conquistador</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_SPANISH_CONQUISTADOR_CLEAN">
+            <Text>Conquistador</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_CIV5_SPAIN_CONQUISTADOR_HELP"/>
+        <Row Tag="TXT_KEY_CIV5_SPAIN_CONQUISTADOR_HELP">
+            <Text>Medieval Era unit that specializes in scouting and colonizing overseas. Only Spain may build it. Replaces the Knight.{unit_knight_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_CIV5_SPAIN_CONQUISTADOR_HELP_CLEAN">
+            <Text>Medieval Era unit that specializes in scouting and colonizing overseas. Only Spain may build it. Replaces the Knight.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_POLYNESIAN_MAORI_WARRIOR"/>
+        <Row Tag="TXT_KEY_UNIT_POLYNESIAN_MAORI_WARRIOR">
+            <Text>{unit_warrior_flag}Maori Warrior</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_POLYNESIAN_MAORI_WARRIOR_CLEAN">
+            <Text>Maori Warrior</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_CIV5_POLYNESIAN_MAORI_WARRIOR_HELP"/>
+        <Row Tag="TXT_KEY_CIV5_POLYNESIAN_MAORI_WARRIOR_HELP">
+            <Text>Ancient Era unit that strikes fear into nearby enemies making them less effective in combat. Only Polynesia may build it. Replaces the Warrior.{unit_warrior_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_CIV5_POLYNESIAN_MAORI_WARRIOR_HELP_CLEAN">
+            <Text>Ancient Era unit that strikes fear into nearby enemies making them less effective in combat. Only Polynesia may build it. Replaces the Warrior.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_DANISH_BERSERKER"/>
+        <Row Tag="TXT_KEY_UNIT_DANISH_BERSERKER">
+            <Text>{unit_longswordsman_flag}Berserker</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_DANISH_BERSERKER_CLEAN">
+            <Text>Berserker</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_CIV5_DENMARK_BERSERKER_HELP"/>
+        <Row Tag="TXT_KEY_CIV5_DENMARK_BERSERKER_HELP">
+            <Text>Strong, front-line land Unit of the Medieval Era that specializes in attacks from the sea. Only Denmark may build it. Replaces the Longswordsman, but is available earlier.{unit_longswordsman_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_CIV5_DENMARK_BERSERKER_HELP_CLEAN">
+            <Text>Strong, front-line land Unit of the Medieval Era that specializes in attacks from the sea. Only Denmark may build it. Replaces the Longswordsman, but is available earlier.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_DANISH_SKI_INFANTRY"/>
+        <Row Tag="TXT_KEY_UNIT_DANISH_SKI_INFANTRY">
+            <Text>{unit_rifleman_flag}Norwegian Ski Infantry</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_DANISH_SKI_INFANTRY_CLEAN">
+            <Text>Norwegian Ski Infantry</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_CIV5_DENMARK_SKI_INFANTRY_HELP"/>
+        <Row Tag="TXT_KEY_CIV5_DENMARK_SKI_INFANTRY_HELP">
+            <Text>Strong, front-line land Unit of the mid-game that specializes in operating in Snow, Tundra and Hills. Only Denmark may build it. Replaces the Rifleman.{unit_rifleman_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_CIV5_DENMARK_SKI_INFANTRY_HELP_CLEAN">
+            <Text>Strong, front-line land Unit of the mid-game that specializes in operating in Snow, Tundra and Hills. Only Denmark may build it. Replaces the Rifleman.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_CIV5_KOREA_TURTLESHIP_HEADING"/>
+        <Row Tag="TXT_KEY_CIV5_KOREA_TURTLESHIP_HEADING">
+            <Text>{unit_caravel_flag}Turtle Ship</Text>
+        </Row>
+        <Row Tag="TXT_KEY_CIV5_KOREA_TURTLESHIP_HEADING_CLEAN">
+            <Text>Turtle Ship</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_CIV5_KOREA_TURTLESHIP_HELP"/>
+        <Row Tag="TXT_KEY_CIV5_KOREA_TURTLESHIP_HELP">
+            <Text>Heavily-armored naval unit of the Renaissance Era that is extremely difficult to kill. However Turtle Ships cannot enter deep ocean hexes outside of the city borders. Only Korea may build it. Replaces the Caravel.{unit_caravel_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_CIV5_KOREA_TURTLESHIP_HELP_CLEAN">
+            <Text>Heavily-armored naval unit of the Renaissance Era that is extremely difficult to kill. However Turtle Ships cannot enter deep ocean hexes outside of the city borders. Only Korea may build it. Replaces the Caravel.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_CIV5_KOREA_HWACHA_HEADING"/>
+        <Row Tag="TXT_KEY_CIV5_KOREA_HWACHA_HEADING">
+            <Text>{unit_trebuchet_flag}Hwach'a</Text>
+        </Row>
+        <Row Tag="TXT_KEY_CIV5_KOREA_HWACHA_HEADING_CLEAN">
+            <Text>Hwach'a</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_CIV5_KOREA_HWACHA_HELP"/>
+        <Row Tag="TXT_KEY_CIV5_KOREA_HWACHA_HELP">
+            <Text>Anti-personnel rocket unit of the Medieval Era. Strong against land units, but weak against cities. Only Korea may build it. Replaces the Trebuchet.{unit_trebuchet_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_CIV5_KOREA_HWACHA_HELP_CLEAN">
+            <Text>Anti-personnel rocket unit of the Medieval Era. Strong against land units, but weak against cities. Only Korea may build it. Replaces the Trebuchet.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_BABYLON_BOWMAN"/>
+        <Row Tag="TXT_KEY_UNIT_BABYLON_BOWMAN">
+            <Text>{unit_archer_flag}Bowman</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_BABYLON_BOWMAN_CLEAN">
+            <Text>Bowman</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_CIV5_BABYLON_BOWMAN_HELP"/>
+        <Row Tag="TXT_KEY_CIV5_BABYLON_BOWMAN_HELP">
+            <Text>One of the first available ranged Units, this Babylonian Unique Unit replaces the Archer. The Bowman can better withstand melee attacks than the standard Archer available to other civs.{unit_archer_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_CIV5_BABYLON_BOWMAN_HELP_CLEAN">
+            <Text>One of the first available ranged Units, this Babylonian Unique Unit replaces the Archer. The Bowman can better withstand melee attacks than the standard Archer available to other civs.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_CELT_PICTISH_WARRIOR"/>
+        <Row Tag="TXT_KEY_UNIT_CELT_PICTISH_WARRIOR">
+            <Text>{unit_spearman_flag}Pictish Warrior</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_CELT_PICTISH_WARRIOR_CLEAN">
+            <Text>Pictish Warrior</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_CELT_PICTISH_WARRIOR"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_CELT_PICTISH_WARRIOR">
+            <Text>Only the Celts may build this unit. It has a combat bonus outside of friendly territory and can pillage enemy improvements at no additional movement cost. Earns 50% of opponents' strength as [ICON_PEACE] Faith for kills.{unit_spearman_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_CELT_PICTISH_WARRIOR_CLEAN">
+            <Text>Only the Celts may build this unit. It has a combat bonus outside of friendly territory and can pillage enemy improvements at no additional movement cost. Earns 50% of opponents' strength as [ICON_PEACE] Faith for kills.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_MAYAN_ATLATLIST"/>
+        <Row Tag="TXT_KEY_UNIT_MAYAN_ATLATLIST">
+            <Text>{unit_archer_flag}Atlatlist</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_MAYAN_ATLATLIST_CLEAN">
+            <Text>Atlatlist</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_MAYAN_ATLATLIST"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_MAYAN_ATLATLIST">
+            <Text>Only the Maya may build this unit. It is cheaper and available sooner than the Archer, which it replaces.{unit_archer_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_MAYAN_ATLATLIST_CLEAN">
+            <Text>Only the Maya may build this unit. It is cheaper and available sooner than the Archer, which it replaces.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_BYZANTINE_CATAPHRACT"/>
+        <Row Tag="TXT_KEY_UNIT_BYZANTINE_CATAPHRACT">
+            <Text>{unit_horseman_flag}Cataphract</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_BYZANTINE_CATAPHRACT_CLEAN">
+            <Text>Cataphract</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_BYZANTINE_CATAPHRACT"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_BYZANTINE_CATAPHRACT">
+            <Text>Fast and powerful early game Mounted Unit. Weak to Spearmen. Only the Byzantines may build it. This Unit has a higher [ICON_STRENGTH] Combat Strength, defends better, and attacks cities more effectively than the Horseman which it replaces.{unit_horseman_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_BYZANTINE_CATAPHRACT_CLEAN">
+            <Text>Fast and powerful early game Mounted Unit. Weak to Spearmen. Only the Byzantines may build it. This Unit has a higher [ICON_STRENGTH] Combat Strength, defends better, and attacks cities more effectively than the Horseman which it replaces.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_CARTHAGINIAN_FOREST_ELEPHANT"/>
+        <Row Tag="TXT_KEY_UNIT_CARTHAGINIAN_FOREST_ELEPHANT">
+            <Text>{unit_horseman_flag}African Forest Elephant</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_CARTHAGINIAN_FOREST_ELEPHANT_CLEAN">
+            <Text>African Forest Elephant</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_CARTHAGINIAN_FOREST_ELEPHANT"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_CARTHAGINIAN_FOREST_ELEPHANT">
+            <Text>Powerful early game Mounted Unit. Weak to Spearmen. Only the Carthaginians may build it. This Unit has a higher [ICON_STRENGTH] Combat Strength than the Horseman which it replaces and strikes fear into nearby enemy units. Helps produce Great Generals more quickly.{unit_horseman_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_CARTHAGINIAN_FOREST_ELEPHANT_CLEAN">
+            <Text>Powerful early game Mounted Unit. Weak to Spearmen. Only the Carthaginians may build it. This Unit has a higher [ICON_STRENGTH] Combat Strength than the Horseman which it replaces and strikes fear into nearby enemy units. Helps produce Great Generals more quickly.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_CARTHAGINIAN_QUINQUEREME"/>
+        <Row Tag="TXT_KEY_UNIT_CARTHAGINIAN_QUINQUEREME">
+            <Text>{unit_trireme_flag}Quinquereme</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_CARTHAGINIAN_QUINQUEREME_CLEAN">
+            <Text>Quinquereme</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_CARTHAGINIAN_QUINQUEREME"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_CARTHAGINIAN_QUINQUEREME">
+            <Text>Strong Ancient Era Naval Unit used to dominate the seas through melee attacks on naval units and cities. Only the Carthaginians may build it.{unit_trireme_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_CARTHAGINIAN_QUINQUEREME_CLEAN">
+            <Text>Strong Ancient Era Naval Unit used to dominate the seas through melee attacks on naval units and cities. Only the Carthaginians may build it.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HUN_HORSE_ARCHER"/>
+        <Row Tag="TXT_KEY_UNIT_HUN_HORSE_ARCHER">
+            <Text>{unit_chariot_archer_flag}Horse Archer</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HUN_HORSE_ARCHER_CLEAN">
+            <Text>Horse Archer</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_HUN_HORSE_ARCHER"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_HUN_HORSE_ARCHER">
+            <Text>A fast Ranged Unit used for hit-and-run attacks. Only the Huns may build it.{unit_chariot_archer_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_HUN_HORSE_ARCHER_CLEAN">
+            <Text>A fast Ranged Unit used for hit-and-run attacks. Only the Huns may build it.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_AUSTRIAN_HUSSAR"/>
+        <Row Tag="TXT_KEY_UNIT_AUSTRIAN_HUSSAR">
+            <Text>{unit_cavalry_flag}Hussar</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_AUSTRIAN_HUSSAR_CLEAN">
+            <Text>Hussar</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_AUSTRIAN_HUSSAR"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_AUSTRIAN_HUSSAR">
+            <Text>A fast Mounted Unit used for scouting and hit-and-run attacks. Especially deadly with flank attacks. Only the Austrians may build it.{unit_cavalry_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_AUSTRIAN_HUSSAR_CLEAN">
+            <Text>A fast Mounted Unit used for scouting and hit-and-run attacks. Especially deadly with flank attacks. Only the Austrians may build it.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_MEHAL_SEFARI"/>
+        <Row Tag="TXT_KEY_UNIT_MEHAL_SEFARI">
+            <Text>{unit_rifleman_flag}Mehal Sefari</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_MEHAL_SEFARI_CLEAN">
+            <Text>Mehal Sefari</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_MEHAL_SEFARI"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_MEHAL_SEFARI">
+            <Text>Strong, front-line land Unit that specializes in fighting in rough terrain and defending near the Ethiopian capital. Only the Ethiopians may build it.{unit_rifleman_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_MEHAL_SEFARI_CLEAN">
+            <Text>Strong, front-line land Unit that specializes in fighting in rough terrain and defending near the Ethiopian capital. Only the Ethiopians may build it.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_SWEDISH_CAROLEAN"/>
+        <Row Tag="TXT_KEY_UNIT_SWEDISH_CAROLEAN">
+            <Text>{unit_rifleman_flag}Carolean</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_SWEDISH_CAROLEAN_CLEAN">
+            <Text>Carolean</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_SWEDISH_CAROLEAN"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_SWEDISH_CAROLEAN">
+            <Text>Strong, front-line land Unit that specializes in long marches, even far from Swedish lands. Only the Swedish may build it.{unit_rifleman_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_SWEDISH_CAROLEAN_CLEAN">
+            <Text>Strong, front-line land Unit that specializes in long marches, even far from Swedish lands. Only the Swedish may build it.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_SWEDISH_HAKKAPELIITTA"/>
+        <Row Tag="TXT_KEY_UNIT_SWEDISH_HAKKAPELIITTA">
+            <Text>{unit_lancer_flag}Hakkapeliitta</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_SWEDISH_HAKKAPELIITTA_CLEAN">
+            <Text>Hakkapeliitta</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_SWEDISH_HAKKAPELIITTA"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_SWEDISH_HAKKAPELIITTA">
+            <Text>Elite mounted Unit that specializes in working with Great Generals. Only the Swedish may build it.{unit_lancer_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_SWEDISH_HAKKAPELIITTA_CLEAN">
+            <Text>Elite mounted Unit that specializes in working with Great Generals. Only the Swedish may build it.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HUN_BATTERING_RAM"/>
+        <Row Tag="TXT_KEY_UNIT_HUN_BATTERING_RAM">
+            <Text>{unit_spearman_flag}Battering Ram</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HUN_BATTERING_RAM_CLEAN">
+            <Text>Battering Ram</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_HUN_BATTERING_RAM"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_HUN_BATTERING_RAM">
+            <Text>Siege unit deadly at melee attacks versus cities. Only the Huns may build it.{unit_spearman_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_HUN_BATTERING_RAM_CLEAN">
+            <Text>Siege unit deadly at melee attacks versus cities. Only the Huns may build it.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_SEA_BEGGAR"/>
+        <Row Tag="TXT_KEY_UNIT_SEA_BEGGAR">
+            <Text>{unit_privateer_flag}Sea Beggar</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_SEA_BEGGAR_CLEAN">
+            <Text>Sea Beggar</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_SEA_BEGGAR"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_SEA_BEGGAR">
+            <Text>Naval Unit that specializes in attacking coastal cities to earn gold and capturing enemy ships. Only the Dutch can build it.{unit_privateer_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_SEA_BEGGAR_CLEAN">
+            <Text>Naval Unit that specializes in attacking coastal cities to earn gold and capturing enemy ships. Only the Dutch can build it.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_COMPOSITE_BOWMAN"/>
+        <Row Tag="TXT_KEY_UNIT_COMPOSITE_BOWMAN">
+            <Text>{unit_composite_bowman_flag}Composite Bowman</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_COMPOSITE_BOWMAN_CLEAN">
+            <Text>Composite Bowman</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_COMPOSITE_BOWMAN"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_COMPOSITE_BOWMAN">
+            <Text>Classical ranged infantry Unit.{unit_composite_bowman_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_COMPOSITE_BOWMAN_CLEAN">
+            <Text>Classical ranged infantry Unit.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_GALLEASS"/>
+        <Row Tag="TXT_KEY_UNIT_GALLEASS">
+            <Text>{unit_galleass_flag}Galleass</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_GALLEASS_CLEAN">
+            <Text>Galleass</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_GALLEASS"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_GALLEASS">
+            <Text>Medieval Era Naval Unit used to wrest control of the seas with its ranged attack.{unit_galleass_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_GALLEASS_CLEAN">
+            <Text>Medieval Era Naval Unit used to wrest control of the seas with its ranged attack.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_GREAT_WAR_INFANTRY"/>
+        <Row Tag="TXT_KEY_UNIT_GREAT_WAR_INFANTRY">
+            <Text>{unit_great_war_infantry_flag}Great War Infantry</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_GREAT_WAR_INFANTRY_CLEAN">
+            <Text>Great War Infantry</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_GREAT_WAR_INFANTRY"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_GREAT_WAR_INFANTRY">
+            <Text>Basic Infantry Unit of the Modern Era.{unit_great_war_infantry_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_GREAT_WAR_INFANTRY_CLEAN">
+            <Text>Basic Infantry Unit of the Modern Era.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_MARINE"/>
+        <Row Tag="TXT_KEY_UNIT_MARINE">
+            <Text>{unit_marine_flag}Marine</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_MARINE_CLEAN">
+            <Text>Marine</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_MARINE"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_MARINE">
+            <Text>Atomic Era Unit especially useful for embarking and invading across the sea.{unit_marine_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_MARINE_CLEAN">
+            <Text>Atomic Era Unit especially useful for embarking and invading across the sea.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_TRIPLANE"/>
+        <Row Tag="TXT_KEY_UNIT_TRIPLANE">
+            <Text>{unit_triplane_flag}Triplane</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_TRIPLANE_CLEAN">
+            <Text>Triplane</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_TRIPLANE"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_TRIPLANE">
+            <Text>Early Air Unit designed to intercept incoming enemy aircraft.{unit_triplane_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_TRIPLANE_CLEAN">
+            <Text>Early Air Unit designed to intercept incoming enemy aircraft.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_WWI_BOMBER"/>
+        <Row Tag="TXT_KEY_UNIT_WWI_BOMBER">
+            <Text>{unit_wwi_bomber_flag}Great War Bomber</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_WWI_BOMBER_CLEAN">
+            <Text>Great War Bomber</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_WWI_BOMBER"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_WWI_BOMBER">
+            <Text>Early Air Unit that can bombard enemy Units and Cities from the skies.{unit_wwi_bomber_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_WWI_BOMBER_CLEAN">
+            <Text>Early Air Unit that can bombard enemy Units and Cities from the skies.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_WWI_TANK"/>
+        <Row Tag="TXT_KEY_UNIT_WWI_TANK">
+            <Text>{unit_wwi_tank_flag}Landship</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_WWI_TANK_CLEAN">
+            <Text>Landship</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_WWI_TANK"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_WWI_TANK">
+            <Text>The first of its kind, this powerful late game unit can move after attacking.{unit_wwi_tank_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_WWI_TANK_CLEAN">
+            <Text>The first of its kind, this powerful late game unit can move after attacking.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_MACHINE_GUN"/>
+        <Row Tag="TXT_KEY_UNIT_MACHINE_GUN">
+            <Text>{unit_machine_gun_flag}Machine Gun</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_MACHINE_GUN_CLEAN">
+            <Text>Machine Gun</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_MACHINE_GUN"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_MACHINE_GUN">
+            <Text>Late-game ranged Unit that must be adjacent to an enemy to strike.{unit_machine_gun_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_MACHINE_GUN_CLEAN">
+            <Text>Late-game ranged Unit that must be adjacent to an enemy to strike.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_PRIVATEER"/>
+        <Row Tag="TXT_KEY_UNIT_PRIVATEER">
+            <Text>{unit_privateer_flag}Privateer</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_PRIVATEER_CLEAN">
+            <Text>Privateer</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_PRIVATEER"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_PRIVATEER">
+            <Text>Naval Unit that specializes in attacking coastal cities to earn gold and capturing enemy ships.{unit_privateer_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_PRIVATEER_CLEAN">
+            <Text>Naval Unit that specializes in attacking coastal cities to earn gold and capturing enemy ships.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_GATLINGGUN"/>
+        <Row Tag="TXT_KEY_UNIT_GATLINGGUN">
+            <Text>{unit_gatlinggun_flag}Gatling Gun</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_GATLINGGUN_CLEAN">
+            <Text>Gatling Gun</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_GATLINGGUN"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_GATLINGGUN">
+            <Text>Ranged infantry Unit of the mid-game that must be adjacent to an enemy to strike.{unit_gatlinggun_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_GATLINGGUN_CLEAN">
+            <Text>Ranged infantry Unit of the mid-game that must be adjacent to an enemy to strike.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_ZULU_IMPI"/>
+        <Row Tag="TXT_KEY_UNIT_ZULU_IMPI">
+            <Text>{unit_pikeman_flag}Impi</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_ZULU_IMPI_CLEAN">
+            <Text>Impi</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_ZULU_IMPI"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_ZULU_IMPI">
+            <Text>Specialized in defeating Knights and other mounted units. Only the Zulu may build it. Also performs a first-strike ranged attack before combat.{unit_pikeman_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_ZULU_IMPI_CLEAN">
+            <Text>Specialized in defeating Knights and other mounted units. Only the Zulu may build it. Also performs a first-strike ranged attack before combat.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_POLISH_WINGED_HUSSAR"/>
+        <Row Tag="TXT_KEY_UNIT_POLISH_WINGED_HUSSAR">
+            <Text>{unit_lancer_flag}Winged Hussar</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_POLISH_WINGED_HUSSAR_CLEAN">
+            <Text>Winged Hussar</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_WINGED_HUSSAR"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_WINGED_HUSSAR">
+            <Text>Heavy Mounted Unit specialized in defeating enemy mounted units. This unit is faster and more powerful than the Lancer, which it replaces. Forces defenders to retreat when it inflicts more damage than it receives. May only be built by the Polish.{unit_lancer_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_WINGED_HUSSAR_CLEAN">
+            <Text>Heavy Mounted Unit specialized in defeating enemy mounted units. This unit is faster and more powerful than the Lancer, which it replaces. Forces defenders to retreat when it inflicts more damage than it receives. May only be built by the Polish.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_CARGO_SHIP"/>
+        <Row Tag="TXT_KEY_UNIT_CARGO_SHIP">
+            <Text>{unit_cargo_ship_flag}Cargo Ship</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_CARGO_SHIP_CLEAN">
+            <Text>Cargo Ship</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_CARGO_SHIP"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_CARGO_SHIP">
+            <Text>Establishes sea-based Trade Routes between two civilizations that yields [ICON_GOLD] Gold. Can also be used to deliver [ICON_FOOD] Food or [ICON_PRODUCTION] Production within your own borders after building a Granary or a Workshop.{unit_cargo_ship_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_CARGO_SHIP_CLEAN">
+            <Text>Establishes sea-based Trade Routes between two civilizations that yields [ICON_GOLD] Gold. Can also be used to deliver [ICON_FOOD] Food or [ICON_PRODUCTION] Production within your own borders after building a Granary or a Workshop.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_CARAVAN"/>
+        <Row Tag="TXT_KEY_UNIT_CARAVAN">
+            <Text>{unit_caravan_flag}Caravan</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_CARAVAN_CLEAN">
+            <Text>Caravan</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_CARAVAN"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_CARAVAN">
+            <Text>Establishes land-based Trade Routes between two civilizations that yields [ICON_GOLD] Gold. Can also be used to deliver [ICON_FOOD] Food or [ICON_PRODUCTION] Production within your own borders after building a Granary or a Workshop.{unit_caravan_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_CARAVAN_CLEAN">
+            <Text>Establishes land-based Trade Routes between two civilizations that yields [ICON_GOLD] Gold. Can also be used to deliver [ICON_FOOD] Food or [ICON_PRODUCTION] Production within your own borders after building a Granary or a Workshop.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_ARCHAEOLOGIST"/>
+        <Row Tag="TXT_KEY_UNIT_ARCHAEOLOGIST">
+            <Text>{unit_archaeologist_flag}Archaeologist</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_ARCHAEOLOGIST_CLEAN">
+            <Text>Archaeologist</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_ARCHAEOLOGIST"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_ARCHAEOLOGIST">
+            <Text>Archaeologists are a special subtype of Worker that are used to excavate Antiquity Sites to either create Landmark improvements or to extract Artifacts to fill in Great Work of Art slots in Museums, Palaces, Hermitages, and selected Wonders. Archaeologists may work in territory owned by any player. They are consumed once they complete an Archaeological Dig at an Antiquity Site. Archaeologists may not be purchased with [ICON_GOLD] Gold and may only be built in a city with a University.{unit_archaeologist_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_ARCHAEOLOGIST_CLEAN">
+            <Text>Archaeologists are a special subtype of Worker that are used to excavate Antiquity Sites to either create Landmark improvements or to extract Artifacts to fill in Great Work of Art slots in Museums, Palaces, Hermitages, and selected Wonders. Archaeologists may work in territory owned by any player. They are consumed once they complete an Archaeological Dig at an Antiquity Site. Archaeologists may not be purchased with [ICON_GOLD] Gold and may only be built in a city with a University.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_ASSYRIAN_SIEGE_TOWER"/>
+        <Row Tag="TXT_KEY_UNIT_ASSYRIAN_SIEGE_TOWER">
+            <Text>{unit_catapult_flag}Siege Tower</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_ASSYRIAN_SIEGE_TOWER_CLEAN">
+            <Text>Siege Tower</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_ASSYRIAN_SIEGE_TOWER"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_ASSYRIAN_SIEGE_TOWER">
+            <Text>Powerful melee siege unit which grants a city attack bonus to nearby units when next to an enemy city. May only be built by the Assyrians.{unit_catapult_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_ASSYRIAN_SIEGE_TOWER_CLEAN">
+            <Text>Powerful melee siege unit which grants a city attack bonus to nearby units when next to an enemy city. May only be built by the Assyrians.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_BRAZILIAN_PRACINHA"/>
+        <Row Tag="TXT_KEY_UNIT_BRAZILIAN_PRACINHA">
+            <Text>{unit_infantry_flag}Pracinha</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_BRAZILIAN_PRACINHA_CLEAN">
+            <Text>Pracinha</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_BRAZILIAN_PRACINHA"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_BRAZILIAN_PRACINHA">
+            <Text>Modern Era infantry unit that earns points toward a [ICON_GOLDEN_AGE] Golden Age when it defeats an enemy. May only be built by Brazil.{unit_infantry_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_BRAZILIAN_PRACINHA_CLEAN">
+            <Text>Modern Era infantry unit that earns points toward a [ICON_GOLDEN_AGE] Golden Age when it defeats an enemy. May only be built by Brazil.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_PORTUGUESE_NAU"/>
+        <Row Tag="TXT_KEY_UNIT_PORTUGUESE_NAU">
+            <Text>{unit_caravel_flag}Nau</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_PORTUGUESE_NAU_CLEAN">
+            <Text>Nau</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_PORTUGUESE_NAU"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_PORTUGUESE_NAU">
+            <Text>Melee naval unit which excels at sea exploration. It has more [ICON_MOVES] Movement than the Caravel, which it replaces, and can perform a one-time ability next to foreign lands to earn [ICON_GOLD] Gold and XP. May only be built by the Portuguese.{unit_caravel_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_PORTUGUESE_NAU_CLEAN">
+            <Text>Melee naval unit which excels at sea exploration. It has more [ICON_MOVES] Movement than the Caravel, which it replaces, and can perform a one-time ability next to foreign lands to earn [ICON_GOLD] Gold and XP. May only be built by the Portuguese.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_BERBER_CAVALRY"/>
+        <Row Tag="TXT_KEY_UNIT_BERBER_CAVALRY">
+            <Text>{unit_cavalry_flag}Berber Cavalry</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_BERBER_CAVALRY_CLEAN">
+            <Text>Berber Cavalry</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_BERBER_CAVALRY"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_BERBER_CAVALRY">
+            <Text>Mounted unit that specializes in Desert warfare and protecting Moroccan lands. Receives combat bonuses when fighting both in Desert tiles and Moroccan territory. May only be built by Morocco.{unit_cavalry_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_BERBER_CAVALRY_CLEAN">
+            <Text>Mounted unit that specializes in Desert warfare and protecting Moroccan lands. Receives combat bonuses when fighting both in Desert tiles and Moroccan territory. May only be built by Morocco.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_VENETIAN_GALLEASS"/>
+        <Row Tag="TXT_KEY_UNIT_VENETIAN_GALLEASS">
+            <Text>{unit_galleass_flag}Great Galleass</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_VENETIAN_GALLEASS_CLEAN">
+            <Text>Great Galleass</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_VENETIAN_GALLEASS"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_VENETIAN_GALLEASS">
+            <Text>A brutally powerful Medieval Era Naval Unit used to wrest control of the seas with its ranged attack. Better at attacking and defending than the normal Galleass it replaces, but more expensive. May only be built by Venice.{unit_galleass_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_VENETIAN_GALLEASS_CLEAN">
+            <Text>A brutally powerful Medieval Era Naval Unit used to wrest control of the seas with its ranged attack. Better at attacking and defending than the normal Galleass it replaces, but more expensive. May only be built by Venice.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_SHOSHONE_PATHFINDER"/>
+        <Row Tag="TXT_KEY_UNIT_SHOSHONE_PATHFINDER">
+            <Text>{unit_scout_flag}Pathfinder</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_SHOSHONE_PATHFINDER_CLEAN">
+            <Text>Pathfinder</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_SHOSHONE_PATHFINDER"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_SHOSHONE_PATHFINDER">
+            <Text>Excellent at exploring and fearsome in combat, this Shoshone Unique Unit replaces the Scout. It possesses a promotion that allows it to choose the benefit when uncovering an ancient ruin.{unit_scout_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_SHOSHONE_PATHFINDER_CLEAN">
+            <Text>Excellent at exploring and fearsome in combat, this Shoshone Unique Unit replaces the Scout. It possesses a promotion that allows it to choose the benefit when uncovering an ancient ruin.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_SHOSHONE_COMANCHE_RIDERS"/>
+        <Row Tag="TXT_KEY_UNIT_SHOSHONE_COMANCHE_RIDERS">
+            <Text>{unit_cavalry_flag}Comanche Riders</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_SHOSHONE_COMANCHE_RIDERS_CLEAN">
+            <Text>Comanche Riders</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_SHOSHONE_COMANCHE_RIDERS"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_SHOSHONE_COMANCHE_RIDERS">
+            <Text>Mounted unit that specializes in quick attacks. May only be built by the Shoshone.{unit_cavalry_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_SHOSHONE_COMANCHE_RIDERS_CLEAN">
+            <Text>Mounted unit that specializes in quick attacks. May only be built by the Shoshone.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_BAZOOKA"/>
+        <Row Tag="TXT_KEY_UNIT_BAZOOKA">
+            <Text>{unit_bazooka_flag}Bazooka</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_BAZOOKA_CLEAN">
+            <Text>Bazooka</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_BAZOOKA"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_BAZOOKA">
+            <Text>Atomic era ranged Unit that must be adjacent to an enemy to strike.{unit_bazooka_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_BAZOOKA_CLEAN">
+            <Text>Atomic era ranged Unit that must be adjacent to an enemy to strike.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_INDONESIAN_KRIS_SWORDSMAN"/>
+        <Row Tag="TXT_KEY_UNIT_INDONESIAN_KRIS_SWORDSMAN">
+            <Text>{unit_swordsman_flag}Kris Swordsman</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_INDONESIAN_KRIS_SWORDSMAN_CLEAN">
+            <Text>Kris Swordsman</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_INDONESIAN_KRIS_SWORDSMAN"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_INDONESIAN_KRIS_SWORDSMAN">
+            <Text>Classical Era Melee unit that has a mystical weapon whose abilities will be discovered the first time it is used in combat. May only be build by Indonesia.{unit_swordsman_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_INDONESIAN_KRIS_SWORDSMAN_CLEAN">
+            <Text>Classical Era Melee unit that has a mystical weapon whose abilities will be discovered the first time it is used in combat. May only be build by Indonesia.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_XCOM_SQUAD"/>
+        <Row Tag="TXT_KEY_UNIT_XCOM_SQUAD">
+            <Text>{unit_xcom_squad_flag}XCOM Squad</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_XCOM_SQUAD_CLEAN">
+            <Text>XCOM Squad</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_XCOM_SQUAD"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_XCOM_SQUAD">
+            <Text>Futuristic infantry unit skilled at dropping into danger from far across the world. Squad can move and pillage after landing but cannot enter combat until the following turn.{unit_xcom_squad_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_XCOM_SQUAD_CLEAN">
+            <Text>Futuristic infantry unit skilled at dropping into danger from far across the world. Squad can move and pillage after landing but cannot enter combat until the following turn.</Text>
+        </Row>
+    </Language_en_US>
+</GameData>

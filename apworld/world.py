@@ -32,6 +32,7 @@ from .locations import (
     POLICY_BRANCH_LOCATIONS,
     POLICY_LOCATIONS,
     TECH_LOCATIONS,
+    UNIT_LOCATIONS,
     WORLD_WONDER_LOCATIONS,
     CivVLocation,
     CivVLocationData,
@@ -164,11 +165,13 @@ class CivVWorld(World):
         # Create list with locations that are always included
         locations_data = [*POLICY_BRANCH_LOCATIONS, *POLICY_LOCATIONS, *TECH_LOCATIONS]
 
-        # Add building locations if corresponding sanity is enabled
+        # Add specific locations if corresponding sanity is enabled
         if self.options.building_sanity:
             locations_data.extend(BUILDING_LOCATIONS)
         if self.options.national_wonder_sanity:
             locations_data.extend(NATIONAL_WONDER_LOCATIONS)
+        if self.options.unit_sanity:
+            locations_data.extend(UNIT_LOCATIONS)
         if self.options.world_wonder_sanity:
             locations_data.extend(WORLD_WONDER_LOCATIONS)
 

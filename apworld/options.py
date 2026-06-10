@@ -184,6 +184,25 @@ class WorldWonderSanity(Toggle):
     display_name = "World Wonder Sanity"
 
 
+class UnitSanity(Toggle):
+    """
+    Add most standard units to the location pool.
+
+    This adds 66 units to the location pool in total.
+
+    Units that will not be added:
+    - Foreign Legion
+    - Dromon (exclusive to Byzantium; does not replace a standard unit)
+    - Any religious unit (Inquisitor and Missionary)
+    - Any civilization-unique unit (they count as the unit they replace instead)
+    - Any Great Person
+    - Any Spaceship unit (SS Booster; SS Cockpit; SS Engine; and SS Stasis Chamber)
+
+    """
+
+    display_name = "Unit Sanity"
+
+
 class EnableTraps(Toggle):
     """
     Add traps to the filler item pool.
@@ -238,6 +257,7 @@ class CivVOptions(PerGameCommonOptions):
     building_sanity: BuildingSanity
     national_wonder_sanity: NationalWonderSanity
     world_wonder_sanity: WorldWonderSanity
+    unit_sanity: UnitSanity
     enable_traps: EnableTraps
     trap_blacklist: TrapBlacklist
     trap_filler_chance: TrapFillerChance

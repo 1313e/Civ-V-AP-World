@@ -48,6 +48,7 @@ class CivVContainer(APPlayerContainer):
         "templates/apmod/Technologies.xml",
         "templates/apmod/TechnologyTextInfos.xml",
         "templates/apmod/Units.xml",
+        "templates/apmod/UnitTextInfos.xml",
         "templates/apmod/WorldWonders.xml",
         "templates/apmod/WorldWonderTextInfos.xml",
         "templates/apmod/Icons/AP_Icons.xml",
@@ -150,6 +151,18 @@ class CivVContainer(APPlayerContainer):
             f"[COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] ({self._get_formatted_item(item)})."
         )
 
+    def _get_location_description_unit(self, item: Item) -> str:
+        """
+        Formats the given `item` placement into a location description string usable for units in the Civ V XML
+        databases.
+
+        """
+
+        return (
+            f"[NEWLINE][NEWLINE]Training this unit for the first time counts as an "
+            f"[COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] ({self._get_formatted_item(item)})."
+        )
+
     def _get_substitution_dict(self) -> dict[str, str]:
         """
         Generates and returns a dictionary that should be used for XML file substitution.
@@ -197,6 +210,17 @@ class CivVContainer(APPlayerContainer):
                     dct[f"{location.database_key_prefix}_item"] = self._get_formatted_item(filled_location.item)
                     dct[f"{location.database_key_prefix}_flag"] = self._get_formatted_item_flag(filled_location.item)
                     dct[f"{location.database_key_prefix}_cost"] = str(int(location.cost * tech_cost_modifier))
+
+                # For units, we need a location description at that location if an item was placed there
+                case CivVLocationType.unit:
+                    if filled_location is not None:
+                        location_text = self._get_location_description_unit(filled_location.item)
+                        flag = self._get_formatted_item_flag(filled_location.item)
+                    else:
+                        location_text = ""
+                        flag = ""
+                    dct[f"{location.database_key_prefix}_location"] = location_text
+                    dct[f"{location.database_key_prefix}_flag"] = flag
 
                 # For all other types, do nothing
                 case _:

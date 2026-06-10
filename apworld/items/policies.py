@@ -171,7 +171,7 @@ POLICY_ITEMS: dict[str, CivVProgressionItemData | CivVUsefulItemData] = {
         game_id=30,
         prefix="Policy Branch",
     ),
-    "Mercenary Army": CivVUsefulItemData(
+    "Mercenary Army": CivVProgressionItemData(
         name="Mercenary Army",
         type=CivVItemType.policy,
         game_id=31,

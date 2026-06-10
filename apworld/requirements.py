@@ -6,66 +6,132 @@ __all__ = [
     "AIRPORT",
     "ALUMINUM",
     "AMPHITHEATER",
+    "ANTI_AIRCRAFT_GUN",
+    "ANTI_TANK_GUN",
     "AQUEDUCT",
-    "ARCHAEOLOGISTS",
+    "ARCHAEOLOGIST",
+    "ARCHER",
     "ARMORY",
     "ARSENAL",
+    "ARTILLERY",
     "ARTISTS_GUILD",
+    "ATOMIC_BOMB",
     "BANK",
     "BARRACKS",
+    "BATTLESHIP",
+    "BAZOOKA",
     "BOMB_SHELTER",
+    "BOMBER",
     "BROADCAST_TOWER",
+    "CANNON",
+    "CARAVAN",
     "CARAVANSARY",
+    "CARAVEL",
+    "CARGO_SHIP",
+    "CARRIER",
     "CASTLE",
+    "CATAPULT",
+    "CAVALRY",
+    "CHARIOT_ARCHER",
     "CIRCUS",
     "COAL",
     "COLOSSEUM",
+    "COMPOSITE_BOWMAN",
     "CONSTABULARY",
+    "CROSSBOWMAN",
+    "DESTROYER",
     "EMBARKING",
     "FACTORY",
+    "FIGHTER",
     "FORGE",
+    "FRIGATE",
+    "GALLEASS",
+    "GATLING_GUN",
+    "GIANT_DEATH_ROBOT",
     "GOLD_SILVER",
     "GRANARY",
+    "GREAT_WAR_BOMBER",
+    "GREAT_WAR_INFANTRY",
+    "GUIDED_MISSILE",
     "HARBOR",
+    "HELICOPTER_GUNSHIP",
+    "HORSEMAN",
     "HORSES_SHEEP_CATTLE",
     "HOSPITAL",
     "HOTEL",
     "HYDRO_PLANT",
+    "INFANTRY",
     "IRON",
+    "IRONCLAD",
+    "JET_FIGHTER",
+    "KNIGHT",
+    "LANCER",
+    "LANDSHIP",
+    "LANDSKNECHT",
     "LIBRARY",
     "LIGHTHOUSE",
+    "LONGSWORDSMAN",
+    "MACHINE_GUN",
+    "MARINE",
     "MARKET",
+    "MECHANIZED_INFANTRY",
     "MEDICAL_LAB",
     "MILITARY_ACADEMY",
     "MILITARY_BASE",
     "MINT",
+    "MISSILE_CRUISER",
+    "MOBILE_SAM",
+    "MODERN_ARMOR",
     "MONUMENT",
     "MUSEUM",
     "MUSICIANS_GUILD",
+    "MUSKETMAN",
     "NUCLEAR_PLANT",
+    "NUCLEAR_MISSILE",
+    "NUCLEAR_SUBMARINE",
+    "OIL",
     "OPERA_HOUSE",
+    "PARATROOPER",
+    "PIKEMAN",
     "POLICE_STATION",
+    "PRIVATEER",
     "PUBLIC_SCHOOL",
     "RECYCLING_CENTER",
     "RESEARCH_LAB",
+    "RIFLEMAN",
+    "ROCKET_ARTILLERY",
+    "SCOUT",
     "SEAPORT",
+    "SETTLER",
     "SHRINE",
     "SOLAR_PLANT",
     "SPACESHIP_FACTORY",
+    "SPEARMAN",
     "STABLE",
     "STADIUM",
+    "STEALTH_BOMBER",
     "STOCK_EXCHANGE",
     "STONE_MARBLE",
     "STONE_WORKS",
+    "SUBMARINE",
+    "SWORDSMAN",
+    "TANK",
     "TEMPLE",
+    "TREBUCHET",
+    "TRIPLANE",
+    "TRIREME",
     "UNIVERSITY",
     "VICTORIES",
     "WALLS",
+    "WARRIOR",
     "WATER_MILL",
     "WINDMILL",
+    "WORK_BOAT",
+    "WORKER",
     "WORKSHOP",
     "WRITERS_GUILD",
     "URANIUM",
+    "XCOM_SQUAD",
     "ZOO",
 ]
 
@@ -104,6 +170,12 @@ IRON = items.ItemRequirements(
     }
 )
 "Requirements for obtaining Iron"
+OIL = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Biology"],
+    }
+)
+"Requirements for obtaining Oil"
 STONE_MARBLE = items.ItemRequirements(
     progression={
         items.TECH_ITEMS["Masonry"],
@@ -523,13 +595,6 @@ WINDMILL = items.ItemRequirements(
 
 
 # %% MISC REQUIREMENTS DEFINITIONS
-ARCHAEOLOGISTS = items.ItemRequirements(
-    UNIVERSITY,
-    progression={
-        items.TECH_ITEMS["Archaeology"],
-    }
-)
-"Requirements for training Archaeologists"
 EMBARKING = items.ItemRequirements(
     progression={
         items.TECH_ITEMS["Optics"],
@@ -537,6 +602,422 @@ EMBARKING = items.ItemRequirements(
     },
 )
 "Requirements for being able to embark"
+MANHATTAN_PROJECT = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Atomic Theory"],
+    },
+)
+"Requirements for research the Manhattan Project special project"
+
+
+# %% UNIT REQUIREMENT DEFINITIONS
+SETTLER = items.ItemRequirements()
+"Requirements for training a Settler"
+WORKER = items.ItemRequirements()
+"Requirements for training a Worker"
+WORK_BOAT = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Sailing"],
+    }
+)
+"Requirements for training a Work Boat"
+MISSILE_CRUISER = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Robotics"],
+    }
+)
+"Requirements for training a Missile Cruiser"
+NUCLEAR_SUBMARINE = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Telecommunications"],
+    }
+)
+"Requirements for training a Nuclear Submarine"
+CARRIER = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Electronics"]
+    }
+)
+"Requirements for training a Carrier"
+BATTLESHIP = items.ItemRequirements(
+    OIL,
+    progression={
+        items.TECH_ITEMS["Electronics"],
+    }
+)
+"Requirements for training a Battleship"
+SUBMARINE = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Refrigeration"],
+    }
+)
+"Requirements for training a Submarine"
+DESTROYER = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Combustion"],
+    }
+)
+"Requirements for training a Destroyer"
+IRONCLAD = items.ItemRequirements(
+    COAL,
+    progression={
+        items.TECH_ITEMS["Steam Power"],
+    }
+)
+"Requirements for training an Ironclad"
+FRIGATE = items.ItemRequirements(
+    IRON,
+    progression={
+        items.TECH_ITEMS["Navigation"],
+    }
+)
+"Requirements for training a Frigate"
+CARAVEL = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Astronomy"],
+    }
+)
+"Requirements for training a Caravel"
+TRIREME = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Sailing"],
+    }
+)
+"Requirements for training a Trireme"
+GIANT_DEATH_ROBOT = items.ItemRequirements(
+    URANIUM,
+    progression={
+        items.TECH_ITEMS["Nuclear Fusion"],
+    }
+)
+"Requirements for training a Giant Death Robot"
+NUCLEAR_MISSILE = items.ItemRequirements(
+    MANHATTAN_PROJECT,
+    URANIUM,
+    progression={
+        items.TECH_ITEMS["Advanced Ballistics"],
+    }
+)
+"Requirements for training a Nuclear Missile"
+STEALTH_BOMBER = items.ItemRequirements(
+    ALUMINUM,
+    progression={
+        items.TECH_ITEMS["Stealth"],
+    }
+)
+"Requirements for training a Stealth Bomber"
+JET_FIGHTER = items.ItemRequirements(
+    ALUMINUM,
+    progression={
+        items.TECH_ITEMS["Lasers"],
+    }
+)
+"Requirements for training a Jet Fighter"
+GUIDED_MISSILE = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Advanced Ballistics"],
+    }
+)
+"Requirements for training a Guided Missile"
+MODERN_ARMOR = items.ItemRequirements(
+    ALUMINUM,
+    progression={
+        items.TECH_ITEMS["Lasers"],
+    }
+)
+"Requirements for training a Modern Armor"
+HELICOPTER_GUNSHIP = items.ItemRequirements(
+    ALUMINUM,
+    progression={
+        items.TECH_ITEMS["Computers"],
+    }
+)
+"Requirements for training a Helicopter Gunship"
+MOBILE_SAM = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Rocketry"],
+    }
+)
+"Requirements for training a Mobile SAM"
+ROCKET_ARTILLERY = items.ItemRequirements(
+    ALUMINUM,
+    progression={
+        items.TECH_ITEMS["Rocketry"],
+    }
+)
+"Requirements for training a Rocket Artillery"
+MECHANIZED_INFANTRY = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Mobile Tactics"],
+    }
+)
+"Requirements for training a Mechanized Infantry"
+ATOMIC_BOMB = items.ItemRequirements(
+    MANHATTAN_PROJECT,
+    URANIUM,
+    progression={
+        items.TECH_ITEMS["Nuclear Fission"],
+    }
+)
+"Requirements for training an Atomic Bomb"
+BOMBER = items.ItemRequirements(
+    OIL,
+    progression={
+        items.TECH_ITEMS["Radar"],
+    }
+)
+"Requirements for training a Bomber"
+FIGHTER = items.ItemRequirements(
+    OIL,
+    progression={
+        items.TECH_ITEMS["Radar"],
+    }
+)
+"Requirements for training a Fighter"
+PARATROOPER = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Radar"],
+    }
+)
+"Requirements for training a Paratrooper"
+TANK = items.ItemRequirements(
+    OIL,
+    progression={
+        items.TECH_ITEMS["Combined Arms"],
+    }
+)
+"Requirements for training a Tank"
+ARTILLERY = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Dynamite"],
+    }
+)
+"Requirements for training an Artillery"
+ANTI_AIRCRAFT_GUN = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Ballistics"],
+    }
+)
+"Requirements for training an Anti-Aircraft Gun"
+ANTI_TANK_GUN = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Combined Arms"],
+    }
+)
+"Requirements for training an Anti-Tank Gun"
+INFANTRY = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Plastics"],
+    }
+)
+"Requirements for training an Infantry"
+CAVALRY = items.ItemRequirements(
+    HORSES_SHEEP_CATTLE,
+    progression={
+        items.TECH_ITEMS["Military Science"],
+    }
+)
+"Requirements for training a Cavalry"
+RIFLEMAN = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Rifling"],
+    }
+)
+"Requirements for training a Rifleman"
+LANCER = items.ItemRequirements(
+    HORSES_SHEEP_CATTLE,
+    progression={
+        items.TECH_ITEMS["Metallurgy"],
+    }
+)
+"Requirements for training a Lancer"
+CANNON = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Chemistry"],
+    }
+)
+"Requirements for training a Cannon"
+MUSKETMAN = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Gunpowder"],
+    }
+)
+"Requirements for training a Musketman"
+LONGSWORDSMAN = items.ItemRequirements(
+    IRON,
+    progression={
+        items.TECH_ITEMS["Steel"],
+    }
+)
+"Requirements for training a Longswordsman"
+TREBUCHET = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Physics"],
+    }
+)
+"Requirements for training a Trebuchet"
+KNIGHT = items.ItemRequirements(
+    HORSES_SHEEP_CATTLE,
+    progression={
+        items.TECH_ITEMS["Chivalry"],
+    }
+)
+"Requirements for training a Knight"
+CROSSBOWMAN = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Machinery"],
+    }
+)
+"Requirements for training a Crossbowman"
+PIKEMAN = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Civil Service"]
+    }
+)
+"Requirements for training a Pikeman"
+LANDSKNECHT = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Civil Service"],
+        items.POLICY_ITEMS["Mercenary Army"],
+    }
+)
+"Requirements for training a Landsknecht"
+CATAPULT = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Mathematics"],
+    }
+)
+"Requirements for training a Catapult"
+HORSEMAN = items.ItemRequirements(
+    HORSES_SHEEP_CATTLE,
+    progression={
+        items.TECH_ITEMS["Horseback Riding"],
+    }
+)
+"Requirements for training a Horseman"
+SWORDSMAN = items.ItemRequirements(
+    IRON,
+    progression={
+        items.TECH_ITEMS["Iron Working"],
+    }
+)
+"Requirements for training a Swordsman"
+CHARIOT_ARCHER = items.ItemRequirements(
+    HORSES_SHEEP_CATTLE,
+    progression={
+        items.TECH_ITEMS["The Wheel"],
+    }
+)
+"Requirements for training a Chariot Archer"
+SPEARMAN = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Bronze Working"],
+    }
+)
+"Requirements for training a Spearman"
+ARCHER = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Archery"],
+    }
+)
+"Requirements for training an Archer"
+SCOUT = items.ItemRequirements()
+"Requirements for training a Scout"
+WARRIOR = items.ItemRequirements()
+"Requirements for training a Warrior"
+COMPOSITE_BOWMAN = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Construction"],
+    }
+)
+"Requirements for training a Composite Bowman"
+GALLEASS = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Compass"],
+    }
+)
+"Requirements for training a Galleass"
+GREAT_WAR_INFANTRY = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Replaceable Parts"],
+    }
+)
+"Requirements for training a Great War Infantry"
+MARINE = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Penicillin"],
+    }
+)
+"Requirements for training a Marine"
+TRIPLANE = items.ItemRequirements(
+    OIL,
+    progression={
+        items.TECH_ITEMS["Flight"],
+    }
+)
+"Requirements for training a Triplane"
+GREAT_WAR_BOMBER = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Flight"],
+    }
+)
+"Requirements for training a Great War Bomber"
+LANDSHIP = items.ItemRequirements(
+    OIL,
+    progression={
+        items.TECH_ITEMS["Combustion"],
+    }
+)
+"Requirements for training a Landship"
+MACHINE_GUN = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Ballistics"]
+    }
+)
+"Requirements for training a Machine Gun"
+PRIVATEER = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Navigation"],
+    }
+)
+"Requirements for training a Privateer"
+GATLING_GUN = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Industrialization"],
+    }
+)
+"Requirements for training a Gatling Gun"
+CARGO_SHIP = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Sailing"],
+    }
+)
+"Requirements for training a Cargo Ship"
+CARAVAN = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Animal Husbandry"],
+    }
+)
+"Requirements for training a Caravan"
+ARCHAEOLOGIST = items.ItemRequirements(
+    UNIVERSITY,
+    progression={
+        items.TECH_ITEMS["Archaeology"],
+    }
+)
+"Requirements for training an Archaeologist"
+BAZOOKA = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Nuclear Fission"],
+    }
+)
+"Requirements for training a Bazooka"
+XCOM_SQUAD = items.ItemRequirements(
+    progression={
+        items.TECH_ITEMS["Nanotechnology"],
+    }
+)
+"Requirements for training an XCOM Squad"
 
 
 # %% VICTORY REQUIREMENTS DEFINITIONS
@@ -553,7 +1034,7 @@ VICTORIES = {
         },
     ),
     "Culture": items.ItemRequirements(
-        ARCHAEOLOGISTS,
+        ARCHAEOLOGIST,
         ARTISTS_GUILD,
         BROADCAST_TOWER,
         HOTEL,
