@@ -291,49 +291,23 @@ function SaveScriptData(key, value)
 	save(player, key, value)
 end
 
-function UpdateTextInfos(tableName, locationId, refresh)
+function UpdateTextInfos(tableName, locationId)
 	-- If this table plus location ID has linked IDs, update those first
 	if(textInfoLinkedIds[tableName] ~= nil and textInfoLinkedIds[tableName][locationId] ~= nil) then
 		for _, linkedId in ipairs(textInfoLinkedIds[tableName][locationId]) do
-			UpdateTextInfos(tableName, linkedId, false)
+			UpdateTextInfos(tableName, linkedId)
 		end
 	end
 
-	-- Retrieve the description and help text infos for this ID from the given table
-	results = DB.Query(table.concat({"SELECT Description, Help FROM ", tableName, " WHERE ID = '", locationId, "'"}))()
-	clean_description = Locale.ConvertTextKey(results.Description .. "_CLEAN")
-	clean_help = Locale.ConvertTextKey(results.Help .. "_CLEAN")
-
-	-- If they are already set to their clean versions, return immediately
-	if Locale.ConvertTextKey(results.Description) == clean_description then
-		return
+	-- Update the description and help text infos keys to their clean versions if possible
+	clean_description_key = GameInfo[tableName][locationId].Description .. "_CLEAN"
+	if Locale.ConvertTextKey(clean_description_key) ~= clean_description_key then
+		GameInfo[tableName][locationId].Description = clean_description_key
 	end
-
-	-- Replace description and help text infos with their clean version. Escape single quotation marks
-	DB.Query(table.concat({
-		"UPDATE Language_en_US SET Text = '",
-		clean_description:gsub("'", "''"),
-		"' WHERE Tag = '",
-		results.Description,
-		"'",
-	}))()
-	DB.Query(table.concat({
-		"UPDATE Language_en_US SET Text = '",
-		clean_help:gsub("'", "''"),
-		"' WHERE Tag = '",
-		results.Help,
-		"'",
-	}))()
-
-	-- Refresh the text infos if requested
-	if refresh then
-		RefreshTextInfos()
+	clean_help_key = GameInfo[tableName][locationId].Help .. "_CLEAN"
+	if Locale.ConvertTextKey(clean_help_key) ~= clean_help_key then
+		GameInfo[tableName][locationId].Help = clean_help_key
 	end
-end
-
-function RefreshTextInfos()
-	-- Refresh all text infos in-game by reloading the Locale language
-	Locale.SetCurrentLanguage(Locale.GetCurrentLanguage().Type)
 end
 
 function SyncTextInfos()
@@ -345,9 +319,6 @@ function SyncTextInfos()
 			end
 		end
 	end
-
-	-- Refresh text infos after sync
-	RefreshTextInfos()
 end
 
 function SendLocation(type, locationId)
@@ -362,7 +333,7 @@ function SendLocation(type, locationId)
 
 	-- Update the text infos for this location if there is a table to update for this type
 	if textInfoTableNames[type] ~= nil then
-		UpdateTextInfos(textInfoTableNames[type], locationId, true)
+		UpdateTextInfos(textInfoTableNames[type], locationId)
 	end
 
 	-- Save the location table
@@ -409,11 +380,11 @@ function SetCultureTechYield()
 	cultureTechYield = math.floor(BASE_CULTURE_TECH_YIELD * speedModifier * difficultyModifier)
 
 	-- Update the text info entry for this tech to state how much culture is rewarded
-	DB.Query(table.concat({
-		"UPDATE Language_en_US SET Text = 'A repeatable technology that grants ",
-		 cultureTechYield,
-		 " [ICON_CULTURE] Culture each time it is researched.' WHERE Tag = 'TXT_KEY_TECH_CULTURE_BOOST_HELP'",
-	}))()
+	GameInfo["Technologies"][176].Help = table.concat({
+		"A repeatable technology that grants ",
+		cultureTechYield,
+		" [ICON_CULTURE] Culture each time it is researched."
+	})
 end
 
 function RequestSync()
@@ -640,9 +611,8 @@ function AP.UpdateLocationTable(type, locationIds, is_finished)
 		end
 	end
 
-	-- If this was the final update to be performed, also refresh the text infos and save the location table
+	-- If this was the final update to be performed, save the location table
 	if is_finished then
-		RefreshTextInfos()
 		SaveScriptData("location_table", locationTable)
 	end
 end

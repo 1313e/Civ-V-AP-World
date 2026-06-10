@@ -5,8 +5,5 @@
         <Row Tag="TXT_KEY_TECH_FUTURE_TECH_HELP">
             <Text>Who knows what the future holds?[NEWLINE][NEWLINE](A repeating technology that will increase your score by 10 each time it is researched.)</Text>
         </Row>
-        <Row Tag="TXT_KEY_TECH_CULTURE_BOOST_HELP">
-            <Text>A repeatable technology that grants a large amount of [ICON_CULTURE] Culture each time it is researched.</Text>
-        </Row>
     </Language_en_US>
 </GameData>
