@@ -3,7 +3,359 @@
     <Units>
         <Update>
             <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_SUBMARINE"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_IRONCLAD"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_FRIGATE"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_ENGLISH_SHIPOFTHELINE"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_CARAVEL"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_TRIREME"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_ANTI_AIRCRAFT_GUN"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_INFANTRY"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_FRENCH_FOREIGNLEGION"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_CAVALRY"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_RUSSIAN_COSSACK"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_RIFLEMAN"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_LANCER"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_OTTOMAN_SIPAHI"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_CANNON"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_MUSKETMAN"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_AMERICAN_MINUTEMAN"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_FRENCH_MUSKETEER"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_OTTOMAN_JANISSARY"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_LONGSWORDSMAN"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_JAPANESE_SAMURAI"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_TREBUCHET"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_KNIGHT"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_ARABIAN_CAMELARCHER"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_SIAMESE_WARELEPHANT"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_SONGHAI_MUSLIMCAVALRY"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_CROSSBOWMAN"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_CHINESE_CHUKONU"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_ENGLISH_LONGBOWMAN"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_PIKEMAN"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_CATAPULT"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_ROMAN_BALLISTA"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_HORSEMAN"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_GREEK_COMPANIONCAVALRY"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_SWORDSMAN"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_IROQUOIAN_MOHAWKWARRIOR"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_ROMAN_LEGION"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_CHARIOT_ARCHER"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_EGYPTIAN_WARCHARIOT"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_INDIAN_WARELEPHANT"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_SPEARMAN"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_GREEK_HOPLITE"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_PERSIAN_IMMORTAL"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_ARCHER"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
             <Where Type="UNIT_SCOUT"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_WARRIOR"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_AZTEC_JAGUAR"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_MONGOLIAN_KESHIK"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_INCAN_SLINGER"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_SPANISH_TERCIO"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_SPANISH_CONQUISTADOR"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_POLYNESIAN_MAORI_WARRIOR"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_DANISH_BERSERKER"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_DANISH_SKI_INFANTRY"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_KOREAN_TURTLE_SHIP"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_KOREAN_HWACHA"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_BABYLONIAN_BOWMAN"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_CELT_PICTISH_WARRIOR"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_MAYAN_ATLATLIST"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_BYZANTINE_DROMON"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_BYZANTINE_CATAPHRACT"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_CARTHAGINIAN_FOREST_ELEPHANT"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_CARTHAGINIAN_QUINQUEREME"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_HUN_HORSE_ARCHER"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_AUSTRIAN_HUSSAR"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_ETHIOPIAN_MEHAL_SEFARI"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_SWEDISH_CAROLEAN"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_SWEDISH_HAKKAPELIITTA"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_HUN_BATTERING_RAM"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_DUTCH_SEA_BEGGAR"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_COMPOSITE_BOWMAN"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_GALLEASS"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_GREAT_WAR_INFANTRY"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_TRIPLANE"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_WWI_BOMBER"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_WWI_TANK"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_MACHINE_GUN"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_PRIVATEER"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_GATLINGGUN"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_ZULU_IMPI"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_POLISH_WINGED_HUSSAR"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_ASSYRIAN_SIEGE_TOWER"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_BRAZILIAN_PRACINHA"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_PORTUGUESE_NAU"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_BERBER_CAVALRY"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_VENETIAN_GALLEASS"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_SHOSHONE_PATHFINDER"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_SHOSHONE_COMANCHE_RIDERS"/>
+        </Update>
+        <Update>
+            <Set ObsoleteTech="NULL"/>
+            <Where Type="UNIT_KRIS_SWORDSMAN"/>
         </Update>
     </Units>
 </GameData>

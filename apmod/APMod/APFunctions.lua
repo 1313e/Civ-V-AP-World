@@ -36,7 +36,7 @@ local locationTable = {}
 for key, _ in pairs(pushTableTableKeys) do
     locationTable[key] = {}
 end
-local techIdsToEraIds = {
+local techIdToEraId = {
     [0]=0, [1]=0, [2]=0, [3]=0, [4]=0, [5]=0, [6]=0, [7]=0, [8]=0, [9]=0, [10]=0, [11]=0,
     [12]=1, [13]=1, [14]=1, [15]=1, [16]=1, [17]=1, [18]=1, [19]=1, [20]=1,
     [21]=2, [22]=2, [23]=2, [24]=2, [25]=2, [26]=2, [27]=2, [28]=2, [29]=2, [30]=2,
@@ -87,7 +87,7 @@ local buildingIds = {
     [121]=true, [122]=true, [123]=true, [124]=true, [125]=true, [126]=true,
     [151]=true, [152]=true, [153]=true,
 }
-local civUniqueBuildingToBuildingId = {
+local civUniqueBuildingIdToBuildingId = {
     [0]=13, [2]=38, [3]=33, [4]=43, [5]=47, [6]=48, [7]=50, [8]=51, [9]=29,
     [10]=29,
     [96]=37,
@@ -111,7 +111,7 @@ local worldWonderBuildingIds = {
     [154]=true, [155]=true, [156]=true, [157]=true, [158]=true, [159]=true,
     [160]=true, [161]=true,
 }
-local worldWonderToFreeBuildingId = {
+local worldWonderIdToFreeBuildingId = {
     [63]=23, [65]=50, [69]=22,
     [70]=37, [72]=29, [77]=38,
     [128]=38, [129]=32,
@@ -132,7 +132,7 @@ local unitIds = {
     [157]=true,
     [161]=true,
 }
-local civUniqueUnitToUnitId = {
+local civUniqueUnitIdToUnitId = {
     [20]=19,
     [35]=34, [37]=36,
     [40]=39, [47]=46,
@@ -146,6 +146,22 @@ local civUniqueUnitToUnitId = {
     [120]=48, [121]=49, [122]=78, [124]=138,
     [142]=66, [144]=49,
     [150]=68, [151]=44, [152]=21, [153]=46, [154]=131, [155]=82, [156]=46, [158]=72,
+}
+local unitIdToObsoleteTechId = {
+    [16]=68, [18]=59, [19]=57,
+    [20]=57, [21]=49, [22]=31,
+    [42]=66, [44]=69, [45]=56, [46]=59, [47]=59, [48]=53, [49]=63,
+    [50]=63, [51]=50, [52]=44, [53]=44, [54]=44, [55]=44, [56]=35, [57]=44, [58]=40, [59]=45,
+    [60]=45, [61]=45, [62]=45, [63]=43, [64]=43, [65]=43, [66]=39, [68]=29, [69]=29,
+    [70]=27, [71]=27, [72]=30, [73]=35, [74]=35, [75]=27, [76]=27, [77]=27, [78]=22, [79]=22,
+    [80]=22, [81]=15, [82]=42, [83]=24, [84]=24,
+    [90]=45, [92]=15, [93]=44, [94]=45, [95]=24, [96]=39, [97]=53, [98]=53, [99]=40,
+    [100]=15, [102]=22, [103]=15, [104]=31, [105]=27, [106]=27, [107]=31, [108]=27, [109]=59,
+    [110]=53,
+    [120]=53, [121]=63, [122]=29, [124]=59,
+    [130]=28, [131]=36, [132]=56, [134]=62, [135]=62, [136]=63, [137]=65, [138]=59,
+    [141]=58, [142]=44, [144]=63,
+    [150]=29, [151]=69, [152]=49, [153]=59, [154]=36, [155]=42, [156]=59, [158]=30,
 }
 local textInfoLinkedIds = {
     Buildings={
@@ -248,8 +264,8 @@ function OnTechAcquired(playerId, techId)
     -- If the AI gets a non-AP tech that should have given access to the next era, grant that
     if(playerId ~= player:GetID() and techId < LOWER_TECH_ID-2) then
         aiTeam = Teams[Players[playerId]:GetTeam()]
-        if(aiTeam:GetCurrentEra() < techIdsToEraIds[techId]) then
-            aiTeam:SetCurrentEra(techIdsToEraIds[techId])
+        if(aiTeam:GetCurrentEra() < techIdToEraId[techId]) then
+            aiTeam:SetCurrentEra(techIdToEraId[techId])
         end
     end
 end
@@ -262,8 +278,8 @@ function OnCityBuildingConstructed(playerId, cityId, buildingId, gold, faithOrCu
             SendLocation("building", buildingId)
 
             -- Civ-unique buildings
-        elseif(civUniqueBuildingToBuildingId[buildingId] ~= nil) then
-            SendLocation("building", civUniqueBuildingToBuildingId[buildingId])
+        elseif(civUniqueBuildingIdToBuildingId[buildingId] ~= nil) then
+            SendLocation("building", civUniqueBuildingIdToBuildingId[buildingId])
 
             -- National Wonders
         elseif(nationalWonderBuildingIds[buildingId]) then
@@ -274,8 +290,8 @@ function OnCityBuildingConstructed(playerId, cityId, buildingId, gold, faithOrCu
             SendLocation("world_wonder", buildingId)
 
             -- If this world wonder provides a free building, send it as well
-            if(worldWonderToFreeBuildingId[buildingId] ~= nil) then
-                SendLocation("building", worldWonderToFreeBuildingId[buildingId])
+            if(worldWonderIdToFreeBuildingId[buildingId] ~= nil) then
+                SendLocation("building", worldWonderIdToFreeBuildingId[buildingId])
             end
         end
     end
@@ -293,9 +309,6 @@ function OnCityCaptured(playerId, isCapital, plotX, plotY, newPlayerId)
     end
 end
 
--- TODO: GameEvents.CityCanTrain might be usable to force the AI to not train obsolete units
--- TODO: Add all text infos for all units
--- TODO: Mark all units as non-obsolete
 function OnCityUnitTrained(playerId, cityId, unitId, gold, faithOrCulture)
     -- If the player trains a unit, send it if it is a supported unit
     if(playerId == player:GetID()) then
@@ -307,10 +320,22 @@ function OnCityUnitTrained(playerId, cityId, unitId, gold, faithOrCulture)
             SendLocation("unit", unitId)
 
             -- Civ-unique units
-        elseif(civUniqueUnitToUnitId[unitId] ~= nil) then
-            SendLocation("unit", civUniqueUnitToUnitId[unitId])
+        elseif(civUniqueUnitIdToUnitId[unitId] ~= nil) then
+            SendLocation("unit", civUniqueUnitIdToUnitId[unitId])
         end
     end
+end
+
+function OnCityCanTrain(playerId, cityId, unitId)
+    -- If the AI has the tech that makes this unit obsolete, unit cannot be trained
+    if(playerId ~= player:GetID()
+            and unitIdToObsoleteTechId[unitId] ~= nil
+            and Teams[Players[playerId]:GetTeam()]:IsHasTech(unitIdToObsoleteTechId[unitId])) then
+        return false
+    end
+
+    -- In all other cases, unit can be trained
+    return true
 end
 
 function OnNotificationAdded(notification, notificationType, toolTip, summary, gameValue, extraGameData)
@@ -720,6 +745,7 @@ function Init()
     GameEvents.CityConstructed.Add(OnCityBuildingConstructed)
     GameEvents.CityCaptureComplete.Add(OnCityCaptured)
     GameEvents.CityTrained.Add(OnCityUnitTrained)
+    GameEvents.CityCanTrain.Add(OnCityCanTrain)
 
     -- Make sure that allow policy saving is turned on
     Game.SetOption(GameOptionTypes.GAMEOPTION_POLICY_SAVING, true)
