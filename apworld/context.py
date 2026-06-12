@@ -5,7 +5,7 @@ from CommonClient import CommonContext
 
 from .command_processor import CivVCommandProcessor
 from .constants import GAME_NAME, ID_OFFSET
-from .dataclasses import CivVAPModOptions, CivVSlotData
+from .dataclasses import CivVSlotData
 from .enums import CivVLocationType
 
 # All declaration
@@ -58,5 +58,4 @@ class CivVContext(CommonContext):
             slot_data = args["slot_data"]
             self.slot_data = CivVSlotData(
                 output_file_id=slot_data["output_file_id"],
-                apmod_options=CivVAPModOptions(**slot_data["apmod_options"]),
             )

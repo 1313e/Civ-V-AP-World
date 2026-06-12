@@ -138,6 +138,7 @@ class CivVItemType(StrEnum):
     bonus = "bonus"
     era = "era"
     policy = "policy"
+    settler = "settler"
     tech = "tech"
     trap = "trap"
 
@@ -153,6 +154,7 @@ class CivVLocationType(StrEnum):
     policy_branch = "policy_branch"
     tech = "tech"
     national_wonder = "national_wonder"
+    settler = "settler"
     unit = "unit"
     world_wonder = "world_wonder"
 

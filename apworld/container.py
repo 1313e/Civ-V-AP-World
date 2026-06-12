@@ -1,6 +1,7 @@
 # %% IMPORTS
 import functools
 import itertools
+import json
 import pkgutil
 import shutil
 import tempfile
@@ -35,9 +36,11 @@ class CivVContainer(APPlayerContainer):
     # Additional class attributes
     AP_MOD_TEMPLATE_FILES: list[str] = [
         "templates/apmod/APFunctions.lua",
+        "templates/apmod/APOptions.xml",
         "templates/apmod/Buildings.xml",
         "templates/apmod/BuildingTextInfos.xml",
         "templates/apmod/CivVAPMod (v 1).modinfo",
+        "templates/apmod/json.lua",
         "templates/apmod/NationalWonders.xml",
         "templates/apmod/NationalWonderTextInfos.xml",
         "templates/apmod/Policies.xml",
@@ -163,6 +166,29 @@ class CivVContainer(APPlayerContainer):
             f"[COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] ({self._get_formatted_item(item)})."
         )
 
+    @staticmethod
+    def _get_settler_location_descriptions(settler_locations: dict[str, str]) -> dict[str, str]:
+        """
+        Formats the given placed `settler_items` into a dict of string usable in the Civ V XML databases.
+
+        """
+
+        # We need the dict to be sorted first
+        items = sorted(settler_locations.items(), key=lambda x: x[0])
+        n_items = len(items)
+
+        # Convert to a dict of description strings
+        dct = {}
+        for i, (prefix, _) in enumerate(items):
+            description = "[NEWLINE]".join([f"- {x[1]}" for x in items[i:]])
+            dct[f"{prefix}_location"] = (
+                f"[NEWLINE][NEWLINE]Training this unit the next {n_items-i} time(s) counts as an "
+                f"[COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR]:[NEWLINE]{description}"
+            )
+
+        # Return created dct
+        return dct
+
     def _get_substitution_dict(self) -> dict[str, str]:
         """
         Generates and returns a dictionary that should be used for XML file substitution.
@@ -170,7 +196,13 @@ class CivVContainer(APPlayerContainer):
         """
 
         # Create dict holding all substitutions
-        dct = {"policy_cost_modifier": str(self.world.options.policy_cost_modifier-100)}
+        dct = {
+            "policy_cost_modifier": str(self.world.options.policy_cost_modifier-100),
+            "option_satellites_meets_all": json.dumps(bool(self.world.options.satellites_meets_all)),
+            "option_settler_sanity": json.dumps(bool(self.world.options.settler_sanity)),
+            "option_settler_sanity_amount": json.dumps(int(self.world.options.settler_sanity_amount)),
+        }
+        settler_locations: dict[str, str] = {}
 
         # Get all placed locations for this player. Ignore the Victory location
         filled_locations = {
@@ -205,6 +237,17 @@ class CivVContainer(APPlayerContainer):
                     dct[f"{location.database_key_prefix}_item"] = self._get_formatted_item(filled_location.item)
                     dct[f"{location.database_key_prefix}_flag"] = self._get_formatted_item_flag(filled_location.item)
 
+                # For settlers, we need all placed settlers at once for the item descriptions
+                # Flags can be set immediately
+                case CivVLocationType.settler:
+                    if filled_location is not None:
+                        settler_locations[location.database_key_prefix] = self._get_formatted_item(filled_location.item)
+                        flag = self._get_formatted_item_flag(filled_location.item)
+                    else:
+                        dct[f"{location.database_key_prefix}_location"] = ""
+                        flag = ""
+                    dct[f"{location.database_key_prefix}_flag"] = flag
+
                 # For techs, we need formatted item; classification flag; and the cost of that location
                 case CivVLocationType.tech:
                     dct[f"{location.database_key_prefix}_item"] = self._get_formatted_item(filled_location.item)
@@ -225,6 +268,9 @@ class CivVContainer(APPlayerContainer):
                 # For all other types, do nothing
                 case _:
                     pass
+
+        # Process all settlers that we extracted
+        dct.update(self._get_settler_location_descriptions(settler_locations))
 
         # Return the substitution dict
         return dct

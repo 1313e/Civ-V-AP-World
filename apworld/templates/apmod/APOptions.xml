@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+    <Table name="APOptions">
+        <Column name="ID" type="integer" primarykey="true" autoincrement="true"/>
+        <Column name="Key" type="text" unique="true"/>
+        <Column name="Value" type="text" default="null"/>
+    </Table>
+    <APOptions>
+        <!-- Values must be surrounded by quotation marks to avoid Firaxis' XML-to-SQL parser from converting the strings 'true'/'false' to 1/0, respectively -->
+        <Row>
+            <ID>0</ID>
+            <Key>satellites_meets_all</Key>
+            <Value>"{option_satellites_meets_all}"</Value>
+        </Row>
+        <Row>
+            <Key>settler_sanity</Key>
+            <Value>"{option_settler_sanity}"</Value>
+        </Row>
+        <Row>
+            <Key>settler_sanity_amount</Key>
+            <Value>"{option_settler_sanity_amount}"</Value>
+        </Row>
+    </APOptions>
+</GameData>

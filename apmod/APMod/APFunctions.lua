@@ -1,4 +1,5 @@
 include( "SaveUtils" ); MY_MOD_NAME = "APMod";
+include( "json" );
 
 AP = {}
 Game.AP = AP
@@ -20,15 +21,16 @@ local player = Players[Game.GetActivePlayer()]
 local team = Teams[player:GetTeam()]
 
 local optionsTable = {
-    satellites_meets_all=nil,
+    satellites_meets_all=nil, settler_sanity=false, settler_sanity_amount=0,
 }
 local pushTable = {}
 local pushTableTableKeys = {
-    building=true, policy=true, policy_branch=true, tech=true, national_wonder=true, unit=true, world_wonder=true,
+    building=true, national_wonder=true, policy=true, policy_branch=true, settler=true, tech=true, unit=true,
+    world_wonder=true,
 }
 local textInfoTableNames = {
-    building="Buildings", policy=nil, policy_branch=nil, tech=nil, national_wonder="Buildings", unit="Units",
-    world_wonder="Buildings",
+    building="Buildings", national_wonder="Buildings", policy=nil, policy_branch=nil, settler="Units", tech=nil,
+    unit="Units", world_wonder="Buildings",
 }
 local freePoliciesToGrant = 0
 local itemTable = {}
@@ -313,13 +315,19 @@ function OnCityUnitTrained(playerId, cityId, unitId, gold, faithOrCulture)
     -- If the player trains a unit, send it if it is a supported unit
     if(playerId == player:GetID()) then
         -- Given unitId is the ID of the unit instance. Convert to the ID of its type
-        unitId = player:GetUnitByID(unitId):GetUnitType()
+        unit = player:GetUnitByID(unitId)
+        unitId = unit:GetUnitType()
+
+        -- If the unit is a settler and settler sanity is turned on, remove unit immediately and send as location
+        if(unitId == 0 and optionsTable["settler_sanity"]) then
+            unit:Kill(false)
+            SendLocation("settler", #locationTable["settler"]+1, 0)
 
         -- Standard units
-        if(unitIds[unitId]) then
+        elseif(unitIds[unitId]) then
             SendLocation("unit", unitId)
 
-            -- Civ-unique units
+        -- Civ-unique units
         elseif(civUniqueUnitIdToUnitId[unitId] ~= nil) then
             SendLocation("unit", civUniqueUnitIdToUnitId[unitId])
         end
@@ -327,8 +335,15 @@ function OnCityUnitTrained(playerId, cityId, unitId, gold, faithOrCulture)
 end
 
 function OnCityCanTrain(playerId, cityId, unitId)
+    -- If settler sanity is on, settlers may not be trained by the player if maximum has been reached
+    if(playerId == player:GetID()
+            and unitId == 0
+            and optionsTable["settler_sanity"]
+            and #locationTable["settler"] == optionsTable["settler_sanity_amount"]) then
+        return false
+
     -- If the AI has the tech that makes this unit obsolete, unit cannot be trained
-    if(playerId ~= player:GetID()
+    elseif(playerId ~= player:GetID()
             and unitIdToObsoleteTechId[unitId] ~= nil
             and Teams[Players[playerId]:GetTeam()]:IsHasTech(unitIdToObsoleteTechId[unitId])) then
         return false
@@ -408,7 +423,7 @@ function SyncTextInfos()
     end
 end
 
-function SendLocation(type, locationId)
+function SendLocation(type, locationId, textInfoId)
     -- If this location has been sent already, return immediately
     if locationTable[type][locationId] then
         return
@@ -418,9 +433,9 @@ function SendLocation(type, locationId)
     locationTable[type][locationId] = true
     table.insert(pushTable[type], locationId)
 
-    -- Update the text infos for this location if there is a table to update for this type
+    -- Update the text infos for this location if there is a table to update for this type, using textInfoId if given
     if textInfoTableNames[type] ~= nil then
-        UpdateTextInfos(textInfoTableNames[type], locationId)
+        UpdateTextInfos(textInfoTableNames[type], textInfoId ~= nil and textInfoId or locationId)
     end
 
     -- Save the location table
@@ -518,6 +533,13 @@ function SyncScriptData()
     end
 end
 
+function LoadOptionsTable()
+    -- Load the options table from the SQL database
+    for row in DB.Query("SELECT Key, Value FROM APOptions") do
+        optionsTable[row.Key] = json.decode(json.decode(row.Value))
+    end
+end
+
 
 -- PUBLIC CALLABLES
 function AP.IsModReady()
@@ -578,6 +600,13 @@ function AP.GrantTechs(techIds)
     -- Grant all given tech IDs to the player
     for _, techId in ipairs(techIds) do
         team:SetHasTech(techId, true);
+    end
+end
+
+function AP.GrantSettlers(n)
+    -- Grant n free settlers to the player
+    for i=0, n-1 do
+        player:AddFreeUnit(0)
     end
 end
 
@@ -672,13 +701,6 @@ function AP.DeclareWarRandom(n)
     end
 end
 
-function AP.SetOptionsTable(options)
-    -- Update the optionsTable with the given option values
-    for key, value in pairs(options) do
-        optionsTable[key] = value
-    end
-end
-
 function AP.UpdateItemTable(apItemIds)
     -- Store in item table that these AP items have been received
     for _, apItemId in ipairs(apItemIds) do
@@ -766,6 +788,9 @@ function Init()
 
     -- Initialize pushTable
     InitPushTable()
+
+    -- Load options table
+    LoadOptionsTable()
 
     -- Synchronize all local variables with the script data
     SyncScriptData()

@@ -203,6 +203,43 @@ class UnitSanity(Toggle):
     display_name = "Unit Sanity"
 
 
+class SettlerSanity(Toggle):
+    """
+    Adds Settlers to the item and location pools, with the amount being determined by the Settler Sanity Amount option.
+
+    When enabled, Settlers can only be obtained as a progressive item. Training them counts as a location, up to the
+    amount, after which they can no longer be trained. When receiving a Settler as an item, they spawn near the capital
+    (or a different city if you happen to not have one).
+
+    Enabling this option will remove the Settler from the Unit Sanity location pool, if it is enabled.
+
+    """
+
+    display_name = "Settler Sanity"
+
+
+class SettlerSanityAmount(Range):
+    """
+    Number of Settlers to put in the item and location pools.
+
+    Progression logic will expect you to be able to get the following number of Settlers per era:
+    - Ancient: 1
+    - Classical; Medieval; and Renaissance: 2
+    - Industrial; Modern; and Atomic: 3
+    - Information: 4
+
+    Has no effect if Settler Sanity is not enabled.
+
+    NOTE: The lower limit being 0 is not a mistake. If you want to be Venice as a different civilization, be my guest.
+
+    """
+
+    display_name = "Settler Sanity Amount"
+    range_start = 0
+    range_end = 20
+    default = 10
+
+
 class EnableTraps(Toggle):
     """
     Add traps to the filler item pool.
@@ -258,6 +295,8 @@ class CivVOptions(PerGameCommonOptions):
     national_wonder_sanity: NationalWonderSanity
     world_wonder_sanity: WorldWonderSanity
     unit_sanity: UnitSanity
+    settler_sanity: SettlerSanity
+    settler_sanity_amount: SettlerSanityAmount
     enable_traps: EnableTraps
     trap_blacklist: TrapBlacklist
     trap_filler_chance: TrapFillerChance

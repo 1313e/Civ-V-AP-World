@@ -7,7 +7,6 @@ from typing import Any
 
 from CommonClient import logger
 
-from .dataclasses import CivVAPModOptions
 from .enums import CivVNotificationTypes, CivVLocationType
 from .exceptions import (
     TunerConnectionException,
@@ -283,6 +282,14 @@ class Tuner:
         for i in range(0, len(tech_ids), 10):
             await self._send_mod_command(f"GrantTechs({{{','.join(map(str, tech_ids[i:i+10]))}}})")
 
+    async def grant_settlers(self, n: int) -> None:
+        """
+        Grant `n` free settlers to the player.
+
+        """
+
+        await self._send_mod_command(f"GrantSettlers({n})")
+
     async def change_gold(self, value: int) -> None:
         """
         Changes the gold value by the given `value`.
@@ -386,15 +393,6 @@ class Tuner:
         """
 
         await self._send_mod_command(f"DeclareWarRandom({value})")
-
-    async def set_options_table(self, options: CivVAPModOptions) -> None:
-        """
-        Sets the options table in the Civ V APMod to the given mod options.
-
-        """
-
-        options_str = f"{{{','.join((f'{key}={json.dumps(value)}' for key, value in options.to_dict().items()))}}}"
-        await self._send_mod_command(f"SetOptionsTable({options_str})")
 
     async def update_item_table(self, ap_ids: list[int]) -> None:
         """

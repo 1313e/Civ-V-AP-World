@@ -3,16 +3,130 @@
     <Language_en_US>
         <Delete Tag="TXT_KEY_UNIT_SETTLER"/>
         <Row Tag="TXT_KEY_UNIT_SETTLER">
-            <Text>{unit_settler_flag}Settler</Text>
+            <Text>{unit_settler_flag}{settler1_flag}Settler</Text>
         </Row>
         <Row Tag="TXT_KEY_UNIT_SETTLER_CLEAN">
+            <Text>{settler2_flag}Settler</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_SETTLER_CLEAN_CLEAN">
+            <Text>{settler3_flag}Settler</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_SETTLER_CLEAN_CLEAN_CLEAN">
+            <Text>{settler4_flag}Settler</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_SETTLER_CLEAN_CLEAN_CLEAN_CLEAN">
+            <Text>{settler5_flag}Settler</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_SETTLER_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN">
+            <Text>{settler6_flag}Settler</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_SETTLER_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN">
+            <Text>{settler7_flag}Settler</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_SETTLER_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN">
+            <Text>{settler8_flag}Settler</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_SETTLER_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN">
+            <Text>{settler9_flag}Settler</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_SETTLER_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN">
+            <Text>{settler10_flag}Settler</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_SETTLER_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN">
+            <Text>{settler11_flag}Settler</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_SETTLER_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN">
+            <Text>{settler12_flag}Settler</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_SETTLER_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN">
+            <Text>{settler13_flag}Settler</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_SETTLER_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN">
+            <Text>{settler14_flag}Settler</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_SETTLER_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN">
+            <Text>{settler15_flag}Settler</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_SETTLER_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN">
+            <Text>{settler16_flag}Settler</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_SETTLER_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN">
+            <Text>{settler17_flag}Settler</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_SETTLER_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN">
+            <Text>{settler18_flag}Settler</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_SETTLER_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN">
+            <Text>{settler19_flag}Settler</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_SETTLER_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN">
+            <Text>{settler20_flag}Settler</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_SETTLER_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN">
             <Text>Settler</Text>
         </Row>
         <Delete Tag="TXT_KEY_UNIT_HELP_SETTLER"/>
         <Row Tag="TXT_KEY_UNIT_HELP_SETTLER">
-            <Text>Founds new Cities to expand your empire.[NEWLINE][NEWLINE][ICON_FOOD] Growth of the City is stopped while this Unit is being built.{unit_settler_location}</Text>
+            <Text>Founds new Cities to expand your empire.[NEWLINE][NEWLINE][ICON_FOOD] Growth of the City is stopped while this Unit is being built.{unit_settler_location}{settler1_location}</Text>
         </Row>
         <Row Tag="TXT_KEY_UNIT_HELP_SETTLER_CLEAN">
+            <Text>Founds new Cities to expand your empire.[NEWLINE][NEWLINE][ICON_FOOD] Growth of the City is stopped while this Unit is being built.{settler2_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_SETTLER_CLEAN_CLEAN">
+            <Text>Founds new Cities to expand your empire.[NEWLINE][NEWLINE][ICON_FOOD] Growth of the City is stopped while this Unit is being built.{settler3_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_SETTLER_CLEAN_CLEAN_CLEAN">
+            <Text>Founds new Cities to expand your empire.[NEWLINE][NEWLINE][ICON_FOOD] Growth of the City is stopped while this Unit is being built.{settler4_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_SETTLER_CLEAN_CLEAN_CLEAN_CLEAN">
+            <Text>Founds new Cities to expand your empire.[NEWLINE][NEWLINE][ICON_FOOD] Growth of the City is stopped while this Unit is being built.{settler5_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_SETTLER_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN">
+            <Text>Founds new Cities to expand your empire.[NEWLINE][NEWLINE][ICON_FOOD] Growth of the City is stopped while this Unit is being built.{settler6_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_SETTLER_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN">
+            <Text>Founds new Cities to expand your empire.[NEWLINE][NEWLINE][ICON_FOOD] Growth of the City is stopped while this Unit is being built.{settler7_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_SETTLER_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN">
+            <Text>Founds new Cities to expand your empire.[NEWLINE][NEWLINE][ICON_FOOD] Growth of the City is stopped while this Unit is being built.{settler8_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_SETTLER_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN">
+            <Text>Founds new Cities to expand your empire.[NEWLINE][NEWLINE][ICON_FOOD] Growth of the City is stopped while this Unit is being built.{settler9_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_SETTLER_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN">
+            <Text>Founds new Cities to expand your empire.[NEWLINE][NEWLINE][ICON_FOOD] Growth of the City is stopped while this Unit is being built.{settler10_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_SETTLER_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN">
+            <Text>Founds new Cities to expand your empire.[NEWLINE][NEWLINE][ICON_FOOD] Growth of the City is stopped while this Unit is being built.{settler11_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_SETTLER_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN">
+            <Text>Founds new Cities to expand your empire.[NEWLINE][NEWLINE][ICON_FOOD] Growth of the City is stopped while this Unit is being built.{settler12_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_SETTLER_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN">
+            <Text>Founds new Cities to expand your empire.[NEWLINE][NEWLINE][ICON_FOOD] Growth of the City is stopped while this Unit is being built.{settler13_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_SETTLER_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN">
+            <Text>Founds new Cities to expand your empire.[NEWLINE][NEWLINE][ICON_FOOD] Growth of the City is stopped while this Unit is being built.{settler14_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_SETTLER_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN">
+            <Text>Founds new Cities to expand your empire.[NEWLINE][NEWLINE][ICON_FOOD] Growth of the City is stopped while this Unit is being built.{settler15_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_SETTLER_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN">
+            <Text>Founds new Cities to expand your empire.[NEWLINE][NEWLINE][ICON_FOOD] Growth of the City is stopped while this Unit is being built.{settler16_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_SETTLER_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN">
+            <Text>Founds new Cities to expand your empire.[NEWLINE][NEWLINE][ICON_FOOD] Growth of the City is stopped while this Unit is being built.{settler17_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_SETTLER_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN">
+            <Text>Founds new Cities to expand your empire.[NEWLINE][NEWLINE][ICON_FOOD] Growth of the City is stopped while this Unit is being built.{settler18_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_SETTLER_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN">
+            <Text>Founds new Cities to expand your empire.[NEWLINE][NEWLINE][ICON_FOOD] Growth of the City is stopped while this Unit is being built.{settler19_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_SETTLER_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN">
+            <Text>Founds new Cities to expand your empire.[NEWLINE][NEWLINE][ICON_FOOD] Growth of the City is stopped while this Unit is being built.{settler20_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_SETTLER_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN_CLEAN">
             <Text>Founds new Cities to expand your empire.[NEWLINE][NEWLINE][ICON_FOOD] Growth of the City is stopped while this Unit is being built.</Text>
         </Row>
         <Delete Tag="TXT_KEY_UNIT_WORKER"/>

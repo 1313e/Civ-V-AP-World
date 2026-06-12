@@ -54,13 +54,15 @@ class CivVLocationData:
     "The region of this location. If None, this location is in the origin region"
     requirements: items.ItemRequirements = field(default_factory=items.ItemRequirements)
     "Required items to access this location, in addition to the region's requirements"
+    prefix: str | None = None
+    "Prefix to use for this location's name. By default, the location type is used"
     ap_id: int = field(init=False)
     "ID of this location within AP"
 
 
     def __post_init__(self):
         # Add the location type as a prefix to the location name
-        self.name = f"{to_title(self.type)} - {self.name}"
+        self.name = f"{self.prefix or to_title(self.type)} - {self.name}"
 
         # Set AP ID for this location
         self.ap_id = len(LOCATIONS_DATA) + ID_OFFSET

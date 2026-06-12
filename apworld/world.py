@@ -8,7 +8,7 @@ from worlds.AutoWorld import World
 
 from .constants import GAME_NAME
 from .container import CivVContainer
-from .dataclasses import CivVAPModOptions, CivVSlotData
+from .dataclasses import CivVSlotData
 from .items import (
     FILLER_ITEMS,
     ITEMS_DATA,
@@ -31,6 +31,7 @@ from .locations import (
     NATIONAL_WONDER_LOCATIONS,
     POLICY_BRANCH_LOCATIONS,
     POLICY_LOCATIONS,
+    SETTLER_LOCATIONS,
     TECH_LOCATIONS,
     UNIT_LOCATIONS,
     WORLD_WONDER_LOCATIONS,
@@ -141,8 +142,9 @@ class CivVWorld(World):
 
     def create_items(self) -> None:
         # Create list of all progression and useful items to be added to the multiworld
+        get_count = lambda x: getattr(self.options, x.option_count_name) if x.option_count_name is not None else x.count
         useful_items = list(itertools.chain.from_iterable(
-            ([self.create_item(item_data.name) for _ in range(item_data.count)] for item_data in
+            ([self.create_item(item_data.name) for _ in range(get_count(item_data))] for item_data in
              self.get_useful_items_data())))
 
         # Calculate number of filler items required
@@ -170,8 +172,14 @@ class CivVWorld(World):
             locations_data.extend(BUILDING_LOCATIONS)
         if self.options.national_wonder_sanity:
             locations_data.extend(NATIONAL_WONDER_LOCATIONS)
+        if self.options.settler_sanity:
+            locations_data.extend(SETTLER_LOCATIONS[:self.options.settler_sanity_amount])
         if self.options.unit_sanity:
-            locations_data.extend(UNIT_LOCATIONS)
+            # If settler sanity is enabled, exclude the settler from the unit locations
+            unit_locations = UNIT_LOCATIONS
+            if self.options.settler_sanity:
+                unit_locations = [x for x in UNIT_LOCATIONS if x.database_key_prefix != "unit_settler"]
+            locations_data.extend(unit_locations)
         if self.options.world_wonder_sanity:
             locations_data.extend(WORLD_WONDER_LOCATIONS)
 
@@ -251,7 +259,4 @@ class CivVWorld(World):
     def fill_slot_data(self) -> dict[str, Any]:
         return CivVSlotData(
             output_file_id=self.output_file_id,
-            apmod_options=CivVAPModOptions(
-                satellites_meets_all=bool(self.options.satellites_meets_all),
-            )
         ).to_dict()

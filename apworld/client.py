@@ -391,6 +391,7 @@ class CivVClient:
         filler_to_send = defaultdict(int)
         policies_to_send = []
         techs_to_send = []
+        settlers_to_send = 0
         items_to_receive = self.ctx.items_received[len(self.ctx.received_item_ids):]
         messages = []
         item_ids = []
@@ -406,6 +407,8 @@ class CivVClient:
                     techs_to_send.append(item.game_ids[self.ctx.received_item_ids.count(network_item.item)])
                 case CivVItemType.policy:
                     policies_to_send.append(item.game_ids[self.ctx.received_item_ids.count(network_item.item)])
+                case CivVItemType.settler:
+                    settlers_to_send += 1
                 case CivVItemType.bonus | CivVItemType.trap:
                     for name, value in item.action.items():
                         filler_to_send[name] += value
@@ -418,6 +421,10 @@ class CivVClient:
             await self.tuner.grant_policies(policies_to_send)
         if techs_to_send:
             await self.tuner.grant_techs(techs_to_send)
+
+        # Grant all settlers
+        if settlers_to_send:
+            await self.tuner.grant_settlers(settlers_to_send)
 
         # Send all filler items
         for name, value in filler_to_send.items():

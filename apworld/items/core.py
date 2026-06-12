@@ -180,6 +180,8 @@ class CivVItemData:
     "Classification of this item"
     count: int | None = field(init=False)
     "Number of times this item exists. If None, this item has no defined count"
+    option_count_name: str | None = None
+    "If provided, the name of the option that states how many to include of this item. Default is all"
     groups: set[CivVItemGroup | CivVItemType] = field(default_factory=set)
     "Set of groups this item belongs to. The type of this item is always part of this set"
     prefix: str | None = None
@@ -305,6 +307,8 @@ class CivVFillerItemData(CivVItemData):
     game_id: None = field(default=None, init=False)
     game_ids: None = field(default=None, init=False)
     classification: Literal[ItemClassification.filler, ItemClassification.trap]
+    count: None = field(init=False)
+    option_count_name: None = field(init=False)
     weight: int = 1
     "Weight of this filler item"
     action: dict[CivVFillerType, int] = field(default_factory=dict)
