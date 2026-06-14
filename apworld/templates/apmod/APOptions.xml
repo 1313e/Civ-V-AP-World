@@ -9,6 +9,10 @@
         <!-- Values must be surrounded by quotation marks to avoid Firaxis' XML-to-SQL parser from converting the strings 'true'/'false' to 1/0, respectively -->
         <Row>
             <ID>0</ID>
+            <Key>promotion_sanity</Key>
+            <Value>"{option_promotion_sanity}"</Value>
+        </Row>
+        <Row>
             <Key>satellites_meets_all</Key>
             <Value>"{option_satellites_meets_all}"</Value>
         </Row>

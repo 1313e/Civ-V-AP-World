@@ -14,10 +14,13 @@ from .items import (
     ITEMS_DATA,
     ITEMS_DATA_BY_ID,
     ITEM_GROUPS,
-    PROGRESSION_ITEMS,
-    PROGRESSIVE_ITEMS,
+    POLICY_ITEMS,
+    PROGRESSIVE_ERA_ITEM,
+    PROGRESSIVE_SETTLER_ITEM,
+    PROGRESSIVE_TECH_ITEMS,
+    PROMOTION_ITEMS,
+    TECH_ITEMS,
     TRAP_ITEMS,
-    USEFUL_ITEMS,
     CivVFillerItemData,
     CivVItem,
     CivVProgressionItemData,
@@ -31,6 +34,7 @@ from .locations import (
     NATIONAL_WONDER_LOCATIONS,
     POLICY_BRANCH_LOCATIONS,
     POLICY_LOCATIONS,
+    PROMOTION_LOCATIONS,
     SETTLER_LOCATIONS,
     TECH_LOCATIONS,
     UNIT_LOCATIONS,
@@ -93,17 +97,21 @@ class CivVWorld(World):
         items_data: list[CivVProgressiveItemData | CivVProgressionItemData | CivVUsefulItemData] = []
 
         # Add all progressive items that are always included or whose option toggle is toggled on
-        for item in PROGRESSIVE_ITEMS:
+        for item in [PROGRESSIVE_ERA_ITEM, PROGRESSIVE_SETTLER_ITEM, *PROGRESSIVE_TECH_ITEMS.values()]:
             if item.option_toggle_name is None or getattr(self.options, item.option_toggle_name):
                 items_data.append(item)
 
-        # Add all progression items that are always included or whose progressive parent is NOT included
-        for item in PROGRESSION_ITEMS:
+        # Add all technology items whose progressive parent is NOT included
+        for item in TECH_ITEMS.values():
             if item.progressive_parent is None or item.progressive_parent not in items_data:
                 items_data.append(item)
 
-        # Add all useful items
-        items_data.extend(USEFUL_ITEMS)
+        # Add all policy items
+        items_data.extend(POLICY_ITEMS.values())
+
+        # Add promotion items if enabled
+        if self.options.promotion_sanity:
+            items_data.extend(PROMOTION_ITEMS.values())
 
         # Return items data
         return items_data
@@ -172,6 +180,8 @@ class CivVWorld(World):
             locations_data.extend(BUILDING_LOCATIONS)
         if self.options.national_wonder_sanity:
             locations_data.extend(NATIONAL_WONDER_LOCATIONS)
+        if self.options.promotion_sanity:
+            locations_data.extend(PROMOTION_LOCATIONS)
         if self.options.settler_sanity:
             locations_data.extend(SETTLER_LOCATIONS[:self.options.settler_sanity_amount])
         if self.options.unit_sanity:

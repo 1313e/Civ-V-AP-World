@@ -240,6 +240,19 @@ class SettlerSanityAmount(Range):
     default = 10
 
 
+class PromotionSanity(Toggle):
+    """
+    Add all earnable unit promotions (excl. Heal Instantly) to the item and location pools.
+
+    This adds 83 promotions to the item and location pools in total.
+
+    WARNING: This option can cause situations where you need to level up many units types to find logical progression.
+
+    """
+
+    display_name = "Promotion Sanity"
+
+
 class EnableTraps(Toggle):
     """
     Add traps to the filler item pool.
@@ -297,6 +310,7 @@ class CivVOptions(PerGameCommonOptions):
     unit_sanity: UnitSanity
     settler_sanity: SettlerSanity
     settler_sanity_amount: SettlerSanityAmount
+    promotion_sanity: PromotionSanity
     enable_traps: EnableTraps
     trap_blacklist: TrapBlacklist
     trap_filler_chance: TrapFillerChance

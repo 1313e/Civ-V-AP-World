@@ -209,6 +209,50 @@ EXTRA_HAPPINESS_PER_CITY_FILLER_ITEM: CivVFillerItemData = CivVFillerItemData(
 "Extra happiness per city filler item"
 
 
+ALL_UNIT_EXPERIENCE_FILLER_ITEMS: dict[str, CivVFillerItemData] = {
+    "Minor All Unit Experience": CivVFillerItemData(
+        name="Minor All Unit Experience",
+        type=CivVItemType.bonus,
+        classification=ItemClassification.filler,
+        weight=8,
+        action={
+            CivVFillerType.change_all_unit_experience: 15,
+        }
+    ),
+    "All Unit Experience": CivVFillerItemData(
+        name="All Unit Experience",
+        type=CivVItemType.bonus,
+        classification=ItemClassification.filler,
+        weight=4,
+        action={
+            CivVFillerType.change_all_unit_experience: 35,
+        }
+    ),
+    "Major All Unit Experience": CivVFillerItemData(
+        name="Major All Unit Experience",
+        type=CivVItemType.bonus,
+        classification=ItemClassification.filler,
+        weight=2,
+        action={
+            CivVFillerType.change_all_unit_experience: 80,
+        }
+    ),
+}
+"Dict of unit experience filler items"
+
+
+ALL_UNIT_FREE_PROMOTION_ITEM: CivVFillerItemData = CivVFillerItemData(
+    name="All Unit Free Promotion",
+    type=CivVItemType.bonus,
+    classification=ItemClassification.filler,
+    weight=2,
+    action={
+        CivVFillerType.all_unit_free_promotion: 1,
+    }
+)
+"All unit free promotion filler item"
+
+
 GOLDEN_AGE_FILLER_ITEM: CivVFillerItemData = CivVFillerItemData(
     name="Golden Age",
     type=CivVItemType.bonus,

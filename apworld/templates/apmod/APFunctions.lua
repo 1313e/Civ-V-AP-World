@@ -11,6 +11,8 @@ local UPPER_POLICY_BRANCH_ID = 8
 local POLICY_BRANCH_FINISHER_OFFSET = 12
 local LOWER_POLICY_ID = 111
 local UPPER_POLICY_ID = 155
+local LOWER_PROMOTION_ID = 229
+local UPPER_PROMOTION_ID = 311
 local LOWER_TECH_ID = 83
 local UPPER_TECH_ID = 168
 local LOWER_TEAM_ID = 0
@@ -21,16 +23,16 @@ local player = Players[Game.GetActivePlayer()]
 local team = Teams[player:GetTeam()]
 
 local optionsTable = {
-    satellites_meets_all=nil, settler_sanity=false, settler_sanity_amount=0,
+    promotion_sanity=false, satellites_meets_all=nil, settler_sanity=false, settler_sanity_amount=0,
 }
 local pushTable = {}
 local pushTableTableKeys = {
-    building=true, national_wonder=true, policy=true, policy_branch=true, settler=true, tech=true, unit=true,
-    world_wonder=true,
+    building=true, national_wonder=true, policy=true, policy_branch=true, promotion=true, settler=true, tech=true,
+    unit=true, world_wonder=true,
 }
 local textInfoTableNames = {
-    building="Buildings", national_wonder="Buildings", policy=nil, policy_branch=nil, settler="Units", tech=nil,
-    unit="Units", world_wonder="Buildings",
+    building="Buildings", national_wonder="Buildings", policy=nil, policy_branch=nil, promotion="UnitPromotions",
+    settler="Units", tech=nil, unit="Units", world_wonder="Buildings",
 }
 local freePoliciesToGrant = 0
 local itemTable = {}
@@ -38,6 +40,7 @@ local locationTable = {}
 for key, _ in pairs(pushTableTableKeys) do
     locationTable[key] = {}
 end
+local promotionTable = {}
 local techIdToEraId = {
     [0]=0, [1]=0, [2]=0, [3]=0, [4]=0, [5]=0, [6]=0, [7]=0, [8]=0, [9]=0, [10]=0, [11]=0,
     [12]=1, [13]=1, [14]=1, [15]=1, [16]=1, [17]=1, [18]=1, [19]=1, [20]=1,
@@ -353,6 +356,14 @@ function OnCityCanTrain(playerId, cityId, unitId)
     return true
 end
 
+function OnUnitPromoted(playerId, unitId, promotionId)
+    -- If the player received this promotion and it is an earnable promotion, send it
+    if(playerId == player:GetID() and optionsTable["promotion_sanity"]
+            and (promotionId >= LOWER_PROMOTION_ID and promotionId <= UPPER_PROMOTION_ID)) then
+        SendLocation("promotion", promotionId)
+    end
+end
+
 function OnNotificationAdded(notification, notificationType, toolTip, summary, gameValue, extraGameData)
     -- If the player gets a free social policy but has none to pick, set number of free policies to zero
     if(notificationType == NotificationTypes.NOTIFICATION_FREE_POLICY and not HasPolicyToUnlock()) then
@@ -489,6 +500,13 @@ function SetCultureTechYield()
     })
 end
 
+function SyncPromotions()
+    -- Grant all promotion IDs in the promotion table to the player
+    for _, promotionId in ipairs(promotionTable) do
+        player:ChangeFreePromotionCount(promotionId, 1)
+    end
+end
+
 function RequestSync()
     -- Request the syncing of all locations
     pushTable["sync"] = true
@@ -530,6 +548,14 @@ function SyncScriptData()
     value = LoadScriptData("location_table")
     if value ~= nil then
         locationTable = value
+        SyncTextInfos()
+    end
+
+    -- Retrieve the promotion table from the script data
+    value = LoadScriptData("promotion_table")
+    if value ~= nil then
+        promotionTable = value
+        SyncPromotions()
     end
 end
 
@@ -596,6 +622,17 @@ function AP.UnlockPolicyBranches(policyBranchIds)
     end
 end
 
+function AP.GrantPromotions(promotionIds)
+    -- Grant all given promotion IDs to the player
+    for _, promotionId in ipairs(promotionIds) do
+        player:ChangeFreePromotionCount(promotionId, 1)
+        table.insert(promotionTable, promotionId)
+    end
+
+    -- Save the promotion table
+    SaveScriptData("promotion_table", promotionTable)
+end
+
 function AP.GrantTechs(techIds)
     -- Grant all given tech IDs to the player
     for _, techId in ipairs(techIds) do
@@ -605,7 +642,7 @@ end
 
 function AP.GrantSettlers(n)
     -- Grant n free settlers to the player
-    for i=0, n-1 do
+    for _=0, n-1 do
         player:AddFreeUnit(0)
     end
 end
@@ -643,8 +680,7 @@ end
 
 function AP.ChangeAllCityPopulation(value)
     -- Change the population in each city of the player by given value
-    for i=0, player:GetNumCities()-1 do
-        city = player:GetCityByID(i)
+    for city in player:Cities() do
         city:ChangePopulation(math.max(value, -city:GetPopulation()+1), true)
     end
 end
@@ -652,6 +688,22 @@ end
 function AP.ChangeNewCityExtraPopulation(value)
     -- Change the extra population a new city is given for the player by given value
     player:ChangeNewCityExtraPopulation(value)
+end
+
+function AP.ChangeAllUnitExperience(value)
+    -- Change the experience of all units of the player by given value
+    for unit in player:Units() do
+        unit:ChangeExperience(math.max(value, -unit:GetExperience()))
+    end
+end
+
+function AP.AllUnitFreePromotion(n)
+    -- Grant all units of the player a free promotion, n times
+    for _=1, n do
+        for unit in player:Units() do
+            unit:ChangeExperience(unit:ExperienceNeeded())
+        end
+    end
 end
 
 function AP.ChangeCulturePerTurnForFree(value)
@@ -768,6 +820,7 @@ function Init()
     GameEvents.CityCaptureComplete.Add(OnCityCaptured)
     GameEvents.CityTrained.Add(OnCityUnitTrained)
     GameEvents.CityCanTrain.Add(OnCityCanTrain)
+    GameEvents.UnitPromoted.Add(OnUnitPromoted)
 
     -- Make sure that allow policy saving is turned on
     Game.SetOption(GameOptionTypes.GAMEOPTION_POLICY_SAVING, true)
@@ -775,18 +828,7 @@ function Init()
     -- Set the culture tech yield
     SetCultureTechYield()
 
-    -- Give player and AI their corresponding modified techs at the start
-    for i = 0, GameDefines.MAX_CIV_PLAYERS-1, 1 do
-        pPlayer = Players[i]
-        pTeam = Teams[pPlayer:GetTeam()]
-        if pPlayer:IsHuman() then
-            pTeam:SetHasTech(81, true)
-        else
-            pTeam:SetHasTech(82, true)
-        end
-    end
-
-    -- Initialize pushTable
+    -- Initialize push table
     InitPushTable()
 
     -- Load options table
@@ -795,11 +837,21 @@ function Init()
     -- Synchronize all local variables with the script data
     SyncScriptData()
 
-    -- Synchronize the text infos with the location table
-    SyncTextInfos()
-
     -- Request a sync between game and client
     RequestSync()
+
+    -- Give player and AI their corresponding modified techs at the start
+    for i = 0, GameDefines.MAX_CIV_PLAYERS-1, 1 do
+        pPlayer = Players[i]
+        pTeam = Teams[pPlayer:GetTeam()]
+        if pPlayer:IsHuman() then
+            pTeam:SetHasTech(81, true)
+            pPlayer:ChangeFreePromotionCount(optionsTable["promotion_sanity"] and 228 or 227, 1)
+        else
+            pTeam:SetHasTech(82, true)
+            pPlayer:ChangeFreePromotionCount(227, 1)
+        end
+    end
 
     -- Send notification to player that APMod was loaded successfully
     AP.SendNotification("AP Mod loaded", "AP Mod was loaded successfully.")

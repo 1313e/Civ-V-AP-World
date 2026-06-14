@@ -1,0 +1,1090 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+    <Language_en_US>
+        <Row Tag="TXT_KEY_PROMOTION_MEDIC_1">
+            <Text>Medic I</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MEDIC_1_HELP">
+            <Text>All units in adjacent tiles [COLOR_POSITIVE_TEXT]Heal 5 Additional HP[ENDCOLOR] per turn.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MEDIC_2">
+            <Text>Medic II</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MEDIC_2_HELP">
+            <Text>All units in adjacent tiles [COLOR_POSITIVE_TEXT]Heal 5 Additional HP[ENDCOLOR] per turn. This unit [COLOR_POSITIVE_TEXT]Heals 5 Additional HP[ENDCOLOR] per turn when [COLOR_POSITIVE_TEXT]Outside of Friendly Territory[ENDCOLOR].</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_PROMOTION_AIR_SIEGE_1"/>
+        <Row Tag="TXT_KEY_PROMOTION_AIR_SIEGE_1">
+            <Text>Air Siege I</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_PROMOTION_AIR_SIEGE_2"/>
+        <Row Tag="TXT_KEY_PROMOTION_AIR_SIEGE_2">
+            <Text>Air Siege II</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_PROMOTION_AIR_SIEGE_3"/>
+        <Row Tag="TXT_KEY_PROMOTION_AIR_SIEGE_3">
+            <Text>Air Siege III</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_PROMOTION_AIR_TARGETING_1"/>
+        <Row Tag="TXT_KEY_PROMOTION_AIR_TARGETING_1">
+            <Text>Air Targeting I</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_PROMOTION_AIR_TARGETING_2"/>
+        <Row Tag="TXT_KEY_PROMOTION_AIR_TARGETING_2">
+            <Text>Air Targeting II</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_PROMOTION_AIR_AMBUSH_1"/>
+        <Row Tag="TXT_KEY_PROMOTION_AIR_AMBUSH_1">
+            <Text>Air Ambush I</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_PROMOTION_AIR_AMBUSH_2"/>
+        <Row Tag="TXT_KEY_PROMOTION_AIR_AMBUSH_2">
+            <Text>Air Ambush II</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_PROMOTION_AIR_RANGE"/>
+        <Row Tag="TXT_KEY_PROMOTION_AIR_RANGE">
+            <Text>Air Range</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_PROMOTION_AIR_REPAIR"/>
+        <Row Tag="TXT_KEY_PROMOTION_AIR_REPAIR">
+            <Text>Air Repair</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_AIR_REPAIR_HELP">
+            <Text>Unit will [COLOR_POSITIVE_TEXT]Heal Every Turn[ENDCOLOR], even if it performs an action.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_AIR_LOGISTICS">
+            <Text>Air Logistics</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_AIR_LOGISTICS_HELP">
+            <Text>1 additional attack per turn.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_PROMOTION_HELI_AMBUSH_1"/>
+        <Row Tag="TXT_KEY_PROMOTION_HELI_AMBUSH_1">
+            <Text>Heli Ambush I</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_HELI_AMBUSH_1_HELP">
+            <Text>+25% [ICON_STRENGTH] Combat Strength VS [COLOR_POSITIVE_TEXT]Armor[ENDCOLOR] units.</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_PROMOTION_HELI_AMBUSH_2"/>
+        <Row Tag="TXT_KEY_PROMOTION_HELI_AMBUSH_2">
+            <Text>Heli Ambush II</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_HELI_AMBUSH_2_HELP">
+            <Text>+25% [ICON_STRENGTH] Combat Strength VS [COLOR_POSITIVE_TEXT]Armor[ENDCOLOR] units.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_HELI_MOBILITY_1">
+            <Text>Heli Mobility I</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_HELI_MOBILITY_1_HELP">
+            <Text>+1 Movement.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_HELI_MOBILITY_2">
+            <Text>Heli Mobility II</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_HELI_MOBILITY_2_HELP">
+            <Text>+1 Movement.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_HELI_REPAIR">
+            <Text>Heli Repair</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_HELI_REPAIR_HELP">
+            <Text>Unit will [COLOR_POSITIVE_TEXT]Heal Every Turn[ENDCOLOR], even if it performs an action.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARCHER_AP_A1">
+            <Text>{promotion_archer_ap_a1_flag}Archer AP A1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARCHER_AP_A1_CLEAN">
+            <Text>Archer AP A1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARCHER_AP_A1_HELP">
+            <Text>{promotion_archer_ap_a1_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARCHER_AP_A1_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARCHER_AP_A2">
+            <Text>{promotion_archer_ap_a2_flag}Archer AP A2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARCHER_AP_A2_CLEAN">
+            <Text>Archer AP A2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARCHER_AP_A2_HELP">
+            <Text>{promotion_archer_ap_a2_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARCHER_AP_A2_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARCHER_AP_A3">
+            <Text>{promotion_archer_ap_a3_flag}Archer AP A3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARCHER_AP_A3_CLEAN">
+            <Text>Archer AP A3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARCHER_AP_A3_HELP">
+            <Text>{promotion_archer_ap_a3_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARCHER_AP_A3_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARCHER_AP_A4">
+            <Text>{promotion_archer_ap_a4_flag}Archer AP A4</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARCHER_AP_A4_CLEAN">
+            <Text>Archer AP A4</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARCHER_AP_A4_HELP">
+            <Text>{promotion_archer_ap_a4_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARCHER_AP_A4_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARCHER_AP_B1">
+            <Text>{promotion_archer_ap_b1_flag}Archer AP B1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARCHER_AP_B1_CLEAN">
+            <Text>Archer AP B1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARCHER_AP_B1_HELP">
+            <Text>{promotion_archer_ap_b1_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARCHER_AP_B1_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARCHER_AP_B2">
+            <Text>{promotion_archer_ap_b2_flag}Archer AP B2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARCHER_AP_B2_CLEAN">
+            <Text>Archer AP B2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARCHER_AP_B2_HELP">
+            <Text>{promotion_archer_ap_b2_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARCHER_AP_B2_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARCHER_AP_B3">
+            <Text>{promotion_archer_ap_b3_flag}Archer AP B3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARCHER_AP_B3_CLEAN">
+            <Text>Archer AP B3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARCHER_AP_B3_HELP">
+            <Text>{promotion_archer_ap_b3_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARCHER_AP_B3_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARMOR_AP_A1">
+            <Text>{promotion_armor_ap_a1_flag}Armor AP A1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARMOR_AP_A1_CLEAN">
+            <Text>Armor AP A1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARMOR_AP_A1_HELP">
+            <Text>{promotion_armor_ap_a1_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARMOR_AP_A1_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARMOR_AP_A2">
+            <Text>{promotion_armor_ap_a2_flag}Armor AP A2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARMOR_AP_A2_CLEAN">
+            <Text>Armor AP A2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARMOR_AP_A2_HELP">
+            <Text>{promotion_armor_ap_a2_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARMOR_AP_A2_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARMOR_AP_A3">
+            <Text>{promotion_armor_ap_a3_flag}Armor AP A3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARMOR_AP_A3_CLEAN">
+            <Text>Armor AP A3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARMOR_AP_A3_HELP">
+            <Text>{promotion_armor_ap_a3_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARMOR_AP_A3_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARMOR_AP_A4">
+            <Text>{promotion_armor_ap_a4_flag}Armor AP A4</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARMOR_AP_A4_CLEAN">
+            <Text>Armor AP A4</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARMOR_AP_A4_HELP">
+            <Text>{promotion_armor_ap_a4_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARMOR_AP_A4_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARMOR_AP_B1">
+            <Text>{promotion_armor_ap_b1_flag}Armor AP B1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARMOR_AP_B1_CLEAN">
+            <Text>Armor AP B1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARMOR_AP_B1_HELP">
+            <Text>{promotion_armor_ap_b1_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARMOR_AP_B1_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARMOR_AP_B2">
+            <Text>{promotion_armor_ap_b2_flag}Armor AP B2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARMOR_AP_B2_CLEAN">
+            <Text>Armor AP B2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARMOR_AP_B2_HELP">
+            <Text>{promotion_armor_ap_b2_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARMOR_AP_B2_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARMOR_AP_B3">
+            <Text>{promotion_armor_ap_b3_flag}Armor AP B3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARMOR_AP_B3_CLEAN">
+            <Text>Armor AP B3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARMOR_AP_B3_HELP">
+            <Text>{promotion_armor_ap_b3_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_ARMOR_AP_B3_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_BOMBER_AP_A1">
+            <Text>{promotion_bomber_ap_a1_flag}Bomber AP A1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_BOMBER_AP_A1_CLEAN">
+            <Text>Bomber AP A1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_BOMBER_AP_A1_HELP">
+            <Text>{promotion_bomber_ap_a1_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_BOMBER_AP_A1_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_BOMBER_AP_A2">
+            <Text>{promotion_bomber_ap_a2_flag}Bomber AP A2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_BOMBER_AP_A2_CLEAN">
+            <Text>Bomber AP A2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_BOMBER_AP_A2_HELP">
+            <Text>{promotion_bomber_ap_a2_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_BOMBER_AP_A2_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_BOMBER_AP_A3">
+            <Text>{promotion_bomber_ap_a3_flag}Bomber AP A3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_BOMBER_AP_A3_CLEAN">
+            <Text>Bomber AP A3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_BOMBER_AP_A3_HELP">
+            <Text>{promotion_bomber_ap_a3_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_BOMBER_AP_A3_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_BOMBER_AP_A4">
+            <Text>{promotion_bomber_ap_a4_flag}Bomber AP A4</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_BOMBER_AP_A4_CLEAN">
+            <Text>Bomber AP A4</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_BOMBER_AP_A4_HELP">
+            <Text>{promotion_bomber_ap_a4_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_BOMBER_AP_A4_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_BOMBER_AP_B1">
+            <Text>{promotion_bomber_ap_b1_flag}Bomber AP B1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_BOMBER_AP_B1_CLEAN">
+            <Text>Bomber AP B1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_BOMBER_AP_B1_HELP">
+            <Text>{promotion_bomber_ap_b1_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_BOMBER_AP_B1_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_BOMBER_AP_B2">
+            <Text>{promotion_bomber_ap_b2_flag}Bomber AP B2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_BOMBER_AP_B2_CLEAN">
+            <Text>Bomber AP B2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_BOMBER_AP_B2_HELP">
+            <Text>{promotion_bomber_ap_b2_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_BOMBER_AP_B2_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_BOMBER_AP_B3">
+            <Text>{promotion_bomber_ap_b3_flag}Bomber AP B3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_BOMBER_AP_B3_CLEAN">
+            <Text>Bomber AP B3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_BOMBER_AP_B3_HELP">
+            <Text>{promotion_bomber_ap_b3_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_BOMBER_AP_B3_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_CARRIER_AP_A1">
+            <Text>{promotion_carrier_ap_a1_flag}Carrier AP A1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_CARRIER_AP_A1_CLEAN">
+            <Text>Carrier AP A1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_CARRIER_AP_A1_HELP">
+            <Text>{promotion_carrier_ap_a1_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_CARRIER_AP_A1_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_CARRIER_AP_A2">
+            <Text>{promotion_carrier_ap_a2_flag}Carrier AP A2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_CARRIER_AP_A2_CLEAN">
+            <Text>Carrier AP A2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_CARRIER_AP_A2_HELP">
+            <Text>{promotion_carrier_ap_a2_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_CARRIER_AP_A2_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_CARRIER_AP_A3">
+            <Text>{promotion_carrier_ap_a3_flag}Carrier AP A3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_CARRIER_AP_A3_CLEAN">
+            <Text>Carrier AP A3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_CARRIER_AP_A3_HELP">
+            <Text>{promotion_carrier_ap_a3_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_CARRIER_AP_A3_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_FIGHTER_AP_A1">
+            <Text>{promotion_fighter_ap_a1_flag}Fighter AP A1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_FIGHTER_AP_A1_CLEAN">
+            <Text>Fighter AP A1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_FIGHTER_AP_A1_HELP">
+            <Text>{promotion_fighter_ap_a1_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_FIGHTER_AP_A1_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_FIGHTER_AP_A2">
+            <Text>{promotion_fighter_ap_a2_flag}Fighter AP A2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_FIGHTER_AP_A2_CLEAN">
+            <Text>Fighter AP A2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_FIGHTER_AP_A2_HELP">
+            <Text>{promotion_fighter_ap_a2_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_FIGHTER_AP_A2_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_FIGHTER_AP_A3">
+            <Text>{promotion_fighter_ap_a3_flag}Fighter AP A3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_FIGHTER_AP_A3_CLEAN">
+            <Text>Fighter AP A3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_FIGHTER_AP_A3_HELP">
+            <Text>{promotion_fighter_ap_a3_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_FIGHTER_AP_A3_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_FIGHTER_AP_A4">
+            <Text>{promotion_fighter_ap_a4_flag}Fighter AP A4</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_FIGHTER_AP_A4_CLEAN">
+            <Text>Fighter AP A4</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_FIGHTER_AP_A4_HELP">
+            <Text>{promotion_fighter_ap_a4_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_FIGHTER_AP_A4_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_FIGHTER_AP_B1">
+            <Text>{promotion_fighter_ap_b1_flag}Fighter AP B1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_FIGHTER_AP_B1_CLEAN">
+            <Text>Fighter AP B1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_FIGHTER_AP_B1_HELP">
+            <Text>{promotion_fighter_ap_b1_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_FIGHTER_AP_B1_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_FIGHTER_AP_B2">
+            <Text>{promotion_fighter_ap_b2_flag}Fighter AP B2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_FIGHTER_AP_B2_CLEAN">
+            <Text>Fighter AP B2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_FIGHTER_AP_B2_HELP">
+            <Text>{promotion_fighter_ap_b2_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_FIGHTER_AP_B2_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_FIGHTER_AP_B3">
+            <Text>{promotion_fighter_ap_b3_flag}Fighter AP B3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_FIGHTER_AP_B3_CLEAN">
+            <Text>Fighter AP B3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_FIGHTER_AP_B3_HELP">
+            <Text>{promotion_fighter_ap_b3_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_FIGHTER_AP_B3_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_GUN_AP_A1">
+            <Text>{promotion_gun_ap_a1_flag}Gun AP A1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_GUN_AP_A1_CLEAN">
+            <Text>Gun AP A1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_GUN_AP_A1_HELP">
+            <Text>{promotion_gun_ap_a1_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_GUN_AP_A1_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_GUN_AP_A2">
+            <Text>{promotion_gun_ap_a2_flag}Gun AP A2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_GUN_AP_A2_CLEAN">
+            <Text>Gun AP A2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_GUN_AP_A2_HELP">
+            <Text>{promotion_gun_ap_a2_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_GUN_AP_A2_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_GUN_AP_A3">
+            <Text>{promotion_gun_ap_a3_flag}Gun AP A3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_GUN_AP_A3_CLEAN">
+            <Text>Gun AP A3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_GUN_AP_A3_HELP">
+            <Text>{promotion_gun_ap_a3_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_GUN_AP_A3_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_GUN_AP_A4">
+            <Text>{promotion_gun_ap_a4_flag}Gun AP A4</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_GUN_AP_A4_CLEAN">
+            <Text>Gun AP A4</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_GUN_AP_A4_HELP">
+            <Text>{promotion_gun_ap_a4_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_GUN_AP_A4_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_GUN_AP_B1">
+            <Text>{promotion_gun_ap_b1_flag}Gun AP B1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_GUN_AP_B1_CLEAN">
+            <Text>Gun AP B1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_GUN_AP_B1_HELP">
+            <Text>{promotion_gun_ap_b1_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_GUN_AP_B1_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_GUN_AP_B2">
+            <Text>{promotion_gun_ap_b2_flag}Gun AP B2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_GUN_AP_B2_CLEAN">
+            <Text>Gun AP B2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_GUN_AP_B2_HELP">
+            <Text>{promotion_gun_ap_b2_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_GUN_AP_B2_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_GUN_AP_B3">
+            <Text>{promotion_gun_ap_b3_flag}Gun AP B3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_GUN_AP_B3_CLEAN">
+            <Text>Gun AP B3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_GUN_AP_B3_HELP">
+            <Text>{promotion_gun_ap_b3_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_GUN_AP_B3_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_HELICOPTER_AP_A1">
+            <Text>{promotion_helicopter_ap_a1_flag}Helicopter AP A1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_HELICOPTER_AP_A1_CLEAN">
+            <Text>Helicopter AP A1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_HELICOPTER_AP_A1_HELP">
+            <Text>{promotion_helicopter_ap_a1_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_HELICOPTER_AP_A1_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_HELICOPTER_AP_A2">
+            <Text>{promotion_helicopter_ap_a2_flag}Helicopter AP A2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_HELICOPTER_AP_A2_CLEAN">
+            <Text>Helicopter AP A2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_HELICOPTER_AP_A2_HELP">
+            <Text>{promotion_helicopter_ap_a2_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_HELICOPTER_AP_A2_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_HELICOPTER_AP_A3">
+            <Text>{promotion_helicopter_ap_a3_flag}Helicopter AP A3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_HELICOPTER_AP_A3_CLEAN">
+            <Text>Helicopter AP A3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_HELICOPTER_AP_A3_HELP">
+            <Text>{promotion_helicopter_ap_a3_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_HELICOPTER_AP_A3_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MELEE_AP_A1">
+            <Text>{promotion_melee_ap_a1_flag}Melee AP A1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MELEE_AP_A1_CLEAN">
+            <Text>Melee AP A1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MELEE_AP_A1_HELP">
+            <Text>{promotion_melee_ap_a1_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MELEE_AP_A1_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MELEE_AP_A2">
+            <Text>{promotion_melee_ap_a2_flag}Melee AP A2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MELEE_AP_A2_CLEAN">
+            <Text>Melee AP A2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MELEE_AP_A2_HELP">
+            <Text>{promotion_melee_ap_a2_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MELEE_AP_A2_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MELEE_AP_A3">
+            <Text>{promotion_melee_ap_a3_flag}Melee AP A3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MELEE_AP_A3_CLEAN">
+            <Text>Melee AP A3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MELEE_AP_A3_HELP">
+            <Text>{promotion_melee_ap_a3_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MELEE_AP_A3_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MELEE_AP_A4">
+            <Text>{promotion_melee_ap_a4_flag}Melee AP A4</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MELEE_AP_A4_CLEAN">
+            <Text>Melee AP A4</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MELEE_AP_A4_HELP">
+            <Text>{promotion_melee_ap_a4_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MELEE_AP_A4_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MELEE_AP_B1">
+            <Text>{promotion_melee_ap_b1_flag}Melee AP B1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MELEE_AP_B1_CLEAN">
+            <Text>Melee AP B1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MELEE_AP_B1_HELP">
+            <Text>{promotion_melee_ap_b1_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MELEE_AP_B1_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MELEE_AP_B2">
+            <Text>{promotion_melee_ap_b2_flag}Melee AP B2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MELEE_AP_B2_CLEAN">
+            <Text>Melee AP B2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MELEE_AP_B2_HELP">
+            <Text>{promotion_melee_ap_b2_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MELEE_AP_B2_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MELEE_AP_B3">
+            <Text>{promotion_melee_ap_b3_flag}Melee AP B3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MELEE_AP_B3_CLEAN">
+            <Text>Melee AP B3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MELEE_AP_B3_HELP">
+            <Text>{promotion_melee_ap_b3_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MELEE_AP_B3_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MOUNTED_AP_A1">
+            <Text>{promotion_mounted_ap_a1_flag}Mounted AP A1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MOUNTED_AP_A1_CLEAN">
+            <Text>Mounted AP A1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MOUNTED_AP_A1_HELP">
+            <Text>{promotion_mounted_ap_a1_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MOUNTED_AP_A1_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MOUNTED_AP_A2">
+            <Text>{promotion_mounted_ap_a2_flag}Mounted AP A2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MOUNTED_AP_A2_CLEAN">
+            <Text>Mounted AP A2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MOUNTED_AP_A2_HELP">
+            <Text>{promotion_mounted_ap_a2_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MOUNTED_AP_A2_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MOUNTED_AP_A3">
+            <Text>{promotion_mounted_ap_a3_flag}Mounted AP A3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MOUNTED_AP_A3_CLEAN">
+            <Text>Mounted AP A3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MOUNTED_AP_A3_HELP">
+            <Text>{promotion_mounted_ap_a3_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MOUNTED_AP_A3_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MOUNTED_AP_A4">
+            <Text>{promotion_mounted_ap_a4_flag}Mounted AP A4</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MOUNTED_AP_A4_CLEAN">
+            <Text>Mounted AP A4</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MOUNTED_AP_A4_HELP">
+            <Text>{promotion_mounted_ap_a4_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MOUNTED_AP_A4_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MOUNTED_AP_B1">
+            <Text>{promotion_mounted_ap_b1_flag}Mounted AP B1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MOUNTED_AP_B1_CLEAN">
+            <Text>Mounted AP B1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MOUNTED_AP_B1_HELP">
+            <Text>{promotion_mounted_ap_b1_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MOUNTED_AP_B1_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MOUNTED_AP_B2">
+            <Text>{promotion_mounted_ap_b2_flag}Mounted AP B2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MOUNTED_AP_B2_CLEAN">
+            <Text>Mounted AP B2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MOUNTED_AP_B2_HELP">
+            <Text>{promotion_mounted_ap_b2_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MOUNTED_AP_B2_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MOUNTED_AP_B3">
+            <Text>{promotion_mounted_ap_b3_flag}Mounted AP B3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MOUNTED_AP_B3_CLEAN">
+            <Text>Mounted AP B3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MOUNTED_AP_B3_HELP">
+            <Text>{promotion_mounted_ap_b3_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_MOUNTED_AP_B3_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_MELEE_AP_A1">
+            <Text>{promotion_naval_melee_ap_a1_flag}Naval Melee AP A1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_MELEE_AP_A1_CLEAN">
+            <Text>Naval Melee AP A1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_MELEE_AP_A1_HELP">
+            <Text>{promotion_naval_melee_ap_a1_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_MELEE_AP_A1_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_MELEE_AP_A2">
+            <Text>{promotion_naval_melee_ap_a2_flag}Naval Melee AP A2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_MELEE_AP_A2_CLEAN">
+            <Text>Naval Melee AP A2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_MELEE_AP_A2_HELP">
+            <Text>{promotion_naval_melee_ap_a2_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_MELEE_AP_A2_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_MELEE_AP_A3">
+            <Text>{promotion_naval_melee_ap_a3_flag}Naval Melee AP A3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_MELEE_AP_A3_CLEAN">
+            <Text>Naval Melee AP A3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_MELEE_AP_A3_HELP">
+            <Text>{promotion_naval_melee_ap_a3_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_MELEE_AP_A3_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_MELEE_AP_A4">
+            <Text>{promotion_naval_melee_ap_a4_flag}Naval Melee AP A4</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_MELEE_AP_A4_CLEAN">
+            <Text>Naval Melee AP A4</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_MELEE_AP_A4_HELP">
+            <Text>{promotion_naval_melee_ap_a4_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_MELEE_AP_A4_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_MELEE_AP_B1">
+            <Text>{promotion_naval_melee_ap_b1_flag}Naval Melee AP B1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_MELEE_AP_B1_CLEAN">
+            <Text>Naval Melee AP B1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_MELEE_AP_B1_HELP">
+            <Text>{promotion_naval_melee_ap_b1_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_MELEE_AP_B1_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_MELEE_AP_B2">
+            <Text>{promotion_naval_melee_ap_b2_flag}Naval Melee AP B2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_MELEE_AP_B2_CLEAN">
+            <Text>Naval Melee AP B2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_MELEE_AP_B2_HELP">
+            <Text>{promotion_naval_melee_ap_b2_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_MELEE_AP_B2_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_MELEE_AP_B3">
+            <Text>{promotion_naval_melee_ap_b3_flag}Naval Melee AP B3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_MELEE_AP_B3_CLEAN">
+            <Text>Naval Melee AP B3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_MELEE_AP_B3_HELP">
+            <Text>{promotion_naval_melee_ap_b3_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_MELEE_AP_B3_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_RANGED_AP_A1">
+            <Text>{promotion_naval_ranged_ap_a1_flag}Naval Ranged AP A1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_RANGED_AP_A1_CLEAN">
+            <Text>Naval Ranged AP A1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_RANGED_AP_A1_HELP">
+            <Text>{promotion_naval_ranged_ap_a1_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_RANGED_AP_A1_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_RANGED_AP_A2">
+            <Text>{promotion_naval_ranged_ap_a2_flag}Naval Ranged AP A2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_RANGED_AP_A2_CLEAN">
+            <Text>Naval Ranged AP A2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_RANGED_AP_A2_HELP">
+            <Text>{promotion_naval_ranged_ap_a2_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_RANGED_AP_A2_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_RANGED_AP_A3">
+            <Text>{promotion_naval_ranged_ap_a3_flag}Naval Ranged AP A3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_RANGED_AP_A3_CLEAN">
+            <Text>Naval Ranged AP A3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_RANGED_AP_A3_HELP">
+            <Text>{promotion_naval_ranged_ap_a3_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_RANGED_AP_A3_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_RANGED_AP_A4">
+            <Text>{promotion_naval_ranged_ap_a4_flag}Naval Ranged AP A4</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_RANGED_AP_A4_CLEAN">
+            <Text>Naval Ranged AP A4</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_RANGED_AP_A4_HELP">
+            <Text>{promotion_naval_ranged_ap_a4_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_RANGED_AP_A4_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_RANGED_AP_B1">
+            <Text>{promotion_naval_ranged_ap_b1_flag}Naval Ranged AP B1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_RANGED_AP_B1_CLEAN">
+            <Text>Naval Ranged AP B1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_RANGED_AP_B1_HELP">
+            <Text>{promotion_naval_ranged_ap_b1_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_RANGED_AP_B1_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_RANGED_AP_B2">
+            <Text>{promotion_naval_ranged_ap_b2_flag}Naval Ranged AP B2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_RANGED_AP_B2_CLEAN">
+            <Text>Naval Ranged AP B2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_RANGED_AP_B2_HELP">
+            <Text>{promotion_naval_ranged_ap_b2_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_RANGED_AP_B2_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_RANGED_AP_B3">
+            <Text>{promotion_naval_ranged_ap_b3_flag}Naval Ranged AP B3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_RANGED_AP_B3_CLEAN">
+            <Text>Naval Ranged AP B3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_RANGED_AP_B3_HELP">
+            <Text>{promotion_naval_ranged_ap_b3_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_NAVAL_RANGED_AP_B3_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_RECON_AP_A1">
+            <Text>{promotion_recon_ap_a1_flag}Recon AP A1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_RECON_AP_A1_CLEAN">
+            <Text>Recon AP A1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_RECON_AP_A1_HELP">
+            <Text>{promotion_recon_ap_a1_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_RECON_AP_A1_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_RECON_AP_A2">
+            <Text>{promotion_recon_ap_a2_flag}Recon AP A2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_RECON_AP_A2_CLEAN">
+            <Text>Recon AP A2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_RECON_AP_A2_HELP">
+            <Text>{promotion_recon_ap_a2_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_RECON_AP_A2_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_RECON_AP_A3">
+            <Text>{promotion_recon_ap_a3_flag}Recon AP A3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_RECON_AP_A3_CLEAN">
+            <Text>Recon AP A3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_RECON_AP_A3_HELP">
+            <Text>{promotion_recon_ap_a3_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_RECON_AP_A3_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_SIEGE_AP_A1">
+            <Text>{promotion_siege_ap_a1_flag}Siege AP A1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_SIEGE_AP_A1_CLEAN">
+            <Text>Siege AP A1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_SIEGE_AP_A1_HELP">
+            <Text>{promotion_siege_ap_a1_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_SIEGE_AP_A1_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_SIEGE_AP_A2">
+            <Text>{promotion_siege_ap_a2_flag}Siege AP A2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_SIEGE_AP_A2_CLEAN">
+            <Text>Siege AP A2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_SIEGE_AP_A2_HELP">
+            <Text>{promotion_siege_ap_a2_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_SIEGE_AP_A2_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_SIEGE_AP_A3">
+            <Text>{promotion_siege_ap_a3_flag}Siege AP A3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_SIEGE_AP_A3_CLEAN">
+            <Text>Siege AP A3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_SIEGE_AP_A3_HELP">
+            <Text>{promotion_siege_ap_a3_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_SIEGE_AP_A3_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_SIEGE_AP_A4">
+            <Text>{promotion_siege_ap_a4_flag}Siege AP A4</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_SIEGE_AP_A4_CLEAN">
+            <Text>Siege AP A4</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_SIEGE_AP_A4_HELP">
+            <Text>{promotion_siege_ap_a4_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_SIEGE_AP_A4_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_SIEGE_AP_B1">
+            <Text>{promotion_siege_ap_b1_flag}Siege AP B1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_SIEGE_AP_B1_CLEAN">
+            <Text>Siege AP B1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_SIEGE_AP_B1_HELP">
+            <Text>{promotion_siege_ap_b1_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_SIEGE_AP_B1_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_SIEGE_AP_B2">
+            <Text>{promotion_siege_ap_b2_flag}Siege AP B2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_SIEGE_AP_B2_CLEAN">
+            <Text>Siege AP B2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_SIEGE_AP_B2_HELP">
+            <Text>{promotion_siege_ap_b2_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_SIEGE_AP_B2_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_SIEGE_AP_B3">
+            <Text>{promotion_siege_ap_b3_flag}Siege AP B3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_SIEGE_AP_B3_CLEAN">
+            <Text>Siege AP B3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_SIEGE_AP_B3_HELP">
+            <Text>{promotion_siege_ap_b3_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_SIEGE_AP_B3_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_SUBMARINE_AP_A1">
+            <Text>{promotion_submarine_ap_a1_flag}Submarine AP A1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_SUBMARINE_AP_A1_CLEAN">
+            <Text>Submarine AP A1</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_SUBMARINE_AP_A1_HELP">
+            <Text>{promotion_submarine_ap_a1_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_SUBMARINE_AP_A1_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_SUBMARINE_AP_A2">
+            <Text>{promotion_submarine_ap_a2_flag}Submarine AP A2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_SUBMARINE_AP_A2_CLEAN">
+            <Text>Submarine AP A2</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_SUBMARINE_AP_A2_HELP">
+            <Text>{promotion_submarine_ap_a2_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_SUBMARINE_AP_A2_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_SUBMARINE_AP_A3">
+            <Text>{promotion_submarine_ap_a3_flag}Submarine AP A3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_SUBMARINE_AP_A3_CLEAN">
+            <Text>Submarine AP A3</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_SUBMARINE_AP_A3_HELP">
+            <Text>{promotion_submarine_ap_a3_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_SUBMARINE_AP_A3_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_SUBMARINE_AP_A4">
+            <Text>{promotion_submarine_ap_a4_flag}Submarine AP A4</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_SUBMARINE_AP_A4_CLEAN">
+            <Text>Submarine AP A4</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_SUBMARINE_AP_A4_HELP">
+            <Text>{promotion_submarine_ap_a4_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_PROMOTION_SUBMARINE_AP_A4_HELP_CLEAN">
+            <Text>This promotion no longer holds an item.</Text>
+        </Row>
+    </Language_en_US>
+</GameData>

@@ -4,10 +4,11 @@ from . import core
 from .core import *
 
 # Import all other modules after
-from . import eras, filler, policies, settlers, techs, traps
+from . import eras, filler, policies, promotions, settlers, techs, traps
 from .eras import *
 from .filler import *
 from .policies import *
+from .promotions import *
 from .settlers import *
 from .techs import *
 from .traps import *
@@ -18,6 +19,7 @@ __all__.extend(core.__all__)
 __all__.extend(eras.__all__)
 __all__.extend(filler.__all__)
 __all__.extend(policies.__all__)
+__all__.extend(promotions.__all__)
 __all__.extend(settlers.__all__)
 __all__.extend(techs.__all__)
 __all__.extend(traps.__all__)

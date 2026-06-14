@@ -11,6 +11,8 @@ __all__ = [
     "AQUEDUCT",
     "ARCHAEOLOGIST",
     "ARCHER",
+    "ARCHER_CLASS",
+    "ARMOR_CLASS",
     "ARMORY",
     "ARSENAL",
     "ARTILLERY",
@@ -22,6 +24,7 @@ __all__ = [
     "BAZOOKA",
     "BOMB_SHELTER",
     "BOMBER",
+    "BOMBER_CLASS",
     "BROADCAST_TOWER",
     "CANNON",
     "CARAVAN",
@@ -29,6 +32,7 @@ __all__ = [
     "CARAVEL",
     "CARGO_SHIP",
     "CARRIER",
+    "CARRIER_CLASS",
     "CASTLE",
     "CATAPULT",
     "CAVALRY",
@@ -43,6 +47,7 @@ __all__ = [
     "EMBARKING",
     "FACTORY",
     "FIGHTER",
+    "FIGHTER_CLASS",
     "FORGE",
     "FRIGATE",
     "GALLEASS",
@@ -53,7 +58,9 @@ __all__ = [
     "GREAT_WAR_BOMBER",
     "GREAT_WAR_INFANTRY",
     "GUIDED_MISSILE",
+    "GUN_CLASS",
     "HARBOR",
+    "HELICOPTER_CLASS",
     "HELICOPTER_GUNSHIP",
     "HORSEMAN",
     "HORSES_SHEEP_CATTLE",
@@ -76,6 +83,7 @@ __all__ = [
     "MARKET",
     "MECHANIZED_INFANTRY",
     "MEDICAL_LAB",
+    "MELEE_CLASS",
     "MILITARY_ACADEMY",
     "MILITARY_BASE",
     "MINT",
@@ -83,9 +91,12 @@ __all__ = [
     "MOBILE_SAM",
     "MODERN_ARMOR",
     "MONUMENT",
+    "MOUNTED_CLASS",
     "MUSEUM",
     "MUSICIANS_GUILD",
     "MUSKETMAN",
+    "NAVAL_MELEE_CLASS",
+    "NAVAL_RANGED_CLASS",
     "NUCLEAR_PLANT",
     "NUCLEAR_MISSILE",
     "NUCLEAR_SUBMARINE",
@@ -96,6 +107,7 @@ __all__ = [
     "POLICE_STATION",
     "PRIVATEER",
     "PUBLIC_SCHOOL",
+    "RECON_CLASS",
     "RECYCLING_CENTER",
     "RESEARCH_LAB",
     "RIFLEMAN",
@@ -104,6 +116,7 @@ __all__ = [
     "SEAPORT",
     "SETTLER",
     "SHRINE",
+    "SIEGE_CLASS",
     "SOLAR_PLANT",
     "SPACESHIP_FACTORY",
     "SPEARMAN",
@@ -114,6 +127,7 @@ __all__ = [
     "STONE_MARBLE",
     "STONE_WORKS",
     "SUBMARINE",
+    "SUBMARINE_CLASS",
     "SWORDSMAN",
     "TANK",
     "TEMPLE",
@@ -1018,6 +1032,40 @@ XCOM_SQUAD = items.ItemRequirements(
     }
 )
 "Requirements for training an XCOM Squad"
+
+
+# %% COMBAT CLASS DEFINITIONS
+ARCHER_CLASS = ARCHER | BAZOOKA | CHARIOT_ARCHER | COMPOSITE_BOWMAN | CROSSBOWMAN | GATLING_GUN | MACHINE_GUN
+"Requirements for training an Archer combat class unit"
+ARMOR_CLASS = GIANT_DEATH_ROBOT | LANDSHIP | MODERN_ARMOR | TANK
+"Requirements for training an Armor combat class unit"
+BOMBER_CLASS = BOMBER | GREAT_WAR_BOMBER | STEALTH_BOMBER
+"Requirements for training a Bomber combat class unit"
+CARRIER_CLASS = CARRIER
+"Requirements for training a Carrier class unit"
+FIGHTER_CLASS = FIGHTER | JET_FIGHTER | TRIPLANE
+"Requirements for training a Fighter combat class unit"
+GUN_CLASS = (
+    ANTI_AIRCRAFT_GUN | ANTI_TANK_GUN | GREAT_WAR_INFANTRY | INFANTRY | MARINE | MECHANIZED_INFANTRY | MOBILE_SAM
+    | MUSKETMAN | PARATROOPER | RIFLEMAN | XCOM_SQUAD
+)
+"Requirements for training a Gun combat class unit"
+HELICOPTER_CLASS = HELICOPTER_GUNSHIP
+"Requirements for training a Helicopter combat class unit"
+MELEE_CLASS = LANDSKNECHT | LONGSWORDSMAN | PIKEMAN | SPEARMAN | SWORDSMAN | WARRIOR
+"Requirements for training a Melee combat class unit"
+MOUNTED_CLASS = CAVALRY | HORSEMAN | KNIGHT | LANCER
+"Requirements for training a Mounted combat class unit"
+NAVAL_MELEE_CLASS = CARAVEL | DESTROYER | IRONCLAD | PRIVATEER | TRIREME
+"Requirements for training a Naval Melee combat class unit"
+NAVAL_RANGED_CLASS = BATTLESHIP | FRIGATE | GALLEASS | MISSILE_CRUISER
+"Requirements for training a Naval Ranged combat class unit"
+RECON_CLASS = SCOUT
+"Requirements for training a Recon combat class unit"
+SIEGE_CLASS = ARTILLERY | CANNON | CATAPULT | ROCKET_ARTILLERY | TREBUCHET
+"Requirements for training a Siege combat class unit"
+SUBMARINE_CLASS = NUCLEAR_SUBMARINE | SUBMARINE
+"Requirements for training a Submarine combat class unit"
 
 
 # %% VICTORY REQUIREMENTS DEFINITIONS

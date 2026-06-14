@@ -51,6 +51,8 @@ class CivVContainer(APPlayerContainer):
         "templates/apmod/SaveUtils.lua",
         "templates/apmod/Technologies.xml",
         "templates/apmod/TechnologyTextInfos.xml",
+        "templates/apmod/UnitPromotions.xml",
+        "templates/apmod/UnitPromotionTextInfos.xml",
         "templates/apmod/Units.xml",
         "templates/apmod/UnitTextInfos.xml",
         "templates/apmod/WorldWonders.xml",
@@ -155,6 +157,18 @@ class CivVContainer(APPlayerContainer):
             f"[COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] ({self._get_formatted_item(item)})."
         )
 
+    def _get_location_description_promotion(self, item: Item) -> str:
+        """
+        Formats the given `item` placement into a location description string usable for promotions in the Civ V XML
+        databases.
+
+        """
+
+        return (
+            f"Granting a unit this promotion for the first time counts as an "
+            f"[COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] ({self._get_formatted_item(item)})."
+        )
+
     def _get_location_description_unit(self, item: Item) -> str:
         """
         Formats the given `item` placement into a location description string usable for units in the Civ V XML
@@ -183,7 +197,7 @@ class CivVContainer(APPlayerContainer):
         for i, (prefix, _) in enumerate(items):
             description = "[NEWLINE]".join([f"- {x[1]}" for x in items[i:]])
             dct[f"{prefix}_location"] = (
-                f"[NEWLINE][NEWLINE]Training this unit the next {n_items-i} time(s) counts as an "
+                f"[NEWLINE][NEWLINE]Training a Settler the next {n_items-i} time(s) counts as an "
                 f"[COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR]:[NEWLINE]{description}"
             )
 
@@ -209,6 +223,7 @@ class CivVContainer(APPlayerContainer):
         # Create dict holding all substitutions
         dct = {
             "policy_cost_modifier": str(self.world.options.policy_cost_modifier-100),
+            "option_promotion_sanity": json.dumps(bool(self.world.options.promotion_sanity)),
             "option_satellites_meets_all": json.dumps(bool(self.world.options.satellites_meets_all)),
             "option_settler_sanity": json.dumps(bool(self.world.options.settler_sanity)),
             "option_settler_sanity_amount": json.dumps(int(self.world.options.settler_sanity_amount)),
@@ -250,6 +265,17 @@ class CivVContainer(APPlayerContainer):
                 case CivVLocationType.policy:
                     dct[f"{location.database_key_prefix}_item"] = self._get_formatted_item(filled_location.item)
                     dct[f"{location.database_key_prefix}_flag"] = self._get_formatted_item_flag(filled_location.item)
+
+                # For promotions, we need a location description at that location if an item was placed there
+                case CivVLocationType.promotion:
+                    if filled_location is not None:
+                        location_text = self._get_location_description_promotion(filled_location.item)
+                        flag = self._get_formatted_item_flag(filled_location.item)
+                    else:
+                        location_text = ""
+                        flag = ""
+                    dct[f"{location.database_key_prefix}_location"] = location_text
+                    dct[f"{location.database_key_prefix}_flag"] = flag
 
                 # For settlers, we need all placed settlers at once for the item descriptions
                 # Flags can be set immediately

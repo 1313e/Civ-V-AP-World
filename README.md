@@ -99,7 +99,7 @@ If it is not there, then the APWorld is not installed correctly.
 
 ## Notes on logic
 Logic in Civ V is a bit strange, as the soft requirements to perform specific actions in vanilla Civ V depends on the state of the game.
-To allow for a fair, but not tedious challenge, the following logic requirements exist within this AP implementation.
+To allow for a fair, but not tedious challenge, the following logic requirements exist within this AP implementation in addition to their vanilla requirements.
 Note that these are not enforced, but are purely here to avoid putting you in a situation where getting locations or a victory can be very tedious.
 All locations and victory itself can, theoretically, be obtained without ever receiving a single item.
 
@@ -185,6 +185,18 @@ All locations and victory itself can, theoretically, be obtained without ever re
   - Tech: Acoustics (*Opera House*)
   - Tech: Archaeology (*Museum*)
   - Tech: Radio (*Broadcast Tower*)
+
+
+### Promotion locations
+- Tier 2:
+  - Tech: Bronze Working (*Barracks*)
+- Tier 3:
+  - Tech: Bronze Working (*Barracks*)
+  - Tech: Steel (*Armory*)
+- Tier 4:
+  - Tech: Bronze Working (*Barracks*)
+  - Tech: Steel (*Armory*)
+  - Tech: Military Science (*Military Academy*)
 
 ## Known issues
 - Receiving a policy as an item will very briefly show the "Free Policy" notification.

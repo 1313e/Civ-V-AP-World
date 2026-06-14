@@ -22,7 +22,7 @@
   <References />
   <Blocks />
   <Files>
-    <File md5="D017DC5AA3E097404379143109A2104E" import="0">APFunctions.lua</File>
+    <File md5="8A8BE8A441B290545CE8F780BD8A117C" import="0">APFunctions.lua</File>
     <File md5="5B9C45533A8E74AF2E2730D92A306343" import="0">Buildings.xml</File>
     <File md5="F09C389A22E4DB7CAF6929109092774C" import="0">BuildingTextInfos.xml</File>
     <File md5="43CB6E8FA3007C683DD5CE7EA065E33C" import="0">HandicapInfos.xml</File>
@@ -32,7 +32,7 @@
     <File md5="6ACFC50B86170C6208024B06D9EF590C" import="1">json.lua</File>
     <File md5="378F45B0004D29290382FC3739944B6D" import="0">NationalWonders.xml</File>
     <File md5="C3DFAE686C7B7421F763A7B075A3753F" import="0">NationalWonderTextInfos.xml</File>
-    <File md5="7DFDD153439D30C2423A1376FDCF323B" import="0">APOptions.xml</File>
+    <File md5="817A584F779D7B4356B3D02218F88308" import="0">APOptions.xml</File>
     <File md5="8382C7420D4F319681DD5D0B82C8F969" import="0">PolicyBranches.xml</File>
     <File md5="7859FF96379F993AB68298F42ADC78A9" import="0">Policies.xml</File>
     <File md5="0526A24BDBC9DE50FA4A59BBCCC73FF6" import="1">Icons/AP_Tech_128.dds</File>
@@ -46,6 +46,8 @@
     <File md5="5754B1BE6E37A2F9D04D9D4149E5CDDF" import="1">SaveUtils.lua</File>
     <File md5="462CB60078DB1FCC59A9E080DD594D76" import="0">Technologies.xml</File>
     <File md5="8E04D2664959F5E8F4B42F8D559DF582" import="0">TechnologyTextInfos.xml</File>
+    <File md5="538D2D540135C1D7FBDE6482D69F9902" import="0">UnitPromotions.xml</File>
+    <File md5="771FD0E5681C2FD21DE14F36950F8B50" import="0">UnitPromotionTextInfos.xml</File>
     <File md5="C338CA6823479580C00B54F4F3A147C7" import="0">Units.xml</File>
     <File md5="5C85569047E691D999259834BFAC85B2" import="0">UnitTextInfos.xml</File>
     <File md5="23394FEC3BB005F4FAC845430B3E0418" import="0">WorldWonders.xml</File>
@@ -57,6 +59,7 @@
       <UpdateDatabase>NationalWonderTextInfos.xml</UpdateDatabase>
       <UpdateDatabase>PolicyBranchTextInfos.xml</UpdateDatabase>
       <UpdateDatabase>TechnologyTextInfos.xml</UpdateDatabase>
+      <UpdateDatabase>UnitPromotionTextInfos.xml</UpdateDatabase>
       <UpdateDatabase>UnitTextInfos.xml</UpdateDatabase>
       <UpdateDatabase>WorldWonderTextInfos.xml</UpdateDatabase>
       <UpdateDatabase>APOptions.xml</UpdateDatabase>
@@ -67,6 +70,7 @@
       <UpdateDatabase>Policies.xml</UpdateDatabase>
       <UpdateDatabase>Processes.xml</UpdateDatabase>
       <UpdateDatabase>Technologies.xml</UpdateDatabase>
+      <UpdateDatabase>UnitPromotions.xml</UpdateDatabase>
       <UpdateDatabase>Units.xml</UpdateDatabase>
       <UpdateDatabase>WorldWonders.xml</UpdateDatabase>
       <UpdateDatabase>Icons/AP_Icons.xml</UpdateDatabase>

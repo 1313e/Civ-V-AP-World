@@ -1,0 +1,1848 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+    <UnitPromotions>
+        <Update>
+            <Set Description="TXT_KEY_PROMOTION_MEDIC_1"/>
+            <Where Type="PROMOTION_MEDIC"/>
+        </Update>
+        <Update>
+            <Set Help="TXT_KEY_PROMOTION_MEDIC_1_HELP"/>
+            <Where Type="PROMOTION_MEDIC"/>
+        </Update>
+        <Update>
+            <Set PediaEntry="TXT_KEY_PROMOTION_MEDIC_1"/>
+            <Where Type="PROMOTION_MEDIC"/>
+        </Update>
+        <Update>
+            <Set Description="TXT_KEY_PROMOTION_MEDIC_2"/>
+            <Where Type="PROMOTION_MEDIC_II"/>
+        </Update>
+        <Update>
+            <Set Help="TXT_KEY_PROMOTION_MEDIC_2_HELP"/>
+            <Where Type="PROMOTION_MEDIC_II"/>
+        </Update>
+        <Update>
+            <Set PediaEntry="TXT_KEY_PROMOTION_MEDIC_2"/>
+            <Where Type="PROMOTION_MEDIC_II"/>
+        </Update>
+        <Update>
+            <Set Description="TXT_KEY_PROMOTION_AIR_REPAIR"/>
+            <Where Type="PROMOTION_AIR_REPAIR"/>
+        </Update>
+        <Update>
+            <Set Help="TXT_KEY_PROMOTION_AIR_REPAIR_HELP"/>
+            <Where Type="PROMOTION_AIR_REPAIR"/>
+        </Update>
+        <Update>
+            <Set Description="TXT_KEY_PROMOTION_AIR_LOGISTICS"/>
+            <Where Type="PROMOTION_AIR_LOGISTICS"/>
+        </Update>
+        <Update>
+            <Set Help="TXT_KEY_PROMOTION_AIR_LOGISTICS_HELP"/>
+            <Where Type="PROMOTION_AIR_LOGISTICS"/>
+        </Update>
+        <Update>
+            <Set PediaEntry="TXT_KEY_PROMOTION_AIR_LOGISTICS"/>
+            <Where Type="PROMOTION_AIR_LOGISTICS"/>
+        </Update>
+        <Update>
+            <Set Help="TXT_KEY_PROMOTION_HELI_AMBUSH_1_HELP"/>
+            <Where Type="PROMOTION_HELI_AMBUSH_1"/>
+        </Update>
+        <Update>
+            <Set PediaType="PEDIA_AIR"/>
+            <Where Type="PROMOTION_HELI_AMBUSH_1"/>
+        </Update>
+        <Update>
+            <Set Help="TXT_KEY_PROMOTION_HELI_AMBUSH_2_HELP"/>
+            <Where Type="PROMOTION_HELI_AMBUSH_2"/>
+        </Update>
+        <Update>
+            <Set PediaType="PEDIA_AIR"/>
+            <Where Type="PROMOTION_HELI_AMBUSH_2"/>
+        </Update>
+        <Update>
+            <Set Description="TXT_KEY_PROMOTION_HELI_MOBILITY_1"/>
+            <Where Type="PROMOTION_HELI_MOBILITY_1"/>
+        </Update>
+        <Update>
+            <Set Help="TXT_KEY_PROMOTION_HELI_MOBILITY_1_HELP"/>
+            <Where Type="PROMOTION_HELI_MOBILITY_1"/>
+        </Update>
+        <Update>
+            <Set PediaEntry="TXT_KEY_PROMOTION_HELI_MOBILITY_1"/>
+            <Where Type="PROMOTION_HELI_MOBILITY_1"/>
+        </Update>
+        <Update>
+            <Set Description="TXT_KEY_PROMOTION_HELI_MOBILITY_2"/>
+            <Where Type="PROMOTION_HELI_MOBILITY_2"/>
+        </Update>
+        <Update>
+            <Set Help="TXT_KEY_PROMOTION_HELI_MOBILITY_2_HELP"/>
+            <Where Type="PROMOTION_HELI_MOBILITY_2"/>
+        </Update>
+        <Update>
+            <Set PediaEntry="TXT_KEY_PROMOTION_HELI_MOBILITY_2"/>
+            <Where Type="PROMOTION_HELI_MOBILITY_2"/>
+        </Update>
+        <Update>
+            <Set Description="TXT_KEY_PROMOTION_HELI_REPAIR"/>
+            <Where Type="PROMOTION_HELI_REPAIR"/>
+        </Update>
+        <Update>
+            <Set Help="TXT_KEY_PROMOTION_HELI_REPAIR_HELP"/>
+            <Where Type="PROMOTION_HELI_REPAIR"/>
+        </Update>
+        <Update>
+            <Set PediaType="PEDIA_HEAL"/>
+            <Where Type="PROMOTION_HELI_REPAIR"/>
+        </Update>
+        <Update>
+            <Set PediaEntry="TXT_KEY_PROMOTION_HELI_REPAIR"/>
+            <Where Type="PROMOTION_HELI_REPAIR"/>
+        </Update>
+        <Update>
+            <Set PediaType="PEDIA_NAVAL"/>
+            <Where Type="PROMOTION_WOLFPACK_1"/>
+        </Update>
+        <Update>
+            <Set PediaType="PEDIA_NAVAL"/>
+            <Where Type="PROMOTION_WOLFPACK_2"/>
+        </Update>
+        <Update>
+            <Set PediaType="PEDIA_NAVAL"/>
+            <Where Type="PROMOTION_WOLFPACK_3"/>
+        </Update>
+        <Update>
+            <Set PediaType="PEDIA_NAVAL"/>
+            <Where Type="PROMOTION_FLIGHT_DECK_1"/>
+        </Update>
+        <Update>
+            <Set PediaType="PEDIA_NAVAL"/>
+            <Where Type="PROMOTION_FLIGHT_DECK_2"/>
+        </Update>
+        <Update>
+            <Set PediaType="PEDIA_NAVAL"/>
+            <Where Type="PROMOTION_FLIGHT_DECK_3"/>
+        </Update>
+        <Update>
+            <Set PediaType="PEDIA_NAVAL"/>
+            <Where Type="PROMOTION_ARMOR_PLATING_1"/>
+        </Update>
+        <Update>
+            <Set PediaType="PEDIA_NAVAL"/>
+            <Where Type="PROMOTION_ARMOR_PLATING_2"/>
+        </Update>
+        <Update>
+            <Set PediaType="PEDIA_NAVAL"/>
+            <Where Type="PROMOTION_ARMOR_PLATING_3"/>
+        </Update>
+        <Row>
+            <Type>PROMOTION_NORMAL_PROMOTIONS</Type>
+            <Description>Normal Promotions</Description>
+            <Help>This unit can be granted normal promotions.</Help>
+            <CannotBeChosen>true</CannotBeChosen>
+            <PortraitIndex>9</PortraitIndex>
+			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+        </Row>
+        <Row>
+            <Type>PROMOTION_AP_PROMOTIONS</Type>
+            <Description>AP Promotions</Description>
+            <Help>This unit can be granted AP promotions.</Help>
+            <CannotBeChosen>true</CannotBeChosen>
+            <PortraitIndex>9</PortraitIndex>
+			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+        </Row>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_SHOCK_1"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_SHOCK_2"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_SHOCK_3"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_DRILL_1"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_DRILL_2"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_DRILL_3"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_ACCURACY_1"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_ACCURACY_2"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_ACCURACY_3"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_BARRAGE_1"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_BARRAGE_2"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_BARRAGE_3"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_TARGETING_1"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_TARGETING_2"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_TARGETING_3"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_SENTRY"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_SIEGE"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_VOLLEY"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_MEDIC"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_MEDIC_II"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_AMPHIBIOUS"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_COVER_1"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_COVER_2"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_CHARGE"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_FORMATION_1"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_FORMATION_2"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_AMBUSH_1"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_AMBUSH_2"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_SUPPLY"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_MARCH"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_BLITZ"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_WOODSMAN"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_LOGISTICS"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_RANGE"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_MOBILITY"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_INTERCEPTION_1"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_INTERCEPTION_2"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_INTERCEPTION_3"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_DOGFIGHTING_1"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_DOGFIGHTING_2"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_DOGFIGHTING_3"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_AIR_SIEGE_1"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_AIR_SIEGE_2"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_AIR_SIEGE_3"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_BOMBARDMENT_1"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_BOMBARDMENT_2"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_BOMBARDMENT_3"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_AIR_TARGETING_1"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_AIR_TARGETING_2"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_AIR_AMBUSH_1"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_AIR_AMBUSH_2"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_AIR_RANGE"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_SORTIE"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_REPAIR"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_AIR_REPAIR"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_AIR_LOGISTICS"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_EVASION"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_SCOUTING_1"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_SCOUTING_2"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_SCOUTING_3"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_SURVIVALISM_1"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_SURVIVALISM_2"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_SURVIVALISM_3"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_HELI_AMBUSH_1"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_HELI_AMBUSH_2"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_HELI_MOBILITY_1"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_HELI_MOBILITY_2"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_HELI_REPAIR"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_COASTAL_RAIDER_1"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_COASTAL_RAIDER_2"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_COASTAL_RAIDER_3"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_BOARDING_PARTY_1"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_BOARDING_PARTY_2"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_BOARDING_PARTY_3"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_WOLFPACK_1"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_WOLFPACK_2"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereqOr1="PROMOTION_WOLFPACK_1"/>
+            <Where Type="PROMOTION_WOLFPACK_2"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_WOLFPACK_3"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereqOr1="PROMOTION_WOLFPACK_2"/>
+            <Where Type="PROMOTION_WOLFPACK_3"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_FLIGHT_DECK_1"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_FLIGHT_DECK_2"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereqOr1="PROMOTION_FLIGHT_DECK_1"/>
+            <Where Type="PROMOTION_FLIGHT_DECK_2"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_FLIGHT_DECK_3"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereqOr1="PROMOTION_FLIGHT_DECK_2"/>
+            <Where Type="PROMOTION_FLIGHT_DECK_3"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_ARMOR_PLATING_1"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_ARMOR_PLATING_2"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereqOr1="PROMOTION_ARMOR_PLATING_1"/>
+            <Where Type="PROMOTION_ARMOR_PLATING_2"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereq="PROMOTION_NORMAL_PROMOTIONS"/>
+            <Where Type="PROMOTION_ARMOR_PLATING_3"/>
+        </Update>
+        <Update>
+            <Set PromotionPrereqOr1="PROMOTION_ARMOR_PLATING_2"/>
+            <Where Type="PROMOTION_ARMOR_PLATING_3"/>
+        </Update>
+        <Row>
+            <Type>PROMOTION_ARCHER_AP_A1</Type>
+            <Description>TXT_KEY_PROMOTION_ARCHER_AP_A1</Description>
+            <Help>TXT_KEY_PROMOTION_ARCHER_AP_A1_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_ARCHER_AP_A1</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_ARCHER_AP_A2</Type>
+            <Description>TXT_KEY_PROMOTION_ARCHER_AP_A2</Description>
+            <Help>TXT_KEY_PROMOTION_ARCHER_AP_A2_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_ARCHER_AP_A1</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_ARCHER_AP_A2</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_ARCHER_AP_A3</Type>
+            <Description>TXT_KEY_PROMOTION_ARCHER_AP_A3</Description>
+            <Help>TXT_KEY_PROMOTION_ARCHER_AP_A3_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_ARCHER_AP_A2</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_ARCHER_AP_A3</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_ARCHER_AP_A4</Type>
+            <Description>TXT_KEY_PROMOTION_ARCHER_AP_A4</Description>
+            <Help>TXT_KEY_PROMOTION_ARCHER_AP_A4_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_ARCHER_AP_A3</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_ARCHER_AP_A4</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_ARCHER_AP_B1</Type>
+            <Description>TXT_KEY_PROMOTION_ARCHER_AP_B1</Description>
+            <Help>TXT_KEY_PROMOTION_ARCHER_AP_B1_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_ARCHER_AP_B1</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_ARCHER_AP_B2</Type>
+            <Description>TXT_KEY_PROMOTION_ARCHER_AP_B2</Description>
+            <Help>TXT_KEY_PROMOTION_ARCHER_AP_B2_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_ARCHER_AP_B1</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_ARCHER_AP_B2</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_ARCHER_AP_B3</Type>
+            <Description>TXT_KEY_PROMOTION_ARCHER_AP_B3</Description>
+            <Help>TXT_KEY_PROMOTION_ARCHER_AP_B3_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_ARCHER_AP_B2</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_ARCHER_AP_B3</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_ARMOR_AP_A1</Type>
+            <Description>TXT_KEY_PROMOTION_ARMOR_AP_A1</Description>
+            <Help>TXT_KEY_PROMOTION_ARMOR_AP_A1_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_ARMOR_AP_A1</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_ARMOR_AP_A2</Type>
+            <Description>TXT_KEY_PROMOTION_ARMOR_AP_A2</Description>
+            <Help>TXT_KEY_PROMOTION_ARMOR_AP_A2_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_ARMOR_AP_A1</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_ARMOR_AP_A2</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_ARMOR_AP_A3</Type>
+            <Description>TXT_KEY_PROMOTION_ARMOR_AP_A3</Description>
+            <Help>TXT_KEY_PROMOTION_ARMOR_AP_A3_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_ARMOR_AP_A2</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_ARMOR_AP_A3</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_ARMOR_AP_A4</Type>
+            <Description>TXT_KEY_PROMOTION_ARMOR_AP_A4</Description>
+            <Help>TXT_KEY_PROMOTION_ARMOR_AP_A4_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_ARMOR_AP_A3</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_ARMOR_AP_A4</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_ARMOR_AP_B1</Type>
+            <Description>TXT_KEY_PROMOTION_ARMOR_AP_B1</Description>
+            <Help>TXT_KEY_PROMOTION_ARMOR_AP_B1_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_ARMOR_AP_B1</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_ARMOR_AP_B2</Type>
+            <Description>TXT_KEY_PROMOTION_ARMOR_AP_B2</Description>
+            <Help>TXT_KEY_PROMOTION_ARMOR_AP_B2_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_ARMOR_AP_B1</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_ARMOR_AP_B2</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_ARMOR_AP_B3</Type>
+            <Description>TXT_KEY_PROMOTION_ARMOR_AP_B3</Description>
+            <Help>TXT_KEY_PROMOTION_ARMOR_AP_B3_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_ARMOR_AP_B2</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_ARMOR_AP_B3</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_BOMBER_AP_A1</Type>
+            <Description>TXT_KEY_PROMOTION_BOMBER_AP_A1</Description>
+            <Help>TXT_KEY_PROMOTION_BOMBER_AP_A1_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_BOMBER_AP_A1</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_BOMBER_AP_A2</Type>
+            <Description>TXT_KEY_PROMOTION_BOMBER_AP_A2</Description>
+            <Help>TXT_KEY_PROMOTION_BOMBER_AP_A2_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_BOMBER_AP_A1</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_BOMBER_AP_A2</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_BOMBER_AP_A3</Type>
+            <Description>TXT_KEY_PROMOTION_BOMBER_AP_A3</Description>
+            <Help>TXT_KEY_PROMOTION_BOMBER_AP_A3_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_BOMBER_AP_A2</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_BOMBER_AP_A3</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_BOMBER_AP_A4</Type>
+            <Description>TXT_KEY_PROMOTION_BOMBER_AP_A4</Description>
+            <Help>TXT_KEY_PROMOTION_BOMBER_AP_A4_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_BOMBER_AP_A3</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_BOMBER_AP_A4</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_BOMBER_AP_B1</Type>
+            <Description>TXT_KEY_PROMOTION_BOMBER_AP_B1</Description>
+            <Help>TXT_KEY_PROMOTION_BOMBER_AP_B1_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_BOMBER_AP_B1</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_BOMBER_AP_B2</Type>
+            <Description>TXT_KEY_PROMOTION_BOMBER_AP_B2</Description>
+            <Help>TXT_KEY_PROMOTION_BOMBER_AP_B2_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_BOMBER_AP_B1</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_BOMBER_AP_B2</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_BOMBER_AP_B3</Type>
+            <Description>TXT_KEY_PROMOTION_BOMBER_AP_B3</Description>
+            <Help>TXT_KEY_PROMOTION_BOMBER_AP_B3_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_BOMBER_AP_B2</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_BOMBER_AP_B3</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_CARRIER_AP_A1</Type>
+            <Description>TXT_KEY_PROMOTION_CARRIER_AP_A1</Description>
+            <Help>TXT_KEY_PROMOTION_CARRIER_AP_A1_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_CARRIER_AP_A1</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_CARRIER_AP_A2</Type>
+            <Description>TXT_KEY_PROMOTION_CARRIER_AP_A2</Description>
+            <Help>TXT_KEY_PROMOTION_CARRIER_AP_A2_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_CARRIER_AP_A1</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_CARRIER_AP_A2</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_CARRIER_AP_A3</Type>
+            <Description>TXT_KEY_PROMOTION_CARRIER_AP_A3</Description>
+            <Help>TXT_KEY_PROMOTION_CARRIER_AP_A3_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_CARRIER_AP_A2</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_CARRIER_AP_A3</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_FIGHTER_AP_A1</Type>
+            <Description>TXT_KEY_PROMOTION_FIGHTER_AP_A1</Description>
+            <Help>TXT_KEY_PROMOTION_FIGHTER_AP_A1_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_FIGHTER_AP_A1</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_FIGHTER_AP_A2</Type>
+            <Description>TXT_KEY_PROMOTION_FIGHTER_AP_A2</Description>
+            <Help>TXT_KEY_PROMOTION_FIGHTER_AP_A2_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_FIGHTER_AP_A1</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_FIGHTER_AP_A2</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_FIGHTER_AP_A3</Type>
+            <Description>TXT_KEY_PROMOTION_FIGHTER_AP_A3</Description>
+            <Help>TXT_KEY_PROMOTION_FIGHTER_AP_A3_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_FIGHTER_AP_A2</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_FIGHTER_AP_A3</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_FIGHTER_AP_A4</Type>
+            <Description>TXT_KEY_PROMOTION_FIGHTER_AP_A4</Description>
+            <Help>TXT_KEY_PROMOTION_FIGHTER_AP_A4_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_FIGHTER_AP_A3</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_FIGHTER_AP_A4</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_FIGHTER_AP_B1</Type>
+            <Description>TXT_KEY_PROMOTION_FIGHTER_AP_B1</Description>
+            <Help>TXT_KEY_PROMOTION_FIGHTER_AP_B1_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_FIGHTER_AP_B1</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_FIGHTER_AP_B2</Type>
+            <Description>TXT_KEY_PROMOTION_FIGHTER_AP_B2</Description>
+            <Help>TXT_KEY_PROMOTION_FIGHTER_AP_B2_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_FIGHTER_AP_B1</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_FIGHTER_AP_B2</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_FIGHTER_AP_B3</Type>
+            <Description>TXT_KEY_PROMOTION_FIGHTER_AP_B3</Description>
+            <Help>TXT_KEY_PROMOTION_FIGHTER_AP_B3_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_FIGHTER_AP_B2</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_FIGHTER_AP_B3</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_GUN_AP_A1</Type>
+            <Description>TXT_KEY_PROMOTION_GUN_AP_A1</Description>
+            <Help>TXT_KEY_PROMOTION_GUN_AP_A1_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_GUN_AP_A1</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_GUN_AP_A2</Type>
+            <Description>TXT_KEY_PROMOTION_GUN_AP_A2</Description>
+            <Help>TXT_KEY_PROMOTION_GUN_AP_A2_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_GUN_AP_A1</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_GUN_AP_A2</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_GUN_AP_A3</Type>
+            <Description>TXT_KEY_PROMOTION_GUN_AP_A3</Description>
+            <Help>TXT_KEY_PROMOTION_GUN_AP_A3_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_GUN_AP_A2</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_GUN_AP_A3</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_GUN_AP_A4</Type>
+            <Description>TXT_KEY_PROMOTION_GUN_AP_A4</Description>
+            <Help>TXT_KEY_PROMOTION_GUN_AP_A4_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_GUN_AP_A3</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_GUN_AP_A4</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_GUN_AP_B1</Type>
+            <Description>TXT_KEY_PROMOTION_GUN_AP_B1</Description>
+            <Help>TXT_KEY_PROMOTION_GUN_AP_B1_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_GUN_AP_B1</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_GUN_AP_B2</Type>
+            <Description>TXT_KEY_PROMOTION_GUN_AP_B2</Description>
+            <Help>TXT_KEY_PROMOTION_GUN_AP_B2_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_GUN_AP_B1</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_GUN_AP_B2</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_GUN_AP_B3</Type>
+            <Description>TXT_KEY_PROMOTION_GUN_AP_B3</Description>
+            <Help>TXT_KEY_PROMOTION_GUN_AP_B3_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_GUN_AP_B2</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_GUN_AP_B3</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_HELICOPTER_AP_A1</Type>
+            <Description>TXT_KEY_PROMOTION_HELICOPTER_AP_A1</Description>
+            <Help>TXT_KEY_PROMOTION_HELICOPTER_AP_A1_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_HELICOPTER_AP_A1</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_HELICOPTER_AP_A2</Type>
+            <Description>TXT_KEY_PROMOTION_HELICOPTER_AP_A2</Description>
+            <Help>TXT_KEY_PROMOTION_HELICOPTER_AP_A2_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_HELICOPTER_AP_A1</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_HELICOPTER_AP_A2</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_HELICOPTER_AP_A3</Type>
+            <Description>TXT_KEY_PROMOTION_HELICOPTER_AP_A3</Description>
+            <Help>TXT_KEY_PROMOTION_HELICOPTER_AP_A3_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_HELICOPTER_AP_A2</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_HELICOPTER_AP_A3</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_MELEE_AP_A1</Type>
+            <Description>TXT_KEY_PROMOTION_MELEE_AP_A1</Description>
+            <Help>TXT_KEY_PROMOTION_MELEE_AP_A1_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_MELEE_AP_A1</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_MELEE_AP_A2</Type>
+            <Description>TXT_KEY_PROMOTION_MELEE_AP_A2</Description>
+            <Help>TXT_KEY_PROMOTION_MELEE_AP_A2_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_MELEE_AP_A1</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_MELEE_AP_A2</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_MELEE_AP_A3</Type>
+            <Description>TXT_KEY_PROMOTION_MELEE_AP_A3</Description>
+            <Help>TXT_KEY_PROMOTION_MELEE_AP_A3_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_MELEE_AP_A2</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_MELEE_AP_A3</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_MELEE_AP_A4</Type>
+            <Description>TXT_KEY_PROMOTION_MELEE_AP_A4</Description>
+            <Help>TXT_KEY_PROMOTION_MELEE_AP_A4_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_MELEE_AP_A3</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_MELEE_AP_A4</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_MELEE_AP_B1</Type>
+            <Description>TXT_KEY_PROMOTION_MELEE_AP_B1</Description>
+            <Help>TXT_KEY_PROMOTION_MELEE_AP_B1_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_MELEE_AP_B1</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_MELEE_AP_B2</Type>
+            <Description>TXT_KEY_PROMOTION_MELEE_AP_B2</Description>
+            <Help>TXT_KEY_PROMOTION_MELEE_AP_B2_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_MELEE_AP_B1</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_MELEE_AP_B2</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_MELEE_AP_B3</Type>
+            <Description>TXT_KEY_PROMOTION_MELEE_AP_B3</Description>
+            <Help>TXT_KEY_PROMOTION_MELEE_AP_B3_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_MELEE_AP_B2</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_MELEE_AP_B3</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_MOUNTED_AP_A1</Type>
+            <Description>TXT_KEY_PROMOTION_MOUNTED_AP_A1</Description>
+            <Help>TXT_KEY_PROMOTION_MOUNTED_AP_A1_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_MOUNTED_AP_A1</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_MOUNTED_AP_A2</Type>
+            <Description>TXT_KEY_PROMOTION_MOUNTED_AP_A2</Description>
+            <Help>TXT_KEY_PROMOTION_MOUNTED_AP_A2_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_MOUNTED_AP_A1</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_MOUNTED_AP_A2</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_MOUNTED_AP_A3</Type>
+            <Description>TXT_KEY_PROMOTION_MOUNTED_AP_A3</Description>
+            <Help>TXT_KEY_PROMOTION_MOUNTED_AP_A3_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_MOUNTED_AP_A2</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_MOUNTED_AP_A3</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_MOUNTED_AP_A4</Type>
+            <Description>TXT_KEY_PROMOTION_MOUNTED_AP_A4</Description>
+            <Help>TXT_KEY_PROMOTION_MOUNTED_AP_A4_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_MOUNTED_AP_A3</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_MOUNTED_AP_A4</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_MOUNTED_AP_B1</Type>
+            <Description>TXT_KEY_PROMOTION_MOUNTED_AP_B1</Description>
+            <Help>TXT_KEY_PROMOTION_MOUNTED_AP_B1_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_MOUNTED_AP_B1</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_MOUNTED_AP_B2</Type>
+            <Description>TXT_KEY_PROMOTION_MOUNTED_AP_B2</Description>
+            <Help>TXT_KEY_PROMOTION_MOUNTED_AP_B2_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_MOUNTED_AP_B1</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_MOUNTED_AP_B2</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_MOUNTED_AP_B3</Type>
+            <Description>TXT_KEY_PROMOTION_MOUNTED_AP_B3</Description>
+            <Help>TXT_KEY_PROMOTION_MOUNTED_AP_B3_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_MOUNTED_AP_B2</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_MOUNTED_AP_B3</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_NAVAL_MELEE_AP_A1</Type>
+            <Description>TXT_KEY_PROMOTION_NAVAL_MELEE_AP_A1</Description>
+            <Help>TXT_KEY_PROMOTION_NAVAL_MELEE_AP_A1_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_NAVAL_MELEE_AP_A1</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_NAVAL_MELEE_AP_A2</Type>
+            <Description>TXT_KEY_PROMOTION_NAVAL_MELEE_AP_A2</Description>
+            <Help>TXT_KEY_PROMOTION_NAVAL_MELEE_AP_A2_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_NAVAL_MELEE_AP_A1</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_NAVAL_MELEE_AP_A2</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_NAVAL_MELEE_AP_A3</Type>
+            <Description>TXT_KEY_PROMOTION_NAVAL_MELEE_AP_A3</Description>
+            <Help>TXT_KEY_PROMOTION_NAVAL_MELEE_AP_A3_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_NAVAL_MELEE_AP_A2</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_NAVAL_MELEE_AP_A3</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_NAVAL_MELEE_AP_A4</Type>
+            <Description>TXT_KEY_PROMOTION_NAVAL_MELEE_AP_A4</Description>
+            <Help>TXT_KEY_PROMOTION_NAVAL_MELEE_AP_A4_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_NAVAL_MELEE_AP_A3</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_NAVAL_MELEE_AP_A4</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_NAVAL_MELEE_AP_B1</Type>
+            <Description>TXT_KEY_PROMOTION_NAVAL_MELEE_AP_B1</Description>
+            <Help>TXT_KEY_PROMOTION_NAVAL_MELEE_AP_B1_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_NAVAL_MELEE_AP_B1</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_NAVAL_MELEE_AP_B2</Type>
+            <Description>TXT_KEY_PROMOTION_NAVAL_MELEE_AP_B2</Description>
+            <Help>TXT_KEY_PROMOTION_NAVAL_MELEE_AP_B2_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_NAVAL_MELEE_AP_B1</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_NAVAL_MELEE_AP_B2</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_NAVAL_MELEE_AP_B3</Type>
+            <Description>TXT_KEY_PROMOTION_NAVAL_MELEE_AP_B3</Description>
+            <Help>TXT_KEY_PROMOTION_NAVAL_MELEE_AP_B3_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_NAVAL_MELEE_AP_B2</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_NAVAL_MELEE_AP_B3</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_NAVAL_RANGED_AP_A1</Type>
+            <Description>TXT_KEY_PROMOTION_NAVAL_RANGED_AP_A1</Description>
+            <Help>TXT_KEY_PROMOTION_NAVAL_RANGED_AP_A1_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_NAVAL_RANGED_AP_A1</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_NAVAL_RANGED_AP_A2</Type>
+            <Description>TXT_KEY_PROMOTION_NAVAL_RANGED_AP_A2</Description>
+            <Help>TXT_KEY_PROMOTION_NAVAL_RANGED_AP_A2_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_NAVAL_RANGED_AP_A1</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_NAVAL_RANGED_AP_A2</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_NAVAL_RANGED_AP_A3</Type>
+            <Description>TXT_KEY_PROMOTION_NAVAL_RANGED_AP_A3</Description>
+            <Help>TXT_KEY_PROMOTION_NAVAL_RANGED_AP_A3_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_NAVAL_RANGED_AP_A2</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_NAVAL_RANGED_AP_A3</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_NAVAL_RANGED_AP_A4</Type>
+            <Description>TXT_KEY_PROMOTION_NAVAL_RANGED_AP_A4</Description>
+            <Help>TXT_KEY_PROMOTION_NAVAL_RANGED_AP_A4_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_NAVAL_RANGED_AP_A3</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_NAVAL_RANGED_AP_A4</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_NAVAL_RANGED_AP_B1</Type>
+            <Description>TXT_KEY_PROMOTION_NAVAL_RANGED_AP_B1</Description>
+            <Help>TXT_KEY_PROMOTION_NAVAL_RANGED_AP_B1_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_NAVAL_RANGED_AP_B1</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_NAVAL_RANGED_AP_B2</Type>
+            <Description>TXT_KEY_PROMOTION_NAVAL_RANGED_AP_B2</Description>
+            <Help>TXT_KEY_PROMOTION_NAVAL_RANGED_AP_B2_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_NAVAL_RANGED_AP_B1</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_NAVAL_RANGED_AP_B2</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_NAVAL_RANGED_AP_B3</Type>
+            <Description>TXT_KEY_PROMOTION_NAVAL_RANGED_AP_B3</Description>
+            <Help>TXT_KEY_PROMOTION_NAVAL_RANGED_AP_B3_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_NAVAL_RANGED_AP_B2</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_NAVAL_RANGED_AP_B3</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_RECON_AP_A1</Type>
+            <Description>TXT_KEY_PROMOTION_RECON_AP_A1</Description>
+            <Help>TXT_KEY_PROMOTION_RECON_AP_A1_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_RECON_AP_A1</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_RECON_AP_A2</Type>
+            <Description>TXT_KEY_PROMOTION_RECON_AP_A2</Description>
+            <Help>TXT_KEY_PROMOTION_RECON_AP_A2_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_RECON_AP_A1</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_RECON_AP_A2</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_RECON_AP_A3</Type>
+            <Description>TXT_KEY_PROMOTION_RECON_AP_A3</Description>
+            <Help>TXT_KEY_PROMOTION_RECON_AP_A3_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_RECON_AP_A2</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_RECON_AP_A3</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_SIEGE_AP_A1</Type>
+            <Description>TXT_KEY_PROMOTION_SIEGE_AP_A1</Description>
+            <Help>TXT_KEY_PROMOTION_SIEGE_AP_A1_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_SIEGE_AP_A1</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_SIEGE_AP_A2</Type>
+            <Description>TXT_KEY_PROMOTION_SIEGE_AP_A2</Description>
+            <Help>TXT_KEY_PROMOTION_SIEGE_AP_A2_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_SIEGE_AP_A1</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_SIEGE_AP_A2</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_SIEGE_AP_A3</Type>
+            <Description>TXT_KEY_PROMOTION_SIEGE_AP_A3</Description>
+            <Help>TXT_KEY_PROMOTION_SIEGE_AP_A3_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_SIEGE_AP_A2</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_SIEGE_AP_A3</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_SIEGE_AP_A4</Type>
+            <Description>TXT_KEY_PROMOTION_SIEGE_AP_A4</Description>
+            <Help>TXT_KEY_PROMOTION_SIEGE_AP_A4_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_SIEGE_AP_A3</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_SIEGE_AP_A4</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_SIEGE_AP_B1</Type>
+            <Description>TXT_KEY_PROMOTION_SIEGE_AP_B1</Description>
+            <Help>TXT_KEY_PROMOTION_SIEGE_AP_B1_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_SIEGE_AP_B1</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_SIEGE_AP_B2</Type>
+            <Description>TXT_KEY_PROMOTION_SIEGE_AP_B2</Description>
+            <Help>TXT_KEY_PROMOTION_SIEGE_AP_B2_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_SIEGE_AP_B1</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_SIEGE_AP_B2</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_SIEGE_AP_B3</Type>
+            <Description>TXT_KEY_PROMOTION_SIEGE_AP_B3</Description>
+            <Help>TXT_KEY_PROMOTION_SIEGE_AP_B3_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_SIEGE_AP_B2</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_SIEGE_AP_B3</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_SUBMARINE_AP_A1</Type>
+            <Description>TXT_KEY_PROMOTION_SUBMARINE_AP_A1</Description>
+            <Help>TXT_KEY_PROMOTION_SUBMARINE_AP_A1_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_SUBMARINE_AP_A1</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_SUBMARINE_AP_A2</Type>
+            <Description>TXT_KEY_PROMOTION_SUBMARINE_AP_A2</Description>
+            <Help>TXT_KEY_PROMOTION_SUBMARINE_AP_A2_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_SUBMARINE_AP_A1</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_SUBMARINE_AP_A2</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_SUBMARINE_AP_A3</Type>
+            <Description>TXT_KEY_PROMOTION_SUBMARINE_AP_A3</Description>
+            <Help>TXT_KEY_PROMOTION_SUBMARINE_AP_A3_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_SUBMARINE_AP_A2</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_SUBMARINE_AP_A3</PediaEntry>
+        </Row>
+        <Row>
+            <Type>PROMOTION_SUBMARINE_AP_A4</Type>
+            <Description>TXT_KEY_PROMOTION_SUBMARINE_AP_A4</Description>
+            <Help>TXT_KEY_PROMOTION_SUBMARINE_AP_A4_HELP</Help>
+            <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_SUBMARINE_AP_A3</PromotionPrereqOr1>
+            <PortraitIndex>44</PortraitIndex>
+            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PediaType>PEDIA_ATTRIBUTES</PediaType>
+            <PediaEntry>TXT_KEY_PROMOTION_SUBMARINE_AP_A4</PediaEntry>
+        </Row>
+    </UnitPromotions>
+    <UnitPromotions_UnitCombats>
+        <Row>
+			<PromotionType>PROMOTION_NORMAL_PROMOTIONS</PromotionType>
+			<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_NORMAL_PROMOTIONS</PromotionType>
+			<UnitCombatType>UNITCOMBAT_ARMOR</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_NORMAL_PROMOTIONS</PromotionType>
+			<UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_NORMAL_PROMOTIONS</PromotionType>
+			<UnitCombatType>UNITCOMBAT_CARRIER</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_NORMAL_PROMOTIONS</PromotionType>
+			<UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_NORMAL_PROMOTIONS</PromotionType>
+			<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_NORMAL_PROMOTIONS</PromotionType>
+			<UnitCombatType>UNITCOMBAT_HELICOPTER</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_NORMAL_PROMOTIONS</PromotionType>
+			<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_NORMAL_PROMOTIONS</PromotionType>
+			<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_NORMAL_PROMOTIONS</PromotionType>
+			<UnitCombatType>UNITCOMBAT_NAVALMELEE</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_NORMAL_PROMOTIONS</PromotionType>
+			<UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_NORMAL_PROMOTIONS</PromotionType>
+			<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_NORMAL_PROMOTIONS</PromotionType>
+			<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_NORMAL_PROMOTIONS</PromotionType>
+			<UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_AP_PROMOTIONS</PromotionType>
+			<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_AP_PROMOTIONS</PromotionType>
+			<UnitCombatType>UNITCOMBAT_ARMOR</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_AP_PROMOTIONS</PromotionType>
+			<UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_AP_PROMOTIONS</PromotionType>
+			<UnitCombatType>UNITCOMBAT_CARRIER</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_AP_PROMOTIONS</PromotionType>
+			<UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_AP_PROMOTIONS</PromotionType>
+			<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_AP_PROMOTIONS</PromotionType>
+			<UnitCombatType>UNITCOMBAT_HELICOPTER</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_AP_PROMOTIONS</PromotionType>
+			<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_AP_PROMOTIONS</PromotionType>
+			<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_AP_PROMOTIONS</PromotionType>
+			<UnitCombatType>UNITCOMBAT_NAVALMELEE</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_AP_PROMOTIONS</PromotionType>
+			<UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_AP_PROMOTIONS</PromotionType>
+			<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_AP_PROMOTIONS</PromotionType>
+			<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_AP_PROMOTIONS</PromotionType>
+			<UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_ARCHER_AP_A1</PromotionType>
+			<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_ARCHER_AP_A2</PromotionType>
+			<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_ARCHER_AP_A3</PromotionType>
+			<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_ARCHER_AP_A4</PromotionType>
+			<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_ARCHER_AP_B1</PromotionType>
+			<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_ARCHER_AP_B2</PromotionType>
+			<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_ARCHER_AP_B3</PromotionType>
+			<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_ARMOR_AP_A1</PromotionType>
+			<UnitCombatType>UNITCOMBAT_ARMOR</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_ARMOR_AP_A2</PromotionType>
+			<UnitCombatType>UNITCOMBAT_ARMOR</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_ARMOR_AP_A3</PromotionType>
+			<UnitCombatType>UNITCOMBAT_ARMOR</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_ARMOR_AP_A4</PromotionType>
+			<UnitCombatType>UNITCOMBAT_ARMOR</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_ARMOR_AP_B1</PromotionType>
+			<UnitCombatType>UNITCOMBAT_ARMOR</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_ARMOR_AP_B2</PromotionType>
+			<UnitCombatType>UNITCOMBAT_ARMOR</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_ARMOR_AP_B3</PromotionType>
+			<UnitCombatType>UNITCOMBAT_ARMOR</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_BOMBER_AP_A1</PromotionType>
+			<UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_BOMBER_AP_A2</PromotionType>
+			<UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_BOMBER_AP_A3</PromotionType>
+			<UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_BOMBER_AP_A4</PromotionType>
+			<UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_BOMBER_AP_B1</PromotionType>
+			<UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_BOMBER_AP_B2</PromotionType>
+			<UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_BOMBER_AP_B3</PromotionType>
+			<UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_CARRIER_AP_A1</PromotionType>
+			<UnitCombatType>UNITCOMBAT_CARRIER</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_CARRIER_AP_A2</PromotionType>
+			<UnitCombatType>UNITCOMBAT_CARRIER</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_CARRIER_AP_A3</PromotionType>
+			<UnitCombatType>UNITCOMBAT_CARRIER</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_FIGHTER_AP_A1</PromotionType>
+			<UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_FIGHTER_AP_A2</PromotionType>
+			<UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_FIGHTER_AP_A3</PromotionType>
+			<UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_FIGHTER_AP_A4</PromotionType>
+			<UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_FIGHTER_AP_B1</PromotionType>
+			<UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_FIGHTER_AP_B2</PromotionType>
+			<UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_FIGHTER_AP_B3</PromotionType>
+			<UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_GUN_AP_A1</PromotionType>
+			<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_GUN_AP_A2</PromotionType>
+			<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_GUN_AP_A3</PromotionType>
+			<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_GUN_AP_A4</PromotionType>
+			<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_GUN_AP_B1</PromotionType>
+			<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_GUN_AP_B2</PromotionType>
+			<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_GUN_AP_B3</PromotionType>
+			<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_HELICOPTER_AP_A1</PromotionType>
+			<UnitCombatType>UNITCOMBAT_HELICOPTER</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_HELICOPTER_AP_A2</PromotionType>
+			<UnitCombatType>UNITCOMBAT_HELICOPTER</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_HELICOPTER_AP_A3</PromotionType>
+			<UnitCombatType>UNITCOMBAT_HELICOPTER</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_MELEE_AP_A1</PromotionType>
+			<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_MELEE_AP_A2</PromotionType>
+			<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_MELEE_AP_A3</PromotionType>
+			<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_MELEE_AP_A4</PromotionType>
+			<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_MELEE_AP_B1</PromotionType>
+			<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_MELEE_AP_B2</PromotionType>
+			<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_MELEE_AP_B3</PromotionType>
+			<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_MOUNTED_AP_A1</PromotionType>
+			<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_MOUNTED_AP_A2</PromotionType>
+			<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_MOUNTED_AP_A3</PromotionType>
+			<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_MOUNTED_AP_A4</PromotionType>
+			<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_MOUNTED_AP_B1</PromotionType>
+			<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_MOUNTED_AP_B2</PromotionType>
+			<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_MOUNTED_AP_B3</PromotionType>
+			<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_NAVAL_MELEE_AP_A1</PromotionType>
+			<UnitCombatType>UNITCOMBAT_NAVALMELEE</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_NAVAL_MELEE_AP_A2</PromotionType>
+			<UnitCombatType>UNITCOMBAT_NAVALMELEE</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_NAVAL_MELEE_AP_A3</PromotionType>
+			<UnitCombatType>UNITCOMBAT_NAVALMELEE</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_NAVAL_MELEE_AP_A4</PromotionType>
+			<UnitCombatType>UNITCOMBAT_NAVALMELEE</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_NAVAL_MELEE_AP_B1</PromotionType>
+			<UnitCombatType>UNITCOMBAT_NAVALMELEE</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_NAVAL_MELEE_AP_B2</PromotionType>
+			<UnitCombatType>UNITCOMBAT_NAVALMELEE</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_NAVAL_MELEE_AP_B3</PromotionType>
+			<UnitCombatType>UNITCOMBAT_NAVALMELEE</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_NAVAL_RANGED_AP_A1</PromotionType>
+			<UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_NAVAL_RANGED_AP_A2</PromotionType>
+			<UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_NAVAL_RANGED_AP_A3</PromotionType>
+			<UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_NAVAL_RANGED_AP_A4</PromotionType>
+			<UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_NAVAL_RANGED_AP_B1</PromotionType>
+			<UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_NAVAL_RANGED_AP_B2</PromotionType>
+			<UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_NAVAL_RANGED_AP_B3</PromotionType>
+			<UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_RECON_AP_A1</PromotionType>
+			<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_RECON_AP_A2</PromotionType>
+			<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_RECON_AP_A3</PromotionType>
+			<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_SIEGE_AP_A1</PromotionType>
+			<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_SIEGE_AP_A2</PromotionType>
+			<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_SIEGE_AP_A3</PromotionType>
+			<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_SIEGE_AP_A4</PromotionType>
+			<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_SIEGE_AP_B1</PromotionType>
+			<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_SIEGE_AP_B2</PromotionType>
+			<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_SIEGE_AP_B3</PromotionType>
+			<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_SUBMARINE_AP_A1</PromotionType>
+			<UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_SUBMARINE_AP_A2</PromotionType>
+			<UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_SUBMARINE_AP_A3</PromotionType>
+			<UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
+		</Row>
+        <Row>
+			<PromotionType>PROMOTION_SUBMARINE_AP_A4</PromotionType>
+			<UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
+		</Row>
+    </UnitPromotions_UnitCombats>
+</GameData>

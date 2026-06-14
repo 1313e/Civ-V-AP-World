@@ -272,6 +272,16 @@ class Tuner:
 
         await self._send_mod_command(f"UnlockPolicyBranches({{{','.join(map(str, policy_branch_ids))}}})")
 
+    async def grant_promotions(self, promotion_ids: list[int]) -> None:
+        """
+        Grants the promotions with the given `promotion_ids` to the player.
+
+        """
+
+        # Grant all promotions in batches of 10
+        for i in range(0, len(promotion_ids), 10):
+            await self._send_mod_command(f"GrantPromotions({{{','.join(map(str, promotion_ids[i:i+10]))}}})")
+
     async def grant_techs(self, tech_ids: list[int]) -> None:
         """
         Grants the technologies with the given `tech_ids` to the player.
@@ -353,6 +363,22 @@ class Tuner:
         """
 
         await self._send_mod_command(f"ChangeNewCityExtraPopulation({value})")
+
+    async def change_all_unit_experience(self, value: int) -> None:
+        """
+        Changes the experience of all units by the given `value`.
+
+        """
+
+        await self._send_mod_command(f"ChangeAllUnitExperience({value})")
+
+    async def all_unit_free_promotion(self, value: int) -> None:
+        """
+        Grants all units a free promotion `value` times.
+
+        """
+
+        await self._send_mod_command(f"AllUnitFreePromotion({value})")
 
     async def change_culture_per_turn_for_free(self, value: int) -> None:
         """

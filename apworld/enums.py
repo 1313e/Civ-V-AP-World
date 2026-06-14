@@ -23,7 +23,9 @@ class CivVFillerType(StrEnum):
 
     """
 
+    all_unit_free_promotion = "all_unit_free_promotion"
     change_all_city_population = "change_all_city_population"
+    change_all_unit_experience = "change_all_unit_experience"
     change_culture = "change_culture"
     change_culture_per_turn_for_free = "change_culture_per_turn_for_free"
     change_extra_happiness_per_city = "change_extra_happiness_per_city"
@@ -138,6 +140,7 @@ class CivVItemType(StrEnum):
     bonus = "bonus"
     era = "era"
     policy = "policy"
+    promotion = "promotion"
     settler = "settler"
     tech = "tech"
     trap = "trap"
@@ -152,6 +155,7 @@ class CivVLocationType(StrEnum):
     building = "building"
     policy = "policy"
     policy_branch = "policy_branch"
+    promotion = "promotion"
     tech = "tech"
     national_wonder = "national_wonder"
     settler = "settler"

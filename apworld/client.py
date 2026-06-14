@@ -344,9 +344,6 @@ class CivVClient:
 
         """
 
-        # Set the options table in the game
-        await self.tuner.set_options_table(self.ctx.slot_data.apmod_options)
-
         # Mark all checked locations for the player
         locations_to_mark: dict[CivVLocationType, list[int]] = {x: [] for x in CivVLocationType}
         for location_id_to_mark in self.ctx.checked_locations:
@@ -390,6 +387,7 @@ class CivVClient:
         # Grant all items that have not been received by the player yet
         filler_to_send = defaultdict(int)
         policies_to_send = []
+        promotions_to_send = []
         techs_to_send = []
         settlers_to_send = 0
         items_to_receive = self.ctx.items_received[len(self.ctx.received_item_ids):]
@@ -407,6 +405,8 @@ class CivVClient:
                     techs_to_send.append(item.game_ids[self.ctx.received_item_ids.count(network_item.item)])
                 case CivVItemType.policy:
                     policies_to_send.append(item.game_ids[self.ctx.received_item_ids.count(network_item.item)])
+                case CivVItemType.promotion:
+                    promotions_to_send.append(item.game_ids[self.ctx.received_item_ids.count(network_item.item)])
                 case CivVItemType.settler:
                     settlers_to_send += 1
                 case CivVItemType.bonus | CivVItemType.trap:
@@ -416,9 +416,11 @@ class CivVClient:
             # Add ID to list of received IDs to account for multiple progressive items being sent at once
             self.ctx.received_item_ids.append(network_item.item)
 
-        # Grant all policies and techs at once, as it is far more efficient
+        # Grant all policies; promotions; and techs at once, as it is far more efficient
         if policies_to_send:
             await self.tuner.grant_policies(policies_to_send)
+        if promotions_to_send:
+            await self.tuner.grant_promotions(promotions_to_send)
         if techs_to_send:
             await self.tuner.grant_techs(techs_to_send)
 
