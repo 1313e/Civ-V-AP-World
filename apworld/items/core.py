@@ -31,6 +31,7 @@ __all__ = [
     "CivVProgressionItemData",
     "CivVUsefulItemData",
     "ItemRequirements",
+    "ItemRequirementsUnion",
 ]
 
 
@@ -97,6 +98,12 @@ class ItemRequirements:
         self._progressive = functools.reduce(self._merge_dicts, (x.progressive for x in requirements), progressive)
         self._progression = {*itertools.chain.from_iterable(x.progression for x in requirements), *progression}
 
+    def __or__(self, other: "ItemRequirements | ItemRequirementsUnion") -> "ItemRequirementsUnion":
+        return ItemRequirementsUnion(or_requirements=[self, other])
+
+    def __and__(self, other: "ItemRequirements | ItemRequirementsUnion") -> "ItemRequirementsUnion":
+        return ItemRequirementsUnion(and_requirements=[self, other])
+
     @property
     def progressive(self) -> dict["CivVProgressiveItemData", int]:
         """
@@ -155,6 +162,63 @@ class ItemRequirements:
         # Create rule function that uses the CollectionState to determine if region/location is reachable
         def rule(state: CollectionState) -> bool:
             return all((state.has(name, player, count) for name, count in requirements.items()))
+
+        # Return created rule
+        return rule
+
+
+class ItemRequirementsUnion:
+    """
+    Class used for specifying item requirement unions.
+
+    """
+
+    def __init__(
+        self,
+        or_requirements: list["ItemRequirements | ItemRequirementsUnion"] | None = None,
+        and_requirements: list["ItemRequirements | ItemRequirementsUnion"] | None = None,
+    ):
+        """
+        Initializes this item requirements union, combining the given `or_requirements` or `and_requirements` into a
+        single union.
+
+        """
+
+        # Check that not both requirement types are provided
+        if or_requirements is not None and and_requirements is not None:
+            raise ValueError("Only one of 'or_requirements' and 'and_requirements' may be given.")
+
+        # Store the given requirements
+        _or_requirements = [*or_requirements] if or_requirements is not None else []
+        _and_requirements = [*and_requirements] if and_requirements is not None else []
+        self._or_requirements: list["ItemRequirements | ItemRequirementsUnion"] = _or_requirements
+        self._and_requirements: list["ItemRequirements | ItemRequirementsUnion"] = _and_requirements
+
+    def __or__(self, other: "ItemRequirements | ItemRequirementsUnion") -> "ItemRequirementsUnion":
+        return ItemRequirementsUnion(or_requirements=[self, other])
+
+    def __and__(self, other: "ItemRequirements | ItemRequirementsUnion") -> "ItemRequirementsUnion":
+        return ItemRequirementsUnion(and_requirements=[self, other])
+
+    def create_access_rule(self, player: int, options: PerGameCommonOptions) -> Callable[[CollectionState], bool]:
+        """
+        Creates the access rule function for this instance and returns it.
+
+        This function can be used as the access rule when creating :class:`Region` and :class:`Location` instances.
+
+        """
+
+        # Create rule function that uses the CollectionState to determine if region/location is reachable
+        if self._or_requirements:
+            rules = [x.create_access_rule(player, options) for x in self._or_requirements]
+
+            def rule(state: CollectionState) -> bool:
+                return any((x(state) for x in rules))
+        else:
+            rules = [x.create_access_rule(player, options) for x in self._and_requirements]
+
+            def rule(state: CollectionState) -> bool:
+                return all((x(state) for x in rules))
 
         # Return created rule
         return rule

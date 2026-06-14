@@ -52,7 +52,7 @@ class CivVLocationData:
     "Prefix for the substitution key in the XML database files for this location, if it applicable"
     region: regions.CivVRegionData | None = None
     "The region of this location. If None, this location is in the origin region"
-    requirements: items.ItemRequirements = field(default_factory=items.ItemRequirements)
+    requirements: items.ItemRequirements | items.ItemRequirementsUnion = field(default_factory=items.ItemRequirements)
     "Required items to access this location, in addition to the region's requirements"
     prefix: str | None = None
     "Prefix to use for this location's name. By default, the location type is used"
