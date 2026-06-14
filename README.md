@@ -6,6 +6,7 @@
 - [Civilization V AP World](https://github.com/1313e/Civ-V-AP-World/releases)
 - OPTIONAL: [Civilization V AP PopTracker Pack](https://github.com/Sparky5000/Civ5APpoptracker/releases)
 
+
 ## Setup
 - Download the latest APWorld from the [releases](https://github.com/1313e/Civ-V-AP-World/releases) page.
 - Install the APWorld by double-clicking it or copying it over yourself to the `custom_worlds` folder in `Archipelago`.
@@ -13,20 +14,76 @@
   This only needs to be done once.
   - NOTE: Enabling the FireTuner disables achievements, so if you wish to play Civ V with achievements in between AP sessions, make sure to disable this and re-enable it later.
 
+
 ## Joining a MultiWorld Game
-- Download the patch file for your Civ V slot and open it with the `Archipelago Launcher`.
-  - If this is your first time doing this, the launcher will ask you to provide the location of your Civ V mods folder.
-    By default, this should be `~/Documents/My Games/Sid Meier's Civilization 5/MODS`.
-    If the folder does not exist yet, simply create it (note that the folder name is in all-caps).
+- Download the patch file for your Civ V slot and open it with the `Archipelago Launcher`. When playing Archipelago locally, the patch file will be inside the generated ZIP that you use to host locally. Extract the ZIP to get access to the patch file.
+  - If this is your first time opening a Civ V patch file, the launcher will ask you to provide the location of your Civ V mods folder.
+    By default, this should be `~/Documents/My Games/Sid Meier's Civilization 5/MODS`, but it can be a different folder for some installations, including OneDrive folders if you use automated cloud storage.
+    NOTE: It will not be in the Steam installation folder.
 - Opening the patch file as stated above also automatically opens the `Civ V Client` for you.
   The client will start echoing that it is waiting for Civ V to be ready.
-- Open Civ V and make sure to enable and load the `CivVAPMod` via the "Mods" menu first, and then click "Singleplayer" (which should be the only option you get besides "Back").
-  - The small subtitle of the mod should be the same as the name of the patch file you downloaded.
+- Open Civ V and make sure to enable and load the `CivVAPMod` via the "Mods" menu first, and then click "Single Player" (which should be the only option you get besides "Back").
+  - The small subtitle of the mod should be the same as the name of the patch file you downloaded/extracted.
 - Set up your singleplayer game and start it.
-- Once you are in-game, the client will stop echoing that it is waiting for the game to be ready, indicating that the two are connected.
-  - If you get the notification that the IDs are not matching, then the slot your `Civ V Client` is connected to is not the same as the one responsible for the `CivVAPMod` version you have loaded right now.
-    Make sure to download the correct patch file for the target slot and open it to get the correct version.
+- Once you are in-game, you will get two notifications: The first indicating that the `CivVAPMod` itself is loaded and the second indicating that it has successfully connected to the `Civ V Client`.
 - Start playing. :)
+
+
+## Troubleshooting
+
+### WTF is a "Snack from Thes"?
+This filler item gives you 200 Gold; 200 Culture; and 100 Faith.
+Unlike all other items in the game, this one breaks naming convention and instead is named after my sister, who requested an item to be named after her.
+It has a higher chance of appearing compared to other similar filler items.
+
+### There is no patch file
+Patch files for Civ V AP were introduced in v0.8.0.
+If you get no patch file, then the version of the APWorld used to generate the multiworld is older than that.
+Make sure you use the most recent version from the [releases](https://github.com/1313e/Civ-V-AP-World/releases) page.
+
+### Civ V Client keeps echoing "Waiting for Civ V to start..."
+Either the `EnableTuner` in the Civ V config file (see `Setup` above) is not set to `1` or the FireTuner program from the Civ V SDK is currently running.
+Make sure both of these potential issues are fixed.
+
+### Civ V Client keeps echoing "Waiting for Civ V AP Mod to be ready..."
+The Civ V AP Mod is currently not loaded, and therefore not responding to the client.
+In Civ V, mods are only loaded during the load screen when starting an actual game.
+Make sure that, starting from the game's main menu, you go:
+
+- Mods
+- Accept
+- *Enable correct version of `CivVAPMod`*
+- Next (should show `CivVAPMod` being in use on this screen)
+- Single Player
+- *When starting a new game*:
+  - Set Up Game
+  - Start Game
+  - Begin Your Journey
+- *When loading a game*:
+  - Load Game
+  - Load Game
+  - Continue Your Journey
+
+Only after this final click on `Begin Your Journey` (or `Continue Your Journey` if loading a save file), does the mod actually become active for the client.
+
+### Civ V Client keeps echoing "Loaded Civ V AP Mod does not match the ID of the connected slot"
+This happens when the slot your `Civ V Client` is connected to (so, the room port plus slot name) is not the same slot as the one whose patch file you opened to get the `CivVAPMod` version you have loaded currently.
+In other words, you are using a version of the `CivVAPMod` meant for a different slot or maybe a different Archipelago entirely.
+Make sure you get the proper patch file for the slot you wish to play.
+Remember that the subtitle (called a teaser in Civ V) of the correct `CivVAPMod` will be exactly the same as the name of the patch file it belongs to.
+
+### Civ V crashes the moment the game is loaded
+There can be several reasons for this, but the vast majority of them are due to either of the following two:
+
+- You are not running Civ V with both Gods & Kings and Brave New World DLCs installed, plus all Civilization packs.
+  Make sure they are all installed and that the version of Civ V is `1.0.3.279` (shown on the main menu at the bottom).
+- You have other mods currently active that interfere with the `CivVAPMod`.
+  Given that the `CivVAPMod` modifies almost all databases in Civ V, most mods will not work together with it.
+  The `CivVAPMod` is meant to be an Archipelago version of vanilla Civ V and thus no compatibility with any mod will be taken into account.
+  If you do find a mod that is compatible, then this will be a coincidence and this may change very well in the future.
+
+If you checked that neither of the above reasons are the cause for the crashing of the game, please reach out to me (@1313e) on the [AP Discord](https://discord.com/channels/731205301247803413/1342924294757552229) and I will try to help.
+
 
 ## Configuring your YAML file
 
@@ -135,13 +192,3 @@ All locations and victory itself can, theoretically, be obtained without ever re
   It is sadly not possible to fix this.
 
 If you find any other ones, please post a message in the [AP Discord](https://discord.com/channels/731205301247803413/1342924294757552229) and ping me (@1313e) in the message.
-
-
-## Future implementation/improvement ideas
-Some ideas I currently have that I want to look into (in order of priority):
-- Adding ability to add a specific required victory to the AP.
-- Creating a Poptracker pack for the AP.
-
-
-## Other notes
-- There is a bonus item in the AP named `Snack from Thes`. This item gives you 200 Gold; 200 Culture; and 100 Faith. Unlike all other items in the game, this one breaks naming convention and instead is named after my sister, who requested an item to be named after her. It has a slightly higher chance of appearing compared to the other filler items.
