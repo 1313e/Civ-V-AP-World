@@ -64,6 +64,11 @@
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
+        <FileName>HandicapInfos.xml</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
         <FileName>NationalWonders.xml</FileName>
       </Action>
       <Action>
@@ -132,6 +137,10 @@
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
     <Content Include="BuildingTextInfos.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="HandicapInfos.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>

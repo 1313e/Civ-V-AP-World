@@ -1163,4 +1163,7 @@
             <PrereqPolicy>POLICY_RATIONALISM_AP3</PrereqPolicy>
         </Row>
     </Policy_PreReqPolicies>
+    <Policy_FreeUnitClasses>
+        {policy_collective_rule_free_settler}
+    </Policy_FreeUnitClasses>
 </GameData>

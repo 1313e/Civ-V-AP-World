@@ -40,6 +40,7 @@ class CivVContainer(APPlayerContainer):
         "templates/apmod/Buildings.xml",
         "templates/apmod/BuildingTextInfos.xml",
         "templates/apmod/CivVAPMod (v 1).modinfo",
+        "templates/apmod/HandicapInfos.xml",
         "templates/apmod/json.lua",
         "templates/apmod/NationalWonders.xml",
         "templates/apmod/NationalWonderTextInfos.xml",
@@ -195,12 +196,25 @@ class CivVContainer(APPlayerContainer):
 
         """
 
+        # If settler sanity is enabled, free settlers cannot be obtained from policy Collective Rule or Goody Huts
+        if self.world.options.settler_sanity:
+            policy_collective_rule = '<Delete PolicyType="POLICY_COLLECTIVE_RULE" UnitClassType="UNITCLASS_SETTLER"/>'
+            goody_hut = '<Delete Type="GOODY_SETTLER"/>'
+            handicap_settler_goodies = '<Delete HandicapType="HANDICAP_SETTLER" GoodyType="GOODY_SETTLER"/>'
+        else:
+            policy_collective_rule = ""
+            goody_hut = ""
+            handicap_settler_goodies = ""
+
         # Create dict holding all substitutions
         dct = {
             "policy_cost_modifier": str(self.world.options.policy_cost_modifier-100),
             "option_satellites_meets_all": json.dumps(bool(self.world.options.satellites_meets_all)),
             "option_settler_sanity": json.dumps(bool(self.world.options.settler_sanity)),
             "option_settler_sanity_amount": json.dumps(int(self.world.options.settler_sanity_amount)),
+            "policy_collective_rule_free_settler": policy_collective_rule,
+            "goody_hut_free_settler": goody_hut,
+            "handicap_settler_goodies_free_settler": handicap_settler_goodies,
         }
         settler_locations: dict[str, str] = {}
 
