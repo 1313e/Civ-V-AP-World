@@ -2739,8 +2739,8 @@
             <Help>TXT_KEY_TECH_CULTURE_BOOST_HELP</Help>
             <Era>ERA_ANCIENT</Era>
             <Repeat>true</Repeat>
-            <Trade>true</Trade>
-            <GoodyTech>true</GoodyTech>
+            <Trade>false</Trade>
+            <GoodyTech>false</GoodyTech>
             <GridX>0</GridX>
             <GridY>1</GridY>
             <Quote>---</Quote>

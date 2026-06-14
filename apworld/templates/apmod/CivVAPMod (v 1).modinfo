@@ -43,7 +43,7 @@
     <File md5="818E5B623F9F56C4C44E0CF87C2518F3" import="0">PolicyBranchTextInfos.xml</File>
     <File md5="27578FE454F371F1086368E9C3083363" import="0">Processes.xml</File>
     <File md5="5754B1BE6E37A2F9D04D9D4149E5CDDF" import="1">SaveUtils.lua</File>
-    <File md5="E526E7FF1D4329FE3554C3D15F5E3583" import="0">Technologies.xml</File>
+    <File md5="462CB60078DB1FCC59A9E080DD594D76" import="0">Technologies.xml</File>
     <File md5="8E04D2664959F5E8F4B42F8D559DF582" import="0">TechnologyTextInfos.xml</File>
     <File md5="C338CA6823479580C00B54F4F3A147C7" import="0">Units.xml</File>
     <File md5="5C85569047E691D999259834BFAC85B2" import="0">UnitTextInfos.xml</File>
