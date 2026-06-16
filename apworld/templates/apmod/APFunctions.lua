@@ -364,6 +364,24 @@ function OnUnitPromoted(playerId, unitId, promotionId)
     end
 end
 
+function OnUnitUpgraded(playerId, oldUnitId, unitId, goodyHut)
+    -- If the player upgrades a unit to a new unit without using a goody hut, send it if it is a supported unit
+    if(playerId == player:GetID() and not goodyHut) then
+        -- Given unitId is the ID of the unit instance. Convert to the ID of its type
+        unit = player:GetUnitByID(unitId)
+        unitId = unit:GetUnitType()
+
+        -- Standard units
+        if(unitIds[unitId]) then
+            SendLocation("unit", unitId)
+
+        -- Civ-unique units
+        elseif(civUniqueUnitIdToUnitId[unitId] ~= nil) then
+            SendLocation("unit", civUniqueUnitIdToUnitId[unitId])
+        end
+    end
+end
+
 function OnNotificationAdded(notification, notificationType, toolTip, summary, gameValue, extraGameData)
     -- If the player gets a free social policy but has none to pick, set number of free policies to zero
     if(notificationType == NotificationTypes.NOTIFICATION_FREE_POLICY and not HasPolicyToUnlock()) then
@@ -821,6 +839,7 @@ function Init()
     GameEvents.CityTrained.Add(OnCityUnitTrained)
     GameEvents.CityCanTrain.Add(OnCityCanTrain)
     GameEvents.UnitPromoted.Add(OnUnitPromoted)
+    GameEvents.UnitUpgraded.Add(OnUnitUpgraded)
 
     -- Make sure that allow policy saving is turned on
     Game.SetOption(GameOptionTypes.GAMEOPTION_POLICY_SAVING, true)

@@ -22,7 +22,7 @@
   <References />
   <Blocks />
   <Files>
-    <File md5="8A8BE8A441B290545CE8F780BD8A117C" import="0">APFunctions.lua</File>
+    <File md5="DB37AEA52A79FED68A84D30448683A93" import="0">APFunctions.lua</File>
     <File md5="5B9C45533A8E74AF2E2730D92A306343" import="0">Buildings.xml</File>
     <File md5="F09C389A22E4DB7CAF6929109092774C" import="0">BuildingTextInfos.xml</File>
     <File md5="43CB6E8FA3007C683DD5CE7EA065E33C" import="0">HandicapInfos.xml</File>
