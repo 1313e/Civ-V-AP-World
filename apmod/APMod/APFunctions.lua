@@ -433,12 +433,24 @@ function UpdateTextInfos(tableName, locationId)
     -- Update the description and help text infos keys to their clean versions if possible
     clean_description_key = GameInfo[tableName][locationId].Description .. "_CLEAN"
     if Locale.ConvertTextKey(clean_description_key) ~= clean_description_key then
+        ReplaceTextKey(GameInfo[tableName][locationId].Description, Locale.ConvertTextKey(clean_description_key))
         GameInfo[tableName][locationId].Description = clean_description_key
     end
     clean_help_key = GameInfo[tableName][locationId].Help .. "_CLEAN"
     if Locale.ConvertTextKey(clean_help_key) ~= clean_help_key then
+        ReplaceTextKey(GameInfo[tableName][locationId].Help, Locale.ConvertTextKey(clean_help_key))
         GameInfo[tableName][locationId].Help = clean_help_key
     end
+end
+
+function ReplaceTextKey(key, value)
+	-- Replace text for given 'key' with provided value. Escape single quotation marks
+	DB.Query(table.concat({"UPDATE Language_en_US SET Text = '", value:gsub("'", "''"), "' WHERE Tag = '", key, "'"}))()
+end
+
+function RefreshLocale()
+	-- Refresh the Locale language
+	Locale.SetCurrentLanguage(Locale.GetCurrentLanguage().Type)
 end
 
 function SyncTextInfos()
@@ -449,6 +461,11 @@ function SyncTextInfos()
                 UpdateTextInfos(tableName, locationId)
             end
         end
+    end
+
+    -- If promotion sanity is enabled, refresh the locale such that promotion action buttons are updated
+    if optionsTable["promotion_sanity"] then
+        RefreshLocale()
     end
 end
 
@@ -469,6 +486,11 @@ function SendLocation(type, locationId, textInfoId)
 
     -- Save the location table
     SaveScriptData("location_table", locationTable)
+
+    -- If promotion sanity is enabled, refresh the locale such that promotion action buttons are updated
+    if type == "promotion" and optionsTable["promotion_sanity"] then
+        RefreshLocale()
+    end
 end
 
 function PrintResponse(response)
@@ -793,6 +815,11 @@ function AP.UpdateLocationTable(type, locationIds, is_finished)
     -- If this was the final update to be performed, save the location table
     if is_finished then
         SaveScriptData("location_table", locationTable)
+    end
+
+    -- If promotion sanity is enabled, refresh the locale such that promotion action buttons are updated
+    if optionsTable["promotion_sanity"] then
+        RefreshLocale()
     end
 end
 
