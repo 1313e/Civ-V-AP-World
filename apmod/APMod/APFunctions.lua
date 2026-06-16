@@ -17,6 +17,8 @@ local LOWER_TECH_ID = 83
 local UPPER_TECH_ID = 168
 local LOWER_TEAM_ID = 0
 local UPPER_TEAM_ID = 62
+local LOWER_MINOR_CIV_ID = 22
+local UPPER_MINOR_CIV_ID = 62
 local BASE_CULTURE_TECH_YIELD = 1800
 
 local player = Players[Game.GetActivePlayer()]
@@ -167,6 +169,12 @@ local unitIdToObsoleteTechId = {
     [130]=28, [131]=36, [132]=56, [134]=62, [135]=62, [136]=63, [137]=65, [138]=59,
     [141]=58, [142]=44, [144]=63,
     [150]=29, [151]=69, [152]=49, [153]=59, [154]=36, [155]=42, [156]=59, [158]=30,
+}
+local landUnitIds = {
+    23, 25, 26, 28, 29, 30, 31, 32, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55,
+    56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84,
+    88, 90, 92, 93, 94, 95, 96, 97, 98, 99, 100, 102, 103, 105, 106, 108, 109, 110, 120, 121, 122, 130, 132, 133, 134,
+    135, 136, 137, 141, 142, 144, 150, 151, 152, 153, 155, 156, 157, 158,
 }
 local textInfoLinkedIds = {
     Buildings={
@@ -526,6 +534,51 @@ function ChangeFreePoliciesToGrant(value)
     SaveScriptData("free_policies_to_grant", freePoliciesToGrant)
 end
 
+function GetTrainableUnitIds()
+    -- Create table with all units the player can train currently
+    trainableUnitIds = {}
+    for _, unitId in ipairs(landUnitIds) do
+        if player:CanTrain(unitId, nil, nil, true, false) then
+            table.insert(trainableUnitIds, unitId)
+        end
+    end
+
+    -- Return it
+    return trainableUnitIds
+end
+
+function GetNearestEmptyPlot(city)
+    -- Loop through expanding rings around the city
+    radius = 5
+    for dx = -radius, radius do
+        for dy = -radius, radius do
+            -- Get the plot at these specific coordinates
+            plot = Map.PlotXYWithRangeCheck(city:GetX(), city:GetY(), dx, dy, radius)
+
+            -- If this plot exists, check that it is land; not a city; and has no units. If so, return it
+            if plot ~= nil then
+                if not plot:IsWater() and not plot:IsMountain() and not plot:IsCity() and plot:GetNumUnits() == 0 then
+                    return plot
+                end
+            end
+        end
+    end
+
+    -- If we cannot find anything, return nil instead
+    return nil
+end
+
+function Shuffle(array)
+    -- Randomly permutate the given array
+   returnArray = {}
+   for i = #array, 1, -1 do
+      j = math.random(i)
+      array[i], array[j] = array[j], array[i]
+      table.insert(returnArray, array[i])
+   end
+   return returnArray
+end
+
 function SetCultureTechYield()
     -- Set the culture yield for the culture tech to a value based on game speed and difficulty
     speedModifier = cultureTechYieldSpeedModifier[Game.GetGameSpeedType()]
@@ -718,6 +771,28 @@ function AP.ChangeNumFreeTechs(value)
     player:AddNotification(NotificationTypes.NOTIFICATION_FREE_TECH, "You may choose a free Tech!")
 end
 
+function AP.GrantFreeUnit(n)
+    -- Grant the player a free unit, n times
+    trainableUnitIds = GetTrainableUnitIds()
+    for _=1, n do
+        player:AddFreeUnit(trainableUnitIds[math.random(#trainableUnitIds)])
+    end
+end
+
+function AP.GrantFreeWorker(n)
+    -- Grant the player a free Worker, n times
+    for _=1, n do
+        player:AddFreeUnit(1)
+    end
+end
+
+function AP.ChangeAllCityStateInfluence(value)
+    -- Change influence with all city-states by given value
+    for i=LOWER_MINOR_CIV_ID, UPPER_MINOR_CIV_ID do
+        player:ChangeMinorCivFriendshipWithMajor(i, value)
+    end
+end
+
 function AP.ChangeAllCityPopulation(value)
     -- Change the population in each city of the player by given value
     for city in player:Cities() do
@@ -737,7 +812,7 @@ function AP.ChangeAllUnitExperience(value)
     end
 end
 
-function AP.AllUnitFreePromotion(n)
+function AP.AllUnitsFreePromotion(n)
     -- Grant all units of the player a free promotion, n times
     for _=1, n do
         for unit in player:Units() do
@@ -790,6 +865,40 @@ function AP.DeclareWarRandom(n)
     -- Pick n times a random AI team that declares war on the player
     for _=1, n do
         Teams[aiTeamIds[math.random(1, #aiTeamIds)]]:DeclareWar(team:GetID())
+    end
+end
+
+function AP.ShuffleUnits()
+    -- Get the locations of all units of the player
+    unitLocations = {}
+    for unit in player:Units() do
+        table.insert(unitLocations, {unit:GetX(), unit:GetY()})
+    end
+
+    -- Shuffle them
+    newLocations = Shuffle(unitLocations)
+
+    -- Assign all units their new position
+    for unit in player:Units() do
+        XY = table.remove(newLocations, 1)
+        unit:SetXY(XY[1], XY[2])
+    end
+end
+
+function AP.SpawnBarbarians(n)
+    -- Get capital of player. Return immediately if there is no capital
+    capital = player:GetCapitalCity()
+    if city == nil then
+        return
+    end
+
+    -- Spawn n Barbarians near the player's capital
+    trainableUnitIds = GetTrainableUnitIds()
+    for _=1, n do
+        plot = GetNearestEmptyPlot(capital)
+        if plot ~= nil then
+            Players[63]:InitUnit(trainableUnitIds[math.random(#trainableUnitIds)], plot:GetX(), plot:GetY())
+        end
     end
 end
 

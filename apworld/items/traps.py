@@ -9,9 +9,9 @@ __all__ = []
 
 
 # %% ITEM DECLARATIONS
-GOLD_TRAP_ITEMS: dict[str, CivVFillerItemData] = {
-    "Minor Gold": CivVFillerItemData(
-        name="Minor Gold",
+TRAP_ITEMS: list[CivVFillerItemData] = [
+    CivVFillerItemData(
+        name="Gold: -50",
         type=CivVItemType.trap,
         classification=ItemClassification.trap,
         weight=25,
@@ -19,8 +19,8 @@ GOLD_TRAP_ITEMS: dict[str, CivVFillerItemData] = {
             CivVFillerType.change_gold: -50,
         }
     ),
-    "Gold": CivVFillerItemData(
-        name="Gold",
+    CivVFillerItemData(
+        name="Gold: -100",
         type=CivVItemType.trap,
         classification=ItemClassification.trap,
         weight=15,
@@ -28,8 +28,8 @@ GOLD_TRAP_ITEMS: dict[str, CivVFillerItemData] = {
             CivVFillerType.change_gold: -100,
         }
     ),
-    "Major Gold": CivVFillerItemData(
-        name="Major Gold",
+    CivVFillerItemData(
+        name="Gold: -250",
         type=CivVItemType.trap,
         classification=ItemClassification.trap,
         weight=3,
@@ -37,13 +37,8 @@ GOLD_TRAP_ITEMS: dict[str, CivVFillerItemData] = {
             CivVFillerType.change_gold: -250,
         }
     ),
-}
-"Dict of all gold trap items"
-
-
-CULTURE_TRAP_ITEMS: dict[str, CivVFillerItemData] = {
-    "Minor Culture": CivVFillerItemData(
-        name="Minor Culture",
+    CivVFillerItemData(
+        name="Culture: -50",
         type=CivVItemType.trap,
         classification=ItemClassification.trap,
         weight=25,
@@ -51,8 +46,8 @@ CULTURE_TRAP_ITEMS: dict[str, CivVFillerItemData] = {
             CivVFillerType.change_culture: -50,
         }
     ),
-    "Culture": CivVFillerItemData(
-        name="Culture",
+    CivVFillerItemData(
+        name="Culture: -100",
         type=CivVItemType.trap,
         classification=ItemClassification.trap,
         weight=15,
@@ -60,8 +55,8 @@ CULTURE_TRAP_ITEMS: dict[str, CivVFillerItemData] = {
             CivVFillerType.change_culture: -100,
         }
     ),
-    "Major Culture": CivVFillerItemData(
-        name="Major Culture",
+    CivVFillerItemData(
+        name="Culture: -250",
         type=CivVItemType.trap,
         classification=ItemClassification.trap,
         weight=3,
@@ -69,13 +64,8 @@ CULTURE_TRAP_ITEMS: dict[str, CivVFillerItemData] = {
             CivVFillerType.change_culture: -250,
         }
     ),
-}
-"Dict of all culture trap items"
-
-
-FAITH_TRAP_ITEMS: dict[str, CivVFillerItemData] = {
-    "Minor Faith": CivVFillerItemData(
-        name="Minor Faith",
+    CivVFillerItemData(
+        name="Faith: -25",
         type=CivVItemType.trap,
         classification=ItemClassification.trap,
         weight=25,
@@ -83,8 +73,8 @@ FAITH_TRAP_ITEMS: dict[str, CivVFillerItemData] = {
             CivVFillerType.change_faith: -25,
         }
     ),
-    "Faith": CivVFillerItemData(
-        name="Faith",
+    CivVFillerItemData(
+        name="Faith: -50",
         type=CivVItemType.trap,
         classification=ItemClassification.trap,
         weight=15,
@@ -92,8 +82,8 @@ FAITH_TRAP_ITEMS: dict[str, CivVFillerItemData] = {
             CivVFillerType.change_faith: -50,
         }
     ),
-    "Major Faith": CivVFillerItemData(
-        name="Major Faith",
+    CivVFillerItemData(
+        name="Faith: -125",
         type=CivVItemType.trap,
         classification=ItemClassification.trap,
         weight=3,
@@ -101,13 +91,26 @@ FAITH_TRAP_ITEMS: dict[str, CivVFillerItemData] = {
             CivVFillerType.change_faith: -125,
         }
     ),
-}
-"Dict of all faith trap items"
-
-
-ALL_CITY_POPULATION_TRAP_ITEMS: dict[str, CivVFillerItemData] = {
-    "All City Population -1": CivVFillerItemData(
-        name="All City Population -1",
+    CivVFillerItemData(
+        name="All City-State Influence: -15",
+        type=CivVItemType.trap,
+        classification=ItemClassification.trap,
+        weight=4,
+        action={
+            CivVFillerType.change_all_city_state_influence: -15,
+        }
+    ),
+    CivVFillerItemData(
+        name="All City-State Influence: -30",
+        type=CivVItemType.trap,
+        classification=ItemClassification.trap,
+        weight=2,
+        action={
+            CivVFillerType.change_all_city_state_influence: -30,
+        }
+    ),
+    CivVFillerItemData(
+        name="All City Population: -1",
         type=CivVItemType.trap,
         classification=ItemClassification.trap,
         weight=5,
@@ -115,8 +118,8 @@ ALL_CITY_POPULATION_TRAP_ITEMS: dict[str, CivVFillerItemData] = {
             CivVFillerType.change_all_city_population: -1,
         }
     ),
-    "All City Population -2": CivVFillerItemData(
-        name="All City Population -2",
+    CivVFillerItemData(
+        name="All City Population: -2",
         type=CivVItemType.trap,
         classification=ItemClassification.trap,
         weight=2,
@@ -124,29 +127,59 @@ ALL_CITY_POPULATION_TRAP_ITEMS: dict[str, CivVFillerItemData] = {
             CivVFillerType.change_all_city_population: -2,
         }
     ),
-}
-"Dict of city population trap items"
-
-
-DENOUNCE_TRAP_ITEM: CivVFillerItemData = CivVFillerItemData(
-    name="Denounce",
-    type=CivVItemType.trap,
-    classification=ItemClassification.trap,
-    weight=2,
-    action={
-        CivVFillerType.denounce_random: 1,
-    }
-)
-"Denounce trap item"
-
-
-WAR_TRAP_ITEM: CivVFillerItemData = CivVFillerItemData(
-    name="War",
-    type=CivVItemType.trap,
-    classification=ItemClassification.trap,
-    weight=1,
-    action={
-        CivVFillerType.declare_war_random: 1,
-    }
-)
-"War trap item"
+    CivVFillerItemData(
+        name="Barbarians: 1",
+        type=CivVItemType.trap,
+        classification=ItemClassification.trap,
+        weight=6,
+        action={
+            CivVFillerType.spawn_barbarians: 3,
+        }
+    ),
+        CivVFillerItemData(
+        name="Barbarians: 3",
+        type=CivVItemType.trap,
+        classification=ItemClassification.trap,
+        weight=3,
+        action={
+            CivVFillerType.spawn_barbarians: 3,
+        }
+    ),
+    CivVFillerItemData(
+        name="Barbarians: 6",
+        type=CivVItemType.trap,
+        classification=ItemClassification.trap,
+        weight=1,
+        action={
+            CivVFillerType.spawn_barbarians: 6,
+        }
+    ),
+    CivVFillerItemData(
+        name="Shuffle Units",
+        type=CivVItemType.trap,
+        classification=ItemClassification.trap,
+        weight=4,
+        action={
+            CivVFillerType.shuffle_units: 1,
+        }
+    ),
+    CivVFillerItemData(
+        name="Denounce",
+        type=CivVItemType.trap,
+        classification=ItemClassification.trap,
+        weight=2,
+        action={
+            CivVFillerType.denounce_random: 1,
+        }
+    ),
+    CivVFillerItemData(
+        name="War",
+        type=CivVItemType.trap,
+        classification=ItemClassification.trap,
+        weight=1,
+        action={
+            CivVFillerType.declare_war_random: 1,
+        }
+    ),
+]
+"List of all trap items"

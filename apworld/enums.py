@@ -23,8 +23,9 @@ class CivVFillerType(StrEnum):
 
     """
 
-    all_unit_free_promotion = "all_unit_free_promotion"
+    all_units_free_promotion = "all_units_free_promotion"
     change_all_city_population = "change_all_city_population"
+    change_all_city_state_influence = "change_all_city_state_influence"
     change_all_unit_experience = "change_all_unit_experience"
     change_culture = "change_culture"
     change_culture_per_turn_for_free = "change_culture_per_turn_for_free"
@@ -37,6 +38,10 @@ class CivVFillerType(StrEnum):
     change_new_city_extra_population = "change_new_city_extra_population"
     declare_war_random = "declare_war_random"
     denounce_random = "denounce_random"
+    grant_free_unit = "grant_free_unit"
+    grant_free_worker = "grant_free_worker"
+    shuffle_units = "shuffle_units"
+    spawn_barbarians = "spawn_barbarians"
     start_golden_age = "start_golden_age"
 
 

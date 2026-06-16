@@ -348,6 +348,30 @@ class Tuner:
 
         await self._send_mod_command(f"ChangeNumFreeTechs({value})")
 
+    async def grant_free_unit(self, value: int) -> None:
+        """
+        Grants a free unit to the player `value` times.
+
+        """
+
+        await self._send_mod_command(f"GrantFreeUnit({value})")
+
+    async def grant_free_worker(self, value: int) -> None:
+        """
+        Grants a free Worker to the player `value` times.
+
+        """
+
+        await self._send_mod_command(f"GrantFreeWorker({value})")
+
+    async def change_all_city_state_influence(self, value: int) -> None:
+        """
+        Changes the influence with all city-states by the given `value`.
+
+        """
+
+        await self._send_mod_command(f"ChangeAllCityStateInfluence({value})")
+
     async def change_all_city_population(self, value: int) -> None:
         """
         Changes the number of population in all cities by the given `value`.
@@ -372,13 +396,13 @@ class Tuner:
 
         await self._send_mod_command(f"ChangeAllUnitExperience({value})")
 
-    async def all_unit_free_promotion(self, value: int) -> None:
+    async def all_units_free_promotion(self, value: int) -> None:
         """
         Grants all units a free promotion `value` times.
 
         """
 
-        await self._send_mod_command(f"AllUnitFreePromotion({value})")
+        await self._send_mod_command(f"AllUnitsFreePromotion({value})")
 
     async def change_culture_per_turn_for_free(self, value: int) -> None:
         """
@@ -403,6 +427,22 @@ class Tuner:
         """
 
         await self._send_mod_command(f"StartGoldenAge({value})")
+
+    async def spawn_barbarians(self, value: int) -> None:
+        """
+        Spawns `value` Barbarian units near the player's capital.
+
+        """
+
+        await self._send_mod_command(f"SpawnBarbarians({value})")
+
+    async def shuffle_units(self, _) -> None:
+        """
+        Shuffles the units of the player randomly.
+
+        """
+
+        await self._send_mod_command(f"ShuffleUnits()")
 
     async def denounce_random(self, value: int) -> None:
         """

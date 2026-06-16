@@ -21,6 +21,17 @@ from .enums import (
     CivVItemClassificationNames,
 )
 from .locations import LOCATIONS_DATA
+from .regions import (
+    ANCIENT_ERA,
+    ATOMIC_ERA,
+    CLASSICAL_ERA,
+    INDUSTRIAL_ERA,
+    INFORMATION_ERA,
+    MEDIEVAL_ERA,
+    MODERN_ERA,
+    RENAISSANCE_ERA,
+    CivVRegionData,
+)
 if TYPE_CHECKING:
     from .world import CivVWorld
 
@@ -79,6 +90,29 @@ class CivVContainer(APPlayerContainer):
         "}": "",
     }
     "Substitution dict for invalid XML characters"
+    SETTLER_SANITY_ERAS: list[CivVRegionData] = [
+        ANCIENT_ERA,
+        CLASSICAL_ERA,
+        CLASSICAL_ERA,
+        MEDIEVAL_ERA,
+        MEDIEVAL_ERA,
+        RENAISSANCE_ERA,
+        RENAISSANCE_ERA,
+        INDUSTRIAL_ERA,
+        INDUSTRIAL_ERA,
+        INDUSTRIAL_ERA,
+        MODERN_ERA,
+        MODERN_ERA,
+        MODERN_ERA,
+        ATOMIC_ERA,
+        ATOMIC_ERA,
+        ATOMIC_ERA,
+        INFORMATION_ERA,
+        INFORMATION_ERA,
+        INFORMATION_ERA,
+        INFORMATION_ERA,
+    ]
+    "Eras for each settler to train in settler sanity"
 
     def __init__(self, path: Path, world: "CivVWorld | None", **kwargs):
         # Call super method
@@ -181,8 +215,8 @@ class CivVContainer(APPlayerContainer):
             f"[COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR] ({self._get_formatted_item(item)})."
         )
 
-    @staticmethod
-    def _get_settler_location_descriptions(settler_locations: dict[str, str]) -> dict[str, str]:
+    @classmethod
+    def _get_settler_location_descriptions(cls, settler_locations: dict[str, str]) -> dict[str, str]:
         """
         Formats the given placed `settler_items` into a dict of string usable in the Civ V XML databases.
 
@@ -195,7 +229,9 @@ class CivVContainer(APPlayerContainer):
         # Convert to a dict of description strings
         dct = {}
         for i, (prefix, _) in enumerate(items):
-            description = "[NEWLINE]".join([f"- {x[1]}" for x in items[i:]])
+            description = "[NEWLINE]".join(
+                [f"[ICON_BULLET] {x[1]} ({cls.SETTLER_SANITY_ERAS[j].name})" for j, x in enumerate(items[i:], start=i)]
+            )
             dct[f"{prefix}_location"] = (
                 f"[NEWLINE][NEWLINE]Training a Settler the next {n_items-i} time(s) counts as an "
                 f"[COLOR_POSITIVE_TEXT]AP Location[ENDCOLOR]:[NEWLINE]{description}"
