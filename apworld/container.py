@@ -3,6 +3,7 @@ import functools
 import itertools
 import json
 import pkgutil
+import platform
 import shutil
 import tempfile
 import zipfile
@@ -383,9 +384,14 @@ class CivVContainer(APPlayerContainer):
         from .world import CivVWorld
         mods_folder_path = Path(CivVWorld.settings.mods_folder_path)
 
-        # If the mod does not exist yet, we need to create it from the output file
+        # Determine the name the mod should have. On Linux, make sure it is lowercase
         zip_name = self.path.name.rsplit('.', 1)[0]
-        mod_path = mods_folder_path / f"{self.AP_MOD_NAME} - {zip_name}"
+        mod_name = f"{self.AP_MOD_NAME} - {zip_name}"
+        if platform.system() == "Linux":
+            mod_name = mod_name.lower()
+        mod_path = mods_folder_path / mod_name
+
+        # If the mod does not exist yet, we need to create it from the output file
         if not mod_path.exists():
             # Extract all mod files to a temporary directory
             tempdir = Path(tempfile.mkdtemp())
@@ -409,6 +415,12 @@ class CivVContainer(APPlayerContainer):
                     # For every other file, extract file as is
                     case _:
                         opened_zipfile.extract(file, tempdir)
+
+            # If we are running on Linux, rename all mod files to become lowercase
+            tempdir_mod = tempdir / self.AP_MOD_NAME
+            if platform.system() == "Linux":
+                for filepath in tempdir_mod.rglob("*"):
+                    _ = Path(tempdir / filepath).rename(tempdir / str(filepath).lower())
 
             # Copy the apmod folder inside this temporary directory to the mods folder
             _ = shutil.copytree(tempdir / self.AP_MOD_NAME, mod_path)

@@ -18,7 +18,7 @@
 ## Joining a MultiWorld Game
 - Download the patch file for your Civ V slot and open it with the `Archipelago Launcher`. When playing Archipelago locally, the patch file will be inside the generated ZIP that you use to host locally. Extract the ZIP to get access to the patch file.
   - If this is your first time opening a Civ V patch file, the launcher will ask you to provide the location of your Civ V mods folder.
-    By default, this should be `~/Documents/My Games/Sid Meier's Civilization 5/MODS`, but it can be a different folder for some installations, including OneDrive folders if you use automated cloud storage.
+    By default, this should be `~/Documents/My Games/Sid Meier's Civilization 5/MODS` on Windows or `.local/share/Asypr/Sid Meier's Civilization 5/MODS` on Linux, but it can be a different folder for some installations, including OneDrive folders if you use automated cloud storage.
     NOTE: It will not be in the Steam installation folder.
 - Opening the patch file as stated above also automatically opens the `Civ V Client` for you.
   The client will start echoing that it is waiting for Civ V to be ready.
