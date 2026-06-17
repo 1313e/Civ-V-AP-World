@@ -2,7 +2,7 @@
 from dataclasses import dataclass
 from textwrap import dedent
 
-from Options import Choice, DefaultOnToggle, PerGameCommonOptions, OptionSet, Range, Toggle
+from Options import Choice, DeathLink, DefaultOnToggle, PerGameCommonOptions, OptionSet, Range, Toggle
 
 from . import items
 
@@ -292,6 +292,76 @@ class TrapFillerChance(Range):
     default = 5
 
 
+class DeathLinkTrigger(Choice):
+    """
+    What triggers a death link to be sent?
+
+    Has no effect if death link is disabled.
+
+    Possible triggers:
+    - Unit killed: When any of your units gets killed.
+    - City captured: When any of your cities gets captured.
+    - Capital captured: When your capital gets captured.
+    - Game lost: When you lose a game.
+
+    """
+
+    display_name = "Death Link Trigger"
+    option_unit_killed = 0
+    option_city_captured = 1
+    option_capital_captured = 2
+    option_game_lost = 3
+    default = option_game_lost
+
+
+class DeathLinkEffect(Choice):
+    """
+    What effect occurs when a death link is received?
+
+    Has no effect if death link is disabled.
+
+    Possible effects:
+    - Random unit HP: A random unit loses X HP.
+    - All units HP: All units lose X HP.
+    - Random city population: A random city loses X population.
+    - All city population: All cities lose X population.
+    - Random city: Lose a random non-capital city.
+    - All cities not capital: Lose all cities that are not your capital.
+    - Barbarians: Spawn X random Barbarians.
+    - Denounce: X random civilizations denounce you.
+    - Declare war: X random civilizations declare war on you.
+    - Lose game: Lose the game immediately.
+
+    """
+
+    display_name = "Death Link Effect"
+    option_random_unit_hp = 0
+    option_all_units_hp = 1
+    option_random_city_population = 2
+    option_all_cities_population = 3
+    option_random_city = 4
+    option_all_cities_not_capital = 5
+    option_barbarians = 6
+    option_denounce = 7
+    option_declare_war = 8
+    option_lose_game = 9
+    default = option_random_unit_hp
+
+
+class DeathLinkEffectAmount(Range):
+    """
+    Amount to use for X in the selected Death Link Effect.
+
+    Has no effect if death link is disabled.
+
+    """
+
+    display_name = "Death Link Effect Amount"
+    range_start = 0
+    range_end = 100
+    default = 25
+
+
 # %% CIV V OPTIONS CLASS
 @dataclass
 class CivVOptions(PerGameCommonOptions):
@@ -314,3 +384,7 @@ class CivVOptions(PerGameCommonOptions):
     enable_traps: EnableTraps
     trap_blacklist: TrapBlacklist
     trap_filler_chance: TrapFillerChance
+    death_link: DeathLink
+    death_link_trigger: DeathLinkTrigger
+    death_link_effect: DeathLinkEffect
+    death_link_effect_amount: DeathLinkEffectAmount

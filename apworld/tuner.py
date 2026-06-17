@@ -504,3 +504,11 @@ class Tuner:
         """
 
         return (await self._send_mod_command("GetItemTable()", has_response=True))["items"]
+
+    async def send_death_link(self, message: str) -> None:
+        """
+        Sends a death link to the player.
+
+        """
+
+        await self._send_mod_command(f"SendDeathLink({message!r})")

@@ -6,9 +6,25 @@
         <Column name="Value" type="text" default="null"/>
     </Table>
     <APOptions>
-        <!-- Values must be surrounded by quotation marks to avoid Firaxis' XML-to-SQL parser from converting the strings 'true'/'false' to 1/0, respectively -->
+        <!-- Boolean values must be surrounded by quotation marks to avoid Firaxis' XML-to-SQL parser from converting the strings 'true'/'false' to 1/0, respectively -->
         <Row>
             <ID>0</ID>
+            <Key>death_link</Key>
+            <Value>"{option_death_link}"</Value>
+        </Row>
+        <Row>
+            <Key>death_link_trigger</Key>
+            <Value>{option_death_link_trigger}</Value>
+        </Row>
+        <Row>
+            <Key>death_link_effect</Key>
+            <Value>{option_death_link_effect}</Value>
+        </Row>
+        <Row>
+            <Key>death_link_effect_amount</Key>
+            <Value>{option_death_link_effect_amount}</Value>
+        </Row>
+        <Row>
             <Key>promotion_sanity</Key>
             <Value>"{option_promotion_sanity}"</Value>
         </Row>
@@ -22,7 +38,7 @@
         </Row>
         <Row>
             <Key>settler_sanity_amount</Key>
-            <Value>"{option_settler_sanity_amount}"</Value>
+            <Value>{option_settler_sanity_amount}</Value>
         </Row>
     </APOptions>
 </GameData>

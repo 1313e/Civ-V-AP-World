@@ -22,17 +22,17 @@
   <References />
   <Blocks />
   <Files>
-    <File md5="64445F23314DFF8C5598FACD9B47DBC1" import="0">APFunctions.lua</File>
+    <File md5="F5FF2E569AA9D82429ECC9F82B9E71A8" import="0">APFunctions.lua</File>
     <File md5="5B9C45533A8E74AF2E2730D92A306343" import="0">Buildings.xml</File>
     <File md5="F09C389A22E4DB7CAF6929109092774C" import="0">BuildingTextInfos.xml</File>
     <File md5="43CB6E8FA3007C683DD5CE7EA065E33C" import="0">HandicapInfos.xml</File>
     <File md5="A0D841E35C89A0E2F38C79831BC2C4CC" import="1">Icons/AP_Policy_256.dds</File>
     <File md5="1CE11AA50D0E300ED7C113FBE4C8B44E" import="1">Icons/AP_Policy_64.dds</File>
     <File md5="718041914E0DDEFF0C3B79FC206C53DE" import="1">Icons/AP_Policy_Adopted_64.dds</File>
-    <File md5="6ACFC50B86170C6208024B06D9EF590C" import="1">json.lua</File>
+    <File md5="AB1360B15FBCAC9F6BA9E8396ADFCF73" import="1">json.lua</File>
     <File md5="378F45B0004D29290382FC3739944B6D" import="0">NationalWonders.xml</File>
     <File md5="C3DFAE686C7B7421F763A7B075A3753F" import="0">NationalWonderTextInfos.xml</File>
-    <File md5="817A584F779D7B4356B3D02218F88308" import="0">APOptions.xml</File>
+    <File md5="A45AB2345F213E81AEF6DDBCA9ED2B21" import="0">APOptions.xml</File>
     <File md5="8382C7420D4F319681DD5D0B82C8F969" import="0">PolicyBranches.xml</File>
     <File md5="7859FF96379F993AB68298F42ADC78A9" import="0">Policies.xml</File>
     <File md5="0526A24BDBC9DE50FA4A59BBCCC73FF6" import="1">Icons/AP_Tech_128.dds</File>

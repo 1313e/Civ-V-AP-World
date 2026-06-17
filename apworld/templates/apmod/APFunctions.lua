@@ -4,46 +4,49 @@ include( "json" );
 AP = {}
 Game.AP = AP
 
-local CLIENT_PREFIX = "APSTART:"
-local CLIENT_POSTFIX = ":APEND"
-local LOWER_POLICY_BRANCH_ID = 0
-local UPPER_POLICY_BRANCH_ID = 8
-local POLICY_BRANCH_FINISHER_OFFSET = 12
-local LOWER_POLICY_ID = 111
-local UPPER_POLICY_ID = 155
-local LOWER_PROMOTION_ID = 229
-local UPPER_PROMOTION_ID = 311
-local LOWER_TECH_ID = 83
-local UPPER_TECH_ID = 168
-local LOWER_TEAM_ID = 0
-local UPPER_TEAM_ID = 62
-local LOWER_MINOR_CIV_ID = 22
-local UPPER_MINOR_CIV_ID = 62
-local BASE_CULTURE_TECH_YIELD = 1800
+CLIENT_PREFIX = "APSTART:"
+CLIENT_POSTFIX = ":APEND"
+LOWER_POLICY_BRANCH_ID = 0
+UPPER_POLICY_BRANCH_ID = 8
+POLICY_BRANCH_FINISHER_OFFSET = 12
+LOWER_POLICY_ID = 111
+UPPER_POLICY_ID = 155
+LOWER_PROMOTION_ID = 229
+UPPER_PROMOTION_ID = 311
+LOWER_TECH_ID = 83
+UPPER_TECH_ID = 168
+LOWER_TEAM_ID = 0
+UPPER_TEAM_ID = 62
+LOWER_MINOR_CIV_ID = 22
+UPPER_MINOR_CIV_ID = 62
+BASE_CULTURE_TECH_YIELD = 1800
+MIN_TURN_SPAWN_BARBARIANS = 30
 
-local player = Players[Game.GetActivePlayer()]
-local team = Teams[player:GetTeam()]
+player = Players[Game.GetActivePlayer()]
+team = Teams[player:GetTeam()]
 
-local optionsTable = {
-    promotion_sanity=false, satellites_meets_all=nil, settler_sanity=false, settler_sanity_amount=0,
+optionsTable = {
+    death_link=false, death_link_trigger=nil, death_link_effect=nil, death_link_effect_amount=0, promotion_sanity=false,
+    satellites_meets_all=nil, settler_sanity=false, settler_sanity_amount=0,
 }
-local pushTable = {}
-local pushTableTableKeys = {
+pushTable = {}
+pushTableTableKeys = {
     building=true, national_wonder=true, policy=true, policy_branch=true, promotion=true, settler=true, tech=true,
     unit=true, world_wonder=true,
 }
-local textInfoTableNames = {
+textInfoTableNames = {
     building="Buildings", national_wonder="Buildings", policy=nil, policy_branch=nil, promotion="UnitPromotions",
     settler="Units", tech=nil, unit="Units", world_wonder="Buildings",
 }
-local freePoliciesToGrant = 0
-local itemTable = {}
-local locationTable = {}
+freePoliciesToGrant = 0
+barbariansToSpawn = 0
+itemTable = {}
+locationTable = {}
 for key, _ in pairs(pushTableTableKeys) do
     locationTable[key] = {}
 end
-local promotionTable = {}
-local techIdToEraId = {
+promotionTable = {}
+techIdToEraId = {
     [0]=0, [1]=0, [2]=0, [3]=0, [4]=0, [5]=0, [6]=0, [7]=0, [8]=0, [9]=0, [10]=0, [11]=0,
     [12]=1, [13]=1, [14]=1, [15]=1, [16]=1, [17]=1, [18]=1, [19]=1, [20]=1,
     [21]=2, [22]=2, [23]=2, [24]=2, [25]=2, [26]=2, [27]=2, [28]=2, [29]=2, [30]=2,
@@ -53,7 +56,7 @@ local techIdToEraId = {
     [60]=6, [61]=6, [62]=6, [63]=6, [64]=6, [65]=6, [66]=6, [67]=6,
     [68]=7, [69]=7, [70]=7, [71]=7, [72]=7, [73]=7, [74]=7, [75]=7, [76]=7, [77]=7, [78]=7, [79]=7, [80]=7,
 }
-local policyIdToPolicyBranchId = {
+policyIdToPolicyBranchId = {
     [7]=0, [8]=0, [9]=0, [10]=0, [11]=0, [111]=0, [112]=0, [113]=0, [114]=0, [115]=0,
     [1]=1, [2]=1, [3]=1, [4]=1, [5]=1, [116]=1, [117]=1, [118]=1, [119]=1, [120]=1,
     [13]=2, [14]=2, [15]=2, [16]=2, [17]=2, [121]=2, [122]=2, [123]=2, [124]=2, [125]=2,
@@ -64,7 +67,7 @@ local policyIdToPolicyBranchId = {
     [57]=7, [58]=7, [59]=7, [60]=7, [61]=7, [146]=7, [147]=7, [148]=7, [149]=7, [150]=7,
     [37]=8, [38]=8, [39]=8, [40]=8, [41]=8, [151]=8, [152]=8, [153]=8, [154]=8, [155]=8,
 }
-local policyBranchIdToAPPolicyIds = {
+policyBranchIdToAPPolicyIds = {
     [0]={111, 112, 113, 114, 115},
     [1]={116, 117, 118, 119, 120},
     [2]={121, 122, 123, 124, 125},
@@ -75,16 +78,16 @@ local policyBranchIdToAPPolicyIds = {
     [7]={146, 147, 148, 149, 150},
     [8]={151, 152, 153, 154, 155},
 }
-local policyBranchIdToEraId = {
+policyBranchIdToEraId = {
     [0]=0, [1]=1, [2]=2, [3]=3, [4]=4, [5]=5, [6]=6, [7]=7, [8]=7,
 }
-local policyBranchIdToPolicyBranchStarterId = {
+policyBranchIdToPolicyBranchStarterId = {
     [0]=6, [1]=0, [2]=12, [3]=18, [4]=24, [5]=49, [6]=30, [7]=56, [8]=36,
 }
-local policyBranchIdToPolicyBranchFinisherId = {
+policyBranchIdToPolicyBranchFinisherId = {
     [0]=42, [1]=43, [2]=44, [3]=45, [4]=46, [5]=55, [6]=47, [7]=62, [8]=48,
 }
-local buildingIds = {
+buildingIds = {
     [11]=true, [12]=true, [13]=true, [14]=true, [15]=true, [16]=true, [17]=true, [18]=true, [19]=true,
     [20]=true, [22]=true, [23]=true, [24]=true, [25]=true, [26]=true, [27]=true, [28]=true, [29]=true,
     [30]=true, [31]=true, [32]=true, [33]=true, [34]=true, [35]=true, [36]=true, [37]=true, [38]=true, [39]=true,
@@ -94,21 +97,21 @@ local buildingIds = {
     [121]=true, [122]=true, [123]=true, [124]=true, [125]=true, [126]=true,
     [151]=true, [152]=true, [153]=true,
 }
-local civUniqueBuildingIdToBuildingId = {
+civUniqueBuildingIdToBuildingId = {
     [0]=13, [2]=38, [3]=33, [4]=43, [5]=47, [6]=48, [7]=50, [8]=51, [9]=29,
     [10]=29,
     [96]=37,
     [116]=30, [117]=16, [119]=122,
     [140]=28, [143]=33, [144]=12, [145]=50, [146]=22, [147]=48,
 }
-local nationalWonderBuildingIds = {
+nationalWonderBuildingIds = {
     [55]=true, [56]=true, [57]=true, [58]=true, [59]=true,
     [60]=true, [61]=true, [62]=true,
     [127]=true,
     [141]=true, [142]=true, [148]=true, [149]=true,
     [150]=true,
 }
-local worldWonderBuildingIds = {
+worldWonderBuildingIds = {
     [63]=true, [64]=true, [65]=true, [66]=true, [67]=true, [68]=true, [69]=true,
     [70]=true, [71]=true, [72]=true, [73]=true, [74]=true, [75]=true, [76]=true, [77]=true, [78]=true, [79]=true,
     [80]=true, [81]=true, [82]=true, [83]=true, [84]=true, [85]=true, [86]=true, [87]=true, [88]=true,
@@ -118,13 +121,13 @@ local worldWonderBuildingIds = {
     [154]=true, [155]=true, [156]=true, [157]=true, [158]=true, [159]=true,
     [160]=true, [161]=true,
 }
-local worldWonderIdToFreeBuildingId = {
+worldWonderIdToFreeBuildingId = {
     [63]=23, [65]=50, [69]=22,
     [70]=37, [72]=29, [77]=38,
     [128]=38, [129]=32,
     [130]=46,
 }
-local unitIds = {
+unitIds = {
     [0]=true, [1]=true, [2]=true,
     [12]=true, [13]=true, [14]=true, [15]=true, [16]=true, [17]=true, [18]=true, [19]=true,
     [21]=true, [22]=true, [23]=true, [24]=true, [25]=true, [26]=true, [27]=true, [28]=true, [29]=true,
@@ -139,7 +142,7 @@ local unitIds = {
     [157]=true,
     [161]=true,
 }
-local civUniqueUnitIdToUnitId = {
+civUniqueUnitIdToUnitId = {
     [20]=19,
     [35]=34, [37]=36,
     [40]=39, [47]=46,
@@ -154,7 +157,7 @@ local civUniqueUnitIdToUnitId = {
     [142]=66, [144]=49,
     [150]=68, [151]=44, [152]=21, [153]=46, [154]=131, [155]=82, [156]=46, [158]=72,
 }
-local unitIdToObsoleteTechId = {
+unitIdToObsoleteTechId = {
     [16]=68, [18]=59, [19]=57,
     [20]=57, [21]=49, [22]=31,
     [42]=66, [44]=69, [45]=56, [46]=59, [47]=59, [48]=53, [49]=63,
@@ -170,13 +173,13 @@ local unitIdToObsoleteTechId = {
     [141]=58, [142]=44, [144]=63,
     [150]=29, [151]=69, [152]=49, [153]=59, [154]=36, [155]=42, [156]=59, [158]=30,
 }
-local landUnitIds = {
+landUnitIds = {
     23, 25, 26, 28, 29, 30, 31, 32, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55,
     56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84,
     88, 90, 92, 93, 94, 95, 96, 97, 98, 99, 100, 102, 103, 105, 106, 108, 109, 110, 120, 121, 122, 130, 132, 133, 134,
     135, 136, 137, 141, 142, 144, 150, 151, 152, 153, 155, 156, 157, 158,
 }
-local textInfoLinkedIds = {
+textInfoLinkedIds = {
     Buildings={
         [12]={144}, [13]={0}, [16]={117},
         [22]={146}, [28]={140}, [29]={9, 10},
@@ -197,18 +200,18 @@ local textInfoLinkedIds = {
         [131]={154}, [138]={124},
     },
 }
-local notificationTypes = {
+notificationTypes = {
     [0]=NotificationTypes.NOTIFICATION_GENERIC,		-- generic
     [1]=NotificationTypes.NOTIFICATION_CITY_GROWTH,	-- positive
     [2]=NotificationTypes.NOTIFICATION_STARVING,	-- negative
 }
-local cultureTechYieldSpeedModifier = {
+cultureTechYieldSpeedModifier = {
     [0]=3, [1]=1.5, [2]=1, [3]=0.67
 }
-local cultureTechYieldDifficultyModifier = {
+cultureTechYieldDifficultyModifier = {
     [0]=0.5, [1]=0.67, [2]=0.85, [3]=1, [4]=1, [5]=1, [6]=1, [7]=1,
 }
-local cultureTechYield = 0
+cultureTechYield = 0
 
 
 -- EVENTS
@@ -409,12 +412,72 @@ function OnTurnStart()
         player:ChangeNumFreePolicies(1)
         ChangeFreePoliciesToGrant(-1)
     end
+
+    -- If the player has any waiting barbarians and the turn number is high enough, spawn them
+    if(barbariansToSpawn > 0 and Game.GetGameTurn() >= MIN_TURN_SPAWN_BARBARIANS) then
+        AP.SpawnBarbarians(barbariansToSpawn)
+        ChangeBarbariansToSpawn(-barbariansToSpawn)
+    end
 end
 
 function OnEndGameShow(endGameType, teamId)
     -- If the player's team wins, add that to the push table
     if(teamId == player:GetTeam()) then
         pushTable["victory"] = true
+    end
+end
+
+function OnUnitKilledDeathLink(playerId, killedPlayerId, unitId)
+    -- Send death if a unit from the player got killed
+    if killedPlayerId == player:GetID() then
+        pushTable["death"] = " had its " .. GetCleanText(GameInfo.Units[unitId].Description) .. " killed!"
+    end
+end
+
+function OnCityCapturedDeathLink(playerId, isCapital, plotX, plotY, newPlayerId)
+    -- Send death if a city from the player got captured
+    if playerId == player:GetID() then
+        city = Map.GetPlot(plotX, plotY):GetPlotCity()
+        pushTable["death"] = " had its city '" .. city:GetName() .. "' captured by the opponent!"
+    end
+end
+
+function OnCapitalCapturedDeathLink(playerId, isCapital, plotX, plotY, newPlayerId)
+    -- Send death if the capital from the player got captured
+    if playerId == player:GetID() and isCapital then
+        city = Map.GetPlot(plotX, plotY):GetPlotCity()
+        pushTable["death"] = " had its capital '" .. city:GetName() .. "' captured by the opponent!"
+    end
+end
+
+function OnEndGameShowDeathLink(endGameType, teamId)
+    -- Send death if the player's team did not win
+    if(teamId ~= player:GetTeam()) then
+        pushTable["death"] = "'s civilization did not stand the test of time!"
+    end
+end
+
+function OnTurnStartDeathLink()
+    -- Send death if the player is no longer active
+    if not player:IsAlive() then
+        pushTable["death"] = "'s civilization did not stand the test of time!"
+    end
+end
+
+function SetDeathLinkTrigger()
+    -- Add appropriate death link function to the correct event, if death link is enabled
+    if optionsTable["death_link"] then
+        deathLinkTrigger = optionsTable["death_link_trigger"]
+        if deathLinkTrigger == "unit_killed" then
+            GameEvents.UnitKilledInCombat.Add(OnUnitKilledDeathLink)
+        elseif deathLinkTrigger == "city_captured" then
+            GameEvents.CityCaptureComplete.Add(OnCityCapturedDeathLink)
+        elseif deathLinkTrigger == "capital_captured" then
+            GameEvents.CityCaptureComplete.Add(OnCapitalCapturedDeathLink)
+        elseif deathLinkTrigger == "game_lost" then
+            Events.EndGameShow.Add(OnEndGameShowDeathLink)
+            Events.ActivePlayerTurnStart.Add(OnTurnStartDeathLink)
+        end
     end
 end
 
@@ -534,11 +597,26 @@ function ChangeFreePoliciesToGrant(value)
     SaveScriptData("free_policies_to_grant", freePoliciesToGrant)
 end
 
+function ChangeBarbariansToSpawn(value)
+    -- Changes the number of Barbarians still to spawn by the given value for current session AND save file
+    barbariansToSpawn = barbariansToSpawn + value
+    SaveScriptData("barbarians_to_spawn", barbariansToSpawn)
+end
+
+function GetCleanText(key)
+    -- Recursively retrieve cleaner versions of a text key until the final one has been reached
+    cleanKey = key .. "_CLEAN"
+    if Locale.ConvertTextKey(cleanKey) ~= cleanKey then
+        return GetCleanText(cleanKey)
+    end
+    return Locale.ConvertTextKey(key)
+end
+
 function GetTrainableUnitIds()
     -- Create table with all units the player can train currently
     trainableUnitIds = {}
     for _, unitId in ipairs(landUnitIds) do
-        if player:CanTrain(unitId, nil, nil, true, false) then
+        if player:CanTrain(unitId, nil, nil, true, true) then
             table.insert(trainableUnitIds, unitId)
         end
     end
@@ -631,6 +709,12 @@ function SyncScriptData()
         freePoliciesToGrant = value
     end
 
+    -- Retrieve the number of barbarians to spawn from the script data
+    value = LoadScriptData("barbarians_to_spawn")
+    if value ~= nil then
+        barbariansToSpawn = value
+    end
+
     -- Retrieve the item table from the script data
     value = LoadScriptData("item_table")
     if value ~= nil then
@@ -655,7 +739,11 @@ end
 function LoadOptionsTable()
     -- Load the options table from the SQL database
     for row in DB.Query("SELECT Key, Value FROM APOptions") do
-        optionsTable[row.Key] = json.decode(json.decode(row.Value))
+        value = json.decode(row.Value)
+        if value == "true" or value == "false" then
+            value = json.decode(value)
+        end
+        optionsTable[row.Key] = value
     end
 end
 
@@ -885,10 +973,16 @@ function AP.ShuffleUnits()
     end
 end
 
-function AP.SpawnBarbarians(n)
+function AP.SpawnBarbarians(n, force)
+    -- Do not spawn barbarians if current turn is below MIN_TURN_SPAWN_BARBARIANS and force is not true
+    if not force and Game.GetGameTurn() < MIN_TURN_SPAWN_BARBARIANS then
+        ChangeBarbariansToSpawn(n)
+        return
+    end
+
     -- Get capital of player. Return immediately if there is no capital
     capital = player:GetCapitalCity()
-    if city == nil then
+    if capital == nil then
         return
     end
 
@@ -960,6 +1054,88 @@ function AP.GetItemTable()
     PrintResponse(table.concat({'{"items": [', table.concat(itemTable, ","), "]}"}))
 end
 
+function AP.SendDeathLink(message)
+    -- Send a death link effect to the player
+    deathLinkEffect = optionsTable["death_link_effect"]
+    deathLinkEffectAmount = optionsTable["death_link_effect_amount"]
+    if deathLinkEffect == "random_unit_hp" then
+        -- Create table of all unit IDs the player has
+        unitIds = {}
+        for unit in player:Units() do
+            table.insert(unitIds, unit:GetID())
+        end
+
+        -- Pick one at random and reduce its HP by X
+        unit = player:GetUnitByID(unitIds[math.random(player:GetNumUnits())])
+        unit:ChangeDamage(deathLinkEffectAmount)
+
+    elseif deathLinkEffect == "all_units_hp" then
+        -- Reduce HP of all units by X
+        for unit in player:Units() do
+            unit:ChangeDamage(deathLinkEffectAmount)
+        end
+
+    elseif deathLinkEffect == "random_city_population" then
+        -- Create table of all city IDs the player has
+        cityIds = {}
+        for city in player:Cities() do
+            table.insert(cityIds, city:GetID())
+        end
+
+        -- Pick one at random and reduce its population by X
+        city = player:GetCityByID(cityIds[math.random(player:GetNumCities())])
+        city:ChangePopulation(math.max(-deathLinkEffectAmount, -city:GetPopulation()+1), true)
+
+    elseif deathLinkEffect == "all_cities_population" then
+        -- Reduce population of all cities by X
+        for city in player:Cities() do
+            city:ChangePopulation(math.max(-deathLinkEffectAmount, -city:GetPopulation()+1), true)
+        end
+
+    elseif deathLinkEffect == "random_city" then
+        -- Create table of all non-capital city IDs the player has
+        cityIds = {}
+        for city in player:Cities() do
+            if not city:IsCapital() then
+                table.insert(cityIds, city:GetID())
+            end
+        end
+
+        -- Pick one and give it to the Barbarians
+        city = player:GetCityByID(cityIds[math.random(player:GetNumCities())])
+        Players[63]:AcquireCity(city, false, false)
+
+    elseif deathLinkEffect == "all_cities_not_capital" then
+        -- Give all cities except the capital to the Barbarians
+        for city in player:Cities() do
+            if not city:IsCapital() then
+                Players[63]:AcquireCity(city, false, false)
+            end
+        end
+
+    elseif deathLinkEffect == "barbarians" then
+        -- Spawn X random barbarians
+        AP.SpawnBarbarians(deathLinkEffectAmount, true)
+
+    elseif deathLinkEffect == "denounce" then
+        -- Denounce the player X times
+        AP.DenounceRandom(deathLinkEffectAmount)
+
+    elseif deathLinkEffect == "declare_war" then
+        -- Declare war on the player X times
+        AP.DeclareWarRandom(deathLinkEffectAmount)
+
+    elseif deathLinkEffect == "lose_game" then
+        -- Make player lose the game
+        for city in player:Cities() do
+            Players[63]:AcquireCity(city, false, false)
+        end
+    end
+
+    -- Send negative notification to player that they received a death link
+    AP.SendNotification("DeathLink Received!", message, 2)
+end
+
 
 -- INIT FUNCTION
 function Init()
@@ -988,6 +1164,9 @@ function Init()
 
     -- Load options table
     LoadOptionsTable()
+
+    -- Set correct death link trigger
+    SetDeathLinkTrigger()
 
     -- Synchronize all local variables with the script data
     SyncScriptData()

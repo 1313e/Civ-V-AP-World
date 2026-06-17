@@ -206,6 +206,9 @@ class CivVClient:
                 await asyncio.sleep(3)
                 continue
 
+            # Set death link status for this player
+            await self.ctx.update_death_link(self.ctx.slot_data.death_link)
+
             # Try to set up a socket connection for the Tuner
             sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             try:
@@ -301,6 +304,7 @@ class CivVClient:
         if self.ctx.server:
             # Process checked locations and received items
             await self.process_push_table()
+            await self.process_death_links()
             await self.process_received_items()
 
     @update_func
@@ -323,6 +327,10 @@ class CivVClient:
                     # Send message that player has goaled their game
                     await self.ctx.send_msgs([{"cmd": "StatusUpdate", "status": ClientStatus.CLIENT_GOAL}])
                     self.ctx.has_achieved_victory = True
+
+                # If a death link was triggered
+                case "death":
+                    await self.ctx.send_death(f"{self.ctx.auth}{value}")
 
                 # All other cases are location types
                 case _:
@@ -376,6 +384,17 @@ class CivVClient:
 
         # Set received_items to the item table in the game
         self.ctx.received_item_ids = await self.tuner.get_item_table()
+
+    @update_func
+    async def process_death_links(self) -> None:
+        """
+        Processes any queued death links received by the player from the multiworld and sends them th Civ V.
+
+        """
+
+        # Process all queued death links
+        while self.ctx.queued_death_links:
+            await self.tuner.send_death_link(self.ctx.queued_death_links.pop(0))
 
     @update_func
     async def process_received_items(self) -> None:

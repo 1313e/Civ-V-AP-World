@@ -1,5 +1,6 @@
 # %% IMPORTS
 import asyncio
+import typing
 
 from CommonClient import CommonContext
 
@@ -33,6 +34,8 @@ class CivVContext(CommonContext):
     "Dict of locations originating from this game that have been sent to the multiworld already, split by location type"
     received_item_ids: list[int] = []
     "IDs of items originating from the multiworld that have been received by this game already"
+    queued_death_links: list[str] = []
+    "List of queued death links"
     has_achieved_victory: bool = False
     "Whether the player has achieved victory yet"
     slot_data: CivVSlotData
@@ -58,4 +61,9 @@ class CivVContext(CommonContext):
             slot_data = args["slot_data"]
             self.slot_data = CivVSlotData(
                 output_file_id=slot_data["output_file_id"],
+                death_link=slot_data["death_link"],
             )
+
+    def on_deathlink(self, data: typing.Dict[str, typing.Any]) -> None:
+        self.queued_death_links.append(data.get("cause", f"Received from {data['source']}"))
+        super().on_deathlink(data)

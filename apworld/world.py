@@ -269,4 +269,5 @@ class CivVWorld(World):
     def fill_slot_data(self) -> dict[str, Any]:
         return CivVSlotData(
             output_file_id=self.output_file_id,
+            death_link=bool(self.options.death_link),
         ).to_dict()
