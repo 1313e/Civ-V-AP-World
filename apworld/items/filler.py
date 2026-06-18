@@ -5,9 +5,7 @@ from .core import CivVFillerItemData
 from ..enums import CivVFillerType, CivVItemType
 
 # All declaration
-__all__ = [
-    "FILLER_ITEMS",
-]
+__all__ = []
 
 
 # %% ITEM DECLARATIONS

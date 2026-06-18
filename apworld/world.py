@@ -10,9 +10,9 @@ from .constants import GAME_NAME
 from .container import CivVContainer
 from .dataclasses import CivVSlotData
 from .items import (
-    FILLER_ITEMS,
     ITEMS_DATA,
     ITEMS_DATA_BY_ID,
+    ITEMS_DATA_BY_NAME,
     ITEM_GROUPS,
     POLICY_ITEMS,
     PROGRESSIVE_ERA_ITEM,
@@ -20,7 +20,6 @@ from .items import (
     PROGRESSIVE_TECH_ITEMS,
     PROMOTION_ITEMS,
     TECH_ITEMS,
-    TRAP_ITEMS,
     CivVFillerItemData,
     CivVItem,
     CivVProgressionItemData,
@@ -122,28 +121,35 @@ class CivVWorld(World):
 
         """
 
+        # Create list of weighted filler and trap items according to the options
+        filler_list = list(itertools.chain.from_iterable(
+            [[ITEMS_DATA_BY_NAME[name]]*weight for name, weight in self.options.filler_item_weights.items()]
+        ))
+        n_filler = len(filler_list)
+        trap_list = list(itertools.chain.from_iterable(
+            [[ITEMS_DATA_BY_NAME[name]]*weight for name, weight in self.options.trap_item_weights.items()]
+        ))
+        n_trap = len(trap_list)
+
         # Create list with filler items
-        n_filler = len(FILLER_ITEMS)
         items_data = []
 
-        # If traps are enabled and not all blacklisted, create both filler and trap items
-        traps_list = [item_data for item_data in TRAP_ITEMS if item_data.name not in self.options.trap_blacklist]
-        if self.options.enable_traps and traps_list:
+        # If traps are enabled, create both filler and trap items
+        if self.options.enable_traps:
             # Generate n filler items
-            n_traps = len(traps_list)
             trap_chance = self.options.trap_filler_chance / 100
             for _ in range(n):
                 # Determine if filler item or trap should be chosen
                 if self.random.random() <= trap_chance:
                     # Pick random trap item
-                    items_data.append(traps_list[self.random.randint(0, n_traps - 1)])
+                    items_data.append(trap_list[self.random.randint(0, n_trap - 1)])
                 else:
                     # Pick random filler item
-                    items_data.append(FILLER_ITEMS[self.random.randint(0, n_filler - 1)])
+                    items_data.append(filler_list[self.random.randint(0, n_filler - 1)])
 
         # Else, create n filler items
         else:
-            items_data.extend((FILLER_ITEMS[self.random.randint(0, n_filler - 1)] for _ in range(n)))
+            items_data.extend((filler_list[self.random.randint(0, n_filler - 1)] for _ in range(n)))
 
         # Return items data
         return items_data

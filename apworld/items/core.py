@@ -19,6 +19,7 @@ __all__ = [
     "FILLER_ITEMS",
     "ITEMS_DATA",
     "ITEMS_DATA_BY_ID",
+    "ITEMS_DATA_BY_NAME",
     "ITEM_GROUPS",
     "PROGRESSION_ITEMS",
     "PROGRESSIVE_ITEMS",
@@ -374,7 +375,7 @@ class CivVFillerItemData(CivVItemData):
     count: None = field(init=False)
     option_count_name: None = field(init=False)
     weight: int = 1
-    "Weight of this filler item"
+    "Default weight of this filler item"
     action: dict[CivVFillerType, int] = field(default_factory=dict)
     "Action to perform when this filler item is granted to the player"
 
@@ -384,6 +385,6 @@ class CivVFillerItemData(CivVItemData):
 
         # Add self to proper filler item dict
         if self.classification == ItemClassification.filler:
-            FILLER_ITEMS.extend([self] * self.weight)
+            FILLER_ITEMS.append(self)
         else:
-            TRAP_ITEMS.extend([self] * self.weight)
+            TRAP_ITEMS.append(self)

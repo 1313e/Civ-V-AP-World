@@ -1,8 +1,7 @@
 # %% IMPORTS
 from dataclasses import dataclass
-from textwrap import dedent
 
-from Options import Choice, DeathLink, DefaultOnToggle, PerGameCommonOptions, OptionSet, Range, Toggle
+from Options import Choice, DeathLink, DefaultOnToggle, PerGameCommonOptions, OptionCounter, Range, Toggle
 
 from . import items
 
@@ -253,6 +252,19 @@ class PromotionSanity(Toggle):
     display_name = "Promotion Sanity"
 
 
+class FillerItemWeights(OptionCounter):
+    """
+    The weights of each filler item to be chosen when a filler item is required.
+
+    """
+
+    display_name = "Filler Item Weights"
+    min = 0
+    cull_zeroes = True
+    valid_keys = [x.name for x in items.FILLER_ITEMS]
+    default = {x.name: x.weight for x in items.FILLER_ITEMS}
+
+
 class EnableTraps(Toggle):
     """
     Add traps to the filler item pool.
@@ -260,22 +272,6 @@ class EnableTraps(Toggle):
     """
 
     display_name = "Enable Traps"
-
-
-class TrapBlacklist(OptionSet):
-    __doc__ = dedent(
-        """
-        Blacklist the given traps from being included in the filler item pool.
-    
-        Has no effect if traps are not enabled.
-        
-        Valid keys are:
-        {keys}
-    
-        """)[1:].format(keys="\n".join(sorted(set((item_data.name for item_data in items.TRAP_ITEMS)))))
-
-    display_name = "Trap Blacklist"
-    valid_keys = set((item_data.name for item_data in items.TRAP_ITEMS))
 
 
 class TrapFillerChance(Range):
@@ -290,6 +286,21 @@ class TrapFillerChance(Range):
     range_start = 0
     range_end = 100
     default = 5
+
+
+class TrapItemWeights(OptionCounter):
+    """
+    The weights of each trap to be chosen when a trap item is required.
+
+    Has no effect if traps are not enabled.
+
+    """
+
+    display_name = "Trap Item Weights"
+    min = 0
+    cull_zeroes = True
+    valid_keys = [x.name for x in items.TRAP_ITEMS]
+    default = {x.name: x.weight for x in items.TRAP_ITEMS}
 
 
 class DeathLinkTrigger(Choice):
@@ -381,9 +392,10 @@ class CivVOptions(PerGameCommonOptions):
     settler_sanity: SettlerSanity
     settler_sanity_amount: SettlerSanityAmount
     promotion_sanity: PromotionSanity
+    filler_item_weights: FillerItemWeights
     enable_traps: EnableTraps
-    trap_blacklist: TrapBlacklist
     trap_filler_chance: TrapFillerChance
+    trap_item_weights: TrapItemWeights
     death_link: DeathLink
     death_link_trigger: DeathLinkTrigger
     death_link_effect: DeathLinkEffect
