@@ -1,5 +1,6 @@
 # %% IMPORTS
 import asyncio
+import itertools
 import typing
 
 from CommonClient import CommonContext
@@ -7,6 +8,7 @@ from CommonClient import CommonContext
 from .command_processor import CivVCommandProcessor
 from .constants import GAME_NAME, ID_OFFSET
 from .dataclasses import CivVSlotData
+from .death_link import DEATH_LINK_EFFECTS_BY_NAME, CivVDeathLinkEffect
 from .enums import CivVLocationType
 
 # All declaration
@@ -36,6 +38,10 @@ class CivVContext(CommonContext):
     "IDs of items originating from the multiworld that have been received by this game already"
     queued_death_links: list[str] = []
     "List of queued death links"
+    death_link_effect_list: list[CivVDeathLinkEffect] = []
+    "List of possible death link effects"
+    n_death_links_effects: int = 0
+    "Number of death link effects"
     has_achieved_victory: bool = False
     "Whether the player has achieved victory yet"
     slot_data: CivVSlotData
@@ -58,11 +64,19 @@ class CivVContext(CommonContext):
 
     def on_package(self, cmd, args):
         if cmd == "Connected":
+            # Retrieve the slot data from this slot
             slot_data = args["slot_data"]
             self.slot_data = CivVSlotData(
                 output_file_id=slot_data["output_file_id"],
                 death_link=slot_data["death_link"],
+                death_link_effect_weights=slot_data["death_link_effect_weights"],
             )
+
+            # Pre-calculate the weighted death link effects list
+            self.death_link_effect_list = list(itertools.chain.from_iterable(
+                [[DEATH_LINK_EFFECTS_BY_NAME[x]]*y for x, y in self.slot_data.death_link_effect_weights.items()]
+            ))
+            self.n_death_links_effects = len(self.death_link_effect_list)
 
     def on_deathlink(self, data: typing.Dict[str, typing.Any]) -> None:
         self.queued_death_links.append(data.get("cause", f"Received from {data['source']}"))

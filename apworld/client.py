@@ -1,6 +1,7 @@
 # %% IMPORTS
 import asyncio
 import functools
+import random
 import traceback
 import socket
 from collections import defaultdict
@@ -388,13 +389,14 @@ class CivVClient:
     @update_func
     async def process_death_links(self) -> None:
         """
-        Processes any queued death links received by the player from the multiworld and sends them th Civ V.
+        Processes any queued death links received by the player from the multiworld and sends them to Civ V.
 
         """
 
         # Process all queued death links
         while self.ctx.queued_death_links:
-            await self.tuner.send_death_link(self.ctx.queued_death_links.pop(0))
+            effect = self.ctx.death_link_effect_list[random.randint(0, self.ctx.n_death_links_effects-1)]
+            await self.tuner.send_death_link(effect.type, effect.amount, self.ctx.queued_death_links.pop(0))
 
     @update_func
     async def process_received_items(self) -> None:

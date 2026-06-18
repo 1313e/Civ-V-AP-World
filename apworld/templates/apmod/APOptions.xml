@@ -17,14 +17,6 @@
             <Value>{option_death_link_trigger}</Value>
         </Row>
         <Row>
-            <Key>death_link_effect</Key>
-            <Value>{option_death_link_effect}</Value>
-        </Row>
-        <Row>
-            <Key>death_link_effect_amount</Key>
-            <Value>{option_death_link_effect_amount}</Value>
-        </Row>
-        <Row>
             <Key>promotion_sanity</Key>
             <Value>"{option_promotion_sanity}"</Value>
         </Row>

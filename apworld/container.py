@@ -262,8 +262,6 @@ class CivVContainer(APPlayerContainer):
             "policy_cost_modifier": str(self.world.options.policy_cost_modifier-100),
             "option_death_link": json.dumps(bool(self.world.options.death_link)),
             "option_death_link_trigger": json.dumps(self.world.options.death_link_trigger.current_key),
-            "option_death_link_effect": json.dumps(self.world.options.death_link_effect.current_key),
-            "option_death_link_effect_amount": json.dumps(int(self.world.options.death_link_effect_amount)),
             "option_promotion_sanity": json.dumps(bool(self.world.options.promotion_sanity)),
             "option_satellites_meets_all": json.dumps(bool(self.world.options.satellites_meets_all)),
             "option_settler_sanity": json.dumps(bool(self.world.options.settler_sanity)),

@@ -276,4 +276,5 @@ class CivVWorld(World):
         return CivVSlotData(
             output_file_id=self.output_file_id,
             death_link=bool(self.options.death_link),
+            death_link_effect_weights=dict(self.options.death_link_effect_weights),
         ).to_dict()

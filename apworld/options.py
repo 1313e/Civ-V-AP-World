@@ -3,7 +3,7 @@ from dataclasses import dataclass
 
 from Options import Choice, DeathLink, DefaultOnToggle, PerGameCommonOptions, OptionCounter, Range, Toggle
 
-from . import items
+from . import death_link, items
 
 # All declaration
 __all__ = ["CivVOptions"]
@@ -359,18 +359,19 @@ class DeathLinkEffect(Choice):
     default = option_random_unit_hp
 
 
-class DeathLinkEffectAmount(Range):
+class DeathLinkEffectWeights(OptionCounter):
     """
-    Amount to use for X in the selected Death Link Effect.
+    The weights of each death link to be chosen when a death link is received.
 
-    Has no effect if death link is disabled.
+    Has no effect if death link is not enabled.
 
     """
 
-    display_name = "Death Link Effect Amount"
-    range_start = 0
-    range_end = 100
-    default = 25
+    display_name = "Death Link Effect Weights"
+    min = 0
+    cull_zeroes = True
+    valid_keys = [x.name for x in death_link.DEATH_LINK_EFFECTS]
+    default = {x.name: 1 if not i else 0 for i, x in enumerate(death_link.DEATH_LINK_EFFECTS)}
 
 
 # %% CIV V OPTIONS CLASS
@@ -398,5 +399,4 @@ class CivVOptions(PerGameCommonOptions):
     trap_item_weights: TrapItemWeights
     death_link: DeathLink
     death_link_trigger: DeathLinkTrigger
-    death_link_effect: DeathLinkEffect
-    death_link_effect_amount: DeathLinkEffectAmount
+    death_link_effect_weights: DeathLinkEffectWeights

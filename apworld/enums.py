@@ -5,6 +5,7 @@ from BaseClasses import ItemClassification
 
 # All declaration
 __all__ = [
+    "CivVDeathLinkEffectType",
     "CivVFillerType",
     "CivVItemClassificationColors",
     "CivVItemClassificationFlags",
@@ -17,6 +18,24 @@ __all__ = [
 
 
 # %% ENUM DEFINITIONS
+class CivVDeathLinkEffectType(StrEnum):
+    """
+    Enum defining the various death link effect types for Civ V.
+
+    """
+
+    random_unit_hp = "random_unit_hp"
+    all_units_hp = "all_units_hp"
+    random_city_population = "random_city_population"
+    all_cities_population = "all_cities_population"
+    lose_random_city = "random_city"
+    lose_all_cities_not_capital = "all_cities_not_capital"
+    barbarians = "barbarians"
+    denounce = "denounce"
+    declare_war = "declare_war"
+    lose_game = "lose_game"
+
+
 class CivVFillerType(StrEnum):
     """
     Enum defining the various filler item types for Civ V.

@@ -7,7 +7,7 @@ from typing import Any
 
 from CommonClient import logger
 
-from .enums import CivVNotificationTypes, CivVLocationType
+from .enums import CivVDeathLinkEffectType, CivVNotificationTypes, CivVLocationType
 from .exceptions import (
     TunerConnectionException,
     TunerErrorException,
@@ -505,10 +505,12 @@ class Tuner:
 
         return (await self._send_mod_command("GetItemTable()", has_response=True))["items"]
 
-    async def send_death_link(self, message: str) -> None:
+    async def send_death_link(self, effect_type: CivVDeathLinkEffectType, amount: int | None, message: str) -> None:
         """
-        Sends a death link to the player.
+        Sends a death link to the player of the given `effect_type` and `amount`, with the provided `message`.
 
         """
 
-        await self._send_mod_command(f"SendDeathLink({message!r})")
+        await self._send_mod_command(
+            f"SendDeathLink('{str(effect_type)}', {amount if amount is not None else 'nil'}, {message!r})"
+        )

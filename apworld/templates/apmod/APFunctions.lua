@@ -26,8 +26,8 @@ player = Players[Game.GetActivePlayer()]
 team = Teams[player:GetTeam()]
 
 optionsTable = {
-    death_link=false, death_link_trigger=nil, death_link_effect=nil, death_link_effect_amount=0, promotion_sanity=false,
-    satellites_meets_all=nil, settler_sanity=false, settler_sanity_amount=0,
+    death_link=false, death_link_trigger=nil, promotion_sanity=false, satellites_meets_all=nil, settler_sanity=false,
+    settler_sanity_amount=0,
 }
 pushTable = {}
 pushTableTableKeys = {
@@ -453,14 +453,14 @@ end
 function OnEndGameShowDeathLink(endGameType, teamId)
     -- Send death if the player's team did not win
     if(teamId ~= player:GetTeam()) then
-        pushTable["death"] = "'s civilization did not stand the test of time!"
+        pushTable["death"] = "'s ".. player:GetCivilizationDescription() .. " did not stand the test of time!"
     end
 end
 
 function OnTurnStartDeathLink()
     -- Send death if the player is no longer active
     if not player:IsAlive() then
-        pushTable["death"] = "'s civilization did not stand the test of time!"
+        pushTable["death"] = "'s ".. player:GetCivilizationDescription() .. " did not stand the test of time!"
     end
 end
 
@@ -1054,10 +1054,8 @@ function AP.GetItemTable()
     PrintResponse(table.concat({'{"items": [', table.concat(itemTable, ","), "]}"}))
 end
 
-function AP.SendDeathLink(message)
+function AP.SendDeathLink(deathLinkEffect, deathLinkEffectAmount, message)
     -- Send a death link effect to the player
-    deathLinkEffect = optionsTable["death_link_effect"]
-    deathLinkEffectAmount = optionsTable["death_link_effect_amount"]
     if deathLinkEffect == "random_unit_hp" then
         -- Create table of all unit IDs the player has
         unitIds = {}
@@ -1092,7 +1090,7 @@ function AP.SendDeathLink(message)
             city:ChangePopulation(math.max(-deathLinkEffectAmount, -city:GetPopulation()+1), true)
         end
 
-    elseif deathLinkEffect == "random_city" then
+    elseif deathLinkEffect == "lose_random_city" then
         -- Create table of all non-capital city IDs the player has
         cityIds = {}
         for city in player:Cities() do
@@ -1105,7 +1103,7 @@ function AP.SendDeathLink(message)
         city = player:GetCityByID(cityIds[math.random(player:GetNumCities())])
         Players[63]:AcquireCity(city, false, false)
 
-    elseif deathLinkEffect == "all_cities_not_capital" then
+    elseif deathLinkEffect == "lose_all_cities_not_capital" then
         -- Give all cities except the capital to the Barbarians
         for city in player:Cities() do
             if not city:IsCapital() then
