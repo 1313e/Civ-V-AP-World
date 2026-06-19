@@ -29,6 +29,12 @@
     <File md5="A0D841E35C89A0E2F38C79831BC2C4CC" import="1">Icons/AP_Policy_256.dds</File>
     <File md5="1CE11AA50D0E300ED7C113FBE4C8B44E" import="1">Icons/AP_Policy_64.dds</File>
     <File md5="718041914E0DDEFF0C3B79FC206C53DE" import="1">Icons/AP_Policy_Adopted_64.dds</File>
+    <File md5="21F8D750E8B2CF83C860894E4AA5B809" import="1">Icons/AP_Promotion_256.dds</File>
+    <File md5="262BD711629933C7650027B45D92EB60" import="1">Icons/AP_Promotion_32.dds</File>
+    <File md5="F6FB21F655CD35C8E8793B2C68AF6258" import="1">Icons/AP_Promotion_45.dds</File>
+    <File md5="F57503AC1C5C1822B3EE06A95A432A59" import="1">Icons/AP_Promotion_64.dds</File>
+    <File md5="FFD76E1263077403FB154D5EA3FB3837" import="1">Icons/AP_Tech_32.dds</File>
+    <File md5="85D43C8AAA4ACE4304366EEFDEEDE9DA" import="1">Icons/AP_Tech_45.dds</File>
     <File md5="AB1360B15FBCAC9F6BA9E8396ADFCF73" import="1">json.lua</File>
     <File md5="378F45B0004D29290382FC3739944B6D" import="0">NationalWonders.xml</File>
     <File md5="C3DFAE686C7B7421F763A7B075A3753F" import="0">NationalWonderTextInfos.xml</File>
@@ -40,13 +46,13 @@
     <File md5="3D1982058EC00C6D6B9CD45E434EF9CB" import="1">Icons/AP_Tech_256.dds</File>
     <File md5="5EEE6AEABC8EBD9E5F118A924772A48F" import="1">Icons/AP_Tech_64.dds</File>
     <File md5="8D78AC561EDB6F759E31E87F16BA9BB8" import="1">Icons/AP_Tech_80.dds</File>
-    <File md5="EE05402EF6777005921271E7080B115C" import="0">Icons/AP_Icons.xml</File>
+    <File md5="8576B56D523F4E58B8D4582EACF5FB72" import="0">Icons/AP_Icons.xml</File>
     <File md5="818E5B623F9F56C4C44E0CF87C2518F3" import="0">PolicyBranchTextInfos.xml</File>
     <File md5="27578FE454F371F1086368E9C3083363" import="0">Processes.xml</File>
     <File md5="5754B1BE6E37A2F9D04D9D4149E5CDDF" import="1">SaveUtils.lua</File>
     <File md5="462CB60078DB1FCC59A9E080DD594D76" import="0">Technologies.xml</File>
     <File md5="8E04D2664959F5E8F4B42F8D559DF582" import="0">TechnologyTextInfos.xml</File>
-    <File md5="538D2D540135C1D7FBDE6482D69F9902" import="0">UnitPromotions.xml</File>
+    <File md5="B3F6B117589FA1EA3183FE00FBFDAD33" import="0">UnitPromotions.xml</File>
     <File md5="771FD0E5681C2FD21DE14F36950F8B50" import="0">UnitPromotionTextInfos.xml</File>
     <File md5="C338CA6823479580C00B54F4F3A147C7" import="0">Units.xml</File>
     <File md5="5C85569047E691D999259834BFAC85B2" import="0">UnitTextInfos.xml</File>

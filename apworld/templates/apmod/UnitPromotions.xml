@@ -514,8 +514,8 @@
             <Description>TXT_KEY_PROMOTION_ARCHER_AP_A1</Description>
             <Help>TXT_KEY_PROMOTION_ARCHER_AP_A1_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_ARCHER_AP_A1</PediaEntry>
         </Row>
@@ -525,8 +525,8 @@
             <Help>TXT_KEY_PROMOTION_ARCHER_AP_A2_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_ARCHER_AP_A1</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_ARCHER_AP_A2</PediaEntry>
         </Row>
@@ -536,8 +536,8 @@
             <Help>TXT_KEY_PROMOTION_ARCHER_AP_A3_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_ARCHER_AP_A2</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_ARCHER_AP_A3</PediaEntry>
         </Row>
@@ -547,8 +547,8 @@
             <Help>TXT_KEY_PROMOTION_ARCHER_AP_A4_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_ARCHER_AP_A3</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_ARCHER_AP_A4</PediaEntry>
         </Row>
@@ -557,8 +557,8 @@
             <Description>TXT_KEY_PROMOTION_ARCHER_AP_B1</Description>
             <Help>TXT_KEY_PROMOTION_ARCHER_AP_B1_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_ARCHER_AP_B1</PediaEntry>
         </Row>
@@ -568,8 +568,8 @@
             <Help>TXT_KEY_PROMOTION_ARCHER_AP_B2_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_ARCHER_AP_B1</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_ARCHER_AP_B2</PediaEntry>
         </Row>
@@ -579,8 +579,8 @@
             <Help>TXT_KEY_PROMOTION_ARCHER_AP_B3_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_ARCHER_AP_B2</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_ARCHER_AP_B3</PediaEntry>
         </Row>
@@ -589,8 +589,8 @@
             <Description>TXT_KEY_PROMOTION_ARMOR_AP_A1</Description>
             <Help>TXT_KEY_PROMOTION_ARMOR_AP_A1_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_ARMOR_AP_A1</PediaEntry>
         </Row>
@@ -600,8 +600,8 @@
             <Help>TXT_KEY_PROMOTION_ARMOR_AP_A2_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_ARMOR_AP_A1</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_ARMOR_AP_A2</PediaEntry>
         </Row>
@@ -611,8 +611,8 @@
             <Help>TXT_KEY_PROMOTION_ARMOR_AP_A3_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_ARMOR_AP_A2</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_ARMOR_AP_A3</PediaEntry>
         </Row>
@@ -622,8 +622,8 @@
             <Help>TXT_KEY_PROMOTION_ARMOR_AP_A4_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_ARMOR_AP_A3</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_ARMOR_AP_A4</PediaEntry>
         </Row>
@@ -632,8 +632,8 @@
             <Description>TXT_KEY_PROMOTION_ARMOR_AP_B1</Description>
             <Help>TXT_KEY_PROMOTION_ARMOR_AP_B1_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_ARMOR_AP_B1</PediaEntry>
         </Row>
@@ -643,8 +643,8 @@
             <Help>TXT_KEY_PROMOTION_ARMOR_AP_B2_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_ARMOR_AP_B1</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_ARMOR_AP_B2</PediaEntry>
         </Row>
@@ -654,8 +654,8 @@
             <Help>TXT_KEY_PROMOTION_ARMOR_AP_B3_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_ARMOR_AP_B2</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_ARMOR_AP_B3</PediaEntry>
         </Row>
@@ -664,8 +664,8 @@
             <Description>TXT_KEY_PROMOTION_BOMBER_AP_A1</Description>
             <Help>TXT_KEY_PROMOTION_BOMBER_AP_A1_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_BOMBER_AP_A1</PediaEntry>
         </Row>
@@ -675,8 +675,8 @@
             <Help>TXT_KEY_PROMOTION_BOMBER_AP_A2_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_BOMBER_AP_A1</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_BOMBER_AP_A2</PediaEntry>
         </Row>
@@ -686,8 +686,8 @@
             <Help>TXT_KEY_PROMOTION_BOMBER_AP_A3_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_BOMBER_AP_A2</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_BOMBER_AP_A3</PediaEntry>
         </Row>
@@ -697,8 +697,8 @@
             <Help>TXT_KEY_PROMOTION_BOMBER_AP_A4_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_BOMBER_AP_A3</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_BOMBER_AP_A4</PediaEntry>
         </Row>
@@ -707,8 +707,8 @@
             <Description>TXT_KEY_PROMOTION_BOMBER_AP_B1</Description>
             <Help>TXT_KEY_PROMOTION_BOMBER_AP_B1_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_BOMBER_AP_B1</PediaEntry>
         </Row>
@@ -718,8 +718,8 @@
             <Help>TXT_KEY_PROMOTION_BOMBER_AP_B2_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_BOMBER_AP_B1</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_BOMBER_AP_B2</PediaEntry>
         </Row>
@@ -729,8 +729,8 @@
             <Help>TXT_KEY_PROMOTION_BOMBER_AP_B3_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_BOMBER_AP_B2</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_BOMBER_AP_B3</PediaEntry>
         </Row>
@@ -739,8 +739,8 @@
             <Description>TXT_KEY_PROMOTION_CARRIER_AP_A1</Description>
             <Help>TXT_KEY_PROMOTION_CARRIER_AP_A1_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_CARRIER_AP_A1</PediaEntry>
         </Row>
@@ -750,8 +750,8 @@
             <Help>TXT_KEY_PROMOTION_CARRIER_AP_A2_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_CARRIER_AP_A1</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_CARRIER_AP_A2</PediaEntry>
         </Row>
@@ -761,8 +761,8 @@
             <Help>TXT_KEY_PROMOTION_CARRIER_AP_A3_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_CARRIER_AP_A2</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_CARRIER_AP_A3</PediaEntry>
         </Row>
@@ -771,8 +771,8 @@
             <Description>TXT_KEY_PROMOTION_FIGHTER_AP_A1</Description>
             <Help>TXT_KEY_PROMOTION_FIGHTER_AP_A1_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_FIGHTER_AP_A1</PediaEntry>
         </Row>
@@ -782,8 +782,8 @@
             <Help>TXT_KEY_PROMOTION_FIGHTER_AP_A2_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_FIGHTER_AP_A1</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_FIGHTER_AP_A2</PediaEntry>
         </Row>
@@ -793,8 +793,8 @@
             <Help>TXT_KEY_PROMOTION_FIGHTER_AP_A3_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_FIGHTER_AP_A2</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_FIGHTER_AP_A3</PediaEntry>
         </Row>
@@ -804,8 +804,8 @@
             <Help>TXT_KEY_PROMOTION_FIGHTER_AP_A4_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_FIGHTER_AP_A3</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_FIGHTER_AP_A4</PediaEntry>
         </Row>
@@ -814,8 +814,8 @@
             <Description>TXT_KEY_PROMOTION_FIGHTER_AP_B1</Description>
             <Help>TXT_KEY_PROMOTION_FIGHTER_AP_B1_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_FIGHTER_AP_B1</PediaEntry>
         </Row>
@@ -825,8 +825,8 @@
             <Help>TXT_KEY_PROMOTION_FIGHTER_AP_B2_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_FIGHTER_AP_B1</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_FIGHTER_AP_B2</PediaEntry>
         </Row>
@@ -836,8 +836,8 @@
             <Help>TXT_KEY_PROMOTION_FIGHTER_AP_B3_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_FIGHTER_AP_B2</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_FIGHTER_AP_B3</PediaEntry>
         </Row>
@@ -846,8 +846,8 @@
             <Description>TXT_KEY_PROMOTION_GUN_AP_A1</Description>
             <Help>TXT_KEY_PROMOTION_GUN_AP_A1_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_GUN_AP_A1</PediaEntry>
         </Row>
@@ -857,8 +857,8 @@
             <Help>TXT_KEY_PROMOTION_GUN_AP_A2_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_GUN_AP_A1</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_GUN_AP_A2</PediaEntry>
         </Row>
@@ -868,8 +868,8 @@
             <Help>TXT_KEY_PROMOTION_GUN_AP_A3_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_GUN_AP_A2</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_GUN_AP_A3</PediaEntry>
         </Row>
@@ -879,8 +879,8 @@
             <Help>TXT_KEY_PROMOTION_GUN_AP_A4_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_GUN_AP_A3</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_GUN_AP_A4</PediaEntry>
         </Row>
@@ -889,8 +889,8 @@
             <Description>TXT_KEY_PROMOTION_GUN_AP_B1</Description>
             <Help>TXT_KEY_PROMOTION_GUN_AP_B1_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_GUN_AP_B1</PediaEntry>
         </Row>
@@ -900,8 +900,8 @@
             <Help>TXT_KEY_PROMOTION_GUN_AP_B2_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_GUN_AP_B1</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_GUN_AP_B2</PediaEntry>
         </Row>
@@ -911,8 +911,8 @@
             <Help>TXT_KEY_PROMOTION_GUN_AP_B3_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_GUN_AP_B2</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_GUN_AP_B3</PediaEntry>
         </Row>
@@ -921,8 +921,8 @@
             <Description>TXT_KEY_PROMOTION_HELICOPTER_AP_A1</Description>
             <Help>TXT_KEY_PROMOTION_HELICOPTER_AP_A1_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_HELICOPTER_AP_A1</PediaEntry>
         </Row>
@@ -932,8 +932,8 @@
             <Help>TXT_KEY_PROMOTION_HELICOPTER_AP_A2_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_HELICOPTER_AP_A1</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_HELICOPTER_AP_A2</PediaEntry>
         </Row>
@@ -943,8 +943,8 @@
             <Help>TXT_KEY_PROMOTION_HELICOPTER_AP_A3_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_HELICOPTER_AP_A2</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_HELICOPTER_AP_A3</PediaEntry>
         </Row>
@@ -953,8 +953,8 @@
             <Description>TXT_KEY_PROMOTION_MELEE_AP_A1</Description>
             <Help>TXT_KEY_PROMOTION_MELEE_AP_A1_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_MELEE_AP_A1</PediaEntry>
         </Row>
@@ -964,8 +964,8 @@
             <Help>TXT_KEY_PROMOTION_MELEE_AP_A2_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_MELEE_AP_A1</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_MELEE_AP_A2</PediaEntry>
         </Row>
@@ -975,8 +975,8 @@
             <Help>TXT_KEY_PROMOTION_MELEE_AP_A3_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_MELEE_AP_A2</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_MELEE_AP_A3</PediaEntry>
         </Row>
@@ -986,8 +986,8 @@
             <Help>TXT_KEY_PROMOTION_MELEE_AP_A4_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_MELEE_AP_A3</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_MELEE_AP_A4</PediaEntry>
         </Row>
@@ -996,8 +996,8 @@
             <Description>TXT_KEY_PROMOTION_MELEE_AP_B1</Description>
             <Help>TXT_KEY_PROMOTION_MELEE_AP_B1_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_MELEE_AP_B1</PediaEntry>
         </Row>
@@ -1007,8 +1007,8 @@
             <Help>TXT_KEY_PROMOTION_MELEE_AP_B2_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_MELEE_AP_B1</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_MELEE_AP_B2</PediaEntry>
         </Row>
@@ -1018,8 +1018,8 @@
             <Help>TXT_KEY_PROMOTION_MELEE_AP_B3_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_MELEE_AP_B2</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_MELEE_AP_B3</PediaEntry>
         </Row>
@@ -1028,8 +1028,8 @@
             <Description>TXT_KEY_PROMOTION_MOUNTED_AP_A1</Description>
             <Help>TXT_KEY_PROMOTION_MOUNTED_AP_A1_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_MOUNTED_AP_A1</PediaEntry>
         </Row>
@@ -1039,8 +1039,8 @@
             <Help>TXT_KEY_PROMOTION_MOUNTED_AP_A2_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_MOUNTED_AP_A1</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_MOUNTED_AP_A2</PediaEntry>
         </Row>
@@ -1050,8 +1050,8 @@
             <Help>TXT_KEY_PROMOTION_MOUNTED_AP_A3_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_MOUNTED_AP_A2</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_MOUNTED_AP_A3</PediaEntry>
         </Row>
@@ -1061,8 +1061,8 @@
             <Help>TXT_KEY_PROMOTION_MOUNTED_AP_A4_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_MOUNTED_AP_A3</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_MOUNTED_AP_A4</PediaEntry>
         </Row>
@@ -1071,8 +1071,8 @@
             <Description>TXT_KEY_PROMOTION_MOUNTED_AP_B1</Description>
             <Help>TXT_KEY_PROMOTION_MOUNTED_AP_B1_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_MOUNTED_AP_B1</PediaEntry>
         </Row>
@@ -1082,8 +1082,8 @@
             <Help>TXT_KEY_PROMOTION_MOUNTED_AP_B2_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_MOUNTED_AP_B1</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_MOUNTED_AP_B2</PediaEntry>
         </Row>
@@ -1093,8 +1093,8 @@
             <Help>TXT_KEY_PROMOTION_MOUNTED_AP_B3_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_MOUNTED_AP_B2</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_MOUNTED_AP_B3</PediaEntry>
         </Row>
@@ -1103,8 +1103,8 @@
             <Description>TXT_KEY_PROMOTION_NAVAL_MELEE_AP_A1</Description>
             <Help>TXT_KEY_PROMOTION_NAVAL_MELEE_AP_A1_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_NAVAL_MELEE_AP_A1</PediaEntry>
         </Row>
@@ -1114,8 +1114,8 @@
             <Help>TXT_KEY_PROMOTION_NAVAL_MELEE_AP_A2_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_NAVAL_MELEE_AP_A1</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_NAVAL_MELEE_AP_A2</PediaEntry>
         </Row>
@@ -1125,8 +1125,8 @@
             <Help>TXT_KEY_PROMOTION_NAVAL_MELEE_AP_A3_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_NAVAL_MELEE_AP_A2</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_NAVAL_MELEE_AP_A3</PediaEntry>
         </Row>
@@ -1136,8 +1136,8 @@
             <Help>TXT_KEY_PROMOTION_NAVAL_MELEE_AP_A4_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_NAVAL_MELEE_AP_A3</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_NAVAL_MELEE_AP_A4</PediaEntry>
         </Row>
@@ -1146,8 +1146,8 @@
             <Description>TXT_KEY_PROMOTION_NAVAL_MELEE_AP_B1</Description>
             <Help>TXT_KEY_PROMOTION_NAVAL_MELEE_AP_B1_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_NAVAL_MELEE_AP_B1</PediaEntry>
         </Row>
@@ -1157,8 +1157,8 @@
             <Help>TXT_KEY_PROMOTION_NAVAL_MELEE_AP_B2_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_NAVAL_MELEE_AP_B1</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_NAVAL_MELEE_AP_B2</PediaEntry>
         </Row>
@@ -1168,8 +1168,8 @@
             <Help>TXT_KEY_PROMOTION_NAVAL_MELEE_AP_B3_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_NAVAL_MELEE_AP_B2</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_NAVAL_MELEE_AP_B3</PediaEntry>
         </Row>
@@ -1178,8 +1178,8 @@
             <Description>TXT_KEY_PROMOTION_NAVAL_RANGED_AP_A1</Description>
             <Help>TXT_KEY_PROMOTION_NAVAL_RANGED_AP_A1_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_NAVAL_RANGED_AP_A1</PediaEntry>
         </Row>
@@ -1189,8 +1189,8 @@
             <Help>TXT_KEY_PROMOTION_NAVAL_RANGED_AP_A2_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_NAVAL_RANGED_AP_A1</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_NAVAL_RANGED_AP_A2</PediaEntry>
         </Row>
@@ -1200,8 +1200,8 @@
             <Help>TXT_KEY_PROMOTION_NAVAL_RANGED_AP_A3_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_NAVAL_RANGED_AP_A2</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_NAVAL_RANGED_AP_A3</PediaEntry>
         </Row>
@@ -1211,8 +1211,8 @@
             <Help>TXT_KEY_PROMOTION_NAVAL_RANGED_AP_A4_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_NAVAL_RANGED_AP_A3</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_NAVAL_RANGED_AP_A4</PediaEntry>
         </Row>
@@ -1221,8 +1221,8 @@
             <Description>TXT_KEY_PROMOTION_NAVAL_RANGED_AP_B1</Description>
             <Help>TXT_KEY_PROMOTION_NAVAL_RANGED_AP_B1_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_NAVAL_RANGED_AP_B1</PediaEntry>
         </Row>
@@ -1232,8 +1232,8 @@
             <Help>TXT_KEY_PROMOTION_NAVAL_RANGED_AP_B2_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_NAVAL_RANGED_AP_B1</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_NAVAL_RANGED_AP_B2</PediaEntry>
         </Row>
@@ -1243,8 +1243,8 @@
             <Help>TXT_KEY_PROMOTION_NAVAL_RANGED_AP_B3_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_NAVAL_RANGED_AP_B2</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_NAVAL_RANGED_AP_B3</PediaEntry>
         </Row>
@@ -1253,8 +1253,8 @@
             <Description>TXT_KEY_PROMOTION_RECON_AP_A1</Description>
             <Help>TXT_KEY_PROMOTION_RECON_AP_A1_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_RECON_AP_A1</PediaEntry>
         </Row>
@@ -1264,8 +1264,8 @@
             <Help>TXT_KEY_PROMOTION_RECON_AP_A2_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_RECON_AP_A1</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_RECON_AP_A2</PediaEntry>
         </Row>
@@ -1275,8 +1275,8 @@
             <Help>TXT_KEY_PROMOTION_RECON_AP_A3_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_RECON_AP_A2</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_RECON_AP_A3</PediaEntry>
         </Row>
@@ -1285,8 +1285,8 @@
             <Description>TXT_KEY_PROMOTION_SIEGE_AP_A1</Description>
             <Help>TXT_KEY_PROMOTION_SIEGE_AP_A1_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_SIEGE_AP_A1</PediaEntry>
         </Row>
@@ -1296,8 +1296,8 @@
             <Help>TXT_KEY_PROMOTION_SIEGE_AP_A2_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_SIEGE_AP_A1</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_SIEGE_AP_A2</PediaEntry>
         </Row>
@@ -1307,8 +1307,8 @@
             <Help>TXT_KEY_PROMOTION_SIEGE_AP_A3_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_SIEGE_AP_A2</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_SIEGE_AP_A3</PediaEntry>
         </Row>
@@ -1318,8 +1318,8 @@
             <Help>TXT_KEY_PROMOTION_SIEGE_AP_A4_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_SIEGE_AP_A3</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_SIEGE_AP_A4</PediaEntry>
         </Row>
@@ -1328,8 +1328,8 @@
             <Description>TXT_KEY_PROMOTION_SIEGE_AP_B1</Description>
             <Help>TXT_KEY_PROMOTION_SIEGE_AP_B1_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_SIEGE_AP_B1</PediaEntry>
         </Row>
@@ -1339,8 +1339,8 @@
             <Help>TXT_KEY_PROMOTION_SIEGE_AP_B2_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_SIEGE_AP_B1</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_SIEGE_AP_B2</PediaEntry>
         </Row>
@@ -1350,8 +1350,8 @@
             <Help>TXT_KEY_PROMOTION_SIEGE_AP_B3_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_SIEGE_AP_B2</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_SIEGE_AP_B3</PediaEntry>
         </Row>
@@ -1360,8 +1360,8 @@
             <Description>TXT_KEY_PROMOTION_SUBMARINE_AP_A1</Description>
             <Help>TXT_KEY_PROMOTION_SUBMARINE_AP_A1_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_SUBMARINE_AP_A1</PediaEntry>
         </Row>
@@ -1371,8 +1371,8 @@
             <Help>TXT_KEY_PROMOTION_SUBMARINE_AP_A2_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_SUBMARINE_AP_A1</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_SUBMARINE_AP_A2</PediaEntry>
         </Row>
@@ -1382,8 +1382,8 @@
             <Help>TXT_KEY_PROMOTION_SUBMARINE_AP_A3_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_SUBMARINE_AP_A2</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_SUBMARINE_AP_A3</PediaEntry>
         </Row>
@@ -1393,8 +1393,8 @@
             <Help>TXT_KEY_PROMOTION_SUBMARINE_AP_A4_HELP</Help>
             <PromotionPrereq>PROMOTION_AP_PROMOTIONS</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_SUBMARINE_AP_A3</PromotionPrereqOr1>
-            <PortraitIndex>44</PortraitIndex>
-            <IconAtlas>PROMOTION_ATLAS</IconAtlas>
+            <PortraitIndex>0</PortraitIndex>
+            <IconAtlas>AP_PROMOTION_ATLAS</IconAtlas>
             <PediaType>PEDIA_ATTRIBUTES</PediaType>
             <PediaEntry>TXT_KEY_PROMOTION_SUBMARINE_AP_A4</PediaEntry>
         </Row>
