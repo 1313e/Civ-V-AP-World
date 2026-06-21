@@ -4,7 +4,7 @@ import uuid
 from typing import ClassVar, Any
 
 from BaseClasses import Region, ItemClassification
-from worlds.AutoWorld import World
+from worlds.AutoWorld import World, WebWorld
 
 from .constants import GAME_NAME
 from .container import CivVContainer
@@ -49,6 +49,8 @@ from .settings import CivVSettings
 # All declaration
 __all__ = ["CivVWorld"]
 
+class CivVWeb(WebWorld):
+    tutorials = []
 
 # %% WORLD CLASS DEFINITION
 class CivVWorld(World):
@@ -67,6 +69,7 @@ class CivVWorld(World):
     item_name_to_id = {item_data.name: item_data.ap_id for item_data in ITEMS_DATA}
     location_name_to_id = {location_data.name: location_data.ap_id for location_data in LOCATIONS_DATA}
     item_name_groups = ITEM_GROUPS
+    web = CivVWeb()
 
     def __init__(self, *args, **kwargs):
         # Call super method
