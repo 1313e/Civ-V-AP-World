@@ -971,6 +971,7 @@ TRIPLANE = items.ItemRequirements(
 )
 "Requirements for training a Triplane"
 GREAT_WAR_BOMBER = items.ItemRequirements(
+    OIL,
     progression={
         items.TECH_ITEMS["Flight"],
     }
