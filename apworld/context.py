@@ -65,12 +65,7 @@ class CivVContext(CommonContext):
     def on_package(self, cmd, args):
         if cmd == "Connected":
             # Retrieve the slot data from this slot
-            slot_data = args["slot_data"]
-            self.slot_data = CivVSlotData(
-                output_file_id=slot_data["output_file_id"],
-                death_link=slot_data["death_link"],
-                death_link_effect_weights=slot_data["death_link_effect_weights"],
-            )
+            self.slot_data = CivVSlotData(**args["slot_data"])
 
             # Pre-calculate the weighted death link effects list
             self.death_link_effect_list = list(itertools.chain.from_iterable(

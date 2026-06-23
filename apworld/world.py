@@ -275,6 +275,13 @@ class CivVWorld(World):
     def fill_slot_data(self) -> dict[str, Any]:
         return CivVSlotData(
             output_file_id=self.output_file_id,
+            building_sanity=bool(self.options.building_sanity),
+            national_wonder_sanity=bool(self.options.national_wonder_sanity),
+            world_wonder_sanity=bool(self.options.world_wonder_sanity),
+            unit_sanity=bool(self.options.unit_sanity),
+            settler_sanity=bool(self.options.settler_sanity),
+            settler_sanity_amount=int(self.options.settler_sanity_amount),
+            promotion_sanity=bool(self.options.promotion_sanity),
             death_link=bool(self.options.death_link),
             death_link_effect_weights=dict(self.options.death_link_effect_weights),
         ).to_dict()
