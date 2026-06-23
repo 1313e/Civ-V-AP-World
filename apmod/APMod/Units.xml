@@ -150,6 +150,10 @@
             <Where Type="UNIT_ROMAN_LEGION"/>
         </Update>
         <Update>
+            <Set Help="TXT_KEY_UNIT_HELP_CHARIOT_ARCHER"/>
+            <Where Type="UNIT_CHARIOT_ARCHER"/>
+        </Update>
+        <Update>
             <Set ObsoleteTech="NULL"/>
             <Where Type="UNIT_CHARIOT_ARCHER"/>
         </Update>

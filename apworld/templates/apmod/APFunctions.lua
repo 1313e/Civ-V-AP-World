@@ -877,7 +877,7 @@ end
 function AP.ChangeAllCityStateInfluence(value)
     -- Change influence with all city-states by given value
     for i=LOWER_MINOR_CIV_ID, UPPER_MINOR_CIV_ID do
-        player:ChangeMinorCivFriendshipWithMajor(i, value)
+        Players[i]:ChangeMinorCivFriendshipWithMajor(player:GetID(), value)
     end
 end
 

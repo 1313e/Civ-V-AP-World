@@ -223,18 +223,15 @@ class CivVContainer(APPlayerContainer):
         )
 
     @classmethod
-    def _get_settler_location_descriptions(cls, settler_locations: dict[str, str]) -> dict[str, str]:
+    def _get_settler_location_descriptions(cls, items: list[tuple[str, str]]) -> dict[str, str]:
         """
-        Formats the given placed `settler_items` into a dict of string usable in the Civ V XML databases.
+        Formats the given placed `items` into a dict of string usable in the Civ V XML databases.
 
         """
-
-        # We need the dict to be sorted first
-        items = sorted(settler_locations.items(), key=lambda x: x[0])
-        n_items = len(items)
 
         # Convert to a dict of description strings
         dct = {}
+        n_items = len(items)
         for i, (prefix, _) in enumerate(items):
             description = "[NEWLINE]".join(
                 [f"[ICON_BULLET] {x[1]} ({cls.SETTLER_SANITY_ERAS[j].name})" for j, x in enumerate(items[i:], start=i)]
@@ -276,7 +273,7 @@ class CivVContainer(APPlayerContainer):
             "goody_hut_free_settler": goody_hut,
             "handicap_settler_goodies_free_settler": handicap_settler_goodies,
         }
-        settler_locations: dict[str, str] = {}
+        settler_locations: dict[int, tuple[str, str]] = {}
 
         # Get all placed locations for this player. Ignore the Victory location
         filled_locations = {
@@ -326,7 +323,9 @@ class CivVContainer(APPlayerContainer):
                 # Flags can be set immediately
                 case CivVLocationType.settler:
                     if filled_location is not None:
-                        settler_locations[location.database_key_prefix] = self._get_formatted_item(filled_location.item)
+                        settler_locations[location.game_id] = (
+                            location.database_key_prefix, self._get_formatted_item(filled_location.item)
+                        )
                         flag = self._get_formatted_item_flag(filled_location.item)
                     else:
                         dct[f"{location.database_key_prefix}_location"] = ""
@@ -355,7 +354,8 @@ class CivVContainer(APPlayerContainer):
                     pass
 
         # Process all settlers that we extracted
-        dct.update(self._get_settler_location_descriptions(settler_locations))
+        sorted_locations = [x[1] for x in sorted(settler_locations.items(), key=lambda x: x[0])]
+        dct.update(self._get_settler_location_descriptions(sorted_locations))
 
         # Return the substitution dict
         return dct

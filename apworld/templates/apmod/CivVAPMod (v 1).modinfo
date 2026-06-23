@@ -22,7 +22,7 @@
   <References />
   <Blocks />
   <Files>
-    <File md5="69C392F93201067BDAA8CF7774A1AB27" import="0">APFunctions.lua</File>
+    <File md5="8484418E3475896DB7992C4D4B8E31E7" import="0">APFunctions.lua</File>
     <File md5="5B9C45533A8E74AF2E2730D92A306343" import="0">Buildings.xml</File>
     <File md5="F09C389A22E4DB7CAF6929109092774C" import="0">BuildingTextInfos.xml</File>
     <File md5="43CB6E8FA3007C683DD5CE7EA065E33C" import="0">HandicapInfos.xml</File>
@@ -35,7 +35,7 @@
     <File md5="F57503AC1C5C1822B3EE06A95A432A59" import="1">Icons/AP_Promotion_64.dds</File>
     <File md5="FFD76E1263077403FB154D5EA3FB3837" import="1">Icons/AP_Tech_32.dds</File>
     <File md5="85D43C8AAA4ACE4304366EEFDEEDE9DA" import="1">Icons/AP_Tech_45.dds</File>
-    <File md5="AB1360B15FBCAC9F6BA9E8396ADFCF73" import="1">json.lua</File>
+    <File md5="80E6A363919CE2874EC73FD3A3131F72" import="1">json.lua</File>
     <File md5="378F45B0004D29290382FC3739944B6D" import="0">NationalWonders.xml</File>
     <File md5="C3DFAE686C7B7421F763A7B075A3753F" import="0">NationalWonderTextInfos.xml</File>
     <File md5="8877717B72DFF2AA68E4D8AF31E2BF0C" import="0">APOptions.xml</File>
@@ -54,7 +54,7 @@
     <File md5="8E04D2664959F5E8F4B42F8D559DF582" import="0">TechnologyTextInfos.xml</File>
     <File md5="B3F6B117589FA1EA3183FE00FBFDAD33" import="0">UnitPromotions.xml</File>
     <File md5="771FD0E5681C2FD21DE14F36950F8B50" import="0">UnitPromotionTextInfos.xml</File>
-    <File md5="C338CA6823479580C00B54F4F3A147C7" import="0">Units.xml</File>
+    <File md5="820ED85DE5621DD65F5A1E670DEC7FCC" import="0">Units.xml</File>
     <File md5="5C85569047E691D999259834BFAC85B2" import="0">UnitTextInfos.xml</File>
     <File md5="23394FEC3BB005F4FAC845430B3E0418" import="0">WorldWonders.xml</File>
     <File md5="6D4F78EDACD1735CAA37A18A7BE66E04" import="0">WorldWonderTextInfos.xml</File>
