@@ -9,8 +9,9 @@ from typing import Any
 
 import colorama
 
+from BaseClasses import ItemClassification
 from CommonClient import get_base_parser, gui_enabled, logger, server_loop
-from NetUtils import ClientStatus
+from NetUtils import ClientStatus, NetworkItem
 from Utils import init_logging
 
 from .container import CivVContainer
@@ -133,6 +134,18 @@ class CivVClient:
 
         color = CivVItemClassificationColors.get_color(item.classification)
         return f"Received [{color}]{item.name}[ENDCOLOR] from [COLOR_POSITIVE_TEXT]{player_name}[ENDCOLOR]"
+
+    def create_sent_item_message(self, item: NetworkItem, player_id: int) -> str:
+        """
+        Creates a message to be shown in Civ V as an alert, indicating that given `item` was sent to the provided
+        `player_id`.
+
+        """
+
+        color = CivVItemClassificationColors.get_color(ItemClassification(item.flags))
+        item_name = self.ctx.item_names.lookup_in_slot(item.item, player_id)
+        player_name = self.ctx.player_names[player_id]
+        return f"Sent [{color}]{item_name}[ENDCOLOR] to [COLOR_POSITIVE_TEXT]{player_name}[ENDCOLOR]"
 
     @classmethod
     def run_client(cls, server_address: str | None = None, password: str | None = None, name: str | None = None):
@@ -305,6 +318,7 @@ class CivVClient:
         if self.ctx.server:
             # Process checked locations and received items
             await self.process_push_table()
+            await self.process_sent_items()
             await self.process_death_links()
             await self.process_received_items()
 
@@ -385,6 +399,19 @@ class CivVClient:
 
         # Set received_items to the item table in the game
         self.ctx.received_item_ids = await self.tuner.get_item_table()
+
+    @update_func
+    async def process_sent_items(self) -> None:
+        """
+        Processes any queued sent item messages coming from the multiworld and sends them to Civ V.
+
+        """
+
+        # Process all queued sent item messages
+        messages = []
+        while self.ctx.queued_sent_items:
+            messages.append(self.create_sent_item_message(*self.ctx.queued_sent_items.pop(0)))
+        await self.tuner.send_alerts(messages)
 
     @update_func
     async def process_death_links(self) -> None:
