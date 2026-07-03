@@ -1009,8 +1009,10 @@ function AP.UpdateLocationTable(type, locationIds, is_finished)
     for _, locationId in ipairs(locationIds) do
         if locationTable[type][locationId] == nil then
             locationTable[type][locationId] = true
+
+            -- If this location type uses updating text infos, update it. Settlers always update the same ID
             if textInfoTableNames[type] ~= nil then
-                UpdateTextInfos(textInfoTableNames[type], locationId)
+                UpdateTextInfos(textInfoTableNames[type], type ~= "settler" and locationId or 0)
             end
         end
     end
