@@ -72,6 +72,16 @@ In other words, you are using a version of the `CivVAPMod` meant for a different
 Make sure you get the proper patch file for the slot you wish to play.
 Remember that the subtitle (called a teaser in Civ V) of the correct `CivVAPMod` will be exactly the same as the name of the patch file it belongs to.
 
+### Civ V is not working correctly/looks wrong/has messed up UI
+The vast majority of cases are caused by either of the following two reasons:
+
+- You are running Civ V with DX9, not DX11.
+- The `CivVAPMod` did not fully load.
+  You can verify this by looking at the tech tree and checking if the vanilla technologies are visible.
+  If they are, then the mod did not load properly.
+  This is a quirk in Civ V and fixes itself by reloading the mod.
+  So, go back to the main menu and go through the process of loading mod; setting/loading up game; starting game again.
+
 ### Civ V crashes the moment the game is loaded
 There can be several reasons for this, but the vast majority of them are due to either of the following two:
 
