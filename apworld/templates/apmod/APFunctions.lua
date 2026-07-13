@@ -1058,6 +1058,7 @@ end
 
 function AP.SendDeathLink(deathLinkEffect, deathLinkEffectAmount, message)
     -- Send a death link effect to the player
+    effectMessage = ""
     if deathLinkEffect == "random_unit_hp" then
         -- Create table of all unit IDs the player has
         unitIds = {}
@@ -1069,11 +1070,18 @@ function AP.SendDeathLink(deathLinkEffect, deathLinkEffectAmount, message)
         unit = player:GetUnitByID(unitIds[math.random(player:GetNumUnits())])
         unit:ChangeDamage(deathLinkEffectAmount)
 
+        -- Set effect message
+        unitName = GetCleanText(GameInfo.Units[unit:GetUnitType()].Description)
+        effectMessage = table.concat({unitName, " loses ", deathLinkEffectAmount, " HP."})
+
     elseif deathLinkEffect == "all_units_hp" then
         -- Reduce HP of all units by X
         for unit in player:Units() do
             unit:ChangeDamage(deathLinkEffectAmount)
         end
+
+        -- Set effect message
+        effectMessage = table.concat({"All units lose ", deathLinkEffectAmount, " HP."})
 
     elseif deathLinkEffect == "random_city_population" then
         -- Create table of all city IDs the player has
@@ -1086,11 +1094,17 @@ function AP.SendDeathLink(deathLinkEffect, deathLinkEffectAmount, message)
         city = player:GetCityByID(cityIds[math.random(player:GetNumCities())])
         city:ChangePopulation(math.max(-deathLinkEffectAmount, -city:GetPopulation()+1), true)
 
+        -- Set effect message
+        effectMessage = table.concat({city:GetName(), " loses ", deathLinkEffectAmount, " population."})
+
     elseif deathLinkEffect == "all_cities_population" then
         -- Reduce population of all cities by X
         for city in player:Cities() do
             city:ChangePopulation(math.max(-deathLinkEffectAmount, -city:GetPopulation()+1), true)
         end
+
+        -- Set effect message
+        effectMessage = table.concat({"All cities lose ", deathLinkEffectAmount, " population."})
 
     elseif deathLinkEffect == "lose_random_city" then
         -- Create table of all non-capital city IDs the player has
@@ -1105,6 +1119,9 @@ function AP.SendDeathLink(deathLinkEffect, deathLinkEffectAmount, message)
         city = player:GetCityByID(cityIds[math.random(player:GetNumCities())])
         Players[63]:AcquireCity(city, false, false)
 
+        -- Set effect message
+        effectMessage = table.concat({"Lose ", city:GetName(), " to Barbarians."})
+
     elseif deathLinkEffect == "lose_all_cities_not_capital" then
         -- Give all cities except the capital to the Barbarians
         for city in player:Cities() do
@@ -1113,27 +1130,42 @@ function AP.SendDeathLink(deathLinkEffect, deathLinkEffectAmount, message)
             end
         end
 
+        -- Set effect message
+        effectMessage = "Lose all cities but capital to Barbarians."
+
     elseif deathLinkEffect == "barbarians" then
         -- Spawn X random barbarians
         AP.SpawnBarbarians(deathLinkEffectAmount, true)
+
+        -- Set effect message
+        effectMessage = table.concat({"Spawn ", deathLinkEffectAmount, " Barbarians."})
 
     elseif deathLinkEffect == "denounce" then
         -- Denounce the player X times
         AP.DenounceRandom(deathLinkEffectAmount)
 
+        -- Set effect message
+        effectMessage = table.concat({"Denounce ", deathLinkEffectAmount, " times."})
+
     elseif deathLinkEffect == "declare_war" then
         -- Declare war on the player X times
         AP.DeclareWarRandom(deathLinkEffectAmount)
+
+        -- Set effect message
+        effectMessage = table.concat({"Declare war ", deathLinkEffectAmount, " times."})
 
     elseif deathLinkEffect == "lose_game" then
         -- Make player lose the game
         for city in player:Cities() do
             Players[63]:AcquireCity(city, false, false)
         end
+
+        -- Set effect message
+        effectMessage = "Lose game."
     end
 
     -- Send negative notification to player that they received a death link
-    AP.SendNotification("DeathLink Received!", message, 2)
+    AP.SendNotification("DeathLink received!", table.concat({message, " [ICON_MOVES] ", effectMessage}), 2)
 end
 
 

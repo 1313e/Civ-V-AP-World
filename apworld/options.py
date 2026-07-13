@@ -325,40 +325,6 @@ class DeathLinkTrigger(Choice):
     default = option_game_lost
 
 
-class DeathLinkEffect(Choice):
-    """
-    What effect occurs when a death link is received?
-
-    Has no effect if death link is disabled.
-
-    Possible effects:
-    - Random unit HP: A random unit loses X HP.
-    - All units HP: All units lose X HP.
-    - Random city population: A random city loses X population.
-    - All city population: All cities lose X population.
-    - Random city: Lose a random non-capital city.
-    - All cities not capital: Lose all cities that are not your capital.
-    - Barbarians: Spawn X random Barbarians.
-    - Denounce: X random civilizations denounce you.
-    - Declare war: X random civilizations declare war on you.
-    - Lose game: Lose the game immediately.
-
-    """
-
-    display_name = "Death Link Effect"
-    option_random_unit_hp = 0
-    option_all_units_hp = 1
-    option_random_city_population = 2
-    option_all_cities_population = 3
-    option_random_city = 4
-    option_all_cities_not_capital = 5
-    option_barbarians = 6
-    option_denounce = 7
-    option_declare_war = 8
-    option_lose_game = 9
-    default = option_random_unit_hp
-
-
 class DeathLinkEffectWeights(OptionCounter):
     """
     The weights of each death link to be chosen when a death link is received.
