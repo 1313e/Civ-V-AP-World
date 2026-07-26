@@ -36,7 +36,7 @@
     <File md5="FFD76E1263077403FB154D5EA3FB3837" import="1">Icons/AP_Tech_32.dds</File>
     <File md5="85D43C8AAA4ACE4304366EEFDEEDE9DA" import="1">Icons/AP_Tech_45.dds</File>
     <File md5="80E6A363919CE2874EC73FD3A3131F72" import="1">json.lua</File>
-    <File md5="378F45B0004D29290382FC3739944B6D" import="0">NationalWonders.xml</File>
+    <File md5="B051B6A48A92AF5FC9ED0FBCD2E17DB2" import="0">NationalWonders.xml</File>
     <File md5="C3DFAE686C7B7421F763A7B075A3753F" import="0">NationalWonderTextInfos.xml</File>
     <File md5="8877717B72DFF2AA68E4D8AF31E2BF0C" import="0">APOptions.xml</File>
     <File md5="8382C7420D4F319681DD5D0B82C8F969" import="0">PolicyBranches.xml</File>

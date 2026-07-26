@@ -14,6 +14,7 @@ __all__ = [
     "CivVItemType",
     "CivVLocationType",
     "CivVNotificationTypes",
+    "CivVOptionGroups",
 ]
 
 
@@ -196,3 +197,16 @@ class CivVNotificationTypes(IntEnum):
     generic = 0
     positive = 1
     negative = 2
+
+
+class CivVOptionGroups(StrEnum):
+    """
+    Enum defining the various option groups for Civ V.
+
+    """
+
+    logic = "Logic"
+    qol = "Quality of Life"
+    sanities = "Sanities"
+    filler = "Filler Items"
+    death_link = "Death Link"

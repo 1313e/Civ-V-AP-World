@@ -8,6 +8,7 @@ import shutil
 import tempfile
 import zipfile
 from pathlib import Path
+from textwrap import dedent, indent
 from typing import TYPE_CHECKING, Any
 from xml.etree import ElementTree
 
@@ -120,6 +121,48 @@ class CivVContainer(APPlayerContainer):
         INFORMATION_ERA,
     ]
     "Eras for each settler to train in settler sanity"
+    SUPER_PALACE_YIELD_CHANGES: str = indent(dedent(
+        """
+        <Row>
+            <BuildingType>BUILDING_PALACE</BuildingType>
+            <YieldType>YIELD_GOLD</YieldType>
+            <Yield>15</Yield>
+        </Row>
+        <Row>
+            <BuildingType>BUILDING_PALACE</BuildingType>
+            <YieldType>YIELD_PRODUCTION</YieldType>
+            <Yield>15</Yield>
+        </Row>
+        <Row>
+            <BuildingType>BUILDING_PALACE</BuildingType>
+            <YieldType>YIELD_SCIENCE</YieldType>
+            <Yield>15</Yield>
+        </Row>
+        <Row>
+            <BuildingType>BUILDING_PALACE</BuildingType>
+            <YieldType>YIELD_FOOD</YieldType>
+            <Yield>5</Yield>
+        </Row>
+        <Row>
+            <BuildingType>BUILDING_PALACE</BuildingType>
+            <YieldType>YIELD_CULTURE</YieldType>
+            <Yield>5</Yield>
+        </Row>
+        <Row>
+            <BuildingType>BUILDING_PALACE</BuildingType>
+            <YieldType>YIELD_FAITH</YieldType>
+            <Yield>5</Yield>
+        </Row>"""
+    )[1:], " "*8)
+    "Building yield changes to make if Super Palace is enabled"
+    SUPER_PALACE_HAPPINESS_CHANGES: str = indent(dedent(
+        """
+        <Update>
+            <Set UnmoddedHappiness="5"/>
+            <Where Type="BUILDING_PALACE"/>
+        </Update>"""
+    )[1:], " "*8)
+    "Happiness changes to make if Super Palace is enabled"
 
     def __init__(self, path: Path, world: "CivVWorld | None", **kwargs):
         # Call super method
@@ -260,9 +303,19 @@ class CivVContainer(APPlayerContainer):
             goody_hut = ""
             handicap_settler_goodies = ""
 
+        # If Super Palace is enabled, set the proper yields
+        if self.world.options.super_palace:
+            palace_happiness_changes = self.SUPER_PALACE_HAPPINESS_CHANGES
+            palace_yield_changes = self.SUPER_PALACE_YIELD_CHANGES
+        else:
+            palace_happiness_changes = ""
+            palace_yield_changes = ""
+
         # Create dict holding all substitutions
         dct = {
             "policy_cost_modifier": str(self.world.options.policy_cost_modifier-100),
+            "palace_happiness_changes": palace_happiness_changes,
+            "palace_yield_changes": palace_yield_changes,
             "option_death_link": json.dumps(bool(self.world.options.death_link)),
             "option_death_link_trigger": json.dumps(self.world.options.death_link_trigger.current_key),
             "option_promotion_sanity": json.dumps(bool(self.world.options.promotion_sanity)),

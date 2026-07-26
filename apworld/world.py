@@ -46,6 +46,7 @@ from .options import CivVOptions
 from .regions import ERA_REGIONS, REGIONS_DATA
 from .requirements import EMBARKING, VICTORIES
 from .settings import CivVSettings
+from .web_world import CivVWebWorld
 
 # All declaration
 __all__ = ["CivVWorld"]
@@ -68,6 +69,7 @@ class CivVWorld(World):
     item_name_to_id = {item_data.name: item_data.ap_id for item_data in ITEMS_DATA}
     location_name_to_id = {location_data.name: location_data.ap_id for location_data in LOCATIONS_DATA}
     item_name_groups = ITEM_GROUPS
+    web = CivVWebWorld()
 
     def __init__(self, *args, **kwargs):
         # Call super method

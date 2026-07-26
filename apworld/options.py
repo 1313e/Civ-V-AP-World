@@ -1,16 +1,28 @@
 # %% IMPORTS
 from dataclasses import dataclass
 
-from Options import Choice, DeathLink, DefaultOnToggle, PerGameCommonOptions, OptionCounter, Range, Toggle
+from Options import Choice, DeathLink as _DeathLink, DefaultOnToggle, PerGameCommonOptions, OptionCounter, Range, Toggle
 
 from . import death_link, items
+from .enums import CivVOptionGroups
 
 # All declaration
-__all__ = ["CivVOptions"]
+__all__ = ["CivVOption", "CivVOptions"]
+
+
+# %% HELPER CLASSES
+class CivVOption:
+    """
+    Mixin class for Civ V options.
+
+    """
+
+    civv_option_group: CivVOptionGroups
+    "Group to which this option belongs"
 
 
 # %% OPTION CLASSES
-class VictoryGoalLogic(Choice):
+class VictoryGoalLogic(Choice, CivVOption):
     """
     Which victory should be achievable before the game is considered beatable?
 
@@ -22,6 +34,7 @@ class VictoryGoalLogic(Choice):
 
     """
 
+    civv_option_group = CivVOptionGroups.logic
     display_name = "Victory Goal Logic"
     option_none = 0
     option_science = 1
@@ -30,7 +43,7 @@ class VictoryGoalLogic(Choice):
     default = option_none
 
 
-class EraGoalLogic(Choice):
+class EraGoalLogic(Choice, CivVOption):
     """
     Which era must be unlocked before the game is considered beatable?
 
@@ -39,6 +52,7 @@ class EraGoalLogic(Choice):
 
     """
 
+    civv_option_group = CivVOptionGroups.logic
     display_name = "Era Goal Logic"
     option_ancient = 0
     option_classical = 1
@@ -51,7 +65,7 @@ class EraGoalLogic(Choice):
     default = option_information
 
 
-class EmbarkingGoalLogic(DefaultOnToggle):
+class EmbarkingGoalLogic(DefaultOnToggle, CivVOption):
     """
     Add Optics and Astronomy as requirements before the game is considered beatable.
 
@@ -59,34 +73,37 @@ class EmbarkingGoalLogic(DefaultOnToggle):
 
     """
 
+    civv_option_group = CivVOptionGroups.logic
     display_name = "Embarking Goal Logic"
 
 
-class PolicyCostModifier(Range):
+class PolicyCostModifier(Range, CivVOption):
     """
     Multiplies the base cost of adopting social policies with the given percentage.
 
     """
 
+    civv_option_group = CivVOptionGroups.qol
     display_name = "Policy Cost Modifier"
     range_start = 0
     range_end = 1000
     default = 90
 
 
-class TechCostModifier(Range):
+class TechCostModifier(Range, CivVOption):
     """
     Multiplies the base cost of researching technologies with the given percentage.
 
     """
 
+    civv_option_group = CivVOptionGroups.qol
     display_name = "Tech Cost Modifier"
     range_start = 0
     range_end = 1000
     default = 100
 
 
-class ProgressiveTechs(DefaultOnToggle):
+class ProgressiveTechs(DefaultOnToggle, CivVOption):
     """
     Use progressive technologies.
 
@@ -96,10 +113,11 @@ class ProgressiveTechs(DefaultOnToggle):
 
     """
 
+    civv_option_group = CivVOptionGroups.qol
     display_name = "Progressive Techs"
 
 
-class ItemHints(Choice):
+class ItemHints(Choice, CivVOption):
     """
     Enable item hints for all locations.
 
@@ -110,6 +128,7 @@ class ItemHints(Choice):
 
     """
 
+    civv_option_group = CivVOptionGroups.qol
     display_name = "Item Hints"
     option_full = 0
     option_classification = 1
@@ -117,7 +136,7 @@ class ItemHints(Choice):
     default = option_classification
 
 
-class DisguiseTraps(Toggle):
+class DisguiseTraps(Toggle, CivVOption):
     """
     Item classification hints will classify traps as progression items.
 
@@ -128,19 +147,36 @@ class DisguiseTraps(Toggle):
 
     """
 
+    civv_option_group = CivVOptionGroups.qol
     display_name = "Disguise Traps"
 
 
-class SatellitesMeetsAll(Toggle):
+class SatellitesMeetsAll(Toggle, CivVOption):
     """
     Receiving the Satellites technology will also meet all civilizations and city-states.
 
     """
 
+    civv_option_group = CivVOptionGroups.qol
     display_name = "Satellites Meets All"
 
 
-class BuildingSanity(Toggle):
+class SuperPalace(Toggle, CivVOption):
+    """
+    Replaces the default Palace with a version that has much higher yields:
+    - Gold/Science/Production: 3 -> 15
+    - Culture: 1 -> 5
+    - Happiness/Faith/Food: 0 -> 5
+
+    This makes the early game easier without your usual base technologies.
+
+    """
+
+    civv_option_group = CivVOptionGroups.qol
+    display_name = "Super Palace"
+
+
+class BuildingSanity(Toggle, CivVOption):
     """
     Add most standard buildings to the location pool.
 
@@ -156,10 +192,11 @@ class BuildingSanity(Toggle):
 
     """
 
+    civv_option_group = CivVOptionGroups.sanities
     display_name = "Building Sanity"
 
 
-class NationalWonderSanity(Toggle):
+class NationalWonderSanity(Toggle, CivVOption):
     """
     Add all national wonders to the location pool.
 
@@ -167,10 +204,11 @@ class NationalWonderSanity(Toggle):
 
     """
 
+    civv_option_group = CivVOptionGroups.sanities
     display_name = "National Wonder Sanity"
 
 
-class WorldWonderSanity(Toggle):
+class WorldWonderSanity(Toggle, CivVOption):
     """
     Add all world wonders to the location pool.
 
@@ -180,10 +218,11 @@ class WorldWonderSanity(Toggle):
 
     """
 
+    civv_option_group = CivVOptionGroups.sanities
     display_name = "World Wonder Sanity"
 
 
-class UnitSanity(Toggle):
+class UnitSanity(Toggle, CivVOption):
     """
     Add most standard units to the location pool.
 
@@ -199,10 +238,11 @@ class UnitSanity(Toggle):
 
     """
 
+    civv_option_group = CivVOptionGroups.sanities
     display_name = "Unit Sanity"
 
 
-class SettlerSanity(Toggle):
+class SettlerSanity(Toggle, CivVOption):
     """
     Adds Settlers to the item and location pools, with the amount being determined by the Settler Sanity Amount option.
 
@@ -214,10 +254,11 @@ class SettlerSanity(Toggle):
 
     """
 
+    civv_option_group = CivVOptionGroups.sanities
     display_name = "Settler Sanity"
 
 
-class SettlerSanityAmount(Range):
+class SettlerSanityAmount(Range, CivVOption):
     """
     Number of Settlers to put in the item and location pools.
 
@@ -233,13 +274,14 @@ class SettlerSanityAmount(Range):
 
     """
 
+    civv_option_group = CivVOptionGroups.sanities
     display_name = "Settler Sanity Amount"
     range_start = 0
     range_end = 20
     default = 10
 
 
-class PromotionSanity(Toggle):
+class PromotionSanity(Toggle, CivVOption):
     """
     Add all earnable unit promotions (excl. Heal Instantly) to the item and location pools.
 
@@ -249,15 +291,17 @@ class PromotionSanity(Toggle):
 
     """
 
+    civv_option_group = CivVOptionGroups.sanities
     display_name = "Promotion Sanity"
 
 
-class FillerItemWeights(OptionCounter):
+class FillerItemWeights(OptionCounter, CivVOption):
     """
     The weights of each filler item to be chosen when a filler item is required.
 
     """
 
+    civv_option_group = CivVOptionGroups.filler
     display_name = "Filler Item Weights"
     min = 0
     cull_zeroes = True
@@ -265,16 +309,17 @@ class FillerItemWeights(OptionCounter):
     default = {x.name: x.weight for x in items.FILLER_ITEMS}
 
 
-class EnableTraps(Toggle):
+class EnableTraps(Toggle, CivVOption):
     """
     Add traps to the filler item pool.
 
     """
 
+    civv_option_group = CivVOptionGroups.filler
     display_name = "Enable Traps"
 
 
-class TrapFillerChance(Range):
+class TrapFillerChance(Range, CivVOption):
     """
     The percent chance for a filler item to be a trap instead.
 
@@ -282,13 +327,14 @@ class TrapFillerChance(Range):
 
     """
 
+    civv_option_group = CivVOptionGroups.filler
     display_name = "Trap Filler Chance"
     range_start = 0
     range_end = 100
     default = 5
 
 
-class TrapItemWeights(OptionCounter):
+class TrapItemWeights(OptionCounter, CivVOption):
     """
     The weights of each trap to be chosen when a trap item is required.
 
@@ -296,6 +342,7 @@ class TrapItemWeights(OptionCounter):
 
     """
 
+    civv_option_group = CivVOptionGroups.filler
     display_name = "Trap Item Weights"
     min = 0
     cull_zeroes = True
@@ -303,7 +350,11 @@ class TrapItemWeights(OptionCounter):
     default = {x.name: x.weight for x in items.TRAP_ITEMS}
 
 
-class DeathLinkTrigger(Choice):
+class DeathLink(_DeathLink, CivVOption):
+    civv_option_group = CivVOptionGroups.death_link
+
+
+class DeathLinkTrigger(Choice, CivVOption):
     """
     What triggers a death link to be sent?
 
@@ -317,6 +368,7 @@ class DeathLinkTrigger(Choice):
 
     """
 
+    civv_option_group = CivVOptionGroups.death_link
     display_name = "Death Link Trigger"
     option_unit_killed = 0
     option_city_captured = 1
@@ -325,7 +377,7 @@ class DeathLinkTrigger(Choice):
     default = option_game_lost
 
 
-class DeathLinkEffectWeights(OptionCounter):
+class DeathLinkEffectWeights(OptionCounter, CivVOption):
     """
     The weights of each death link to be chosen when a death link is received.
 
@@ -333,6 +385,7 @@ class DeathLinkEffectWeights(OptionCounter):
 
     """
 
+    civv_option_group = CivVOptionGroups.death_link
     display_name = "Death Link Effect Weights"
     min = 0
     cull_zeroes = True
@@ -352,6 +405,7 @@ class CivVOptions(PerGameCommonOptions):
     item_hints: ItemHints
     disguise_traps: DisguiseTraps
     satellites_meets_all: SatellitesMeetsAll
+    super_palace: SuperPalace
     building_sanity: BuildingSanity
     national_wonder_sanity: NationalWonderSanity
     world_wonder_sanity: WorldWonderSanity
