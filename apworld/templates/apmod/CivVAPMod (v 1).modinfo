@@ -54,8 +54,8 @@
     <File md5="8E04D2664959F5E8F4B42F8D559DF582" import="0">TechnologyTextInfos.xml</File>
     <File md5="B3F6B117589FA1EA3183FE00FBFDAD33" import="0">UnitPromotions.xml</File>
     <File md5="771FD0E5681C2FD21DE14F36950F8B50" import="0">UnitPromotionTextInfos.xml</File>
-    <File md5="820ED85DE5621DD65F5A1E670DEC7FCC" import="0">Units.xml</File>
-    <File md5="5C85569047E691D999259834BFAC85B2" import="0">UnitTextInfos.xml</File>
+    <File md5="2840F390CFAD469D2BB8D9A6426AE424" import="0">Units.xml</File>
+    <File md5="FF0A32ADC8C3094B04C221E5A18A632F" import="0">UnitTextInfos.xml</File>
     <File md5="23394FEC3BB005F4FAC845430B3E0418" import="0">WorldWonders.xml</File>
     <File md5="6D4F78EDACD1735CAA37A18A7BE66E04" import="0">WorldWonderTextInfos.xml</File>
   </Files>

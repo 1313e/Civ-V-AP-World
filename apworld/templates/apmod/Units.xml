@@ -242,6 +242,10 @@
             <Where Type="UNIT_MAYAN_ATLATLIST"/>
         </Update>
         <Update>
+            <Set CombatClass="UNITCOMBAT_NAVALMELEE"/>
+            <Where Type="UNIT_BYZANTINE_DROMON"/>
+        </Update>
+        <Update>
             <Set ObsoleteTech="NULL"/>
             <Where Type="UNIT_BYZANTINE_DROMON"/>
         </Update>

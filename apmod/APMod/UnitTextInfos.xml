@@ -1333,6 +1333,20 @@
         <Row Tag="TXT_KEY_UNIT_HELP_MAYAN_ATLATLIST_CLEAN">
             <Text>Only the Maya may build this unit. It is cheaper and available sooner than the Archer, which it replaces.</Text>
         </Row>
+        <Delete Tag="TXT_KEY_UNIT_BYZANTINE_DROMON"/>
+        <Row Tag="TXT_KEY_UNIT_BYZANTINE_DROMON">
+            <Text>{unit_trireme_flag}Dromon</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_BYZANTINE_DROMON_CLEAN">
+            <Text>Dromon</Text>
+        </Row>
+        <Delete Tag="TXT_KEY_UNIT_HELP_BYZANTINE_DROMON"/>
+        <Row Tag="TXT_KEY_UNIT_HELP_BYZANTINE_DROMON">
+            <Text>Dominant Ancient Era Naval Unit used to own the seas through the Classic Era with its ranged attack. Only the Byzantines may build it.{unit_trireme_location}</Text>
+        </Row>
+        <Row Tag="TXT_KEY_UNIT_HELP_BYZANTINE_DROMON_CLEAN">
+            <Text>Dominant Ancient Era Naval Unit used to own the seas through the Classic Era with its ranged attack. Only the Byzantines may build it.</Text>
+        </Row>
         <Delete Tag="TXT_KEY_UNIT_BYZANTINE_CATAPHRACT"/>
         <Row Tag="TXT_KEY_UNIT_BYZANTINE_CATAPHRACT">
             <Text>{unit_horseman_flag}Cataphract</Text>
