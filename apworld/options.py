@@ -230,7 +230,6 @@ class UnitSanity(Toggle, CivVOption):
 
     Units that will not be added:
     - Foreign Legion
-    - Dromon (exclusive to Byzantium; does not replace a standard unit)
     - Any religious unit (Inquisitor and Missionary)
     - Any civilization-unique unit (they count as the unit they replace instead)
     - Any Great Person
