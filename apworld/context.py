@@ -78,7 +78,7 @@ class CivVContext(CommonContext):
 
     def on_print_json(self, args: dict):
         # If an item was sent by this slot, queue the details regarding that item
-        if args["type"] == "ItemSend" and args["item"].player == self.slot:
+        if args.get("type", "") == "ItemSend" and args["item"].player == self.slot:
             self.queued_sent_items.append((args["item"], args["receiving"]))
         super().on_print_json(args)
 
